@@ -13,11 +13,48 @@
         color: var(--bg-color);
     }
     &__wrapper {
-        display: flex;
-        justify-content: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__address {
+        margin-top: 46px;
+    }
+    &__contacts {
+        margin-left: 242px;
+        margin-top: 60px;
+        h3 {
+            font-size: 36px;
+            line-height: 48px;
+            font-weight: 500;
+            color: var(--bg-color);
+            margin-bottom: 48px;
+        }
+        address {
+            margin-bottom: 23px;
+            p {
+                color: var(--bg-color);
+                font-size: 28px;
+                line-height: 36px;
+                font-weight: 500;
+                font-style: normal;
+                margin-bottom: 6px;
+            }
+            a {
+                color: var(--bg-color);
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: 400;
+                text-decoration: none;
+                font-style: normal;
+
+            }
+        }
     }
 }
 .form {
+    margin-left: 130px;
+    margin-top: 63px;
     display: flex;
     flex-direction: column;
     input {
@@ -27,8 +64,62 @@
         border-bottom: 1px solid var(--bg-color);
         color: var(--bg-color);
         font-size: 28px;
-        line-height: 36px;
+        line-height: 44px;
         font-weight: 500;
         outline: none;
+        margin-bottom: 56px;
+    }
+    input[type="file"] {
+        display: none;
+    }
+    ::placeholder {
+        color: var(--bg-color);
+    }
+    &__attachment {
+        font-size: 24px;
+        line-height: 28px;
+        color: var(--bg-color);
+        margin-top: -32px;
+        margin-left: 1px;
+        img {
+            margin-right: 20px;
+        }
+    }
+    &__accept {
+        width: 387px;
+        height: 84px;
+        border-radius: 10px;
+        background-color: var(--bg-color);
+        border: none;
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 500;
+        color: var(--font-color);
+        margin-left: 19px;
+    }
+    &__accept-block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -186px;
+    }
+    &__terms {
+        margin-top: 15px;
+        margin-left: -5px;
+        p {
+            display: inline;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            color: var(--bg-color);
+        }
+        a {
+            margin: 0 4px;
+            display: inline;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: normal;
+            color: var(--bg-color);
+        }
     }
 }

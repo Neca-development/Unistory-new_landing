@@ -64,7 +64,7 @@
         </div>
       </section>
       <section class="creeping-line">
-        <marquee loop="-1" direction="left" behavior="alternate" scrollamount="5" >
+        <marquee loop="-1" direction="left" behavior="alternate" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" >
             <a href="#" class="creeping-line__ref">#Front-end</a>
             <a href="#" class="creeping-line__ref">#Startups</a>
             <a href="#" class="creeping-line__ref">#NFT</a>
@@ -82,7 +82,7 @@
             <a href="#" class="creeping-line__ref">#eCommerce</a>
             <a href="#" class="creeping-line__ref">#B2B</a>
         </marquee>
-        <marquee loop="-1" direction="right" behavior="alternate" scrollamount="5">
+        <marquee loop="-1" direction="right" behavior="alternate" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start(); ">
           <a href="#" class="creeping-line__ref">#Back-end</a>
           <a href="#" class="creeping-line__ref">#Trading Bots</a>
           <a href="#" class="creeping-line__ref">#Blockchain</a>
@@ -236,10 +236,10 @@
                   <p>Email</p>
                   <a href="mailto:Contact@unistory.app">Contact@unistory.app</a>
                 </address>
-                <address></address><address>
+                <address></address>
+                <address class="contact-form__address">
                   <p>Adress</p>
-                  <a href="https://www.google.com/maps/@59.9133824,30.3067751,19z">Russia, Saint-Petersburg
-                    Izmaylovskiy Prospekt 15</a>
+                  <a href="https://www.google.com/maps/@59.9133824,30.3067751,19z">Russia, Saint-Petersburg<br>Izmaylovskiy Prospekt 15</a>
                 </address>
 
             </div>
@@ -248,6 +248,20 @@
               <input type="text" placeholder="Email">
               <input type="text" placeholder="Phone number">
               <input type="text" placeholder="Tell us about your project">
+              <label for="file-upload" class="form__attachment">
+                <img src="icons/attach.svg" alt="attachments">
+                Attach files
+              </label>
+              <input id="file-upload" type="file"/>
+              
+              <div class="form__accept-block">
+                <button class="form__accept" type="submit">Discuss the project</button>
+                <div class="form__terms">
+                  <p>By submitting your form, you agree to </p>
+                  <a href="#"> the Privacy Policy </a>
+                  <p> rules.</p>
+                </div>
+              </div>
             </form>
 
 
@@ -257,7 +271,32 @@
       </section>
     </main>
     <footer class="footer">
-
+      <div class="container">
+        <div class="footer__logo-socials">
+          <img src="icons/logo.svg" alt="logo">
+          <div class="footer__socials">
+            <a href="#"><img src="icons/links/Telegram.svg" alt="Telegram"></a>
+            <a href="#"><img src="icons/links/WhatsApp.svg" alt="WhatsApp"></a>
+            <a href="#"><img src="icons/links/Upwork.svg" alt="Upwork"></a>
+            <a href="#"><img src="icons/links/Telegram.svg" alt="Telegram"></a>
+            <a href="#"><img src="icons/links/WhatsApp.svg" alt="WhatsApp"></a>
+            <a href="#"><img src="icons/links/Upwork.svg" alt="Upwork"></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <nav class="footer__nav">
+            <a href="#">Services</a>
+            <a href="#">Competence</a>
+            <a href="#">Portfolio</a>
+            <a href="#">About</a>
+            <a href="#">Contact us</a>
+          </nav>
+          <div class="footer__credits">
+            <p>© 2021 Unistory all rights reserved</p>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
