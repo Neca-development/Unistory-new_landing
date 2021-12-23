@@ -45,14 +45,14 @@
             height: 54px;
             background-color: none;
             border: none;
-            background: url(../../icons/up.svg);
+            background: url(../icons/up.svg);
         }
         &_next {
             width: 54px;
             height: 54px;
             background-color: none;
             border: none;
-            background: url(../../icons/up.svg);
+            background: url(../icons/up.svg);
             transform: rotate(-180deg);
         }
     }
@@ -79,7 +79,6 @@
     overflow: hidden;
     &__wrapper {
         padding-top: 60px;
-        z-index: -100;
         display: flex;
         position: relative;
         width: 1071px;
