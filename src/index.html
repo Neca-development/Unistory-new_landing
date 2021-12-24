@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+    <!-- <div class="curtain">
+      <img src="img/curtain.png" alt="curtain">
+    </div> -->
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
@@ -30,7 +33,7 @@
       <section class="main">
         <div class="container">
           <div class="main__wrapper">
-            <h1 class="main__heading">Software <span>development</span><br>&<span> product consultance</span></h1>
+            <h1 class="main__heading">Software <span class="animated">development</span><br>&<span> product consultance</span></h1>
             <section class="main__points">
               <div class="point">
                 <h2 class="point__count">
@@ -105,36 +108,44 @@
             <h2 class="success__heading">Success stories</h2>
             <div class="success__examples">
               <article class="success-block">
-                <img src="img/Case 1.png" alt="acceptedhere">
+                <div class="success-block__image">
+                  <img src="img/Case 1.png" alt="acceptedhere">
+                  <nav>
+                    <a href="#">#Integrations</a>
+                    <a href="#">#Blockchain</a>
+                  </nav>
+                </div>
                 <h3>Millionpieces</h3>
-                <nav>
-                  <a href="#">#Integrations</a>
-                  <a href="#">#Blockchain</a>
-                </nav>
               </article>
               <article class="success-block">
-                <img src="img/Case 2.png" alt="sawe">
+                <div class="success-block__image">
+                  <img src="img/Case 2.png" alt="acceptedhere">
+                  <nav>
+                    <a href="#">#Integrations</a>
+                    <a href="#">#Blockchain</a>
+                  </nav>
+                </div>
                 <h3>eCommerce platform</h3>
-                <nav>
-                  <a href="#">#Integrations</a>
-                  <a href="#">#Blockchain</a>
-                </nav>
               </article>
               <article class="success-block">
-                <img src="img/Case 3.png" alt="sipsignal">
+                <div class="success-block__image">
+                  <img src="img/Case 3.png" alt="acceptedhere">
+                  <nav>
+                    <a href="#">#Integrations</a>
+                    <a href="#">#Blockchain</a>
+                  </nav>
+                </div>
                 <h3>Millionpieces</h3>
-                <nav>
-                  <a href="#">#Integrations</a>
-                  <a href="#">#Blockchain</a>
-                </nav>
               </article>
               <article class="success-block">
-                <img src="img/Case 4.png" alt="star-magic-rangers">
+                <div class="success-block__image">
+                  <img src="img/Case 4.png" alt="acceptedhere">
+                  <nav>
+                    <a href="#">#Integrations</a>
+                    <a href="#">#Blockchain</a>
+                  </nav>
+                </div>
                 <h3>eCommerce platform</h3>
-                <nav>
-                  <a href="#">#Integrations</a>
-                  <a href="#">#Blockchain</a>
-                </nav>
               </article>
             </div>
           </div>
@@ -201,7 +212,7 @@
                   </div>
                 </div>
               </div>
-              <div class="slide-block slide-block_active">
+              <div class="slide-block  slide-block_active">
                 <div class="slide-block__wrapper">
                   <div class="slide-block__image">
                     <img src="img/client.png" alt="client">
@@ -243,11 +254,23 @@
                 </address>
 
             </div>
-            <form action="#" class="form">              
-              <input type="text" placeholder="Name">
-              <input type="text" placeholder="Email">
-              <input type="text" placeholder="Phone number">
-              <input type="text" placeholder="Tell us about your project">
+            <form action="#" class="form">         
+              <label for="name-input" class="form__label">Name
+                <input id="name-input" type="text" placeholder=" ">
+              </label>     
+
+              <label for="mail-input" class="form__label">Email
+                <input id="mail-input" type="text" placeholder=" ">
+              </label>
+
+              <label for="phone-input" class="form__label">Phone number
+                <input id="phone-input" type="text" placeholder=" ">
+              </label>
+
+              <label for="text-input" class="form__label">Tell us about your project
+                <input id="text-input" type="text" placeholder=" ">
+              </label>
+
               <label for="file-upload" class="form__attachment">
                 <img src="icons/attach.svg" alt="attachments">
                 Attach files
