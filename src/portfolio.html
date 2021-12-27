@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto&display=swap');
     </style>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>  
     <link rel="stylesheet" href="css/style.min.css">
@@ -15,45 +15,46 @@
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <a href="index.html"><img src="icons/logo.svg" alt="Unistory logo"></a>
-          
+          <a href="index.html">
+            <img src="icons/logo.svg" alt="Unistory logo">
+          </a>
           <nav>
-            <a href="#">Services</a>
-            <a href="#">Competence</a>
-            <a href="#" style="color: var(--accent-color);">Portfolio</a>
-            <a href="#">About</a>
-            <a href="#">Contact us</a>
+            <a class="header__a" href="#">Services</a>
+            <a class="header__a" href="#">Competence</a>
+            <a class="header__a" href="#" style="color: var(--accent-color);">Portfolio</a>
+            <a class="header__a" href="#">About</a>
+            <a href="index.html#form-section" class="header__a">Contact us</a>
           </nav>
         </div>
       </div>
     </header>
     <main>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <div class="portfolio__tags">
-            <button class="tag-block">All projects</button>
-            <button class="tag-block">#Startups</button>
-            <button class="tag-block">#NFT</button>
-            <button class="tag-block">#Design</button>
-            <button class="tag-block">#DeFi</button>
-            <button class="tag-block">#Support</button>
-            <button class="tag-block">#Web</button>
-            <button class="tag-block">#Back-end</button>
-            <button class="tag-block">#Trading Bots</button>
-            <button class="tag-block">#Analytics</button>
-            <button class="tag-block">#Mobile</button>
-            <button class="tag-block">#FinTech</button>
-            <button class="tag-block">##Front-end</button>
-            <button class="tag-block">#Blockchain</button>
-            <button class="tag-block">#Development</button>
-            <button class="tag-block">#Release</button>
-            <button class="tag-block">#Booking</button>
-            <button class="tag-block">#eCommerce</button>
-            <button class="tag-block">#B2B</button>
+            <button class="tag-block" @click="sortProjects('all')"          v-bind:class="{'active': sortBy == 'all' }">All projects</button>
+            <button class="tag-block" @click="sortProjects('Startups')"     v-bind:class="{'active': sortBy == 'Startups' }">#Startups</button>
+            <button class="tag-block" @click="sortProjects('NFT')"          v-bind:class="{'active': sortBy == 'NFT' }">#NFT</button>
+            <button class="tag-block" @click="sortProjects('Design')"       v-bind:class="{'active': sortBy == 'Design' }">#Design</button>
+            <button class="tag-block" @click="sortProjects('DeFi')"         v-bind:class="{'active': sortBy == 'DeFi' }">#DeFi</button>
+            <button class="tag-block" @click="sortProjects('Support')"      v-bind:class="{'active': sortBy == 'Support' }">#Support</button>
+            <button class="tag-block" @click="sortProjects('Web')"          v-bind:class="{'active': sortBy == 'Web' }">#Web</button>
+            <button class="tag-block" @click="sortProjects('Back-end')"     v-bind:class="{'active': sortBy == 'Back-end' }">#Back-end</button>
+            <button class="tag-block" @click="sortProjects('Trading Bots')" v-bind:class="{'active': sortBy == 'Trading Bots' }">#Trading Bots</button>
+            <button class="tag-block" @click="sortProjects('Analytics')"    v-bind:class="{'active': sortBy == 'Analytics' }">#Analytics</button>
+            <button class="tag-block" @click="sortProjects('Mobile')"       v-bind:class="{'active': sortBy == 'Mobile' }">#Mobile</button>
+            <button class="tag-block" @click="sortProjects('FinTech')"      v-bind:class="{'active': sortBy == 'FinTech' }">#FinTech</button>
+            <button class="tag-block" @click="sortProjects('Front-end')"    v-bind:class="{'active': sortBy == 'Front-end' }">#Front-end</button>
+            <button class="tag-block" @click="sortProjects('Blockchain')"   v-bind:class="{'active': sortBy == 'Blockchain' }">#Blockchain</button>
+            <button class="tag-block" @click="sortProjects('Development')"  v-bind:class="{'active': sortBy == 'Development' }">#Development</button>
+            <button class="tag-block" @click="sortProjects('Release')"      v-bind:class="{'active': sortBy == 'Release' }">#Release</button>
+            <button class="tag-block" @click="sortProjects('Booking')"      v-bind:class="{'active': sortBy == 'Booking' }">#Booking</button>
+            <button class="tag-block" @click="sortProjects('eCommerce')"    v-bind:class="{'active': sortBy == 'eCommerce' }">#eCommerce</button>
+            <button class="tag-block" @click="sortProjects('B2B')"          v-bind:class="{'active': sortBy == 'B2B' }">#B2B</button>
           </div>
           <div class="portfolio__wrapper">
             <div class="portfolio__examples">
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'Startups' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 1.png" alt="acceptedhere">
                   <nav>
@@ -63,7 +64,7 @@
                 </div>
                 <h3>Millionpieces</h3>
               </article>
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'NFT' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 2.png" alt="acceptedhere">
                   <nav>
@@ -73,7 +74,7 @@
                 </div>
                 <h3>eCommerce platform</h3>
               </article>
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'Design' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 3.png" alt="acceptedhere">
                   <nav>
@@ -83,7 +84,7 @@
                 </div>
                 <h3>Millionpieces</h3>
               </article>
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'DeFi' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 4.png" alt="acceptedhere">
                   <nav>
@@ -93,7 +94,7 @@
                 </div>
                 <h3>eCommerce platform</h3>
               </article>
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'Startups' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 1.png" alt="acceptedhere">
                   <nav>
@@ -103,7 +104,7 @@
                 </div>
                 <h3>Millionpieces</h3>
               </article>
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'NFT' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 2.png" alt="acceptedhere">
                   <nav>
@@ -113,7 +114,7 @@
                 </div>
                 <h3>eCommerce platform</h3>
               </article>
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'Design' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 3.png" alt="acceptedhere">
                   <nav>
@@ -123,7 +124,7 @@
                 </div>
                 <h3>Millionpieces</h3>
               </article>
-              <article class="portfolio-block">
+              <article class="portfolio-block" v-if="sortBy == 'DeFi' || sortBy == 'all'">
                 <div class="portfolio-block__image">
                   <img src="img/Case 4.png" alt="acceptedhere">
                   <nav>
@@ -133,6 +134,7 @@
                 </div>
                 <h3>eCommerce platform</h3>
               </article>
+              <div class="portfolio__notfound" >not found :(</div>
               
             </div>
           </div>
@@ -167,7 +169,7 @@
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="js/portfolio.js"></script>
 </body>
 </html>

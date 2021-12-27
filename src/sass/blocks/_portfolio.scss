@@ -29,12 +29,24 @@
         width: 100%;
         
     }
+    &__notfound {
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 48px;
+        padding: 0 15px;
+        border-radius: 15px;
+        color: rgba(#6C6C6C, 0.86);
+        display: none;
+        &_active {
+            display: block;
+        }
+    }
 }
 .portfolio-block {
     &:hover {
         img {
-            width: 650px;
-            height: 827px;
+            transform: scale(0.98);
         }
     }
     &:nth-child(1n) {
@@ -54,7 +66,6 @@
     img {
         width: 660px;
         height: 840px;
-        overflow: hidden;
         border-radius: 25px;
     }
     h3 {
@@ -68,8 +79,8 @@
     }
     &__image {
         position: relative;
-        width: 660px;
-        height: 840px;
+        max-width: 660px;
+        max-height: 840px;
         nav {
             position: absolute;
             transform: rotate(-90deg);
@@ -99,7 +110,5 @@
     outline: none;
 }
 .active {
-    font-size: 48px;
     color: #2DA9EE;
-    line-height: 60px;
 }
