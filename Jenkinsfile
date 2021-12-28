@@ -17,7 +17,7 @@ pipeline {
           ssh unistory-landing 'cd /home/Unistory-landing && rm -r dist && mv new-dist dist'
         '''
         script {
-          slackSend channel: "unistorylanding", color: "good", message: "New ${env.BRANCH_NAME} build is deployed successfully: https://unistory.app/"
+          slackSend channel: "unistorylanding", color: "good", message: "New ${env.BRANCH_NAME} build was deployed successfully: https://unistory.app/"
         }
       }
     }
@@ -27,7 +27,7 @@ pipeline {
     failure {
       script {
         if (env.BRANCH_NAME == "main") {
-          slackSend channel: "json-ci-notification", color: "danger", message: "Build for ${env.BRANCH_NAME} branch is failing." 
+          slackSend channel: "unistorylanding", color: "danger", message: "Build for ${env.BRANCH_NAME} branch is failing." 
         }
       }
     }
