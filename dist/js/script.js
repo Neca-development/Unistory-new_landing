@@ -6,8 +6,9 @@ const slider      = document.querySelector('.slider'),
       pagination  = slider.querySelector('.slider__pagination');
       
 //переменные
-let slideCount = 2,
-    hideQueue = 0;
+let slideCount = (slidesArray.length - 1),
+    hideQueue = 0,
+    slidesQuantity = slidesArray.length;
 
 //обработчик нажатий
 function ChangeSlides() {
@@ -25,16 +26,25 @@ function ChangeSlides() {
 
 //сброс значений при выходе за пределы (временное решение)
 function ResetCount() {
-  if (slideCount < 0) {
-    slideCount = 2;
+  if (slideCount < 1) {
+    // slideCount = (slidesQuantity - 1);
     ShowSlides();
-  } else if (slideCount > 2) {
-    slideCount = 0;
+    previous.disabled = true,
+    previous.style.opacity = 0.5
+  } else if (slideCount > (slidesArray.length - 2)) {
+    // slideCount = 0;
     ShowSlides();
+    next.disabled = true,
+    next.style.opacity = 0.5
   } else {
     ShowSlides();
+    previous.disabled = false,
+    previous.style.opacity = 1
+    next.disabled = false,
+    next.style.opacity = 1
   }
 }
+ResetCount();
 
 //показ слайдов (добавить/убрать класс активности)
 function ShowSlides() {
@@ -53,11 +63,11 @@ function ShowSlides() {
 function HideSlides() {
   slidesArray.forEach((slide, id) => {
     if (id < slideCount) {
-      hideQueue = (id + 1);
+      hideQueue = (id + (slideCount.length));
       slide.style.zIndex = hideQueue;
       console.log(hideQueue);
     } else if (id == slideCount) {
-      hideQueue = (id + 2);
+      hideQueue = (id +  slidesQuantity);
       slide.style.zIndex = hideQueue;
       console.log(hideQueue);
     } else if (id > (slideCount)) {
@@ -99,4 +109,22 @@ function SwitchDots() {
     }
   });
 }
+
+//изменение input'a
+
+const labels = document.querySelectorAll('label');
+const inputs = document.querySelectorAll('input');
+
+inputs.forEach((input, id)=> {
+  input.addEventListener('change', ()=> {
+    labels.forEach((label, labelId)=> {
+      if (id == labelId && (input.formTarget.value != '')) {
+        label.style.marginTop = '-42px';
+        label.style.fontSize = '18px';
+        label.style.lineHeight = '82px';
+      }
+    })
+  })
+});
+
 
