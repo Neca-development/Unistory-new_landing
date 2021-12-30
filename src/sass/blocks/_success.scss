@@ -78,3 +78,108 @@
     }
     
 }
+
+@media (max-width: 1440px) {
+    
+    .success {
+        padding-bottom: 60px;
+        &__heading {
+            margin-top: 45px;
+            font-size: 44px;
+            line-height: 52px;
+        }
+        &__examples {
+            margin-top: 45px;
+        }
+    }
+    
+    .success-block {
+        &:nth-child(1n) {
+            padding-bottom: 60px;
+        }
+        &:nth-child(2n) {
+            padding-top: 60px;
+        }
+        width: 480px;
+        margin:  0 30px;
+        img {
+            width: 480px;
+            height: 610px;
+        }
+        h3 {
+            margin-left: 20px;
+            margin-top: 15px;
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: -40px;
+        }
+        &__image {
+            max-width: 480px;
+            max-height: 610px;
+            nav {
+                position: absolute;
+                transform: rotate(-90deg);
+                left: -180px;
+                bottom: 125px;
+                a {
+                    padding-left: 20px;
+                    color: var(--font-color);
+                    text-decoration: none;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    
+    .success {
+        padding-bottom: 105px;
+        &__heading {
+            margin-top: 38px;
+            font-size: 42px;
+            line-height: 48px;
+        }
+        &__examples {
+            margin-top: 38px;
+        }
+    }
+    
+    .success-block {
+        &:nth-child(1n) {
+            padding-bottom: 45px;
+        }
+        &:nth-child(2n) {
+            padding-top: 45px;
+        }
+        width: 400px;
+        margin:  0 22px;
+        img {
+            width: 400px;
+            height: 509px;
+        }
+        h3 {
+            margin-left: 15px;
+            margin-top: 12px;
+            font-size: 36px;
+            line-height: 42px;
+            margin-bottom: -35px;
+        }
+        &__image {
+            max-width: 400px;
+            max-height: 509px;
+            nav {
+                left: -160px;
+                bottom: 125px;
+                a {
+                    padding-left: 20px;
+                    font-size: 22px;
+                    line-height: 26px;
+                }
+            }
+        }
+        
+    }
+}

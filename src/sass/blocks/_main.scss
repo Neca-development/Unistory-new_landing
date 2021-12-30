@@ -63,3 +63,38 @@
         font-weight: 700;
     }
 }
+
+@media (max-width: 1180px) {
+    .main {
+        height: 710px;
+        &__heading {
+            font-size: 78px;
+            line-height: 90px;
+            margin-top: 85px;
+        }
+        &__points {
+            margin-top: 85px;
+            padding: 0 40px;
+        }
+        &__button {
+            margin-top: 85px;
+            width: 347px;
+            height: 74px;
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    
+    .point {
+        display: flex;
+        &__count {
+            margin: 0 18px;
+            font-size: 54.61px;
+            line-height: 64px;
+        }
+        &__label {
+            font-size: 30.54px;
+            line-height: 38.6px;
+        }
+    }
+}
