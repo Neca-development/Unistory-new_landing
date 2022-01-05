@@ -1,0 +1,43 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Unistory | Home page
+        link(rel="stylesheet", href="../styles/main.scss")
+    body
+        include ./blocks/header
+        .welcome
+            .container 
+                h1.welcome__title 
+                    | Software 
+                    span development
+                    br
+                    | & 
+                    span product consultance
+                ul.welcome__advantages
+                    li.welcome__advantages-item 
+                        a(href="https://www.upwork.com/ag/neca/", target="blank").advantage
+                            span.advantage__left 4.9
+                            .advantage__right
+                                img(src="../icons/Upwork.png", alt="", height="46")
+                                br
+                                img(src="../icons/five-stars.svg", alt="alt")
+                    li.welcome__advantages-item 
+                        a.advantage
+                            span.advantage__left 20+
+                            .advantage__right
+                                | Developed
+                                br
+                                | projects
+                    li.welcome__advantages-item 
+                        a.advantage
+                            span.advantage__left 87%
+                            .advantage__right
+                                | Repeat 
+                                br
+                                | customers
+                a.btn.btn_animated_blue.btn_size_l.welcome__contact-btn(href="#contactUs") Discus the project
+                
+        
