@@ -17,6 +17,7 @@
     display: grid;
     grid-column-gap: 5.3125rem;
     grid-template-columns: repeat(3, auto);
+    align-content: center;
     justify-content: center;
     margin: 7.5rem auto 0;
   }
@@ -55,5 +56,33 @@
     font-weight: bold;
     font-size: 2.2835rem;
     line-height: 2.6875rem;
+
+    img {
+      max-height: 5.5rem;
+    }
+  }
+}
+
+.tags-slider {
+  padding: 1.875rem 0;
+  background: var(--accent-color);
+
+  marquee {
+    padding: 0.9375rem;
+  }
+
+  &__tag {
+    display: inline-block;
+    margin-right: 7.5rem;
+    color: var(--background-color);
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    text-decoration: none;
+    transition: ease-out 0.16s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
