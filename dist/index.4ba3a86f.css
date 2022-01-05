@@ -197,12 +197,12 @@ table {
 .btn_animated_blue:before {
   position: absolute;
   top: 0;
-  left: 0;
   z-index: -1;
   width: 100%;
   height: 100%;
   background-color: var(--accent-color);
   transition: transform ease-in-out 0.15s;
+  animation: entranceFill 0.5s linear forwards;
   content: "";
 }
 .btn_animated_blue:hover::before {
@@ -212,6 +212,15 @@ table {
   padding: 1.5rem 4.5rem;
   font-size: 1.75rem;
   line-height: 2.25rem;
+}
+
+@keyframes entranceFill {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
 }
 .welcome {
   padding: 9.25rem 0 11.25rem;
