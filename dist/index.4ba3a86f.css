@@ -350,15 +350,25 @@ table {
   max-height: 5.5rem;
 }
 
-.cases {
+.cases-section {
   padding-top: 3.75rem;
 }
-.cases__title {
+.cases-section__title {
   font-weight: bold;
   font-size: 3rem;
   line-height: 3.75rem;
   letter-spacing: 0.0625rem;
   text-align: center;
+}
+.cases-section__grid {
+  display: grid;
+  grid-gap: 7.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 3.75rem;
+}
+.cases-section__item:nth-child(2n) {
+  position: relative;
+  top: 7.5rem;
 }
 
 .tags-slider {
@@ -390,6 +400,51 @@ table {
 }
 .tags-slider__tag:hover {
   transform: scale(1.3);
+}
+.case-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+.case-card_animation_scale:hover .case-card__img img {
+  transform: scale(1.25);
+}
+.case-card__tags {
+  position: absolute;
+  bottom: 3.58rem;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+.case-card__img {
+  position: relative;
+  align-self: stretch;
+  padding-bottom: 136.3%;
+  overflow: hidden;
+  border-radius: 1.4438rem;
+  transform: translateZ(0);
+}
+.case-card__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  transition: transform ease-out 0.25s;
+  will-change: transform;
+}
+.case-card__title {
+  margin-top: 1.5rem;
+  color: #0f225a;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  letter-spacing: 0.0625rem;
 }
 :root {
   --font-color: #373737;
