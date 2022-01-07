@@ -16,13 +16,13 @@ html {
   color: var(--font-color);
   font-size: 16px;
 
-  @media (max-width: 1500px){
-    font-size: 1vw;
+  @media (max-width: 1600px){
+    font-size: .8vw;
   }
 }
 
 .container {
-  max-width: 1498px;
+  max-width: min(1498px, 80vw);
   margin: 0 auto;
   padding: 0 1.875rem;
 }

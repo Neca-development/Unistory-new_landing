@@ -79,25 +79,35 @@
   padding: 1.875rem 0;
   background: var(--accent-color);
 
-  marquee {
+  .swiper {
     padding: 0.9375rem;
   }
 
+  .swiper-slide-active {
+    transform: scale(1.25);
+  }
+
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    transform: scale(1.15);
+  }
+
   &__tag {
+    display: inline-block;
+    padding: 0 3.75rem;
     color: var(--background-color);
     font-weight: bold;
     font-size: 2.25rem;
     line-height: 3rem;
     text-decoration: none;
     transition: ease-out 0.16s;
-    display: inline-block;
-    
+
     &.swiper-slide {
       width: auto;
     }
 
-    // &:hover {
-    //   transform: scale(1.2);
-    // }
+    &:hover {
+      transform: scale(1.3);
+    }
   }
 }

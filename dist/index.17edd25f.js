@@ -462,27 +462,45 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _swiper = require("swiper");
 var _swiperDefault = parcelHelpers.interopDefault(_swiper);
-let SwiperTop = new _swiperDefault.default('.marquee_top', {
+let SwiperTop = new _swiperDefault.default('#marquee_top', {
+    modules: [
+        _swiper.Autoplay,
+        _swiper.FreeMode,
+        _swiper.Mousewheel
+    ],
     spaceBetween: 0,
     centeredSlides: true,
-    autoplay: {
-        delay: 1
-    },
-    slidesPerView: 'auto'
-});
-let SwiperBottom = new _swiperDefault.default('.marquee_bottom', {
-    spaceBetween: 0,
-    centeredSlides: true,
-    speed: 6000,
+    mousewheel: true,
+    speed: 1000,
+    freeMode: true,
     autoplay: {
         delay: 1,
-        reverseDirection: true
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
     },
     loop: true,
-    loopedSlides: 4,
-    slidesPerView: 'auto',
-    allowTouchMove: false,
-    disableOnInteraction: true
+    slidesPerView: 'auto'
+});
+let SwiperBottom = new _swiperDefault.default('#marquee_bottom', {
+    modules: [
+        _swiper.Autoplay,
+        _swiper.FreeMode,
+        _swiper.Mousewheel
+    ],
+    mousewheel: true,
+    spaceBetween: 0,
+    centeredSlides: true,
+    mousewheel: true,
+    speed: 1000,
+    freeMode: true,
+    autoplay: {
+        delay: 1,
+        reverseDirection: true,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false
+    },
+    loop: true,
+    slidesPerView: 'auto'
 });
 
 },{"swiper":"eH5h9","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"eH5h9":[function(require,module,exports) {
