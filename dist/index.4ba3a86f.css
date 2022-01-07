@@ -351,7 +351,7 @@ table {
 }
 
 .cases-section {
-  padding-top: 3.75rem;
+  padding: 3.75rem 0 7.375rem;
 }
 .cases-section__title {
   font-weight: bold;
@@ -400,6 +400,50 @@ table {
 }
 .tags-slider__tag:hover {
   transform: scale(1.3);
+}
+
+.project-road {
+  padding: 3.75rem 0;
+  color: var(--background-color);
+  background-color: var(--accent-color);
+}
+.project-road__title {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  text-align: center;
+}
+.project-road__list {
+  display: grid;
+  grid-column-gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 3.75rem;
+}
+.project-road__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.project-road__icon {
+  display: flex;
+  align-items: center;
+  height: 3.75rem;
+}
+.project-road__icon img {
+  max-height: 100%;
+}
+.project-road__subtitle {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+.project-road__desc {
+  max-width: max(15.3125rem, 65%);
+  margin-top: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 }
 .case-card {
   position: relative;

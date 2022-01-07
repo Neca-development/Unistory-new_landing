@@ -8,7 +8,7 @@ html(lang="en")
     link(rel="stylesheet", href="../styles/main.scss")
   body
     include ./blocks/header
-    .welcome
+    section.welcome
       .container 
         h1.welcome__title 
           | Software &nbsp;
@@ -60,7 +60,7 @@ html(lang="en")
           a.tags-slider__tag.swiper-slide(href="#") #Support
           a.tags-slider__tag.swiper-slide(href="#") #eCommerce
           a.tags-slider__tag.swiper-slide(href="#") #B2B
-    .cases-section
+    section.cases-section
       .container 
         h2.cases-section__title Success stories
         .cases-section__grid
@@ -84,4 +84,28 @@ html(lang="en")
             a.case-card__img(href="javascript:;")
               img(src="../img/Case_4.jpeg", alt="Millionpieces")
             h3.case-card__title eCommerce platform
+    section.project-road 
+      .container
+        h2.project-road__title From your idea to success story
+        ul.project-road__list 
+          li.project-road__item 
+            .project-road__icon
+              img(src="../icons/services/planning.svg")
+            h3.project-road__subtitle Planning
+            p.project-road__desc We create a well-defined scope of project and help you to visualise your ideas.
+          li.project-road__item 
+            .project-road__icon
+              img(src="../icons/services/design.svg")
+            h3.project-road__subtitle Design
+            p.project-road__desc Design development based on aprooved wireframes and design guidlines.
+          li.project-road__item 
+            .project-road__icon
+              img(src="../icons/services/development.svg")
+            h3.project-road__subtitle Development
+            p.project-road__desc We cater to the requirement for frontend, backend, web services, and API development integration.
+          li.project-road__item 
+            .project-road__icon
+              img(src="../icons/services/release.svg")
+            h3.project-road__subtitle Release
+            p.project-road__desc We make sure that everything runs, every day, exactly as it should be.
     script(type="module", src="../scripts/marquee.js") 
