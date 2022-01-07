@@ -1,0 +1,16 @@
+body {
+  animation: mymove 1.2s;
+  animation-delay: none;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+  0% {
+    background-color: black;
+    -webkit-filter: blur(10px);
+  }
+  100% {
+    background-color: transparent;
+    -webkit-filter: blur(0px);
+  }
+}

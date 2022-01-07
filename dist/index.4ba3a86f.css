@@ -206,7 +206,22 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+body {
+  animation: mymove 1.2s;
+  animation-delay: none;
+  animation-fill-mode: forwards;
+}
 
+@keyframes mymove {
+  0% {
+    background-color: black;
+    -webkit-filter: blur(10px);
+  }
+  100% {
+    background-color: transparent;
+    -webkit-filter: blur(0px);
+  }
+}
 .header {
   padding: 1.375rem 0;
   box-shadow: 0px 0.125rem 0.25rem rgba(208, 208, 208, 0.25);
@@ -323,7 +338,6 @@ table {
 .welcome__contact-btn {
   margin: 9rem auto 0;
 }
-
 .advantage {
   display: flex;
   align-items: center;
@@ -349,7 +363,6 @@ table {
 .advantage__right img {
   max-height: 5.5rem;
 }
-
 .cases-section {
   padding: 3.75rem 0 7.375rem;
 }
@@ -370,7 +383,6 @@ table {
   position: relative;
   top: 7.5rem;
 }
-
 .tags-slider {
   padding: 1.875rem 0;
   background: var(--accent-color);
@@ -401,7 +413,6 @@ table {
 .tags-slider__tag:hover {
   transform: scale(1.3);
 }
-
 .project-road {
   padding: 3.75rem 0;
   color: var(--background-color);
@@ -445,6 +456,137 @@ table {
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
+.testimonials {
+  width: 100%;
+  min-height: 863px;
+  padding-bottom: 73px;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+.testimonials__heading {
+  padding-top: 60px;
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 1px;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 610px;
+  margin-top: 60px;
+}
+.slider__pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 55px;
+  height: 100%;
+}
+.slider__cards {
+  width: 1071px;
+  min-height: 490px;
+  margin: 0 36px;
+  padding-top: 40px;
+}
+.slider__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55px;
+  height: 610px;
+  padding-top: 120px;
+  padding-left: 10px;
+}
+.slider__controls_prev {
+  width: 54px;
+  height: 54px;
+  background: url(up.cef7d7a7.svg);
+  background-color: none;
+  border: none;
+}
+.slider__controls_next {
+  width: 54px;
+  height: 54px;
+  background: url(up.cef7d7a7.svg);
+  background-color: none;
+  border: none;
+  transform: rotate(-180deg);
+}
+.slider__dot {
+  z-index: 10;
+  display: block;
+  width: 3px;
+  height: 48px;
+  margin: 6px 0;
+  background-color: rgba(55, 55, 55, 0.7);
+}
+.slider__dot_active {
+  height: 478px;
+  background-color: var(--accent-color);
+}
+.slide-block {
+  position: relative;
+  width: 1071px;
+  height: 100px;
+  margin-top: -40px;
+  overflow: hidden;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: -1px 1px 8px 3px rgba(133, 133, 133, 0.25);
+}
+.slide-block__wrapper {
+  position: relative;
+  display: flex;
+  width: 1071px;
+  padding-top: 60px;
+}
+.slide-block_active {
+  height: 490px;
+}
+.slide-block_active .slide-block__wrapper {
+  padding-top: 0px;
+}
+.slide-block__image {
+  width: 342px;
+  height: 370px;
+  margin: 60px;
+  overflow: hidden;
+}
+.slide-block__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 550px;
+  height: 370px;
+  padding-top: 60px;
+  color: var(--font-color);
+  text-align: left;
+}
+.slide-block__text img {
+  width: 48px;
+  height: 48px;
+}
+.slide-block__text p {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.slide-block__text h3 {
+  margin-top: 48px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+}
+.slide-block__text h4 {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
 .case-card {
   position: relative;
   display: flex;
@@ -453,17 +595,29 @@ table {
   color: inherit;
   text-decoration: none;
 }
-.case-card_animation_scale:hover .case-card__img img {
+.case-card_animation_scale .case-card__img:hover img {
   transform: scale(1.25);
 }
 .case-card__tags {
   position: absolute;
   bottom: 3.58rem;
   left: 0;
+  display: flex;
   font-size: 1.5rem;
   line-height: 1.75rem;
   transform: rotate(-90deg);
   transform-origin: left top;
+}
+.case-card__tags li {
+  margin-right: 1.5625rem;
+}
+.case-card__tags a {
+  color: inherit;
+  text-decoration: none;
+  transition: color ease-in 0.16s;
+}
+.case-card__tags a:hover {
+  color: var(--accent-color);
 }
 .case-card__img {
   position: relative;
