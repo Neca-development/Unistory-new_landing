@@ -40,50 +40,27 @@ html(lang="en")
           href="#contactUs"
         ) Discus the project
     .tags-slider
-      marquee(
-        loop="-1",
-        direction="left",
-        behavior="alternate",
-        scrolldelay="0",
-        onmouseover="this.stop();",
-        onmouseout="this.start();"
-      )
-        a.tags-slider__tag(href="#") #Front-end
-        a.tags-slider__tag(href="#") #Startups
-        a.tags-slider__tag(href="#") #NFT
-        a.tags-slider__tag(href="#") #Design
-        a.tags-slider__tag(href="#") #DeFi
-        a.tags-slider__tag(href="#") #Support
-        a.tags-slider__tag(href="#") #eCommerce
-        a.tags-slider__tag(href="#") #B2B
-        a.tags-slider__tag(href="#") #Front-end
-        a.tags-slider__tag(href="#") #Startups
-        a.tags-slider__tag(href="#") #NFT
-        a.tags-slider__tag(href="#") #Design
-        a.tags-slider__tag(href="#") #DeFi
-        a.tags-slider__tag(href="#") #Support
-        a.tags-slider__tag(href="#") #eCommerce
-        a.tags-slider__tag(href="#") #B2B
-      marquee(
-        loop="-1",
-        direction="right",
-        behavior="alternate",
-        scrollamount="5",
-        onmouseover="this.stop();",
-        onmouseout="this.start(); "
-      )
-        a.tags-slider__tag(href="#") #Back-end
-        a.tags-slider__tag(href="#") #Trading Bots
-        a.tags-slider__tag(href="#") #Blockchain
-        a.tags-slider__tag(href="#") #Mobile
-        a.tags-slider__tag(href="#") #FinTech
-        a.tags-slider__tag(href="#") #Web
-        a.tags-slider__tag(href="#") #Release
-        a.tags-slider__tag(href="#") #Back-end
-        a.tags-slider__tag(href="#") #Trading Bots
-        a.tags-slider__tag(href="#") #Blockchain
-        a.tags-slider__tag(href="#") #Mobile
-        a.tags-slider__tag(href="#") #FinTech
-        a.tags-slider__tag(href="#") #Web
-        a.tags-slider__tag(href="#") #Release
-    script(src="../scripts/animation.js") 
+      .swiper.marquee_top
+        .swiper-wrapper
+          a.tags-slider__tag.swiper-slide(href="#") #Front-end
+          a.tags-slider__tag.swiper-slide(href="#") #Startups
+          a.tags-slider__tag.swiper-slide(href="#") #NFT
+          a.tags-slider__tag.swiper-slide(href="#") #Design
+          a.tags-slider__tag.swiper-slide(href="#") #DeFi
+          a.tags-slider__tag.swiper-slide(href="#") #Support
+          a.tags-slider__tag.swiper-slide(href="#") #eCommerce
+          a.tags-slider__tag.swiper-slide(href="#") #B2B
+      .swiper.marquee_bottom
+        .swiper-wrapper
+          a.tags-slider__tag.swiper-slide(href="#") #Front-end
+          a.tags-slider__tag.swiper-slide(href="#") #Startups
+          a.tags-slider__tag.swiper-slide(href="#") #NFT
+          a.tags-slider__tag.swiper-slide(href="#") #Design
+          a.tags-slider__tag.swiper-slide(href="#") #DeFi
+          a.tags-slider__tag.swiper-slide(href="#") #Support
+          a.tags-slider__tag.swiper-slide(href="#") #eCommerce
+          a.tags-slider__tag.swiper-slide(href="#") #B2B
+    .cases
+      .container 
+        h2.cases__title Success stories
+    script(type="module", src="../scripts/marquee.js") 

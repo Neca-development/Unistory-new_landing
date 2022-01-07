@@ -63,6 +63,18 @@
   }
 }
 
+.cases {
+  padding-top: 3.75rem;
+
+  &__title {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: 0.0625rem;
+    text-align: center;
+  }
+}
+
 .tags-slider {
   padding: 1.875rem 0;
   background: var(--accent-color);
@@ -72,17 +84,20 @@
   }
 
   &__tag {
-    display: inline-block;
-    margin-right: 7.5rem;
     color: var(--background-color);
     font-weight: bold;
     font-size: 2.25rem;
     line-height: 3rem;
     text-decoration: none;
     transition: ease-out 0.16s;
-
-    &:hover {
-      transform: scale(1.2);
+    display: inline-block;
+    
+    &.swiper-slide {
+      width: auto;
     }
+
+    // &:hover {
+    //   transform: scale(1.2);
+    // }
   }
 }
