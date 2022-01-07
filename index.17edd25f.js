@@ -465,14 +465,16 @@ var _swiperDefault = parcelHelpers.interopDefault(_swiper);
 let SwiperTop = new _swiperDefault.default('#marquee_top', {
     modules: [
         _swiper.Autoplay,
-        _swiper.FreeMode
+        _swiper.FreeMode,
+        _swiper.Mousewheel
     ],
     spaceBetween: 0,
     centeredSlides: true,
-    speed: 2500,
+    mousewheel: true,
+    speed: 1000,
     freeMode: true,
     autoplay: {
-        delay: 0,
+        delay: 1,
         pauseOnMouseEnter: true,
         disableOnInteraction: false
     },
@@ -481,11 +483,16 @@ let SwiperTop = new _swiperDefault.default('#marquee_top', {
 });
 let SwiperBottom = new _swiperDefault.default('#marquee_bottom', {
     modules: [
-        _swiper.Autoplay
+        _swiper.Autoplay,
+        _swiper.FreeMode,
+        _swiper.Mousewheel
     ],
+    mousewheel: true,
     spaceBetween: 0,
     centeredSlides: true,
-    speed: 2500,
+    mousewheel: true,
+    speed: 1000,
+    freeMode: true,
     autoplay: {
         delay: 1,
         reverseDirection: true,

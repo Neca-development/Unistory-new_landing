@@ -368,6 +368,13 @@ table {
 .tags-slider .swiper {
   padding: 0.9375rem;
 }
+.tags-slider .swiper-slide-active {
+  transform: scale(1.25);
+}
+.tags-slider .swiper-slide-prev,
+.tags-slider .swiper-slide-next {
+  transform: scale(1.15);
+}
 .tags-slider__tag {
   display: inline-block;
   padding: 0 3.75rem;
@@ -382,7 +389,7 @@ table {
   width: auto;
 }
 .tags-slider__tag:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 :root {
   --font-color: #373737;
@@ -395,13 +402,13 @@ html {
   color: var(--font-color);
   font-size: 16px;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   html {
-    font-size: 1vw;
+    font-size: 0.8vw;
   }
 }
 .container {
-  max-width: 1498px;
+  max-width: min(1498px, 80vw);
   margin: 0 auto;
   padding: 0 1.875rem;
 }
