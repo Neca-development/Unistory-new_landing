@@ -28,6 +28,14 @@ html {
   padding: 0 1.875rem;
 }
 
+.title {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  letter-spacing: 0.0625rem;
+  text-align: center;
+}
+
 // <----- blocks ------>
 @import url("./blocks/_animation.scss");
 @import url("./blocks/_header.scss");

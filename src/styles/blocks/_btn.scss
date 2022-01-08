@@ -20,6 +20,11 @@
     background: var(--background-color);
   }
 
+  &_white {
+    color: var(--font-color);
+    background: var(--background-color);
+  }
+
   &_animated_blue {
     position: relative;
     overflow: hidden;
@@ -49,6 +54,7 @@
     padding: 1.5rem 4.5rem;
     font-size: 1.75rem;
     line-height: 2.25rem;
+    border-radius: 0.625rem;
   }
 }
 

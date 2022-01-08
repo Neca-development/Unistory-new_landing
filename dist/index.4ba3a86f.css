@@ -157,12 +157,13 @@ time,
 mark,
 audio,
 video {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
+  border: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -277,6 +278,10 @@ body {
   color: var(--accent-color);
   background: var(--background-color);
 }
+.btn_white {
+  color: var(--font-color);
+  background: var(--background-color);
+}
 .btn_animated_blue {
   position: relative;
   overflow: hidden;
@@ -301,6 +306,7 @@ body {
   padding: 1.5rem 4.5rem;
   font-size: 1.75rem;
   line-height: 2.25rem;
+  border-radius: 0.625rem;
 }
 
 @keyframes entranceFill {
@@ -366,13 +372,6 @@ body {
 .cases-section {
   padding: 3.75rem 0 7.375rem;
 }
-.cases-section__title {
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 3.75rem;
-  letter-spacing: 0.0625rem;
-  text-align: center;
-}
 .cases-section__grid {
   display: grid;
   grid-gap: 7.5rem;
@@ -418,12 +417,6 @@ body {
   color: var(--background-color);
   background-color: var(--accent-color);
 }
-.project-road__title {
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 3.75rem;
-  text-align: center;
-}
 .project-road__list {
   display: grid;
   grid-column-gap: 1.5rem;
@@ -457,17 +450,9 @@ body {
   line-height: 1.375rem;
 }
 .testimonials {
-  padding-bottom: 3.75rem;
+  padding: 3.75rem 0;
   text-align: center;
   background-color: var(--bg-color);
-}
-.testimonials__heading {
-  color: var(--font-color);
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 3.75rem;
-  letter-spacing: 0.0625rem;
-  text-align: center;
 }
 .slider {
   display: flex;
@@ -555,6 +540,12 @@ body {
   margin: 3.75rem;
   overflow: hidden;
 }
+.slide-block__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .slide-block__text {
   display: flex;
   flex-direction: column;
@@ -585,6 +576,164 @@ body {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.375rem;
+}
+.contact-us {
+  padding: 3.75rem 0;
+  color: var(--background-color);
+  background: var(--accent-color);
+}
+.contact-us__wrap {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  margin-top: 3.75rem;
+}
+.contact-us__subtitle {
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 3rem;
+}
+.contact-us__details {
+  padding-top: 0.625rem;
+  padding-left: 9.5rem;
+}
+.contact-us__item {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+.contact-us__item:nth-of-type(2) {
+  margin-top: 1.5rem;
+}
+.contact-us__item b {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+.contact-us__item a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact-us__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 46%;
+}
+.contact-us__form button[type=submit] {
+  margin-top: 3rem;
+}
+.contact-us__inputs-wrap {
+  position: relative;
+  width: 100%;
+  padding: 1.8125rem 3rem 1.8125rem 4.625rem;
+}
+.contact-us__inputs-wrap:before {
+  position: absolute;
+  top: 2.5%;
+  left: 0;
+  width: 0.125rem;
+  height: 95%;
+  background: #fff;
+  content: "";
+}
+.contact-us__form-frame {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+.contact-us__form-frame_top-right {
+  top: 0;
+  right: 0;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  border-top-right-radius: 0.25rem;
+}
+.contact-us__form-frame_bottom-right {
+  right: 0;
+  bottom: 0;
+  border-right: 0.125rem solid #fff;
+  border-bottom: 0.125rem solid #fff;
+  border-bottom-right-radius: 0.25rem;
+}
+.contact-us__field {
+  position: relative;
+  display: block;
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  cursor: text;
+}
+.contact-us__field span {
+  position: absolute;
+  bottom: 0.3125rem;
+  left: 0;
+  transform-origin: left;
+  transition: transform ease-in 0.2s;
+}
+.contact-us__field textarea {
+  resize: none;
+}
+.contact-us__field input,
+.contact-us__field textarea {
+  width: 100%;
+  color: var(--background-color);
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+}
+.contact-us__field input:-internal-autofill-selected,
+.contact-us__field textarea:-internal-autofill-selected {
+  background: transparent;
+}
+.contact-us__field input:focus, .contact-us__field input:not(:placeholder-shown),
+.contact-us__field textarea:focus,
+.contact-us__field textarea:not(:placeholder-shown) {
+  outline: none;
+}
+.contact-us__field input:focus + span, .contact-us__field input:not(:placeholder-shown) + span,
+.contact-us__field textarea:focus + span,
+.contact-us__field textarea:not(:placeholder-shown) + span {
+  transform: scale(0.5) translateY(-135%);
+}
+.contact-us__field input::placeholder,
+.contact-us__field textarea::placeholder {
+  opacity: 0;
+}
+.contact-us__field:not(:first-of-type) {
+  margin-top: 3.75rem;
+}
+.contact-us__file {
+  display: block;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  cursor: pointer;
+}
+.contact-us__file img {
+  margin-right: 1.5rem;
+}
+.contact-us__file input {
+  position: absolute;
+  visibility: hidden;
+}
+.contact-us__description {
+  margin-top: 0.9375rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.contact-us__description a {
+  color: inherit;
 }
 .case-card {
   position: relative;
@@ -663,5 +812,12 @@ html {
   max-width: min(1498px, 80vw);
   margin: 0 auto;
   padding: 0 1.875rem;
+}
+.title {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.75rem;
+  letter-spacing: 0.0625rem;
+  text-align: center;
 }
 /*# sourceMappingURL=index.4ba3a86f.css.map */

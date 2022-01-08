@@ -62,7 +62,7 @@ html(lang="en")
           a.tags-slider__tag.swiper-slide(href="#") #B2B
     section.cases-section
       .container 
-        h2.cases-section__title Success stories
+        h2.title Success stories
         .cases-section__grid
           article.cases-section__item.case-card.case-card_animation_scale
             ul.case-card__tags 
@@ -102,7 +102,7 @@ html(lang="en")
             h3.case-card__title eCommerce platform
     section.project-road 
       .container
-        h2.project-road__title From your idea to success story
+        h2.title From your idea to success story
         ul.project-road__list 
           li.project-road__item 
             .project-road__icon
@@ -125,53 +125,117 @@ html(lang="en")
             h3.project-road__subtitle Release
             p.project-road__desc We make sure that everything runs, every day, exactly as it should be.
     section.testimonials
-  .container
-    h2.testimonials__heading Trusted by the best
-    .slider
-      .slider__pagination
-      .slider__cards
-        .slide-block
-          .slide-block__wrapper
-            .slide-block__image
-              img(src="../img/client.png", alt="client")
-            .slide-block__text
-              img(src="../icons/client-logo.png", alt="company")
-              p
-                | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
-              h3 Ararat Tonoyan
-              h4 SEO &quot;MILLION PIECES&quot;
-        .slide-block
-          .slide-block__wrapper
-            .slide-block__image
-              img(src="../img/client.png", alt="client")
-            .slide-block__text
-              img(src="../icons/client-logo.png", alt="company")
-              p
-                | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
-              h3 Ararat Tonoyan
-              h4 SEO &quot;MILLION PIECES&quot;
-        .slide-block
-          .slide-block__wrapper
-            .slide-block__image
-              img(src="../img/client.png", alt="client")
-            .slide-block__text
-              img(src="../icons/client-logo.png", alt="company")
-              p
-                | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
-              h3 Ararat Tonoyan
-              h4 SEO &quot;MILLION PIECES&quot;
-        .slide-block.slide-block_active
-          .slide-block__wrapper
-            .slide-block__image
-              img(src="../img/client.png", alt="client")
-            .slide-block__text
-              img(src="../icons/client-logo.png", alt="company")
-              p
-                | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
-              h3 Ararat Tonoyan
-              h4 SEO &quot;MILLION PIECES&quot;
-      .slider__controls
-        button.slider__controls_prev
-        button.slider__controls_next
+      .container
+        h2.title Trusted by the best
+        .slider
+          .slider__pagination
+          .slider__cards
+            .slide-block
+              .slide-block__wrapper
+                .slide-block__image
+                  img(src="../img/client.png", alt="client")
+                .slide-block__text
+                  img(src="../icons/client-logo.png", alt="company")
+                  p
+                    | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
+                  h3 Ararat Tonoyan
+                  h4 SEO &quot;MILLION PIECES&quot;
+            .slide-block
+              .slide-block__wrapper
+                .slide-block__image
+                  img(src="../img/client.png", alt="client")
+                .slide-block__text
+                  img(src="../icons/client-logo.png", alt="company")
+                  p
+                    | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
+                  h3 Ararat Tonoyan
+                  h4 SEO &quot;MILLION PIECES&quot;
+            .slide-block
+              .slide-block__wrapper
+                .slide-block__image
+                  img(src="../img/client.png", alt="client")
+                .slide-block__text
+                  img(src="../icons/client-logo.png", alt="company")
+                  p
+                    | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
+                  h3 Ararat Tonoyan
+                  h4 SEO &quot;MILLION PIECES&quot;
+            .slide-block.slide-block_active
+              .slide-block__wrapper
+                .slide-block__image
+                  img(src="../img/client.png", alt="client")
+                .slide-block__text
+                  img(src="../icons/client-logo.png", alt="company")
+                  p
+                    | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
+                  h3 Ararat Tonoyan
+                  h4 SEO &quot;MILLION PIECES&quot;
+          .slider__controls
+            button.slider__controls_prev
+            button.slider__controls_next
+    .contact-us 
+      .container 
+        h2.title Contact us
+        .contact-us__wrap 
+          .contact-us__details 
+            h3.contact-us__subtitle Get in touch
+            .contact-us__item 
+              b Phone
+              br
+              a(href="tel:+7 981 101 1104") +7 981 101 1104
+            .contact-us__item 
+              b Email
+              br
+              a(href="mailto:contact@unistory.app") contact@unistory.app
+            .contact-us__item 
+              b Adress
+              br
+              p Russia, Saint-Petersburg
+                br 
+                | Izmaylovskiy Prospekt 15
+          form#contactForm.contact-us__form
+            .contact-us__inputs-wrap
+              .contact-us__form-frame.contact-us__form-frame_top-right
+              .contact-us__form-frame.contact-us__form-frame_bottom-right
+              label.contact-us__field
+                input(
+                  type="text",
+                  name="name",
+                  autocomplete="name",
+                  placeholder="Name"
+                )
+                span Name
+              label.contact-us__field
+                input(
+                  type="email",
+                  name="email",
+                  autocomplete="email",
+                  placeholder="Email"
+                )
+                span Email
+              label.contact-us__field
+                input.contact-us__field(
+                  type="tel",
+                  name="phone",
+                  autocomplete="tel",
+                  placeholder="Phone number"
+                )
+                span Phone number
+              label.contact-us__field
+                textarea.contact-us__field(
+                  name="message",
+                  cols="30",
+                  rows="1",
+                  placeholder="Tell us about your project"
+                )
+                span Tell us about your project
+              label.contact-us__file
+                img(src="../icons/attach.svg", alt="alt")
+                span Attach files
+                input(type="file", name="file") 
+            button.btn.btn_white.btn_size_l(type="submit") Discuss the project
+            p.contact-us__description By submitting your form, you agree to
+              a(href="javascript:;") &nbsp;the Privacy Policy
+              | &nbsp;rules.
     script(type="module", src="../scripts/marquee.js") 
     script(type="module", src="../scripts/main.js") 

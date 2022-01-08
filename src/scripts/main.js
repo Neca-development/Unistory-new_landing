@@ -1,23 +1,23 @@
 //DOM 
-const slider      = document.querySelector('.slider'),
-      slidesArray = slider.querySelectorAll('.slide-block'),
-      previous    = slider.querySelector('.slider__controls_prev'),
-      next        = slider.querySelector('.slider__controls_next'),
-      pagination  = slider.querySelector('.slider__pagination');
-      
+const slider = document.querySelector('.slider'),
+  slidesArray = slider.querySelectorAll('.slide-block'),
+  previous = slider.querySelector('.slider__controls_prev'),
+  next = slider.querySelector('.slider__controls_next'),
+  pagination = slider.querySelector('.slider__pagination');
+
 //переменные
 let slideCount = (slidesArray.length - 1),
-    hideQueue = 0,
-    slidesQuantity = slidesArray.length;
+  hideQueue = 0,
+  slidesQuantity = slidesArray.length;
 
 //обработчик нажатий
 function ChangeSlides() {
-  previous.addEventListener('click', ()=> {
+  previous.addEventListener('click', () => {
     slideCount--;
     ResetCount();
     SwitchDots();
   });
-  next.addEventListener('click', ()=> {
+  next.addEventListener('click', () => {
     slideCount++;
     ResetCount();
     SwitchDots();
@@ -30,25 +30,25 @@ function ResetCount() {
     // slideCount = (slidesQuantity - 1);
     ShowSlides();
     previous.disabled = true,
-    previous.style.opacity = 0.5
+      previous.style.opacity = 0.5
   } else if (slideCount > (slidesArray.length - 2)) {
     // slideCount = 0;
     ShowSlides();
     next.disabled = true,
-    next.style.opacity = 0.5
+      next.style.opacity = 0.5
   } else {
     ShowSlides();
     previous.disabled = false,
-    previous.style.opacity = 1
+      previous.style.opacity = 1
     next.disabled = false,
-    next.style.opacity = 1
+      next.style.opacity = 1
   }
 }
 ResetCount();
 
 //показ слайдов (добавить/убрать класс активности)
 function ShowSlides() {
-  slidesArray.forEach((slide, id)=> {
+  slidesArray.forEach((slide, id) => {
     if (id == slideCount) {
       slide.classList.add('slide-block_active');
       HideSlides()
@@ -67,7 +67,7 @@ function HideSlides() {
       slide.style.zIndex = hideQueue;
       console.log(hideQueue);
     } else if (id == slideCount) {
-      hideQueue = (id +  slidesQuantity);
+      hideQueue = (id + slidesQuantity);
       slide.style.zIndex = hideQueue;
       console.log(hideQueue);
     } else if (id > (slideCount)) {
@@ -89,8 +89,8 @@ function GeneratePagination() {
   }
   const dots = pagination.querySelectorAll('span');
   dots.forEach((dot) => {
-      dot.classList.add('slider__dot');
-      console.log(dot);
+    dot.classList.add('slider__dot');
+    console.log(dot);
   });
   SwitchDots();
 }
@@ -110,21 +110,6 @@ function SwitchDots() {
   });
 }
 
-//изменение input'a
 
-const labels = document.querySelectorAll('label');
-const inputs = document.querySelectorAll('input');
-
-inputs.forEach((input, id)=> {
-  input.addEventListener('change', ()=> {
-    labels.forEach((label, labelId)=> {
-      if (id == labelId && (input.formTarget.value != '')) {
-        label.style.marginTop = '-42px';
-        label.style.fontSize = '18px';
-        label.style.lineHeight = '82px';
-      }
-    })
-  })
-});
 
 
