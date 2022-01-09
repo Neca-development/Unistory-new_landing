@@ -115,9 +115,7 @@ sub,
 sup,
 tt,
 var,
-b,
 u,
-i,
 center,
 dl,
 dt,
@@ -208,18 +206,49 @@ table {
   border-spacing: 0;
 }
 body {
-  animation: mymove 1.2s;
-  animation-fill-mode: forwards;
+  filter: blur(10px);
+  animation: blurOut 0.9s ease-out forwards;
+}
+body:before {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #373737;
+  animation: fadeOut 0.9s ease-out forwards;
+  content: "";
 }
 
-@keyframes mymove {
+.case-card {
+  animation: showCase 0.25s ease-out forwards;
+}
+
+@keyframes blurOut {
   0% {
-    background-color: black;
-    -webkit-filter: blur(10px);
+    filter: blur(10px);
   }
   100% {
-    background-color: transparent;
-    -webkit-filter: blur(0px);
+    filter: blur(0);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  99.9% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+  }
+}
+@keyframes showCase {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 .header {
@@ -230,8 +259,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: min(1550px, 85vw);
 }
-.header__logo {
+.header__logo img {
   height: 3.25rem;
 }
 
@@ -756,6 +786,39 @@ body {
 .case-card_animation_scale .case-card__img:hover img {
   transform: scale(1.25);
 }
+.case-card_animation_flip {
+  -webkit-perspective: 1500;
+  perspective: 1500;
+}
+.case-card_animation_flip:hover .case-card__img {
+  overflow: visible;
+  box-shadow: 0 0 1rem var(--accent-color);
+  -webkit-transform: rotateY(-180deg) translate(-60%, 0);
+  transform: rotateY(-180deg) translate(-60%, 0);
+}
+.case-card_animation_flip:hover .case-card__img img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.case-card_animation_flip .case-card__img {
+  position: relative;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform-origin: 20% 50%;
+  transform-origin: 20% 50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.7s ease;
+  transition: -webkit-transform 0.7s ease;
+  transition: transform 0.7s ease;
+}
+.case-card_animation_flip .case-card__img img {
+  border-radius: 1.4438rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: none;
+}
 .case-card__tags {
   position: absolute;
   bottom: 3.58rem;
@@ -774,7 +837,7 @@ body {
   text-decoration: none;
   transition: color ease-in 0.16s;
 }
-.case-card__tags a:hover {
+.case-card__tags a:hover, .case-card__tags a.active {
   color: var(--accent-color);
 }
 .case-card__img {
@@ -787,6 +850,8 @@ body {
 }
 .case-card__img img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -802,6 +867,37 @@ body {
   line-height: 3.75rem;
   letter-spacing: 0.0625rem;
 }
+.case-card__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.1875rem 1.5625rem;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  background: var(--background-color);
+  border: 0.5rem solid var(--accent-color);
+  border-radius: 1.4438rem;
+  transform: rotateY(-180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.case-card__subtitle {
+  margin-bottom: 0.625rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.case-card__price {
+  font-size: 4rem;
+}
+.case-card__stack {
+  margin-top: 2.5625rem;
+  font-size: 2.5rem;
+}
+.case-card__description {
+  margin-top: 4.1875rem;
+}
 .footer {
   padding: 3.75rem 0;
   font-size: 1.5rem;
@@ -814,6 +910,9 @@ body {
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   max-width: min(1550px, 85vw);
+}
+.footer__logo {
+  height: 3.25rem;
 }
 .footer__soc-list {
   display: flex;
@@ -862,6 +961,29 @@ body {
 .footer__additional-info a:hover {
   color: var(--accent-color);
 }
+.filter {
+  margin-top: 6.25rem;
+}
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.filter__item button {
+  margin-bottom: 1.375rem;
+  padding: 0 1.5rem;
+  color: rgba(108, 108, 108, 0.86);
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 3rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: all linear 0.09s;
+}
+.filter__item button:hover, .filter__item button.active {
+  color: var(--accent-color);
+}
 :root {
   --font-color: #373737;
   --accent-color: #1275d3;
@@ -875,7 +997,7 @@ html {
 }
 @media (max-width: 1600px) {
   html {
-    font-size: 0.8vw;
+    font-size: 0.85vw;
   }
 }
 .container {

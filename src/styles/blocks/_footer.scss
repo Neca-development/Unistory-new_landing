@@ -12,6 +12,10 @@
     max-width: min(1550px, 85vw);
   }
 
+  &__logo {
+    height: 3.25rem;
+  }
+
   &__soc-list {
     display: flex;
     align-items: center;

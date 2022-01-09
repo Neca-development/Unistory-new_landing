@@ -14,6 +14,48 @@
     }
   }
 
+  &_animation_flip {
+    -webkit-perspective: 1500;
+    perspective: 1500;
+
+    &:hover {
+      .case-card__img {
+        overflow: visible;
+        box-shadow: 0 0 1rem var(--accent-color);
+        -webkit-transform: rotateY(-180deg) translate(-60%, 0);
+        transform: rotateY(-180deg) translate(-60%, 0);
+
+        img {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+      }
+    }
+
+    .case-card {
+      &__img {
+        position: relative;
+        width: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transform-origin: 20% 50%;
+        transform-origin: 20% 50%;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: -webkit-transform 0.7s ease;
+        transition: -webkit-transform 0.7s ease;
+        transition: transform 0.7s ease;
+
+        img {
+          border-radius: 1.4438rem;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          transition: none;
+        }
+      }
+    }
+  }
+
   &__tags {
     position: absolute;
     bottom: 3.58rem;
@@ -33,7 +75,8 @@
       text-decoration: none;
       transition: color ease-in 0.16s;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: var(--accent-color);
       }
     }
@@ -49,6 +92,8 @@
 
     img {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -65,5 +110,41 @@
     font-size: 3rem;
     line-height: 3.75rem;
     letter-spacing: 0.0625rem;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2.1875rem 1.5625rem;
+    color: var(--font-color);
+    font-size: 1.5rem;
+    background: var(--background-color);
+    border: 0.5rem solid var(--accent-color);
+    border-radius: 1.4438rem;
+    transform: rotateY(-180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &__subtitle {
+    margin-bottom: 0.625rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &__price {
+    font-size: 4rem;
+  }
+
+  &__stack {
+    margin-top: 2.5625rem;
+    font-size: 2.5rem;
+  }
+
+  &__description {
+    margin-top: 4.1875rem;
   }
 }

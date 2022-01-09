@@ -17,7 +17,7 @@ html {
   font-size: 16px;
 
   @media (max-width: 1600px){
-    font-size: .8vw;
+    font-size: .85vw;
   }
 }
 
@@ -43,4 +43,4 @@ html {
 @import url("./blocks/_home-page.scss");
 @import url("./blocks/_case-card.scss");
 @import url("./blocks/_footer.scss");
-
+@import url("./blocks/_portfolio.scss")
