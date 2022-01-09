@@ -546,20 +546,6 @@ function SwitchDots() {
         else dot.classList.remove('slider__dot_active');
     });
 }
-//изменение input'a
-const labels = document.querySelectorAll('label');
-const inputs = document.querySelectorAll('input');
-inputs.forEach((input, id)=>{
-    input.addEventListener('change', ()=>{
-        labels.forEach((label, labelId)=>{
-            if (id == labelId && input.formTarget.value != '') {
-                label.style.marginTop = '-42px';
-                label.style.fontSize = '18px';
-                label.style.lineHeight = '82px';
-            }
-        });
-    });
-});
 
 },{}]},["e5p2Z","gZVKB"], "gZVKB", "parcelRequire8124")
 
