@@ -1,3 +1,5 @@
+import scrollIntoView from 'smooth-scroll-into-view-if-needed';
+
 const allCases = document.querySelectorAll(".case-card");
 const casesContainer = document.querySelector(".cases-section__grid")
 const allTags = document.querySelectorAll("[data-tag]")
@@ -36,17 +38,56 @@ function showMatchingCases(tag) {
     })
 }
 
+function addTagToUrl(tag) {
+    const isPortfolioPage = window.location.href.includes('portfolio');
+
+    const host = window.location.origin;
+    const urlPath = host + '/portfolio.html?category=' + tag;
+    const pageTitle = 'Portfolio | ' + tag;
+    const html = document.body.innerHTML;
+
+    window.history.pushState({ html, pageTitle }, "", urlPath);
+    if (isPortfolioPage === false) {
+        window.location.reload()
+    }
+}
+
+
+
+
+function selectCategory(tag) {
+    addTagToUrl(tag)
+    highlightActiveTag(tag)
+    hideAllCases()
+
+
+    if (tag.toLowerCase() === 'all projects') {
+        showAllCases();
+        return
+    }
+
+    showMatchingCases(tag)
+}
+
+function detectTagInURL() {
+    if (window.location.href.includes('?category=')) {
+        const tag = window.location.href.split('?category=')[1];
+        const filter = document.querySelector(".filter")
+        selectCategory(tag)
+
+        scrollIntoView(filter, {
+            behavior: 'smooth',
+            scrollMode: 'if-needed',
+        })
+
+    }
+}
+
 document.body.addEventListener("click", e => {
     if (e.target.hasAttribute("data-tag")) {
         const tag = e.target.textContent;
-        hideAllCases()
-        highlightActiveTag(tag)
-
-        if (tag.toLowerCase() === 'all projects') {
-            showAllCases();
-            return
-        }
-
-        showMatchingCases(tag)
+        selectCategory(tag)
     }
 })
+
+document.addEventListener("DOMContentLoaded", detectTagInURL)

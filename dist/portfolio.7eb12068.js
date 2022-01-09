@@ -23,17 +23,46 @@ function showMatchingCases(tag) {
         if (tags.includes(tag)) casesContainer.append(el);
     });
 }
+function addTagToUrl(tag) {
+    const isPortfolioPage = window.location.href.includes('portfolio');
+    const host = window.location.origin;
+    const urlPath = host + '/portfolio.html?category=' + tag;
+    const pageTitle = 'Portfolio | ' + tag;
+    const html = document.body.innerHTML;
+    window.history.pushState({
+        html,
+        pageTitle
+    }, "", urlPath);
+    if (isPortfolioPage === false) window.location.reload();
+}
+function selectCategory(tag) {
+    addTagToUrl(tag);
+    highlightActiveTag(tag);
+    hideAllCases();
+    if (tag.toLowerCase() === 'all projects') {
+        showAllCases();
+        return;
+    }
+    showMatchingCases(tag);
+}
+function detectTagInURL() {
+    if (window.location.href.includes('?category=')) {
+        const tag = window.location.href.split('?category=')[1];
+        selectCategory(tag);
+        setTimeout(()=>{
+            document.querySelector('header').scrollIntoView({
+                behavior: 'smooth',
+                block: "start"
+            });
+        }, 400);
+    }
+}
 document.body.addEventListener("click", (e)=>{
     if (e.target.hasAttribute("data-tag")) {
         const tag = e.target.textContent;
-        hideAllCases();
-        highlightActiveTag(tag);
-        if (tag.toLowerCase() === 'all projects') {
-            showAllCases();
-            return;
-        }
-        showMatchingCases(tag);
+        selectCategory(tag);
     }
 });
+document.addEventListener("DOMContentLoaded", detectTagInURL);
 
 //# sourceMappingURL=portfolio.7eb12068.js.map

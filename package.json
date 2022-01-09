@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "parcel": "^2.0.1",
+    "smooth-scroll-into-view-if-needed": "^1.1.32",
     "swiper": "^7.4.1"
   },
   "devDependencies": {
