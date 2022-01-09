@@ -140,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"9rqhs":[function(require,module,exports) {
+})({"2UDW0":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "4a236f9275d0a351";
-module.bundle.HMR_BUNDLE_ID = "4e01d86992f805ce";
+module.bundle.HMR_BUNDLE_ID = "38f88a4669921d11";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -458,8 +458,95 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"hNfzN":[function(require,module,exports) {
+},{}],"jIldD":[function(require,module,exports) {
+//DOM 
+const slider = document.querySelector('.slider'), slidesArray = slider.querySelectorAll('.slide-block'), previous = slider.querySelector('.slider__controls_prev'), next = slider.querySelector('.slider__controls_next'), pagination = slider.querySelector('.slider__pagination');
+//переменные
+let slideCount = slidesArray.length - 1, hideQueue = 0, slidesQuantity = slidesArray.length;
+//обработчик нажатий
+function ChangeSlides() {
+    previous.addEventListener('click', ()=>{
+        slideCount--;
+        ResetCount();
+        SwitchDots();
+    });
+    next.addEventListener('click', ()=>{
+        slideCount++;
+        ResetCount();
+        SwitchDots();
+    });
+}
+//сброс значений при выходе за пределы (временное решение)
+function ResetCount() {
+    if (slideCount < 1) {
+        // slideCount = (slidesQuantity - 1);
+        ShowSlides();
+        previous.disabled = true, previous.style.opacity = 0.5;
+    } else if (slideCount > slidesArray.length - 2) {
+        // slideCount = 0;
+        ShowSlides();
+        next.disabled = true, next.style.opacity = 0.5;
+    } else {
+        ShowSlides();
+        previous.disabled = false, previous.style.opacity = 1;
+        next.disabled = false, next.style.opacity = 1;
+    }
+}
+ResetCount();
+//показ слайдов (добавить/убрать класс активности)
+function ShowSlides() {
+    slidesArray.forEach((slide, id)=>{
+        if (id == slideCount) {
+            slide.classList.add('slide-block_active');
+            HideSlides();
+        } else {
+            slide.classList.remove('slide-block_active');
+            HideSlides();
+        }
+    });
+}
+//функция для корректного отображения свёрнутых слайдов
+function HideSlides() {
+    slidesArray.forEach((slide, id)=>{
+        if (id < slideCount) {
+            hideQueue = id + slideCount.length;
+            slide.style.zIndex = hideQueue;
+            console.log(hideQueue);
+        } else if (id == slideCount) {
+            hideQueue = id + slidesQuantity;
+            slide.style.zIndex = hideQueue;
+            console.log(hideQueue);
+        } else if (id > slideCount) {
+            hideQueue--;
+            slide.style.zIndex = hideQueue;
+            console.log(hideQueue);
+        }
+    });
+}
+//инициализаия при открытии страницы
+ChangeSlides();
+//генерация навигационной шкалы слева (оптимизировать при добавлении новых слайдов)
+function GeneratePagination() {
+    const div = document.createElement('span');
+    for(let i = 0; i < slidesArray.length; i++)pagination.append(div.cloneNode(true));
+    const dots = pagination.querySelectorAll('span');
+    dots.forEach((dot)=>{
+        dot.classList.add('slider__dot');
+        console.log(dot);
+    });
+    SwitchDots();
+}
+//инициализаия при открытии страницы
+GeneratePagination();
+//функция переключения элементов в навигационной шкале слева
+function SwitchDots() {
+    const dots = pagination.querySelectorAll('span');
+    dots.forEach((dot, id)=>{
+        if (id == slideCount) dot.classList.add('slider__dot_active');
+        else dot.classList.remove('slider__dot_active');
+    });
+}
 
-},{}]},["9rqhs","hNfzN"], "hNfzN", "parcelRequire8124")
+},{}]},["2UDW0","jIldD"], "jIldD", "parcelRequire8124")
 
-//# sourceMappingURL=portfolio.92f805ce.js.map
+//# sourceMappingURL=index.69921d11.js.map

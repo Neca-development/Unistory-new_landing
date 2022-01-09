@@ -7,8 +7,26 @@ html(lang="en")
     title Unistory | Home page
     link(rel="stylesheet", href="../styles/main.scss")
   body
-    include ./blocks/header
-    section.welcome
+    header.header
+      .container
+        a.header__logo(href="/")
+          img(src="../icons/logo.svg")
+        nav.mneu.header__menu
+          ul.menu__list
+            li.menu__item
+              a(href="javascript:;", scroll-to="services") Services
+            li.menu__item
+              a(href="javascript:;", scroll-to="competence") Competence
+            li.menu__item
+              a(href="portfolio.pug") Portfolio
+            li.menu__item
+              a(href="javascript:;", scroll-to="about") About
+            li.menu__item
+              a.btn.btn_animated_blue(
+                href="javascript:;",
+                scroll-to="contactUs"
+              ) Contact us
+    section#services.welcome
       .container 
         h1.welcome__title 
           | Software &nbsp;
@@ -39,7 +57,7 @@ html(lang="en")
         a.btn.btn_animated_blue.btn_size_l.welcome__contact-btn(
           href="#contactUs"
         ) Discus the project
-    .tags-slider
+    #competence.tags-slider
       .marquee
         .marquee__content
           a.marquee__tag(href="javascript:;", data-tag) #Front-end
@@ -116,7 +134,7 @@ html(lang="en")
             a.case-card__img(href="javascript:;")
               img(src="../img/Case_4.jpeg", alt="Millionpieces")
             h3.case-card__title eCommerce platform
-    section.project-road 
+    section#about.project-road 
       .container
         h2.title From your idea to success story
         ul.project-road__list 
@@ -189,7 +207,7 @@ html(lang="en")
           .slider__controls
             button.slider__controls_prev
             button.slider__controls_next
-    .contact-us 
+    #contactUs.contact-us 
       .container 
         h2.title Contact us
         .contact-us__wrap 
@@ -254,5 +272,6 @@ html(lang="en")
               a(href="javascript:;") &nbsp;the Privacy Policy
               | &nbsp;rules.
     include ./blocks/footer.pug
-    script(type="module", src="../scripts/main.js") 
+    script(type="module", src="../scripts/slider.js") 
     script(type="module", src="../scripts/categories.js") 
+    script(type="module", src="../scripts/smooth-scroll.js") 
