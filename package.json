@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel src/pages/index.pug",
-    "build-prod": "parcel build src/pages/index.pug --public-url /Unistory-new_landing/ --no-content-hash",
+    "build-prod": "parcel build src/pages/index.pug --no-content-hash",
     "public-gh": "npm run build-prod && gh-pages -d dist",
     "deploy": "gh-pages -d dist"
   },
