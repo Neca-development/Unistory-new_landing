@@ -360,6 +360,9 @@ body:before {
 .welcome__title span {
   color: var(--accent-color);
 }
+.welcome__title .typed {
+  display: inline-block;
+}
 .welcome__advantages {
   display: grid;
   grid-column-gap: 5.3125rem;
@@ -676,9 +679,10 @@ body:before {
   position: absolute;
   top: 2.5%;
   left: 0;
-  width: 0.125rem;
+  width: 2px;
   height: 95%;
   background: #fff;
+  border-radius: 1px;
   content: "";
 }
 .contact-us__form-frame {
@@ -931,6 +935,7 @@ body:before {
   height: 3.25rem;
 }
 .footer__soc-item a img {
+  height: 1.5625rem;
   transform-origin: center;
   transition: all ease-in 0.15s;
 }

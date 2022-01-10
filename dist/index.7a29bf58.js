@@ -500,9 +500,14 @@ function addTagToUrl(tag) {
     if (isPortfolioPage === false) window.location.reload();
 }
 function selectCategory(tag) {
+    const filter = document.querySelector(".filter");
     addTagToUrl(tag);
     highlightActiveTag(tag);
     hideAllCases();
+    _smoothScrollIntoViewIfNeededDefault.default(filter, {
+        behavior: 'smooth',
+        scrollMode: 'if-needed'
+    });
     if (tag.toLowerCase() === 'all projects') {
         showAllCases();
         return;
@@ -512,12 +517,7 @@ function selectCategory(tag) {
 function detectTagInURL() {
     if (window.location.href.includes('?category=')) {
         const tag = window.location.href.split('?category=')[1];
-        const filter = document.querySelector(".filter");
         selectCategory(tag);
-        _smoothScrollIntoViewIfNeededDefault.default(filter, {
-            behavior: 'smooth',
-            scrollMode: 'if-needed'
-        });
     }
 }
 document.body.addEventListener("click", (e)=>{

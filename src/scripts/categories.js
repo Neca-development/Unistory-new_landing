@@ -56,10 +56,15 @@ function addTagToUrl(tag) {
 
 
 function selectCategory(tag) {
+    const filter = document.querySelector(".filter")
+
     addTagToUrl(tag)
     highlightActiveTag(tag)
     hideAllCases()
-
+    scrollIntoView(filter, {
+        behavior: 'smooth',
+        scrollMode: 'if-needed',
+    })
 
     if (tag.toLowerCase() === 'all projects') {
         showAllCases();
@@ -72,13 +77,9 @@ function selectCategory(tag) {
 function detectTagInURL() {
     if (window.location.href.includes('?category=')) {
         const tag = window.location.href.split('?category=')[1];
-        const filter = document.querySelector(".filter")
         selectCategory(tag)
 
-        scrollIntoView(filter, {
-            behavior: 'smooth',
-            scrollMode: 'if-needed',
-        })
+
 
     }
 }

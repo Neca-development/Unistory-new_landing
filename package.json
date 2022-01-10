@@ -13,7 +13,9 @@
   "dependencies": {
     "parcel": "^2.0.1",
     "smooth-scroll-into-view-if-needed": "^1.1.32",
-    "swiper": "^7.4.1"
+    "swiper": "^7.4.1",
+    "typed.js": "^2.0.12",
+    "wc-typed-js": "^1.0.1"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.0.1",

@@ -30,7 +30,7 @@ html(lang="en")
       .container 
         h1.welcome__title 
           | Software &nbsp;
-          span.word development
+          .typed
           br
           | & &nbsp;
           span product consultance
@@ -54,8 +54,8 @@ html(lang="en")
                 | Repeat
                 br
                 | customers
-        a.btn.btn_animated_blue.btn_size_l.welcome__contact-btn(
-          href="#contactUs"
+        button.btn.btn_animated_blue.btn_size_l.welcome__contact-btn(
+          scroll-to="contactUs"
         ) Discus the project
     #competence.tags-slider
       .marquee
@@ -275,3 +275,4 @@ html(lang="en")
     script(type="module", src="../scripts/slider.js") 
     script(type="module", src="../scripts/categories.js") 
     script(type="module", src="../scripts/smooth-scroll.js") 
+    script(type="module", src="../scripts/animation.js") 
