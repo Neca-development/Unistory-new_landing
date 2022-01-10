@@ -13,6 +13,7 @@ pipeline {
       steps {
         sh '''
           rm -rf dist
+          npm i
           npm run build-prod
           ssh unistory-landing 'cd /home/Unistory-landing && mkdir -p new-dist'
           scp -r dist/* unistory-landing:/home/Unistory-landing/new-dist
