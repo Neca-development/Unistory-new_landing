@@ -61,10 +61,6 @@ function selectCategory(tag) {
     addTagToUrl(tag)
     highlightActiveTag(tag)
     hideAllCases()
-    scrollIntoView(filter, {
-        behavior: 'smooth',
-        scrollMode: 'if-needed',
-    })
 
     if (tag.toLowerCase() === 'all projects') {
         showAllCases();
@@ -72,6 +68,12 @@ function selectCategory(tag) {
     }
 
     showMatchingCases(tag)
+    setTimeout(() => {
+        scrollIntoView(filter, {
+            behavior: 'smooth',
+            scrollMode: 'if-needed',
+        })
+    }, 350);
 }
 
 function detectTagInURL() {

@@ -65,15 +65,12 @@ function HideSlides() {
     if (id < slideCount) {
       hideQueue = (id + (slideCount.length));
       slide.style.zIndex = hideQueue;
-      console.log(hideQueue);
     } else if (id == slideCount) {
       hideQueue = (id + slidesQuantity);
       slide.style.zIndex = hideQueue;
-      console.log(hideQueue);
     } else if (id > (slideCount)) {
       hideQueue--;
       slide.style.zIndex = hideQueue;
-      console.log(hideQueue);
     }
   });
 }
@@ -90,7 +87,6 @@ function GeneratePagination() {
   const dots = pagination.querySelectorAll('span');
   dots.forEach((dot) => {
     dot.classList.add('slider__dot');
-    console.log(dot);
   });
   SwitchDots();
 }

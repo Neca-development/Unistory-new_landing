@@ -500,6 +500,7 @@ function addTagToUrl(tag) {
     if (isPortfolioPage === false) window.location.reload();
 }
 function selectCategory(tag) {
+    const filter = document.querySelector(".filter");
     addTagToUrl(tag);
     highlightActiveTag(tag);
     hideAllCases();
@@ -508,16 +509,17 @@ function selectCategory(tag) {
         return;
     }
     showMatchingCases(tag);
-}
-function detectTagInURL() {
-    if (window.location.href.includes('?category=')) {
-        const tag = window.location.href.split('?category=')[1];
-        const filter = document.querySelector(".filter");
-        selectCategory(tag);
+    setTimeout(()=>{
         _smoothScrollIntoViewIfNeededDefault.default(filter, {
             behavior: 'smooth',
             scrollMode: 'if-needed'
         });
+    }, 350);
+}
+function detectTagInURL() {
+    if (window.location.href.includes('?category=')) {
+        const tag = window.location.href.split('?category=')[1];
+        selectCategory(tag);
     }
 }
 document.body.addEventListener("click", (e)=>{

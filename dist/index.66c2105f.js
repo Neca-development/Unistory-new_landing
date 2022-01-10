@@ -465,11 +465,29 @@ var _typedJs = require("typed.js");
 var _typedJsDefault = parcelHelpers.interopDefault(_typedJs);
 var options = {
     strings: [
-        '<span>development</span>'
+        "<span>development</span>"
     ],
     typeSpeed: 60
 };
-new _typedJsDefault.default('.typed', options);
+new _typedJsDefault.default(".typed", options);
+function numberIncreamenter(selector, increment, decimals, suffix = null) {
+    const el = document.querySelector(selector);
+    const val = parseFloat(el.textContent, 10);
+    const speed = 1500 / (val / increment);
+    let currVal = 0;
+    const interval = setInterval(()=>{
+        if (val === currVal) {
+            clearInterval(interval);
+            if (suffix !== null) el.innerHTML = currVal + suffix;
+            return;
+        }
+        currVal = Number(Number(currVal + increment).toFixed(decimals));
+        el.innerHTML = currVal;
+    }, speed);
+}
+numberIncreamenter("#upworkRating", 0.1, 1);
+numberIncreamenter("#developedProjects", 1, 1, "+");
+numberIncreamenter("#repeatCustomers", 1, 1, "%");
 
 },{"typed.js":"52HQS","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"52HQS":[function(require,module,exports) {
 /*!
