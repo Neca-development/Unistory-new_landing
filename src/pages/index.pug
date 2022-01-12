@@ -26,10 +26,12 @@ html(lang="en")
                 href="javascript:;",
                 scroll-to="contactUs"
               ) Contact us
-    section#services.welcome
+            twirl-burger 
+    section.welcome
       .container 
         h1.welcome__title 
           | Software &nbsp;
+          br.welcome__mobile-br
           .typed
           br
           | & &nbsp;
@@ -37,19 +39,25 @@ html(lang="en")
         ul.welcome__advantages
           li.welcome__advantages-item 
             a.advantage(href="https://www.upwork.com/ag/neca/", target="blank")
-              span#upworkRating.advantage__left 4.9
+              .advantage__left 
+                span#upworkRating 4.9
+                span 4.9
               .advantage__right
                 img(src="../icons/Upwork.png", alt="upwork")
           li.welcome__advantages-item 
             a.advantage
-              span#developedProjects.advantage__left 20+
+              .advantage__left 
+                span#developedProjects 20+
+                span 20+
               .advantage__right
                 | Developed
                 br
                 | projects
           li.welcome__advantages-item 
             a.advantage
-              span#repeatCustomers.advantage__left 87%
+              .advantage__left
+                span#repeatCustomers 87%
+                span 87%
               .advantage__right
                 | Repeat
                 br
@@ -57,7 +65,7 @@ html(lang="en")
         button.btn.btn_animated_blue.btn_size_l.welcome__contact-btn(
           scroll-to="contactUs"
         ) Discus the project
-    #competence.tags-slider
+    .tags-slider
       .marquee
         .marquee__content
           a.marquee__tag(href="javascript:;", data-tag) #Front-end
@@ -96,7 +104,7 @@ html(lang="en")
           a.marquee__tag(href="javascript:;", data-tag) #B2B
     section.cases-section
       .container 
-        h2.title Success stories
+        h2#competence.title Success stories
         .cases-section__grid
           article.cases-section__item.case-card.case-card_animation_scale
             ul.case-card__tags 
@@ -134,7 +142,7 @@ html(lang="en")
             a.case-card__img(href="javascript:;")
               img(src="../img/Case_4.jpeg", alt="Millionpieces")
             h3.case-card__title eCommerce platform
-    section#about.project-road 
+    section#services.project-road 
       .container
         h2.title From your idea to success story
         ul.project-road__list 
@@ -158,7 +166,7 @@ html(lang="en")
               img(src="../icons/services/release.svg")
             h3.project-road__subtitle Release
             p.project-road__desc We make sure that everything runs, every day, exactly as it should be.
-    section.testimonials
+    section#about.testimonials
       .container
         h2.title Trusted by the best
         .slider
@@ -276,3 +284,4 @@ html(lang="en")
     script(type="module", src="../scripts/categories.js") 
     script(type="module", src="../scripts/smooth-scroll.js") 
     script(type="module", src="../scripts/animation.js") 
+    script(type="module", src="../scripts/menu.js") 

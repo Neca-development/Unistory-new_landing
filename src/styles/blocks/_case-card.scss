@@ -1,3 +1,5 @@
+@import "../variables";
+
 .case-card {
   position: relative;
   display: flex;
@@ -110,6 +112,13 @@
     font-size: 3rem;
     line-height: 3.75rem;
     letter-spacing: 0.0625rem;
+
+    @include mobile {
+      font-size: 30px;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+    }
   }
 
   &__info {

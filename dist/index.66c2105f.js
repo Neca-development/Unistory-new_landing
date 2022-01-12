@@ -472,6 +472,7 @@ var options = {
 new _typedJsDefault.default(".typed", options);
 function numberIncreamenter(selector, increment, decimals, suffix = null) {
     const el = document.querySelector(selector);
+    if (!el) return;
     const val = parseFloat(el.textContent, 10);
     const speed = 1500 / (val / increment);
     let currVal = 0;

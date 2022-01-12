@@ -1,3 +1,5 @@
+@import "../variables";
+
 .footer {
   padding: 3.75rem 0;
   font-size: 1.5rem;
@@ -10,6 +12,10 @@
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
     max-width: min(1550px, 85vw);
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__logo {
@@ -51,6 +57,10 @@
   &__nav {
     ul {
       display: flex;
+
+      @include mobile {
+        display: block;
+      }
     }
 
     li {

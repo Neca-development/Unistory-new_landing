@@ -1,3 +1,5 @@
+@import "../_variables.scss";
+
 .btn {
   display: flex;
   align-items: center;
@@ -15,6 +17,11 @@
   border-radius: 0.3125rem;
   cursor: pointer;
   transition: background ease-out 0.18s;
+
+  @include mobile {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
 
   &:hover {
     color: var(--accent-color);
@@ -56,6 +63,11 @@
     font-size: 1.75rem;
     line-height: 2.25rem;
     border-radius: 0.625rem;
+
+    @include mobile {
+      padding: 1rem 2.5rem;
+      font-size: 1.5rem;
+    }
   }
 }
 
