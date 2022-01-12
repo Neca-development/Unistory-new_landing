@@ -56,7 +56,7 @@ function addTagToUrl(tag) {
 
 
 function selectCategory(tag) {
-    const filter = document.querySelector(".filter")
+    const firstCase = casesContainer.querySelector(".case-card")
 
     addTagToUrl(tag)
     highlightActiveTag(tag)
@@ -68,8 +68,13 @@ function selectCategory(tag) {
     }
 
     showMatchingCases(tag)
+
+    if (!firstCase) {
+        return
+    }
+
     setTimeout(() => {
-        scrollIntoView(filter, {
+        scrollIntoView(casesContainer, {
             behavior: 'smooth',
             scrollMode: 'if-needed',
         })

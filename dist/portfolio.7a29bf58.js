@@ -500,7 +500,7 @@ function addTagToUrl(tag) {
     if (isPortfolioPage === false) window.location.reload();
 }
 function selectCategory(tag) {
-    const filter = document.querySelector(".filter");
+    const firstCase = casesContainer.querySelector(".case-card");
     addTagToUrl(tag);
     highlightActiveTag(tag);
     hideAllCases();
@@ -509,8 +509,9 @@ function selectCategory(tag) {
         return;
     }
     showMatchingCases(tag);
+    if (!firstCase) return;
     setTimeout(()=>{
-        _smoothScrollIntoViewIfNeededDefault.default(filter, {
+        _smoothScrollIntoViewIfNeededDefault.default(casesContainer, {
             behavior: 'smooth',
             scrollMode: 'if-needed'
         });
