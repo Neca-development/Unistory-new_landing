@@ -1,0 +1,116 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Unistory | Portfolio
+    link(rel="stylesheet", href="../styles/main.scss")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap",
+      rel="stylesheet"
+    )
+  body 
+    include blocks/header.pug
+    .filter 
+      .container
+        - var tags = ["All projects", "#Startups", "#NFT", "#Design", "#DeFi", "#Support", "#Web", "#Back-end", "#Trading Bots", "#Analytics", "#Mobile", "#FinTech", "#Front-end", "#Blockchain", "#Development", "#Release", "#Booking", "#eCommerce", "#B2B"];
+          ul.filter__list 
+            each tag, index in tags.length ? tags : ['There are no tags']
+              if index === 0
+                li.filter__item.filter__item_accent 
+                  button.active(data-tag="all")= tag
+              else
+                li.filter__item 
+                  button(data-tag)= tag
+    section.cases-section
+      .container 
+        .cases-section__grid
+          article.cases-section__item.case-card.case-card_animation_flip(
+            data-category="#Front-end,#NFT"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #Front-end
+              li
+                a(href="javascript:;", data-tag) #NFT
+            a.case-card__img(href="javascript:;")
+              img(src="../img/Case_1.jpeg", alt="Millionpieces")
+              .case-card__info 
+                .case-card__price 
+                  .case-card__subtitle Price:
+                  | 99999.99$
+                .case-card__stack
+                  .case-card__subtitle Stack:
+                  | Nuxt, GraphQL, Web3
+                .case-card__description 
+                  .case-card__subtitle Description:
+                  | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora excepturi numquam, assumenda necessitatibus ipsa ducimus. Omnis eius vero minima architecto asperiores, itaque inventore ipsam eos.
+            h3.case-card__title Millionpieces
+          article.cases-section__item.case-card.case-card_animation_flip(
+            data-category="#Front-end,#Blockchain"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #Front-end
+              li
+                a(href="javascript:;", data-tag) #Blockchain
+            a.case-card__img(href="javascript:;")
+              img(src="../img/Case_2.jpeg", alt="Millionpieces")
+              .case-card__info 
+                .case-card__price 
+                  .case-card__subtitle Price:
+                  | 99999.99$
+                .case-card__stack
+                  .case-card__subtitle Stack:
+                  | Nuxt, GraphQL, Web3
+                .case-card__description 
+                  .case-card__subtitle Description:
+                  | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora excepturi numquam, assumenda necessitatibus ipsa ducimus. Omnis eius vero minima architecto asperiores, itaque inventore ipsam eos.
+            h3.case-card__title eCommerce platform
+          article.cases-section__item.case-card.case-card_animation_flip(
+            data-category="#DeFi,#Support"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #DeFi
+              li
+                a(href="javascript:;", data-tag) #Support
+            a.case-card__img(href="javascript:;")
+              img(src="../img/Case_3.jpeg", alt="Millionpieces")
+              .case-card__info 
+                .case-card__price 
+                  .case-card__subtitle Price:
+                  | 99999.99$
+                .case-card__stack
+                  .case-card__subtitle Stack:
+                  | Nuxt, GraphQL, Web3
+                .case-card__description 
+                  .case-card__subtitle Description:
+                  | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora excepturi numquam, assumenda necessitatibus ipsa ducimus. Omnis eius vero minima architecto asperiores, itaque inventore ipsam eos.
+            h3.case-card__title Millionpieces
+          article.cases-section__item.case-card.case-card_animation_flip(
+            data-category="#Web,#Back-end"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #Web
+              li
+                a(href="javascript:;", data-tag) #Back-end
+            a.case-card__img(href="javascript:;")
+              img(src="../img/Case_4.jpeg", alt="Millionpieces")
+              .case-card__info 
+                .case-card__price 
+                  .case-card__subtitle Price:
+                  | 99999.99$
+                .case-card__stack
+                  .case-card__subtitle Stack:
+                  | Nuxt, GraphQL, Web3
+                .case-card__description 
+                  .case-card__subtitle Description:
+                  | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora excepturi numquam, assumenda necessitatibus ipsa ducimus. Omnis eius vero minima architecto asperiores, itaque inventore ipsam eos.
+            h3.case-card__title eCommerce platform
+    include blocks/footer.pug
+    script(type="module", src="../scripts/categories.js") 
