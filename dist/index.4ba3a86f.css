@@ -504,7 +504,7 @@ body:before {
 }
 
 .cases-section {
-  padding: 3.75rem 0 7.375rem;
+  padding: 3.75rem 0 13rem;
 }
 
 @media (max-width: 647px) {
@@ -1312,6 +1312,10 @@ body:before {
 }
 .footer__additional-info a:hover {
   color: var(--accent-color);
+}
+
+.footer__nav a {
+  margin-right: 3.75rem;
 }
 .filter {
   margin-top: 6.25rem;
