@@ -1088,38 +1088,153 @@ body:before {
 .case-card_animation_scale .case-card__img:hover img {
   transform: scale(1.25);
 }
-.case-card_animation_flip {
-  -webkit-perspective: 1500;
-  perspective: 1500;
+.case-card_animation_flip:hover {
+  transition: 0.4s ease-in-out;
+}
+.case-card_animation_flip:hover .case-card__info {
+  opacity: 1;
+  transition: 0.3s ease-out;
+  transition-delay: 0.2s;
 }
 .case-card_animation_flip:hover .case-card__img {
-  overflow: visible;
   box-shadow: 0 0 1rem var(--accent-color);
-  -webkit-transform: rotateY(-180deg) translate(-60%, 0);
-  transform: rotateY(-180deg) translate(-60%, 0);
 }
 .case-card_animation_flip:hover .case-card__img img {
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: 0.4s ease-out;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-rt {
+  left: 100%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-lt {
+  top: -75%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-lb {
+  left: -100%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-rb {
+  top: 100%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-lt_v2 {
+  top: -50%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-lb_v2 {
+  left: -50%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-rb_v2 {
+  left: 100%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-rb_v2-1 {
+  left: 100%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-lt_v3 {
+  top: -60%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-lb_v3 {
+  left: -60%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-rb_v3 {
+  top: 100%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-lt_v4 {
+  left: -30%;
+}
+.case-card_animation_flip:hover .case-card__img .case-card__img-rb_v4 {
+  top: 100%;
+}
+.case-card_animation_flip:hover .case-card__info {
+  z-index: 5;
+  display: block;
 }
 .case-card_animation_flip .case-card__img {
   position: relative;
   width: 100%;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-transform-origin: 20% 50%;
-  transform-origin: 20% 50%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.7s ease;
-  transition: -webkit-transform 0.7s ease;
-  transition: transform 0.7s ease;
+  overflow: hidden;
 }
 .case-card_animation_flip .case-card__img img {
-  border-radius: 1.4438rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: none;
+}
+.case-card_animation_flip .case-card__img-bg {
+  height: 101%;
+}
+.case-card_animation_flip .case-card__img-rt {
+  position: absolute;
+  top: -1%;
+  left: 40%;
+  width: 70%;
+  height: auto;
+  border-radius: 0rem;
+}
+.case-card_animation_flip .case-card__img-lt {
+  position: absolute;
+  top: -6%;
+  left: -10%;
+  width: 37%;
+  height: auto;
+}
+.case-card_animation_flip .case-card__img-lb {
+  top: 53%;
+  left: 0%;
+  width: 63%;
+  height: auto;
+}
+.case-card_animation_flip .case-card__img-rb {
+  top: 53%;
+  left: 51%;
+  width: 50%;
+  height: auto;
+}
+.case-card_animation_flip .case-card__img-lt_v2 {
+  top: 0%;
+  width: 100%;
+  height: auto;
+}
+.case-card_animation_flip .case-card__img-rb_v2 {
+  top: 46%;
+  left: 25%;
+  width: 75%;
+  height: auto;
+}
+.case-card_animation_flip .case-card__img-rb_v2-1 {
+  top: 46%;
+  left: 10%;
+  width: 100%;
+  height: auto;
+}
+.case-card_animation_flip .case-card__img-lb_v2 {
+  top: 25%;
+  width: auto;
+  height: 75%;
+}
+.case-card_animation_flip .case-card__img-rb_v3 {
+  top: 63%;
+  left: 68%;
+  width: auto;
+  height: 37%;
+}
+.case-card_animation_flip .case-card__img-lt_v3 {
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.case-card_animation_flip .case-card__img-lb_v3 {
+  top: 63%;
+  left: 0;
+  width: auto;
+  height: 37%;
+}
+.case-card_animation_flip .case-card__img-lt_v4 {
+  top: 0%;
+  left: 0%;
+  width: auto;
+  height: 49%;
+}
+.case-card_animation_flip .case-card__img-rb_v4 {
+  top: 53%;
+  left: 70%;
+  width: auto;
+  height: 49%;
 }
 .case-card__tags {
   position: absolute;
@@ -1184,14 +1299,15 @@ body:before {
   width: 100%;
   height: 100%;
   padding: 2.1875rem 1.5625rem;
-  color: var(--font-color);
+  color: #fff;
   font-size: 1.5rem;
   background: var(--background-color);
+  background-color: transparent;
   border: 0.5rem solid var(--accent-color);
   border-radius: 1.4438rem;
-  transform: rotateY(-180deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  opacity: 0;
 }
 .case-card__subtitle {
   margin-bottom: 0.625rem;
