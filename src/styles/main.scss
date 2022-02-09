@@ -43,6 +43,65 @@ html {
   }
 }
 
+.privacy-popup{
+  display: none;
+  position: fixed;
+  width: 75vw;
+  max-height: 80vh;
+  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 3.875rem 4.6rem;
+  background-color: #fff;
+  font-size: 1.9rem;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.267);
+  @include mobile{
+    width: 90vw;
+    padding: 1.625rem 2rem;
+    font-size: 1.3rem;
+  }
+  &__close_bg{
+    display: none;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 30%
+  }
+  &__title{
+    font-weight: bold;
+    font-size: 2.7rem;
+    margin-bottom: 0.9375rem;
+    @include mobile{
+      font-size: 1.8rem;
+    }
+  }
+  &__topic{
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-top: 15px;
+    @include mobile{
+      font-size: 1.5rem;
+    }
+  }
+  &__cross{
+    width: 20px;
+    height: auto;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+}
+
 // <----- blocks ------>
 @import url("./blocks/_animation.scss");
 @import url("./blocks/_header.scss");

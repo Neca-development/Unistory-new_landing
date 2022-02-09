@@ -3,16 +3,16 @@ import Typed from "typed.js";
 
 var options = {
   strings: ["<span>development</span>"],
-  typeSpeed: 60
+  typeSpeed: 60,
 };
 
 new Typed(".typed", options);
 
 function numberIncreamenter(selector, increment, decimals, suffix = null) {
-  const el = document.querySelector(selector)
+  const el = document.querySelector(selector);
 
   if (!el) {
-    return
+    return;
   }
 
   const val = parseFloat(el.textContent, 10);
@@ -21,19 +21,19 @@ function numberIncreamenter(selector, increment, decimals, suffix = null) {
 
   const interval = setInterval(() => {
     if (val === currVal) {
-      clearInterval(interval)
+      clearInterval(interval);
 
       if (suffix !== null) {
-        el.innerHTML = currVal + suffix
+        el.innerHTML = currVal + suffix;
       }
 
-      return
+      return;
     }
-    currVal = Number(Number(currVal + increment).toFixed(decimals))
-    el.innerHTML = currVal
+    currVal = Number(Number(currVal + increment).toFixed(decimals));
+    el.innerHTML = currVal;
   }, speed);
 }
 
-numberIncreamenter("#upworkRating", 0.1, 1)
-numberIncreamenter("#developedProjects", 1, 1, "+")
-numberIncreamenter("#repeatCustomers", 1, 1, "%")
+numberIncreamenter("#upworkRating", 0.1, 1);
+numberIncreamenter("#developedProjects", 1, 1, "+");
+numberIncreamenter("#repeatCustomers", 1, 1, "%");
