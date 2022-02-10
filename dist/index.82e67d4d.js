@@ -140,7 +140,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"iHnC7":[function(require,module,exports) {
+})({"fH98R":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
@@ -482,7 +482,7 @@ class TwirlBurger extends _twirlJs.Twirl {
 }
 customElements.define('twirl-burger', TwirlBurger);
 
-},{"./lib/entrypoints/twirl.js":"jGFuJ","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"jGFuJ":[function(require,module,exports) {
+},{"./lib/entrypoints/twirl.js":"jGFuJ","@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}],"jGFuJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Twirl", ()=>Twirl
@@ -541,7 +541,7 @@ class Twirl extends _directionBurgerJs.DirectionBurger {
     }
 }
 
-},{"../components/direction-burger.js":"cPR5x","../utils/dom.js":"2HKNr","../internals.js":"9XkCu","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"cPR5x":[function(require,module,exports) {
+},{"../components/direction-burger.js":"cPR5x","../utils/dom.js":"2HKNr","../internals.js":"9XkCu","@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}],"cPR5x":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DirectionBurger", ()=>DirectionBurger
@@ -565,7 +565,7 @@ class DirectionBurger extends _burgerJs.Burger {
     }
 }
 
-},{"./burger.js":"9Z0F7","../internals":"9XkCu","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"9Z0F7":[function(require,module,exports) {
+},{"./burger.js":"9Z0F7","../internals":"9XkCu","@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}],"9Z0F7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "defaultProps", ()=>defaultProps
@@ -771,7 +771,7 @@ class Burger extends HTMLElement {
     }
 }
 
-},{"../utils/dom.js":"2HKNr","../internals.js":"9XkCu","../styles/burger.js":"aDvZT","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"2HKNr":[function(require,module,exports) {
+},{"../utils/dom.js":"2HKNr","../internals.js":"9XkCu","../styles/burger.js":"aDvZT","@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}],"2HKNr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "bar", ()=>bar1
@@ -804,7 +804,7 @@ const setStyles = (style, props)=>{
     for(const p in props)style.setProperty(p, props[p]);
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"9XkCu":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}],"9XkCu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "props", ()=>props
@@ -820,11 +820,11 @@ const render = Symbol('render');
 const styles = Symbol('styles');
 const update = Symbol('update');
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"aDvZT":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}],"aDvZT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = `:host{display:block;position:relative;width:48px;height:48px;cursor:pointer;-webkit-user-select:none;user-select:none}:host([hidden]){display:none !important}:host([disabled]){opacity:.5}button{position:absolute;top:0;left:0;width:100%;height:100%;border:none;-webkit-appearance:none;background:transparent;color:inherit}[part=bar]{background:currentColor;position:absolute}`;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["iHnC7","fzcL3"], "fzcL3", "parcelRequire8124")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}]},["fH98R","fzcL3"], "fzcL3", "parcelRequire8124")
 
 //# sourceMappingURL=index.82e67d4d.js.map
