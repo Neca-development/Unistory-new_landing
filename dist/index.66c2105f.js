@@ -140,7 +140,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"eNNdX":[function(require,module,exports) {
+})({"3kerg":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
@@ -490,7 +490,7 @@ numberIncreamenter("#upworkRating", 0.1, 1);
 numberIncreamenter("#developedProjects", 1, 1, "+");
 numberIncreamenter("#repeatCustomers", 1, 1, "%");
 
-},{"typed.js":"52HQS","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"52HQS":[function(require,module,exports) {
+},{"typed.js":"52HQS","@parcel/transformer-js/src/esmodule-helpers.js":"iyrD1"}],"52HQS":[function(require,module,exports) {
 /*!
  * 
  *   typed.js - A JavaScript Typing Animation Library
@@ -1292,6 +1292,6 @@ numberIncreamenter("#repeatCustomers", 1, 1, "%");
     ]));
 });
 
-},{}]},["eNNdX","7IhCg"], "7IhCg", "parcelRequire8124")
+},{}]},["3kerg","7IhCg"], "7IhCg", "parcelRequire8124")
 
 //# sourceMappingURL=index.66c2105f.js.map
