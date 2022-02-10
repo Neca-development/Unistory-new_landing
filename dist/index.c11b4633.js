@@ -465,14 +465,14 @@ var _smoothScrollIntoViewIfNeededDefault = parcelHelpers.interopDefault(_smoothS
 function scrollTo(id) {
     const elem = document.querySelector("#" + id);
     if (elem) _smoothScrollIntoViewIfNeededDefault.default(elem, {
-        behavior: 'smooth',
-        scrollMode: 'if-needed'
+        behavior: "smooth",
+        scrollMode: "if-needed"
     });
 }
 function detectTagInURL() {
     const current = window.location.pathname;
-    const section = window.location.hash.replace('#', '');
-    if (current === '/' && section) {
+    const section = window.location.hash.replace("#", "");
+    if (current === "/" && section) {
         scrollTo(section);
         console.log(section);
     }
