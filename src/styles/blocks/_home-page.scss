@@ -182,14 +182,14 @@
   &__content {
     display: flex;
     width: max-content;
-    animation: marquee 15s linear infinite forwards;
+    animation: marquee 20s linear infinite forwards;
 
     &:hover {
       animation-play-state: paused;
     }
 
     &_reversed {
-      animation: marquee 15s linear infinite reverse forwards;
+      animation: marquee 20s linear infinite reverse forwards;
     }
   }
 
