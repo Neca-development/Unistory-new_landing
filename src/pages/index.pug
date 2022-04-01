@@ -7,26 +7,7 @@ html(lang="en")
     title Unistory | Home page
     link(rel="stylesheet", href="../styles/main.scss")
   body
-    header.header
-      .container
-        a.header__logo(href="/")
-          img(src="../icons/logo.svg")
-        nav.mneu.header__menu
-          ul.menu__list
-            li.menu__item
-              a(href="javascript:;", scroll-to="services") Services
-            li.menu__item
-              a(href="javascript:;", scroll-to="competence") Competence
-            li.menu__item
-              a(href="portfolio.pug") Portfolio
-            li.menu__item
-              a(href="javascript:;", scroll-to="about") About
-            li.menu__item
-              a.btn.btn_animated_blue(
-                href="javascript:;",
-                scroll-to="contactUs"
-              ) Contact us
-            twirl-burger 
+    include ./blocks/header.pug
     section.welcome
       .container 
         h1.welcome__title 
@@ -239,7 +220,7 @@ html(lang="en")
               p Russia, Saint-Petersburg
                 br 
                 | Izmaylovskiy Prospekt 15
-          form#contactForm.contact-us__form
+          form#contactForm.contact-us__form(enctype="multipart/form-data")
             .contact-us__inputs-wrap
               .contact-us__form-frame.contact-us__form-frame_top-right
               .contact-us__form-frame.contact-us__form-frame_bottom-right
@@ -277,15 +258,17 @@ html(lang="en")
                 span Tell us about your project
               label.contact-us__file
                 img(src="../icons/attach.svg", alt="alt")
-                span Attach files
-                input(type="file", name="file") 
+                span#filelist Attach files
+                input#file(type="file", name="file", multiple) 
             button.btn.btn_white.btn_size_l(type="submit") Discuss the project
             p.contact-us__description By submitting your form, you agree to
-              a(href="javascript:;") &nbsp;the Privacy Policy
+              a#privacyPolicyForm(href="javascript:;") &nbsp;the Privacy Policy
               | &nbsp;rules.
+
     include ./blocks/footer.pug
     script(type="module", src="../scripts/slider.js") 
     script(type="module", src="../scripts/categories.js") 
     script(type="module", src="../scripts/smooth-scroll.js") 
     script(type="module", src="../scripts/animation.js") 
     script(type="module", src="../scripts/menu.js") 
+    script(type="module", src="../scripts/send-mail.js")

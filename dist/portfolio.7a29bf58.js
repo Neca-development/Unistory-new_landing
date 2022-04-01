@@ -488,10 +488,10 @@ function showMatchingCases(tag) {
     });
 }
 function addTagToUrl(tag) {
-    const isPortfolioPage = window.location.href.includes('portfolio');
+    const isPortfolioPage = window.location.href.includes("portfolio");
     const host = window.location.origin;
-    const urlPath = host + '/portfolio.html?category=' + tag;
-    const pageTitle = 'Portfolio | ' + tag;
+    const urlPath = host + "/portfolio.html?category=" + tag;
+    const pageTitle = "Portfolio | " + tag;
     const html = document.body.innerHTML;
     window.history.pushState({
         html,
@@ -504,7 +504,7 @@ function selectCategory(tag) {
     addTagToUrl(tag);
     highlightActiveTag(tag);
     hideAllCases();
-    if (tag.toLowerCase() === 'all projects') {
+    if (tag.toLowerCase() === "all projects") {
         showAllCases();
         return;
     }
@@ -512,14 +512,14 @@ function selectCategory(tag) {
     if (!firstCase) return;
     setTimeout(()=>{
         _smoothScrollIntoViewIfNeededDefault.default(casesContainer, {
-            behavior: 'smooth',
-            scrollMode: 'if-needed'
+            behavior: "smooth",
+            scrollMode: "if-needed"
         });
     }, 350);
 }
 function detectTagInURL() {
-    if (window.location.href.includes('?category=')) {
-        const tag = window.location.href.split('?category=')[1];
+    if (window.location.href.includes("?category=")) {
+        const tag = window.location.href.split("?category=")[1];
         selectCategory(tag);
     }
 }

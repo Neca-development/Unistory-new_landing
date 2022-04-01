@@ -18,17 +18,16 @@
 
   &_animation_flip {
     &:hover {
-      transition: 0.4s ease-in-out;
       .case-card__info {
         opacity: 1;
-        transition: 0.3s ease-out;
-        transition-delay: 0.2s;
+        transition: 0.5s ease-out;
+        transition-delay: 0.3s;
       }
       .case-card__img {
         box-shadow: 0 0 1rem var(--accent-color);
 
         img {
-          transition: 0.4s ease-out;
+          transition: 0.6s ease-in-out;
         }
         .case-card__img-rt {
           left: 100%;
@@ -86,7 +85,7 @@
         img {
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-          transition: none;
+          transition: 0.15s ease-in;
         }
       }
       &__img-bg {
