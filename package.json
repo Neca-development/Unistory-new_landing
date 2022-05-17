@@ -13,7 +13,7 @@
   "dependencies": {
     "parcel": "^2.0.1",
     "smooth-scroll-into-view-if-needed": "^1.1.32",
-    "swiper": "^7.4.1",
+    "swiper": "^6.8.4",
     "typed.js": "^2.0.12",
     "vanilla-hamburger": "^0.2.3",
     "wc-typed-js": "^1.0.1"

@@ -1,0 +1,232 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Unistory | Sipsignal
+    link(rel="stylesheet", href="../styles/main.scss")
+  body 
+    include ./blocks/header.pug
+    section.container.projectPromo
+      h1 How we&nbsp;
+        span automated sales
+      h2 for more customers and less costs
+      .projectPromo__image 
+        img(src="../img/sipsignal/promo-image.jpg", alt="sipsignal-promo")
+      .projectPromo__descr
+        .projectPromo__info 
+          h3 Whats this?
+          p 
+            span eCommerce application&nbsp;
+            | that allows user&nbsp;
+            span to select and purchase&nbsp;
+            | cloud and telecom services. The application is integrated with the
+            | client's DataBases and CRMs for easy user management.
+          .projectPromo__infoStats
+            .projectPromo__infoItem 
+              h5 Time
+              p 2 months
+            .projectPromo__infoItem 
+              h5 Team
+              p 6 employees
+            .projectPromo__infoItem 
+              h5 Stack
+              p NestJS & Angular
+            .projectPromo__infoItem 
+              h5 Year
+              p 2021-2022
+        .projectPromo__infoLogo
+          img(src="../img/sipsignal/project-logo.png", alt="logo")
+
+    section.container.projectHow
+      h3 How it was
+      .projectHow__wrapper
+        .projectHow__image 
+          img(src="../img/project/how-img.svg", alt="how")
+          .projectHow__arc
+            img(src="../img/project/how-arc.svg", alt="")
+        .projectHow__itemsWrapper
+          .projectHow__item
+            .projectHow__itemDot
+            h5 Problem
+            p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
+          .projectHow__item.projectHow__item_second
+            .projectHow__itemDot
+            h5 Solution
+            p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
+          .projectHow__item
+            .projectHow__itemDot
+            h5 Result
+            p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
+
+    section.container.projectWorkflow
+      h3 Workflow
+      .projectWorkflow__wrapper
+        .projectWorkflow__stage
+          h5 Analyst stage
+            img.projectWorkflow__stageArrow(
+              src="../img/project/workflow-stage.svg",
+              alt=""
+            )
+          img.projectWorkflow__stagesPath(
+            src="../img/project/workkflow-2-item-path.svg",
+            alt=""
+          )
+          p Product research
+          p Technical documentation
+        .projectWorkflow__stage
+          h5 Development stage
+            img.projectWorkflow__stageArrow(
+              src="../img/project/workflow-stage.svg",
+              alt=""
+            )
+          img.projectWorkflow__stagesPath(
+            src="../img/project/workkflow-2-item-path.svg",
+            alt=""
+          )
+          p Frontend & Backend
+          p Testing
+          img.projectWorkflow__reverseArrows(
+            src="../img/project/workflow-reverse-arrows.svg",
+            alt=""
+          )
+        .projectWorkflow__stage
+          h5 Release stage
+            img.projectWorkflow__stageArrow(
+              src="../img/project/workflow-stage.svg",
+              alt=""
+            )
+          img.projectWorkflow__stagesPath(
+            src="../img/project/workkflow-2-item-path.svg",
+            alt=""
+          )
+          p Release
+          p Support
+
+    section.container.projectOverview
+      h3.subtitle.subtitle_sub Application overview
+      .projectOverview__slider
+        img.projectOverview__slide(
+          src="../img/sipsignal/overview-slide.jpg",
+          alt=""
+        )
+      .projectOverview__descr
+        h5.subtitle.subtitle_min Subscription purchase
+        p The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
+
+    section.container.projectResults 
+      h3.subtitle.subtitle_sub Results
+      .projectResults__wrapper 
+        .projectResults__item
+          img(src="../icons/checkmark.svg", alt="")
+          p The application is out on the market and working properly
+        .projectResults__item
+          img(src="../icons/checkmark.svg", alt="")
+          p The application is out on the market and working properly
+        .projectResults__item
+          img(src="../icons/checkmark.svg", alt="")
+          p Continuing to work with customer to support the site
+        .projectResults__item
+          img(src="../icons/checkmark.svg", alt="")
+          p Customer is satisfied with the results
+
+    section.container.projectQuote
+      .projectQuote__client
+        h5 Good job guys!
+        p Unistory is a well-managed and structured team, Weekly updates, quick response, and turnaround. I would highly recommend the Unistory team for any project. We are so pleased with the results that we started the second project right away. Thank you guys for your hard work.
+        .projectQuote__clientProfile
+          img(src="../img/sipsignal/client-pic.jpg", alt="")
+          p Bogdan Parhomenko
+            span CEO "SIPSIGNAL"
+      .projectQuote__logo
+        img(src="../img/sipsignal/project-logo.png", alt="")
+
+    section.container.projectContact 
+      h3.subtitle Have an idea?
+        span.projectContact__subtitle Lets build it together
+      .projectContact__wrapper 
+        form#contactForm.projectContact__form(enctype="multipart/form-data")
+          label.contact-us__field
+            input(
+              type="text",
+              name="name",
+              autocomplete="name",
+              placeholder="Name *"
+            )
+            span Name *
+          label.contact-us__field
+            input(
+              type="email",
+              name="email",
+              autocomplete="email",
+              placeholder="Email"
+            )
+            span Email *
+          label.contact-us__field
+            input(
+              type="tel",
+              name="phone",
+              autocomplete="tel",
+              placeholder="Phone number"
+            )
+            span Phone number
+          label.contact-us__field
+            input#message(
+              type="text",
+              name="message",
+              placeholder="Tell us about your project"
+            )
+            span Tell us about your project *
+            small#messageLength 0/280
+          label.projectContact__file
+            img(src="../icons/attach-black.svg", alt="alt")
+            span#filelist Attach files
+            input#file(type="file", name="file", multiple) 
+          button.btn.btn_size_m.projectContact__submitBtn(type="submit") Discuss project
+        .projectContact__info
+          p.projectContact__infoText Do you have any ideas to develop? Fill this form or contact us for discussion about your digital wishes.
+          p.projectContact__infoLink Email
+            a(href="mailto:contact@unistory.app") Contact@unistory.app
+          p.projectContact__infoLink Phone
+            a(href="tel:+7 981 101 1104") +7 981 101 1104
+          .projectContact__infoSocial 
+            a(href="#")
+              img(src="../icons/links/Telegram.svg", alt="") 
+            a(href="#")
+              img(src="../icons/links/WhatsApp.svg", alt="") 
+            a(href="#")
+              img(src="../icons/links/Upwork.svg", alt="") 
+
+    section.projectOther 
+      h3.container.subtitle.subtitle_sub Other projects
+      .swiper.container.projectOther__slider
+        .swiper-wrapper
+          .swiper-slide.projectOther__item
+            .projectOther__itemImage
+              img(src="../img/project/moon-muttz-preview.jpg", alt="")
+            p Moon muttz
+            h6 NFT Platform
+            a(href="#") Explore
+          .swiper-slide.projectOther__item
+            .projectOther__itemImage
+              img(src="../img/project/five-years-preview.jpg", alt="")
+            p 5 Years plan
+            h6 Graduation application
+            a(href="#") Explore
+          .swiper-slide.projectOther__item
+            .projectOther__itemImage
+              img(src="../img/project/nft-world-preview.jpg", alt="")
+            p NFTworld
+            h6 Play to earn NFT game
+            a(href="#") Explore
+          .swiper-slide.projectOther__item
+            .projectOther__itemImage
+              img(src="../img/project/crypto-faces-preview.jpg", alt="")
+            p Crypto faces
+            h6 Project type
+            a(href="#") Explore
+
+    include ./blocks/footer.pug
+    script(type="module", src="../scripts/project-page-sliders.js")
+    script(type="module", src="../scripts/send-mail.js")

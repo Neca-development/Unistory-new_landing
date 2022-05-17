@@ -1,0 +1,570 @@
+.projectPromo {
+  padding-top: 5.25rem !important;
+  padding-bottom: 7.5rem !important;
+
+  &>h1 {
+    font-weight: 700;
+    font-size: 3.75rem;
+    font-style: normal;
+    line-height: 5.25rem;
+
+    & span {
+      color: var(--accent-color);
+    }
+  }
+
+  &>h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+
+  &__image {
+    width: 100%;
+    margin-top: 4.5rem;
+    filter: drop-shadow(-0.75rem -0.75rem 1.5rem rgba(229, 229, 229, 0.25)) drop-shadow(0.75rem 0.75rem 1.5rem rgba(229, 229, 229, 0.25));
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.75rem;
+  }
+
+  &__info {
+    &>h3 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &>p {
+      margin-top: 0.75rem;
+      font-weight: 400;
+      font-size: 1.5rem;
+      font-style: normal;
+      line-height: 2.25rem;
+
+      & span {
+        color: var(--accent-color);
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__infoStats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.25rem;
+  }
+
+  &__infoItem {
+    & h5 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    & p {
+      margin-top: 0.75rem;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  &__infoLogo {
+    min-width: 28.125rem;
+    margin-left: 6.875rem;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.projectHow {
+  & h3 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 7.25rem;
+  }
+
+  &__image {
+    position: relative;
+    width: 33.3125rem;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__itemsWrapper {
+    // margin-left: 2.9375rem;
+  }
+
+  &__arc {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    width: 20.125rem;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-top: 4.875rem;
+    margin-bottom: 4.875rem;
+
+    & h5 {
+      min-width: 6rem;
+      margin-left: 1.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    & p {
+      max-width: 29.5rem;
+      margin-left: 3rem;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    &_second {
+      padding-left: 2.6875rem;
+    }
+  }
+
+  &__itemDot {
+    width: 1.125rem;
+    height: 1.125rem;
+    background: #fafafa;
+    border: 0.1875rem solid #383838;
+    border-radius: 50%;
+  }
+}
+
+.projectWorkflow {
+  margin-top: 7.5rem !important;
+
+  & h3 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-top: 3.75rem;
+    padding-left: 1rem;
+  }
+
+  &__stage {
+    position: relative;
+    margin-right: 12.75rem;
+
+    &>h5 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3.75rem;
+      padding-right: 1.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      background-color: var(--background-color);
+    }
+
+    &>p {
+      position: relative;
+      margin-left: 1.25rem;
+      padding-left: 1rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2.8rem;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: url("../../img/project/workflow-item-dot.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+        content: "";
+      }
+    }
+  }
+
+  &__stageArrow {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    z-index: -1;
+    margin-right: 0.6rem;
+    transform: translateY(-50%);
+  }
+
+  &__stagesPath {
+    position: absolute;
+    top: 13%;
+    left: -5%;
+    width: 1.5rem;
+  }
+
+  &__reverseArrows {
+    position: absolute;
+    bottom: 3.3rem;
+    left: 50%;
+    width: 10.75rem;
+  }
+}
+
+.projectOverview {
+  margin-top: 7.5rem !important;
+  padding-bottom: 3.125rem !important;
+
+  &__slider {
+    margin: 0 auto;
+    margin-top: 3.875rem;
+    width: 40.625rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0rem 1rem 0.9rem -0.1rem rgba(48, 48, 48, 0.68);
+    border-radius: 1.5625rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-49.5%) scale(1.02);
+      background: url('../../img/project/backplate.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  &__slide {
+    width: 100%;
+    border-radius: 1.35rem;
+  }
+
+  &__descr {
+    width: 40.625rem;
+    margin: 0 auto;
+    margin-top: 2.0625rem;
+
+    &>p {
+      margin-top: 0.5rem;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+.projectResults {
+  margin-top: 7.5rem !important;
+  display: flex;
+
+  &__wrapper {
+    margin-left: 12.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 4.8125rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &>img {
+      width: 2.5rem;
+    }
+
+    &>p {
+      max-width: 20.625rem;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.projectQuote {
+  margin-top: 3.75rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__client {
+    position: relative;
+    padding-left: 5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -1%;
+      width: 3rem;
+      height: 3rem;
+      background: url('../../img/project/quote.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &>h5 {
+      font-weight: 700;
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+
+    &>p {
+      max-width: 40.625rem;
+      margin-top: 3.125rem;
+      padding-left: 2.0625rem;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  &__clientProfile {
+    margin-top: 4.5rem;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    &>img {
+      width: 5.25rem;
+      border-radius: 50%;
+    }
+
+    &>p {
+
+      margin-left: 1.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    & span {
+      margin-top: 0.5rem;
+      display: block;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  &__logo {
+    width: 26.25rem;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.projectContact {
+  margin-top: 7.5rem !important;
+
+  &__subtitle {
+    display: block;
+    color: var(--accent-color);
+  }
+
+  &__wrapper {
+    margin-top: 4rem;
+    display: flex;
+  }
+
+  &__form {
+    margin-right: 15.375rem;
+    width: 33.3125rem;
+
+    & .contact-us__field {
+      margin-top: 2.875rem;
+    }
+
+    & input,
+    textarea {
+      color: #3e3e3e;
+      border-bottom: 1px solid #3e3e3e;
+    }
+
+    & small {
+      position: absolute;
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      bottom: -2rem;
+      right: 0;
+    }
+  }
+
+  &__file {
+    margin-top: 0.75rem;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+
+    &>img {
+      width: 0.875rem;
+      margin-right: 0.5rem;
+    }
+
+    &>input {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  &__submitBtn {
+    margin-top: 4.625rem;
+  }
+
+  &__info {
+    width: 26.25rem;
+    color: #414141;
+  }
+
+  &__infoText {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 2.25rem;
+  }
+
+  &__infoLink {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+
+    &>a {
+      margin-bottom: 1.5rem;
+      display: block;
+      margin-top: 0.25rem;
+      font-weight: 600;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: #414141;
+      text-decoration: none;
+    }
+  }
+
+  &__infoSocial {
+    margin-top: 2.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+    width: fit-content;
+
+    & a {
+      width: 3.25rem;
+      padding: 0.8125rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.projectOther {
+  margin-top: 7.5rem;
+  padding-bottom: 5.25rem;
+  overflow: hidden;
+
+  &__slider {
+    margin-top: 3.5rem !important;
+  }
+
+  &__item {
+    width: auto;
+
+    &>p {
+      margin-top: 1.5rem;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: #0F225A;
+    }
+
+    &>h6 {
+      margin-top: 0.25rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &>a {
+      display: block;
+      margin-top: 0.75rem;
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      text-decoration: none;
+      color: #1275D3;
+    }
+  }
+
+  &__itemImage {
+    position: relative;
+    box-shadow: 0rem 1rem 0.9rem -0.1rem rgba(48, 48, 48, 0.68);
+    border-radius: 0.9rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0.3%;
+      left: 50%;
+      transform: translateX(-50%) scale(1.03);
+      background: url('../../img/project/backplate.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &>img {
+      width: 100%;
+      border-radius: 0.9rem;
+    }
+  }
+}

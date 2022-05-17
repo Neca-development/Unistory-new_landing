@@ -140,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"1sJHr":[function(require,module,exports) {
+})({"1f28R":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "4a236f9275d0a351";
-module.bundle.HMR_BUNDLE_ID = "74e3b6b53c195e43";
+module.bundle.HMR_BUNDLE_ID = "600dae6999388419";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -458,45 +458,8 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"22nfO":[function(require,module,exports) {
-const contactForm = document.querySelector("#contactForm");
-const fileInput = document.querySelector("#file");
-const fileList = document.querySelector("#filelist");
-const messageField = document.querySelector("#message");
-const messageLength = document.querySelector("#messageLength");
-messageField.addEventListener("input", (event)=>{
-    console.log(event.target.value);
-});
-fileInput.addEventListener("change", ()=>{
-    updateFileDisplay();
-});
-contactForm.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    send(e, "../mailer/mailer.php");
-});
-function updateFileDisplay() {
-    fileList.innerHTML = "";
-    for(let i = 0; i < fileInput.files.length; i++)fileList.innerHTML += fileInput.files.item(i).name + "<br>";
-}
-function send(event, php) {
-    console.log("Отправка запроса");
-    event.preventDefault ? event.preventDefault() : event.returnValue = false;
-    var req = new XMLHttpRequest();
-    req.open("POST", php, true);
-    req.onload = function() {
-        if (req.status >= 200 && req.status < 400) {
-            json = JSON.parse(this.response);
-            console.log(json);
-            if (json.result == "success") alert("Сообщение отправлено");
-            else alert("Ошибка. Сообщение не отправлено");
-        } else alert("Ошибка сервера. Номер: " + req.status);
-    };
-    req.onerror = function() {
-        alert("Ошибка отправки запроса");
-    };
-    req.send(new FormData(event.target));
-}
+},{}],"03yP4":[function(require,module,exports) {
 
-},{}]},["1sJHr","22nfO"], "22nfO", "parcelRequire8124")
+},{}]},["1f28R","03yP4"], "03yP4", "parcelRequire8124")
 
-//# sourceMappingURL=index.3c195e43.js.map
+//# sourceMappingURL=sipsignal.99388419.js.map
