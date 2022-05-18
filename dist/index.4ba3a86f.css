@@ -1327,7 +1327,7 @@ body:before {
 .case-card__img {
   position: relative;
   align-self: stretch;
-  padding-bottom: 136.3%;
+  padding-bottom: 120.3%;
   overflow: hidden;
   border-radius: 1.4438rem;
   transform: translateZ(0);
@@ -1645,11 +1645,11 @@ body:before {
   font-style: normal;
   line-height: 5.25rem;
 }
-.projectPromo > h1 span {
+.projectPromo > h1 span:nth-child(1) {
   color: var(--accent-color);
 }
-.projectPromo > h2 {
-  font-weight: 700;
+.projectPromo > h1 span:nth-child(2) {
+  display: block;
   font-size: 2.25rem;
   line-height: 3rem;
 }
@@ -1665,11 +1665,6 @@ body:before {
   display: flex;
   justify-content: space-between;
   margin-top: 3.75rem;
-}
-.projectPromo__info > h3 {
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 .projectPromo__info > p {
   margin-top: 0.75rem;
@@ -1687,11 +1682,6 @@ body:before {
   justify-content: space-between;
   margin-top: 2.25rem;
 }
-.projectPromo__infoItem h5 {
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .projectPromo__infoItem p {
   margin-top: 0.75rem;
   font-weight: 400;
@@ -1704,11 +1694,6 @@ body:before {
 }
 .projectPromo__infoLogo img {
   width: 100%;
-}
-.projectHow h3 {
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 4rem;
 }
 .projectHow__wrapper {
   position: relative;
@@ -1740,7 +1725,7 @@ body:before {
   margin-top: 4.875rem;
   margin-bottom: 4.875rem;
 }
-.projectHow__item h5 {
+.projectHow__item > h3 {
   min-width: 6rem;
   margin-left: 1.5rem;
   font-weight: 700;
@@ -1767,11 +1752,6 @@ body:before {
 .projectWorkflow {
   margin-top: 7.5rem !important;
 }
-.projectWorkflow h3 {
-  font-weight: 700;
-  font-size: 2.25rem;
-  line-height: 3rem;
-}
 .projectWorkflow__wrapper {
   display: flex;
   margin-top: 3.75rem;
@@ -1781,7 +1761,7 @@ body:before {
   position: relative;
   margin-right: 12.75rem;
 }
-.projectWorkflow__stage > h5 {
+.projectWorkflow__stage > h3 {
   position: relative;
   display: inline-block;
   margin-bottom: 3.75rem;
@@ -1941,11 +1921,6 @@ body:before {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.projectQuote__client > h5 {
-  font-weight: 700;
-  font-size: 1.75rem;
-  line-height: 2.25rem;
-}
 .projectQuote__client > p {
   max-width: 40.625rem;
   margin-top: 3.125rem;
@@ -1953,6 +1928,11 @@ body:before {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+.projectQuote__title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
 }
 .projectQuote__clientProfile {
   margin-top: 4.5rem;
@@ -2090,12 +2070,7 @@ body:before {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #0F225A;
-}
-.projectOther__item > h6 {
-  margin-top: 0.25rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  margin-bottom: 0.25rem;
 }
 .projectOther__item > a {
   display: block;
