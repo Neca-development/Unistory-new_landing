@@ -2,6 +2,22 @@ const contactForm = document.querySelector("#contactForm");
 const fileInput = document.querySelector("#file");
 const fileList = document.querySelector("#filelist");
 
+const messageField = document.querySelector("#message");
+const messageLength = document.querySelector("#messageLength");
+
+// Display typed message length
+messageField.addEventListener("input", (event) => {
+  const length = event.target.value.length;
+  messageLength.textContent = length + "/280";
+});
+
+// Prevent user from typing more than 280 char
+messageField.addEventListener("keydown", (event) => {
+  if (event.target.value.length >= 280) {
+    event.preventDefault();
+  }
+});
+
 fileInput.addEventListener("change", () => {
   updateFileDisplay();
 });

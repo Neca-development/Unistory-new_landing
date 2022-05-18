@@ -464,8 +464,14 @@ const fileInput = document.querySelector("#file");
 const fileList = document.querySelector("#filelist");
 const messageField = document.querySelector("#message");
 const messageLength = document.querySelector("#messageLength");
+// Display typed message length
 messageField.addEventListener("input", (event)=>{
-    console.log(event.target.value);
+    const length = event.target.value.length;
+    messageLength.textContent = length + "/280";
+});
+// Prevent user from typing more than 280 char
+messageField.addEventListener("keydown", (event)=>{
+    if (event.target.value.length >= 280) event.preventDefault();
 });
 fileInput.addEventListener("change", ()=>{
     updateFileDisplay();
@@ -499,4 +505,4 @@ function send(event, php) {
 
 },{}]},["1sJHr","22nfO"], "22nfO", "parcelRequire8124")
 
-//# sourceMappingURL=index.3c195e43.js.map
+//# sourceMappingURL=sipsignal.3c195e43.js.map

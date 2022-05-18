@@ -8,7 +8,7 @@ html {
   color: var(--font-color);
   font-size: 16px;
 
-  @media (max-width: 1600px){
+  @media (max-width: 1600px) {
     font-size: .85vw;
   }
 
@@ -52,5 +52,9 @@ html {
 @import url("./blocks/_home-page.scss");
 @import url("./blocks/_case-card.scss");
 @import url("./blocks/_footer.scss");
-@import url("./blocks/_portfolio.scss");
 @import url("./blocks/_popups.scss");
+@import url("./blocks/_titles.scss");
+
+// pages
+@import url("./blocks/_portfolio.scss");
+@import url("./blocks/_projectPage.scss");
