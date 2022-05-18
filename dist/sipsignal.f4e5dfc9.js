@@ -463,13 +463,26 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _swiper = require("swiper");
 var _swiperDefault = parcelHelpers.interopDefault(_swiper);
 var _swiperMinCss = require("swiper/swiper.min.css");
+var _navigationMinCss = require("swiper/components/navigation/navigation.min.css");
+_swiperDefault.default.use([
+    _swiper.Navigation
+]);
+const overviewSwiper = new _swiperDefault.default(".projectOverview__slider", {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".projectOverview__btnNext",
+        prevEl: ".projectOverview__btnPrev"
+    }
+});
 const otherProjectsSwiper = new _swiperDefault.default(".projectOther__slider", {
     loop: false,
     slidesPerView: 3,
     spaceBetween: 40
 });
 
-},{"swiper":"eH5h9","swiper/swiper.min.css":"h5Ina","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"eH5h9":[function(require,module,exports) {
+},{"swiper":"eH5h9","swiper/swiper.min.css":"h5Ina","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","swiper/components/navigation/navigation.min.css":"jJv04"}],"eH5h9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -9263,6 +9276,6 @@ exports.default = {
     }
 };
 
-},{"../../utils/utils":"lpiAW","../../utils/dom":"iPYrw","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"h5Ina":[function() {},{}]},["kppIZ","WLImI"], "WLImI", "parcelRequire8124")
+},{"../../utils/utils":"lpiAW","../../utils/dom":"iPYrw","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"h5Ina":[function() {},{}],"jJv04":[function() {},{}]},["kppIZ","WLImI"], "WLImI", "parcelRequire8124")
 
 //# sourceMappingURL=sipsignal.f4e5dfc9.js.map

@@ -247,36 +247,64 @@
 .projectOverview {
   margin-top: 7.5rem !important;
   padding-bottom: 3.125rem !important;
+  position: relative;
 
   &__slider {
-    margin: 0 auto;
-    margin-top: 3.875rem;
     width: 40.625rem;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0rem 1rem 0.9rem -0.1rem rgba(48, 48, 48, 0.68);
-    border-radius: 1.5625rem;
+    margin: 0 auto;
+  }
 
-    &::before {
-      content: '';
+  &__swiperContainer {
+    overflow: hidden;
+    width: 42rem;
+    margin: 0 auto;
+    margin-top: 3.875rem;
+    position: relative;
+
+    &::after {
+      content: "";
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 96%;
+      height: 21.8rem;
       top: 0%;
       left: 50%;
-      transform: translateX(-49.5%) scale(1.02);
-      background: url('../../img/project/backplate.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: -1;
+      transform: translateX(-50%);
+      border: 0.1875rem solid #383838;
+      border-radius: 1.5625rem;
+      z-index: 5;
+      box-shadow: 0rem 1rem 0.5rem -0.3rem rgba(48, 48, 48, 0.68);
     }
   }
 
   &__slide {
+    &>img {
+      width: 100%;
+      border-radius: 1.35rem;
+    }
+  }
+
+  &__arrowsWrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
     width: 100%;
-    border-radius: 1.35rem;
+    height: 3.125rem;
+  }
+
+  &__btnNext,
+  &__btnPrev {
+    width: 1.5rem !important;
+
+    &::after {
+      content: url('../../icons/arrow-right.svg') !important;
+    }
+  }
+
+  &__btnPrev {
+    &::after {
+      transform: rotate(180deg);
+    }
   }
 
   &__descr {
@@ -545,26 +573,23 @@
 
   &__itemImage {
     position: relative;
-    box-shadow: 0rem 1rem 0.9rem -0.1rem rgba(48, 48, 48, 0.68);
-    border-radius: 0.9rem;
 
     &::before {
       content: '';
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0.3%;
+      width: 99%;
+      height: 99%;
+      top: -1%;
       left: 50%;
-      transform: translateX(-50%) scale(1.03);
-      background: url('../../img/project/backplate.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: -1;
+      transform: translateX(-50%);
+      border: 0.1875rem solid #383838;
+      border-radius: 1.6rem;
+      box-shadow: 0rem 1rem 0.5rem -0.3rem rgba(48, 48, 48, 0.68);
     }
 
     &>img {
       width: 100%;
-      border-radius: 0.9rem;
+      border-radius: 1.5rem;
     }
   }
 }

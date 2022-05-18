@@ -106,14 +106,22 @@ html(lang="en")
 
     section.container.projectOverview
       h3.subtitle.subtitle_sub Application overview
-      .projectOverview__slider
-        img.projectOverview__slide(
-          src="../img/sipsignal/overview-slide.jpg",
-          alt=""
-        )
-      .projectOverview__descr
-        h5.subtitle.subtitle_min Subscription purchase
-        p The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
+      .projectOverview__swiperContainer
+        .swiper.projectOverview__slider
+          .swiper-wrapper
+            .swiper-slide.projectOverview__slide
+              img(src="../img/sipsignal/overview-slide.jpg", alt="")
+              .projectOverview__descr
+                h5.subtitle.subtitle_min Subscription purchase
+                p The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
+            .swiper-slide.projectOverview__slide
+              img(src="../img/sipsignal/overview-slide.jpg", alt="")
+              .projectOverview__descr
+                h5.subtitle.subtitle_min Subscription purchase
+                p The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
+      .projectOverview__arrowsWrapper
+        .swiper-button-prev.projectOverview__btnPrev
+        .swiper-button-next.projectOverview__btnNext
 
     section.container.projectResults 
       h3.subtitle.subtitle_sub Results
