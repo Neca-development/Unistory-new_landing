@@ -6,6 +6,10 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Unistory | Sipsignal
     link(rel="stylesheet", href="../styles/main.scss")
+    link(
+      rel="stylesheet",
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    )
   body 
     include ./blocks/header.pug
     section.container.projectPromo
@@ -40,69 +44,66 @@ html(lang="en")
           img(src="../img/sipsignal/project-logo.png", alt="logo")
 
     section.container.projectHow
-      h2.subtitle How it was
-      .projectHow__wrapper
-        .projectHow__image 
-          img(src="../img/project/how-img.svg", alt="how")
-          .projectHow__arc
-            img(src="../img/project/how-arc.svg", alt="")
-        .projectHow__itemsWrapper
-          .projectHow__item
-            .projectHow__itemDot
-            h3 Problem
-            p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
-          .projectHow__item.projectHow__item_second
-            .projectHow__itemDot
-            h3 Solution
-            p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
-          .projectHow__item
-            .projectHow__itemDot
-            h3 Result
-            p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
+      .projectHow__scrollableContainer
+        #stickyContent.projectHow__stickyWrapper
+          h2.subtitle How it was
+          .projectHow__wrapper
+            .projectHow__image 
+              img#step-logo(src="../img/project/how-img.svg", alt="how")
+              .projectHow__arc
+                img(src="../img/project/how-arc.svg", alt="")
+            .projectHow__itemsWrapper
+              #howStageItem1.projectHow__item
+                #howStageFirstDot.projectHow__itemDot
+                h3 Problem
+                p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
+              #howStageItem2.projectHow__item.projectHow__item_second
+                #howStageSecondDot.projectHow__itemDot
+                h3 Solution
+                p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
+              #howStageItem3.projectHow__item
+                #howStageThirdDot.projectHow__itemDot
+                h3 Result
+                p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
 
     section.container.projectWorkflow
       h2.subtitle.subtitle_sub Workflow
       .projectWorkflow__wrapper
-        .projectWorkflow__stage
-          h3 Analyst stage
-            img.projectWorkflow__stageArrow(
-              src="../img/project/workflow-stage.svg",
-              alt=""
-            )
+        .projectWorkflow__stage.projectWorkflow__stage
+          h3.wow.fadeIn(data-wow-delay="1s") Analyst stage
+          .wow.projectWorkflow__stageArrow
           img.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          p Product research
-          p Technical documentation
-        .projectWorkflow__stage
-          h3 Development stage
-            img.projectWorkflow__stageArrow(
-              src="../img/project/workflow-stage.svg",
-              alt=""
-            )
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1.4s")
+          p.wow.fadeInRight(data-wow-delay="1.6s") Product research
+          p.wow.fadeInRight(data-wow-delay="2s") Technical documentation
+        .projectWorkflow__stage.projectWorkflow__stage
+          h3.wow.fadeIn(data-wow-delay="3s") Development stage
+          .wow.projectWorkflow__stageArrow(data-wow-delay="2.5s")
           img.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          p Frontend & Backend
-          p Testing
-          img.projectWorkflow__reverseArrows(
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="3.4s")
+          p.wow.fadeInRight(data-wow-delay="3.6s") Frontend & Backend
+          p.wow.fadeInRight(data-wow-delay="4s") Testing
+          img.wow.fadeInUp.projectWorkflow__reverseArrows(
             src="../img/project/workflow-reverse-arrows.svg",
-            alt=""
+            alt="",
+            data-wow-delay="4.2s"
           )
-        .projectWorkflow__stage
-          h3 Release stage
-            img.projectWorkflow__stageArrow(
-              src="../img/project/workflow-stage.svg",
-              alt=""
-            )
+        .projectWorkflow__stage.projectWorkflow__stage
+          h3.wow.fadeIn(data-wow-delay="5s") Release stage
+          .wow.projectWorkflow__stageArrow(data-wow-delay="4.5s")
           img.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          p Release
-          p Support
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="5.4s")
+          p.wow.fadeInRight(data-wow-delay="5.6s") Release
+          p.wow.fadeInRight(data-wow-delay="6s") Support
 
     section.container.projectOverview
       h2.subtitle.subtitle_sub Application overview
@@ -123,7 +124,7 @@ html(lang="en")
         .swiper-button-prev.projectOverview__btnPrev
         .swiper-button-next.projectOverview__btnNext
 
-    section.container.projectResults 
+    section.container.projectResults
       h2.subtitle.subtitle_sub Results
       .projectResults__wrapper 
         .projectResults__item
@@ -238,3 +239,4 @@ html(lang="en")
     include ./blocks/footer.pug
     script(type="module", src="../scripts/project-page-sliders.js")
     script(type="module", src="../scripts/send-mail.js")
+    script(type="module", src="../scripts/project-page-how-animation.js")

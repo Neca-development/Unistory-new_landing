@@ -79,23 +79,30 @@
 
 .projectHow {
 
+  &__scrollableContainer {
+    height: calc(28rem * 4);
+  }
+
+  &__stickyWrapper {
+    position: sticky;
+    top: 5%;
+  }
+
   &__wrapper {
-    position: relative;
+    margin-top: 7.25rem;
     display: flex;
     align-items: center;
-    margin-top: 7.25rem;
   }
 
   &__image {
     position: relative;
     width: 33.3125rem;
+    transition: all 0.5s ease;
 
     & img {
       width: 100%;
     }
   }
-
-  &__itemsWrapper {}
 
   &__arc {
     position: absolute;
@@ -115,6 +122,8 @@
     align-items: center;
     margin-top: 4.875rem;
     margin-bottom: 4.875rem;
+    opacity: 0;
+    transition: opacity 1s ease;
 
     &>h3 {
       min-width: 6rem;
@@ -135,6 +144,10 @@
     &_second {
       padding-left: 2.6875rem;
     }
+
+    &_active {
+      opacity: 1;
+    }
   }
 
   &__itemDot {
@@ -143,6 +156,14 @@
     background: #fafafa;
     border: 0.1875rem solid #383838;
     border-radius: 50%;
+    z-index: 2;
+    transition: all 0.25s ease;
+
+    &_active {
+      background: var(--accent-color);
+      transform: scale(1.4);
+      border: none;
+    }
   }
 }
 
@@ -152,7 +173,7 @@
   &__wrapper {
     display: flex;
     margin-top: 3.75rem;
-    padding-left: 1rem;
+    position: relative;
   }
 
   &__stage {
@@ -163,17 +184,29 @@
       position: relative;
       display: inline-block;
       margin-bottom: 3.75rem;
-      padding-right: 1.5rem;
+      padding-left: 1rem;
       font-weight: 700;
       font-size: 1.5rem;
       line-height: 2rem;
-      background-color: var(--background-color);
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -0.25rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: url("../../img/project/workflow-item-dot.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+        content: "";
+      }
     }
 
     &>p {
       position: relative;
-      margin-left: 1.25rem;
-      padding-left: 1rem;
+      margin-left: 2.25rem;
+      padding-left: 0.75rem;
       font-weight: 500;
       font-size: 1.5rem;
       line-height: 2rem;
@@ -193,23 +226,25 @@
         background-size: contain;
         transform: translateY(-50%);
         content: "";
+        opacity: 0.7;
       }
     }
   }
 
   &__stageArrow {
     position: absolute;
-    top: 50%;
-    right: 100%;
-    z-index: -1;
-    margin-right: 0.6rem;
-    transform: translateY(-50%);
+    top: 6%;
+    left: -120%;
+    width: 15rem;
+    height: 0.0625rem;
+    background-color: #5f5f5f;
+    animation: WorkflowLinePath 1s ease forwards;
   }
 
   &__stagesPath {
     position: absolute;
     top: 13%;
-    left: -5%;
+    left: 0;
     width: 1.5rem;
   }
 
@@ -218,6 +253,16 @@
     bottom: 3.3rem;
     left: 50%;
     width: 10.75rem;
+  }
+
+  &__hiddenPathBlock {
+    width: 1.65rem;
+    height: 11rem;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    background-color: var(--background-color);
+    animation: WorkflowRevealPaths linear forwards;
   }
 }
 
@@ -562,5 +607,25 @@
       width: 100%;
       border-radius: 1.5rem;
     }
+  }
+}
+
+@keyframes WorkflowRevealPaths {
+  from {
+    top: 12%;
+  }
+
+  to {
+    top: 80%;
+  }
+}
+
+@keyframes WorkflowLinePath {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 120%;
   }
 }
