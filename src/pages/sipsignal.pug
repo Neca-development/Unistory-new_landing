@@ -65,6 +65,20 @@ html(lang="en")
                 #howStageThirdDot.projectHow__itemDot
                 h3 Result
                 p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
+      .projectHow__mobileContainer
+        h2.subtitle How it was
+        img(src="../img/project/how-img.svg", alt="how")
+        .swiper.projectHow__mobileSlider
+          .swiper-wrapper
+            .swiper-slide.projectHow__mobileSlide
+              h3.subtitle.subtitle_min Problem
+              p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
+            .swiper-slide.projectHow__mobileSlide
+              h3.subtitle.subtitle_min Solution
+              p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
+            .swiper-slide.projectHow__mobileSlide
+              h3.subtitle.subtitle_min Result
+              p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
 
     section.container.projectWorkflow
       h2.subtitle.subtitle_sub Workflow
@@ -72,7 +86,7 @@ html(lang="en")
         .projectWorkflow__stage.projectWorkflow__stage
           h3.wow.fadeIn(data-wow-delay="1s") Analyst stage
           .wow.projectWorkflow__stageArrow
-          img.projectWorkflow__stagesPath(
+          img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
@@ -83,29 +97,35 @@ html(lang="en")
         .projectWorkflow__stage.projectWorkflow__stage
           h3.wow.fadeIn(data-wow-delay="1.5s") Development stage
           .wow.projectWorkflow__stageArrow(data-wow-delay="1s")
-          img.projectWorkflow__stagesPath(
+          img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
           .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="3.4s")
           p.wow.fadeInRight(data-wow-delay="3.6s") Frontend & Backend
           p.wow.fadeInRight(data-wow-delay="3.8s") Testing
-          img.wow.fadeInUp.projectWorkflow__reverseArrows(
-            src="../img/project/workflow-reverse-arrows.svg",
-            alt="",
-            data-wow-delay="4s"
-          )
+            img.wow.fadeInUp.projectWorkflow__reverseArrows(
+              src="../img/project/workflow-reverse-arrows.svg",
+              alt="",
+              data-wow-delay="4s"
+            )
 
         .projectWorkflow__stage.projectWorkflow__stage
           h3.wow.fadeIn(data-wow-delay="2.4s") Release stage
           .wow.projectWorkflow__stageArrow(data-wow-delay="2s")
-          img.projectWorkflow__stagesPath(
+          img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
           .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="4.4s")
           p.wow.fadeInRight(data-wow-delay="4.6s") Release
           p.wow.fadeInRight(data-wow-delay="4.8s") Support
+
+        img.projectWorkflow__mobilePath(
+          src="../img/project/workflow-mobile-path.svg",
+          alt=""
+        )
+        .wow.projectWorkflow__mobileHiddenPath(data-wow-duration="2.5s")
 
     section.container.projectOverview
       h2.subtitle.subtitle_sub Application overview
@@ -156,7 +176,11 @@ html(lang="en")
     section.container.projectContact 
       h2.subtitle Have an idea?
         span.projectContact__subtitle Lets build it together
-      .projectContact__wrapper 
+      .projectContact__wrapper
+        p.projectContact__infoText.projectContact__infoText_mobile
+          | Do you have any ideas to develop? Fill this form or contact us via&nbsp;
+          a(href="mailto:Contact@unistory.app") Contact@unistory.app&nbsp;
+          | for discussion about your digital wishes.
         form#contactForm.projectContact__form(enctype="multipart/form-data")
           label.contact-us__field
             input(

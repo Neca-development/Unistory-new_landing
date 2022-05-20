@@ -479,7 +479,22 @@ const overviewSwiper = new _swiperDefault.default(".projectOverview__slider", {
 const otherProjectsSwiper = new _swiperDefault.default(".projectOther__slider", {
     loop: false,
     slidesPerView: 3,
-    spaceBetween: 40
+    spaceBetween: 40,
+    breakpoints: {
+        320: {
+            slidesPerView: 1.4,
+            spaceBetween: 24
+        },
+        647: {
+            slidesPerView: 3
+        }
+    }
+});
+const howStepsMobileSwiper = new _swiperDefault.default(".projectHow__mobileSlider", {
+    loop: false,
+    slidesPerView: 1.2,
+    spaceBetween: 5,
+    freeMode: true
 });
 
 },{"swiper":"eH5h9","swiper/swiper.min.css":"h5Ina","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","swiper/components/navigation/navigation.min.css":"jJv04"}],"eH5h9":[function(require,module,exports) {
