@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/pages/index.pug",
-    "build-prod": "parcel build src/pages/index.pug --no-content-hash",
+    "clean:output": "rimraf dist",
+    "dev": "npm run clean:output && parcel src/pages/index.pug",
+    "build-prod": "npm run clean:output && parcel build src/pages/index.pug --no-content-hash",
     "public-gh": "npm run build-prod && gh-pages -d dist",
     "deploy": "gh-pages -d dist"
   },
@@ -26,6 +27,7 @@
     "gh-pages": "^3.2.3",
     "parcel-plugin-clean-dist": "^0.0.6",
     "prettier": "^2.5.1",
-    "prettier-plugin-style-order": "^0.2.2"
+    "prettier-plugin-style-order": "^0.2.2",
+    "rimraf": "^3.0.2"
   }
 }
