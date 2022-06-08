@@ -5,7 +5,7 @@
   "scripts": {
     "clean:output": "rimraf dist",
     "dev": "npm run clean:output && parcel src/pages/index.pug",
-    "build-prod": "npm run clean:output && parcel build src/pages/index.pug --no-content-hash",
+    "build-prod": "npm run clean:output && parcel build src/pages/index.pug",
     "public-gh": "npm run build-prod && gh-pages -d dist",
     "deploy": "gh-pages -d dist"
   },
