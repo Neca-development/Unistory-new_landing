@@ -1,8 +1,9 @@
 import WOW from "wow.js";
 
-new WOW.WOW({
+window.wow = new WOW({
   live: false,
-}).init();
+});
+window.wow.init();
 
 const scrollableBlock = document.querySelector(
   ".projectHow__scrollableContainer"
