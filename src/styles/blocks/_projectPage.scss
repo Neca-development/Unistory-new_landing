@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .projectPromo {
   padding-top: 5.25rem !important;
@@ -9,7 +9,7 @@
     padding-bottom: 84px !important;
   }
 
-  &>h1 {
+  & > h1 {
     font-weight: 700;
     font-size: 3.75rem;
     font-style: normal;
@@ -18,6 +18,11 @@
     @include mobile {
       font-size: 60px;
       line-height: 84px;
+    }
+
+    @include small-mobile {
+      font-size: 52px;
+      line-height: 75px;
     }
 
     & span:nth-child(1) {
@@ -43,12 +48,13 @@
   &__image {
     width: 100%;
     margin-top: 4.5rem;
-    filter: drop-shadow(-0.75rem -0.75rem 1.5rem rgba(229, 229, 229, 0.25)) drop-shadow(0.75rem 0.75rem 1.5rem rgba(229, 229, 229, 0.25));
+    filter: drop-shadow(-0.75rem -0.75rem 1.5rem rgba(229, 229, 229, 0.25))
+      drop-shadow(0.75rem 0.75rem 1.5rem rgba(229, 229, 229, 0.25));
 
     @include mobile {
+      width: calc(100% + 40px);
       margin-top: 72px;
       margin-left: -20px;
-      width: calc(100% + 40px);
     }
 
     & img {
@@ -67,8 +73,7 @@
   }
 
   &__info {
-
-    &>p {
+    & > p {
       margin-top: 0.75rem;
       font-weight: 400;
       font-size: 1.5rem;
@@ -94,15 +99,14 @@
     margin-top: 2.25rem;
 
     @include mobile {
-      margin-top: 64px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      margin-top: 64px;
       row-gap: 32px;
     }
   }
 
   &__infoItem {
-
     & p {
       margin-top: 0.75rem;
       font-weight: 400;
@@ -132,7 +136,6 @@
 }
 
 .projectHow {
-
   &__scrollableContainer {
     height: calc(28rem * 4);
 
@@ -147,9 +150,9 @@
   }
 
   &__wrapper {
-    margin-top: 7.25rem;
     display: flex;
     align-items: center;
+    margin-top: 7.25rem;
   }
 
   &__image {
@@ -166,9 +169,9 @@
     position: absolute;
     top: 50%;
     right: -10%;
+    z-index: -1;
     width: 20.125rem;
     transform: translateY(-50%);
-    z-index: -1;
 
     & img {
       width: 100%;
@@ -183,7 +186,7 @@
     opacity: 0;
     transition: opacity 1s ease;
 
-    &>h3 {
+    & > h3 {
       min-width: 6rem;
       margin-left: 1.5rem;
       font-weight: 700;
@@ -209,18 +212,18 @@
   }
 
   &__itemDot {
+    z-index: 2;
     width: 1.125rem;
     height: 1.125rem;
     background: #fafafa;
     border: 0.1875rem solid #383838;
     border-radius: 50%;
-    z-index: 2;
     transition: all 0.25s ease;
 
     &_active {
       background: var(--accent-color);
-      transform: scale(1.4);
       border: none;
+      transform: scale(1.4);
     }
   }
 
@@ -231,7 +234,7 @@
       display: block;
     }
 
-    &>img {
+    & > img {
       width: 273px;
       margin-top: 60px;
     }
@@ -239,15 +242,15 @@
 
   &__mobileSlider {
     margin-top: 48px;
-    overflow: hidden;
     margin-right: -20px;
     margin-left: -20px;
+    overflow: hidden;
   }
 
   &__mobileSlide {
     padding-left: 20px;
 
-    &>p {
+    & > p {
       margin-top: 12px;
       font-weight: 400;
       font-size: 18px;
@@ -265,9 +268,9 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     margin-top: 3.75rem;
-    position: relative;
 
     @include mobile {
       flex-direction: column;
@@ -287,7 +290,7 @@
       }
     }
 
-    &>h3 {
+    & > h3 {
       position: relative;
       display: inline-block;
       margin-bottom: 3.3rem;
@@ -297,11 +300,11 @@
       line-height: 2rem;
 
       @include mobile {
+        margin-top: 48px;
+        margin-bottom: 12px;
+        margin-left: 24px;
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 12px;
-        margin-top: 48px;
-        margin-left: 24px;
       }
 
       &::before {
@@ -318,7 +321,7 @@
       }
     }
 
-    &>p {
+    & > p {
       position: relative;
       margin-left: 2.25rem;
       padding-left: 0.75rem;
@@ -327,13 +330,17 @@
       line-height: 2rem;
 
       @include mobile {
-        font-size: 24px;
-        line-height: 32px;
         margin-top: 24px;
         margin-left: 48px;
         padding-left: 12px;
         font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
         opacity: 0.8;
+      }
+
+      @include small-mobile {
+        font-size: 18px;
       }
 
       &:not(:last-child) {
@@ -354,8 +361,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         transform: translateY(-50%);
-        content: "";
         opacity: 0.7;
+        content: "";
       }
     }
   }
@@ -381,9 +388,9 @@
     width: 1.5rem;
 
     @include mobile {
-      width: 18px;
       top: 37%;
       left: 24px;
+      width: 18px;
 
       animation-delay: 2s;
     }
@@ -397,17 +404,21 @@
 
     @include mobile {
       bottom: 8px;
-      width: 130px;
       left: 140px;
+      width: 130px;
+    }
+
+    @include small-mobile {
+      left: 100px;
     }
   }
 
   &__hiddenPathBlock {
-    width: 1.65rem;
-    height: 11rem;
     position: absolute;
     top: 12%;
     left: 0;
+    width: 1.65rem;
+    height: 11rem;
     background-color: var(--background-color);
     animation: WorkflowRevealPaths linear forwards;
 
@@ -417,10 +428,10 @@
   }
 
   &__mobilePath {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
     width: 25px;
 
     @include mobile {
@@ -429,10 +440,10 @@
   }
 
   &__mobileHiddenPath {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
     width: 24px;
     height: 500px;
     background-color: var(--background-color);
@@ -445,9 +456,9 @@
 }
 
 .projectOverview {
+  position: relative;
   margin-top: 7.5rem !important;
   padding-bottom: 3.125rem !important;
-  position: relative;
 
   @include mobile {
     margin-top: 84px !important;
@@ -455,8 +466,8 @@
   }
 
   &__slider {
-    width: 40.625rem;
     position: relative;
+    width: 40.625rem;
     margin: 0 auto;
 
     @include mobile {
@@ -465,41 +476,49 @@
   }
 
   &__swiperContainer {
-    overflow: hidden;
+    position: relative;
     width: 42rem;
     margin: 0 auto;
     margin-top: 3.875rem;
-    position: relative;
+    overflow: hidden;
 
     @include mobile {
       width: 360px;
       margin-top: 48px;
     }
 
+    @include small-mobile {
+      width: 280px;
+    }
+
     &::after {
-      content: "";
       position: absolute;
-      width: 96%;
-      height: 21.8rem;
       top: 0%;
       left: 50%;
-      transform: translateX(-50%);
+      z-index: 5;
+      width: 96%;
+      height: 21.8rem;
       border: 0.1875rem solid #383838;
       border-radius: 1.5625rem;
-      z-index: 5;
       box-shadow: 0rem 1rem 0.5rem -0.3rem rgba(48, 48, 48, 0.68);
+      transform: translateX(-50%);
+      content: "";
 
       @include mobile {
-        height: 200px;
         width: 98%;
-        border-radius: 15px;
+        height: 200px;
         border-width: 2px;
+        border-radius: 15px;
+      }
+
+      @include small-mobile {
+        height: 150px;
       }
     }
   }
 
   &__slide {
-    &>img {
+    & > img {
       width: 100%;
       border-radius: 1.35rem;
 
@@ -533,7 +552,7 @@
     }
 
     &::after {
-      content: url('../../icons/arrow-right.svg') !important;
+      content: url("../../icons/arrow-right.svg") !important;
     }
   }
 
@@ -549,11 +568,11 @@
     margin-top: 2.0625rem;
 
     @include mobile {
-      margin-top: 37px;
       width: 100%;
+      margin-top: 37px;
     }
 
-    &>p {
+    & > p {
       margin-top: 0.5rem;
       font-weight: 400;
       font-size: 1.125rem;
@@ -568,27 +587,27 @@
 }
 
 .projectResults {
-  margin-top: 7.5rem !important;
   display: flex;
+  margin-top: 7.5rem !important;
 
   @include mobile {
-    margin-top: 84px !important;
     flex-direction: column;
+    margin-top: 84px !important;
   }
 
   &__wrapper {
-    margin-left: 12.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-left: 12.5rem;
     column-gap: 3rem;
     row-gap: 4.8125rem;
 
     @include mobile {
+      grid-template-columns: 1fr;
       margin-top: 48px;
       margin-left: 0;
-      grid-template-columns: 1fr;
-      row-gap: 32px;
       column-gap: 0;
+      row-gap: 32px;
     }
   }
 
@@ -596,7 +615,7 @@
     display: flex;
     align-items: center;
 
-    &>img {
+    & > img {
       width: 2.5rem;
 
       @include mobile {
@@ -604,7 +623,7 @@
       }
     }
 
-    &>p {
+    & > p {
       max-width: 20.625rem;
       margin-left: 1.5rem;
       font-weight: 500;
@@ -623,10 +642,10 @@
 }
 
 .projectQuote {
-  margin-top: 3.75rem !important;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 3.75rem !important;
 
   @include mobile {
     margin-top: 130px !important;
@@ -641,24 +660,24 @@
     }
 
     &::before {
-      content: '';
       position: absolute;
-      left: 0;
       top: -1%;
+      left: 0;
       width: 3rem;
       height: 3rem;
-      background: url('../../img/project/quote.png');
-      background-size: contain;
+      background: url("../../img/project/quote.png");
       background-repeat: no-repeat;
+      background-size: contain;
+      content: "";
 
       @include mobile {
+        top: 1%;
         width: 46px;
         height: 46px;
-        top: 1%;
       }
     }
 
-    &>p {
+    & > p {
       max-width: 40.625rem;
       margin-top: 3.125rem;
       padding-left: 2.0625rem;
@@ -667,11 +686,11 @@
       line-height: 1.75rem;
 
       @include mobile {
+        max-width: unset;
+        margin-top: 36px;
+        padding-left: 0;
         font-size: 18px;
         line-height: 28px;
-        padding-left: 0;
-        margin-top: 36px;
-        max-width: unset;
       }
     }
   }
@@ -682,24 +701,24 @@
     line-height: 2.25rem;
 
     @include mobile {
+      padding-left: 50px;
       font-size: 32px;
       line-height: 48px;
-      padding-left: 50px;
     }
   }
 
   &__clientProfile {
-    margin-top: 4.5rem;
-    padding-left: 0.5rem;
     display: flex;
     align-items: center;
+    margin-top: 4.5rem;
+    padding-left: 0.5rem;
 
     @include mobile {
       margin-top: 36px;
       padding-left: 0;
     }
 
-    &>img {
+    & > img {
       width: 5.25rem;
       border-radius: 50%;
 
@@ -708,7 +727,7 @@
       }
     }
 
-    &>p {
+    & > p {
       margin-left: 1.5rem;
       font-weight: 700;
       font-size: 1.5rem;
@@ -722,8 +741,8 @@
     }
 
     & span {
-      margin-top: 0.5rem;
       display: block;
+      margin-top: 0.5rem;
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.75rem;
@@ -762,22 +781,22 @@
   }
 
   &__wrapper {
-    margin-top: 4rem;
     display: flex;
+    margin-top: 4rem;
 
     @include mobile {
-      margin-top: 48px;
       flex-direction: column;
+      margin-top: 48px;
     }
   }
 
   &__form {
-    margin-right: 15.375rem;
     width: 33.3125rem;
+    margin-right: 15.375rem;
 
     @include mobile {
-      margin-right: 0;
       width: 100%;
+      margin-right: 0;
     }
 
     & .contact-us__field {
@@ -796,29 +815,29 @@
 
     & small {
       position: absolute;
+      right: 0;
+      bottom: -2rem;
       font-weight: 500;
       font-size: 1.125rem;
       line-height: 1.5rem;
-      bottom: -2rem;
-      right: 0;
     }
   }
 
   &__file {
-    margin-top: 0.75rem;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
     display: flex;
     align-items: center;
+    margin-top: 0.75rem;
     font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
     cursor: pointer;
 
-    &>img {
+    & > img {
       width: 0.875rem;
       margin-right: 0.5rem;
     }
 
-    &>input {
+    & > input {
       position: absolute;
       visibility: hidden;
     }
@@ -838,23 +857,23 @@
   }
 
   &__infoText {
+    margin-bottom: 2.25rem;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    margin-bottom: 2.25rem;
 
     &_mobile {
       display: none;
 
       @include mobile {
         display: block;
+        margin-bottom: 0;
         font-size: 18px;
         line-height: 28px;
-        margin-bottom: 0;
 
         & a {
-          text-decoration: none;
           color: var(--accent-color);
+          text-decoration: none;
         }
       }
     }
@@ -865,31 +884,31 @@
     font-size: 1.125rem;
     line-height: 1.75rem;
 
-    &>a {
-      margin-bottom: 1.5rem;
+    & > a {
       display: block;
       margin-top: 0.25rem;
+      margin-bottom: 1.5rem;
+      color: #414141;
       font-weight: 600;
       font-size: 1.125rem;
       line-height: 1.75rem;
-      color: #414141;
       text-decoration: none;
     }
   }
 
   &__infoSocial {
-    margin-top: 2.25rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.5rem;
     width: fit-content;
+    margin-top: 2.25rem;
+    column-gap: 1.5rem;
 
     & a {
-      width: 3.25rem;
-      padding: 0.8125rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 3.25rem;
+      padding: 0.8125rem;
     }
   }
 }
@@ -915,29 +934,29 @@
   &__item {
     width: auto;
 
-    &>p {
+    & > p {
       margin-top: 1.5rem;
+      margin-bottom: 0.25rem;
+      color: #0f225a;
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.75rem;
-      color: #0F225A;
-      margin-bottom: 0.25rem;
 
       @include mobile {
+        margin-top: 20px;
         font-size: 18px;
         line-height: 28px;
-        margin-top: 20px;
       }
     }
 
-    &>a {
+    & > a {
       display: block;
       margin-top: 0.75rem;
+      color: #1275d3;
       font-weight: 700;
       font-size: 1.125rem;
       line-height: 1.75rem;
       text-decoration: none;
-      color: #1275D3;
 
       @include mobile {
         margin-top: 12px;
@@ -951,25 +970,25 @@
     position: relative;
 
     &::before {
-      content: '';
       position: absolute;
-      width: 99%;
-      height: 99%;
       top: -1%;
       left: 50%;
-      transform: translateX(-50%);
+      width: 99%;
+      height: 99%;
       border: 0.1875rem solid #383838;
       border-radius: 1.6rem;
       box-shadow: 0rem 1rem 0.5rem -0.3rem rgba(48, 48, 48, 0.68);
+      transform: translateX(-50%);
+      content: "";
 
       @include mobile {
-        border-radius: 10px;
-        border-width: 2px;
         height: 98%;
+        border-width: 2px;
+        border-radius: 10px;
       }
     }
 
-    &>img {
+    & > img {
       width: 100%;
       border-radius: 1.5rem;
 
