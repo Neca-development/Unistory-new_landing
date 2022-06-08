@@ -1,10 +1,15 @@
 @import "../variables";
 
 .footer {
-  padding: 3.75rem 0;
-  font-size: 1.5rem;
+  padding: 1.875rem 0;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   background: #efefef;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 28px;
+  }
 
   .container {
     display: grid;
@@ -14,7 +19,10 @@
     max-width: min(1550px, 85vw);
 
     @include mobile {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      grid-gap: unset;
+      align-items: flex-start;
       max-width: 100%;
     }
   }
@@ -29,8 +37,9 @@
     justify-content: flex-end;
 
     @include mobile {
-      justify-content: center;
-      margin: 25px 0;
+      justify-content: flex-start;
+      order: 1;
+      margin-top: 36px;
     }
   }
 
@@ -57,7 +66,7 @@
         transition: all ease-in 0.15s;
 
         @include mobile {
-          height: 35px;
+          height: 25px;
         }
       }
 
@@ -96,8 +105,10 @@
 
   &__additional-info {
     display: flex;
+    margin-top: auto;
 
     @include mobile {
+      flex-direction: column-reverse;
       margin-top: 30px;
     }
 
@@ -106,11 +117,50 @@
     }
 
     a {
+      margin-bottom: 0.5rem;
       color: inherit;
+      text-decoration: none;
 
       &:hover {
         color: var(--accent-color);
       }
+    }
+  }
+
+  &__contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+
+    @include mobile {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: none;
+      margin-top: 36px;
+      row-gap: 24px;
+    }
+  }
+
+  &__contact-column {
+    display: flex;
+    flex-direction: column;
+
+    & p:first-child {
+      margin-bottom: 0.75rem;
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__contact-item {
+    margin-bottom: 0.5rem;
+    color: #414141;
+    font-weight: 500;
+    text-decoration: none;
+
+    @include mobile {
+      margin-bottom: 8px;
     }
   }
 }

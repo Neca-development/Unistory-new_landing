@@ -11,18 +11,27 @@ footer.footer
       li.footer__soc-item
         a(href="https://www.upwork.com/ag/neca/")
           img(src="../icons/links/Upwork.svg") 
-    nav.footer__nav 
-      ul 
-        li 
-          a(href="/#services", scroll-to="services") Services
-        li 
-          a(href="/#competence", scroll-to="competence") Competence
-        li 
-          a(href="portfolio.pug") Portfolio
-        li 
-          a(href="/#about", scroll-to="about") About
-        li 
-          a(href="/#contactUs", scroll-to="contactUs") Contact us
+    .footer__contact-wrapper
+      .footer__contact-column 
+        p Contacts
+        a.footer__contact-item(href="mailto:Contact@unistory.app") Contact@unistory.app
+        a.footer__contact-item(href="tel:+79811011104") +7 981 101 1104
+      .footer__contact-column 
+        p Address
+        p.footer__contact-item Kazakhstan, Nur-Sultan
+        p.footer__contact-item Ave. Mangilik El. 39
+    //- nav.footer__nav 
+    //-   ul 
+    //-     li 
+    //-       a(href="/#services", scroll-to="services") Services
+    //-     li 
+    //-       a(href="/#competence", scroll-to="competence") Competence
+    //-     li 
+    //-       a(href="portfolio.pug") Portfolio
+    //-     li 
+    //-       a(href="/#about", scroll-to="about") About
+    //-     li 
+    //-       a(href="/#contactUs", scroll-to="contactUs") Contact us
     .footer__additional-info
       span © 2021 Unistory all rights reserved
       a#privacyPolicyFooter(href="javascript:;") Privacy Policy
