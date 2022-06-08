@@ -1,6 +1,13 @@
+@import '../variables.scss';
+
 .projectPromo {
   padding-top: 5.25rem !important;
   padding-bottom: 7.5rem !important;
+
+  @include mobile {
+    padding-top: 48px !important;
+    padding-bottom: 84px !important;
+  }
 
   &>h1 {
     font-weight: 700;
@@ -8,14 +15,28 @@
     font-style: normal;
     line-height: 5.25rem;
 
+    @include mobile {
+      font-size: 60px;
+      line-height: 84px;
+    }
+
     & span:nth-child(1) {
       color: var(--accent-color);
+
+      @include mobile {
+        display: inline-block;
+      }
     }
 
     & span:nth-child(2) {
       display: block;
       font-size: 2.25rem;
       line-height: 3rem;
+
+      @include mobile {
+        font-size: 36px;
+        line-height: 48px;
+      }
     }
   }
 
@@ -23,6 +44,12 @@
     width: 100%;
     margin-top: 4.5rem;
     filter: drop-shadow(-0.75rem -0.75rem 1.5rem rgba(229, 229, 229, 0.25)) drop-shadow(0.75rem 0.75rem 1.5rem rgba(229, 229, 229, 0.25));
+
+    @include mobile {
+      margin-top: 72px;
+      margin-left: -20px;
+      width: calc(100% + 40px);
+    }
 
     & img {
       width: 100%;
@@ -33,6 +60,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3.75rem;
+
+    @include mobile {
+      margin-top: 30px;
+    }
   }
 
   &__info {
@@ -43,6 +74,12 @@
       font-size: 1.5rem;
       font-style: normal;
       line-height: 2.25rem;
+
+      @include mobile {
+        margin-top: 48px;
+        font-size: 24px;
+        line-height: 36px;
+      }
 
       & span {
         color: var(--accent-color);
@@ -55,6 +92,13 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2.25rem;
+
+    @include mobile {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 32px;
+    }
   }
 
   &__infoItem {
@@ -64,12 +108,22 @@
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.75rem;
+
+      @include mobile {
+        margin-top: 8px;
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
 
   &__infoLogo {
     min-width: 28.125rem;
     margin-left: 6.875rem;
+
+    @include mobile {
+      display: none;
+    }
 
     & img {
       width: 100%;
@@ -79,23 +133,34 @@
 
 .projectHow {
 
+  &__scrollableContainer {
+    height: calc(28rem * 4);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__stickyWrapper {
+    position: sticky;
+    top: 5%;
+  }
+
   &__wrapper {
-    position: relative;
+    margin-top: 7.25rem;
     display: flex;
     align-items: center;
-    margin-top: 7.25rem;
   }
 
   &__image {
     position: relative;
     width: 33.3125rem;
+    transition: all 0.5s ease;
 
     & img {
       width: 100%;
     }
   }
-
-  &__itemsWrapper {}
 
   &__arc {
     position: absolute;
@@ -115,6 +180,8 @@
     align-items: center;
     margin-top: 4.875rem;
     margin-bottom: 4.875rem;
+    opacity: 0;
+    transition: opacity 1s ease;
 
     &>h3 {
       min-width: 6rem;
@@ -135,6 +202,10 @@
     &_second {
       padding-left: 2.6875rem;
     }
+
+    &_active {
+      opacity: 1;
+    }
   }
 
   &__itemDot {
@@ -143,43 +214,134 @@
     background: #fafafa;
     border: 0.1875rem solid #383838;
     border-radius: 50%;
+    z-index: 2;
+    transition: all 0.25s ease;
+
+    &_active {
+      background: var(--accent-color);
+      transform: scale(1.4);
+      border: none;
+    }
+  }
+
+  &__mobileContainer {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+
+    &>img {
+      width: 273px;
+      margin-top: 60px;
+    }
+  }
+
+  &__mobileSlider {
+    margin-top: 48px;
+    overflow: hidden;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  &__mobileSlide {
+    padding-left: 20px;
+
+    &>p {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 }
 
 .projectWorkflow {
   margin-top: 7.5rem !important;
 
+  @include mobile {
+    margin-top: 84px !important;
+    overflow: hidden;
+  }
+
   &__wrapper {
     display: flex;
     margin-top: 3.75rem;
-    padding-left: 1rem;
+    position: relative;
+
+    @include mobile {
+      flex-direction: column;
+      margin-top: 25px;
+    }
   }
 
   &__stage {
     position: relative;
     margin-right: 12.75rem;
 
+    @include mobile {
+      margin-right: 0;
+
+      &:first-child {
+        margin-top: 16px;
+      }
+    }
+
     &>h3 {
       position: relative;
       display: inline-block;
-      margin-bottom: 3.75rem;
-      padding-right: 1.5rem;
+      margin-bottom: 3.3rem;
+      padding-left: 1rem;
       font-weight: 700;
       font-size: 1.5rem;
       line-height: 2rem;
-      background-color: var(--background-color);
+
+      @include mobile {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 12px;
+        margin-top: 48px;
+        margin-left: 24px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -0.25rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        background: url("../../img/project/workflow-item-dot.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateY(-50%);
+        content: "";
+      }
     }
 
     &>p {
       position: relative;
-      margin-left: 1.25rem;
-      padding-left: 1rem;
+      margin-left: 2.25rem;
+      padding-left: 0.75rem;
       font-weight: 500;
       font-size: 1.5rem;
       line-height: 2rem;
 
+      @include mobile {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 24px;
+        margin-left: 48px;
+        padding-left: 12px;
+        font-weight: 700;
+        opacity: 0.8;
+      }
+
       &:not(:last-child) {
         margin-bottom: 2.8rem;
+
+        @include mobile {
+          margin-bottom: 0;
+        }
       }
 
       &::before {
@@ -193,31 +355,92 @@
         background-size: contain;
         transform: translateY(-50%);
         content: "";
+        opacity: 0.7;
       }
     }
   }
 
   &__stageArrow {
     position: absolute;
-    top: 50%;
-    right: 100%;
-    z-index: -1;
-    margin-right: 0.6rem;
-    transform: translateY(-50%);
+    top: 8%;
+    left: -120%;
+    width: 15rem;
+    height: 0.0625rem;
+    background-color: #5f5f5f;
+    animation: WorkflowLinePath 1s ease forwards;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__stagesPath {
     position: absolute;
     top: 13%;
-    left: -5%;
+    left: 0;
     width: 1.5rem;
+
+    @include mobile {
+      width: 18px;
+      top: 37%;
+      left: 24px;
+
+      animation-delay: 2s;
+    }
   }
 
   &__reverseArrows {
     position: absolute;
-    bottom: 3.3rem;
+    bottom: 0.5rem;
     left: 50%;
     width: 10.75rem;
+
+    @include mobile {
+      bottom: 8px;
+      width: 130px;
+      left: 140px;
+    }
+  }
+
+  &__hiddenPathBlock {
+    width: 1.65rem;
+    height: 11rem;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    background-color: var(--background-color);
+    animation: WorkflowRevealPaths linear forwards;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__mobilePath {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__mobileHiddenPath {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 500px;
+    background-color: var(--background-color);
+    animation: WorkflowMobileRevealPath linear forwards;
+
+    @include mobile {
+      display: block;
+    }
   }
 }
 
@@ -226,10 +449,19 @@
   padding-bottom: 3.125rem !important;
   position: relative;
 
+  @include mobile {
+    margin-top: 84px !important;
+    padding-bottom: 0 !important;
+  }
+
   &__slider {
     width: 40.625rem;
     position: relative;
     margin: 0 auto;
+
+    @include mobile {
+      width: auto;
+    }
   }
 
   &__swiperContainer {
@@ -238,6 +470,11 @@
     margin: 0 auto;
     margin-top: 3.875rem;
     position: relative;
+
+    @include mobile {
+      width: 360px;
+      margin-top: 48px;
+    }
 
     &::after {
       content: "";
@@ -251,6 +488,13 @@
       border-radius: 1.5625rem;
       z-index: 5;
       box-shadow: 0rem 1rem 0.5rem -0.3rem rgba(48, 48, 48, 0.68);
+
+      @include mobile {
+        height: 200px;
+        width: 98%;
+        border-radius: 15px;
+        border-width: 2px;
+      }
     }
   }
 
@@ -258,6 +502,10 @@
     &>img {
       width: 100%;
       border-radius: 1.35rem;
+
+      @include mobile {
+        border-radius: 15px;
+      }
     }
   }
 
@@ -267,11 +515,22 @@
     left: 0;
     width: 100%;
     height: 3.125rem;
+
+    @include mobile {
+      position: relative;
+      top: 0;
+      height: 35px;
+      margin-top: 15px;
+    }
   }
 
   &__btnNext,
   &__btnPrev {
     width: 1.5rem !important;
+
+    @include mobile {
+      width: auto !important;
+    }
 
     &::after {
       content: url('../../icons/arrow-right.svg') !important;
@@ -289,11 +548,21 @@
     margin: 0 auto;
     margin-top: 2.0625rem;
 
+    @include mobile {
+      margin-top: 37px;
+      width: 100%;
+    }
+
     &>p {
       margin-top: 0.5rem;
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.75rem;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
 }
@@ -302,12 +571,25 @@
   margin-top: 7.5rem !important;
   display: flex;
 
+  @include mobile {
+    margin-top: 84px !important;
+    flex-direction: column;
+  }
+
   &__wrapper {
     margin-left: 12.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     row-gap: 4.8125rem;
+
+    @include mobile {
+      margin-top: 48px;
+      margin-left: 0;
+      grid-template-columns: 1fr;
+      row-gap: 32px;
+      column-gap: 0;
+    }
   }
 
   &__item {
@@ -316,6 +598,10 @@
 
     &>img {
       width: 2.5rem;
+
+      @include mobile {
+        width: 40px;
+      }
     }
 
     &>p {
@@ -324,6 +610,14 @@
       font-weight: 500;
       font-size: 1.5rem;
       line-height: 2rem;
+
+      @include mobile {
+        max-width: unset;
+        margin-left: 24px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
   }
 }
@@ -334,9 +628,17 @@
   justify-content: space-between;
   align-items: flex-end;
 
+  @include mobile {
+    margin-top: 130px !important;
+  }
+
   &__client {
     position: relative;
     padding-left: 5rem;
+
+    @include mobile {
+      padding-left: 0;
+    }
 
     &::before {
       content: '';
@@ -348,6 +650,12 @@
       background: url('../../img/project/quote.png');
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include mobile {
+        width: 46px;
+        height: 46px;
+        top: 1%;
+      }
     }
 
     &>p {
@@ -357,6 +665,14 @@
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.75rem;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 28px;
+        padding-left: 0;
+        margin-top: 36px;
+        max-width: unset;
+      }
     }
   }
 
@@ -364,6 +680,12 @@
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 2.25rem;
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 48px;
+      padding-left: 50px;
+    }
   }
 
   &__clientProfile {
@@ -372,17 +694,31 @@
     display: flex;
     align-items: center;
 
+    @include mobile {
+      margin-top: 36px;
+      padding-left: 0;
+    }
+
     &>img {
       width: 5.25rem;
       border-radius: 50%;
+
+      @include mobile {
+        width: 84px;
+      }
     }
 
     &>p {
-
       margin-left: 1.5rem;
       font-weight: 700;
       font-size: 1.5rem;
       line-height: 2rem;
+
+      @include mobile {
+        margin-left: 24px;
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
 
     & span {
@@ -391,11 +727,21 @@
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.75rem;
+
+      @include mobile {
+        margin-top: 8px;
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
 
   &__logo {
     width: 26.25rem;
+
+    @include mobile {
+      display: none;
+    }
 
     & img {
       width: 100%;
@@ -406,6 +752,10 @@
 .projectContact {
   margin-top: 7.5rem !important;
 
+  @include mobile {
+    margin-top: 84px !important;
+  }
+
   &__subtitle {
     display: block;
     color: var(--accent-color);
@@ -414,14 +764,28 @@
   &__wrapper {
     margin-top: 4rem;
     display: flex;
+
+    @include mobile {
+      margin-top: 48px;
+      flex-direction: column;
+    }
   }
 
   &__form {
     margin-right: 15.375rem;
     width: 33.3125rem;
 
+    @include mobile {
+      margin-right: 0;
+      width: 100%;
+    }
+
     & .contact-us__field {
       margin-top: 2.875rem;
+
+      @include mobile {
+        margin-top: 38px;
+      }
     }
 
     & input,
@@ -467,6 +831,10 @@
   &__info {
     width: 26.25rem;
     color: #414141;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__infoText {
@@ -474,6 +842,22 @@
     font-size: 1.125rem;
     line-height: 1.75rem;
     margin-bottom: 2.25rem;
+
+    &_mobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 0;
+
+        & a {
+          text-decoration: none;
+          color: var(--accent-color);
+        }
+      }
+    }
   }
 
   &__infoLink {
@@ -515,8 +899,17 @@
   padding-bottom: 5.25rem;
   overflow: hidden;
 
+  @include mobile {
+    margin-top: 84px;
+    padding-bottom: 72px;
+  }
+
   &__slider {
     margin-top: 3.5rem !important;
+
+    @include mobile {
+      margin-top: 50px !important;
+    }
   }
 
   &__item {
@@ -529,6 +922,12 @@
       line-height: 1.75rem;
       color: #0F225A;
       margin-bottom: 0.25rem;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 20px;
+      }
     }
 
     &>a {
@@ -539,6 +938,12 @@
       line-height: 1.75rem;
       text-decoration: none;
       color: #1275D3;
+
+      @include mobile {
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
 
@@ -556,11 +961,51 @@
       border: 0.1875rem solid #383838;
       border-radius: 1.6rem;
       box-shadow: 0rem 1rem 0.5rem -0.3rem rgba(48, 48, 48, 0.68);
+
+      @include mobile {
+        border-radius: 10px;
+        border-width: 2px;
+        height: 98%;
+      }
     }
 
     &>img {
       width: 100%;
       border-radius: 1.5rem;
+
+      @include mobile {
+        border-radius: 4px;
+      }
     }
+  }
+}
+
+@keyframes WorkflowRevealPaths {
+  from {
+    top: 12%;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes WorkflowLinePath {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 120%;
+  }
+}
+
+@keyframes WorkflowMobileRevealPath {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 500px;
   }
 }

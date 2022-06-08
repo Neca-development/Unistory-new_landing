@@ -4,6 +4,8 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon", href="../favicon.ico")
+    link(rel="apple-touch-icon", href="../apple-touch-icon.png")
     title Unistory | Home page
     link(rel="stylesheet", href="../styles/main.scss")
   body
@@ -261,8 +263,8 @@ html(lang="en")
                 span#filelist Attach files
                 input#file(type="file", name="file", multiple) 
             button.btn.btn_white.btn_size_l(type="submit") Discuss the project
-            p.contact-us__description By submitting your form, you agree to
-              a#privacyPolicyForm(href="javascript:;") &nbsp;the Privacy Policy
+            p.contact-us__description By submitting your form, you agree to&nbsp;
+              a#privacyPolicyForm(href="javascript:;") the Privacy Policy
               | &nbsp;rules.
 
     include ./blocks/footer.pug

@@ -4,8 +4,14 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon", href="../favicon.ico")
+    link(rel="apple-touch-icon", href="../apple-touch-icon.png")
     title Unistory | Sipsignal
     link(rel="stylesheet", href="../styles/main.scss")
+    link(
+      rel="stylesheet",
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    )
   body 
     include ./blocks/header.pug
     section.container.projectPromo
@@ -40,69 +46,88 @@ html(lang="en")
           img(src="../img/sipsignal/project-logo.png", alt="logo")
 
     section.container.projectHow
-      h2.subtitle How it was
-      .projectHow__wrapper
-        .projectHow__image 
-          img(src="../img/project/how-img.svg", alt="how")
-          .projectHow__arc
-            img(src="../img/project/how-arc.svg", alt="")
-        .projectHow__itemsWrapper
-          .projectHow__item
-            .projectHow__itemDot
-            h3 Problem
-            p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
-          .projectHow__item.projectHow__item_second
-            .projectHow__itemDot
-            h3 Solution
-            p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
-          .projectHow__item
-            .projectHow__itemDot
-            h3 Result
-            p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
+      .projectHow__scrollableContainer
+        #stickyContent.projectHow__stickyWrapper
+          h2.subtitle How it was
+          .projectHow__wrapper
+            .projectHow__image 
+              img#step-logo(src="../img/project/how-img.svg", alt="how")
+              .projectHow__arc
+                img(src="../img/project/how-arc.svg", alt="")
+            .projectHow__itemsWrapper
+              #howStageItem1.projectHow__item
+                #howStageFirstDot.projectHow__itemDot
+                h3 Problem
+                p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
+              #howStageItem2.projectHow__item.projectHow__item_second
+                #howStageSecondDot.projectHow__itemDot
+                h3 Solution
+                p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
+              #howStageItem3.projectHow__item
+                #howStageThirdDot.projectHow__itemDot
+                h3 Result
+                p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
+      .projectHow__mobileContainer
+        h2.subtitle How it was
+        img(src="../img/project/how-img.svg", alt="how")
+        .swiper.projectHow__mobileSlider
+          .swiper-wrapper
+            .swiper-slide.projectHow__mobileSlide
+              h3.subtitle.subtitle_min Problem
+              p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
+            .swiper-slide.projectHow__mobileSlide
+              h3.subtitle.subtitle_min Solution
+              p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
+            .swiper-slide.projectHow__mobileSlide
+              h3.subtitle.subtitle_min Result
+              p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
 
     section.container.projectWorkflow
       h2.subtitle.subtitle_sub Workflow
       .projectWorkflow__wrapper
-        .projectWorkflow__stage
-          h3 Analyst stage
-            img.projectWorkflow__stageArrow(
-              src="../img/project/workflow-stage.svg",
-              alt=""
-            )
-          img.projectWorkflow__stagesPath(
+        .projectWorkflow__stage.projectWorkflow__stage
+          h3.wow.fadeIn(data-wow-delay="1s") Analyst stage
+          .wow.projectWorkflow__stageArrow
+          img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          p Product research
-          p Technical documentation
-        .projectWorkflow__stage
-          h3 Development stage
-            img.projectWorkflow__stageArrow(
-              src="../img/project/workflow-stage.svg",
-              alt=""
-            )
-          img.projectWorkflow__stagesPath(
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="2.4s")
+          p.wow.fadeInRight(data-wow-delay="2.4s") Product research
+          p.wow.fadeInRight(data-wow-delay="2.8s") Technical documentation
+
+        .projectWorkflow__stage.projectWorkflow__stage
+          h3.wow.fadeIn(data-wow-delay="1.5s") Development stage
+          .wow.projectWorkflow__stageArrow(data-wow-delay="1s")
+          img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          p Frontend & Backend
-          p Testing
-          img.projectWorkflow__reverseArrows(
-            src="../img/project/workflow-reverse-arrows.svg",
-            alt=""
-          )
-        .projectWorkflow__stage
-          h3 Release stage
-            img.projectWorkflow__stageArrow(
-              src="../img/project/workflow-stage.svg",
-              alt=""
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="3.4s")
+          p.wow.fadeInRight(data-wow-delay="3.6s") Frontend & Backend
+          p.wow.fadeInRight(data-wow-delay="3.8s") Testing
+            img.wow.fadeInUp.projectWorkflow__reverseArrows(
+              src="../img/project/workflow-reverse-arrows.svg",
+              alt="",
+              data-wow-delay="4s"
             )
-          img.projectWorkflow__stagesPath(
+
+        .projectWorkflow__stage.projectWorkflow__stage
+          h3.wow.fadeIn(data-wow-delay="2.4s") Release stage
+          .wow.projectWorkflow__stageArrow(data-wow-delay="2s")
+          img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          p Release
-          p Support
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="4.4s")
+          p.wow.fadeInRight(data-wow-delay="4.6s") Release
+          p.wow.fadeInRight(data-wow-delay="4.8s") Support
+
+        img.projectWorkflow__mobilePath(
+          src="../img/project/workflow-mobile-path.svg",
+          alt=""
+        )
+        .wow.projectWorkflow__mobileHiddenPath(data-wow-duration="2.5s")
 
     section.container.projectOverview
       h2.subtitle.subtitle_sub Application overview
@@ -123,7 +148,7 @@ html(lang="en")
         .swiper-button-prev.projectOverview__btnPrev
         .swiper-button-next.projectOverview__btnNext
 
-    section.container.projectResults 
+    section.container.projectResults
       h2.subtitle.subtitle_sub Results
       .projectResults__wrapper 
         .projectResults__item
@@ -153,7 +178,11 @@ html(lang="en")
     section.container.projectContact 
       h2.subtitle Have an idea?
         span.projectContact__subtitle Lets build it together
-      .projectContact__wrapper 
+      .projectContact__wrapper
+        p.projectContact__infoText.projectContact__infoText_mobile
+          | Do you have any ideas to develop? Fill this form or contact us via&nbsp;
+          a(href="mailto:Contact@unistory.app") Contact@unistory.app&nbsp;
+          | for discussion about your digital wishes.
         form#contactForm.projectContact__form(enctype="multipart/form-data")
           label.contact-us__field
             input(
@@ -238,3 +267,4 @@ html(lang="en")
     include ./blocks/footer.pug
     script(type="module", src="../scripts/project-page-sliders.js")
     script(type="module", src="../scripts/send-mail.js")
+    script(type="module", src="../scripts/project-page-how-animation.js")

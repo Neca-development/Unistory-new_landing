@@ -18,4 +18,20 @@ const otherProjectsSwiper = new Swiper(".projectOther__slider", {
   loop: false,
   slidesPerView: 3,
   spaceBetween: 40,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.4,
+      spaceBetween: 24,
+    },
+    647: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+const howStepsMobileSwiper = new Swiper(".projectHow__mobileSlider", {
+  loop: false,
+  slidesPerView: 1.2,
+  spaceBetween: 5,
+  freeMode: true,
 });
