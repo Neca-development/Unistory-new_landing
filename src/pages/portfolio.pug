@@ -18,7 +18,7 @@ html(lang="en")
     include blocks/header.pug
     .filter 
       .container
-        - var tags = ["All projects", "#Startups", "#NFT", "#Design", "#DeFi", "#Support", "#Web", "#Back-end", "#Trading Bots", "#Analytics", "#Mobile", "#FinTech", "#Front-end", "#Blockchain", "#Development", "#Release", "#Booking", "#eCommerce", "#B2B"];
+        - var tags = ["All projects", "#Startups", "#NFT", "#Design", "#DeFi", "#Web", "#Back-end", "#Front-end", "#eCommerce"];
           ul.filter__list 
             each tag, index in tags.length ? tags : ['There are no tags']
               if index === 0
@@ -81,23 +81,23 @@ html(lang="en")
             a.case-card__img(href="javascript:;")
               img.case-card__img-bg(
                 src="../img/puzzle-bg.jpg",
-                alt="Millionpieces"
+                alt="Puzzlepeople"
               )
               img.case-card__img-rt(
                 src="../img/puzzle-rt.jpg",
-                alt="Millionpieces"
+                alt="Puzzlepeople"
               )
               img.case-card__img-lt(
                 src="../img/puzzle-lt.png",
-                alt="Millionpieces"
+                alt="Puzzlepeople"
               )
               img.case-card__img-lb(
                 src="../img/puzzle-lb.jpg",
-                alt="Millionpieces"
+                alt="Puzzlepeople"
               )
               img.case-card__img-rb(
                 src="../img/puzzle-rb.png",
-                alt="Millionpieces"
+                alt="Puzzlepeople"
               )
               .case-card__info 
                 .case-card__price 
@@ -124,19 +124,19 @@ html(lang="en")
             a.case-card__img(href="./sipsignal.pug")
               img.case-card__img-bg(
                 src="../img/signal-bg.jpg",
-                alt="Millionpieces"
+                alt="Sipsignal"
               )
               img.case-card__img-lt_v3(
                 src="../img/signal-lt.jpg",
-                alt="Millionpieces"
+                alt="Sipsignal"
               )
               img.case-card__img-lb_v3(
                 src="../img/signal-lb.jpg",
-                alt="Millionpieces"
+                alt="Sipsignal"
               )
               img.case-card__img-rb_v3(
                 src="../img/signal-rb.png",
-                alt="Millionpieces"
+                alt="Sipsignal"
               ) 
               .case-card__info 
                 .case-card__price 
@@ -159,27 +159,12 @@ html(lang="en")
                 a(href="javascript:;", data-tag) #eCommerce
               li
                 a(href="javascript:;", data-tag) #Design
-            a.case-card__img(href="https://rauberg.ru/")
-              img.case-card__img-bg(
-                src="../img/rau-bg.jpg",
-                alt="Millionpieces"
-              )
-              img.case-card__img-rt(
-                src="../img/rau-rt.jpg",
-                alt="Millionpieces"
-              )
-              img.case-card__img-lt_v4(
-                src="../img/rau-lt.png",
-                alt="Millionpieces"
-              )
-              img.case-card__img-lb(
-                src="../img/rau-lb.jpg",
-                alt="Millionpieces"
-              )
-              img.case-card__img-rb_v4(
-                src="../img/rau-rb.png",
-                alt="Millionpieces"
-              )
+            a.case-card__img(href="javascript:;")
+              img.case-card__img-bg(src="../img/rau-bg.jpg", alt="Rauberg")
+              img.case-card__img-rt(src="../img/rau-rt.jpg", alt="Rauberg")
+              img.case-card__img-lt_v4(src="../img/rau-lt.png", alt="Rauberg")
+              img.case-card__img-lb(src="../img/rau-lb.jpg", alt="Rauberg")
+              img.case-card__img-rb_v4(src="../img/rau-rb.png", alt="Rauberg")
               .case-card__info 
                 .case-card__price 
                   .case-card__subtitle Development time:
@@ -202,7 +187,7 @@ html(lang="en")
                 a(href="javascript:;", data-tag) #eCommerce
               li
                 a(href="javascript:;", data-tag) #Front-end
-            a.case-card__img(href="#")
+            a.case-card__img(href="javascript:;")
               img.case-card__img-bg(
                 src="../img/atlas-bs.jpg",
                 alt="Atlas Stars"
@@ -242,26 +227,26 @@ html(lang="en")
                 a(href="javascript:;", data-tag) #Startups
               li
                 a(href="javascript:;", data-tag) #Front-end
-            a.case-card__img(href="#")
+            a.case-card__img(href="javascript:;")
               img.case-card__img-bg(
                 src="../img/lob-bg.jpg",
-                alt="Millionpieces"
+                alt="Loopy Lobsters"
               )
               img.case-card__img-rt(
                 src="../img/lob-rt.jpg",
-                alt="Millionpieces"
+                alt="Loopy Lobsters"
               )
               img.case-card__img-lt_v4(
                 src="../img/lob-lt.png",
-                alt="Millionpieces"
+                alt="Loopy Lobsters"
               )
               img.case-card__img-lb(
                 src="../img/lob-lb.jpg",
-                alt="Millionpieces"
+                alt="Loopy Lobsters"
               )
               img.case-card__img-rb_v4(
                 src="../img/lob-rb.png",
-                alt="Millionpieces"
+                alt="Loopy Lobsters"
               )
               .case-card__info 
                 .case-card__price 
@@ -287,24 +272,19 @@ html(lang="en")
                 a(href="javascript:;", data-tag) #Design
               li
                 a(href="javascript:;", data-tag) #Back-end
-            a.case-card__img(
-              href="https://www.figma.com/file/WjcMt2wMBlKJSOcOUjfnXf/SipSignal_2?node-id=43%3A452"
-            )
-              img.case-card__img-bg(
-                src="../img/print-bg.jpg",
-                alt="Millionpieces"
-              )
+            a.case-card__img(href="javascript:;")
+              img.case-card__img-bg(src="../img/print-bg.jpg", alt="3dprint")
               img.case-card__img-lt_v3(
                 src="../img/print-lt.jpg",
-                alt="Millionpieces"
+                alt="3dprint"
               )
               img.case-card__img-lb_v3(
                 src="../img/print-lb.jpg",
-                alt="Millionpieces"
+                alt="3dprint"
               )
               img.case-card__img-rb_v3(
                 src="../img/print-rb.png",
-                alt="Millionpieces"
+                alt="3dprint"
               ) 
               .case-card__info 
                 .case-card__price 
@@ -331,7 +311,7 @@ html(lang="en")
                 a(href="javascript:;", data-tag) #Design
               li
                 a(href="javascript:;", data-tag) #Back-end
-            a.case-card__img(href="#")
+            a.case-card__img(href="javascript:;")
               img.case-card__img-bg(
                 src="../img/crypto-bg.jpg",
                 alt="CryptoFaces"
