@@ -1,5 +1,9 @@
 @import "../variables.scss";
 
+body {
+  background-color: #fff;
+}
+
 .projectPromo {
   padding-top: 5.25rem !important;
   padding-bottom: 7.5rem !important;
@@ -48,8 +52,7 @@
   &__image {
     width: 100%;
     margin-top: 4.5rem;
-    filter: drop-shadow(-0.75rem -0.75rem 1.5rem rgba(229, 229, 229, 0.25))
-      drop-shadow(0.75rem 0.75rem 1.5rem rgba(229, 229, 229, 0.25));
+    box-shadow: 0 0.75rem 2rem rgba(50, 50, 50, 0.1);
 
     @include mobile {
       width: calc(100% + 40px);
@@ -158,10 +161,31 @@
   &__image {
     position: relative;
     width: 33.3125rem;
+    height: 33.375rem;
     transition: all 0.5s ease;
 
-    & img {
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    & #step-logo-1 {
+      opacity: 1;
+    }
+
+    & #step-logo-2 {
+      top: -6.2rem;
+      left: -4.4rem;
+      width: 38.95rem;
+    }
+
+    & #step-logo-3 {
+      top: -1.5rem;
+      width: 33.3rem;
     }
   }
 
@@ -419,7 +443,7 @@
     left: 0;
     width: 1.65rem;
     height: 11rem;
-    background-color: var(--background-color);
+    background-color: #fff;
     animation: WorkflowRevealPaths linear forwards;
 
     @include mobile {
@@ -446,7 +470,7 @@
     display: none;
     width: 24px;
     height: 500px;
-    background-color: var(--background-color);
+    background-color: #fff;
     animation: WorkflowMobileRevealPath linear forwards;
 
     @include mobile {

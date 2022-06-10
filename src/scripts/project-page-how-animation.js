@@ -17,7 +17,9 @@ const firstDot = document.getElementById("howStageFirstDot");
 const secondDot = document.getElementById("howStageSecondDot");
 const thirdDot = document.getElementById("howStageThirdDot");
 
-const imageEl = document.getElementById("step-logo");
+const imageEl = document.getElementById("step-logo-1");
+const imageEl2 = document.getElementById("step-logo-2");
+const imageEl3 = document.getElementById("step-logo-3");
 
 window.addEventListener("scroll", () => {
   const scrollableHeight = scrollableBlock.getBoundingClientRect().height;
@@ -47,21 +49,27 @@ window.addEventListener("scroll", () => {
   // Style management for the current stage
   if (currentScroll > firstStageStart && currentScroll < secondStageStart) {
     firstDot.classList.add("projectHow__itemDot_active");
-    imageEl.style.opacity = 0.2;
+    imageEl.style.opacity = 1;
+    imageEl2.style.opacity = 0;
+    imageEl3.style.opacity = 0;
   } else {
     firstDot.classList.remove("projectHow__itemDot_active");
   }
 
   if (currentScroll > secondStageStart && currentScroll < thirdStageStart) {
     secondDot.classList.add("projectHow__itemDot_active");
-    imageEl.style.opacity = 0.5;
+    imageEl.style.opacity = 0;
+    imageEl2.style.opacity = 1;
+    imageEl3.style.opacity = 0;
   } else {
     secondDot.classList.remove("projectHow__itemDot_active");
   }
 
   if (currentScroll > thirdStageStart && currentScroll < endPosition) {
     thirdDot.classList.add("projectHow__itemDot_active");
-    imageEl.style.opacity = 1;
+    imageEl.style.opacity = 0;
+    imageEl2.style.opacity = 0;
+    imageEl3.style.opacity = 1;
   } else {
     thirdDot.classList.remove("projectHow__itemDot_active");
   }

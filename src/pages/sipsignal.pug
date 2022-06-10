@@ -12,7 +12,7 @@ html(lang="en")
       rel="stylesheet",
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
     )
-  body 
+  body
     include ./blocks/header.pug
     section.container.projectPromo
       h1 How we&nbsp;
@@ -51,7 +51,9 @@ html(lang="en")
           h2.subtitle How it was
           .projectHow__wrapper
             .projectHow__image 
-              img#step-logo(src="../img/project/how-img.svg", alt="how")
+              img#step-logo-1(src="../img/project/how-img.svg", alt="how")
+              img#step-logo-2(src="../img/project/how-img-2.svg", alt="how2")
+              img#step-logo-3(src="../img/project/how-img-3.svg", alt="how3")
               .projectHow__arc
                 img(src="../img/project/how-arc.svg", alt="")
             .projectHow__itemsWrapper
@@ -92,42 +94,42 @@ html(lang="en")
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1.5s")
-          p.wow.fadeInRight(data-wow-delay="1.5s") Product research
-          p.wow.fadeInRight(data-wow-delay="1.7s") Technical documentation
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1s")
+          p.wow.fadeInRight(data-wow-delay="1.2s") Product research
+          p.wow.fadeInRight(data-wow-delay="1.4s") Technical documentation
 
         .projectWorkflow__stage.projectWorkflow__stage
-          h3.wow.fadeIn(data-wow-delay="1s") Development stage
+          h3.wow.fadeIn(data-wow-delay="0.7s") Development stage
           .wow.projectWorkflow__stageArrow(data-wow-delay="0.5s")
           img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="2s")
-          p.wow.fadeInRight(data-wow-delay="2s") Frontend & Backend
-          p.wow.fadeInRight(data-wow-delay="2.2s") Testing
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1.3s")
+          p.wow.fadeInRight(data-wow-delay="1.5s") Frontend & Backend
+          p.wow.fadeInRight(data-wow-delay="1.8s") Testing
             img.wow.fadeInUp.projectWorkflow__reverseArrows(
               src="../img/project/workflow-reverse-arrows.svg",
               alt="",
-              data-wow-delay="2.2s"
+              data-wow-delay="1.8s"
             )
 
         .projectWorkflow__stage.projectWorkflow__stage
-          h3.wow.fadeIn(data-wow-delay="1.5s") Release stage
+          h3.wow.fadeIn(data-wow-delay="1s") Release stage
           .wow.projectWorkflow__stageArrow(data-wow-delay="1s")
           img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
-          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="2.5s")
-          p.wow.fadeInRight(data-wow-delay="2.5s") Release
-          p.wow.fadeInRight(data-wow-delay="2.7s") Support
+          .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1.8s")
+          p.wow.fadeInRight(data-wow-delay="2s") Release
+          p.wow.fadeInRight(data-wow-delay="2.2s") Support
 
         img.projectWorkflow__mobilePath(
           src="../img/project/workflow-mobile-path.svg",
           alt=""
         )
-        .wow.projectWorkflow__mobileHiddenPath(data-wow-duration="1.5s")
+        .wow.projectWorkflow__mobileHiddenPath(data-wow-duration="1s")
 
     section.container.projectOverview
       h2.subtitle.subtitle_sub Application overview
@@ -156,7 +158,7 @@ html(lang="en")
           p The application is out on the market and working properly
         .projectResults__item
           img(src="../icons/checkmark.svg", alt="")
-          p The application is out on the market and working properly
+          p Business objectives were met
         .projectResults__item
           img(src="../icons/checkmark.svg", alt="")
           p Continuing to work with customer to support the site
@@ -228,11 +230,11 @@ html(lang="en")
           p.projectContact__infoLink Phone
             a(href="tel:+7 981 101 1104") +7 981 101 1104
           .projectContact__infoSocial 
-            a(href="#")
+            a(href="https://t.me/funnyorangecat")
               img(src="../icons/links/Telegram.svg", alt="") 
-            a(href="#")
+            a(href="https://wa.me/79627038089")
               img(src="../icons/links/WhatsApp.svg", alt="") 
-            a(href="#")
+            a(href="https://www.upwork.com/ag/neca/")
               img(src="../icons/links/Upwork.svg", alt="") 
 
     section.projectOther 
