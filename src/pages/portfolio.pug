@@ -18,7 +18,7 @@ html(lang="en")
     include blocks/header.pug
     .filter 
       .container
-        - var tags = ["All projects", "#Startups", "#NFT", "#Design", "#DeFi", "#Web", "#Back-end", "#Front-end", "#eCommerce"];
+        - var tags = ["All projects", "#Blockchain projects", "#Web 3.0", "#DEFI", "#P2E", "#NFT", "#Smart contracts", "#Design", "#Front-end", "#Back-end", "#eCommerce", "#CRM/ERP"];
           ul.filter__list 
             each tag, index in tags.length ? tags : ['There are no tags']
               if index === 0
@@ -69,7 +69,7 @@ html(lang="en")
           //        | A platform where users can see which companies around accept this or that cryptocurrency. Companies can be viewed both as a list and on a map. Also, the user can add his company through a special form on the site. We have developed the design of the project, as well as all the functionality.
           //  h3.case-card__title Accepted_Here
           article.cases-section__item.case-card.case-card_animation_flip(
-            data-category="#NFT,#Design,#Startups"
+            data-category="#NFT,#Design,#Web 3.0"
           )
             ul.case-card__tags
               li
@@ -77,7 +77,7 @@ html(lang="en")
               li
                 a(href="javascript:;", data-tag) #Design
               li
-                a(href="javascript:;", data-tag) #Startups
+                a(href="javascript:;", data-tag) #Web 3.0
             a.case-card__img(href="javascript:;")
               img.case-card__img-bg(
                 src="../img/puzzle-bg.jpg",
@@ -112,11 +112,11 @@ html(lang="en")
                   | Puzzle themed NFT project. The project has a lot of beautiful and smooth animations that improve the user experience while on the site. We used the Immutable X blockchain, popular among NFT projects, known for its extremely low gas price.
             h3.case-card__title Puzzle People
           article.cases-section__item.case-card.case-card_animation_flip(
-            data-category="#Web,#Back-end,#Front-end"
+            data-category="#CRM/ERP,#Back-end,#Front-end"
           )
             ul.case-card__tags 
               li
-                a(href="javascript:;", data-tag) #Web
+                a(href="javascript:;", data-tag) #CRM/ERP
               li
                 a(href="javascript:;", data-tag) #Back-end
               li
@@ -150,11 +150,11 @@ html(lang="en")
                   | A platform built for the US internet fax leader. The project uses a lot of modern technologies, such as SPA elements and complex server calculations. A customized administrative panel was created to control and add subscriptions/products.
             h3.case-card__title SipSignal
           article.cases-section__item.case-card.case-card_animation_flip(
-            data-category="#eCommerce,#Web,#Design"
+            data-category="#eCommerce,#Front-end,#Design"
           )
             ul.case-card__tags 
               li
-                a(href="javascript:;", data-tag) #Web
+                a(href="javascript:;", data-tag) #Front-end
               li
                 a(href="javascript:;", data-tag) #eCommerce
               li
@@ -178,13 +178,13 @@ html(lang="en")
                   | Website-showcase for Rauberg, a popular manufacturer of household appliances in Russia. The project used a lot of interesting animations, and also created and set up a purchase function directly on the site.
             h3.case-card__title Rauberg
           article.cases-section__item.case-card.case-card_animation_flip(
-            data-category="#Web,#Back-end,#Front-end"
+            data-category="#eCommerce,#Back-end,#Front-end"
           )
             ul.case-card__tags 
               li
-                a(href="javascript:;", data-tag) #Web
-              li
                 a(href="javascript:;", data-tag) #eCommerce
+              li
+                a(href="javascript:;", data-tag) #Back-end
               li
                 a(href="javascript:;", data-tag) #Front-end
             a.case-card__img(href="javascript:;")
@@ -218,13 +218,13 @@ html(lang="en")
                   | Service for creating customized maps of the starry sky. Here you can select the date, time and region of the starry sky to create a picture of the constellations that were above your head at that very moment. Even in our office there is a poster with a starry sky that was above us at the time of the creation of our company :)
             h3.case-card__title Atlas Stars
           article.cases-section__item.case-card.case-card_animation_flip(
-            data-category="#NFT,#Startups,#Front-end"
+            data-category="#NFT,#Smart contracts,#Front-end"
           )
             ul.case-card__tags 
               li
                 a(href="javascript:;", data-tag) #NFT
               li
-                a(href="javascript:;", data-tag) #Startups
+                a(href="javascript:;", data-tag) #Smart contracts
               li
                 a(href="javascript:;", data-tag) #Front-end
             a.case-card__img(href="javascript:;")
@@ -263,11 +263,11 @@ html(lang="en")
                   | Lobsters themed NFT project. A one-page project with the possibility of NFT minting right on the site. Most of the proceeds from NFT sales go to ocean exploration and charities. The project was built on the popular Ethereum blockchain, where we used various techniques to reduce the cost of gas.
             h3.case-card__title Loopy Lobsters
           article.cases-section__item.case-card.case-card_animation_flip(
-            data-category="#Design,#DeFi,#Back-end"
+            data-category="#Design,#DEFI,#Back-end"
           )
             ul.case-card__tags 
               li
-                a(href="javascript:;", data-tag) #DeFi
+                a(href="javascript:;", data-tag) #DEFI
               li
                 a(href="javascript:;", data-tag) #Design
               li
@@ -302,15 +302,15 @@ html(lang="en")
                   | Decentralized store for selling 3D models, pictures and assets. The project uses SPA elements, a customized admin panel and an e-commerce service. The user can add products to the cart and pay directly on the site.
             h3.case-card__title 3dprint.hk
           article.cases-section__item.case-card.case-card_animation_flip(
-            data-category="#Design,#DeFi,#Back-end"
+            data-category="#Design,#NFT,#Blockchain projects"
           )
             ul.case-card__tags 
               li
-                a(href="javascript:;", data-tag) #DeFi
+                a(href="javascript:;", data-tag) #NFT
               li
                 a(href="javascript:;", data-tag) #Design
               li
-                a(href="javascript:;", data-tag) #Back-end
+                a(href="javascript:;", data-tag) #Blockchain projects
             a.case-card__img(href="javascript:;")
               img.case-card__img-bg(
                 src="../img/crypto-bg.jpg",
