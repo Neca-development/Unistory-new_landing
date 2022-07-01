@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { label 'main' }
 
   environment {
     GIT_REPO_NAME = env.GIT_URL.replaceFirst(/^.*\/([^\/]+?).git$/, '$1').toLowerCase()
