@@ -187,41 +187,46 @@ html(lang="en")
           | for discussion about your digital wishes.
         form#contactForm.projectContact__form(enctype="multipart/form-data")
           label.contact-us__field
-            input(
+            input#nameInput(
               type="text",
               name="name",
               autocomplete="name",
-              placeholder="Name *"
+              placeholder="Name *",
+              required
             )
             span Name *
           label.contact-us__field
-            input(
+            input#emailInput(
               type="email",
               name="email",
               autocomplete="email",
-              placeholder="Email"
+              placeholder="Email",
+              required
             )
             span Email *
           label.contact-us__field
-            input(
+            input#phoneInput(
               type="tel",
               name="phone",
               autocomplete="tel",
-              placeholder="Phone number"
+              placeholder="Phone number",
+              required
             )
             span Phone number
           label.contact-us__field
-            input#message(
-              type="text",
+            textarea#message(
               name="message",
-              placeholder="Tell us about your project"
+              cols="30",
+              rows="1",
+              placeholder="Tell us about your project",
+              required
             )
             span Tell us about your project *
             small#messageLength 0/280
           label.projectContact__file
             img(src="../icons/attach-black.svg", alt="alt")
             span#filelist Attach files
-            input#file(type="file", name="file", multiple) 
+            input#file(type="file", name="file") 
           button.btn.btn_size_m.projectContact__submitBtn(type="submit") Discuss project
         .projectContact__info
           p.projectContact__infoText Do you have any ideas to develop? Fill this form or contact us for discussion about your digital wishes.

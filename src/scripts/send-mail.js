@@ -1,20 +1,39 @@
+import axios from "axios";
+
 const contactForm = document.querySelector("#contactForm");
 const fileInput = document.querySelector("#file");
 const fileList = document.querySelector("#filelist");
+const nameInput = document.querySelector("#nameInput");
+const emailInput = document.querySelector("#emailInput");
+const phoneInput = document.querySelector("#phoneInput");
 
 const messageField = document.querySelector("#message");
 const messageLength = document.querySelector("#messageLength");
 
+const maxMessageLength = 280;
+
 // Display typed message length
 messageField.addEventListener("input", (event) => {
   const length = event.target.value.length;
-  messageLength.textContent = length + "/280";
+  messageLength.textContent = length + "/" + maxMessageLength;
 });
 
 // Prevent user from typing more than 280 char
+// key code 8 - backspace, 46 - delete
 messageField.addEventListener("keydown", (event) => {
-  if (event.target.value.length >= 280) {
+  if (
+    event.target.value.length >= maxMessageLength &&
+    event.keyCode !== 8 &&
+    event.keyCode !== 46
+  ) {
     event.preventDefault();
+  }
+});
+
+// Adding '+' to phone number
+phoneInput.addEventListener("input", (event) => {
+  if (event.target.value.length === 1 && event.target.value[0] !== "+") {
+    phoneInput.value = "+" + event.target.value;
   }
 });
 
@@ -22,40 +41,35 @@ fileInput.addEventListener("change", () => {
   updateFileDisplay();
 });
 
-contactForm.addEventListener("submit", (e) => {
+contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  send(e, "../mailer/mailer.php");
+
+  const dataToSend = new FormData();
+  dataToSend.append("name", nameInput.value);
+  dataToSend.append("email", emailInput.value);
+  dataToSend.append("phoneNumber", phoneInput.value);
+  dataToSend.append("description", messageField.value);
+
+  if (fileInput.files.length > 0) {
+    if (fileInput.files[0].size < 2000000) {
+      dataToSend.append("attachment", fileInput.files[0]);
+    } else {
+      alert("Too large attachment, max 20mb");
+      return;
+    }
+  }
+
+  try {
+    await axios.post("https://unistory.app/api/contact", dataToSend);
+    alert("Your request has been successfully sent!");
+    contactForm.reset();
+    fileList.innerHTML = "Attach files";
+    messageLength.textContent = `0/${maxMessageLength}`;
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 function updateFileDisplay() {
-  fileList.innerHTML = "";
-  for (let i = 0; i < fileInput.files.length; i++) {
-    fileList.innerHTML += fileInput.files.item(i).name + "<br>";
-  }
-}
-
-function send(event, php) {
-  console.log("Отправка запроса");
-  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
-  var req = new XMLHttpRequest();
-  req.open("POST", php, true);
-  req.onload = function () {
-    if (req.status >= 200 && req.status < 400) {
-      json = JSON.parse(this.response);
-      console.log(json);
-
-      if (json.result == "success") {
-        alert("Сообщение отправлено");
-      } else {
-        alert("Ошибка. Сообщение не отправлено");
-      }
-    } else {
-      alert("Ошибка сервера. Номер: " + req.status);
-    }
-  };
-
-  req.onerror = function () {
-    alert("Ошибка отправки запроса");
-  };
-  req.send(new FormData(event.target));
+  fileList.innerHTML = fileInput.files.item(0).name;
 }
