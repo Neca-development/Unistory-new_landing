@@ -230,41 +230,46 @@ html(lang="en")
               .contact-us__form-frame.contact-us__form-frame_top-right
               .contact-us__form-frame.contact-us__form-frame_bottom-right
               label.contact-us__field
-                input(
+                input#nameInput(
                   type="text",
                   name="name",
                   autocomplete="name",
-                  placeholder="Name"
+                  placeholder="Name",
+                  required
                 )
                 span Name
               label.contact-us__field
-                input(
+                input#emailInput(
                   type="email",
                   name="email",
                   autocomplete="email",
-                  placeholder="Email"
+                  placeholder="Email",
+                  required
                 )
                 span Email
               label.contact-us__field
-                input.contact-us__field(
+                input#phoneInput(
                   type="tel",
                   name="phone",
                   autocomplete="tel",
-                  placeholder="Phone number"
+                  placeholder="Phone number",
+                  required
                 )
                 span Phone number
               label.contact-us__field
-                textarea.contact-us__field(
+                textarea#message(
                   name="message",
                   cols="30",
                   rows="1",
-                  placeholder="Tell us about your project"
+                  placeholder="Tell us about your project",
+                  required
                 )
                 span Tell us about your project
+                small#messageLength 0/280
               label.contact-us__file
                 img(src="../icons/attach.svg", alt="alt")
                 span#filelist Attach files
-                input#file(type="file", name="file", multiple) 
+                input#file(type="file", name="file") 
             button.btn.btn_white.btn_size_l(type="submit") Discuss the project
             p.contact-us__description By submitting your form, you agree to&nbsp;
               a#privacyPolicyForm(href="javascript:;") the Privacy Policy
