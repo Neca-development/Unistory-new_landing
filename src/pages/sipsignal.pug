@@ -212,13 +212,14 @@ html(lang="en")
               placeholder="Phone number",
               required
             )
-            span Phone number
+            span Phone number *
           label.contact-us__field
             textarea#message(
               name="message",
               cols="30",
               rows="1",
               placeholder="Tell us about your project",
+              maxlength="280",
               required
             )
             span Tell us about your project *
@@ -235,11 +236,11 @@ html(lang="en")
           p.projectContact__infoLink Phone
             a(href="tel:+7 981 101 1104") +7 981 101 1104
           .projectContact__infoSocial 
-            a(href="https://t.me/funnyorangecat")
+            a(href="https://t.me/funnyorangecat", target="_blank")
               img(src="../icons/links/Telegram.svg", alt="") 
-            a(href="https://wa.me/79627038089")
+            a(href="https://wa.me/79627038089", target="_blank")
               img(src="../icons/links/WhatsApp.svg", alt="") 
-            a(href="https://www.upwork.com/ag/unistory")
+            a(href="https://www.upwork.com/ag/unistory", target="_blank")
               img(src="../icons/links/Upwork.svg", alt="") 
 
     section.projectOther 

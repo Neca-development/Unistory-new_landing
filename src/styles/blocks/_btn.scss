@@ -31,6 +31,36 @@
   &_white {
     color: var(--font-color);
     background: var(--background-color);
+    border: 1px solid var(--background-color);
+  }
+
+  &_animated_white {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    color: var(--font-color);
+    background: var(--background-color);
+    border: 0.0625rem solid var(--background-color);
+    transition: all ease-in-out 0.15s;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 0;
+      background-color: var(--accent-color);
+      transition: height ease-in-out 0.15s;
+      content: "";
+    }
+
+    &:hover {
+      color: var(--background-color);
+
+      &::before {
+        height: 100%;
+      }
+    }
   }
 
   &_animated_blue {
