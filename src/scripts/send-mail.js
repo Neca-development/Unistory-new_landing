@@ -10,7 +10,7 @@ const phoneInput = document.querySelector("#phoneInput");
 const messageField = document.querySelector("#message");
 const messageLength = document.querySelector("#messageLength");
 
-const maxMessageLength = 280;
+const maxMessageLength = messageField.getAttribute("maxlength");
 
 // Display typed message length
 messageField.addEventListener("input", (event) => {
