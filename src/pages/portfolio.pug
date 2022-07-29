@@ -111,19 +111,6 @@ html(lang="en")
                   .case-card__subtitle Description:
                   | Puzzle themed NFT project. The project has a lot of beautiful and smooth animations that improve the user experience while on the site. We used the Immutable X blockchain, popular among NFT projects, known for its extremely low gas price.
             h3.case-card__title Puzzle People
-          //- article.cases-section__item.case-card.case-card_animation_flip(
-          //-   data-category="#CRM/ERP,#Back-end,#Front-end"
-          //- )
-          //-   ul.case-card__tags 
-          //-     li
-          //-       a(href="javascript:;", data-tag) #NFT
-          //-     li
-          //-       a(href="javascript:;", data-tag) #Back-end
-          //-     li
-          //-       a(href="javascript:;", data-tag) #Front-end
-          //-   a.case-card__img(href="./heist.pug")
-          //-     img.case-card__img-bg(src="../img/signal-bg.jpg", alt="Heist")
-          //-   h3.case-card__title Heist
           article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#CRM/ERP,#Back-end,#Front-end"
           )
@@ -358,6 +345,20 @@ html(lang="en")
                   |
                   | A one-page NFT project in which we used 3D images. In this project, we also designed and developed beautiful animations that add immersion and interaction to the site. The project was built on the Ethereum blockchain, for which we developed custom smart contracts to reduce the cost of gas.
             h3.case-card__title CryptoFaces
+          article.cases-section__item.case-card.case-card_animation_flip(
+            style="opacity: 0",
+            data-category="#CRM/ERP,#Back-end,#Front-end"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #NFT
+              li
+                a(href="javascript:;", data-tag) #Back-end
+              li
+                a(href="javascript:;", data-tag) #Front-end
+            a.case-card__img(href="./heist.pug")
+              img.case-card__img-bg(src="../img/signal-bg.jpg", alt="Heist")
+            h3.case-card__title Heist
 
     include blocks/footer.pug
     script(type="module", src="../scripts/categories.js") 
