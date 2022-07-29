@@ -1,0 +1,65 @@
+section.container.projectContact 
+  h2.subtitle Have an idea?
+    span.projectContact__subtitle Lets build it together
+  .projectContact__wrapper
+    p.projectContact__infoText.projectContact__infoText_mobile
+      | Do you have any ideas to develop? Fill this form or contact us via&nbsp;
+      a(href="mailto:Contact@unistory.app") Contact@unistory.app&nbsp;
+      | for discussion about your digital wishes.
+    form#contactForm.projectContact__form(enctype="multipart/form-data")
+      label.contact-us__field
+        input#nameInput(
+          type="text",
+          name="name",
+          autocomplete="name",
+          placeholder="Name *",
+          required
+        )
+        span Name *
+      label.contact-us__field
+        input#emailInput(
+          type="email",
+          name="email",
+          autocomplete="email",
+          placeholder="Email",
+          required
+        )
+        span Email *
+      label.contact-us__field
+        input#phoneInput(
+          type="tel",
+          name="phone",
+          autocomplete="tel",
+          placeholder="Phone number",
+          required
+        )
+        span Phone number *
+      label.contact-us__field
+        textarea#message(
+          name="message",
+          cols="30",
+          rows="1",
+          placeholder="Tell us about your project",
+          maxlength="280",
+          required
+        )
+        span Tell us about your project *
+        small#messageLength 0/280
+      label.projectContact__file
+        img(src="../icons/attach-black.svg", alt="alt")
+        span#filelist Attach files
+        input#file(type="file", name="file") 
+      button.btn.btn_size_m.projectContact__submitBtn(type="submit") Discuss project
+    .projectContact__info
+      p.projectContact__infoText Do you have any ideas to develop? Fill this form or contact us for discussion about your digital wishes.
+      p.projectContact__infoLink Email
+        a(href="mailto:contact@unistory.app") Contact@unistory.app
+      p.projectContact__infoLink Phone
+        a(href="tel:+7 981 101 1104") +7 981 101 1104
+      .projectContact__infoSocial 
+        a(href="https://t.me/funnyorangecat", target="_blank")
+          img(src="../icons/links/Telegram.svg", alt="") 
+        a(href="https://wa.me/79627038089", target="_blank")
+          img(src="../icons/links/WhatsApp.svg", alt="") 
+        a(href="https://www.upwork.com/ag/unistory", target="_blank")
+          img(src="../icons/links/Upwork.svg", alt="") 
