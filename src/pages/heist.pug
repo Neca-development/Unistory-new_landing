@@ -1,0 +1,94 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon", href="../favicon.ico")
+    link(rel="apple-touch-icon", href="../apple-touch-icon.png")
+    title Unistory | Heist
+    link(rel="stylesheet", href="../styles/main.scss")
+    link(
+      rel="stylesheet",
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    )
+  body
+    include ./blocks/header.pug
+    .heistBg
+      section.container.projectPromoPrimary
+        .projectPromoPrimary__info
+          .info__left
+            h2 Heist
+            h1 Play 2 Earn NFT game
+            .left__tags.heist
+              a NFT
+              a BUSD
+              a BNB
+              a Stacking
+          .info__right
+            .right__time
+              h4 Time
+              p 2 months
+            .right__scope
+              h4 Scope
+              ul 
+                li Product analysis
+                li Design
+                li Web development
+                li Smart contracts
+        .projectPromoPrimary__image
+          img(src="../img/heist/promo.png", alt="heist-promo")
+        .projectPromoPrimary__about
+          h3 Project goal
+          p 
+            | The young blockchain startup needed to create an interesting game
+            br
+            | on the Binance network in which users could earn project tokens.
+    section.container.projectDid
+      h3 What we did
+      .projectDid__item
+        .item__info
+          .info__left 
+            h4 01
+          .info__right
+            h4 Presale
+            p We have implemented pre-sale tokens for a limited number of users from the list sent by
+              | the client. The tokens bought on presale have better characteristics than regular tokens and
+              | generate more revenue. In this way, more funds were raised at the initial stage through the
+              | FOMO effect.
+        .item__image.did1
+          //- img(src="../img/heist/did1.png")
+      .projectDid__item
+        .item__info
+          .info__left 
+            h4 02
+          .info__right
+            h4 Upgrade
+            p There can be an unlimited number of nfts in the game. To make the economy of the game more predictable, we implemented the upgrade feature, which allows users to burn 3 nft of the same kind and rarity and get a rarer nft for it.
+        .item__image.did2
+          //- img(src="../img/heist/did2.png")
+      .projectDid__item
+        .item__info
+          .info__left 
+            h4 03
+          .info__right
+            h4 Stacking
+            p Users can stack (block) project tokens for a certain period of time to make a profit in the future. Stacking is implemented with nodes in the form of nft. There are several types of nodes and bring different income. Nodes can be improved, destroyed, as well as just to take income from them.
+        .item__image.did3
+          //- img(src="../img/heist/did3.png")
+    section.projectSolutions
+      .container
+        .projectSolutions__left
+          h3 Technical solutions
+          img(src="../img/heist/solutions.png")
+        .projectSolutions__right
+          h4 Challenge
+          p The customer wanted all actions, purchases, and winnings to be counted in dollars.
+          h4 Solution
+          p We solved this problem using Pancakeswap. During the smart contract sale, the nft accesses Pancakeswap and asks for liquidity for the BUSD-BNB pair and calculates how much the BNB is worth in dollars. Then, it goes back to Pancakeswap and asks for liquidity for the BNB-ProjectToken pair and calculates how much the project token is worth in BNB.
+  include ./blocks/contact-projects.pug
+  include ./blocks/other-projects.pug
+  include ./blocks/footer.pug
+  script(type="module", src="../scripts/project-page-sliders.js")
+  script(type="module", src="../scripts/send-mail.js")
+  script(type="module", src="../scripts/project-page-how-animation.js")
