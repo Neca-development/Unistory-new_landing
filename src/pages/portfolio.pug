@@ -69,6 +69,20 @@ html(lang="en")
           //        | A platform where users can see which companies around accept this or that cryptocurrency. Companies can be viewed both as a list and on a map. Also, the user can add his company through a special form on the site. We have developed the design of the project, as well as all the functionality.
           //  h3.case-card__title Accepted_Here
           article.cases-section__item.case-card.case-card_animation_flip(
+            style="display: none",
+            data-category="#CRM/ERP,#Back-end,#Front-end"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #NFT
+              li
+                a(href="javascript:;", data-tag) #Back-end
+              li
+                a(href="javascript:;", data-tag) #Front-end
+            a.case-card__img(href="./Personal.pug")
+              img.case-card__img-bg(src="../img/signal-bg.jpg", alt="Heist")
+            h3.case-card__title Personal
+          article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#NFT,#Design,#Web 3.0"
           )
             ul.case-card__tags

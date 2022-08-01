@@ -1,0 +1,114 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon", href="../favicon.ico")
+    link(rel="apple-touch-icon", href="../apple-touch-icon.png")
+    title Unistory | Personal
+    link(rel="stylesheet", href="../styles/main.scss")
+  body
+    include ./blocks/header.pug
+    .personal
+      section.container.projectPromoPrimary
+        .projectPromoPrimary__info
+          .info__left
+            h2 “Personal” - Multiplatform application
+            h1 Unified Human Resources APP
+            .left__tags.personal
+              a Ads scaner
+              a Aggregator
+              a B2B
+              a Mobile
+          .info__right
+            .right__time
+              h4 Time
+              p 6 months
+            .right__scope
+              h4 Scope
+              ul 
+                li Mobile App
+                li Backend
+                li Integration with HH
+                li Integration with avito
+        .projectPromoPrimary__image.personal
+        .projectPromoPrimary__about
+          h3 About
+          p 
+            | A search engine for businesses that helps bring to gather all resumes in one place, facilitates communication with candidates, and has synchronization with job search platforms.
+    section.container.projectDid
+      h3 What we did
+      .projectDid__item
+        .item__info
+          .info__left 
+            h4 01
+          .info__right
+            h4 Integration with HR services
+            p We integrate job posting services into one app. Our integrations allow app users to retrieve candidate resumes from a variety of sources.
+        .item__image.personalDid1
+      .projectDid__item
+        .item__info
+          .info__left 
+            h4 02
+          .info__right
+            h4 An opportunity to invite to meetings with custom templates
+            p With this option, the user can create a template and send it to all candidates. This option helps to save time and make it easier to process a large number of offers. It is important as time optimization is initial for any business.
+        .item__image.personalDid2
+      .projectDid__item
+        .item__info
+          .info__left 
+            h4 03
+          .info__right
+            h4 Built-in chat that shows all messages from other services
+            p In order to make the flow more convenient, we've created a built-in chat in which our users are able to communicate with candidates from all sources.
+        .item__image.personalDid3
+    section.projectSolutions
+      .container
+        .projectSolutions__left
+          h3 Technical solutions
+          img(src="../img/personal/solutions.png")
+        .projectSolutions__right
+          h4 Challenges and solutions
+          h4 01
+          p Make job postings in different services.
+            span We have unified the requirements for jobs from all services, allowing us to give our users the option of filling out only our form.
+          h4 02
+          p Gathering prompts for making up vacancies.
+            span We parsed over ten thousand different job postings and used statistical analysis to collect the most frequently listed requirements. This made it possible to make smart prompts for all kinds of vacancies.
+    section.container
+      .projectTeamStack
+        h3 Team & Stack
+        .projectTeamStack__content
+          .content__team 
+            img.icon(src="../icons/team.svg", alt="team icon")
+            ul
+              li
+                img(src="../img/emoji/glasses.png", alt="Project manager") 
+                span Project manager
+              li
+                img(src="../img/emoji/robot.png", alt="Mobile developer") 
+                span Mobile developer
+              li
+                img(
+                  src="../img/emoji/brain-destroy.png",
+                  alt="Frontend developer"
+                ) 
+                span Frontend developer
+              li
+                img(src="../img/emoji/ninja.png", alt="Backend developer") 
+                span Backend developer
+              li
+                img(src="../img/emoji/super.png", alt="DevOps engineer") 
+                span DevOps engineer
+          .content__stack
+            img.icon(src="../icons/stack.svg", alt="stack icon")
+            img.stack__item(src="../img/stack/react-native.png", alt="react")
+            img.stack__item(src="../img/stack/nest.png", alt="nest")
+            img.stack__item(src="../img/stack/postgress.png", alt="postgress")
+            img.stack__item(src="../img/stack/react.png", alt="react")
+  include ./blocks/contact-projects.pug
+  include ./blocks/other-projects.pug
+  include ./blocks/footer.pug
+  script(type="module", src="../scripts/project-page-sliders.js")
+  script(type="module", src="../scripts/send-mail.js")
