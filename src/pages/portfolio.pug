@@ -18,7 +18,7 @@ html(lang="en")
     include blocks/header.pug
     .filter 
       .container
-        - var tags = ["All projects", "#Blockchain projects", "#Web 3.0", "#DEFI", "#P2E", "#NFT", "#Smart contracts", "#Design", "#Front-end", "#Back-end", "#eCommerce", "#CRM/ERP"];
+        - var tags = ["All projects", "#Blockchain projects", "#Web 3.0", "#DEFI", "#P2E", "#NFT", "#Smart contracts", "#Design", "#Front-end", "#Back-end", "#eCommerce", "#CRM/ERP", "#BNB", "#BUSD", "#Stacking", "#Ads scaner", "#Aggregator", "#B2B", "#Mobile"];
           ul.filter__list 
             each tag, index in tags.length ? tags : ['There are no tags']
               if index === 0
@@ -68,19 +68,38 @@ html(lang="en")
           //        .case-card__subtitle Description:
           //        | A platform where users can see which companies around accept this or that cryptocurrency. Companies can be viewed both as a list and on a map. Also, the user can add his company through a special form on the site. We have developed the design of the project, as well as all the functionality.
           //  h3.case-card__title Accepted_Here
-          article.cases-section__item.case-card.case-card_animation_flip(
-            style="display: none",
-            data-category="#CRM/ERP,#Back-end,#Front-end"
+          article.cases-section__item.case-card.case-card_animation_scale(
+            data-category="#NFT,#BUSD,#BNB,#Stacking"
           )
             ul.case-card__tags 
               li
                 a(href="javascript:;", data-tag) #NFT
               li
-                a(href="javascript:;", data-tag) #Back-end
+                a(href="javascript:;", data-tag) #BUSD
               li
-                a(href="javascript:;", data-tag) #Front-end
+                a(href="javascript:;", data-tag) #BNB
+              li
+                a(href="javascript:;", data-tag) #Stacking
+            a.case-card__img(href="./heist.pug")
+              img.case-card__img-bg(src="../img/case-heist.png", alt="Heist")
+            h3.case-card__title Heist
+          article.cases-section__item.case-card.case-card_animation_scale(
+            data-category="#B2B,#Aggregator,#Ads scaner,#Mobile"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #B2B
+              li
+                a(href="javascript:;", data-tag) #Aggregator
+              li
+                a(href="javascript:;", data-tag) #Ads scaner
+              li 
+                a(href="javascript:;", data-tag) #Mobile
             a.case-card__img(href="./personal.pug")
-              img.case-card__img-bg(src="../img/signal-bg.jpg", alt="Heist")
+              img.case-card__img-bg(
+                src="../img/case-personal.png",
+                alt="Personal"
+              )
             h3.case-card__title Personal
           article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#NFT,#Design,#Web 3.0"
@@ -359,20 +378,6 @@ html(lang="en")
                   |
                   | A one-page NFT project in which we used 3D images. In this project, we also designed and developed beautiful animations that add immersion and interaction to the site. The project was built on the Ethereum blockchain, for which we developed custom smart contracts to reduce the cost of gas.
             h3.case-card__title CryptoFaces
-          article.cases-section__item.case-card.case-card_animation_flip(
-            style="display: none",
-            data-category="#CRM/ERP,#Back-end,#Front-end"
-          )
-            ul.case-card__tags 
-              li
-                a(href="javascript:;", data-tag) #NFT
-              li
-                a(href="javascript:;", data-tag) #Back-end
-              li
-                a(href="javascript:;", data-tag) #Front-end
-            a.case-card__img(href="./heist.pug")
-              img.case-card__img-bg(src="../img/signal-bg.jpg", alt="Heist")
-            h3.case-card__title Heist
 
     include blocks/footer.pug
     script(type="module", src="../scripts/categories.js") 
