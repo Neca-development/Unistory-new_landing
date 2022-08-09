@@ -91,27 +91,40 @@ html(lang="en")
     section.cases-section
       .container 
         h2#competence.title Success stories
-        .cases-section__grid
-          article.cases-section__item.case-card.case-card_animation_scale
-            ul.case-card__tags 
-              li
-                a(href="javascript:;", data-tag) #DEFI
-              li
-                a(href="javascript:;", data-tag) #eCommerce
-              li
-                a(href="javascript:;", data-tag) #Design
-            a.case-card__img(href="javascript:;")
-              img(src="../img/Case_1.png", alt="3Dprint.HK")
-            h3.case-card__title 3Dprint.HK
-          article.cases-section__item.case-card.case-card_animation_scale
+        .cases-section__grid 
+          article.cases-section__item.case-card.case-card_animation_scale(
+            data-category="#NFT,#BUSD,#BNB,#Stacking"
+          )
             ul.case-card__tags 
               li
                 a(href="javascript:;", data-tag) #NFT
               li
-                a(href="javascript:;", data-tag) #Design
-            a.case-card__img(href="javascript:;")
-              img(src="../img/Case_2.jpeg", alt="Millionpieces")
-            h3.case-card__title Puzzle People
+                a(href="javascript:;", data-tag) #BUSD
+              li
+                a(href="javascript:;", data-tag) #BNB
+              li
+                a(href="javascript:;", data-tag) #Stacking
+            a.case-card__img(href="./heist.pug")
+              img.case-card__img-bg(src="../img/case-heist.jpg", alt="Heist")
+            h3.case-card__title The Heist game
+          article.cases-section__item.case-card.case-card_animation_scale(
+            data-category="#B2B,#Aggregator,#Ads scaner,#Mobile"
+          )
+            ul.case-card__tags 
+              li
+                a(href="javascript:;", data-tag) #B2B
+              li
+                a(href="javascript:;", data-tag) #Aggregator
+              li
+                a(href="javascript:;", data-tag) #Ads scaner
+              li 
+                a(href="javascript:;", data-tag) #Mobile
+            a.case-card__img(href="./personal.pug")
+              img.case-card__img-bg(
+                src="../img/case-personal.jpg",
+                alt="Personal"
+              )
+            h3.case-card__title Personal
           article.cases-section__item.case-card.case-card_animation_scale
             ul.case-card__tags 
               li
@@ -163,7 +176,7 @@ html(lang="en")
             .slide-block
               .slide-block__wrapper
                 .slide-block__image
-                  img(src="../img/daniel.jpg", alt="client")
+                  img(src="../img/reviews/Daniel Chang.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client4.png", alt="company")
                   p
@@ -175,7 +188,7 @@ html(lang="en")
             .slide-block
               .slide-block__wrapper
                 .slide-block__image
-                  img(src="../img/SimpsonWilliam.jpg", alt="client")
+                  img(src="../img/reviews/Alexander Tompson.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client-logo.png", alt="company")
                   p
@@ -185,7 +198,7 @@ html(lang="en")
             .slide-block
               .slide-block__wrapper
                 .slide-block__image
-                  img(src="../img/IM2.jpg", alt="client")
+                  img(src="../img/reviews/Bogdan Parhomenko.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client-logo.png", alt="company")
                   p
@@ -195,7 +208,7 @@ html(lang="en")
             .slide-block.slide-block_active
               .slide-block__wrapper
                 .slide-block__image
-                  img(src="../img/bgdn.jpg", alt="client")
+                  img(src="../img/reviews/Jamie Burton.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client-logo.png", alt="company")
                   p
