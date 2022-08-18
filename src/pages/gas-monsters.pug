@@ -17,9 +17,9 @@ html(lang="en")
             h2 GasMonsters
             h1 NFT & Gamification
             .left__tags.primary
-              a NFT
-              a WEB 3.0
-              a Chainlink
+              a(href="javascript:;", data-tag) #NFT
+              a(href="javascript:;", data-tag) #WEB 3.0
+              a(href="javascript:;", data-tag) #Chainlink
           .info__right
             .right__time
               h4 Time
@@ -110,5 +110,6 @@ html(lang="en")
   include ./blocks/contact-projects.pug
   include ./blocks/other-projects.pug
   include ./blocks/footer.pug
+  script(type="module", src="../scripts/categories.js") 
   script(type="module", src="../scripts/project-page-sliders.js")
   script(type="module", src="../scripts/send-mail.js")

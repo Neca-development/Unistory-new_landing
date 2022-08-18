@@ -17,10 +17,10 @@ html(lang="en")
             h2 “Personal” - Multiplatform application
             h1 Unified Human Resources APP
             .left__tags.primary
-              a Ads-scanner
-              a Aggregator
-              a B2B
-              a Mobile
+              a(href="javascript:;", data-tag) #Ads-scanner
+              a(href="javascript:;", data-tag) #Aggregator
+              a(href="javascript:;", data-tag) #B2B
+              a(href="javascript:;", data-tag) #Mobile
           .info__right
             .right__time
               h4 Time
@@ -110,5 +110,6 @@ html(lang="en")
   include ./blocks/contact-projects.pug
   include ./blocks/other-projects.pug
   include ./blocks/footer.pug
+  script(type="module", src="../scripts/categories.js") 
   script(type="module", src="../scripts/project-page-sliders.js")
   script(type="module", src="../scripts/send-mail.js")

@@ -17,10 +17,10 @@ html(lang="en")
             h2 The Heist game
             h1 Play 2 Earn NFT game
             .left__tags.heist
-              a NFT
-              a BUSD
-              a BNB
-              a Stacking
+              a(href="javascript:;", data-tag) #NFT
+              a(href="javascript:;", data-tag) #BUSD
+              a(href="javascript:;", data-tag) #BNB
+              a(href="javascript:;", data-tag) #Stacking
           .info__right
             .right__time
               h4 Time
@@ -81,5 +81,6 @@ html(lang="en")
   include ./blocks/contact-projects.pug
   include ./blocks/other-projects.pug
   include ./blocks/footer.pug
+  script(type="module", src="../scripts/categories.js") 
   script(type="module", src="../scripts/project-page-sliders.js")
   script(type="module", src="../scripts/send-mail.js")

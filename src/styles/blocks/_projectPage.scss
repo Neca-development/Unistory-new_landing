@@ -200,9 +200,11 @@ body {
           display: inline-block;
           margin-right: 1.75rem;
           padding: 0.625rem 1.75rem;
+          color: #fff;
           font-weight: 700;
           font-size: 1.125rem;
           line-height: 1.5rem;
+          text-decoration: none;
           @include mobile {
             margin-bottom: 28px;
           }

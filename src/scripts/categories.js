@@ -51,7 +51,7 @@ function addTagToUrl(tag) {
 }
 
 function selectCategory(tag) {
-  const firstCase = casesContainer.querySelector(".case-card");
+  const firstCase = casesContainer?.querySelector(".case-card");
 
   addTagToUrl(tag);
   highlightActiveTag(tag);
