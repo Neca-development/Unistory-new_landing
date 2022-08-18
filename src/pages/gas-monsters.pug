@@ -1,0 +1,114 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="icon", href="../favicon.ico")
+    link(rel="apple-touch-icon", href="../apple-touch-icon.png")
+    title Unistory | GasMonsters
+    link(rel="stylesheet", href="../styles/main.scss")
+  body
+    include ./blocks/header.pug
+    .personal
+      section.container.projectPromoPrimary
+        .projectPromoPrimary__info
+          .info__left
+            h2 GasMonsters
+            h1 NFT & Gamification
+            .left__tags.primary
+              a NFT
+              a WEB 3.0
+              a Chainlink
+          .info__right
+            .right__time
+              h4 Time
+              p 6 months
+            .right__scope
+              h4 Scope
+              ul 
+                li Product analysis
+                li Backend
+                li Frontend
+                li Blockchain
+        .projectPromoPrimary__image.gas
+        .projectPromoPrimary__about
+          h3 About
+          p 
+            | The main goal of the project is to develop a website for NFT collection where users can purchase an NFT and then upgrade it by using gas.
+    section.container.projectDid
+      h3 What we did
+      .projectDid__item.personal
+        .item__info
+          .info__left 
+            h4 01
+          .info__right
+            h4 Upgradable NFT"s
+            p NFT holders have the opportunity to upgrade their NFT dragons from 1st to 7th level. It is a part of gamification and this is really clear and user-friendly mechanic. The NFT upgrade functionality is based on connection with transactions on the mainnet and gas spending: the more transactions you make – than more exp LVL for your NFT you get.
+        .item__image.gasDid1
+      .projectDid__item
+        .item__info
+          .info__left 
+            h4 02
+          .info__right
+            h4 Randomly generated tokens
+            p We used a Chainlink VRF blockchain service to determine NFT layers, which gives out randomized parameters inside the blockchain. Layer data is stored in smart contract as mapping. As a result, this numeric combination - serves as an ID file in the IPFS folder, so no one can manage layers, everything is safe.
+        .item__image.gasDid2
+    section.projectSolutions.gas
+      .container.gas
+        .projectSolutions__left
+          h3 Technical realisation
+        .projectSolutions__right.gas
+          h4 Challenge
+          p For the NFT upgrade, the smart contract needed to get information about the user's spent gas
+          h4 Solution
+          p We solved this problem using Pancakeswap. During the smart contract sale, the nft accesses Pancakeswap and asks for liquidity for the BUSD-BNB pair and calculates how much the BNB is worth in dollars. Then, it goes back to Pancakeswap and asks for liquidity for the BNB-ProjectToken pair and calculates how much the project token is worth in BNB.
+      .container
+        .projectSolutions__bottom 
+          img(src="../img/gas-monsters/solutions.png", alt="solutions")
+    section.container
+      .projectTeamStack.gas
+        h3 Team & Stack
+        .projectTeamStack__content
+          .content__team 
+            img.icon(src="../icons/team.svg", alt="team icon")
+            ul
+              li
+                img(src="../img/emoji/glasses.png", alt="Project manager") 
+                span Project manager
+              li
+                img(src="../img/emoji/strong.png", alt="Blockchain developer") 
+                span Blockchain developer(x2)
+              li
+                img(
+                  src="../img/emoji/brain-destroy.png",
+                  alt="Frontend developer"
+                ) 
+                span Frontend developer(x2)
+              li
+                img(src="../img/emoji/ninja.png", alt="Backend developer") 
+                span Backend developer
+              li
+                img(src="../img/emoji/qa.png", alt="DevOps engineer") 
+                span QA engineer
+              li
+                img(src="../img/emoji/analyst.png", alt="analyst") 
+                span Business analyst
+          .content__stack.gas
+            img.icon(src="../icons/stack.svg", alt="stack icon")
+            img.stack__item(src="../img/stack/next-react.png", alt="next")
+            img.stack__item(src="../img/stack/node.png", alt="node")
+            img.stack__item(src="../img/stack/solidity.png", alt="solidity")
+            img.stack__item(
+              src="../img/stack/chain-link-vrf.png",
+              alt="chain link vrf"
+            )
+            img.stack__item(
+              src="../img/stack/chain-link.png",
+              alt="chain link"
+            )
+  include ./blocks/contact-projects.pug
+  include ./blocks/other-projects.pug
+  include ./blocks/footer.pug
+  script(type="module", src="../scripts/project-page-sliders.js")
+  script(type="module", src="../scripts/send-mail.js")
