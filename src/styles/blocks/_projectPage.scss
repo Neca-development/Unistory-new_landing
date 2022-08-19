@@ -457,6 +457,7 @@ body {
       color: #fff;
       @include mobile {
         grid-template-areas: "left left" "bottom bottom" "right right";
+        grid-template-columns: 1fr 1fr;
       }
       .projectSolutions__left,
       .projectSolutions__right {
