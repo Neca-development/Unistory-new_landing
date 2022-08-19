@@ -8,6 +8,10 @@ html(lang="en")
     link(rel="apple-touch-icon", href="../apple-touch-icon.png")
     title Unistory | GasMonsters
     link(rel="stylesheet", href="../styles/main.scss")
+    link(
+      rel="stylesheet",
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    )
   body
     include ./blocks/header.pug
     .personal
@@ -56,16 +60,16 @@ html(lang="en")
         .item__image.gasDid2
     section.projectSolutions.gas
       .container.gas
-        .projectSolutions__left
-          h3 Technical realisation
+        .projectSolutions__left.gas
+          h3 Technical solution
         .projectSolutions__right.gas
           h4 Challenge
           p For the NFT upgrade, the smart contract needed to get information about the user's spent gas
           h4 Solution
           p We solved this problem using Pancakeswap. During the smart contract sale, the nft accesses Pancakeswap and asks for liquidity for the BUSD-BNB pair and calculates how much the BNB is worth in dollars. Then, it goes back to Pancakeswap and asks for liquidity for the BNB-ProjectToken pair and calculates how much the project token is worth in BNB.
-      .container
-        .projectSolutions__bottom 
-          img(src="../img/gas-monsters/solutions.png", alt="solutions")
+        .projectSolutions__bottom.increasingImage
+          a(href="../img/gas-monsters/solutions.png", data-fancybox="gallery")
+            img(src="../img/gas-monsters/solutions.png", alt="solutions")
     section.container
       .projectTeamStack.gas
         h3 Team & Stack
@@ -113,3 +117,6 @@ html(lang="en")
   script(type="module", src="../scripts/categories.js") 
   script(type="module", src="../scripts/project-page-sliders.js")
   script(type="module", src="../scripts/send-mail.js")
+  script(
+    src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"
+  )
