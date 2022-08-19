@@ -22,6 +22,7 @@ pipeline {
           steps {
             sh '''
               rm -rf dist
+              rm -rf node_modules
               npm i
               npm run build-prod
               ssh unistory-landing 'cd /home/Unistory-landing && mkdir -p new-dist'
