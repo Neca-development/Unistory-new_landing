@@ -19,14 +19,14 @@
     "typed.js": "^2.0.12",
     "vanilla-hamburger": "^0.2.3",
     "wc-typed-js": "^1.0.1",
-    "wow.js": "^1.2.2"
+    "wow.js": "^1.2.2",
+    "parcel-plugin-clean-dist": "^0.0.6",
+    "@parcel/transformer-pug": "^2.0.1",
+    "@parcel/transformer-sass": "^2.0.1"
   },
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.0.1",
-    "@parcel/transformer-sass": "^2.0.1",
     "@prettier/plugin-pug": "^1.19.0",
     "gh-pages": "^3.2.3",
-    "parcel-plugin-clean-dist": "^0.0.6",
     "prettier": "^2.5.1",
     "prettier-plugin-style-order": "^0.2.2",
     "rimraf": "^3.0.2"
