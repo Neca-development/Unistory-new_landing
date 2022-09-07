@@ -435,6 +435,41 @@
   }
 }
 
+.awards {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  &__left {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    letter-spacing: 0.0625rem;
+    color: #373737;
+  
+    @include mobile {
+      font-size: 24px;
+      line-height: normal;
+      letter-spacing: normal
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+  &__project{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    & > img {
+      width: 100%;
+    }
+    & h4 {
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 2.75rem;
+      letter-spacing: 0.0625rem;
+    }
+  }
+}
+
 .contact-us {
   padding: 3.75rem 0;
   color: var(--background-color);
