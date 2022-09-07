@@ -279,6 +279,12 @@ body {
         content: url(../../img/gas-monsters/promo-mobile.jpg);
       }
     }
+    &.xillion {
+      content: url(../../img/xillion/promo.jpg);
+      @include mobile {
+        content: url(../../img/xillion/promo-mobile.jpg);
+      }
+    }
     @include mobile {
       display: flex;
       justify-content: center;
@@ -433,6 +439,24 @@ body {
           content: url(../../img/gas-monsters/did2-mobile.jpg);
         }
       }
+      &.xillionDid1 {
+        content: url(../../img/xillion/did1.jpg);
+        @include mobile {
+          content: url(../../img/xillion/did1-mobile.jpg);
+        }
+      }
+      &.xillionDid2 {
+        content: url(../../img/xillion/did2.jpg);
+        @include mobile {
+          content: url(../../img/xillion/did2-mobile.jpg);
+        }
+      }
+      &.xillionDid3 {
+        content: url(../../img/xillion/did3.jpg);
+        @include mobile {
+          content: url(../../img/xillion/did3-mobile.jpg);
+        }
+      }
     }
   }
 }
@@ -468,6 +492,36 @@ body {
         margin-right: 12.1875rem;
         h3 {
           white-space: nowrap;
+        }
+      }
+      .projectSolutions__right {
+        grid-area: right;
+      }
+      .projectSolutions__bottom {
+        grid-area: bottom;
+      }
+    }
+    &.xillion {
+      display: grid;
+      grid-template-areas: "left right" "bottom bottom";
+      grid-template-columns: 27.8125rem 1fr;
+      color: #2C2C2C;
+      @include mobile {
+        grid-template-areas: "left left" "bottom bottom" "right right";
+        grid-template-columns: 1fr 1fr;
+      }
+      .projectSolutions__left,
+      .projectSolutions__right {
+        width: auto;
+      }
+      .projectSolutions__left {
+        grid-area: left;
+        margin-right: 12.1875rem;
+        h3 {
+          white-space: nowrap;
+          @include mobile {
+            margin: 0;
+          }
         }
       }
       .projectSolutions__right {
@@ -781,6 +835,14 @@ body {
         }
       }
       &.gas {
+        .stack__item {
+          width: 20%;
+          @include mobile {
+            width: 50%;
+          }
+        }
+      }
+      &.xillion {
         .stack__item {
           width: 20%;
           @include mobile {
