@@ -297,8 +297,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 3.75rem;
-  margin-bottom: 5rem;
+  margin: 3.75rem 0;
 
   &__pagination {
     display: flex;
@@ -439,8 +438,7 @@
 .awards {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  margin-top: 3rem;
-  margin-bottom: 10rem;
+  margin: 3.75rem 0;
   column-gap: 5rem;
 
   &__left {
@@ -496,12 +494,17 @@
   }
 }
 
+#partnership {
+  position: relative;
+  overflow: hidden;
+}
+
 .partnership {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  min-height: 50rem;
-  margin: 3rem 0;
+  grid-template-columns: 1fr 2.2fr;
+  min-height: 43rem;
+  margin: 3.75rem 0;
 
   &__left {
     display: flex;
@@ -510,12 +513,12 @@
     background-color: #f3f3f3;
 
     & > div {
-      margin-top: 8rem;
+      margin-top: 6rem;
     }
   }
 
   &__right {
-    padding: 8rem;
+    padding: 6rem;
     color: #ffffff;
     background-color: #373737;
 
@@ -540,8 +543,53 @@
 
     & > p {
       width: 31rem;
-      line-height: 2rem;
+      line-height: 1.8rem;
       letter-spacing: 0.0625rem;
+    }
+  }
+}
+
+.partnership-marquee {
+  position: absolute;
+  bottom: -5rem;
+  left: -5rem;
+  padding: 2rem 0;
+  background-color: var(--accent-color);
+  transform: rotate(5deg);
+
+  &__content {
+    display: flex;
+    width: max-content;
+    animation: marquee 35s linear infinite forwards;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__tag {
+    display: inline-block;
+    padding: 0 7rem;
+    color: var(--background-color);
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: ease-out 0.16s;
+
+    &.outline {
+      color: transparent;
+      -webkit-text-stroke: 1.26px var(--background-color);
+    }
+
+    @include mobile {
+      padding: 0 30px;
+      font-size: 28px;
+    }
+
+    &:hover {
+      transform: scale(1.3);
     }
   }
 }
