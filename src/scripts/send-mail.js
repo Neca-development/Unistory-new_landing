@@ -73,3 +73,11 @@ contactForm.addEventListener("submit", async (e) => {
 function updateFileDisplay() {
   fileList.innerHTML = fileInput.files.item(0).name;
 }
+
+function autoResize() {
+  this.style.height = "auto";
+  this.style.height = this.scrollHeight + "px";
+}
+
+// Auto resize about project field by number of lines
+messageField.addEventListener("input", autoResize, false);
