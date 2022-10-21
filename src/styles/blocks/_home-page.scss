@@ -756,7 +756,8 @@
       min-height: 2.25rem;
       max-height: 18rem;
       font-family: inherit;
-      resize: vertical;
+      resize: none;
+      overflow: hidden;
     }
 
     & input,
