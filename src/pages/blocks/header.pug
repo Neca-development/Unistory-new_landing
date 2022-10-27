@@ -5,17 +5,34 @@ header.header
     nav.menu.header__menu
       ul.menu__list
         li.menu__item
-          a(href="/#services", scroll-to="services") Services
+          a(
+            href="/#services",
+            scroll-to="services",
+            data-i18n="HEADER.SERVICES"
+          )
         li.menu__item
-          a(href="/#competence", scroll-to="competence") Competence
+          a(
+            href="/#competence",
+            scroll-to="competence",
+            data-i18n="HEADER.COMPETENCE"
+          )
         li.menu__item
-          a(href="portfolio.pug") Portfolio
+          a(href="portfolio.pug", data-i18n="HEADER.PORTFOLIO")
         li.menu__item
-          a(href="/#about", scroll-to="about") About
+          a(href="/#about", scroll-to="about", data-i18n="HEADER.ABOUT")
         li.menu__item
-          a(href="/#reviews", scroll-to="reviews") Reviews
+          a(href="/#reviews", scroll-to="reviews", data-i18n="HEADER.REVIEWS")
         li.menu__item
-          a.btn.btn_animated_blue(href="/#contactUs", scroll-to="contactUs") Contact us
+          a.btn.btn_animated_blue(
+            href="/#contactUs",
+            scroll-to="contactUs",
+            data-i18n="HEADER.CONTACT_US"
+          )
+        .header__lngWrapper
+          button#languageButton.header__lngBtn 
+            img(src="../icons/language-change.svg", alt="lng")
+          .header__lngWindow
+
         twirl-burger 
 
   .mobile-menu.mobile-menu_hidden
@@ -24,14 +41,26 @@ header.header
     nav.mobile-menu__nav
       ul.mobile-menu__list
         li.mobile-menu__item
-          a(href="/#services", scroll-to="services") Services
+          a(
+            href="/#services",
+            scroll-to="services",
+            data-i18n="HEADER.SERVICES"
+          )
         li.mobile-menu__item
-          a(href="/#competence", scroll-to="competence") Competence
+          a(
+            href="/#competence",
+            scroll-to="competence",
+            data-i18n="HEADER.COMPETENCE"
+          )
         li.mobile-menu__item
-          a(href="portfolio.pug") Portfolio
+          a(href="portfolio.pug", data-i18n="HEADER.PORTFOLIO")
         li.menu__item
-          a(href="/#about", scroll-to="about") About
+          a(href="/#about", scroll-to="about", data-i18n="HEADER.ABOUT")
         li.menu__item
-          a(href="/#reviews", scroll-to="reviews") Reviews
+          a(href="/#reviews", scroll-to="reviews", data-i18n="HEADER.REVIEWS")
         li.mobile-menu__item
-          a.btn.btn_animated_blue(href="/#contactUs", scroll-to="contactUs") Contact us
+          a.btn.btn_animated_blue(
+            href="/#contactUs",
+            scroll-to="contactUs",
+            data-i18n="HEADER.CONTACT_US"
+          )

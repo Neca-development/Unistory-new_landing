@@ -23,10 +23,10 @@ html(lang="en")
               a(href="javascript:;", data-tag) #Stacking
           .info__right
             .right__time
-              h4 Time
-              p 2 months
+              h4(data-i18n="project.time") Time
+              p(data-i18n="heist.time") 2 months
             .right__scope
-              h4 Scope
+              h4(data-i18n="project.scope") Scope
               ul 
                 li Product analysis
                 li Design
@@ -34,20 +34,20 @@ html(lang="en")
                 li Smart contracts
         .projectPromoPrimary__image.heist
         .projectPromoPrimary__about
-          h3 Project goal
-          p 
+          h3(data-i18n="project.project_goal") Project goal
+          p(data-i18n="[html]heist.goal")
             | The young blockchain startup needed to create an interesting game
             br
             | on the Binance network in which users could earn project tokens.
     section.container.projectDid
-      h3 What we did
+      h3(data-i18n="project.what_we_did") What we did
       .projectDid__item
         .item__info
           .info__left 
             h4 01
           .info__right
-            h4 Presale
-            p We have implemented pre-sale tokens for a limited number of users from the list sent by
+            h4(data-i18n="heist.01_title") Presale
+            p(data-i18n="heist.01_text") We have implemented pre-sale tokens for a limited number of users from the list sent by
               | the client. The tokens bought on presale have better characteristics than regular tokens and
               | generate more revenue. In this way, more funds were raised at the initial stage through the
               | FOMO effect.
@@ -57,30 +57,33 @@ html(lang="en")
           .info__left 
             h4 02
           .info__right
-            h4 Upgrade
-            p There can be an unlimited number of nfts in the game. To make the economy of the game more predictable, we implemented the upgrade feature, which allows users to burn 3 nft of the same kind and rarity and get a rarer nft for it.
+            h4(data-i18n="heist.02_title") Upgrade
+            p(data-i18n="heist.02_text") There can be an unlimited number of nfts in the game. To make the economy of the game more predictable, we implemented the upgrade feature, which allows users to burn 3 nft of the same kind and rarity and get a rarer nft for it.
         .item__image.did2
       .projectDid__item
         .item__info
           .info__left 
             h4 03
           .info__right
-            h4 Stacking
-            p Users can stack (block) project tokens for a certain period of time to make a profit in the future. Stacking is implemented with nodes in the form of nft. There are several types of nodes and bring different income. Nodes can be improved, destroyed, as well as just to take income from them.
+            h4(data-i18n="heist.03_title") Stacking
+            p(data-i18n="heist.03_text") Users can stack (block) project tokens for a certain period of time to make a profit in the future. Stacking is implemented with nodes in the form of nft. There are several types of nodes and bring different income. Nodes can be improved, destroyed, as well as just to take income from them.
         .item__image.did3
     section.projectSolutions.heist
       .container.heist
         .projectSolutions__left
-          h3 Technical solutions
+          h3(data-i18n="project.technical_solution") Technical solutions
           img(src="../img/heist/solutions.png", alt="solutions")
         .projectSolutions__right.heist
-          h4 Challenge
-          p The customer wanted all actions, purchases, and winnings to be counted in dollars.
-          h4 Solution
-          p We solved this problem using Pancakeswap. During the smart contract sale, the nft accesses Pancakeswap and asks for liquidity for the BUSD-BNB pair and calculates how much the BNB is worth in dollars. Then, it goes back to Pancakeswap and asks for liquidity for the BNB-ProjectToken pair and calculates how much the project token is worth in BNB.
+          h4(data-i18n="project.challenge") Challenge
+          p(data-i18n="heist.challenge") The customer wanted all actions, purchases, and winnings to be counted in dollars.
+          h4(data-i18n="project.solution") Solution
+          p(data-i18n="heist.solution") We solved this problem using Pancakeswap. During the smart contract sale, the nft accesses Pancakeswap and asks for liquidity for the BUSD-BNB pair and calculates how much the BNB is worth in dollars. Then, it goes back to Pancakeswap and asks for liquidity for the BNB-ProjectToken pair and calculates how much the project token is worth in BNB.
   include ./blocks/contact-projects.pug
   include ./blocks/other-projects.pug
   include ./blocks/footer.pug
+
+  include ./blocks/translation-script.pug
   script(type="module", src="../scripts/categories.js") 
   script(type="module", src="../scripts/project-page-sliders.js")
   script(type="module", src="../scripts/send-mail.js")
+  script(type="module", src="../scripts/menu.js")

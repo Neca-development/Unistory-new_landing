@@ -23,10 +23,10 @@ html(lang="en")
               a(href="javascript:;", data-tag) #Mobile
           .info__right
             .right__time
-              h4 Time
-              p 6 months
+              h4(data-i18n="project.time") Time
+              p(data-i18n="personal.time") 6 months
             .right__scope
-              h4 Scope
+              h4(data-i18n="project.scope") Scope
               ul 
                 li Mobile App
                 li Backend
@@ -34,73 +34,73 @@ html(lang="en")
                 li Integration with avito
         .projectPromoPrimary__image.personal
         .projectPromoPrimary__about
-          h3 About
-          p 
+          h3(data-i18n="project.about") About
+          p(data-i18n="personal.about")
             | A search engine for businesses that helps bring to gather all resumes in one place, facilitates communication with candidates, and has synchronization with job search platforms.
     section.container.projectDid
-      h3 What we did
+      h3(data-i18n="project.what_we_did") What we did
       .projectDid__item.personal
         .item__info
           .info__left 
             h4 01
           .info__right
-            h4 Integration with HR services
-            p We integrate job posting services into one app. Our integrations allow app users to retrieve candidate resumes from a variety of sources.
+            h4(data-i18n="personal.01_title") Integration with HR services
+            p(data-i18n="personal.01_text") We integrate job posting services into one app. Our integrations allow app users to retrieve candidate resumes from a variety of sources.
         .item__image.personalDid1
       .projectDid__item
         .item__info
           .info__left 
             h4 02
           .info__right
-            h4 An opportunity to invite to meetings with custom templates
-            p With this option, the user can create a template and send it to all candidates. This option helps to save time and make it easier to process a large number of offers. It is important as time optimization is initial for any business.
+            h4(data-i18n="personal.02_title") An opportunity to invite to meetings with custom templates
+            p(data-i18n="personal.02_text") With this option, the user can create a template and send it to all candidates. This option helps to save time and make it easier to process a large number of offers. It is important as time optimization is initial for any business.
         .item__image.personalDid2
       .projectDid__item
         .item__info
           .info__left 
             h4 03
           .info__right
-            h4 Built-in chat that shows all messages from other services
-            p In order to make the flow more convenient, we've created a built-in chat in which our users are able to communicate with candidates from all sources.
+            h4(data-i18n="personal.03_title") Built-in chat that shows all messages from other services
+            p(data-i18n="personal.03_text") In order to make the flow more convenient, we've created a built-in chat in which our users are able to communicate with candidates from all sources.
         .item__image.personalDid3
     section.projectSolutions
       .container
         .projectSolutions__left
-          h3 Technical solutions
+          h3(data-i18n="project.technical_solution") Technical solutions
           img(src="../img/personal/solutions.png")
         .projectSolutions__right
-          h4 Challenges and solutions
+          h4(data-i18n="project.challenges_solutions") Challenges and solutions
           h4 01
-          p Make job postings in different services.
+          p(data-i18n="[html]personal.challenges_1") Make job postings in different services.
             span We have unified the requirements for jobs from all services, allowing us to give our users the option of filling out only our form.
           h4 02
-          p Gathering prompts for making up vacancies.
+          p(data-i18n="[html]personal.challenges_2") Gathering prompts for making up vacancies.
             span We parsed over ten thousand different job postings and used statistical analysis to collect the most frequently listed requirements. This made it possible to make smart prompts for all kinds of vacancies.
     section.container
       .projectTeamStack
-        h3 Team & Stack
+        h3(data-i18n="project.team_stack") Team & Stack
         .projectTeamStack__content
           .content__team 
             img.icon(src="../icons/team.svg", alt="team icon")
             ul
               li
                 img(src="../img/emoji/glasses.png", alt="Project manager") 
-                span Project manager
+                span(data-i18n="team.project_manager") Project manager
               li
                 img(src="../img/emoji/robot.png", alt="Mobile developer") 
-                span Mobile developer
+                span(data-i18n="team.mobile_developer") Mobile developer
               li
                 img(
                   src="../img/emoji/brain-destroy.png",
                   alt="Frontend developer"
                 ) 
-                span Frontend developer
+                span(data-i18n="team.frontend") Frontend developer
               li
                 img(src="../img/emoji/ninja.png", alt="Backend developer") 
-                span Backend developer
+                span(data-i18n="team.backend") Backend developer
               li
                 img(src="../img/emoji/super.png", alt="DevOps engineer") 
-                span DevOps engineer
+                span(data-i18n="team.devops") DevOps engineer
           .content__stack
             img.icon(src="../icons/stack.svg", alt="stack icon")
             img.stack__item(src="../img/stack/react-native.png", alt="react")
@@ -110,6 +110,9 @@ html(lang="en")
   include ./blocks/contact-projects.pug
   include ./blocks/other-projects.pug
   include ./blocks/footer.pug
+
+  include ./blocks/translation-script.pug
   script(type="module", src="../scripts/categories.js") 
   script(type="module", src="../scripts/project-page-sliders.js")
   script(type="module", src="../scripts/send-mail.js")
+  script(type="module", src="../scripts/menu.js")

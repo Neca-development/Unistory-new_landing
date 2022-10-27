@@ -13,13 +13,13 @@ footer.footer
           img(src="../icons/links/Upwork.svg") 
     .footer__contact-wrapper
       .footer__contact-column 
-        p Contacts
+        p(data-i18n="footer.contacts") Contacts
         a.footer__contact-item(href="mailto:Contact@unistory.app") Contact@unistory.app
         a.footer__contact-item(href="tel:+79811011104") +7 981 101 1104
       .footer__contact-column 
-        p Address
-        p.footer__contact-item Kazakhstan, Nur-Sultan
-        p.footer__contact-item Ave. Mangilik El. 39
+        p(data-i18n="contact.address") Address
+        p.footer__contact-item(data-i18n="[html]contact.address_text") Kazakhstan, Nur-Sultan
+        //- p.footer__contact-item Ave. Mangilik El. 39
     //- nav.footer__nav 
     //-   ul 
     //-     li 
@@ -35,8 +35,12 @@ footer.footer
     .footer__additional-info
       p ©&nbsp;
         span#year 2022
-        | &nbsp;Unistory all rights reserved
-      a#privacyPolicyFooter(href="javascript:;") Privacy Policy
+        | &nbsp;Unistory&nbsp;
+        span(data-i18n="footer.all_rights")
+      a#privacyPolicyFooter(
+        href="javascript:;",
+        data-i18n="footer.privacy_policy"
+      )
 
 .privacy-popup__close_bg
 .privacy-popup 

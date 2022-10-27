@@ -15,15 +15,15 @@ html(lang="en")
   body
     include ./blocks/header.pug
     section.container.projectPromo
-      h1 How we&nbsp;
+      h1(data-i18n="[html]sipsignal.how_we") How we&nbsp;
         span automated sales
         span for more customers and less costs
       .projectPromo__image 
         img(src="../img/sipsignal/promo-image.jpg", alt="sipsignal-promo")
       .projectPromo__descr
         .projectPromo__info 
-          h2.subtitle.subtitle_min Whats this?
-          p 
+          h2.subtitle.subtitle_min(data-i18n="sipsignal.whats_this") Whats this?
+          p(data-i18n="[html]sipsignal.about") 
             span eCommerce application&nbsp;
             | that allows user&nbsp;
             span to select and purchase&nbsp;
@@ -31,16 +31,16 @@ html(lang="en")
             | client's DataBases and CRMs for easy user management.
           .projectPromo__infoStats
             .projectPromo__infoItem 
-              h3.subtitle.subtitle_min Time
-              p 2 months
+              h3.subtitle.subtitle_min(data-i18n="project.time") Time
+              p(data-i18n="sipsignal.time") 2 months
             .projectPromo__infoItem 
-              h3.subtitle.subtitle_min Team
+              h3.subtitle.subtitle_min(data-i18n="project.team") Team
               p 6 employees
             .projectPromo__infoItem 
-              h3.subtitle.subtitle_min Stack
+              h3.subtitle.subtitle_min(data-i18n="project.stack") Stack
               p NestJS & Angular
             .projectPromo__infoItem 
-              h3.subtitle.subtitle_min Year
+              h3.subtitle.subtitle_min(data-i18n="project.year") Year
               p 2021-2022
         .projectPromo__infoLogo
           img(src="../img/sipsignal/project-logo.png", alt="logo")
@@ -48,7 +48,7 @@ html(lang="en")
     section.container.projectHow
       .projectHow__scrollableContainer
         #stickyContent.projectHow__stickyWrapper
-          h2.subtitle How it was
+          h2.subtitle(data-i18n="sipsignal.how_it_was") How it was
           .projectHow__wrapper
             .projectHow__image 
               img#step-logo-1(src="../img/project/how-img.svg", alt="how")
@@ -59,55 +59,73 @@ html(lang="en")
             .projectHow__itemsWrapper
               #howStageItem1.projectHow__item
                 #howStageFirstDot.projectHow__itemDot
-                h3 Problem
-                p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
+                h3(data-i18n="sipsignal.problem_title") Problem
+                p(data-i18n="sipsignal.problem_text") The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
               #howStageItem2.projectHow__item.projectHow__item_second
                 #howStageSecondDot.projectHow__itemDot
-                h3 Solution
-                p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
+                h3(data-i18n="sipsignal.solution_title") Solution
+                p(data-i18n="sipsignal.solution_text") It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
               #howStageItem3.projectHow__item
                 #howStageThirdDot.projectHow__itemDot
-                h3 Result
-                p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
+                h3(data-i18n="sipsignal.result_title") Result
+                p(data-i18n="sipsignal.result_text") The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
       .projectHow__mobileContainer
-        h2.subtitle How it was
+        h2.subtitle(data-i18n="sipsignal.how_it_was") How it was
         img(src="../img/project/how-img.svg", alt="how")
         .swiper.projectHow__mobileSlider
           .swiper-wrapper
             .swiper-slide.projectHow__mobileSlide
-              h3.subtitle.subtitle_min Problem
-              p The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
+              h3.subtitle.subtitle_min(data-i18n="sipsignal.problem_title") Problem
+              p(data-i18n="sipsignal.problem_text") The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs
             .swiper-slide.projectHow__mobileSlide
-              h3.subtitle.subtitle_min Solution
-              p It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
+              h3.subtitle.subtitle_min(data-i18n="sipsignal.solution_title") Solution
+              p(data-i18n="sipsignal.solution_text") It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase
             .swiper-slide.projectHow__mobileSlide
-              h3.subtitle.subtitle_min Result
-              p The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
+              h3.subtitle.subtitle_min(data-i18n="sipsignal.result_title") Result
+              p(data-i18n="sipsignal.result_text") The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%
 
     section.container.projectWorkflow
-      h2.subtitle.subtitle_sub Workflow
+      h2.subtitle.subtitle_sub(data-i18n="sipsignal.workflow") Workflow
       .projectWorkflow__wrapper
         .projectWorkflow__stage.projectWorkflow__stage
-          h3.wow.fadeIn(data-wow-delay="0.5s") Analyst stage
+          h3.wow.fadeIn(
+            data-wow-delay="0.5s",
+            data-i18n="sipsignal.analyst_stage"
+          ) Analyst stage
           .wow.projectWorkflow__stageArrow
           img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
           .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1s")
-          p.wow.fadeInRight(data-wow-delay="1.2s") Product research
-          p.wow.fadeInRight(data-wow-delay="1.4s") Technical documentation
+          p.wow.fadeInRight(
+            data-wow-delay="1.2s",
+            data-i18n="sipsignal.product_research"
+          ) Product research
+          p.wow.fadeInRight(
+            data-wow-delay="1.4s",
+            data-i18n="sipsignal.technical_documentation"
+          ) Technical documentation
 
         .projectWorkflow__stage.projectWorkflow__stage
-          h3.wow.fadeIn(data-wow-delay="0.7s") Development stage
+          h3.wow.fadeIn(
+            data-wow-delay="0.7s",
+            data-i18n="sipsignal.development_stage"
+          ) Development stage
           .wow.projectWorkflow__stageArrow(data-wow-delay="0.5s")
           img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
           .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1.3s")
-          p.wow.fadeInRight(data-wow-delay="1.5s") Frontend & Backend
-          p.wow.fadeInRight(data-wow-delay="1.8s") Testing
+          p.wow.fadeInRight(
+            data-wow-delay="1.5s",
+            data-i18n="sipsignal.frontend_backend"
+          ) Frontend & Backend
+          p.wow.fadeInRight(
+            data-wow-delay="1.8s",
+            data-i18n="sipsignal.testing"
+          ) Testing
             img.wow.fadeInUp.projectWorkflow__reverseArrows(
               src="../img/project/workflow-reverse-arrows.svg",
               alt="",
@@ -115,15 +133,21 @@ html(lang="en")
             )
 
         .projectWorkflow__stage.projectWorkflow__stage
-          h3.wow.fadeIn(data-wow-delay="1s") Release stage
+          h3.wow.fadeIn(
+            data-wow-delay="1s",
+            data-i18n="sipsignal.release_stage"
+          ) Release stage
           .wow.projectWorkflow__stageArrow(data-wow-delay="1s")
           img.wow.fadeIn.projectWorkflow__stagesPath(
             src="../img/project/workkflow-2-item-path.svg",
             alt=""
           )
           .wow.projectWorkflow__hiddenPathBlock(data-wow-delay="1.8s")
-          p.wow.fadeInRight(data-wow-delay="2s") Release
-          p.wow.fadeInRight(data-wow-delay="2.2s") Support
+          p.wow.fadeInRight(data-wow-delay="2s", data-i18n="sipsignal.release") Release
+          p.wow.fadeInRight(
+            data-wow-delay="2.2s",
+            data-i18n="sipsignal.support"
+          ) Support
 
         img.projectWorkflow__mobilePath(
           src="../img/project/workflow-mobile-path.svg",
@@ -132,44 +156,48 @@ html(lang="en")
         .wow.projectWorkflow__mobileHiddenPath(data-wow-duration="1s")
 
     section.container.projectOverview
-      h2.subtitle.subtitle_sub Application overview
+      h2.subtitle.subtitle_sub(data-i18n="sipsignal.application_overview") Application overview
       .projectOverview__swiperContainer
         .swiper.projectOverview__slider
           .swiper-wrapper
             .swiper-slide.projectOverview__slide
               img(src="../img/sipsignal/overview-slide.jpg", alt="")
               .projectOverview__descr
-                h3.subtitle.subtitle_min Subscription purchase
-                p The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
+                h3.subtitle.subtitle_min(
+                  data-i18n="sipsignal.overview_1_title"
+                ) Subscription purchase
+                p(data-i18n="sipsignal.overview_1_text") The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
             .swiper-slide.projectOverview__slide
               img(src="../img/sipsignal/overview-slide.jpg", alt="")
               .projectOverview__descr
-                h3.subtitle.subtitle_min Subscription purchase
-                p The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
+                h3.subtitle.subtitle_min(
+                  data-i18n="sipsignal.overview_1_title"
+                ) Subscription purchase
+                p(data-i18n="sipsignal.overview_1_text") The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator
       .projectOverview__arrowsWrapper
         .swiper-button-prev.projectOverview__btnPrev
         .swiper-button-next.projectOverview__btnNext
 
     section.container.projectResults
-      h2.subtitle.subtitle_sub Results
+      h2.subtitle.subtitle_sub(data-i18n="sipsignal.results") Results
       .projectResults__wrapper 
         .projectResults__item
           img(src="../icons/checkmark.svg", alt="")
-          p The application is out on the market and working properly
+          p(data-i18n="sipsignal.result_1") The application is out on the market and working properly
         .projectResults__item
           img(src="../icons/checkmark.svg", alt="")
-          p Business objectives were met
+          p(data-i18n="sipsignal.result_2") Business objectives were met
         .projectResults__item
           img(src="../icons/checkmark.svg", alt="")
-          p Continuing to work with customer to support the site
+          p(data-i18n="sipsignal.result_3") Continuing to work with customer to support the site
         .projectResults__item
           img(src="../icons/checkmark.svg", alt="")
-          p Customer is satisfied with the results
+          p(data-i18n="sipsignal.result_4") Customer is satisfied with the results
 
     section.container.projectQuote
       .projectQuote__client
-        .projectQuote__title Good job guys!
-        p Unistory is a well-managed and structured team, Weekly updates, quick response, and turnaround. I would highly recommend the Unistory team for any project. We are so pleased with the results that we started the second project right away. Thank you guys for your hard work.
+        .projectQuote__title(data-i18n="sipsignal.review_title") Good job guys!
+        p(data-i18n="sipsignal.review_text") Unistory is a well-managed and structured team, Weekly updates, quick response, and turnaround. I would highly recommend the Unistory team for any project. We are so pleased with the results that we started the second project right away. Thank you guys for your hard work.
         .projectQuote__clientProfile
           img(src="../img/sipsignal/client-pic.jpg", alt="")
           p Bogdan Parhomenko
@@ -179,6 +207,9 @@ html(lang="en")
     include ./blocks/contact-projects.pug
     include ./blocks/other-projects.pug
     include ./blocks/footer.pug
+
+    include ./blocks/translation-script.pug
     script(type="module", src="../scripts/project-page-sliders.js")
     script(type="module", src="../scripts/send-mail.js")
     script(type="module", src="../scripts/project-page-how-animation.js")
+    script(type="module", src="../scripts/menu.js") 

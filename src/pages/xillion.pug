@@ -26,10 +26,10 @@ html(lang="en")
               a(href="javascript:;", data-tag) #WEB 3.0
           .info__right
             .right__time
-              h4 Time
-              p 6 months
+              h4(data-i18n="project.time") Time
+              p(data-i18n="xillion.time") 6 months
             .right__scope
-              h4 Scope
+              h4(data-i18n="project.scope") Scope
               ul 
                 li Design
                 li Backend
@@ -37,72 +37,72 @@ html(lang="en")
                 li Blockchain
         .projectPromoPrimary__image.xillion
         .projectPromoPrimary__about
-          h3 About
-          p 
+          h3(data-i18n="project.about") About
+          p(data-i18n="xillion.about")
             | Integration of independent blockchain voting into the project selection platform. Creating a game module of the project with P2E quizzes on the Polygon network. Adding the ability to invest in BNB tokens and project currency (XIL tokens) simultaneously.
     section.container.projectDid
-      h3 What we did
+      h3(data-i18n="project.what_we_did") What we did
       .projectDid__item.personal
         .item__info
           .info__left 
             h4 01
           .info__right
-            h4 Quiz mode
-            p The project Xillion does not stop developing. In the process of development the owners of the project noted the trend of web3-gaming development on the Polygon network. In an effort to improve the product and timely response to changes we created a platform for participation in intelligent Quizzes. Together with the product team we designed and implemented a separate module of the project, working on the Polygon network, where the community can take surveys and receive rewards for participation.
+            h4(data-i18n="xillion.01_title") Quiz mode
+            p(data-i18n="xillion.01_text") The project Xillion does not stop developing. In the process of development the owners of the project noted the trend of web3-gaming development on the Polygon network. In an effort to improve the product and timely response to changes we created a platform for participation in intelligent Quizzes. Together with the product team we designed and implemented a separate module of the project, working on the Polygon network, where the community can take surveys and receive rewards for participation.
         .item__image.xillionDid1
       .projectDid__item
         .item__info
           .info__left 
             h4 02
           .info__right
-            h4 DAO Farm
-            p After investing in DAO projects, each of the investors receives tokens, for the formation of which a smart contract is responsible. It automatically creates new smart contracts that create tokens for each subsequent DAO project.
+            h4(data-i18n="xillion.02_title") DAO Farm
+            p(data-i18n="xillion.02_text") After investing in DAO projects, each of the investors receives tokens, for the formation of which a smart contract is responsible. It automatically creates new smart contracts that create tokens for each subsequent DAO project.
         .item__image.xillionDid2
       .projectDid__item
         .item__info
           .info__left 
             h4 03
           .info__right
-            h4 Voting access
-            p Automated the process of DAO creation and transferred it to the blockchain. Now every user can independently propose his project to the platform. Each proposal is put forward for blockchain voting. The entire community of Xillion project with a stacking balance of at least 10k XIL-tokens takes part in the voting.
+            h4(data-i18n="xillion.03_title") Voting access
+            p(data-i18n="xillion.03_text") Automated the process of DAO creation and transferred it to the blockchain. Now every user can independently propose his project to the platform. Each proposal is put forward for blockchain voting. The entire community of Xillion project with a stacking balance of at least 10k XIL-tokens takes part in the voting.
         .item__image.xillionDid3
     section.projectSolutions
       .container.xillion
         .projectSolutions__left
-          h3 Technical solutions
+          h3(data-i18n="project.technical_solution") Technical solutions
         .projectSolutions__right
-          h4 Solution
-          p In order to save the history of the project, voting results, number of investment and investor information, we have developed theGraph, which can work with the old and new blockchain project architecture at the same time.
-          p The project works simultaneously on two blockchain networks Binance Smart Chain and Polygon. Delimiting access to sections of the site and using ether.js features made it onvenient for user to switch from one network to another.
-          p The project uses proxy architecture for the blockchain part, which allows. In the future it will be possible to scale the project and add new modules, functionality and solutions.
+          h4(data-i18n="project.solution") Solution
+          p(data-i18n="[html]xillion.solution") In order to save the history of the project, voting results, number of investment and investor information, we have developed theGraph, which can work with the old and new blockchain project architecture at the same time.
+          //- p The project works simultaneously on two blockchain networks Binance Smart Chain and Polygon. Delimiting access to sections of the site and using ether.js features made it onvenient for user to switch from one network to another.
+          //- p The project uses proxy architecture for the blockchain part, which allows. In the future it will be possible to scale the project and add new modules, functionality and solutions.
         .projectSolutions__bottom.increasingImage
           a(href="../img/xillion/solutions.jpg", data-fancybox="gallery")
             img(src="../img/xillion/solutions.jpg", alt="solutions")
     section.container
       .projectTeamStack
-        h3 Team & Stack
+        h3(data-i18n="project.team_stack") Team & Stack
         .projectTeamStack__content
           .content__team 
             img.icon(src="../icons/team.svg", alt="team icon")
             ul
               li
                 img(src="../img/emoji/glasses.png", alt="Project manager") 
-                span Project manager
+                span(data-i18n="team.project_manager") Project manager
               li
                 img(src="../img/emoji/strong.png", alt="Blockchain developer") 
-                span Blockchain developer
+                span(data-i18n="team.blockchain_developer") Blockchain developer
               li
                 img(
                   src="../img/emoji/brain-destroy.png",
                   alt="Frontend developer"
                 ) 
-                span Frontend developer
+                span(data-i18n="team.frontend") Frontend developer
               li
                 img(src="../img/emoji/ninja.png", alt="Backend developer") 
-                span Backend developer
+                span(data-i18n="team.backend") Backend developer
               li
                 img(src="../img/emoji/qa.png", alt="DevOps engineer") 
-                span QA engineer
+                span(data-i18n="team.qa_engineer") QA engineer
           .content__stack.xillion
             img.icon(src="../icons/stack.svg", alt="stack icon")
             img.stack__item(src="../img/stack/nest.png", alt="nest")
@@ -113,6 +113,9 @@ html(lang="en")
   include ./blocks/contact-projects.pug
   include ./blocks/other-projects.pug
   include ./blocks/footer.pug
+
+  include ./blocks/translation-script.pug
+  script(type="module", src="../scripts/menu.js") 
   script(type="module", src="../scripts/categories.js") 
   script(type="module", src="../scripts/project-page-sliders.js")
   script(type="module", src="../scripts/send-mail.js")

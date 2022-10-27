@@ -820,12 +820,14 @@
   }
 
   &__description {
+    display: flex;
     margin-top: 0.9375rem;
     font-size: 1rem;
     line-height: 1.25rem;
 
     a {
       color: inherit;
+      margin: 0 0.3rem;
     }
   }
 }

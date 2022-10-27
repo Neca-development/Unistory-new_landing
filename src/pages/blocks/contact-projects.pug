@@ -1,8 +1,10 @@
 section.container.projectContact 
-  h2.subtitle Have an idea?
-    span.projectContact__subtitle Lets build it together
+  h2.subtitle(data-i18n="contact.have_an_idea") Have an idea?
+  span.projectContact__subtitle(data-i18n="contact.lets_build") Lets build it together
   .projectContact__wrapper
-    p.projectContact__infoText.projectContact__infoText_mobile
+    p.projectContact__infoText.projectContact__infoText_mobile(
+      data-i18n="[html]contact.mobile_do_you_have_any_ideas"
+    )
       | Do you have any ideas to develop? Fill this form or contact us via&nbsp;
       a(href="mailto:Contact@unistory.app") Contact@unistory.app&nbsp;
       | for discussion about your digital wishes.
@@ -15,7 +17,7 @@ section.container.projectContact
           placeholder="Name",
           required
         )
-        span Name *
+        span(data-i18n="contact.input_name") Name *
       label.contact-us__field
         input#emailInput(
           type="email",
@@ -24,7 +26,7 @@ section.container.projectContact
           placeholder="Email",
           required
         )
-        span Email *
+        span(data-i18n="contact.input_email") Email *
       label.contact-us__field
         input#phoneInput(
           type="tel",
@@ -32,7 +34,7 @@ section.container.projectContact
           autocomplete="tel",
           placeholder="Phone number"
         )
-        span Phone number
+        span(data-i18n="contact.input_phone") Phone number
       label.contact-us__field
         textarea#message(
           name="message",
@@ -42,18 +44,23 @@ section.container.projectContact
           maxlength="5000",
           required
         )
-        span Tell us about your project *
+        span(data-i18n="contact.input_tell_us") Tell us about your project *
         small#messageLength 0/5000
       label.projectContact__file
         img(src="../icons/attach-black.svg", alt="alt")
-        span#filelist Attach files
+        span#filelist(data-i18n="contact.attach_files") Attach files
         input#file(type="file", name="file") 
-      button.btn.btn_size_m.projectContact__submitBtn(type="submit") Discuss project
+      button.btn.btn_size_m.projectContact__submitBtn(
+        type="submit",
+        data-i18n="home.discuss_the_project"
+      ) Discuss project
     .projectContact__info
-      p.projectContact__infoText Do you have any ideas to develop? Fill this form or contact us for discussion about your digital wishes.
-      p.projectContact__infoLink Email
+      p.projectContact__infoText(data-i18n="contact.do_you_have_any_ideas") Do you have any ideas to develop? Fill this form or contact us for discussion about your digital wishes.
+      p.projectContact__infoLink
+        span(data-i18n="contact.email") Email
         a(href="mailto:contact@unistory.app") Contact@unistory.app
-      p.projectContact__infoLink Phone
+      p.projectContact__infoLink
+        span(data-i18n="contact.phone") Phone
         a(href="tel:+7 981 101 1104") +7 981 101 1104
       .projectContact__infoSocial 
         a(href="https://t.me/funnyorangecat", target="_blank")
