@@ -79,10 +79,7 @@ html(lang="en")
               li
                 a(href="javascript:;", data-tag) #Web 3.0
             a.case-card__img(href="./xillion.pug")
-              img.case-card__img-bg(
-                src="../img/xillion/case.jpg",
-                alt="Heist"
-              )
+              img.case-card__img-bg(src="../img/xillion/case.jpg", alt="Heist")
             h3.case-card__title Xillion
           article.cases-section__item.case-card.case-card_animation_scale(
             data-category="#Analytics,#NFT,#Web 3.0,#Stacking,#Blockchain projects,#Back-end,#Front-end"
@@ -162,14 +159,14 @@ html(lang="en")
               ) 
               .case-card__info 
                 .case-card__price 
-                  .case-card__subtitle Development time:
-                  | 2 months
+                  .case-card__subtitle(data-i18n="portfolio.development_time")
+                  span(data-i18n="portfolio.sipsignal_time") 2 months
                 .case-card__stack
-                  .case-card__subtitle Stack:
+                  .case-card__subtitle(data-i18n="portfolio.stack")
                   | Angular, TypeScript, Node.js, Express.js
                 .case-card__description 
-                  .case-card__subtitle Description:
-                  | A platform built for the US internet fax leader. The project uses a lot of modern technologies, such as SPA elements and complex server calculations. A customized administrative panel was created to control and add subscriptions/products.
+                  .case-card__subtitle(data-i18n="portfolio.description")
+                  span(data-i18n="portfolio.sipsignal_descr")
             h3.case-card__title SipSignal
           article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#NFT,#Design,#Web 3.0"
@@ -204,15 +201,15 @@ html(lang="en")
               )
               .case-card__info 
                 .case-card__price 
-                  .case-card__subtitle Development time:
-                  | 3 weeks
+                  .case-card__subtitle(data-i18n="portfolio.development_time") Development time:
+                  span(data-i18n="portfolio.puzzle_time") 3 weeks
                 .case-card__stack
-                  .case-card__subtitle Stack:
+                  .case-card__subtitle(data-i18n="portfolio.stack") Stack:
                   |
                   | React.js, Express.js, ImmutableX
                 .case-card__description 
-                  .case-card__subtitle Description:
-                  | Puzzle themed NFT project. The project has a lot of beautiful and smooth animations that improve the user experience while on the site. We used the Immutable X blockchain, popular among NFT projects, known for its extremely low gas price.
+                  .case-card__subtitle(data-i18n="portfolio.description") Description:
+                  span(data-i18n="portfolio.puzzle_descr")
             h3.case-card__title Puzzle People
 
           article.cases-section__item.case-card.case-card_animation_flip(
@@ -233,15 +230,14 @@ html(lang="en")
               img.case-card__img-rb_v4(src="../img/rau-rb.png", alt="Rauberg")
               .case-card__info 
                 .case-card__price 
-                  .case-card__subtitle Development time:
-                  |
-                  | 3 weeks
+                  .case-card__subtitle(data-i18n="portfolio.development_time") Development time:
+                  span(data-i18n="portfolio.rauberg_time") 3 weeks
                 .case-card__stack
-                  .case-card__subtitle Stack:
+                  .case-card__subtitle(data-i18n="portfolio.stack") Stack:
                   | Wordpress, WooCommerce, PHP, MySQL
                 .case-card__description 
-                  .case-card__subtitle Description:
-                  | Website-showcase for Rauberg, a popular manufacturer of household appliances in Russia. The project used a lot of interesting animations, and also created and set up a purchase function directly on the site.
+                  .case-card__subtitle(data-i18n="portfolio.description") Description:
+                  span(data-i18n="portfolio.rauberg_descr")
             h3.case-card__title Rauberg
           article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#eCommerce,#Back-end,#Front-end,#Blockchain projects"
@@ -273,15 +269,14 @@ html(lang="en")
               )
               .case-card__info 
                 .case-card__price 
-                  .case-card__subtitle Development time:
-                  | 3 months
+                  .case-card__subtitle(data-i18n="portfolio.development_time") Development time:
+                  span(data-i18n="portfolio.atlas_time") 3 months
                 .case-card__stack
-                  .case-card__subtitle Stack:
-                  |
+                  .case-card__subtitle(data-i18n="portfolio.stack") Stack:
                   | Angular, TypeScript, d3.js, Node.js, Express.js
                 .case-card__description 
-                  .case-card__subtitle Description:
-                  | Service for creating customized maps of the starry sky. Here you can select the date, time and region of the starry sky to create a picture of the constellations that were above your head at that very moment. Even in our office there is a poster with a starry sky that was above us at the time of the creation of our company :)
+                  .case-card__subtitle(data-i18n="portfolio.description") Description:
+                  span(data-i18n="portfolio.atlas_descr")
             h3.case-card__title Atlas Stars
           article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#NFT,#Smart contracts,#Front-end,#Blockchain projects"
@@ -316,17 +311,14 @@ html(lang="en")
               )
               .case-card__info 
                 .case-card__price 
-                  .case-card__subtitle Development time:
-                  | 1 month
+                  .case-card__subtitle(data-i18n="portfolio.development_time") Development time:
+                  span(data-i18n="portfolio.lobsters_time") 1 month
                 .case-card__stack
-                  .case-card__subtitle Stack:
-                  |
-                  |
+                  .case-card__subtitle(data-i18n="portfolio.stack") Stack:
                   | React.js, Node.js, Solidity, web3.js
                 .case-card__description 
-                  .case-card__subtitle Description:
-                  |
-                  | Lobsters themed NFT project. A one-page project with the possibility of NFT minting right on the site. Most of the proceeds from NFT sales go to ocean exploration and charities. The project was built on the popular Ethereum blockchain, where we used various techniques to reduce the cost of gas.
+                  .case-card__subtitle(data-i18n="portfolio.description") Description:
+                  span(data-i18n="portfolio.lobsters_descr")
             h3.case-card__title Loopy Lobsters
           article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#Design,#DEFI,#Back-end"
@@ -354,18 +346,14 @@ html(lang="en")
               ) 
               .case-card__info 
                 .case-card__price 
-                  .case-card__subtitle Development time:
-                  | 2 months
+                  .case-card__subtitle(data-i18n="portfolio.development_time") Development time:
+                  span(data-i18n="portfolio.3dprint_time") 2 months
                 .case-card__stack
-                  .case-card__subtitle Stack:
-                  |
-                  |
+                  .case-card__subtitle(data-i18n="portfolio.stack") Stack:
                   | React.js, Next.js, Node.js, webpack
                 .case-card__description 
-                  .case-card__subtitle Description:
-                  |
-                  |
-                  | Decentralized store for selling 3D models, pictures and assets. The project uses SPA elements, a customized admin panel and an e-commerce service. The user can add products to the cart and pay directly on the site.
+                  .case-card__subtitle(data-i18n="portfolio.description") Description:
+                  span(data-i18n="portfolio.3dprint_descr")
             h3.case-card__title 3dprint.hk
           article.cases-section__item.case-card.case-card_animation_flip(
             data-category="#Design,#NFT,#Blockchain projects"
@@ -396,22 +384,18 @@ html(lang="en")
               )
               .case-card__info 
                 .case-card__price 
-                  .case-card__subtitle Development time:
-                  | 1,5 months
+                  .case-card__subtitle(data-i18n="portfolio.development_time") Development time:
+                  span(data-i18n="portfolio.cryptofaces_time")
                 .case-card__stack
-                  .case-card__subtitle Stack:
-                  |
-                  |
-                  |
+                  .case-card__subtitle(data-i18n="portfolio.stack") Stack:
                   | React.js, Next.js, Ether.js, web3.js
                 .case-card__description 
-                  .case-card__subtitle Description:
-                  |
-                  |
-                  |
-                  | A one-page NFT project in which we used 3D images. In this project, we also designed and developed beautiful animations that add immersion and interaction to the site. The project was built on the Ethereum blockchain, for which we developed custom smart contracts to reduce the cost of gas.
+                  .case-card__subtitle(data-i18n="portfolio.description") Description:
+                  span(data-i18n="portfolio.cryptofaces_descr")
             h3.case-card__title CryptoFaces
 
     include blocks/footer.pug
+
+    include ./blocks/translation-script.pug
     script(type="module", src="../scripts/categories.js") 
     script(type="module", src="../scripts/menu.js") 

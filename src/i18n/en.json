@@ -1,0 +1,194 @@
+{
+  "head": {
+    "title": "Unistory | Home page",
+    "description": "Home page description"
+  },
+
+  "HEADER": {
+    "SERVICES": "Services",
+    "COMPETENCE": "Competence",
+    "PORTFOLIO": "Portfolio",
+    "ABOUT": "About",
+    "REVIEWS": "Reviews",
+    "CONTACT_US": "Contact us"
+  },
+
+  "home": {
+    "developed_projects": "Developed<br>projects",
+    "of_customers_recommend": "Of customers<br>recommend",
+    "discuss_the_project": "Discuss the project",
+    "success_stories": "Success stories",
+    "from_your_idea": "From your idea to success story",
+    "planning": "Planning",
+    "planning_descr": "We create a well-defined scope of project and help you to visualize your ideas.",
+    "design": "Design",
+    "design_descr": "Design development based on approved wireframes and design guidelines.",
+    "development": "Development",
+    "development_desc": "We cater to the requirement for frontend, backend, web services, and API development integration.",
+    "release": "Release",
+    "release_descr": "We make sure that everything runs, every day, exactly as it should be.",
+    "trusted_by": "Trusted by the best",
+    "review_chang": "Unistory is a great agency. They are the most dedicated and skilled frontend developers I have worked with remotely. Well written code and delivered on time. Highly recommended!",
+    "review_tompson": "Great team of professionals! They always delivered projects on time, clearly processed all tasks, and were easy with the communication. Highly recommended!",
+    "review_parhomenko": "Unistory is a well-managed and structured team, Weekly updates, quick response, and turnaround. I would highly recommend the Unistory team for any project. We are so pleased with the results that we started the second project right away. Thank you guys for your hard work",
+    "review_burton": "The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again"
+  },
+
+  "contact": {
+    "contact_us": "Contact us",
+    "get_in_touch": "Get in touch",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "address_text": "Kazakhstan, Nur-Sultan<br>Ave. Mangilik El. 39",
+    "input_name": "Name *",
+    "input_email": "Email *",
+    "input_phone": "Phone number",
+    "input_tell_us": "Tell us about your project *",
+    "attach_files": "Attach files",
+    "by_submitting": "By submitting your form, you agree to the",
+    "privacy_policy": "Privacy Policy",
+    "rules": "rules.",
+    "have_an_idea": "Have an idea?",
+    "lets_build": "Lets build it together",
+    "do_you_have_any_ideas": "Do you have any ideas to develop? Fill this form or contact us for discussion about your digital wishes.",
+    "mobile_do_you_have_any_ideas": "Do you have any ideas to develop? Fill this form or contact us via <a href='mailto:Contact@unistory.app'>Contact@unistory.app</a> for discussion about your digital wishes."
+  },
+
+  "portfolio": {
+    "development_time": "Development time",
+    "stack": "Stack",
+    "description": "Description",
+    "sipsignal_time": "2 months",
+    "sipsignal_descr": "A platform built for the US internet fax leader. The project uses a lot of modern technologies, such as SPA elements and complex server calculations. A customized administrative panel was created to control and add subscriptions/products.",
+    "puzzle_time": "3 weeks",
+    "puzzle_descr": "Puzzle themed NFT project. The project has a lot of beautiful and smooth animations that improve the user experience while on the site. We used the Immutable X blockchain, popular among NFT projects, known for its extremely low gas price.",
+    "rauberg_time": "3 weeks",
+    "rauberg_descr": "Website-showcase for Rauberg, a popular manufacturer of household appliances in Russia. The project used a lot of interesting animations, and also created and set up a purchase function directly on the site.",
+    "atlas_time": "3 months",
+    "atlas_descr": "Service for creating customized maps of the starry sky. Here you can select the date, time and region of the starry sky to create a picture of the constellations that were above your head at that very moment. Even in our office there is a poster with a starry sky that was above us at the time of the creation of our company :)",
+    "lobsters_time": "1 month",
+    "lobsters_descr": "Lobsters themed NFT project. A one-page project with the possibility of NFT minting right on the site. Most of the proceeds from NFT sales go to ocean exploration and charities. The project was built on the popular Ethereum blockchain, where we used various techniques to reduce the cost of gas.",
+    "3dprint_time": "2 months",
+    "3dprint_descr": "Decentralized store for selling 3D models, pictures and assets. The project uses SPA elements, a customized admin panel and an e-commerce service. The user can add products to the cart and pay directly on the site.",
+    "cryptofaces_time": "1.5 months",
+    "cryptofaces_descr": "A one-page NFT project in which we used 3D images. In this project, we also designed and developed beautiful animations that add immersion and interaction to the site. The project was built on the Ethereum blockchain, for which we developed custom smart contracts to reduce the cost of gas."
+  },
+
+  "footer": {
+    "contacts": "Contacts",
+    "all_rights": "all rights reserved",
+    "privacy_policy": "Privacy Policy"
+  },
+
+  "project": {
+    "time": "Time",
+    "scope": "Scope",
+    "about": "About",
+    "project_goal": "Project goal",
+    "what_we_did": "What we did",
+    "technical_solution": "Technical solution",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "team_stack": "Team & Stack",
+    "other_projects": "Other projects",
+    "explore": "Explore",
+    "challenges_solutions": "Challenges and solutions",
+    "team": "Team",
+    "year": "Year",
+    "stack": "Stack"
+  },
+
+  "team": {
+    "project_manager": "Project manager",
+    "blockchain_developer": "Blockchain developer",
+    "frontend": "Frontend developer",
+    "backend": "Backend developer",
+    "qa_engineer": "QA engineer",
+    "business_analyst": "Business analyst",
+    "mobile_developer": "Mobile developer",
+    "devops": "DevOps engineer"
+  },
+
+  "xillion": {
+    "time": "6 months",
+    "about": "Integration of independent blockchain voting into the project selection platform. Creating a game module of the project with P2E quizzes on the Polygon network. Adding the ability to invest in BNB tokens and project currency (XIL tokens) simultaneously.",
+    "01_title": "Quiz mode",
+    "01_text": "The project Xillion does not stop developing. In the process of development the owners of the project noted the trend of web3-gaming development on the Polygon network. In an effort to improve the product and timely response to changes we created a platform for participation in intelligent Quizzes. Together with the product team we designed and implemented a separate module of the project, working on the Polygon network, where the community can take surveys and receive rewards for participation.",
+    "02_title": "DAO Farm",
+    "02_text": "After investing in DAO projects, each of the investors receives tokens, for the formation of which a smart contract is responsible. It automatically creates new smart contracts that create tokens for each subsequent DAO project.",
+    "03_title": "Voting access",
+    "03_text": "Automated the process of DAO creation and transferred it to the blockchain. Now every user can independently propose his project to the platform. Each proposal is put forward for blockchain voting. The entire community of Xillion project with a stacking balance of at least 10k XIL-tokens takes part in the voting.",
+    "solution": "In order to save the history of the project, voting results, number of investment and investor information, we have developed theGraph, which can work with the old and new blockchain project architecture at the same time.<br><br>The project works simultaneously on two blockchain networks Binance Smart Chain and Polygon. Delimiting access to sections of the site and using ether.js features made it convenient for user to switch from one network to another.<br><br>The project uses proxy architecture for the blockchain part, which allows. In the future it will be possible to scale the project and add new modules, functionality and solutions."
+  },
+
+  "gasmonsters": {
+    "time": "6 months",
+    "about": "The main goal of the project is to develop a website for NFT collection where users can purchase an NFT and then upgrade it by using gas.",
+    "01_title": "Upgradable NFT's",
+    "01_text": "NFT holders have the opportunity to upgrade their NFT dragons from 1st to 7th level. It is a part of gamification and this is really clear and user-friendly mechanic. The NFT upgrade functionality is based on connection with transactions on the mainnet and gas spending: the more transactions you make – than more exp LVL for your NFT you get.",
+    "02_title": "Randomly generated tokens",
+    "02_text": "We used a Chainlink VRF blockchain service to determine NFT layers, which gives out randomized parameters inside the blockchain. Layer data is stored in smart contract as mapping. As a result, this numeric combination - serves as an ID file in the IPFS folder, so no one can manage layers, everything is safe.",
+    "challenge": "For the NFT upgrade, the smart contract needed to get information about the user's spent gas",
+    "solution": "We solved this problem using Pancakeswap. During the smart contract sale, the nft accesses Pancakeswap and asks for liquidity for the BUSD-BNB pair and calculates how much the BNB is worth in dollars. Then, it goes back to Pancakeswap and asks for liquidity for the BNB-ProjectToken pair and calculates how much the project token is worth in BNB."
+  },
+
+  "heist": {
+    "time": "2 months",
+    "goal": "The young blockchain startup needed to create an interesting game <br> on the Binance network in which users could earn project tokens.",
+    "01_title": "Presale",
+    "01_text": "We have implemented pre-sale tokens for a limited number of users from the list sent bythe client. The tokens bought on presale have better characteristics than regular tokens and generate more revenue. In this way, more funds were raised at the initial stage through the FOMO effect.",
+    "02_title": "Upgrade",
+    "02_text": "There can be an unlimited number of nfts in the game. To make the economy of the game more predictable, we implemented the upgrade feature, which allows users to burn 3 nft of the same kind and rarity and get a rarer nft for it.",
+    "03_title": "Stacking",
+    "03_text": "Users can stack (block) project tokens for a certain period of time to make a profit in the future. Stacking is implemented with nodes in the form of nft. There are several types of nodes and bring different income. Nodes can be improved, destroyed, as well as just to take income from them.",
+    "challenge": "The customer wanted all actions, purchases, and winnings to be counted in dollars.",
+    "solution": "We solved this problem using Pancakeswap. During the smart contract sale, the nft accesses Pancakeswap and asks for liquidity for the BUSD-BNB pair and calculates how much the BNB is worth in dollars. Then, it goes back to Pancakeswap and asks for liquidity for the BNB-ProjectToken pair and calculates how much the project token is worth in BNB."
+  },
+
+  "personal": {
+    "time": "6 months",
+    "about": "A search engine for businesses that helps bring to gather all resumes in one place, facilitates communication with candidates, and has synchronization with job search platforms.",
+    "01_title": "Integration with HR services",
+    "01_text": "We integrate job posting services into one app. Our integrations allow app users to retrieve candidate resumes from a variety of sources.",
+    "02_title": "An opportunity to invite to meetings with custom templates",
+    "02_text": "With this option, the user can create a template and send it to all candidates. This option helps to save time and make it easier to process a large number of offers. It is important as time optimization is initial for any business.",
+    "03_title": "Built-in chat that shows all messages from other services",
+    "03_text": "In order to make the flow more convenient, we've created a built-in chat in which our users are able to communicate with candidates from all sources.",
+    "challenges_1": "Make job postings in different services.<br>We have unified the requirements for jobs from all services, allowing us to give our users the option of filling out only our form.",
+    "challenges_2": "Gathering prompts for making up vacancies.<br>We parsed over ten thousand different job postings and used statistical analysis to collect the most frequently listed requirements. This made it possible to make smart prompts for all kinds of vacancies."
+  },
+
+  "sipsignal": {
+    "how_we": "How we <span>automated sales</span><span> for more customers and less costs</span>",
+    "whats_this": "What's this?",
+    "about": "<span>eCommerce application</span> that allows user <span>to select and purchase</span> cloud and telecom services. The application is integrated with the client's DataBases and CRMs for easy user management.",
+    "how_it_was": "How is was",
+    "problem_title": "Problem",
+    "problem_text": "The customer was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased costs",
+    "solution_title": "Solution",
+    "solution_text": "It is necessary to create a website where users can select the product they are interested in and specify all the necessary information for its purchase",
+    "result_title": "Result",
+    "result_text": "The application went on the market. The amount of time spent during the sale of the organization's employees reduced by 50%",
+    "workflow": "Workflow",
+    "analyst_stage": "Analyst stage",
+    "product_research": "Product research",
+    "technical_documentation": "Technical documentation",
+    "development_stage": "Development stage",
+    "frontend_backend": "Frontend & Backend",
+    "testing": "Testing",
+    "release_stage": "Release stage",
+    "release": "Release",
+    "support": "Support",
+    "application_overview": "Application overview",
+    "overview_1_title": "Subscription purchase",
+    "overview_1_text": "The user can choose the desired product in the required quantity <br> Everything on this page is controlled by the administrator",
+    "results": "Results",
+    "result_1": "The application is out on the market and working properly",
+    "result_2": "Business objectives were met",
+    "result_3": "Continuing to work with customer to support the site",
+    "result_4": "Customer is satisfied with the results",
+    "review_title": "Good job guys!",
+    "review_text": "Unistory is a well-managed and structured team, Weekly updates, quick response, and turnaround. I would highly recommend the Unistory team for any project. We are so pleased with the results that we started the second project right away. Thank you guys for your hard work."
+  }
+}

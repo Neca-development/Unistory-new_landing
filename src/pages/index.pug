@@ -35,7 +35,7 @@ html(lang="en")
               .advantage__left 
                 span#developedProjects 60+
                 span 60+
-              .advantage__right
+              .advantage__right(data-i18n="[html]home.developed_projects")
                 | Developed
                 br
                 | projects
@@ -44,12 +44,13 @@ html(lang="en")
               .advantage__left
                 span#repeatCustomers 88%
                 span 88%
-              .advantage__right
+              .advantage__right(data-i18n="[html]home.of_customers_recommend")
                 | Of customers
                 br
                 | recommend
         button.btn.btn_animated_blue.btn_size_l.welcome__contact-btn(
-          scroll-to="contactUs"
+          scroll-to="contactUs",
+          data-i18n="home.discuss_the_project"
         ) Discuss the project
     .tags-slider
       .marquee
@@ -90,7 +91,7 @@ html(lang="en")
           a.marquee__tag(href="javascript:;", data-tag) #Web 3.0
     section.cases-section
       .container 
-        h2#competence.title Success stories
+        h2#competence.title(data-i18n="home.success_stories") Success stories
         .cases-section__grid 
           article.cases-section__item.case-card.case-card_animation_scale
             ul.case-card__tags 
@@ -148,31 +149,31 @@ html(lang="en")
             h3.case-card__title Xillion
     section#about.project-road 
       .container
-        h2.title From your idea to success story
+        h2.title(data-i18n="home.from_your_idea") From your idea to success story
         ul.project-road__list 
           li.project-road__item 
             .project-road__icon
               img(src="../icons/services/planning.svg")
-            h3.project-road__subtitle Planning
-            p.project-road__desc We create a well-defined scope of project and help you to visualize your ideas.
+            h3.project-road__subtitle(data-i18n="home.planning") Planning
+            p.project-road__desc(data-i18n="home.planning_descr") We create a well-defined scope of project and help you to visualize your ideas.
           li.project-road__item 
             .project-road__icon
               img(src="../icons/services/design.svg")
-            h3.project-road__subtitle Design
-            p.project-road__desc Design development based on approved wireframes and design guidelines.
+            h3.project-road__subtitle(data-i18n="home.design") Design
+            p.project-road__desc(data-i18n="home.design_descr") Design development based on approved wireframes and design guidelines.
           li.project-road__item 
             .project-road__icon
               img(src="../icons/services/development.svg")
-            h3.project-road__subtitle Development
-            p.project-road__desc We cater to the requirement for frontend, backend, web services, and API development integration.
+            h3.project-road__subtitle(data-i18n="home.development") Development
+            p.project-road__desc(data-i18n="home.development_descr") We cater to the requirement for frontend, backend, web services, and API development integration.
           li.project-road__item 
             .project-road__icon
               img(src="../icons/services/release.svg")
-            h3.project-road__subtitle Release
-            p.project-road__desc We make sure that everything runs, every day, exactly as it should be.
+            h3.project-road__subtitle(data-i18n="home.release") Release
+            p.project-road__desc(data-i18n="home.release_descr") We make sure that everything runs, every day, exactly as it should be.
     section#reviews.testimonials
       .container
-        h2.title Trusted by the best
+        h2.title(data-i18n="home.trusted_by") Trusted by the best
         .slider
           .slider__pagination
           .slider__cards
@@ -182,9 +183,7 @@ html(lang="en")
                   img(src="../img/reviews/Daniel Chang.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client4.png", alt="company")
-                  p
-                    |
-                    |
+                  p(data-i18n="home.review_chang")
                     | Unistory is a great agency. They are the most dedicated and skilled frontend developers I have worked with remotely. Well written code and delivered on time. Highly recommended!
                   h3 Daniel Chang
                   h4 CEO &quot;3DPRINT.HK&quot;
@@ -194,7 +193,7 @@ html(lang="en")
                   img(src="../img/reviews/Alexander Tompson.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client-logo.png", alt="company")
-                  p
+                  p(data-i18n="home.review_tompson")
                     | Great team of professionals! They always delivered projects on time, clearly processed all tasks, and were easy with the communication. Highly recommended!
                   h3 Alexander Tompson
                   h4 CEO &quot;THE RANGERS NFT&quot;
@@ -204,7 +203,7 @@ html(lang="en")
                   img(src="../img/reviews/Bogdan Parhomenko.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client-logo.png", alt="company")
-                  p
+                  p(data-i18n="home.review_parhomenko")
                     | Unistory is a well-managed and structured team, Weekly updates, quick response, and turnaround. I would highly recommend the Unistory team for any project. We are so pleased with the results that we started the second project right away. Thank you guys for your hard work
                   h3 Bogdan Parhomenko
                   h4 CEO &quot;SIPSIGNAL&quot;
@@ -214,7 +213,7 @@ html(lang="en")
                   img(src="../img/reviews/Jamie Burton.jpg", alt="client")
                 .slide-block__text
                   //- img(src="../icons/client-logo.png", alt="company")
-                  p
+                  p(data-i18n="home.review_burton")
                     | The agreed upon project specification was fulfilled without problems. The contractor was very flexible and adaptive to improvements and changes from our side. It took a bit longer than anticipated, but all within reasonable limits. The communication was very open, clear and responsive. All in all, clear recommendation and hoping to work with them again
                   h3 Jamie Burton
                   h4 CEO &quot;CryptoAnonymous&quot;
@@ -262,22 +261,22 @@ html(lang="en")
     //-       .partnership-marquee__tag.outline More coming soon
     #contactUs.contact-us 
       .container 
-        h2.title Contact us
+        h2.title(data-i18n="contact.contact_us") Contact us
         .contact-us__wrap 
           .contact-us__details 
-            h3.contact-us__subtitle Get in touch
+            h3.contact-us__subtitle(data-i18n="contact.get_in_touch") Get in touch
             .contact-us__item 
-              b Phone
+              b(data-i18n="contact.phone") Phone
               br
               a(href="tel:+7 981 101 1104") +7 981 101 1104
             .contact-us__item 
-              b Email
+              b(data-i18n="contact.email") Email
               br
               a(href="mailto:contact@unistory.app") contact@unistory.app
             .contact-us__item 
-              b Address
+              b(data-i18n="contact.address") Address
               br
-              p Kazakhstan, Nur-Sultan
+              p(data-i18n="[html]contact.address_text") Kazakhstan, Nur-Sultan
                 br 
                 | Ave. Mangilik El. 39
           form#contactForm.contact-us__form(enctype="multipart/form-data")
@@ -292,7 +291,7 @@ html(lang="en")
                   placeholder="Name",
                   required
                 )
-                span Name *
+                span(data-i18n="contact.input_name")
               label.contact-us__field
                 input#emailInput(
                   type="email",
@@ -301,7 +300,7 @@ html(lang="en")
                   placeholder="Email",
                   required
                 )
-                span Email *
+                span(data-i18n="contact.input_email")
               label.contact-us__field
                 input#phoneInput(
                   type="tel",
@@ -309,7 +308,7 @@ html(lang="en")
                   autocomplete="tel",
                   placeholder="Phone number"
                 )
-                span Phone number
+                span(data-i18n="contact.input_phone")
               label.contact-us__field
                 textarea#message(
                   name="message",
@@ -319,18 +318,26 @@ html(lang="en")
                   maxlength="5000",
                   required
                 )
-                span Tell us about your project *
+                span(data-i18n="contact.input_tell_us")
                 small#messageLength 0/5000
               label.contact-us__file
                 img(src="../icons/attach.svg", alt="alt")
-                span#filelist Attach files
+                span#filelist(data-i18n="contact.attach_files") Attach files
                 input#file(type="file", name="file") 
-            button.btn.btn_animated_white.btn_size_l(type="submit") Discuss the project
-            p.contact-us__description By submitting your form, you agree to&nbsp;
-              a#privacyPolicyForm(href="javascript:;") the Privacy Policy
-              | &nbsp;rules.
+            button.btn.btn_animated_white.btn_size_l(
+              type="submit",
+              data-i18n="home.discuss_the_project"
+            ) Discuss the project
+            .contact-us__description
+              p(data-i18n="contact.by_submitting")
+              a#privacyPolicyForm(
+                href="javascript:;",
+                data-i18n="contact.privacy_policy"
+              ) 
+              p(data-i18n="contact.rules")
 
     include ./blocks/footer.pug
+    include ./blocks/translation-script.pug
     script(type="module", src="../scripts/slider.js") 
     script(type="module", src="../scripts/categories.js") 
     script(type="module", src="../scripts/smooth-scroll.js") 
