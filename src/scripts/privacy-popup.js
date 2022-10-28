@@ -10,25 +10,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const bg = document.querySelector(".privacy-popup__close_bg");
   const cross = document.querySelector(".privacy-popup__cross");
 
+  function openPopup() {
+    privacyPopup.style.display = "block";
+    bg.style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closePopup() {
+    privacyPopup.style.display = "none";
+    bg.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
   if (privacyLinkForm) {
     privacyLinkForm.addEventListener("click", () => {
-      privacyPopup.style.display = "block";
-      bg.style.display = "block";
+      openPopup();
     });
   }
 
   privacyLinkFooter.addEventListener("click", () => {
-    privacyPopup.style.display = "block";
-    bg.style.display = "block";
+    openPopup();
   });
 
   cross.addEventListener("click", () => {
-    privacyPopup.style.display = "none";
-    bg.style.display = "none";
+    closePopup();
   });
 
   bg.addEventListener("click", () => {
-    privacyPopup.style.display = "none";
-    bg.style.display = "none";
+    closePopup();
   });
 });
