@@ -10,18 +10,6 @@ module.exports = {
       'sans': ['Manrope', 'sans-serif'],
       'roboto': ['Roboto', 'sans-serif']
     },
-    fontSize:{
-      'h1': ['4.75rem', {
-        lineHeight: '5.375rem',
-        letterSpacing: '0.02em',
-        fontWeight: '800',
-      }],
-      'h2': ['2.875rem', {
-        lineHeight: '3.25rem',
-        letterSpacing: '0.02em',
-        fontWeight: '700',
-      }]
-    },
     colors: {
       'light-bg': '#F5F5F5',
       'dark-bg': '#141414',
@@ -49,6 +37,20 @@ module.exports = {
       'loading': "#64B2DD",
       "warning": "#F2B235",
       
+    },
+    extend: {
+      fontSize: {
+        'h1': ['4.75rem', {
+          lineHeight: '5.375rem',
+          letterSpacing: '0.02em',
+          fontWeight: '800',
+        }],
+        'h2': ['2.875rem', {
+          lineHeight: '3.25rem',
+          letterSpacing: '0.02em',
+          fontWeight: '700',
+        }]
+      }
     },
   },
   plugins: [],

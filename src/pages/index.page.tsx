@@ -1,6 +1,6 @@
-import { Meta } from "@shared/meta";
-import { Hero } from "@shared/ui";
-import { Layout } from "@widgets/layout";
+import { Meta } from '@shared/meta'
+import { Hero } from '@shared/ui'
+import { Layout } from '@widgets/layout'
 
 export function Home() {
   return (
@@ -11,7 +11,7 @@ export function Home() {
       </Layout.Main>
       <Layout.Footer />
     </Layout>
-  );
+  )
 }
 
-export default Home;
+export default Home

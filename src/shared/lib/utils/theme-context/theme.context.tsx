@@ -1,34 +1,28 @@
-import {
-  createContext,
-  useState,
-  useMemo,
-  useContext,
-  Dispatch,
-  SetStateAction,
-} from "react";
+import type { Dispatch, SetStateAction } from 'react'
+import { createContext, useContext, useState } from 'react'
 
-export type TTheme = "winter" | "summer";
+export type TTheme = 'winter' | 'summer'
 
 export interface IThemeContext {
-  temperatureTheme: TTheme;
-  setTemperatureTheme: Dispatch<SetStateAction<TTheme>>;
+  temperatureTheme: TTheme
+  setTemperatureTheme: Dispatch<SetStateAction<TTheme>>
   textClassName: {
-    [className: string]: boolean;
-  };
+    [className: string]: boolean
+  }
 }
 
 export const ThemeContext = createContext<IThemeContext>({
   setTemperatureTheme: () => {},
-  temperatureTheme: "summer",
+  temperatureTheme: 'summer',
   textClassName: {
-    "dark:text-primary-s": true,
-    "text-primary-s": true,
-    "text-light-text-primary": false,
+    'dark:text-primary-s': true,
+    'text-primary-s': true,
+    'text-light-text-primary': false,
   },
-});
+})
 
 export const ThemeContextProvider = ({ children }: any) => {
-  const [temperatureTheme, setTemperatureTheme] = useState<TTheme>("summer");
+  const [temperatureTheme, setTemperatureTheme] = useState<TTheme>('summer')
 
   return (
     <ThemeContext.Provider
@@ -36,17 +30,17 @@ export const ThemeContextProvider = ({ children }: any) => {
         setTemperatureTheme,
         temperatureTheme,
         textClassName: {
-          "dark:text-primary-s": true,
-          "text-primary-s": temperatureTheme === "winter",
-          "text-light-text-primary": temperatureTheme !== "winter",
+          'dark:text-primary-s': true,
+          'text-primary-s': temperatureTheme === 'winter',
+          'text-light-text-primary': temperatureTheme !== 'winter',
         },
       }}
     >
       {children}
     </ThemeContext.Provider>
-  );
-};
+  )
+}
 
 export const useThemeContext = () => {
-  return useContext(ThemeContext);
-};
+  return useContext(ThemeContext)
+}
