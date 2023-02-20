@@ -29,6 +29,10 @@ module.exports = {
       // 'secondary-text': "#404040",
       // 'secondary-text--disable': "#7A798A",
 
+      'bg-s': 'var(--color-bg)',
+
+      'bg-hover': '#0F1A200D',
+
       'primary-accent': "",
       'secondary-accent': "",    
 
@@ -36,7 +40,9 @@ module.exports = {
       'error': "#D44C4C",
       'loading': "#64B2DD",
       "warning": "#F2B235",
-      
+
+      'light-surface': '#fff',
+      'dark-surface': '#222222',      
     },
     extend: {
       fontSize: {

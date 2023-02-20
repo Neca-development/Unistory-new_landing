@@ -45,13 +45,14 @@
 }
 
 .container {
-  // @apply w-full md:px-5 xl:px-20 py-4 mx-auto;
   @apply w-full sm:px-[1rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[5rem] mx-auto;
 }
 
 .winter {
   --color-text: #4fccd5;
+  --color-bg: rgba(79, 204, 213, 0.1);
 }
 .summer {
   --color-text: #ec5f3b;
+  --color-bg: rgba(236, 95, 59, 0.1);
 }

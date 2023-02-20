@@ -1,5 +1,5 @@
 import { Meta } from '@shared/meta'
-import { Hero } from '@shared/ui'
+import { Hero, Services } from '@shared/ui'
 import { Layout } from '@widgets/layout'
 
 export function Home() {
@@ -8,6 +8,7 @@ export function Home() {
       <Layout.Header />
       <Layout.Main>
         <Hero />
+        <Services />
       </Layout.Main>
       <Layout.Footer />
     </Layout>

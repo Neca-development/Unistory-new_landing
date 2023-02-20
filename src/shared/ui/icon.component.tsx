@@ -10,6 +10,9 @@ const summer = dynamic(() => import('@public/assets/icons/summer.svg'))
 const earth = dynamic(() => import('@public/assets/icons/earth.svg'))
 const rocket = dynamic(() => import('@public/assets/icons/rocket.svg'))
 const cloud = dynamic(() => import('@public/assets/icons/cloud.svg'))
+const grid = dynamic(() => import('@public/assets/icons/grid.svg'))
+const layout = dynamic(() => import('@public/assets/icons/layout.svg'))
+const folder = dynamic(() => import('@public/assets/icons/folder.svg'))
 
 const iconTypes = {
   unistory,
@@ -21,6 +24,9 @@ const iconTypes = {
   earth,
   rocket,
   cloud,
+  grid,
+  layout,
+  folder,
 }
 
 export type IconsTypes = keyof typeof iconTypes
