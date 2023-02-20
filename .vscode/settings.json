@@ -5,7 +5,7 @@
     "package-lock.json": true
   },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
     "source.fixAll.eslint"
@@ -49,5 +49,8 @@
     "styles.ts": "variants.ts, keyframes.ts",
     "index.tsx": "data.ts, utils.ts, data.tsx",
     "index.ts": "data.ts, utils.ts, data.tsx, interfaces.ts"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

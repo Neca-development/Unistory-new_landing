@@ -1,11 +1,11 @@
 :root {
-  --frame-bg-color: #FFFFFF;
+  --frame-bg-color: #F5F5F5;
   --page-bg-color: #EDEDED;
 
   --primary-color: ;
   --primary-hover-color: ;
 
-  --primary-text-color: #1A1A1A;
+  --primary-text-color: #0F1A20;
   --primary-hover-text-color: ;
 
   --primary-border-color: ;
@@ -25,13 +25,13 @@
 }
 
 [data-theme='dark'] {
-  --frame-bg-color: #1b1b1b;
+  --frame-bg-color: #141414;
   --page-bg-color: #000000;
 
   --primary-color: ;
   --primary-hover-color: ;
 
-  --primary-text-color: ;
+  --primary-text-color: #FFFFFF;
   --primary-hover-text-color: ;
 
   --primary-border-color: ;
