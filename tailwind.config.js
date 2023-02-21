@@ -42,7 +42,10 @@ module.exports = {
       "warning": "#F2B235",
 
       'light-surface': '#fff',
-      'dark-surface': '#222222',      
+      'dark-surface': '#222222', 
+      
+      'pale-text': '#ffffffe5',
+      'black-text': '#0F1A20'
     },
     extend: {
       fontSize: {
@@ -56,8 +59,28 @@ module.exports = {
           letterSpacing: '0.02em',
           fontWeight: '700',
         }]
+      },
+      backgroundImage: {
+        'noise': "url('/assets/images/noise.png')",
+        'card_bg_stat_service': "url('/assets/images/cases/stat-service.jpg')",
+        'card_bg_cloud_cash': "url('/assets/images/cases/cloud-cash.jpg')",
+        'card_bg_game_platform': "url('/assets/images/cases/game-platform.jpg')",
+        'card_bg_gas_monsters': "url('/assets/images/cases/gas-monsters.jpg')",
+        'card_bg_personal': "url('/assets/images/cases/personal.jpg')",
+        'card_bg_rzhd': "url('/assets/images/cases/rzhd.jpg')",
+        'card_bg_safety_platform': "url('/assets/images/cases/safety-platform.jpg')",
       }
     },
   },
+  safelist: [
+    'bg-card_bg_stat_service',
+    'bg-card_bg_cloud_cash',
+    'bg-card_bg_game_platform',
+    'bg-card_bg_gas_monsters',
+    'bg-card_bg_personal',
+    'bg-card_bg_rzhd',
+    'bg-card_bg_safety_platform',
+  ],
   plugins: [],
+  
 };

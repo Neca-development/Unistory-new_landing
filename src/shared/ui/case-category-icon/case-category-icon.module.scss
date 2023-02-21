@@ -1,0 +1,22 @@
+.box {
+  @apply rounded-sm w-10 p-1 opacity-80 relative overflow-hidden;
+
+  &::before {
+    content: "";
+    @apply bg-[#ffffff33] blur-[1.25rem] absolute top-0 bottom-0 left-0 right-0;
+  }
+}
+
+.icon {
+  &_white {
+    & path {
+      stroke: theme("colors.pale-text");
+    }
+  }
+
+  &_black {
+    & path {
+      stroke: theme("colors.black-text");
+    }
+  }
+}

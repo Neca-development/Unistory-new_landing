@@ -13,6 +13,11 @@ const cloud = dynamic(() => import('@public/assets/icons/cloud.svg'))
 const grid = dynamic(() => import('@public/assets/icons/grid.svg'))
 const layout = dynamic(() => import('@public/assets/icons/layout.svg'))
 const folder = dynamic(() => import('@public/assets/icons/folder.svg'))
+const phone01 = dynamic(() => import('@public/assets/icons/phone-01.svg'))
+const phone02 = dynamic(() => import('@public/assets/icons/phone-02.svg'))
+const monitor = dynamic(() => import('@public/assets/icons/monitor.svg'))
+const bitcoin = dynamic(() => import('@public/assets/icons/bitcoin.svg'))
+const arrowRight = dynamic(() => import('@public/assets/icons/arrow-right.svg'))
 
 const iconTypes = {
   unistory,
@@ -27,11 +32,17 @@ const iconTypes = {
   grid,
   layout,
   folder,
+  phone01,
+  phone02,
+  monitor,
+  bitcoin,
+  arrowRight,
 }
 
 export type IconsTypes = keyof typeof iconTypes
 
-export interface IIconComponentProperties extends React.SVGAttributes<SVGElement> {
+export interface IIconComponentProperties
+  extends React.SVGAttributes<SVGElement> {
   name: IconsTypes
 }
 
