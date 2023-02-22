@@ -20,6 +20,13 @@ const bitcoin = dynamic(() => import('@public/assets/icons/bitcoin.svg'))
 const arrowRight = dynamic(() => import('@public/assets/icons/arrow-right.svg'))
 const message = dynamic(() => import('@public/assets/icons/message.svg'))
 const clip = dynamic(() => import('@public/assets/icons/clip.svg'))
+const logoDarkOutline = dynamic(
+  () => import('@public/assets/icons/logo-dark-outline.svg')
+)
+const telegram = dynamic(() => import('@public/assets/icons/telegram.svg'))
+const whatsApp = dynamic(() => import('@public/assets/icons/whatsApp.svg'))
+const clutch = dynamic(() => import('@public/assets/icons/clutch.svg'))
+const upwork = dynamic(() => import('@public/assets/icons/upwork.svg'))
 
 const iconTypes = {
   unistory,
@@ -41,6 +48,11 @@ const iconTypes = {
   arrowRight,
   message,
   clip,
+  logoDarkOutline,
+  telegram,
+  whatsApp,
+  clutch,
+  upwork,
 }
 
 export type IconsTypes = keyof typeof iconTypes

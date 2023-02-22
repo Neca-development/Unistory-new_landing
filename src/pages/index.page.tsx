@@ -16,7 +16,7 @@ export function Home() {
         <Reviews />
         <Connect />
       </Layout.Main>
-      <Layout.Footer />
+      <Layout.Footer showAddress />
     </Layout>
   )
 }
