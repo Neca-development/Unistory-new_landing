@@ -27,7 +27,7 @@
   }
 
   body {
-    @apply font-sans;
+    @apply font-sans text-light-text-primary dark:text-dark-text-primary;
     font-size: 1rem;
     margin: 0;
     -webkit-font-smoothing: antialiased;

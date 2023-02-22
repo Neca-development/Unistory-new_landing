@@ -1,0 +1,49 @@
+.wrapper {
+  @apply flex items-center relative cursor-pointer;
+
+  & > input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .checkmark {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-75%);
+  left: 0;
+  height: 1.125rem;
+  width: 1.125rem;
+  background-color: transparent;
+  margin: 0.25rem;
+  border: 0.125rem solid theme("colors.dark-text-secondary");
+  border-radius: 0.125rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 0.25rem;
+    top: -0.05rem;
+    width: 0.5rem;
+    height: 0.8rem;
+    border: solid theme("colors.primary-s");
+    border-width: 0 0.1875rem 0.1875rem 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.name {
+  margin-left: calc(1.75rem + 0.5rem);
+}

@@ -30,7 +30,7 @@
         "project": "./tsconfig.json"
       },
       "rules": {
-        "avoidEscape": true,
+        "avoidEscape": 1,
         "allowTemplateLiterals": true,
 
         "prettier/prettier": [

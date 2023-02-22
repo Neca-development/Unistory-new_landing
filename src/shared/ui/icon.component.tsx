@@ -19,6 +19,7 @@ const monitor = dynamic(() => import('@public/assets/icons/monitor.svg'))
 const bitcoin = dynamic(() => import('@public/assets/icons/bitcoin.svg'))
 const arrowRight = dynamic(() => import('@public/assets/icons/arrow-right.svg'))
 const message = dynamic(() => import('@public/assets/icons/message.svg'))
+const clip = dynamic(() => import('@public/assets/icons/clip.svg'))
 
 const iconTypes = {
   unistory,
@@ -39,6 +40,7 @@ const iconTypes = {
   bitcoin,
   arrowRight,
   message,
+  clip,
 }
 
 export type IconsTypes = keyof typeof iconTypes

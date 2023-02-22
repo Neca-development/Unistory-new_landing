@@ -39,7 +39,6 @@ export function Principles() {
         {principleTitles.map((t, index) => (
           <>
             <button
-              key={index}
               className={clsx(
                 'text-2xl p-2 font-medium',
                 activeIdx === index && 'text-primary-s'

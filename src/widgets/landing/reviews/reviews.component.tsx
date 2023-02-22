@@ -64,7 +64,7 @@ export function Reviews() {
         <WorksCard work={reviewsData[activeReviewIndex].workCard} />
       </div>
 
-      <div className='mt-10 flex space-x-4'>
+      <div className='mt-10 flex space-x-6'>
         {reviewsData.map((r, idx) => (
           <button
             key={idx}
