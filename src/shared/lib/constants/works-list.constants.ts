@@ -69,4 +69,12 @@ export const WORKS_LIST: IWorksListConstant[] = [
     additionalClassnames: 'col-span-2',
     textColor: 'black',
   },
+  {
+    title: 'ЛК Сбербанк',
+    description: 'UX-аналитика, серверная разработка',
+    cardBgClass: 'card_bg_sberbank',
+    icons: ['monitor', 'bitcoin'],
+    link: '/',
+    textColor: 'white',
+  },
 ]

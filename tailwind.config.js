@@ -69,6 +69,7 @@ module.exports = {
         'card_bg_personal': "url('/assets/images/cases/personal.jpg')",
         'card_bg_rzhd': "url('/assets/images/cases/rzhd.jpg')",
         'card_bg_safety_platform': "url('/assets/images/cases/safety-platform.jpg')",
+        'card_bg_sberbank': "url('/assets/images/cases/sberbank.jpg')",
       },
       boxShadow: {
         '8dp': '0px 0px 2px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.08)',
@@ -85,6 +86,7 @@ module.exports = {
     'bg-card_bg_personal',
     'bg-card_bg_rzhd',
     'bg-card_bg_safety_platform',
+    'bg-card_bg_sberbank',
   ],
   plugins: [],
   

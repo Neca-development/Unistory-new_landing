@@ -15,7 +15,7 @@ interface IMessageToggler {
 
 export function MessageToggler(props: IMessageToggler) {
   const { messageData, toggleClassName } = props
-  const [showMessage, setShowMessage] = useState(true)
+  const [showMessage, setShowMessage] = useState(false)
 
   return (
     <div className={clsx(toggleClassName)}>

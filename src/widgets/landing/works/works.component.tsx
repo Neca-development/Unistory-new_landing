@@ -1,8 +1,8 @@
 import { WORKS_LIST } from '@shared/lib'
+import { IconComponent } from '@shared/ui'
 import { WorksCard } from '@widgets/works-card'
 import Link from 'next/link'
 import React from 'react'
-import { IconComponent } from '../../../shared/ui/icon.component'
 
 export function Works() {
   return (
@@ -15,7 +15,7 @@ export function Works() {
         </h2>
 
         <div className='grid grid-cols-3 gap-10 mt-16'>
-          {WORKS_LIST.map((work, index) => (
+          {WORKS_LIST.slice(0, 7).map((work, index) => (
             <WorksCard key={index} work={work} />
           ))}
         </div>
