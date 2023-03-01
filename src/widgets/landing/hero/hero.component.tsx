@@ -9,7 +9,7 @@ const iconClassnameByTheme =
 
 export interface IHeroProperties {}
 
-export function Hero(_props: IHeroProperties) {
+export function Hero() {
   const { textClassName, temperatureTheme, setTemperatureTheme } =
     useThemeContext()
   const { setTheme, theme } = useTheme()
