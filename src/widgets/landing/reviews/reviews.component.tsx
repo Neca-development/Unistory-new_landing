@@ -43,9 +43,11 @@ export function Reviews() {
   return (
     <section className='container pt-20 pb-[7.5rem]'>
       <h2 className='text-5xl font-bold leading-[3.25rem]'>
-        <span className='text-primary-s'>70% клиентов</span> возвращаются
-        <br />
-        с новыми проектами
+        Факт:{' '}
+        <span className='text-primary-s'>
+          9 из 10 клиентов <br /> рекомендуют нас
+        </span>{' '}
+        и вот почему
       </h2>
 
       <div className='grid gap-10 grid-cols-[1fr_25rem] mt-10'>
