@@ -13,6 +13,12 @@ html(lang="en")
       rel="stylesheet",
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
     )
+    script(async='' src='“https://www.googletagmanager.com/gtag/js?id=G-Q3N3QQXJV3”')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag(‘js’, new Date());
+      gtag(‘config’, ‘G-Q3N3QQXJV3’);
   body
     include ./blocks/header.pug
     .personal
