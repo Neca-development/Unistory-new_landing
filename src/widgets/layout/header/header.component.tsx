@@ -1,43 +1,44 @@
-import { ROUTES } from '@shared/lib'
-import { IconComponent } from '@shared/ui'
-import clsx from 'clsx'
-import Link from 'next/link'
-import { useTheme } from 'next-themes'
-import * as React from 'react'
+import { ROUTES } from "@shared/lib";
+import clsx from "clsx";
+import Link from "next/link";
+import * as React from "react";
+import NoSSR from "react-no-ssr";
+import { Logo } from "./logo.component";
 
-export interface IHeaderProperties extends React.ComponentProps<'header'> {}
+export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
 export const Header = React.memo((props: IHeaderProperties) => {
-  const { className, children } = props
-  const { theme } = useTheme()
+	const { className, children } = props;
 
-  return (
-    <header {...props} className={clsx('relative flex w-full', className)}>
-      <div className="container flex justify-between py-4">
-        <Link href={'/'} className="w-[8.625rem]">
-          <IconComponent name={theme === 'dark' ? 'logoDark' : 'logoLight'} />
-        </Link>
+	return (
+		<header {...props} className={clsx("relative flex w-full", className)}>
+			<div className="container flex justify-between py-4">
+				<Link href={"/"} className="w-[8.625rem]">
+					<NoSSR>
+						<Logo />
+					</NoSSR>
+				</Link>
 
-        <div className="flex items-center space-x-10">
-          {ROUTES.map(({ label, route }, index) => {
-            return (
-              <Link
-                key={index}
-                className="text-light-text-secondary dark:text-dark-text-secondary"
-                href={route}
-              >
-                {label}
-              </Link>
-            )
-          })}
-        </div>
+				<div className="flex items-center space-x-10">
+					{ROUTES.map(({ label, route }, index) => {
+						return (
+							<Link
+								key={index}
+								className="text-light-text-secondary dark:text-dark-text-secondary"
+								href={route}
+							>
+								{label}
+							</Link>
+						);
+					})}
+				</div>
 
-        {children}
-      </div>
-    </header>
-  )
-})
+				{children}
+			</div>
+		</header>
+	);
+});
 
-Header.displayName = 'Header'
+Header.displayName = "Header";
 
-export default Header
+export default Header;
