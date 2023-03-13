@@ -8,68 +8,69 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 @layer base {
-  html {
-    font-size: 16px;
+	html {
+		font-size: 16px;
 
-    @media (max-width: 1439px) {
-      font-size: 1.111vw;
-    }
+		@media (max-width: 1439px) {
+			font-size: 1.111vw;
+		}
 
-    @media (max-width: 640px) {
-      font-size: 16px;
-    }
-  }
+		@media (max-width: 640px) {
+			font-size: 16px;
+		}
+	}
 
-  body {
-    @apply font-sans text-light-text-primary dark:text-dark-text-primary;
-    font-size: 1rem;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+	body {
+		@apply font-sans text-light-text-primary dark:text-dark-text-primary;
+		font-size: 1rem;
+		margin: 0;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-  }
+	code {
+		font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+			monospace;
+	}
 
-  a {
-    text-decoration: none;
-    color: var(--primary-text-color);
-  }
+	a {
+		text-decoration: none;
+		color: var(--primary-text-color);
+	}
 }
 
 .container {
-  @apply w-full sm:px-[1rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[5rem] mx-auto;
+	@apply w-full sm:px-[1rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[5rem] mx-auto;
 }
 
 .winter {
-  --color-text: #4fccd5;
-  --color-bg: rgba(79, 204, 213, 0.1);
+	--color-text: #4fccd5;
+	--color-bg: rgba(79, 204, 213, 0.1);
 }
 .summer {
-  --color-text: #ec5f3b;
-  --color-bg: rgba(236, 95, 59, 0.1);
+	--color-text: #ec5f3b;
+	--color-bg: rgba(236, 95, 59, 0.1);
 }
 
 .noise {
-  position: relative;
+	position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("/assets/images/noise.png");
-    background-size: contain;
-    background-repeat: repeat;
-    pointer-events: none;
-  }
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url("/assets/images/noise.png");
+		background-size: contain;
+		background-repeat: repeat;
+		pointer-events: none;
+	}
 }

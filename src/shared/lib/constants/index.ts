@@ -1,2 +1,2 @@
 export * from './routes.constant'
-export * from './works-list.constants'
+export * from './cases.constants'

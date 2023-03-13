@@ -14,14 +14,18 @@ module.exports = {
       'light-bg': '#F5F5F5',
       'dark-bg': '#141414',
 
+      'light-bg-accent': '#FFFFFF',
+      'dark-bg-accent': '#1F1F1F',
+
       'light-text-primary': '#0F1A20',
       'dark-text-primary': '#FFFFFF',
 
       'light-text-secondary': '#0F1A2080',
       'dark-text-secondary': '#FFFFFF80',
-      
+
       'icon-accent': '#0F1A20',
       'icon-on-primary': '#FFFFFFE5',
+
 
       'primary-s': "var(--color-text)",
       // 'primary-text': "#404040",
@@ -34,7 +38,7 @@ module.exports = {
       'bg-hover': '#0F1A200D',
 
       'primary-accent': "",
-      'secondary-accent': "",    
+      'secondary-accent': "",
 
       'success': "#14AE24",
       'error': "#D44C4C",
@@ -42,8 +46,8 @@ module.exports = {
       "warning": "#F2B235",
 
       'light-surface': '#fff',
-      'dark-surface': '#222222', 
-      
+      'dark-surface': '#222222',
+
       'pale-text': '#ffffffe5',
       'black-text': '#0F1A20'
     },
@@ -89,5 +93,5 @@ module.exports = {
     'bg-card_bg_sberbank',
   ],
   plugins: [],
-  
+
 };
