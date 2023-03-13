@@ -1,5 +1,4 @@
 import { ICase } from "@shared/lib/types";
-import { text } from "stream/consumers";
 
 interface ICaseInfoItemProps {
 	data?: ICase["main"][0];
