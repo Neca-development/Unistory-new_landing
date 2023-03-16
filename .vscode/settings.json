@@ -51,5 +51,7 @@
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+	"exportall.config.folderListener": [],
+	"exportall.config.relExclusion": []
 }

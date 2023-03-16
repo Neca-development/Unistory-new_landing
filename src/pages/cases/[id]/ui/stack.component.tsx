@@ -1,10 +1,10 @@
 import { TechnologiesValues } from "@shared/lib/constants/technologies.constats";
 
-interface ITechnologiesProps {
+interface IStackProps {
 	data?: TechnologiesValues[];
 }
 
-export function Technologies({ data }: ITechnologiesProps) {
+export function Stack({ data }: IStackProps) {
 	return (
 		<div className="flex bg-light-bg-accent dark:bg-dark-bg-accent pt-20 mt-[7.5rem] pb-[7.5rem]">
 			<div className="container">
