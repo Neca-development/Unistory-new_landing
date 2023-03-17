@@ -1,7 +1,8 @@
 import { Meta } from '@shared/meta'
 import { Connect } from '@widgets/connect'
 
-import { Hero, Principles, Reviews, Services, Works } from '@widgets/landing'
+import { Hero, Principles, Services, Works } from '@widgets/landing'
+//exitimport {Reviews} from '@widgets/layout'
 import { Layout } from '@widgets/layout'
 
 export function Home() {
