@@ -1,5 +1,4 @@
 import { TechnologiesValues } from '@shared/lib/constants/technologies.constats'
-import Image from 'next/image'
 
 interface IStackProps {
   data?: TechnologiesValues[]
