@@ -58,16 +58,16 @@ export const Footer = React.memo((props: IFooterProperties) => {
               Из классной идеи <br /> в безумно отличный продукт
             </h4>
             <div className='flex items-center space-x-6 opacity-50'>
-              <a href='https://t.me/unistory_app' target='_blank'>
+              <a rel='nofollow' href='https://t.me/unistory_app' target='_blank'>
                 <IconComponent name='telegram' className='w-6' />
               </a>
-              <a href='https://wa.me/89117417477' target='_blank'>
+              <a rel='nofollow' href='https://wa.me/89117417477' target='_blank'>
                 <IconComponent name='whatsApp' className='w-6' />
               </a>
-              <a href='https://clutch.co/profile/unistory' target='_blank'>
+              <a rel='nofollow' href='https://clutch.co/profile/unistory' target='_blank'>
                 <IconComponent name='clutch' className='w-[4.375rem]' />
               </a>
-              <a href='https://www.upwork.com/ag/unistory/' target='_blank'>
+              <a rel='nofollow' href='https://www.upwork.com/ag/unistory/' target='_blank'>
                 <IconComponent name='upwork' className='w-20' />
               </a>
             </div>
