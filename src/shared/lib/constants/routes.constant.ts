@@ -5,18 +5,18 @@ export const ROUTES = [
   },
   {
     label: 'Услуги',
-    route: '/services',
+    route: '/',
   },
   {
     label: 'О компании',
-    route: '/about',
+    route: '/',
   },
   {
     label: 'Контакты',
-    route: '/contacts',
+    route: '/',
   },
   {
     label: 'Стать клиентом',
-    route: '/client',
+    route: '/',
   },
 ]

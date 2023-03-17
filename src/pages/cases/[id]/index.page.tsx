@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { CaseMainInfo } from './ui/case-main-info.component'
 import { CaseHero } from './ui/hero.component'
 import OtherCases from './ui/other-cases.component'
+import CaseReview from './ui/review.component'
 import { Stack } from './ui/stack.component'
 import { Team } from './ui/team.component'
 
@@ -27,6 +28,7 @@ export function Case() {
         <CaseHero data={caseData!} />
         <Stack data={caseData?.technologies} />
         <CaseMainInfo data={caseData?.main} />
+        {caseData?.review && <CaseReview data={caseData} />}
         <Team data={caseData?.team} />
         <OtherCases currentId={id} />
         <Connect />

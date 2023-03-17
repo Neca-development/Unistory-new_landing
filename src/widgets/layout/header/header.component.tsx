@@ -1,7 +1,7 @@
 import { ROUTES } from '@shared/lib'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import * as React from 'react'
 import { Logo } from './logo.component'
 
@@ -9,7 +9,7 @@ export interface IHeaderProperties extends React.ComponentProps<'header'> {}
 
 export const Header = React.memo((props: IHeaderProperties) => {
   const { className, children } = props
-  const router = useRouter()
+  // const router = useRouter()
 
   return (
     <header {...props} className={clsx('relative flex w-full', className)}>
@@ -24,9 +24,10 @@ export const Header = React.memo((props: IHeaderProperties) => {
               <Link
                 key={index}
                 className={clsx(
-                  router.pathname.startsWith(route)
-                    ? 'text-light-text-primary dark:text-dark-text-primary'
-                    : 'text-light-text-secondary dark:text-dark-text-secondary'
+                  'text-light-text-secondary dark:text-dark-text-secondary'
+                  // router.pathname.startsWith(route)
+                  //   ? 'text-light-text-primary dark:text-dark-text-primary'
+                  //   : 'text-light-text-secondary dark:text-dark-text-secondary'
                 )}
                 href={route}
               >
