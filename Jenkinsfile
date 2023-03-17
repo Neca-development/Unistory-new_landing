@@ -78,8 +78,8 @@ pipeline {
                   echo BRANCH_NAME=${BRANCH_NAME} >> ${ENV_FILE}
                   echo COMPOSE_PROJECT_NAME=${COMPOSE_PROJECT_NAME} >> ${ENV_FILE}
 
-                  if [ "\$(docker-compose port traefik 80)" ]; then
-                    IMAGE_PREVIOUS_PORT="\$(docker-compose port traefik 80 | egrep "[0-9]+\$" -o)"
+                  if [ "\$(docker-compose -f docker-compose.prod.yml port traefik 80)" ]; then
+                    IMAGE_PREVIOUS_PORT="\$(docker-compose -f docker-compose.prod.yml port traefik 80 | egrep "[0-9]+\$" -o)"
                   fi
 
                   if [ -z "\${IMAGE_PREVIOUS_PORT}" ]; then
