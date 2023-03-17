@@ -1,21 +1,22 @@
-export const ROUTES = [{
-  label: 'Кейсы',
-  route: ''
-},
-{
-  label: 'Услуги',
-  route: ''
-},
-{
-  label: 'О компании',
-  route: ''
-},
-{
-  label: 'Контакты',
-  route: ''
-},
-{
-  label: 'Стать клиентом',
-  route: ''
-}
+export const ROUTES = [
+  {
+    label: 'Кейсы',
+    route: '/cases',
+  },
+  {
+    label: 'Услуги',
+    route: '/services',
+  },
+  {
+    label: 'О компании',
+    route: '/about',
+  },
+  {
+    label: 'Контакты',
+    route: '/contacts',
+  },
+  {
+    label: 'Стать клиентом',
+    route: '/client',
+  },
 ]
