@@ -9,7 +9,9 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
     <section className='mb-[7.5rem] last:mb-0'>
       <div className='container'>
         <article className='max-w-[52.5rem]'>
-          <h2 className='font-bold text-[2.875rem]'>{data?.title}</h2>
+          <h2 className='font-bold text-[2.875rem] whitespace-pre-line'>
+            {data?.title}
+          </h2>
           {data?.text?.map((item, idx) => (
             <div key={idx} className='mt-10'>
               <h3 className='font-bold text-3xl mb-5'>{item.subtitle}</h3>

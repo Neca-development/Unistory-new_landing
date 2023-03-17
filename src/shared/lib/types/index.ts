@@ -30,5 +30,14 @@ export interface ICase {
     text: IDescriptionItem[]
     banner: string
   }[]
+  logo?: string
+  review?: {
+    author: {
+      name: string
+      position: string
+      photo: string
+    }
+    text: string
+  }
   team: TeamValues[]
 }

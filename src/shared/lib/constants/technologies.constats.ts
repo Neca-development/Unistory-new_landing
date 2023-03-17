@@ -8,6 +8,9 @@ import chainlinkVrfIcon from '@public/assets/technologies/chainlink-vrf.png'
 import solidityIcon from '@public/assets/technologies/solidity.png'
 import nodeIcon from '@public/assets/technologies/node-v2.png'
 import theGraphIcon from '@public/assets/technologies/the-graph.png'
+import angularIcon from '@public/assets/technologies/angular.png'
+import expressIcon from '@public/assets/technologies/express.png'
+import typescriptIcon from '@public/assets/technologies/typescript.png'
 
 export const TECHNOLOGIES = {
   react: {
@@ -16,7 +19,7 @@ export const TECHNOLOGIES = {
   },
   angular: {
     name: 'Angular',
-    icon: 'angular',
+    icon: angularIcon.src,
   },
   vue: {
     name: 'Vue',
@@ -28,7 +31,7 @@ export const TECHNOLOGIES = {
   },
   express: {
     name: 'Express',
-    icon: 'express',
+    icon: expressIcon.src,
   },
   nest: {
     name: 'Nest',
@@ -61,6 +64,10 @@ export const TECHNOLOGIES = {
   theGraph: {
     name: 'TheGraph',
     icon: theGraphIcon.src,
+  },
+  typescript: {
+    name: 'Typescript',
+    icon: typescriptIcon.src,
   },
 } as const
 
