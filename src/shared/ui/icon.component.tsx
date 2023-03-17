@@ -62,7 +62,9 @@ export interface IIconComponentProperties
   name: IconsTypes
 }
 
-export const IconComponent = ({ name, ...props }: IIconComponentProperties) => {
-  const Icon = iconTypes[name]
-  return <Icon {...props} />
-}
+export const IconComponent = React.memo(
+  ({ name, ...props }: IIconComponentProperties) => {
+    const Icon = iconTypes[name]
+    return <Icon {...props} />
+  }
+)
