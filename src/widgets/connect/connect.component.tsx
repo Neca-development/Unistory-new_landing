@@ -12,10 +12,10 @@ export function Connect() {
           <p className='mt-9 text-2xl leading-10'>
             Заполните форму справа или напишите на{' '}
             <a
-              href='mailto:hello@unistory.team'
+              href='mailto:contact@unistory.app'
               className='text-primary-s font-bold'
             >
-              hello@unistory.team
+              contact@unistory.app
             </a>
             . Мы свяжемся с вами прямо сейчас!
           </p>
