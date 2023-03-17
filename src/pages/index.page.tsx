@@ -13,7 +13,7 @@ export function Home() {
         <Services />
         <Works />
         <Principles />
-        <Reviews />
+        {/* <Reviews /> */}
         <Connect />
       </Layout.Main>
       <Layout.Footer showAddress />
