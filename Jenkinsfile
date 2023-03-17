@@ -62,7 +62,7 @@ pipeline {
               input {
                 message 'Deploy this build?'
                 ok 'Yes'
-                submitter 'nbobkov'
+                submitter 'ismirnov, dsemyonov, nbobkov'
               }
 
               environment {
