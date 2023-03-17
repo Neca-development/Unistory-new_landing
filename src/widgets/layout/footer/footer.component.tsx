@@ -26,10 +26,10 @@ export const Footer = React.memo((props: IFooterProperties) => {
                   href='tel:+79876543210'
                   className='text-dark-text-primary text-base'
                 >
-                  +7 987 654 3210
+                  +7 911 741 7477
                 </a>
                 <p className='opacity-50 text-base'>
-                  ул. Гатчинская, 16, 1-й эт., Санкт-Петербург, Россия, 197198
+								 ул. Шпалерная 60 литера Б, офис 98-Н  г. Санкт-Петербург, Россия, 191015
                 </p>
               </div>
               <div className='flex flex-col space-y-3 w-[18.125rem] ml-6'>
@@ -38,10 +38,10 @@ export const Footer = React.memo((props: IFooterProperties) => {
                   href='tel:+79876543210'
                   className='text-dark-text-primary text-base'
                 >
-                  +7 987 654 3210
+                  +7 911 741 7477
                 </a>
                 <p className='opacity-50 text-base'>
-                  ​ул. Байзакова, 252, 3-й эт., Алматы, Казахстан, 050037
+								 ул. Розыбакиева 289/1, офис 36, г. Алматы, Казахстан, 050060
                 </p>
               </div>
             </>
@@ -61,7 +61,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
               <a href='https://t.me/unistory_app' target='_blank'>
                 <IconComponent name='telegram' className='w-6' />
               </a>
-              <a href='/' target='_blank'>
+              <a href='https://wa.me/89117417477' target='_blank'>
                 <IconComponent name='whatsApp' className='w-6' />
               </a>
               <a href='https://clutch.co/profile/unistory' target='_blank'>
