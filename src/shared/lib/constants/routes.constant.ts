@@ -4,19 +4,19 @@ export const ROUTES = [
     route: '/cases',
   },
   {
-    label: 'Услуги',
+    label: 'Services',
     route: '/',
   },
   {
-    label: 'О компании',
+    label: 'About',
     route: '/',
   },
   {
-    label: 'Контакты',
+    label: 'Contacts',
     route: '/',
   },
   {
-    label: 'Стать клиентом',
+    label: 'Get in touch',
     route: '/',
   },
 ]

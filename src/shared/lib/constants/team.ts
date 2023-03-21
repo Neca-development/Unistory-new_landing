@@ -1,75 +1,75 @@
 export const TEAM = {
   alexanderAksenov: {
-    name: 'Александр Аксенов',
-    position: 'Руководитель проектов',
+    name: 'Alexander Aksenov',
+    position: 'Head of Project Management ',
   },
   nursultanBegenov: {
-    name: 'Нурсултан Бегенов',
-    position: 'Руководитель проектов',
+    name: 'Nursultan Begenov',
+    position: 'Head of Project Management ',
   },
   nikitaBobkov: {
-    name: 'Никита Бобков',
-    position: 'Тимлид проекта',
+    name: 'Nikita Bobkov',
+    position: 'Team lead',
   },
   maksimKlimchenko: {
-    name: 'Максим Климченко',
-    position: 'Бизнес аналитик',
+    name: 'Maksim Klimchenko',
+    position: 'Business analyst',
   },
   andreyBarabanov: {
-    name: 'Андрей Барабанов',
-    position: 'Frontend/Blockchain разработчик',
+    name: 'Andrey Barabanov',
+    position: 'Frontend/Blockchain developer',
   },
   andreyBabenkov: {
-    name: 'Андрей Бабенков',
-    position: 'Frontend разработчик',
+    name: 'Andrey Babenkov',
+    position: 'Frontend developer',
   },
   alekseyKlimenko: {
-    name: 'Алексей Клименко',
-    position: 'Frontend разработчик',
+    name: 'Alexey Klimenko',
+    position: 'Frontend developer',
   },
   andreyPaskarenko: {
-    name: 'Андрей Паскаренко',
-    position: 'Frontend разработчик',
+    name: 'Andrey Paskarenko',
+    position: 'Frontend developer',
   },
   ernestMironovRN: {
-    name: 'Эрнест Миронов',
-    position: 'React Native разработчик',
+    name: 'Ernest Mironov',
+    position: 'React Native developer',
   },
   ernestMironov: {
-    name: 'Эрнест Миронов',
-    position: 'Frontend разработчик',
+    name: 'Ernest Mironov',
+    position: 'Frontend developer',
   },
   daniilSemenov: {
-    name: 'Даниил Семенов',
-    position: 'Проектный менеджер',
+    name: 'Daniil Semenov',
+    position: 'Project Manager',
   },
   kirillElizarov: {
-    name: 'Кирилл Елизаров',
-    position: 'Backend разработчик',
+    name: 'Kirill Elisarov',
+    position: 'Backend developer',
   },
   vladislavKiribyatev: {
-    name: 'Владислав Кирибьятев',
-    position: 'Backend разработчик',
+    name: 'Vladislav Kiribiatiev',
+    position: 'Backend developer',
   },
   vechyaslavValdykin: {
-    name: 'Вячеслав Владыкин ',
-    position: 'Frontend/Blockchain разработчик',
+    name: 'Vyacheslav Vladykin',
+    position: 'Frontend/Blockchain developer',
   },
   danilaSkablov: {
-    name: 'Данила Скаблов',
-    position: 'Backend разработчик',
+    name: 'Danila Skablov',
+    position: 'Backend developer',
   },
   andreyJurin: {
-    name: 'Андрей Юрин',
-    position: 'Проектный менеджер',
+    name: 'Andrey Yurin',
+    position: 'Project Manager',
   },
   danilSilverstov: {
-    name: 'Данил Селиверстов',
-    position: 'UX/UI дизайнер',
+    name: 'Danil Seliverstov',
+    position: 'UX/UI designer',
   },
   alexanderYachevsky: {
-    name: 'Александр Ячевский',
-    position: 'Frontend/Blockchain разработчик',
+    name: 'Alexander Yachevskiy',
+    position: 'Frontend/Blockchain developer',
   },
 } as const
 
