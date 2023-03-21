@@ -3,5 +3,5 @@ export const CATEGORIES = [
   'Services',
   'Interfaces',
 	'Corporate sites',
-	'Support'
+	'Support',
 ]

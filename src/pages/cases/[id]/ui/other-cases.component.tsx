@@ -20,7 +20,7 @@ export default function OtherCases({ currentId }: { currentId: string }) {
 
   return (
     <section className='container mt-10 pb-24'>
-      <h2 className='text-5xl font-bold'>Другие проекты</h2>
+      <h2 className='text-5xl font-bold'>Other projects</h2>
 
       <Swiper className='mt-10' slidesPerView={1.5} spaceBetween={40}>
         {cases.map((c) => (

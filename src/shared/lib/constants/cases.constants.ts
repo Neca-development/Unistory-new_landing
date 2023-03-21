@@ -191,14 +191,14 @@ export const CASES: ICase[] = [
   {
     title: 'The Heist',
     id: 'the-heist',
-    heroTitle: 'The Heist – Play2Earn игра на базе NFT коллекции',
+    heroTitle: 'The Heist – Play2Earn based on NFT collection',
     categories: [
-      'Blockchain разработка',
-      'Интеграции',
+      'Blockchain development',
+			'Integration',
       'HighLoad',
-      'Проектирование',
-      'Серверная разработка',
-      'Клиентская разработка',
+      'Engineering',
+      'Server development',
+      'Client development',
     ],
     showCategoriesOnPage: false,
     icons: ['monitor', 'bitcoin'],
@@ -211,7 +211,7 @@ export const CASES: ICase[] = [
     ],
     banner: heistBanner.src,
     description:
-      'Создание веб-приложения с использованием технологии NFT для реализации игровых механик: разработали вебсайт, внутриигровую стейкинг систему, смарт контракт коллекции в сети BSC и токеномику всего  проекта.',
+      'Creating a web application using NFT technology to implement game mechanics: developed the website, the in-game stacking system, the smart collection contract on the BSC network, and the tokenomics of the entire project.',
     params: {
       budget: 1500000,
       period: 3,
@@ -219,28 +219,28 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Предпродажа NFT коллекции',
+        title: 'Presale of NFTs',
         text: [
           {
-            text: 'Маркетинговая тактика включала в себя предпродажу части NFT коллекции ранним пользователям. Наша команда подготовила логику дистрибьюции ограниченного числа токенов, которые имеют лучшие характеристики, в сравнении с токенами публичной продажи. Одно из главных отличий: повышенные вознаграждения с каждой игровой итерации. Таким образом, мы помогли привлечь больше средств на начальном этапе проекта.',
+            text: 'Marketing tactics included pre-selling a limited amount of  NFTs  to early users. Our team prepared the logic of distributing a certain number of tokens, which have better characteristics compared to public NFT sale. One of the main differences: increased rewards with each game iteration. In this way, we helped raise more funds at the initial stage of the project.',
           },
         ],
         banner: heistImage1.src,
       },
       {
-        title: 'Модернизация',
+        title: 'Upgrades',
         text: [
           {
-            text: 'Одна из особенностей смарт контракта коллекции – неограниченное создание NFT. Для формирования более предсказуемой экономики проекта, мы реализовали функцию модернизации токенов. Данный метод позволяет пользователям обменять 3 NFT одного вида и редкости на 1 NFT с более выгодными характеристиками. Обмененные токены выводятся из общего оборота, что повышает рыночную стоимость отдельной NFT и капитализацию всей коллекции.',
+            text: 'One of the features of the smart collection contract is unlimited creation of NFTs. To form a more predictable economy of the project, we have implemented a token upgrade feature. This method allows users to exchange 3 NFTs of the same kind and rarity for 1 NFT with more favorable characteristics. The exchanged tokens are withdrawn from the total supply, which increases the market value of NFTs and the capitalization of the entire collection.',
           },
         ],
         banner: heistImage2.src,
       },
       {
-        title: 'Стейкинг',
+        title: 'Staking',
         text: [
           {
-            text: 'Помимо NFT смарт контракта , наша команда разработала смарт контракт взаимозаменяемых токенов – $CIAO. Пользователи могут депонировать активы проекта на определенный период времени, в рассчете на  получение прибыли в будущем. Стейкинг так же реализован с некоторой игровой механикой и имеет несколько разных типов. Пользователи могут объединятся в стейкинг гильдии, улучшать, уничтожать, или же просто получать пассивный доход со стейкинг пулов.',
+            text: 'In addition to the NFT smart contract, our team developed $CIAO smart contract of fungible tokens. Users can deposit project assets for a certain period of time, with the expectation of making a profit in the future. Staking is also implemented with some game mechanics and has several different types. Users can join staking guilds, improve, destroy, or just receive passive income from staking pools.',
           },
         ],
         banner: heistImage3.src,
@@ -266,14 +266,14 @@ export const CASES: ICase[] = [
   {
     title: 'Xillion',
     id: 'xillion',
-    heroTitle: 'Децентрализованный инкубатор блокчейн-проектов',
+    heroTitle: 'Decentralized blockchain project incubator',
     categories: [
-      'Blockchain разработка',
-      'Интеграции',
+      'Blockchain development',
+			'Integration',
       'HighLoad',
-      'Проектирование',
-      'Серверная разработка',
-      'Клиентская разработка',
+      'Engineering',
+      'Server development',
+      'Client development',
     ],
     showCategoriesOnPage: true,
     icons: ['monitor', 'bitcoin'],
@@ -288,7 +288,7 @@ export const CASES: ICase[] = [
     ],
     banner: xilBanner.src,
     description:
-      'Модернизация инвестиционной DAO экосистемы в сетях Polygon и BSC: доработали MVP версию площадки, создали отдельный игровой модуль  с P2E-викторинами и интегрировали кастомную стейкинг инфраструктуру в существующее децентрализованное сообщество.',
+      'Modernization of the investment DAO ecosystem in Polygon and BSC blockchain networks: refined the MVP version of the platform, created a separate P2E game module with quizzes, and integrated custom staking infrastructure into the existing decentralized community.',
     params: {
       budget: 3500000,
       period: 8,
@@ -296,37 +296,37 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Режим викторины',
+        title: 'Quiz mode',
         text: [
           {
-            text: 'Xillion – это постоянно совершенствующийся продукт, который был улучшен нашей командой посредством реализации новых сервисов для платформы. В ходе разработки проекта владельцы отметили тенденцию роста популярности Play2Earn сегмента в сети Polygon. Так, в стремлении улучшить продукт и своевременно отреагировать на тенденции рынка было решено создать отдельную платформу для участия в поощеряемых блокчейн-викторинах. Совместно с командой продукта мы разработали и интегрировали отдельный модуль проекта, работающий в сети Polygon, где сообщество проходит опросы и получает вознаграждения за участие.',
+            text: 'Xillion – is a constantly progressing product, which has been improved by our team implementing new services for the platform. During the development, owners noted the growing trend of Play2Earn projects in Polygon network. In an effort to improve the product and respond to the market, it was decided to create a separate rewarding blockchain quizzes platform. Together with the product team, we developed and integrated a separate project module running in Polygon network, where the community takes surveys and receives rewards for participation.',
           },
         ],
         banner: xilImage1.src,
       },
       {
-        title: 'DAO-инкубатор',
+        title: 'DAO-incubator',
         text: [
           {
-            text: 'После инвестирования в размещенные проекты на площадке Xillion,  каждый из инвесторов получает токены проекта (XIL). За их дистрибьюцию отвечает отдельный смарт контракт платформы, который является основой всего протокола. Он также автоматически создает новые смарт контракты размещаемых проектов, которые распределяют уникальные токены инкубационных DAO продуктов.',
+            text: 'After investing in the listed projects on Xillion platform, each investor receives project tokens XIL. A separate smart contract of the platform is responsible for their distribution, which is the primitive of the entire protocol. It also automatically creates new smart contracts of listed projects that distribute unique tokens of incubated DAO products.',
           },
         ],
         banner: xilImage2.src,
       },
       {
-        title: 'DAO голосование и XIL стейкинг',
+        title: 'DAO voting and XIL staking',
         text: [
           {
-            text: 'Наша команда модернизировала логику on-chain голосования за продвигаемые на платформе проекты : каждый пользователь может самостоятельно  предложить свою идею участникам XillionDAO. Участие в децентрализованном голосовании может принять любой член сообщества Xillion с балансом не менее 10 тыс. XIL токенов.  Процесс голосования реализован при помощи стейкинг смарт контракта, в котором необходимо заблокировать XIL токены, которые вернуться пользователям вместе с процентов от инвестиций при успешном запуске продвигаемого проекта.',
+            text: 'Our team revamped on-chain voting for the projects promoted on the platform: each user can independently propose ideas to XillionDAO members. Any member of the DAO with a balance of at least 10k XIL tokens can take part in the decentralized voting.  The voting process is implemented by a staking smart contract: the members have to deposit XIL tokens, which will be returned to them along with a percentage of the investment when the promoted project is successfully launched.',
           },
         ],
         banner: xilImage3.src,
       },
       {
-        title: 'Архитектурное решение',
+        title: 'Architectural solution',
         text: [
           {
-            text: 'Для сохранения истории проектов, результатов голосования, количества инвестиций и информации об инвесторах мы использовали протокол TheGraph, который может одновременно работать как и со старой, так и с обновленной архитектурой блокчейн-проектов. Xillion размещен одновременно сразу на двух блокчейн сетях: Binance Smart Chain и Polygon. Разграничение доступа к разделам сайта и использование возможностей библиотеки ether.js сделали удобными для пользователей переходы от одной сети к другой.Также, в проекте используется прокси-архитектура для блокчейна части проекта, что позволяет с легкостью масштабировать продукт и в будущем добавлять новые модули.',
+            text: 'For storing project history, voting results, number of investments, and investor information, we used TheGraph protocol, which can simultaneously work with both old and updated blockchain project architectures. Xillion is deployed on two blockchain networks: Binance Smart Chain and Polygon. Differentiating access to sections of the website and using the capabilities of ether.js library made it comfy for users to switch from one network to another. Also, the project uses a proxy architecture in the blockchain part of the project, which makes it easy to scale and add new modules in the future.',
           },
         ],
         banner: xilScheme.src,
@@ -348,14 +348,14 @@ export const CASES: ICase[] = [
   {
     title: 'Sipsignal',
     id: 'sipsignal',
-    heroTitle: 'Разработка платформы для провайдера VoIP решений ',
+    heroTitle: 'Platform development for VoIP  provider',
     categories: [
-      'Интеграции',
+      'Integration',
       'HighLoad',
-      'Проектирование',
-      'Клиентская разработка',
-      'Серверная разработка',
-      'Административная часть',
+      'Engineering',
+      'Server development',
+      'Client development',
+      'Admin Panel',
     ],
     showCategoriesOnPage: true,
     icons: ['monitor', 'phone02'],
@@ -369,7 +369,7 @@ export const CASES: ICase[] = [
     ],
     banner: sipsignalBanner.src,
     description:
-      'Модернизация инвестиционной DAO экосистемы в сетях Polygon и BSC: доработали MVP версию площадки, создали отдельный игровой модуль  с P2E-викторинами и интегрировали кастомную стейкинг инфраструктуру в существующее децентрализованное сообщество.',
+      'The main goal of our team was to automate the company\'s existing processes. The client was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased the company\'s costs.',
     params: {
       budget: 1400000,
       period: 6,
@@ -377,28 +377,28 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Разработка основного веб-приложения',
+        title: 'Development of the main web application',
         text: [
           {
-            text: 'Мы разработали удобное, и в то же время понятное приложение для электронной коммерции, позволяющее выбирать и приобретать облачные и телекоммуникационные услуги. С нуля создали пользовательскую карту, по которой клиенты платформы могут выбрать интересующий их товар, указать всю необходимую информацию для покупки и создать свой аккаунт для отслеживания выбранного плана подписок.',
+            text: 'We have developed easy-to-navigate e-commerce application for choosing and purchasing cloud and telecom services. From the ground up, we created a custom card where platform clients can select the product they are interested in, specify all the necessary information for purchase, and create their own account to track their chosen subscription plan.',
           },
         ],
         banner: sipsignalImage1.src,
       },
       {
-        title: 'eFax приложение для клиентов платформы',
+        title: 'eFax application for platform customers',
         text: [
           {
-            text: 'Помимо разработки основного веб-приложения, мы создали отдельный eFax сервис, который распространяется в виде программного обеспечения как услуги. eFax является довольно популярным решением в США, и зачастую используется совместно с VoIP. Нашему клиенту было важно предоставлять как можно более широкий спектр услуг: так мы пришли к идеи создания отдельного пользовательского приложения для факса.',
+            text: 'In addition to developing the main web application, we have created a separate eFax service that is distributed as SaaS. eFax is a fairly popular solution in the U.S., and is often used in conjunction with VoIP. It was important for our client to provide as wide a range of services as possible: that\'s how we came up with the idea of creating a separate custom fax application.',
           },
         ],
         banner: sipsignalImage2.src,
       },
       {
-        title: 'Кастомная\n административная панель',
+        title: 'Custom admin panel',
         text: [
           {
-            text: 'Наша команда разработала административную панель и интегрировала ее с уже существующими CRM-системой и Базами Данных. Мы учли все пожелания клиента и создали уникальное решение, которое сочетает в себе все необходимые функции: отслеживание статусов заказов по отдельным продуктам, мониторинг воронки продаж, управление пользователями, сотрудниками и контентом на платформе.',
+            text: 'Our team developed an administrative panel and integrated it with the existing CRM system and databases. We took into account all the client\'s wishes and created a unique solution that combines all the necessary functions: tracking the status of orders for individual products, monitoring the sales funnel, managing users, employees and content on the platform.',
           },
         ],
         banner: sipsignalImage3.src,
@@ -406,11 +406,11 @@ export const CASES: ICase[] = [
     ],
     review: {
       author: {
-        name: 'Богдан Пахоменко',
-        position: 'исполнительный директор "BP Networking & Design Inc.',
+        name: 'Bogdan Pakhomenko',
+        position: 'CEO of "BP Networking & Design Inc.',
         photo: sipsignalClient.src,
       },
-      text: '«Хорошая работа, друзья! Unistory - это хорошо управляемая и структурированная команда: еженедельные обновления, быстрое реагирование и качественное выполнение заказов. Я бы рекомендовал команду Unistory для любого проекта. Мы были настолько довольны результатами, что сразу же приступили ко следующему проекту. Спасибо вам, ребята, за вашу тяжелую работу.».',
+      text: '"Good work, friends! Unistory is a well-managed and structured team: weekly updates, quick response times, and quality order fulfillment. I would recommend the Unistory team for any project. We were so pleased with the results that we went straight to our next project. Thank you guys for your hard work."',
     },
     logo: sipsignalLogo.src,
     team: [
