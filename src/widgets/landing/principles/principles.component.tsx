@@ -2,14 +2,14 @@ import { MessageToggler } from "@shared/ui";
 import clsx from "clsx";
 import React, { useState } from "react";
 
-const principleTitles = ["Всегда на связи", "Экспертиза", "Соблюдение сроков"];
+const principleTitles = ["Communication", "Expetise", "Talant"];
 
 const messageData = {
-	author: "Нурсултан Бегенов",
+	author: "Nursultan Begenov",
 	avatar: "/assets/images/nursultan.jpg",
 	message:
-		"Unistory — это подход, культура и фокус на показателях. Рассказываем, как устроена командная игра",
-	date: "только что",
+		"Unistory — is approach, culture and a focus on performance. We tell you how teamwork works",
+	date: "recently",
 };
 
 export function Principles() {
@@ -20,31 +20,31 @@ export function Principles() {
 			case 0:
 				return (
 					<p className="font-bold text-5xl leading-[3.5rem]">
-						<span className="text-primary-s">Коммуникация важна и точка.</span>{" "}
-						Мы ответим на все вопросы и поможем определиться с деталями проекта.
-						Подскажем лучшее решение и будем держать в курсе всех событий на
-						проекте.
+						<span className="text-primary-s">Communication is important and we know that.</span>{" "}
+						We help you decide on the details of your project, answer all your questions,
+						propose the best solution and keep you informed of all the developments
+						on the project.
 					</p>
 				);
 			case 1:
 				return (
 					<p className="font-bold text-5xl leading-[3.5rem]">
-						Планируете{" "}
+						Planning{" "}
 						<span className="text-primary-s">
-							сложный сервис или использование новейших технологии?
+							a complex service or adoption of the latest technologies?
 						</span>{" "}
-						Поможем реализовать ваши амбициозные планы будь это международный
-						B2B маркетплейс или новый продукт с AI.
+						We can help you to implement your ambitious plans, whether it's an international
+						B2B marketplace or a new product with AI.
 					</p>
 				);
 			case 2:
 				return (
 					<p className="font-bold text-5xl leading-[3.5rem]">
-						Дедлайн – крайний срок выполнения задачи и то, что мы не нарушаем.{" "}
+						Deadline – is a cut-off date for a task and something we don't break.{" "}
 						<span className="text-primary-s">
-							Ваши планы не сорвутся из-за плохой организации работ
+							our plans will not be disrupted by poor work organization,
 						</span>
-						, COVIDa или атаки НЛО, потому что мы ответственные.
+						, COVIDa or a UFO attack, because we are responsible.
 					</p>
 				);
 			default:

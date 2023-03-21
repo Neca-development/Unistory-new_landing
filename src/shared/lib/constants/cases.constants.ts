@@ -35,8 +35,8 @@ export const CASES: ICase[] = [
   {
     title: 'Personal',
     id: 'personal',
-    heroTitle: 'Персонал – мультиплатформенное\n HR приложение',
-    categories: ['Серверная разработка', 'Клиентская разработка'],
+    heroTitle: 'Personal – multi-platform\n HR application',
+    categories: ['Server development', 'Сlient development'],
     showCategoriesOnPage: false,
     icons: ['monitor', 'phone01'],
     textColor: 'white',
@@ -48,7 +48,7 @@ export const CASES: ICase[] = [
     ],
     banner: personalPromo.src,
     description:
-      'Нашей команде предстояло разработать HR приложение-агрегатор, которое помогает собирать все резюме в  одном месте, облегчает общение с кандидатами и имеет интеграцию с популярными платформами для поиска работы.',
+      'Our team had to develop an HR aggregator application that helps collect all resumes in one place, facilitates communication with candidates and has integration with popular job search platforms.',
     params: {
       budget: 2300000,
       period: 9,
@@ -56,28 +56,28 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Интеграция с кадровыми сервисами',
+        title: 'Integration with HR services',
         text: [
           {
-            text: 'Чтобы сократить время на просмотр сайтов по поиску сотрудников, и собрать все резюме воедино – мы решили аггрегировать существующие площадки в одном приложении. Всего наша команда интегрировала 6 крупнейших платформ, включая HH.ru и Авито. Наши интеграции позволяют пользователям приложения бесшовно получать резюме кандидатов из сразу нескольких источников.',
+            text: 'To reduce the time it takes to browse employee search sites, and to bring all resumes together, we decided to aggregate the existing platforms into one application. In total, our team has integrated six major platforms, including HH.ru and Avito. Our integrations allow app users to seamlessly receive candidate resumes from multiple sources at once.',
           },
         ],
         banner: personalImage1.src,
       },
       {
-        title: 'Пользовательские шаблоны для приглашения на интервью',
+        title: 'Custom templates for interview invitations',
         text: [
           {
-            text: 'Мы создали систему по созданию кастомизируемых карточек-шаблонов, которые пользователи могут отправлять кандидатам на вакансию. Данное решение значительно экономит время на обработку большого количества входящих предложений, и это важно, ведь оптимизация  является первоочередной задачей для любого бизнеса.',
+            text: 'We created a system to create customizable templates cards that users can send to job candidates. This solution significantly saves time in processing a large number of incoming resumes, and this is important, because optimization is the first priority for any business.',
           },
         ],
         banner: personalImage2.src,
       },
       {
-        title: 'Встроенный чат для вывода сообщений из других сервисов',
+        title: 'Built-in chat to display messages from HR services',
         text: [
           {
-            text: 'Приложение собирает не только резюме кандидатов, но и их сообщения с различных площадок. Чтобы сделать этот процесс еще более удобным, мы создали встроенный чат, в котором пользователи могут общаться с будущими работниками из всех необходимых источников.',
+            text: 'The app collects not only candidates resumes, but also their messages from various services. To make this process even more convenient, we created a built-in chat room where users can communicate with future employees from all necessary sources.',
           },
         ],
         banner: personalImage3.src,
@@ -86,12 +86,12 @@ export const CASES: ICase[] = [
         title: '',
         text: [
           {
-            subtitle: 'Сбор подсказок для составления вакансий',
-            text: 'Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.',
+            subtitle: 'Smart tips for making up vacancies',
+            text: 'We parsed over ten thousand different job ads and used statistical analysis to collect the most common requirements. This made it possible to compile smart tips for all kinds of jobs.',
           },
           {
-            subtitle: 'Размещение вакансий в разных сервисах',
-            text: 'Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.',
+            subtitle: 'Placing vacancies in different services',
+            text: 'We have unified job requirements across all services, which allows the users to fill out only the app’s form.',
           },
         ],
         banner: personalScheme.src,
@@ -115,14 +115,14 @@ export const CASES: ICase[] = [
   {
     title: 'Gas Monsters',
     id: 'gas-monsters',
-    heroTitle: 'Создание геймифицированной\n NFT коллекции',
+    heroTitle: 'Creation of a gamified\n NFT collection',
     categories: [
-      'Blockchain разработка',
-      'Интеграции',
+      'Blockchain development',
+      'Integration',
       'HighLoad',
-      'Проектирование',
-      'Серверная разработка',
-      'Клиентская разработка',
+      'Engineering',
+      'Server development',
+      'Client development',
     ],
     showCategoriesOnPage: true,
     icons: ['monitor', 'bitcoin'],
@@ -137,7 +137,7 @@ export const CASES: ICase[] = [
     ],
     banner: gasmonstersBanner.src,
     description:
-      'Основной целью проекта являлась разработка минтинг вебсайта для NFT коллекции, где пользователи могут приобрести NFT, а затем модернизировать их за потраченные газ комиссии в сети Ethereum.',
+      'The main goal of the project was to develop a minting website for the NFT collection, where users can buy NFTs and then upgrade them for the gas they spend on Ethereum network.',
     params: {
       budget: 3000000,
       period: 6,
@@ -145,33 +145,33 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Модернизируемые NFT',
+        title: 'Upgradable NFTs',
         text: [
           {
-            text: 'Главная особенность созданной коллекции – владельцы NFT могут улучшать полученных Драконов  с 1-го по 7-й уровень. Модернизация напрямую связана с  пользовательским транзакциям в сети Ethereum: чем больше транзакций было совершенно пользователем, тем больше приобретается опыта, который он может потратить на улучшение своего Дракона. Такая особенность придает дополнительный интерес к проекту, к тому же, это действительно понятная и, главное – прозрачная механика. ',
+            text: 'The main feature of the collection – NFT owners can upgrade their Dragons from level 1st to 7th. Upgrades are directly related to a user transactions in Ethereum network: the more transactions have been made, the more experience users gains, which he can spend to improve owned Dragon. This feature gives additional interest to the project, and besides, it is a really clear and, most importantly, transparent mechanics.',
           },
         ],
         banner: gasmonstersImage1.src,
       },
       {
-        title: 'Случайно сгенерированные токены',
+        title: 'Randomly generated tokens',
         text: [
           {
-            text: 'Для определения случайных слоев NFT, наша команда использовала блокчейн-сервис Chainlink VRF: с его помощью, мы получаем  рандомизированные параметры внутри блокчейна. После их генерации, данные о слоях напрямую записываются в смарт контракт коллекции. В результате, эта числовая комбинация служит идентификационным файлом в папке на IPFS. Впоследствии, никто не может изменить слои NFT – все выполнено в лучших традициях децентрализованных приложений.',
+            text: 'To define random NFT layers, our team used the Chainlink VRF blockchain service: with its help, we get randomized parameters inside the blockchain. After generating them, the layer data is directly written into the smart contract of the collection. As a result, this numerical combination serves as an identification file in a folder on IPFS. Subsequently, no one can change the NFT layers - everything is done in the best tradition of decentralized applications.',
           },
         ],
         banner: gasmonstersImage2.src,
       },
       {
-        title: 'Архитектурное решение',
+        title: 'Architectural solution',
         text: [
           {
-            subtitle: 'Задача',
-            text: 'Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.',
+            subtitle: 'The goal',
+            text: 'For level up of a Dragon, the smart collection contract must receive data about ETH spent by users on commissions in Ethereum network. ',
           },
           {
-            subtitle: 'Решение',
-            text: 'Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.',
+            subtitle: 'Solution',
+						text: 'We created an architecture in which a smart contract accesses the project backend via Chainlink, which in turn communicates with Etherscan blockchain-explorer. After receiving the user transaction data and conducting necessary calculations, the server application generates and uploads a new image with NFT metadata to IPFS. It is the data that will be displayed to the user when querying the collection smart contract.',
           },
         ],
         banner: gasmonstersScheme.src,

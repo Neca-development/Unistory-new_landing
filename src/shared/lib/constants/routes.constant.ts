@@ -1,6 +1,6 @@
 export const ROUTES = [
   {
-    label: 'Кейсы',
+    label: 'Сases',
     route: '/cases',
   },
   {

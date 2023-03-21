@@ -32,7 +32,7 @@ export function CaseHero({ data }: { data: ICase }) {
 
       <div className='container'>
         <h2 className='mt-20 text-light-text-secondary dark:text-dark-text-secondary text-2xl'>
-          Задача
+					The goal
         </h2>
         <p className='max-w-[52.5rem] mt-6 text-2xl leading-10'>
           {data.description}
@@ -40,7 +40,7 @@ export function CaseHero({ data }: { data: ICase }) {
         <ul className='mt-40 flex gap-x-40'>
           <li>
             <h3 className='text-light-text-secondary dark:text-dark-text-secondary text-2xl'>
-              Бюджет
+							Budget
             </h3>
             <b className='text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block'>
               {data.params.budget.toLocaleString('ru-RU')} ₽
@@ -48,15 +48,15 @@ export function CaseHero({ data }: { data: ICase }) {
           </li>
           <li>
             <h3 className='text-light-text-secondary dark:text-dark-text-secondary text-2xl'>
-              Срок
+							Timeline
             </h3>
             <b className='text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block'>
-              {data.params.period} месяцев
+              {data.params.period} months
             </b>
           </li>
           <li>
             <h3 className='text-light-text-secondary dark:text-dark-text-secondary text-2xl'>
-              Год
+              Year
             </h3>
             <b className='text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block'>
               {data.params.year}
