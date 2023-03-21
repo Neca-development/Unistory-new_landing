@@ -53,7 +53,7 @@ export function Services() {
 							Provide an online or offline formed team of professionals to your project
 							at any stage of product development. We will refine, improve
 							or completely modernize existing IT solutions.
-              <br /> <br />nd you don’t even have to invite us to team buildings! 
+              <br /> <br />And you don’t even have to invite us to team buildings! 
               Though we certainly wouldn’t refuse :)
             </p>
           </>

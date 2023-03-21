@@ -42,7 +42,7 @@ export function Principles() {
 					<p className="font-bold text-5xl leading-[3.5rem]">
 						Deadline – is a cut-off date for a task and something we don't break.{" "}
 						<span className="text-primary-s">
-							our plans will not be disrupted by poor work organization,
+							our plans will not be disrupted by poor work organization
 						</span>
 						, COVIDa or a UFO attack, because we are responsible.
 					</p>
