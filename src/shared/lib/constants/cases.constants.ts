@@ -13,7 +13,7 @@ import gasmonstersImage2 from '@public/assets/images/cases/gas-monsters/random.j
 import gasmonstersScheme from '@public/assets/images/cases/gas-monsters/scheme.jpg'
 
 import heistBanner from '@public/assets/images/cases/heist/banner.jpg'
-import heistScheme from '@public/assets/images/cases/heist/scheme.jpg'
+import heistScheme from '@public/assets/images/cases/heist/scheme_en.jpg'
 import heistImage1 from '@public/assets/images/cases/heist/presale.jpg'
 import heistImage2 from '@public/assets/images/cases/heist/modern.jpg'
 import heistImage3 from '@public/assets/images/cases/heist/stacking.jpg'

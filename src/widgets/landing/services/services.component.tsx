@@ -36,7 +36,7 @@ export function Services() {
 							We develop a web service or mobile application to solve
 							your unique business tasks.
               <br /> <br />
-              — frontend: React, Angular, Vue, TS
+              - frontend: React, Angular, Vue, TS
               <br />
               - backend: Node.js, C#, Bitrix24
 							<br />
