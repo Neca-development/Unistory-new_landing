@@ -24,7 +24,7 @@ export const TEAM = {
     position: 'Frontend developer',
   },
   alekseyKlimenko: {
-    name: 'Alexey Klimenko',
+    name: 'Aleksey Klimenko',
     position: 'Frontend developer',
   },
   andreyPaskarenko: {
@@ -41,10 +41,10 @@ export const TEAM = {
   },
   daniilSemenov: {
     name: 'Daniil Semenov',
-    position: 'Project Manager',
+    position: 'Project manager',
   },
   kirillElizarov: {
-    name: 'Kirill Elisarov',
+    name: 'Kirill Elizarov',
     position: 'Backend developer',
   },
   vladislavKiribyatev: {

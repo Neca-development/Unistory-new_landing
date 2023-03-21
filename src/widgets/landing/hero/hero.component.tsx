@@ -32,7 +32,7 @@ export function Hero() {
             <IconComponent name='earth' className={iconClassnameByTheme} />
           </button>
           <span className='font-roboto font-light italic text-light-text-primary dark:text-dark-text-primary'>
-            integration
+            integrations
           </span><br />
 					for web & mobile
         </h1>
