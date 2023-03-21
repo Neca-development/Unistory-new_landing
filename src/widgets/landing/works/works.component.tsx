@@ -11,9 +11,9 @@ export function Works() {
     <section className='bg-light-surface dark:bg-dark-surface'>
       <div className='container pt-20 pb-[3.5rem]'>
         <h2 className='font-bold text-5xl'>
-          Мы помогаем предприятиям
+					We help businesses develop 
           <br />
-          разрабатывать цифровые продукты
+          digital products
         </h2>
 
         <div className='grid grid-cols-3 gap-10 mt-16'>
@@ -34,7 +34,7 @@ export function Works() {
             name='arrowRight'
             className='w-10 mr-4 first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent'
           />
-          Еще кейсы
+          More cases
         </Link>
       </div>
     </section>

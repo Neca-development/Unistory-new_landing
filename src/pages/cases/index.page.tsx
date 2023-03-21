@@ -19,7 +19,7 @@ export function Cases() {
         uniques.add(tag)
       }
     })
-    const allTags = ['Все', ...Array.from(uniques)] as string[]
+    const allTags = ['All', ...Array.from(uniques)] as string[]
 
     setCategories(allTags)
     setActiveTag(allTags[0] as string)
@@ -31,7 +31,7 @@ export function Cases() {
 
   useEffect(() => {
     const onActiveTagChange = () => {
-      if (activeTag === 'Все') {
+      if (activeTag === 'All') {
         setCards(CASES)
       } else {
         const filtered = CASES.filter((c) => c.categories.includes(activeTag))
@@ -49,7 +49,7 @@ export function Cases() {
       <Layout.Header />
       <Layout.Main>
         <section className='mt-16 container pb-[7.5rem]'>
-          <h2 className='font-bold text-5xl'>Кейсы</h2>
+          <h2 className='font-bold text-5xl'>Cases</h2>
           <div className='mt-10 flex flex-wrap'>
             {categories.map((tag, idx) => (
               <button

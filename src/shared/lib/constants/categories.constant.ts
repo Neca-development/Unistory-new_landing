@@ -1,6 +1,7 @@
 export const CATEGORIES = [
-  'Все',
-  'Сервисы',
-  'Интерфейсы',
-  'Корпоративные сайты',
+  'All',
+  'Services',
+  'Interfaces',
+	'Corporate sites',
+	'Support',
 ]

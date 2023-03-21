@@ -8,7 +8,7 @@ export function Stack({ data }: IStackProps) {
   return (
     <div className='flex bg-light-bg-accent dark:bg-dark-bg-accent pt-20 mt-[7.5rem]'>
       <div className='container'>
-        <h2 className='font-bold text-[2.875rem]'>Технологии</h2>
+        <h2 className='font-bold text-[2.875rem]'>Technologies</h2>
         <div className='grid grid-cols-4 gap-10 mt-16'>
           {data?.map((technology, idx) => (
             <div

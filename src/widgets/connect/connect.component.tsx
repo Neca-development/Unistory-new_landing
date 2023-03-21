@@ -7,17 +7,17 @@ export function Connect() {
       <div className='container pt-16 pb-[5.5rem] grid grid-cols-[1fr_38.75rem] gap-[10rem] text-dark-text-primary'>
         <div>
           <h2 className='font-bold text-5xl leading-[3.25rem]'>
-            Давайте воплотим вашу идею в жизнь
+						Ready to discuss your project?
           </h2>
           <p className='mt-9 text-2xl leading-10'>
-            Заполните форму справа или напишите на{' '}
+						Fill out the form to the right or email{' '}
             <a
               href='mailto:contact@unistory.app'
               className='text-primary-s font-bold'
             >
               contact@unistory.app
             </a>
-            . Мы свяжемся с вами прямо сейчас!
+            . We'll get back to you shortly!
           </p>
         </div>
 
