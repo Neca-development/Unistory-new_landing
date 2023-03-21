@@ -21,7 +21,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
           {showAddress && (
             <>
               <div className='flex flex-col space-y-3 w-[18.125rem]'>
-                <p className='text-2xl font-medium'>Санкт-Петербург</p>
+                <p className='text-2xl font-medium'>Saint-Petersburg</p>
                 <a
                   href='tel:+79876543210'
                   className='text-dark-text-primary text-base'
@@ -29,19 +29,19 @@ export const Footer = React.memo((props: IFooterProperties) => {
                   +7 911 741 7477
                 </a>
                 <p className='opacity-50 text-base'>
-								 ул. Шпалерная 60 литера Б, офис 98-Н  г. Санкт-Петербург, Россия, 191015
+								 ul. Shpalernaya 60 building B, office 98-N, Saint-Petersburg, Russia, 191015
                 </p>
               </div>
               <div className='flex flex-col space-y-3 w-[18.125rem] ml-6'>
-                <p className='text-2xl font-medium'>Алматы</p>
+                <p className='text-2xl font-medium'>Almaty</p>
                 <a
                   href='tel:+79876543210'
                   className='text-dark-text-primary text-base'
                 >
-                  +7 911 741 7477
+                  +7 707 372 8608
                 </a>
                 <p className='opacity-50 text-base'>
-								 ул. Розыбакиева 289/1, офис 36, г. Алматы, Казахстан, 050060
+								ul. Rozybakieva 289/1, office 36, Almaty, Kazakhstan, 050060
                 </p>
               </div>
             </>
@@ -55,12 +55,12 @@ export const Footer = React.memo((props: IFooterProperties) => {
             )}
           >
             <h4 className='font-medium text-2xl'>
-              Из классной идеи <br /> в безумно отличный продукт
+							From fascinating ideas to  <br /> incredibly great products
             </h4>
             <div className='flex items-center space-x-6 opacity-50'>
-              <a rel='nofollow' href='https://t.me/unistory_app' target='_blank'>
+              {/* <a rel='nofollow' href='https://t.me/unistory_app' target='_blank'>
                 <IconComponent name='telegram' className='w-6' />
-              </a>
+              </a> */}
               <a rel='nofollow' href='https://wa.me/89117417477' target='_blank'>
                 <IconComponent name='whatsApp' className='w-6' />
               </a>

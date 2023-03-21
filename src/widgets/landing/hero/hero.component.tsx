@@ -25,15 +25,16 @@ export function Hero() {
   return (
     <div className={clsx('container pt-[7.125rem] pb-16')}>
       <section className='relative pb-[8.875rem]'>
-        <h1 className={clsx(textClassName, 'pr-24 text-h1')}>
-          Разработка web & mobile сервисов для
+				<h1 className={clsx(textClassName, 'pr-24 text-h1')}>
+					Developing applications <br />
+					with complex
           <button className='relative top-[-0.5rem] w-10 p-2'>
             <IconComponent name='earth' className={iconClassnameByTheme} />
           </button>
-          бизнеса
-          {/* <span className='font-roboto font-light italic text-light-text-primary dark:text-dark-text-primary'>
-            интеграциями
-          </span> */}
+          <span className='font-roboto font-light italic text-light-text-primary dark:text-dark-text-primary'>
+            integrations
+          </span><br />
+					for web & mobile
         </h1>
 
         <button className='absolute -top-6 left-[18.2rem] w-10 p-2'>
@@ -72,8 +73,8 @@ export function Hero() {
               +
             </span>
           </p>
-          сотрудников
-          <br />в штате
+          team
+          <br />members
         </article>
 
         <article className='flex items-center text-2xl font-medium'>
@@ -83,18 +84,18 @@ export function Hero() {
               +
             </span>
           </p>
-          успешных
+          successful
           <br />
-          проектов
+          projects
         </article>
 
         <article className='flex items-center text-2xl font-medium'>
           <p className='relative mr-4 text-[5rem] font-bold leading-[5rem]'>
             5.0
           </p>
-          оценка
+          Upwork
           <br />
-          на UpWork
+          rating
         </article>
       </section>
     </div>

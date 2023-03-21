@@ -3,9 +3,9 @@ import clsx from 'clsx'
 import React, { useState } from 'react'
 
 const servicesTitles: { title: string; icon: IconsTypes }[] = [
-  { title: 'Продуктовый дизайн', icon: 'grid' },
-  { title: 'Разработка', icon: 'layout' },
-  { title: 'Поддержка и развитие', icon: 'folder' },
+  { title: 'Product design', icon: 'grid' },
+  { title: 'Development', icon: 'layout' },
+  { title: 'Maintain & Support', icon: 'folder' },
 ]
 
 const iconClassnameByTheme =
@@ -19,12 +19,11 @@ export function Services() {
       case 0: {
         return (
           <>
-            <h3 className='text-4xl font-bold'>Из идеи в дизайн-прототип</h3>
+            <h3 className='text-4xl font-bold'>From your ideas to design prototype</h3>
             <p className='mt-10 text-2xl leading-10'>
-              Создадим современный и удобный дизайн на основе вашей идеи и нашей
-              экспертизы. Мы придерживаемся прозрачного процесса, выработанного
-              годами практики, и вашей обратной связи, чтобы получить дизайн,
-              который соответствует целям проекта.
+							We provide a modern and user-friendly design based on your ideas and our expertise.
+							We follow a transparent process, developed through years of practice,
+							and your feedback to get a design that meets all the goals of the project.
             </p>
           </>
         )
@@ -32,15 +31,16 @@ export function Services() {
       case 1: {
         return (
           <>
-            <h3 className='text-4xl font-bold'>Разработка web & mobile</h3>
-            <p className='mt-10 text-2xl leading-10'>
-              Разработаем веб-сервис или мобильное приложение для решения ваших
-              уникальных бизнес задач.
+            <h3 className='text-4xl font-bold'>Web & Mobile development</h3>
+						<p className='mt-10 text-2xl leading-10'>
+							We develop a web service or mobile application to solve
+							your unique business tasks.
               <br /> <br />
-              — frontend: React, Angular, Vue, TS
+              - frontend: React, Angular, Vue, TS
               <br />
-              — backend: Node.js, C#, Битрикс24
-              <br />— mobile: React native, Kotlin, Swift
+              - backend: Node.js, C#, Bitrix24
+							<br />
+							- mobile: React native, Kotlin, Swift
             </p>
           </>
         )
@@ -48,13 +48,13 @@ export function Services() {
       case 2: {
         return (
           <>
-            <h3 className='text-4xl font-bold'>Поддержка и развитие</h3>
+            <h3 className='text-4xl font-bold'>Maintain & Support</h3>
             <p className='mt-10 text-2xl leading-10'>
-              Подключим онлайн или офлайн сформированную команду профессионалов
-              к вашему проекту на любом этапе развития продукта. Доработаем,
-              улучшим или полностью модернизируем существующие IT-решения.
-              <br /> <br />И нас даже необязательно приглашать на корпоративы!
-              Хотя мы бы точно не отказались :)
+							Provide an online or offline formed team of professionals to your project
+							at any stage of product development. We will refine, improve
+							or completely modernize existing IT solutions.
+              <br /> <br />And you don’t even have to invite us to team buildings! 
+              Though we certainly wouldn’t refuse :)
             </p>
           </>
         )
