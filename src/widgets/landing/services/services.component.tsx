@@ -1,5 +1,5 @@
 import { ServicesEn, ServicesRu } from "@shared/i18n";
-import { IconComponent, IconsTypes } from "@shared/ui";
+import { IconComponent } from "@shared/ui";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import React, { useState } from "react";

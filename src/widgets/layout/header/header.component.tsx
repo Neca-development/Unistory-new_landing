@@ -1,8 +1,7 @@
 import { ROUTESEN, ROUTESRU } from "@shared/i18n/constants";
 import clsx from "clsx";
 import Link from "next/link";
-import router, { useRouter } from "next/router";
-// import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import * as React from "react";
 import { Logo } from "./logo.component";
 
