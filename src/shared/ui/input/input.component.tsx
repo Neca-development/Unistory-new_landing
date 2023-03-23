@@ -1,4 +1,4 @@
-import React, { ForwardedRef } from "react";
+import { forwardRef } from "react";
 import clsx from "clsx";
 export interface IInputProps {
 	placeholder: string;
@@ -8,7 +8,7 @@ export interface IInputProps {
 	error?: string;
 }
 
-export const Input = React.forwardRef((props: IInputProps, ref: any) => {
+export const Input = forwardRef((props: IInputProps, ref: any) => {
 	const { placeholder, type, required, className, ...restProps } = props;
 
 	return (
