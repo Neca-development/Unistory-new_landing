@@ -1,23 +1,26 @@
 import { ICase } from '@shared/lib/types'
+import { useRouter } from 'next/router'
 
 interface ICaseInfoItemProps {
   data?: ICase['main'][0]
 }
 
 function CaseInfoItem({ data }: ICaseInfoItemProps) {
+  const {locale} = useRouter()
+  
   return (
     <section className='mb-[7.5rem] last:mb-0'>
       <div className='container'>
         <article className='max-w-[52.5rem]'>
           <h2 className='font-bold text-[2.875rem] whitespace-pre-line'>
-            {data?.title}
+            {data?.title[locale || 'ru']}
           </h2>
           {data?.text?.map((item, idx) => (
             <div key={idx} className='mt-10'>
-              <h3 className='font-bold text-3xl mb-5'>{item.subtitle}</h3>
+              <h3 className='font-bold text-3xl mb-5'>{item.subtitle ? item.subtitle[locale || 'ru'] : ''}</h3>
               <p
                 className='text-2xl leading-10'
-                dangerouslySetInnerHTML={{ __html: item.text || '' }}
+                dangerouslySetInnerHTML={{ __html: item.text ? item.text[locale || 'ru'] as any : ''}}
               />
             </div>
           ))}

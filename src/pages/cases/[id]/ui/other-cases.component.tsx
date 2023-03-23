@@ -4,7 +4,12 @@ import { WorksCard } from '@widgets/works-card'
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-export default function OtherCases({ currentId }: { currentId: string }) {
+interface IProps {
+  currentId: string
+  title: string
+}
+
+export default function OtherCases({ currentId, title }: IProps) {
   const [cases, setCases] = useState<ICase[]>([])
 
   const prepareOtherCases = () => {
@@ -20,7 +25,7 @@ export default function OtherCases({ currentId }: { currentId: string }) {
 
   return (
     <section className='container mt-10 pb-24'>
-      <h2 className='text-5xl font-bold'>Other projects</h2>
+      <h2 className='text-5xl font-bold'>{title}</h2>
 
       <Swiper className='mt-10' slidesPerView={1.5} spaceBetween={40}>
         {cases.map((c) => (
