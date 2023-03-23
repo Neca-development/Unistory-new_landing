@@ -1,9 +1,9 @@
-import { Controller } from "react-hook-form";
+import { Control, Controller, FieldValues, Path } from "react-hook-form";
 import { IInputProps, Input } from "./input.component";
 
-export type ControlledInputType = {
-	control: any;
-	name: string;
+export type InputControllerType<T extends FieldValues> = {
+	name: Path<T>;
+	control: Control<T>;
 	defaultValue?: any;
 	error?: string;
 };
@@ -12,8 +12,13 @@ export type WithErrorInputType = {
 	withError?: boolean;
 };
 
-export function ControlledInput(
-	props: IInputProps & ControlledInputType & WithErrorInputType
+interface ControlledInputProps<T extends FieldValues>
+	extends IInputProps,
+		WithErrorInputType,
+		InputControllerType<T> {}
+
+export function ControlledInput<T extends FieldValues>(
+	props: ControlledInputProps<T>
 ) {
 	const {
 		control,

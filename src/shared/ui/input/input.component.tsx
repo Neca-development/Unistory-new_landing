@@ -9,7 +9,7 @@ export interface IInputProps {
 }
 
 export const Input = React.forwardRef((props: IInputProps, ref: any) => {
-	const { placeholder, type, required, className } = props;
+	const { placeholder, type, required, className, ...restProps } = props;
 
 	return (
 		<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7">
@@ -22,6 +22,7 @@ export const Input = React.forwardRef((props: IInputProps, ref: any) => {
 				type={type}
 				placeholder={placeholder}
 				required={required}
+				{...restProps}
 			/>
 		</label>
 	);

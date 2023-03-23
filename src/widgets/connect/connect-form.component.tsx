@@ -1,4 +1,4 @@
-import { Checkbox, IconComponent } from "@shared/ui";
+import { Checkbox, ControlledInput, IconComponent } from "@shared/ui";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -22,8 +22,6 @@ export default function ConnectForm() {
 		handleSubmit,
 		register,
 		control,
-		getValues,
-		watch,
 		formState: { errors },
 		reset,
 	} = useForm<FormType>({
@@ -35,6 +33,7 @@ export default function ConnectForm() {
 	async function sendFormData(data: FormType) {
 		console.log("{ data }");
 		console.log({ data });
+		return;
 
 		const formData = new FormData();
 		formData.append("email", data.email);
@@ -70,47 +69,38 @@ export default function ConnectForm() {
 			encType="multipart/form-data"
 			className="flex flex-col space-y-6"
 		>
-			<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7">
-				<input
-					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary"
-					type="text"
-					placeholder="Name"
-					{...register("name")}
-				/>
-				{errors.email && <div>{errors.email.message}</div>}
-			</label>
-			<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7">
-				<input
-					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary"
-					type="company"
-					placeholder="Company"
-					{...register("company")}
-				/>
-				{errors.email && <div>{errors.email.message}</div>}
-			</label>
+			<ControlledInput
+				control={control}
+				name="name"
+				placeholder="Name"
+				type="text"
+				error={errors.name?.message}
+			/>
+			<ControlledInput
+				placeholder="Company"
+				control={control}
+				name="company"
+				type="text"
+				error={errors?.company?.message}
+			/>
 			<div className="grid grid-cols-2 gap-10">
-				<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7">
-					<input
-						className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary"
-						type="email"
-						placeholder="E-mail"
-						required
-						{...register("email")}
-					/>
-					{errors.email && <div>{errors.email.message}</div>}
-				</label>
-				<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7">
-					<input
-						className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary"
-						type="tel"
-						placeholder="Phone number"
-						required
-						{...register("phoneNumber")}
-					/>
-					{errors.email && <div>{errors.email.message}</div>}
-				</label>
+				<ControlledInput
+					control={control}
+					name="email"
+					type="email"
+					placeholder="E-mail"
+					required
+					error={errors?.email?.message}
+				/>
+				<ControlledInput
+					control={control}
+					name="phoneNumber"
+					type="tel"
+					placeholder="Phone number"
+					required
+					error={errors?.phoneNumber?.message}
+				/>
 			</div>
-
 			<div className="py-8 text-xl">
 				<p>Contact preference</p>
 				<div className="mt-4 flex items-center space-x-8">

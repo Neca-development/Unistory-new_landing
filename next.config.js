@@ -23,4 +23,9 @@ module.exports = withBundleAnalyzer({
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
   pageExtensions: ['page.tsx', 'page.ts', 'page.js', 'page.jsx'],
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'ru',
+    localeDetection: true,
+  },
 })
