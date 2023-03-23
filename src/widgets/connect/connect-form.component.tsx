@@ -1,11 +1,12 @@
 import { Checkbox, ControlledInput, IconComponent } from "@shared/ui";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import axios from "axios";
+import { useRouter } from "next/router";
+import { FormEn, FormRu } from "@shared/i18n";
 
-const contactMethods = ["E-mail", "Phone number", "WhatsApp", "Telegram"];
 
 const schema = z.object({
 	email: z.string().email(),
@@ -30,10 +31,18 @@ export default function ConnectForm() {
 
 	const [file, setFile] = useState<File | undefined>();
 
+  const { locale } = useRouter();
+
+	const data = useMemo(() => {
+    return locale === 'en' ?  FormEn : FormRu
+  }, [locale])
+
+  const contactMethods = useMemo(() => ["WhatsApp", "Telegram", data.contacts.phone, data.fields.email.placeholder], [locale])
+
+
 	async function sendFormData(data: FormType) {
 		console.log("{ data }");
 		console.log({ data });
-		return;
 
 		const formData = new FormData();
 		formData.append("email", data.email);
@@ -72,12 +81,12 @@ export default function ConnectForm() {
 			<ControlledInput
 				control={control}
 				name="name"
-				placeholder="Name"
+				placeholder={data.fields.name.placeholder}
 				type="text"
 				error={errors.name?.message}
 			/>
 			<ControlledInput
-				placeholder="Company"
+				placeholder={data.fields.company.placeholder}
 				control={control}
 				name="company"
 				type="text"
@@ -96,13 +105,13 @@ export default function ConnectForm() {
 					control={control}
 					name="phoneNumber"
 					type="tel"
-					placeholder="Phone number"
+					placeholder={data.fields.phone.placeholder}
 					required
 					error={errors?.phoneNumber?.message}
 				/>
 			</div>
 			<div className="py-8 text-xl">
-				<p>Contact preference</p>
+				<p>{data.contacts.label}</p>
 				<div className="mt-4 flex items-center space-x-8">
 					{contactMethods.map((method, idx) => (
 						<Checkbox key={idx} name={method} />
@@ -111,7 +120,7 @@ export default function ConnectForm() {
 			</div>
 			<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7">
 				<textarea
-					placeholder="Describe your project"
+					placeholder={data.fields.describe.placeholder}
 					required={!file}
 					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary"
 					{...register("projectDescription")}
@@ -133,8 +142,8 @@ export default function ConnectForm() {
 					<IconComponent name="clip" className="w-8" />
 				</div>
 				<div className="flex flex-col text-xl leading-7">
-					{file ? file.name : "Attach a file with Terms of Reference"}
-					<span className="text-sm opacity-50">Maximum file size 24 MB</span>
+					{file ? file.name : data.attachment.label}
+					<span className="text-sm opacity-50">{data.attachment.sub}</span>
 				</div>
 			</label>
 
@@ -142,12 +151,11 @@ export default function ConnectForm() {
 				type="submit"
 				className="!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold"
 			>
-				Send
+				{data.send}
 			</button>
 
 			<span className="text-sm text-center opacity-50 px-4">
-				By clicking the button, you consent to the processing of personal data
-				and agree to the privacy policy.
+      {data.agreement}
 			</span>
 		</form>
 	);
