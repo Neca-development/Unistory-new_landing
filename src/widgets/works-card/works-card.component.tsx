@@ -2,6 +2,7 @@ import { ICase } from "@shared/lib/types";
 import { CaseCategoryIcon } from "@shared/ui";
 import clsx from "clsx";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 interface IWorksCardInterface {
@@ -11,8 +12,9 @@ interface IWorksCardInterface {
 
 export function WorksCard(props: IWorksCardInterface) {
 	const { work, additionalClassnames } = props;
+  const {locale} = useRouter()
 
-	const categories = work?.categories.join(", ");
+	const categories = work?.categories[locale || 'ru']?.join(", ");
 
 	return (
 		<Link

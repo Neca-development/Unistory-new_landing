@@ -35,8 +35,14 @@ export const CASES: ICase[] = [
   {
     title: 'Personal',
     id: 'personal',
-    heroTitle: 'Personal – multi-platform\n HR application',
-    categories: ['Server development', 'Сlient development'],
+    heroTitle: {
+      en: 'Personal – multi-platform\n HR application',
+      ru: 'Персонал – мультиплатформенное\n HR приложение'
+    },
+    categories: {
+      en: ['Server development', 'Сlient development'],
+      ru: ['Серверная разработка', 'Клиентская разработка']
+    },
     showCategoriesOnPage: false,
     icons: ['monitor', 'phone01'],
     textColor: 'white',
@@ -47,8 +53,10 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.reactNative,
     ],
     banner: personalPromo.src,
-    description:
-      'Our team had to develop an HR aggregator application that helps collect all resumes in one place, facilitates communication with candidates and has integration with popular job search platforms.',
+    description: {
+      en: 'Our team had to develop an HR aggregator application that helps collect all resumes in one place, facilitates communication with candidates and has integration with popular job search platforms.',
+      ru: 'Нашей команде предстояло разработать HR приложение-агрегатор, которое помогает собирать все резюме в  одном месте, облегчает общение с кандидатами и имеет интеграцию с популярными платформами для поиска работы.'
+    },
     params: {
       budget: 2300000,
       period: 9,
@@ -56,42 +64,75 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Integration with HR services',
+        title: {
+          en: 'Integration with HR services',
+          ru: 'Интеграция с кадровыми сервисами'
+        },
         text: [
           {
-            text: 'To reduce the time it takes to browse employee search sites, and to bring all resumes together, we decided to aggregate the existing platforms into one application. In total, our team has integrated six major platforms, including HH.ru and Avito. Our integrations allow app users to seamlessly receive candidate resumes from multiple sources at once.',
+            text: {
+              en: 'To reduce the time it takes to browse employee search sites, and to bring all resumes together, we decided to aggregate the existing platforms into one application. In total, our team has integrated six major platforms, including HH.ru and Avito. Our integrations allow app users to seamlessly receive candidate resumes from multiple sources at once.',
+              ru: 'Чтобы сократить время на просмотр сайтов по поиску сотрудников, и собрать все резюме воедино – мы решили аггрегировать существующие площадки в одном приложении. Всего наша команда интегрировала 6 крупнейших платформ, включая HH.ru и Авито. Наши интеграции позволяют пользователям приложения бесшовно получать резюме кандидатов из сразу нескольких источников.',
+            },
           },
         ],
         banner: personalImage1.src,
       },
       {
-        title: 'Custom templates for interview invitations',
+        title: {
+          en: 'Custom templates for interview invitations',
+          ru: 'Пользовательские шаблоны для приглашения на интервью'
+        },
         text: [
           {
-            text: 'We created a system to create customizable templates cards that users can send to job candidates. This solution significantly saves time in processing a large number of incoming resumes, and this is important, because optimization is the first priority for any business.',
+            text: {
+              en: 'We created a system to create customizable templates cards that users can send to job candidates. This solution significantly saves time in processing a large number of incoming resumes, and this is important, because optimization is the first priority for any business.',
+              ru: 'Мы создали систему по созданию кастомизируемых карточек-шаблонов, которые пользователи могут отправлять кандидатам на вакансию. Данное решение значительно экономит время на обработку большого количества входящих предложений, и это важно, ведь оптимизация  является первоочередной задачей для любого бизнеса.',
+            }
           },
         ],
         banner: personalImage2.src,
       },
       {
-        title: 'Built-in chat to display messages from HR services',
+        title: {
+          en: 'Built-in chat to display messages from HR services',
+          ru: 'Встроенный чат для вывода сообщений из других сервисов'
+        },
         text: [
           {
-            text: 'The app collects not only candidates resumes, but also their messages from various services. To make this process even more convenient, we created a built-in chat room where users can communicate with future employees from all necessary sources.',
+            text: {
+              en: 'The app collects not only candidates resumes, but also their messages from various services. To make this process even more convenient, we created a built-in chat room where users can communicate with future employees from all necessary sources.',
+              ru: 'Приложение собирает не только резюме кандидатов, но и их сообщения с различных площадок. Чтобы сделать этот процесс еще более удобным, мы создали встроенный чат, в котором пользователи могут общаться с будущими работниками из всех необходимых источников.',
+            }
           },
         ],
         banner: personalImage3.src,
       },
       {
-        title: '',
+        title: {
+          en: '',
+          ru: ''
+        },
         text: [
           {
-            subtitle: 'Smart tips for making up vacancies',
-            text: 'We parsed over ten thousand different job ads and used statistical analysis to collect the most common requirements. This made it possible to compile smart tips for all kinds of jobs.',
+            subtitle: {
+              en: 'Smart tips for making up vacancies',
+              ru: 'Сбор подсказок для составления вакансий'
+            },
+            text: {
+              en: 'We parsed over ten thousand different job ads and used statistical analysis to collect the most common requirements. This made it possible to compile smart tips for all kinds of jobs.',
+              ru: 'Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.',
+            }
           },
           {
-            subtitle: 'Placing vacancies in different services',
-            text: 'We have unified job requirements across all services, which allows the users to fill out only the app’s form.',
+            subtitle: {
+              en: 'Placing vacancies in different services',
+              ru: 'Размещение вакансий в разных сервисах'
+            },
+            text: {
+              en: 'We have unified job requirements across all services, which allows the users to fill out only the app’s form.',
+              ru: 'Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.',
+            }
           },
         ],
         banner: personalScheme.src,
@@ -115,15 +156,28 @@ export const CASES: ICase[] = [
   {
     title: 'Gas Monsters',
     id: 'gas-monsters',
-    heroTitle: 'Creation of a gamified\n NFT collection',
-    categories: [
-      'Blockchain development',
-      'Integration',
-      'HighLoad',
-      'Engineering',
-      'Server development',
-      'Client development',
-    ],
+    heroTitle: {
+      en: 'Creation of a gamified\n NFT collection',
+      ru: 'Создание геймифицированной\n NFT коллекции'
+    },
+    categories: {
+      en: [
+        'Blockchain development',
+        'Integration',
+        'HighLoad',
+        'Engineering',
+        'Server development',
+        'Client development',
+      ],
+      ru: [
+        'Blockchain разработка',
+        'Интеграции',
+        'HighLoad',
+        'Проектирование',
+        'Серверная разработка',
+        'Клиентская разработка',
+      ]
+    },
     showCategoriesOnPage: true,
     icons: ['monitor', 'bitcoin'],
     textColor: 'black',
@@ -136,8 +190,10 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.chainlinkNode,
     ],
     banner: gasmonstersBanner.src,
-    description:
-      'The main goal of the project was to develop a minting website for the NFT collection, where users can buy NFTs and then upgrade them for the gas they spend on Ethereum network.',
+    description: {
+      en: 'The main goal of the project was to develop a minting website for the NFT collection, where users can buy NFTs and then upgrade them for the gas they spend on Ethereum network.',
+      ru: 'Основной целью проекта являлась разработка минтинг вебсайта для NFT коллекции, где пользователи могут приобрести NFT, а затем модернизировать их за потраченные газ комиссии в сети Ethereum.',
+    },
     params: {
       budget: 3000000,
       period: 6,
@@ -145,33 +201,60 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Upgradable NFTs',
+        title: {
+          en: 'Upgradable NFTs',
+          ru: 'Модернизируемые NFT'
+        },
         text: [
           {
-            text: 'The main feature of the collection – NFT owners can upgrade their Dragons from level 1st to 7th. Upgrades are directly related to a user transactions in Ethereum network: the more transactions have been made, the more experience users gains, which he can spend to improve owned Dragon. This feature gives additional interest to the project, and besides, it is a really clear and, most importantly, transparent mechanics.',
+            text: {
+              en: 'The main feature of the collection – NFT owners can upgrade their Dragons from level 1st to 7th. Upgrades are directly related to a user transactions in Ethereum network: the more transactions have been made, the more experience users gains, which he can spend to improve owned Dragon. This feature gives additional interest to the project, and besides, it is a really clear and, most importantly, transparent mechanics.',
+              ru: 'Главная особенность созданной коллекции – владельцы NFT могут улучшать полученных Драконов  с 1-го по 7-й уровень. Модернизация напрямую связана с  пользовательским транзакциям в сети Ethereum: чем больше транзакций было совершенно пользователем, тем больше приобретается опыта, который он может потратить на улучшение своего Дракона. Такая особенность придает дополнительный интерес к проекту, к тому же, это действительно понятная и, главное – прозрачная механика. ',
+            }
           },
         ],
         banner: gasmonstersImage1.src,
       },
       {
-        title: 'Randomly generated tokens',
+        title: {
+          en: 'Randomly generated tokens',
+          ru: 'Случайно сгенерированные токены',
+        },
         text: [
           {
-            text: 'To define random NFT layers, our team used the Chainlink VRF blockchain service: with its help, we get randomized parameters inside the blockchain. After generating them, the layer data is directly written into the smart contract of the collection. As a result, this numerical combination serves as an identification file in a folder on IPFS. Subsequently, no one can change the NFT layers - everything is done in the best tradition of decentralized applications.',
+            text: {
+              en: 'To define random NFT layers, our team used the Chainlink VRF blockchain service: with its help, we get randomized parameters inside the blockchain. After generating them, the layer data is directly written into the smart contract of the collection. As a result, this numerical combination serves as an identification file in a folder on IPFS. Subsequently, no one can change the NFT layers - everything is done in the best tradition of decentralized applications.',
+              ru: 'Для определения случайных слоев NFT, наша команда использовала блокчейн-сервис Chainlink VRF: с его помощью, мы получаем  рандомизированные параметры внутри блокчейна. После их генерации, данные о слоях напрямую записываются в смарт контракт коллекции. В результате, эта числовая комбинация служит идентификационным файлом в папке на IPFS. Впоследствии, никто не может изменить слои NFT – все выполнено в лучших традициях децентрализованных приложений.',
+            }
           },
         ],
         banner: gasmonstersImage2.src,
       },
       {
-        title: 'Architectural solution',
+        title: {
+          en: 'Architectural solution',
+          ru: 'Архитектурное решение'
+        },
         text: [
           {
-            subtitle: 'The goal',
-            text: 'For level up of a Dragon, the smart collection contract must receive data about ETH spent by users on commissions in Ethereum network. ',
+            subtitle: {
+              en: 'The goal',
+              ru: 'Задача'
+            },
+            text: {
+              en: 'For level up of a Dragon, the smart collection contract must receive data about ETH spent by users on commissions in Ethereum network. ',
+              ru: 'Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.',
+            }
           },
           {
-            subtitle: 'Solution',
-						text: 'We created an architecture in which a smart contract accesses the project backend via Chainlink, which in turn communicates with Etherscan blockchain-explorer. After receiving the user transaction data and conducting necessary calculations, the server application generates and uploads a new image with NFT metadata to IPFS. It is the data that will be displayed to the user when querying the collection smart contract.',
+            subtitle: {
+              en: 'Solution',
+              ru: 'Решение'
+            },
+						text: {
+              en: 'We created an architecture in which a smart contract accesses the project backend via Chainlink, which in turn communicates with Etherscan blockchain-explorer. After receiving the user transaction data and conducting necessary calculations, the server application generates and uploads a new image with NFT metadata to IPFS. It is the data that will be displayed to the user when querying the collection smart contract.',
+              ru: 'Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.',
+            }
           },
         ],
         banner: gasmonstersScheme.src,
@@ -191,15 +274,28 @@ export const CASES: ICase[] = [
   {
     title: 'The Heist',
     id: 'the-heist',
-    heroTitle: 'The Heist – Play2Earn based on NFT collection',
-    categories: [
-      'Blockchain development',
-			'Integration',
-      'HighLoad',
-      'Engineering',
-      'Server development',
-      'Client development',
-    ],
+    heroTitle: {
+      en: 'The Heist – Play2Earn based on NFT collection',
+      ru: 'The Heist – Play2Earn игра на базе NFT коллекции'
+    },
+    categories: {
+      en: [
+        'Blockchain development',
+        'Integration',
+        'HighLoad',
+        'Engineering',
+        'Server development',
+        'Client development',
+      ],
+      ru: [
+        'Blockchain разработка',
+        'Интеграции',
+        'HighLoad',
+        'Проектирование',
+        'Серверная разработка',
+        'Клиентская разработка',
+      ]
+    },
     showCategoriesOnPage: false,
     icons: ['monitor', 'bitcoin'],
     textColor: 'white',
@@ -210,8 +306,10 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.solidity,
     ],
     banner: heistBanner.src,
-    description:
-      'Creating a web application using NFT technology to implement game mechanics: developed the website, the in-game stacking system, the smart collection contract on the BSC network, and the tokenomics of the entire project.',
+    description: {
+      en: 'Creating a web application using NFT technology to implement game mechanics: developed the website, the in-game stacking system, the smart collection contract on the BSC network, and the tokenomics of the entire project.',
+      ru: 'Создание веб-приложения с использованием технологии NFT для реализации игровых механик: разработали вебсайт, внутриигровую стейкинг систему, смарт контракт коллекции в сети BSC и токеномику всего  проекта.',
+    },
     params: {
       budget: 1500000,
       period: 3,
@@ -219,34 +317,55 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Presale of NFTs',
+        title: {
+          en: 'Presale of NFTs',
+          ru: 'Предпродажа NFT коллекции'
+        },
         text: [
           {
-            text: 'Marketing tactics included pre-selling a limited amount of  NFTs  to early users. Our team prepared the logic of distributing a certain number of tokens, which have better characteristics compared to public NFT sale. One of the main differences: increased rewards with each game iteration. In this way, we helped raise more funds at the initial stage of the project.',
+            text: {
+              en: 'Marketing tactics included pre-selling a limited amount of  NFTs  to early users. Our team prepared the logic of distributing a certain number of tokens, which have better characteristics compared to public NFT sale. One of the main differences: increased rewards with each game iteration. In this way, we helped raise more funds at the initial stage of the project.',
+              ru: 'Маркетинговая тактика включала в себя предпродажу части NFT коллекции ранним пользователям. Наша команда подготовила логику дистрибьюции ограниченного числа токенов, которые имеют лучшие характеристики, в сравнении с токенами публичной продажи. Одно из главных отличий: повышенные вознаграждения с каждой игровой итерации. Таким образом, мы помогли привлечь больше средств на начальном этапе проекта.',
+            }
           },
         ],
         banner: heistImage1.src,
       },
       {
-        title: 'Upgrades',
+        title: {
+          en: 'Upgrades',
+          ru: 'Модернизация'
+        },
         text: [
           {
-            text: 'One of the features of the smart collection contract is unlimited creation of NFTs. To form a more predictable economy of the project, we have implemented a token upgrade feature. This method allows users to exchange 3 NFTs of the same kind and rarity for 1 NFT with more favorable characteristics. The exchanged tokens are withdrawn from the total supply, which increases the market value of NFTs and the capitalization of the entire collection.',
+            text: {
+              en: 'One of the features of the smart collection contract is unlimited creation of NFTs. To form a more predictable economy of the project, we have implemented a token upgrade feature. This method allows users to exchange 3 NFTs of the same kind and rarity for 1 NFT with more favorable characteristics. The exchanged tokens are withdrawn from the total supply, which increases the market value of NFTs and the capitalization of the entire collection.',
+              ru: 'Одна из особенностей смарт контракта коллекции – неограниченное создание NFT. Для формирования более предсказуемой экономики проекта, мы реализовали функцию модернизации токенов. Данный метод позволяет пользователям обменять 3 NFT одного вида и редкости на 1 NFT с более выгодными характеристиками. Обмененные токены выводятся из общего оборота, что повышает рыночную стоимость отдельной NFT и капитализацию всей коллекции.',
+            }
           },
         ],
         banner: heistImage2.src,
       },
       {
-        title: 'Staking',
+        title: {
+          en: 'Staking',
+          ru: 'Стейкинг'
+        },
         text: [
           {
-            text: 'In addition to the NFT smart contract, our team developed $CIAO smart contract of fungible tokens. Users can deposit project assets for a certain period of time, with the expectation of making a profit in the future. Staking is also implemented with some game mechanics and has several different types. Users can join staking guilds, improve, destroy, or just receive passive income from staking pools.',
+            text: {
+              en: 'In addition to the NFT smart contract, our team developed $CIAO smart contract of fungible tokens. Users can deposit project assets for a certain period of time, with the expectation of making a profit in the future. Staking is also implemented with some game mechanics and has several different types. Users can join staking guilds, improve, destroy, or just receive passive income from staking pools.',
+              ru: 'Помимо NFT смарт контракта , наша команда разработала смарт контракт взаимозаменяемых токенов – $CIAO. Пользователи могут депонировать активы проекта на определенный период времени, в рассчете на  получение прибыли в будущем. Стейкинг так же реализован с некоторой игровой механикой и имеет несколько разных типов. Пользователи могут объединятся в стейкинг гильдии, улучшать, уничтожать, или же просто получать пассивный доход со стейкинг пулов.',
+            }
           },
         ],
         banner: heistImage3.src,
       },
       {
-        title: '',
+        title: {
+          ru: '',
+          en: ''
+        },
         text: [],
         banner: heistScheme.src,
       },
@@ -266,15 +385,28 @@ export const CASES: ICase[] = [
   {
     title: 'Xillion',
     id: 'xillion',
-    heroTitle: 'Decentralized blockchain project incubator',
-    categories: [
-      'Blockchain development',
-			'Integration',
-      'HighLoad',
-      'Engineering',
-      'Server development',
-      'Client development',
-    ],
+    heroTitle: {
+      en: 'Decentralized blockchain project incubator',
+      ru: 'Децентрализованный инкубатор блокчейн-проектов'
+    },
+    categories: {
+      en: [
+        'Blockchain development',
+        'Integration',
+        'HighLoad',
+        'Engineering',
+        'Server development',
+        'Client development',
+      ],
+      ru: [
+        'Blockchain разработка',
+        'Интеграции',
+        'HighLoad',
+        'Проектирование',
+        'Серверная разработка',
+        'Клиентская разработка',
+      ]
+    },
     showCategoriesOnPage: true,
     icons: ['monitor', 'bitcoin'],
     textColor: 'white',
@@ -287,8 +419,10 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.theGraph,
     ],
     banner: xilBanner.src,
-    description:
-      'Modernization of the investment DAO ecosystem in Polygon and BSC blockchain networks: refined the MVP version of the platform, created a separate P2E game module with quizzes, and integrated custom staking infrastructure into the existing decentralized community.',
+    description: {
+      en: 'Modernization of the investment DAO ecosystem in Polygon and BSC blockchain networks: refined the MVP version of the platform, created a separate P2E game module with quizzes, and integrated custom staking infrastructure into the existing decentralized community.',
+      ru: 'Модернизация инвестиционной DAO экосистемы в сетях Polygon и BSC: доработали MVP версию площадки, создали отдельный игровой модуль  с P2E-викторинами и интегрировали кастомную стейкинг инфраструктуру в существующее децентрализованное сообщество.',
+    },
     params: {
       budget: 3500000,
       period: 8,
@@ -296,37 +430,61 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Quiz mode',
+        title: {
+          en: 'Quiz mode',
+          ru: 'Режим викторины'
+        },
         text: [
           {
-            text: 'Xillion – is a constantly progressing product, which has been improved by our team implementing new services for the platform. During the development, owners noted the growing trend of Play2Earn projects in Polygon network. In an effort to improve the product and respond to the market, it was decided to create a separate rewarding blockchain quizzes platform. Together with the product team, we developed and integrated a separate project module running in Polygon network, where the community takes surveys and receives rewards for participation.',
+            text: {
+              en: 'Xillion – is a constantly progressing product, which has been improved by our team implementing new services for the platform. During the development, owners noted the growing trend of Play2Earn projects in Polygon network. In an effort to improve the product and respond to the market, it was decided to create a separate rewarding blockchain quizzes platform. Together with the product team, we developed and integrated a separate project module running in Polygon network, where the community takes surveys and receives rewards for participation.',
+              ru: 'Xillion – это постоянно совершенствующийся продукт, который был улучшен нашей командой посредством реализации новых сервисов для платформы. В ходе разработки проекта владельцы отметили тенденцию роста популярности Play2Earn сегмента в сети Polygon. Так, в стремлении улучшить продукт и своевременно отреагировать на тенденции рынка было решено создать отдельную платформу для участия в поощеряемых блокчейн-викторинах. Совместно с командой продукта мы разработали и интегрировали отдельный модуль проекта, работающий в сети Polygon, где сообщество проходит опросы и получает вознаграждения за участие.',
+            }
           },
         ],
         banner: xilImage1.src,
       },
       {
-        title: 'DAO-incubator',
+        title: {
+          en: 'DAO-incubator',
+          ru: 'DAO-инкубатор'
+        },
         text: [
           {
-            text: 'After investing in the listed projects on Xillion platform, each investor receives project tokens XIL. A separate smart contract of the platform is responsible for their distribution, which is the primitive of the entire protocol. It also automatically creates new smart contracts of listed projects that distribute unique tokens of incubated DAO products.',
+            text: {
+              en: 'After investing in the listed projects on Xillion platform, each investor receives project tokens XIL. A separate smart contract of the platform is responsible for their distribution, which is the primitive of the entire protocol. It also automatically creates new smart contracts of listed projects that distribute unique tokens of incubated DAO products.',
+              ru: 'После инвестирования в размещенные проекты на площадке Xillion,  каждый из инвесторов получает токены проекта (XIL). За их дистрибьюцию отвечает отдельный смарт контракт платформы, который является основой всего протокола. Он также автоматически создает новые смарт контракты размещаемых проектов, которые распределяют уникальные токены инкубационных DAO продуктов.',
+            }
           },
         ],
         banner: xilImage2.src,
       },
       {
-        title: 'DAO voting and XIL staking',
+        title: {
+          en: 'DAO voting and XIL staking',
+          ru: 'DAO голосование и XIL стейкинг'
+        },
         text: [
           {
-            text: 'Our team revamped on-chain voting for the projects promoted on the platform: each user can independently propose ideas to XillionDAO members. Any member of the DAO with a balance of at least 10k XIL tokens can take part in the decentralized voting.  The voting process is implemented by a staking smart contract: the members have to deposit XIL tokens, which will be returned to them along with a percentage of the investment when the promoted project is successfully launched.',
+            text: {
+              en: 'Our team revamped on-chain voting for the projects promoted on the platform: each user can independently propose ideas to XillionDAO members. Any member of the DAO with a balance of at least 10k XIL tokens can take part in the decentralized voting.  The voting process is implemented by a staking smart contract: the members have to deposit XIL tokens, which will be returned to them along with a percentage of the investment when the promoted project is successfully launched.',
+              ru: 'Наша команда модернизировала логику on-chain голосования за продвигаемые на платформе проекты : каждый пользователь может самостоятельно  предложить свою идею участникам XillionDAO. Участие в децентрализованном голосовании может принять любой член сообщества Xillion с балансом не менее 10 тыс. XIL токенов.  Процесс голосования реализован при помощи стейкинг смарт контракта, в котором необходимо заблокировать XIL токены, которые вернуться пользователям вместе с процентов от инвестиций при успешном запуске продвигаемого проекта.',
+            }
           },
         ],
         banner: xilImage3.src,
       },
       {
-        title: 'Architectural solution',
+        title: {
+          en: 'Architectural solution',
+          ru: 'Архитектурное решение'
+        },
         text: [
           {
-            text: 'For storing project history, voting results, number of investments, and investor information, we used TheGraph protocol, which can simultaneously work with both old and updated blockchain project architectures. Xillion is deployed on two blockchain networks: Binance Smart Chain and Polygon. Differentiating access to sections of the website and using the capabilities of ether.js library made it comfy for users to switch from one network to another. Also, the project uses a proxy architecture in the blockchain part of the project, which makes it easy to scale and add new modules in the future.',
+            text: {
+              en: 'For storing project history, voting results, number of investments, and investor information, we used TheGraph protocol, which can simultaneously work with both old and updated blockchain project architectures. Xillion is deployed on two blockchain networks: Binance Smart Chain and Polygon. Differentiating access to sections of the website and using the capabilities of ether.js library made it comfy for users to switch from one network to another. Also, the project uses a proxy architecture in the blockchain part of the project, which makes it easy to scale and add new modules in the future.',
+              ru: 'Для сохранения истории проектов, результатов голосования, количества инвестиций и информации об инвесторах мы использовали протокол TheGraph, который может одновременно работать как и со старой, так и с обновленной архитектурой блокчейн-проектов. Xillion размещен одновременно сразу на двух блокчейн сетях: Binance Smart Chain и Polygon. Разграничение доступа к разделам сайта и использование возможностей библиотеки ether.js сделали удобными для пользователей переходы от одной сети к другой.Также, в проекте используется прокси-архитектура для блокчейна части проекта, что позволяет с легкостью масштабировать продукт и в будущем добавлять новые модули.',
+            }
           },
         ],
         banner: xilScheme.src,
@@ -348,15 +506,28 @@ export const CASES: ICase[] = [
   {
     title: 'Sipsignal',
     id: 'sipsignal',
-    heroTitle: 'Platform development for VoIP  provider',
-    categories: [
-      'Integration',
-      'HighLoad',
-      'Engineering',
-      'Server development',
-      'Client development',
-      'Admin Panel',
-    ],
+    heroTitle: {
+      en: 'Platform development for VoIP  provider',
+      ru: 'Разработка платформы для провайдера VoIP решений'
+    },
+    categories: {
+      en: [
+        'Integration',
+        'HighLoad',
+        'Engineering',
+        'Server development',
+        'Client development',
+        'Admin Panel',
+      ],
+      ru: [
+        'Интеграции',
+        'HighLoad',
+        'Проектирование',
+        'Клиентская разработка',
+        'Серверная разработка',
+        'Административная часть',
+      ],
+    },
     showCategoriesOnPage: true,
     icons: ['monitor', 'phone02'],
     textColor: 'black',
@@ -368,8 +539,10 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.postgresql,
     ],
     banner: sipsignalBanner.src,
-    description:
-      'The main goal of our team was to automate the company\'s existing processes. The client was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased the company\'s costs.',
+    description: {
+      en: 'The main goal of our team was to automate the company\'s existing processes. The client was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased the company\'s costs.',
+      ru: 'Модернизация инвестиционной DAO экосистемы в сетях Polygon и BSC: доработали MVP версию площадки, создали отдельный игровой модуль  с P2E-викторинами и интегрировали кастомную стейкинг инфраструктуру в существующее децентрализованное сообщество.',
+    },
     params: {
       budget: 1400000,
       period: 6,
@@ -377,28 +550,46 @@ export const CASES: ICase[] = [
     },
     main: [
       {
-        title: 'Development of the main web application',
+        title: {
+          en: 'Development of the main web application',
+          ru: 'Разработка основного веб-приложения'
+        },
         text: [
           {
-            text: 'We have developed easy-to-navigate e-commerce application for choosing and purchasing cloud and telecom services. From the ground up, we created a custom card where platform clients can select the product they are interested in, specify all the necessary information for purchase, and create their own account to track their chosen subscription plan.',
+            text: {
+              en: 'We have developed easy-to-navigate e-commerce application for choosing and purchasing cloud and telecom services. From the ground up, we created a custom card where platform clients can select the product they are interested in, specify all the necessary information for purchase, and create their own account to track their chosen subscription plan.',
+              ru: 'Мы разработали удобное, и в то же время понятное приложение для электронной коммерции, позволяющее выбирать и приобретать облачные и телекоммуникационные услуги. С нуля создали пользовательскую карту, по которой клиенты платформы могут выбрать интересующий их товар, указать всю необходимую информацию для покупки и создать свой аккаунт для отслеживания выбранного плана подписок.',
+            }
           },
         ],
         banner: sipsignalImage1.src,
       },
       {
-        title: 'eFax application for platform customers',
+        title: {
+          en: 'eFax application for platform customers',
+          ru: 'eFax приложение для клиентов платформы'
+        },
         text: [
           {
-            text: 'In addition to developing the main web application, we have created a separate eFax service that is distributed as SaaS. eFax is a fairly popular solution in the U.S., and is often used in conjunction with VoIP. It was important for our client to provide as wide a range of services as possible: that\'s how we came up with the idea of creating a separate custom fax application.',
+            text: {
+              en: 'In addition to developing the main web application, we have created a separate eFax service that is distributed as SaaS. eFax is a fairly popular solution in the U.S., and is often used in conjunction with VoIP. It was important for our client to provide as wide a range of services as possible: that\'s how we came up with the idea of creating a separate custom fax application.',
+              ru: 'Помимо разработки основного веб-приложения, мы создали отдельный eFax сервис, который распространяется в виде программного обеспечения как услуги. eFax является довольно популярным решением в США, и зачастую используется совместно с VoIP. Нашему клиенту было важно предоставлять как можно более широкий спектр услуг: так мы пришли к идеи создания отдельного пользовательского приложения для факса.',
+            }
           },
         ],
         banner: sipsignalImage2.src,
       },
       {
-        title: 'Custom admin panel',
+        title: {
+          en: 'Custom admin panel',
+          ru: 'Кастомная\n административная панель'
+        },
         text: [
           {
-            text: 'Our team developed an administrative panel and integrated it with the existing CRM system and databases. We took into account all the client\'s wishes and created a unique solution that combines all the necessary functions: tracking the status of orders for individual products, monitoring the sales funnel, managing users, employees and content on the platform.',
+            text: {
+              en: 'Our team developed an administrative panel and integrated it with the existing CRM system and databases. We took into account all the client\'s wishes and created a unique solution that combines all the necessary functions: tracking the status of orders for individual products, monitoring the sales funnel, managing users, employees and content on the platform.',
+              ru: 'Наша команда разработала административную панель и интегрировала ее с уже существующими CRM-системой и Базами Данных. Мы учли все пожелания клиента и создали уникальное решение, которое сочетает в себе все необходимые функции: отслеживание статусов заказов по отдельным продуктам, мониторинг воронки продаж, управление пользователями, сотрудниками и контентом на платформе.',
+            }
           },
         ],
         banner: sipsignalImage3.src,
@@ -406,11 +597,20 @@ export const CASES: ICase[] = [
     ],
     review: {
       author: {
-        name: 'Bogdan Pakhomenko',
-        position: 'CEO of "BP Networking & Design Inc.',
+        name: {
+          en: 'Bogdan Pakhomenko',
+          ru: 'Богдан Пахоменко'
+        },
+        position: {
+          en: 'CEO of "BP Networking & Design Inc.',
+          ru: 'исполнительный директор "BP Networking & Design Inc.'
+        },
         photo: sipsignalClient.src,
       },
-      text: '"Good work, friends! Unistory is a well-managed and structured team: weekly updates, quick response times, and quality order fulfillment. I would recommend the Unistory team for any project. We were so pleased with the results that we went straight to our next project. Thank you guys for your hard work."',
+      text: {
+        en: '"Good work, friends! Unistory is a well-managed and structured team: weekly updates, quick response times, and quality order fulfillment. I would recommend the Unistory team for any project. We were so pleased with the results that we went straight to our next project. Thank you guys for your hard work."',
+        ru: '«Хорошая работа, друзья! Unistory - это хорошо управляемая и структурированная команда: еженедельные обновления, быстрое реагирование и качественное выполнение заказов. Я бы рекомендовал команду Unistory для любого проекта. Мы были настолько довольны результатами, что сразу же приступили ко следующему проекту. Спасибо вам, ребята, за вашу тяжелую работу.».',
+      }
     },
     logo: sipsignalLogo.src,
     team: [

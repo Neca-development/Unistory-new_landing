@@ -4,17 +4,21 @@ import { Connect } from '@widgets/connect'
 import { Layout } from '@widgets/layout'
 import { WorksCard } from '@widgets/works-card'
 import clsx from 'clsx'
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 export function Cases() {
   const [categories, setCategories] = useState<string[]>([])
   const [activeTag, setActiveTag] = useState('')
   const [cards, setCards] = useState(CASES)
+  const {locale} = useRouter()
 
   const prepareCategories = () => {
     const uniques: any = new Set([])
     CASES.forEach((c) => {
-      const catArray = c.categories
+      const catArray = c.categories[locale || 'ru']
+      if(!catArray) return
+
       for (const tag of catArray) {
         uniques.add(tag)
       }
@@ -34,7 +38,7 @@ export function Cases() {
       if (activeTag === 'All') {
         setCards(CASES)
       } else {
-        const filtered = CASES.filter((c) => c.categories.includes(activeTag))
+        const filtered = CASES.filter((c) => c.categories[locale || 'ru']?.includes(activeTag))
         setCards(filtered)
       }
     }
