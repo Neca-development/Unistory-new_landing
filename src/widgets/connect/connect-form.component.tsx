@@ -8,25 +8,33 @@ import { useRouter } from "next/router";
 import { FormEn, FormRu } from "@shared/i18n";
 import clsx from "clsx";
 
-
-const schema = z.object({
-	email: z.string().email(),
-	name: z.string().min(3),
-	company: z.string().min(3),
-	phoneNumber: z.string().min(6),
-	projectDescription: z.string(),
-});
-
-export type FormType = z.infer<typeof schema>;
-
 export interface ICheckboxFields {
   email: boolean,
   telegram: boolean,
   whatsapp: boolean,
   phone: boolean,
+  [index: string]: any
  }
 
 export default function ConnectForm() {
+  const { locale } = useRouter();
+
+	const data = useMemo(() => {
+    return locale === 'en' ?  FormEn : FormRu
+  }, [locale])
+
+  const requiredMsg = data.fields.commonErrors.required
+  
+  const schema = z.object({
+    email: z.string({required_error: requiredMsg}).email(data.fields.email.error),
+    name: z.string({required_error: requiredMsg}).min(3, {message: data.fields.name.error}),
+    company: z.string({required_error: requiredMsg}).min(3, {message: data.fields.company.error}),
+    phoneNumber: z.string({required_error: requiredMsg}).min(6, data.fields.phone.error),
+    projectDescription: z.string({required_error: requiredMsg}),
+  });
+
+  type FormType = z.infer<typeof schema>;
+  
 	const {
 		handleSubmit,
 		register,
@@ -35,22 +43,17 @@ export default function ConnectForm() {
 		reset,
 	} = useForm<FormType>({
 		resolver: zodResolver(schema),
+    mode: 'onSubmit'
 	});
 
 	const [file, setFile] = useState<File | undefined>();
   const [fileError, setFileError] = useState(false)
-  const [ways, setWays] = useState({
+  const [ways, setWays] = useState<ICheckboxFields>({
     email: false,
     telegram: false,
     whatsapp: false,
     phone: false,
    })
-
-  const { locale } = useRouter();
-
-	const data = useMemo(() => {
-    return locale === 'en' ?  FormEn : FormRu
-  }, [locale])
 
   const contactMethods = useMemo(() => [
     {
@@ -72,7 +75,7 @@ export default function ConnectForm() {
   ], [locale])
 
   const handleCheckboxChange = (field: string) => {
-    setWays((prev) => ({...prev, [field]: true}))
+    setWays((prev) => ({...prev, [field]: !prev[field]}))
   }
 
   const resetFields = () => {
@@ -80,6 +83,8 @@ export default function ConnectForm() {
     setWays({email: false, phone: false, telegram: false,whatsapp: false})
     reset();
   }
+
+  console.log(errors)
 
 	async function sendFormData(data: FormType) {
 		const formData = new FormData();
@@ -136,7 +141,6 @@ export default function ConnectForm() {
 					name="email"
 					type="email"
 					placeholder="E-mail"
-					required
 					error={errors?.email?.message}
 				/>
 				<ControlledInput
@@ -144,7 +148,6 @@ export default function ConnectForm() {
 					name="phoneNumber"
 					type="tel"
 					placeholder={data.fields.phone.placeholder}
-					required
 					error={errors?.phoneNumber?.message}
 				/>
 			</div>

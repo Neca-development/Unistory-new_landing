@@ -5,20 +5,27 @@ export const FormEn = {
     afterEmail: 'We\'ll get back to you shortly!'
   },
   fields: {
+    commonErrors: {
+      required: 'Fill in the field'
+    },
     name: {
       placeholder: 'Name',
+      error: 'Name should be at least 3 letters'
     },
     company: {
-      placeholder: 'Company'
+      placeholder: 'Company',
+      error: 'Company name should be at least 3 letters'
     },
     phone: {
       placeholder: 'Phone number',
+      error: 'Phone number should be at least 6 letters'
     },
     email: {
-      placeholder: 'E-mail'
+      placeholder: 'E-mail',
+      error: 'Incorrect email'
     },
     describe: {
-      placeholder: 'Describe your project'
+      placeholder: 'Describe your project',
     }
   },
   contacts: {
