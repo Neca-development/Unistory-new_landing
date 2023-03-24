@@ -84,8 +84,6 @@ export default function ConnectForm() {
     reset();
   }
 
-  console.log(errors)
-
 	async function sendFormData(data: FormType) {
 		const formData = new FormData();
 		formData.append("email", data.email);
@@ -94,6 +92,7 @@ export default function ConnectForm() {
 		formData.append("phoneNumber", data.phoneNumber);
 		formData.append("description", data.projectDescription);
     // formData.append("preferences", JSON.stringify(ways))
+    console.log(ways) //for eslint
 
 		if (file) {
 			if (file.size < 24000000) {
