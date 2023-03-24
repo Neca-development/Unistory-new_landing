@@ -179,7 +179,7 @@ export const CASES: ICase[] = [
         'Blockchain development',
         'Integration',
         'HighLoad',
-        'Engineering',
+        'Projection',
         'Server development',
         'Client development',
       ],
@@ -280,8 +280,8 @@ export const CASES: ICase[] = [
     team: [
       TEAM.nursultanBegenov,
       TEAM.daniilSemenov,
-      TEAM.maksimKlimchenko,
       TEAM.nikitaBobkov,
+      TEAM.maksimKlimchenko,
       TEAM.vechyaslavValdykin,
       TEAM.andreyBarabanov,
       TEAM.danilaSkablov,
@@ -300,7 +300,7 @@ export const CASES: ICase[] = [
         'Blockchain development',
         'Integration',
         'HighLoad',
-        'Engineering',
+        'Projection',
         'Server development',
         'Client development',
       ],
@@ -417,7 +417,7 @@ export const CASES: ICase[] = [
         'Blockchain development',
         'Integration',
         'HighLoad',
-        'Engineering',
+        'Projection',
         'Server development',
         'Client development',
       ],
@@ -543,7 +543,7 @@ export const CASES: ICase[] = [
   },
 
   {
-    title: 'Sipsignal',
+    title: 'SipSignal',
     id: 'sipsignal',
     heroTitle: {
       en: 'Platform development for VoIP  provider',
@@ -553,7 +553,7 @@ export const CASES: ICase[] = [
       en: [
         'Integration',
         'HighLoad',
-        'Engineering',
+        'Projection',
         'Server development',
         'Client development',
         'Admin Panel',
@@ -629,7 +629,7 @@ export const CASES: ICase[] = [
         text: [
           {
             text: {
-              en: 'Our team developed an administrative panel and integrated it with the existing CRM system and databases. We took into account all the client\'s wishes and created a unique solution that combines all the necessary functions: tracking the status of orders for individual products, monitoring the sales funnel, managing users, employees and content on the platform.',
+              en: 'Our team developed an admin panel and integrated it with the existing CRM system and databases. We took into account all the client\'s wishes and created a unique solution that combines all the necessary functions: tracking the status of orders for individual products, monitoring the sales funnel, managing users, employees and content on the platform.',
               ru: 'Наша команда разработала административную панель и интегрировала ее с уже существующими CRM-системой и Базами Данных. Мы учли все пожелания клиента и создали уникальное решение, которое сочетает в себе все необходимые функции: отслеживание статусов заказов по отдельным продуктам, мониторинг воронки продаж, управление пользователями, сотрудниками и контентом на платформе.',
             }
           },
@@ -749,7 +749,7 @@ export const CASES: ICase[] = [
       },
       {
         title: {
-          en: 'Administrative panel and personal account for users',
+          en: 'Admin panel and personal account for users',
           ru: 'Административная панель и личный кабинет для пользователей'
         },
         text: [
@@ -794,7 +794,7 @@ export const CASES: ICase[] = [
         'Blockchain development',
         'Integration',
         'HighLoad',
-        'Engineering',
+        'Projection',
         'Server development',
         'Client development',
       ],
