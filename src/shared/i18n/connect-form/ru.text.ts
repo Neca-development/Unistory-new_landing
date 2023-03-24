@@ -5,20 +5,27 @@ export const FormRu = {
     afterEmail: 'Мы свяжемся с вами прямо сейчас!'
   },
   fields: {
+    commonErrors: {
+      required: 'Заполните поле'
+    },
     name: {
       placeholder: 'Имя',
+      error: 'Имя должно содержать больше 3 символов'
     },
     company: {
-      placeholder: 'Компания'
+      placeholder: 'Компания',
+      error: 'Название компании должно содержать больше 3 символов'
     },
     phone: {
       placeholder: 'Телефон',
+      error: 'Номер телефона должен содержать больше 6 символов'
     },
     email: {
-      placeholder: 'Эл. почта'
+      placeholder: 'Эл. почта',
+      error: 'Неверный email'
     },
     describe: {
-      placeholder: 'Расскажите о проекте'
+      placeholder: 'Расскажите о проекте',
     }
   },
   contacts: {
@@ -28,7 +35,10 @@ export const FormRu = {
   },
   attachment: {
     label: 'Прикрепить файл с ТЗ',
-    sub: 'Максимальный размер файла 24 МБ'
+    sub: 'Максимальный размер файла 24 МБ',
+    errors: {
+      tooLarge: 'Размер файла не может превышать 24 МБ!'
+    }
   },
   send: 'Отправить',
   agreement: 'Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.'
