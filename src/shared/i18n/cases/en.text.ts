@@ -4,7 +4,6 @@ export const SingleCaseEn = {
     budget: 'Budget',
     timeline: {
       label: 'Timeline',
-      months: 'months'
     },
     year: 'Year'
   },

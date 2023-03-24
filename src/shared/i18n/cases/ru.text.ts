@@ -4,7 +4,6 @@ export const SingleCaseRu = {
     budget: 'Бюджет',
     timeline: {
       label: 'Срок',
-      months: 'месяцев'
     },
     year: 'Год'
   },

@@ -14,6 +14,7 @@ import gasmonstersScheme from '@public/assets/images/cases/gas-monsters/scheme.j
 
 import heistBanner from '@public/assets/images/cases/heist/banner.jpg'
 import heistScheme from '@public/assets/images/cases/heist/scheme_en.jpg'
+import heistSchemeRu from '@public/assets/images/cases/heist/scheme_ru.jpg'
 import heistImage1 from '@public/assets/images/cases/heist/presale.jpg'
 import heistImage2 from '@public/assets/images/cases/heist/modern.jpg'
 import heistImage3 from '@public/assets/images/cases/heist/stacking.jpg'
@@ -68,7 +69,10 @@ export const CASES: ICase[] = [
       ru: 'Нашей команде предстояло разработать HR приложение-агрегатор, которое помогает собирать все резюме в  одном месте, облегчает общение с кандидатами и имеет интеграцию с популярными платформами для поиска работы.'
     },
     params: {
-      budget: 2300000,
+      budget: {
+        ru: 2300000,
+        en: 30000
+      },
       period: 9,
       year: 2022,
     },
@@ -205,7 +209,10 @@ export const CASES: ICase[] = [
       ru: 'Основной целью проекта являлась разработка минтинг вебсайта для NFT коллекции, где пользователи могут приобрести NFT, а затем модернизировать их за потраченные газ комиссии в сети Ethereum.',
     },
     params: {
-      budget: 3000000,
+      budget: {
+        ru: 3000000,
+        en: 42000
+      },
       period: 6,
       year: 2022,
     },
@@ -253,7 +260,7 @@ export const CASES: ICase[] = [
             },
             text: {
               en: 'For level up of a Dragon, the smart collection contract must receive data about ETH spent by users on commissions in Ethereum network. ',
-              ru: 'Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.',
+              ru: 'Для повышения уровня Дракона смарт контракт коллекции должен получать информацию о затраченых пользователями ETH на комиссии в сети Ethereum.',
             }
           },
           {
@@ -263,7 +270,7 @@ export const CASES: ICase[] = [
             },
 						text: {
               en: 'We created an architecture in which a smart contract accesses the project backend via Chainlink, which in turn communicates with Etherscan blockchain-explorer. After receiving the user transaction data and conducting necessary calculations, the server application generates and uploads a new image with NFT metadata to IPFS. It is the data that will be displayed to the user when querying the collection smart contract.',
-              ru: 'Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.',
+              ru: 'Мы создали архитектуру, при которой смарт контракт обращается через Chainlink к бэкенду проекта, который в свою очередь взаимодействует с проводним блоков Etherscan . После  получения данных о пользовательских транзакций и необходимых вычислений серверное приложение генерирует и загружает новое изображение с метадатой NFT на IPFS. Именно эта данные и будут отоброжаться у пользователя при запросе к смарт контракту коллекции.',
             }
           },
         ],
@@ -321,7 +328,10 @@ export const CASES: ICase[] = [
       ru: 'Создание веб-приложения с использованием технологии NFT для реализации игровых механик: разработали вебсайт, внутриигровую стейкинг систему, смарт контракт коллекции в сети BSC и токеномику всего  проекта.',
     },
     params: {
-      budget: 1500000,
+      budget: {
+        ru: 1500000,
+        en: 21000
+      },
       period: 3,
       year: 2021,
     },
@@ -377,7 +387,10 @@ export const CASES: ICase[] = [
           en: ''
         },
         text: [],
-        banner: heistScheme.src,
+        banner: {
+          en: heistScheme.src,
+          ru: heistSchemeRu.src
+        },
       },
     ],
     team: [
@@ -434,7 +447,10 @@ export const CASES: ICase[] = [
       ru: 'Модернизация инвестиционной DAO экосистемы в сетях Polygon и BSC: доработали MVP версию площадки, создали отдельный игровой модуль  с P2E-викторинами и интегрировали кастомную стейкинг инфраструктуру в существующее децентрализованное сообщество.',
     },
     params: {
-      budget: 3500000,
+      budget: {
+        ru: 3500000,
+        en: 50000
+      },
       period: 8,
       year: 2022,
     },
@@ -492,10 +508,22 @@ export const CASES: ICase[] = [
         text: [
           {
             text: {
-              en: 'For storing project history, voting results, number of investments, and investor information, we used TheGraph protocol, which can simultaneously work with both old and updated blockchain project architectures. Xillion is deployed on two blockchain networks: Binance Smart Chain and Polygon. Differentiating access to sections of the website and using the capabilities of ether.js library made it comfy for users to switch from one network to another. Also, the project uses a proxy architecture in the blockchain part of the project, which makes it easy to scale and add new modules in the future.',
-              ru: 'Для сохранения истории проектов, результатов голосования, количества инвестиций и информации об инвесторах мы использовали протокол TheGraph, который может одновременно работать как и со старой, так и с обновленной архитектурой блокчейн-проектов. Xillion размещен одновременно сразу на двух блокчейн сетях: Binance Smart Chain и Polygon. Разграничение доступа к разделам сайта и использование возможностей библиотеки ether.js сделали удобными для пользователей переходы от одной сети к другой.Также, в проекте используется прокси-архитектура для блокчейна части проекта, что позволяет с легкостью масштабировать продукт и в будущем добавлять новые модули.',
+              en: 'For storing project history, voting results, number of investments, and investor information, we used TheGraph protocol, which can simultaneously work with both old and updated blockchain project architectures.',
+              ru: 'Для сохранения истории проектов, результатов голосования, количества инвестиций и информации об инвесторах мы использовали протокол TheGraph, который может одновременно работать как и со старой, так и с обновленной архитектурой блокчейн-проектов.',
             }
           },
+          {
+            text: {
+              en: 'Xillion is deployed on two blockchain networks: Binance Smart Chain and Polygon. Differentiating access to sections of the website and using the capabilities of ether.js library made it comfy for users to switch from one network to another.',
+              ru: 'Xillion размещен одновременно сразу на двух блокчейн сетях: Binance Smart Chain и Polygon. Разграничение доступа к разделам сайта и использование возможностей библиотеки ether.js сделали удобными для пользователей переходы от одной сети к друг'
+            }
+          },
+          {
+            text: {
+              en: 'Also, the project uses a proxy architecture in the blockchain part of the project, which makes it easy to scale and add new modules in the future.',
+              ru: 'Также, в проекте используется прокси-архитектура для блокчейн части проекта, что позволяет с легкостью масштабировать продукт и в будущем добавлять новые модули.'
+            }
+          }
         ],
         banner: xilScheme.src,
       },
@@ -536,7 +564,7 @@ export const CASES: ICase[] = [
         'Проектирование',
         'Клиентская разработка',
         'Серверная разработка',
-        'Административная часть',
+        'Административная панель',
       ],
     },
     showCategoriesOnPage: true,
@@ -552,10 +580,13 @@ export const CASES: ICase[] = [
     banner: sipsignalBanner.src,
     description: {
       en: 'The main goal of our team was to automate the company\'s existing processes. The client was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased the company\'s costs.',
-      ru: 'Модернизация инвестиционной DAO экосистемы в сетях Polygon и BSC: доработали MVP версию площадки, создали отдельный игровой модуль  с P2E-викторинами и интегрировали кастомную стейкинг инфраструктуру в существующее децентрализованное сообщество.',
+      ru: 'Главной задачей нашей команды являлась автоматизация существующих процессов компании. Клиента не устраивало слишком большое количество действий пользователей и сотрудников во время продаж, что снижало коэффициент конверсии продаж и увеличивало расходы компании.',
     },
     params: {
-      budget: 1400000,
+      budget: {
+        ru: 1400000,
+        en: 20000
+      },
       period: 6,
       year: 2021,
     },
@@ -671,9 +702,12 @@ export const CASES: ICase[] = [
       ru: 'Создание платформы, которая соединяет нуждающихся в помощи людей и тех кто им хочет помочь на безвозмездной основе. Пользователь площадки может разместить просьбу о помощи, а другой человек может помочь лекарствами, продуктами или другими средствами'
     },
     params: {
-      budget: 1300000,
+      budget: {
+        ru: 1300000,
+        en: 18000
+      },
       period: 3,
-      year: '2021-2023',
+      year: '2022-2023',
     },
     main: [
       {
@@ -779,7 +813,10 @@ export const CASES: ICase[] = [
     },
     icons: ['monitor', 'bitcoin'],
     params: {
-      budget: 1500000,
+      budget: {
+        ru: 1500000,
+        en: 22000
+      },
       period: 5,
       year: 2022
     },
@@ -847,7 +884,7 @@ export const CASES: ICase[] = [
       }
     ],
     team: [
-      TEAM.daniilSemenov,
+      TEAM.daniilSemenovHead,
       TEAM.ilyaSmirnov,
       TEAM.ernestMironov,
       TEAM.maksimKlimchenko,

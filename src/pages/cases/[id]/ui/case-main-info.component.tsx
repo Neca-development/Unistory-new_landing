@@ -28,7 +28,7 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
       </div>
       {data?.banner && (
         <img
-          src={data.banner}
+          src={typeof data.banner !== 'string' ? data.banner[locale || 'ru'] : data.banner}
           className='w-full h-auto object-cover mt-[7.5rem]'
         />
       )}
