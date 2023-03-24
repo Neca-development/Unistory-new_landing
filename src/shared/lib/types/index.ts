@@ -47,10 +47,3 @@ export interface ICase {
   }
   team: TeamValues[]
 }
-
-// export interface ITeam {
-//   [name: string]: {
-//     name: string
-//     position: ILang<string>
-//   }
-// }
