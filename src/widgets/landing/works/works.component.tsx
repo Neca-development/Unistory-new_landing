@@ -31,7 +31,7 @@ export function Works() {
 						<WorksCard
 							key={index}
 							work={work}
-							additionalClassnames={clsx("[&:nth-child(3n+1)]:col-span-2")}
+							additionalClassnames={clsx("[&:nth-child(6n+1)]:col-span-2")}
 						/>
 					))}
 				</div>
