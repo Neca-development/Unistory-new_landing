@@ -99,7 +99,7 @@ export const PrinciplesEn: {
 			title: "Expetise",
 			description: {
 				beforeHighlight: "Planning",
-				highlight: "a complex service or adoption of the latest technologies?",
+				highlight: " a complex service or adoption of the latest technologies?",
 				afterHighlight: ` We can help you to implement your ambitious plans, whether it's an international
       B2B marketplace or a new product with AI.`,
 			},
