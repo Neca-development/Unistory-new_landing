@@ -169,6 +169,16 @@ export const TEAM = {
       ru: 'UX/UI дизайнер'
     },
   },
+  alekseyChepurin: {
+    name: {
+      en: 'Aleksey Chepurin',
+      ru: 'Алексей Чепурин'
+    },
+    position: {
+      en: 'UX/UI designer',
+      ru: 'UX/UI дизайнер'
+    },
+  },
   alexanderYachevsky: {
     name: {
       en: 'Alexander Yachevskiy',
@@ -187,6 +197,16 @@ export const TEAM = {
     position: {
       en: 'Frontend developer',
       ru: 'Frontend разработчик'
+    }
+  },
+  ilyaSmirnov: {
+    name: {
+      en: 'Ilya Smirnov',
+      ru: 'Илья Смирнов'
+    },
+    position: {
+      en: 'Project manager',
+      ru: 'Проектный менеджер'
     }
   }
 } as const
