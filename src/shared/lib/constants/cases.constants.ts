@@ -31,6 +31,16 @@ import sipsignalImage3 from '@public/assets/images/cases/sipsignal/admin.jpg'
 import sipsignalClient from '@public/assets/images/cases/sipsignal/bogdan.jpg'
 import sipsignalLogo from '@public/assets/images/cases/sipsignal/logo.png'
 
+import charityplatformBanner from "@public/assets/images/cases/charityplatform/banner.jpg"
+import charityplatformImage1 from "@public/assets/images/cases/charityplatform/dashboard.jpg"
+import charityplatformImage2 from "@public/assets/images/cases/charityplatform/blocks.jpg"
+import charityplatformImage3 from "@public/assets/images/cases/charityplatform/admin.jpg"
+
+import hoarderBanner from "@public/assets/images/cases/hoarder/banner.jpg"
+import hoarderImage1 from "@public/assets/images/cases/hoarder/data.jpg"
+import hoarderImage2 from "@public/assets/images/cases/hoarder/vizualization.jpg"
+import hoarderImage3 from "@public/assets/images/cases/hoarder/subscription.jpg"
+
 export const CASES: ICase[] = [
   {
     title: 'Personal',
@@ -626,4 +636,226 @@ export const CASES: ICase[] = [
       TEAM.vladislavKiribyatev,
     ],
   },
+  {
+    title: 'Charity Platform',
+    id: 'charityplatform',
+    heroTitle: {
+      en: 'Development of Charity Platform',
+      ru: 'Благотварительная платформа Адрес.Люди '
+    },
+    categories: {
+      en: [
+        'Server development',
+        'Client development',
+        'Admin Panel'
+      ],
+      ru: [
+        'Клиентская разработка',
+        'Серверная разработка',
+        'Административная панель'
+      ],
+    },
+    showCategoriesOnPage: true,
+    icons: ['monitor', 'phone02'],
+    textColor: 'black',
+    technologies: [
+      TECHNOLOGIES.react,
+      TECHNOLOGIES.nextjs,
+      TECHNOLOGIES.typescript,
+      TECHNOLOGIES.node,
+      TECHNOLOGIES.postgresql,
+    ],
+    banner: charityplatformBanner.src,
+    description: {
+      en: 'The main goal of our team was to automate the company\'s existing processes. The client was not satisfied with too many user and employee actions during sales, which reduced the sales conversion rate and increased the company\'s costs.',
+      ru: 'Создание платформы, которая соединяет нуждающихся в помощи людей и тех кто им хочет помочь на безвозмездной основе. Пользователь площадки может разместить просьбу о помощи, а другой человек может помочь лекарствами, продуктами или другими средствами'
+    },
+    params: {
+      budget: 1300000,
+      period: 3,
+      year: '2021-2023',
+    },
+    main: [
+      {
+        title: {
+          en: 'Bulletin board',
+          ru: 'Доска объявлений'
+        },
+        text: [
+          {
+            text: {
+              en: 'Bulletin board with requests for help is the centerpiece of the platform. A registered user can place an advertisement and add all the necessary information: description, photos and contacts. Philanthropists can open the card they are interested in and contact the person in need directly. ',
+              ru: 'Доска объявлений с запросами о помощи является центральным элементом платформы. Зарегестрированный пользователь может разместить свое объявление и добавить всю необходимую информацию: описание, фото и контакты. Благотворители же могут открыть интересующую их карточку и напрямую связаться с нуждающимся человеком. '
+            }
+          },
+          {
+            text: {
+              en: 'Our team was inspired by Avito.ru platform and recreated a similar user experience, tested over the years and by millions of people. We\'ve also implemented filters in the feed and an automatic anti-spam system to detect fraud requests.',
+              ru: 'Наша команда вдохновлялась сервисом Avito.ru и воссоздала похожий пользовательский опыт, проверенный годами и миллионами людей. Также, мы реализовали блок с фильтрами в ленте и автоматическую анти-спам систему для распознавания мошеннических заявок.'
+            },
+            
+          }
+        ],
+        banner: charityplatformImage1.src
+      },
+      {
+        title: {
+          en: 'Additional units',
+          ru: 'Дополнительные блоки'
+        },
+        text: [
+          {
+            text: {
+              en: 'In addition to the bulletin board, our team created a separate section with a poster of free events, psychologist tips, platform contacts, and articles from the project team. Each of the sections is represented by a separate page: for free events we developed a feed of upcoming events, and for psychologists\' advices a section with a built-in media player for displaying videos by specialists.',
+              ru: 'Помимо доски объявлений, наша команда создала отедьную секцию с афишой бесплатных мероприятий, советами психологов, контактами платформы и со статьями от команды проекта. Каждая из секций представлена отдельной страницей: для бесплатных мероприятий мы разработали ленту ближайших событий, а для советов психологов раздел со встроенным медиа-плеером для отоброжения роликов специалистов.  '
+            }
+          }
+        ],
+        banner: charityplatformImage2.src
+      },
+      {
+        title: {
+          en: 'Administrative panel and personal account for users',
+          ru: 'Административная панель и личный кабинет для пользователей'
+        },
+        text: [
+          {
+            text: {
+              en: 'Developed a custom solution for website administration. The project team keeps track of published advertisements and other actions on the platform, obtaining the necessary data in a convenient form.',
+              ru: 'Разработали кастомное решение для администрирования площадки. Команда проекта прослеживает публикуемые объявления и остальные действия на площадке, получая необходимые данные в удобном виде.'
+            }
+          },
+          {
+            text: {
+              en: 'Users have access to a personal account where they can keep track of all requests for help, as well as edit active advertisements.',
+              ru: 'Пользователи же имееют доступ к личному кабинету, где могут отслеживать все запросы о помощи, а так же редактировать активные объявления.'
+            }
+          }
+        ],
+        banner: charityplatformImage3.src
+      }
+    ],
+    team: [
+      TEAM.alexanderAksenov,
+      TEAM.ilyaSmirnov,
+      TEAM.ernestMironov,
+      TEAM.maksimKlimchenko,
+      TEAM.alekseyChepurin,
+      TEAM.alekseyKlimenko,
+      TEAM.andreyPaskarenko,
+      TEAM.vladislavKiribyatev,
+      TEAM.kirillElizarov
+    ]
+  },
+   {
+    title: 'HoarderNest',
+    id: 'hoardernest',
+    heroTitle: {
+      en: 'HoarderNest –innovative NFT aggregator',
+      ru: 'HoarderNest – инновационный NFT агрегатор'
+    },
+    banner: hoarderBanner.src,
+    categories: {
+      en: [
+        'Blockchain development',
+        'Integration',
+        'HighLoad',
+        'Engineering',
+        'Server development',
+        'Client development',
+      ],
+      ru: [
+        'Blockchain разработка',
+        'Интеграции',
+        'HighLoad',
+        'Проектирование',
+        'Серверная разработка',
+        'Клиентская разработка'
+      ]
+    },
+    description: {
+      en: 'For a crypto startup with a team of  Tesla and eBay formers, we developed  «HoarderNest» – a service with comprehensive data aggregation and further multilevel analysis.',
+      ru: 'Для крипто-стартапа с командой из выходцев Tesla и eBay мы разработали сервис  «HoarderNest» с комлексным агрегированием данных и их дальнейшим многоуровневым анализом.'
+    },
+    icons: ['monitor', 'bitcoin'],
+    params: {
+      budget: 1500000,
+      period: 5,
+      year: 2022
+    },
+    technologies: [
+      TECHNOLOGIES.react,
+      TECHNOLOGIES.nextjs,
+      TECHNOLOGIES.solidity,
+      TECHNOLOGIES.node,
+      TECHNOLOGIES.nest,
+      TECHNOLOGIES.postgresql
+    ],
+    textColor: 'white',
+    showCategoriesOnPage: true,
+    main: [
+      {
+        title: {
+          en: 'Data aggregation from multiple sources',
+          ru: 'Агрегирование данных из нескольких источников'
+        },
+        text: [
+          {
+            text: {
+              en: 'Our team has designed and implemented a project architecture where data is collected in both on-chain and off-chain ways. At current stage, «HoarderNest» supports Ethereum network, Discord and Twitter. ',
+              ru: 'Наша команда подготовила и реализовала архитектуру проекта, при которой данные собираются, как on-chain, так и off-chain способом. На данном этапе, «HoarderNest» поддерживает сеть Ethereum, Discord и Twitter. '
+            }
+          },
+          {
+            text: {
+              en: 'Also, we developed a custom system so that it reacts to most significant events. As an example, this could be abnormal token flows on marketplaces or mentions of a collection by influencers on social networks.',
+              ru: 'Мы разработали кастомную систему таким образом, чтобы она реагировала на большинство значимых событий. Как пример, это могут быть аномальные движения токенов на маркетплейсах или же упоминания коллекции значимыми инфлюенсерами в социальных сетях.'
+            }
+          }
+        ],
+        banner: hoarderImage1.src
+      },
+      {
+        title: {
+          en: 'Visualization',
+          ru: 'Визуализация'
+        },
+        text: [
+          {
+            text: {
+              en: 'Well-designed data aggregation and storage system is half of a successful project. In statistical products it is important to keep the balance between informativeness, usability and aesthetic appeal of the service. Through the joint efforts of the product designer and the client, we were able to unlock the potential of a complex technical solution in a simple and straightforward interface.',
+              ru: 'Разработанная система агрегирование и хранение данных – это половина успешного проекта. В статистических продуктах важно сохранить баланс между информативностью, удобством и эстетической привлекательностью сервиса. Совместными усилиями продуктового дизайнера и клиента, мы смогли раскрыть потенциал сложного технического решения в простом и понятном интерфейсе.'
+            }
+          }
+        ],
+        banner: hoarderImage2.src
+      },
+      {
+        title: {
+          en: 'Paid subscription system',
+          ru: 'Система платной подписки'
+        },
+        text: [
+          {
+            text: {
+              en: 'The service offers limited functionality for all users along with expanded functionality in a paid subscription. It was important for the client to maintain the decentralized approach of the service, and so we implemented payment through a custom smart contract we developed.',
+              ru: 'Сервис предлагает ограниченный функционал для всех пользоваталей наряду с расширенным в платной подписке. Клиенту было важно сохранить децентрализованный подход сервиса, и поэтому мы реализовали оплату через разработанный нами кастомный смарт контракт. '
+            }
+          }
+        ],
+        banner: hoarderImage3.src
+      }
+    ],
+    team: [
+      TEAM.daniilSemenov,
+      TEAM.ilyaSmirnov,
+      TEAM.ernestMironov,
+      TEAM.maksimKlimchenko,
+      TEAM. alekseyChepurin,
+      TEAM.andreyBarabanov,
+      TEAM.andreyPaskarenko,
+      TEAM.kirillElizarov,
+      TEAM.danilaSkablov
+    ]
+   }
 ]

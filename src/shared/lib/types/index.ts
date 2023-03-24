@@ -28,7 +28,7 @@ export interface ICase {
   params: {
     budget: number
     period: number
-    year: number
+    year: number | string
   }
   technologies: TechnologiesValues[]
   main: {
