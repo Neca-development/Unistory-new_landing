@@ -37,7 +37,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
 							>
 								<p className="text-2xl font-medium">{city.name}</p>
 								<a
-									href="tel:+79876543210"
+									href={`tel:${city.tel}`}
 									className="text-dark-text-primary text-base"
 								>
 									{city.tel}

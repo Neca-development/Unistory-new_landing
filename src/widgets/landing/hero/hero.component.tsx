@@ -101,7 +101,7 @@ export function Hero() {
 
 				<article className="flex items-center text-2xl font-medium">
 					<p className="relative mr-4 text-[5rem] font-bold leading-[5rem]">
-						5.0
+						4.9
 					</p>
 					<span dangerouslySetInnerHTML={{ __html: text?.params?.rating }} />
 				</article>

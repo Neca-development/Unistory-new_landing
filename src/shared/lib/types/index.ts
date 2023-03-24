@@ -26,7 +26,7 @@ export interface ICase {
   banner: any
   description: ILang<string>
   params: {
-    budget: number
+    budget: ILang<number>
     period: number
     year: number | string
   }
@@ -34,7 +34,7 @@ export interface ICase {
   main: {
     title: ILang<string>
     text: IDescriptionItem[]
-    banner: string
+    banner: string | ILang<string>
   }[]
   logo?: string
   review?: {

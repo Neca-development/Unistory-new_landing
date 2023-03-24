@@ -109,6 +109,16 @@ export const TEAM = {
       ru: 'Проектный менеджер'
     },
   },
+  daniilSemenovHead: {
+    name: {
+      en: 'Daniil Semenov',
+      ru: 'Даниил Семенов'
+    },
+    position: {
+      en: 'Head of Project Management',
+      ru: 'Руководитель проектов'
+    },
+  },
   kirillElizarov: {
     name: {
       en: 'Kirill Elizarov',

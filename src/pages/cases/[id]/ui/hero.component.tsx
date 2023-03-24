@@ -14,6 +14,14 @@ export function CaseHero({ data }: { data: ICase }) {
     return locale === 'ru' ? SingleCaseRu : SingleCaseEn
   }, [locale])
 
+  const findMonths = (value: number) => {
+    if(locale === 'en') return 'months'
+    
+    if(value <= 1) return 'месяц'
+    if(value <= 3 && value > 1) return 'месяца'
+    return 'месяцев'
+  }
+
   return (
     <>
       <h1 className='container mt-20 text-[4rem] leading-[4.875rem] font-bold whitespace-pre-line'>
@@ -52,7 +60,7 @@ export function CaseHero({ data }: { data: ICase }) {
 							{langData.hero.budget}
             </h3>
             <b className='text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block'>
-              {data.params.budget.toLocaleString('ru-RU')} ₽
+              {data.params.budget[locale || 'ru']?.toLocaleString('ru-RU')} {locale === 'ru' ? '₽' : '$'}
             </b>
           </li>
           <li>
@@ -60,7 +68,7 @@ export function CaseHero({ data }: { data: ICase }) {
               {langData.hero.timeline.label}
             </h3>
             <b className='text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block'>
-              {data.params.period} {langData.hero.timeline.months}
+              {data.params.period} {findMonths(data.params.period)}
             </b>
           </li>
           <li>
