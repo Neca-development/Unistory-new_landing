@@ -21,25 +21,25 @@ export function Services() {
 	}, [locale]);
 
 	return (
-		<section className="container pt-12 pb-20">
-			<div className="grid grid-cols-[27.5rem_1fr] rounded-sm bg-light-surface dark:bg-dark-surface">
-				<div className="grid grid-cols-1 content-start gap-4 border-r-2 border-light-bg p-4 pt-10 dark:border-dark-bg">
+		<section className="container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
+			<div className="grid grid-cols-[27.5rem_1fr] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface">
+				<div className="grid grid-cols-1 content-start gap-4 border-r-2 border-light-bg p-4 pt-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0">
 					{data.map((s, index) => (
 						<div
 							key={index}
 							className={clsx(
-								"flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover",
-								activeIndex === index && "bg-bg-s"
+								"flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4",
+								activeIndex === index && "bg-bg-s hover:bg-bg-s"
 							)}
 							onClick={() => setActiveIndex(index)}
 						>
 							<IconComponent
 								name={s.icon}
-								className={clsx("w-10", iconClassnameByTheme)}
+								className={clsx("w-10", iconClassnameByTheme, 't-xs:w-6')}
 							/>
 							<h2
 								className={clsx(
-									"ml-6 text-2xl font-semibold",
+									"ml-6 text-2xl font-semibold t-xs:text-base",
 									activeIndex === index && "text-primary-s"
 								)}
 							>
@@ -49,13 +49,13 @@ export function Services() {
 					))}
 				</div>
 
-				<div className="pt-12 pb-[3.75rem] pl-16 pr-10">
+				<div className="pt-12 pb-[3.75rem] t-xs:py-8 t-xs:px-[28px] pl-16 pr-10 t-xs:border-bg-s t-xs:border-t-2 border-solid">
 					<h3
-						className="text-4xl font-bold"
+						className="text-4xl font-bold t-xs:text-xl"
 						dangerouslySetInnerHTML={{ __html: data[activeIndex]!.header }}
 					/>
 					<p
-						className="mt-10 text-2xl leading-10"
+						className="mt-10 text-2xl leading-10 t-xs:text-base"
 						dangerouslySetInnerHTML={{ __html: data[activeIndex]!.description }}
 					/>
 				</div>

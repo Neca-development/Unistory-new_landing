@@ -28,14 +28,14 @@ export const Footer = React.memo((props: IFooterProperties) => {
 					showAddress ? "pt-14" : "pt-9"
 				)}
 			>
-				<div className="flex items-start">
+				<div className="flex items-start t-xs:flex-col">
 					{showAddress &&
 						text.cities.map((city) => (
 							<div
-								className="flex flex-col space-y-3 w-[18.125rem] first:mr-6"
+								className="flex flex-col space-y-3 w-[18.125rem] first:mr-6 t-xs:mb-12"
 								key={city.name}
 							>
-								<p className="text-2xl font-medium">{city.name}</p>
+								<p className="text-2xl font-medium t-xs:text-xl">{city.name}</p>
 								<a
 									href={`tel:${city.tel}`}
 									className="text-dark-text-primary text-base"
@@ -49,7 +49,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
 					<div
 						className={clsx(
 							showAddress
-								? "ml-14 space-y-7"
+								? "ml-14 space-y-7 t-xs:ml-0"
 								: "flex justify-between items-center grow-[1]"
 						)}
 					>

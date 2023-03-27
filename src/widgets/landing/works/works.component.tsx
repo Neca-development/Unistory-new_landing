@@ -20,29 +20,29 @@ export function Works() {
 
 	return (
 		<section className="bg-light-surface dark:bg-dark-surface">
-			<div className="container pt-20 pb-[3.5rem]">
+			<div className="container pt-20 pb-[3.5rem] t-xs:pt-10">
 				<h2
-					className="font-bold text-5xl"
+					className="font-bold text-5xl t-xs:text-[1.375rem]"
 					dangerouslySetInnerHTML={{ __html: text.title }}
 				/>
 
-				<div className="grid grid-cols-3 gap-10 mt-16">
+				<div className="grid grid-cols-3 gap-10 mt-16 t-xs:grid-cols-1 t-xs:mt-6 t-xs:gap-4">
 					{CASES.slice(0, 7).map((work, index) => (
 						<WorksCard
 							key={index}
 							work={work}
-							additionalClassnames={clsx("[&:nth-child(6n+1)]:col-span-2")}
+							additionalClassnames={clsx("[&:nth-child(6n+1)]:col-span-2 t-xs:!col-span-1")}
 						/>
 					))}
 				</div>
 
 				<Link
 					href="/cases"
-					className="flex items-center py-4 pr-8 w-fit mt-10 text-2xl font-medium text-light-text-primary dark:text-dark-text-primary"
+					className="flex items-center py-4 pr-8 w-fit mt-10 text-2xl font-medium text-light-text-primary dark:text-dark-text-primary t-xs:mt-6 t-xs:py-2 t-xs:text-base"
 				>
 					<IconComponent
 						name="arrowRight"
-						className="w-10 mr-4 first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent"
+						className="w-10 mr-4 first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent t-xs:w-7"
 					/>
 					{text.moreCases}
 				</Link>

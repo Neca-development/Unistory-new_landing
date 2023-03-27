@@ -12,7 +12,7 @@ export const Input = forwardRef((props: IInputProps, ref: any) => {
 	const { placeholder, type, required, className, error, ...restProps } = props;
   
 	return (
-		<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7 relative">
+		<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7 relative t-xs:text-[0.875rem]">
 			<input
 				className={clsx(
 					"bg-[inherit] w-full outline-none placeholder:text-dark-text-primary",

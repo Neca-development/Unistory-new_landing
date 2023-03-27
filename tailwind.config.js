@@ -51,6 +51,15 @@ module.exports = {
       'black-text': '#0F1A20',
     },
     extend: {
+      screens: {
+        't-xs': {max: '640px'},
+        'm-2xl': {max: '520px'},
+        'm-xl': {max: '460px'},
+        'm-l': {max: '420px'},
+        'm-m': {max: '360px'},
+        'm-s': {max: '320px'},
+        'm-xs': {max: '260px'},
+      },
       fontSize: {
         h1: [
           '4.75rem',
@@ -59,6 +68,14 @@ module.exports = {
             letterSpacing: '0.02em',
             fontWeight: '800',
           },
+        ],
+        'mob-h1': [
+          '2.25rem',
+          {
+            lineHeight: '2.75rem',
+            letterSpacing: '0.02em',
+            fontWeight: '700'
+          }
         ],
         h2: [
           '2.875rem',

@@ -13,6 +13,8 @@ interface IMessageToggler {
   toggleClassName: string
 }
 
+const articleClasses = 'absolute top-[-7.5rem] left-[1.3rem] t-xs:left-auto t-xs:right-[1.3rem] p-4 rounded-[1.25rem] rounded-bl-none t-xs:rounded-bl-[1.25rem] t-xs:rounded-br-none bg-light-surface dark:bg-dark-surface w-[21.125rem] flex items-start shadow-8dp'
+
 export function MessageToggler(props: IMessageToggler) {
   const { messageData, toggleClassName } = props
   const [showMessage, setShowMessage] = useState(false)
@@ -30,7 +32,7 @@ export function MessageToggler(props: IMessageToggler) {
 
       <article
         className={clsx(
-          'absolute top-[-7.5rem] left-[1.3rem] p-4 rounded-[1.25rem] rounded-bl-none bg-light-surface dark:bg-dark-surface w-[21.125rem] flex items-start shadow-8dp',
+          articleClasses,
           showMessage === false && 'hidden'
         )}
       >
