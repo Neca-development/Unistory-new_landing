@@ -1,13 +1,13 @@
 import { Checkbox, ControlledInput, IconComponent } from "@shared/ui";
 import React, { useMemo, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { FormEn, FormRu } from "@shared/i18n";
 import clsx from "clsx";
-import { useAutoHeightTextarea } from "@shared/lib/hooks/useAutoHeightTextarea";
+import { useAutoHeightTextarea } from "@shared/lib/hooks/useAutoHeightTextarea.hook";
 
 export interface ICheckboxFields {
   email: boolean,
@@ -47,9 +47,11 @@ export default function ConnectForm() {
     mode: 'onSubmit'
 	});
 
+  const watch = useWatch({control})
+  const projectValue = watch['projectDescription']
+
 	const [file, setFile] = useState<File | undefined>();
   const [fileError, setFileError] = useState(false)
-  const [projectValue, setProjectValue] = useState('')
   const [ways, setWays] = useState<ICheckboxFields>({
     email: false,
     telegram: false,
@@ -85,7 +87,7 @@ export default function ConnectForm() {
 
   const resetFields = () => {
     setFile(undefined)
-    setWays({email: false, phone: false, telegram: false,whatsapp: false})
+    setWays({email: false, phone: false, telegram: false, whatsapp: false})
     reset();
   }
 
@@ -118,6 +120,8 @@ export default function ConnectForm() {
 			console.error(error);
 		}
 	}
+
+  const {ref, ...projectField} = register('projectDescription')
 
 	return (
 		<form
@@ -157,23 +161,25 @@ export default function ConnectForm() {
 			</div>
 			<div className="py-8 text-xl t-xs:text-[0.875rem]">
 				<p>{data.contacts.label}</p>
-				<div className="mt-4 inline-grid grid-cols-4 t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
+				<div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
 					{contactMethods.map((method, idx) => (
 						<Checkbox onChange={() => handleCheckboxChange(method.type)} key={idx} name={method.name} />
 					))}
 				</div>
 			</div>
-			<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
+			<label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
 				<textarea
+          {...projectField}
 					placeholder={data.fields.describe.placeholder}
 					required={!file}
-					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7"
-					{...register("projectDescription")}
-          onChange={(e) => setProjectValue(e.target.value)}
-          ref={textareaRef}
+					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
+          ref={(elem) => {
+            textareaRef.current = elem
+            ref(elem)
+          }}
 				/>
 				{errors.projectDescription && (
-					<div>{errors.projectDescription.message}</div>
+					<span className="absolute left-3 top-full mt-2 text-error text-xs">{errors.projectDescription.message}</span>
 				)}
 			</label>
 
