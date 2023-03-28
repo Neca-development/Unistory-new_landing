@@ -13,6 +13,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  
 }
 
 @layer base {
@@ -47,7 +49,7 @@
 }
 
 .container {
-  @apply w-full sm:px-[1rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[5rem] mx-auto;
+  @apply w-full px-[1rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[5rem] mx-auto m-l:max-w-full;
 }
 
 .winter {
@@ -73,5 +75,13 @@
     background-size: contain;
     background-repeat: repeat;
     pointer-events: none;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select,
+  textarea,
+  input {
+    font-size: 16px;
   }
 }

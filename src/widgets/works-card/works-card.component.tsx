@@ -19,7 +19,7 @@ export function WorksCard(props: IWorksCardInterface) {
 	return (
 		<Link
 			className={clsx(
-				`noise rounded-sm  pt-4 h-[25rem] flex flex-col bg-center transform-gpu group overflow-hidden`,
+				`noise rounded-sm  pt-4 h-[25rem] flex flex-col bg-center transform-gpu group overflow-hidden m-xl:h-[20.5rem]`,
 				work?.additionalClassnames,
 				additionalClassnames
 			)}
@@ -39,7 +39,7 @@ export function WorksCard(props: IWorksCardInterface) {
 			</div>
 			<div
 				className={clsx(
-					"mt-auto backdrop-blur-[50px] p-6",
+					"mt-auto backdrop-blur-[50px] p-6 t-xs:p-4",
 					work?.textColor === "white" && "text-pale-text",
 					work?.textColor === "black" && "text-black-text"
 				)}

@@ -1,12 +1,13 @@
 import { Checkbox, ControlledInput, IconComponent } from "@shared/ui";
-import React, { useMemo, useState } from "react";
-import { useForm } from "react-hook-form";
+import React, { useMemo, useRef, useState } from "react";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { FormEn, FormRu } from "@shared/i18n";
 import clsx from "clsx";
+import { useAutoHeightTextarea } from "@shared/lib/hooks/useAutoHeightTextarea.hook";
 
 export interface ICheckboxFields {
   email: boolean,
@@ -46,6 +47,9 @@ export default function ConnectForm() {
     mode: 'onSubmit'
 	});
 
+  const watch = useWatch({control})
+  const projectValue = watch['projectDescription']
+
 	const [file, setFile] = useState<File | undefined>();
   const [fileError, setFileError] = useState(false)
   const [ways, setWays] = useState<ICheckboxFields>({
@@ -54,6 +58,9 @@ export default function ConnectForm() {
     whatsapp: false,
     phone: false,
    })
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null)
+
+  useAutoHeightTextarea(textareaRef.current, projectValue)
 
   const contactMethods = useMemo(() => [
     {
@@ -80,7 +87,7 @@ export default function ConnectForm() {
 
   const resetFields = () => {
     setFile(undefined)
-    setWays({email: false, phone: false, telegram: false,whatsapp: false})
+    setWays({email: false, phone: false, telegram: false, whatsapp: false})
     reset();
   }
 
@@ -113,6 +120,8 @@ export default function ConnectForm() {
 			console.error(error);
 		}
 	}
+
+  const {ref, ...projectField} = register('projectDescription')
 
 	return (
 		<form
@@ -150,23 +159,27 @@ export default function ConnectForm() {
 					error={errors?.phoneNumber?.message}
 				/>
 			</div>
-			<div className="py-8 text-xl">
+			<div className="py-8 text-xl t-xs:text-[0.875rem]">
 				<p>{data.contacts.label}</p>
-				<div className="mt-4 flex items-center space-x-8">
+				<div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
 					{contactMethods.map((method, idx) => (
 						<Checkbox onChange={() => handleCheckboxChange(method.type)} key={idx} name={method.name} />
 					))}
 				</div>
 			</div>
-			<label className="text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7">
+			<label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
 				<textarea
+          {...projectField}
 					placeholder={data.fields.describe.placeholder}
 					required={!file}
-					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary"
-					{...register("projectDescription")}
+					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
+          ref={(elem) => {
+            textareaRef.current = elem
+            ref(elem)
+          }}
 				/>
 				{errors.projectDescription && (
-					<div>{errors.projectDescription.message}</div>
+					<span className="absolute left-3 top-full mt-2 text-error text-xs">{errors.projectDescription.message}</span>
 				)}
 			</label>
 
@@ -180,11 +193,11 @@ export default function ConnectForm() {
               e.target.files && setFile(e.target.files[0])
 						}}
 					/>
-					<IconComponent name="clip" className="w-8" />
+					<IconComponent name="clip" className="w-8 t-xs:w-6" />
 				</div>
-				<div className="flex flex-col text-xl leading-7">
+				<div className="flex flex-col text-xl leading-7 t-xs:text-[0.875rem]">
 					{file ? file.name : data.attachment.label}
-					<span className="text-sm opacity-50">{data.attachment.sub}</span>
+					<span className="text-sm opacity-50 t-xs:text-[0.75rem]">{data.attachment.sub}</span>
 				</div>
 			</label>
 
@@ -194,7 +207,7 @@ export default function ConnectForm() {
 
 			<button
 				type="submit"
-				className={clsx("!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-300 transition-opacity", fileError && 'opacity-50')}
+				className={clsx("!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-300 transition-opacity t-xs:!mt-5", fileError && 'opacity-50')}
         disabled={fileError}
 			>
 				{data.send}
