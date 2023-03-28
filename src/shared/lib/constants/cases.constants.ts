@@ -51,7 +51,7 @@ export const CASES: ICase[] = [
       ru: 'Персонал – мультиплатформенное\n HR приложение'
     },
     categories: {
-      en: ['Server development', 'Сlient development'],
+      en: ['Server development', 'Client development'],
       ru: ['Серверная разработка', 'Клиентская разработка']
     },
     showCategoriesOnPage: false,

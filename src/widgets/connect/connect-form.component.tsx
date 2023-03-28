@@ -172,7 +172,7 @@ export default function ConnectForm() {
           {...projectField}
 					placeholder={data.fields.describe.placeholder}
 					required={!file}
-					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
+					className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-6 resize-none"
           ref={(elem) => {
             textareaRef.current = elem
             ref(elem)

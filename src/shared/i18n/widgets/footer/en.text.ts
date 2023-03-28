@@ -15,7 +15,7 @@ export const FooterTextEn: {
 		// },
 		{
 			name: "Almaty",
-			address: "st. Rozybakieva 289/1, office 36,  Almaty, Kazakhstan, 050060",
+			address: "st. Rozybakieva 289/1, office 36, <br/> Almaty, Kazakhstan, 050060",
 			tel: "+7 707 372 8608",
 		},
 	],
