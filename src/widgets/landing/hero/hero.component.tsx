@@ -43,7 +43,7 @@ export function Hero() {
 					<button className="relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]">
 						<IconComponent name="earth" className={iconClassnameByTheme} />
 					</button>
-					<span className="font-roboto font-light italic text-light-text-primary dark:text-dark-text-primary">
+					<span className="font-roboto font-light italic inline-block text-light-text-primary dark:text-dark-text-primary">
 						{text?.description.third}
 					</span>
 					<br />

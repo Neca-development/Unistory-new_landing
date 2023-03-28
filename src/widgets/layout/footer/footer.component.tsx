@@ -42,7 +42,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
 								>
 									{city.tel}
 								</a>
-								<p className="opacity-50 text-base">{city.address}</p>
+								<p className="opacity-50 text-base" dangerouslySetInnerHTML={{__html: city.address}}/>
 							</div>
 						))}
 
@@ -68,6 +68,11 @@ export const Footer = React.memo((props: IFooterProperties) => {
 							>
 								<IconComponent name="whatsApp" className="w-6" />
 							</a>
+              {locale === 'ru' && (
+                <a rel="nofollow" href="https://t.me/unistory_app" target="_blank">
+                  <IconComponent name="telegram" className="w-6" />
+                </a>
+              )}
 							<a
 								rel="nofollow"
 								href="https://clutch.co/profile/unistory"
