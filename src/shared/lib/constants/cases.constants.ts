@@ -51,7 +51,7 @@ export const CASES: ICase[] = [
       ru: 'Персонал – мультиплатформенное\n HR приложение'
     },
     categories: {
-      en: ['Server development', 'Client development'],
+      en: ['Client development', 'Server development'],
       ru: ['Серверная разработка', 'Клиентская разработка']
     },
     showCategoriesOnPage: false,
@@ -180,8 +180,8 @@ export const CASES: ICase[] = [
         'Integration',
         'HighLoad',
         'Projection',
-        'Server development',
         'Client development',
+        'Server development',
       ],
       ru: [
         'Blockchain разработка',
@@ -301,8 +301,8 @@ export const CASES: ICase[] = [
         'Integration',
         'HighLoad',
         'Projection',
-        'Server development',
         'Client development',
+        'Server development',
       ],
       ru: [
         'Blockchain разработка',
@@ -418,8 +418,8 @@ export const CASES: ICase[] = [
         'Integration',
         'HighLoad',
         'Projection',
-        'Server development',
         'Client development',
+        'Server development',
       ],
       ru: [
         'Blockchain разработка',
@@ -554,8 +554,8 @@ export const CASES: ICase[] = [
         'Integration',
         'HighLoad',
         'Projection',
-        'Server development',
         'Client development',
+        'Server development',
         'Admin Panel',
       ],
       ru: [
@@ -676,8 +676,8 @@ export const CASES: ICase[] = [
     },
     categories: {
       en: [
-        'Server development',
         'Client development',
+        'Server development',
         'Admin Panel'
       ],
       ru: [
@@ -795,8 +795,8 @@ export const CASES: ICase[] = [
         'Integration',
         'HighLoad',
         'Projection',
-        'Server development',
         'Client development',
+        'Server development',
       ],
       ru: [
         'Blockchain разработка',

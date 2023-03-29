@@ -19,12 +19,12 @@ export function Principles() {
 
 	return (
 		<section className="container pt-20 pb-40 t-xs:pt-[4.5rem] t-xs:pb-16">
-			<div className="flex items-center space-x-4 t-xs:space-x-0">
+			<div className="flex items-center space-x-4 t-xs:space-x-0 t-xs:items-start">
 				{data.items.map((item, index) => (
 					<React.Fragment key={item.title}>
 						<button
 							className={clsx(
-								"text-2xl p-2 font-medium t-xs:text-base t-xs:px-0",
+								"text-2xl p-2 font-medium t-xs:text-base t-xs:px-0 t-xs:w-[8.5625rem]",
 								activeIdx === index && "text-primary-s"
 							)}
 							onClick={() => setActiveIdx(index)}

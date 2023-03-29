@@ -3,6 +3,10 @@ export const ROUTESEN = [
 		label: "Сases",
 		route: "/cases",
 	},
+  {
+    label: 'Get in touch',
+    route: '#become-customer'
+  },
 	// {
 	// 	label: "Services",
 	// 	route: "/",
