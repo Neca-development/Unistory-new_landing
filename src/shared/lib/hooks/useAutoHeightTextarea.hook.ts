@@ -8,6 +8,7 @@ export const useAutoHeightTextarea = (ref: HTMLTextAreaElement | null, value?: s
       ref.style.height = "0px"
   
       const scrollValue = ref.scrollHeight
+
       ref.style.height = scrollValue - normalizeTextareaHeight + 'px'
     }
   }, [ref, value])

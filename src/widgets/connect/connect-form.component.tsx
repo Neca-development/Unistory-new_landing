@@ -52,6 +52,7 @@ export default function ConnectForm() {
 
 	const [file, setFile] = useState<File | undefined>();
   const [fileError, setFileError] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [ways, setWays] = useState<ICheckboxFields>({
     email: false,
     telegram: false,
@@ -92,33 +93,37 @@ export default function ConnectForm() {
   }
 
 	async function sendFormData(data: FormType) {
+    setIsLoading(true)
+    
 		const formData = new FormData();
 		formData.append("email", data.email);
 		formData.append("name", data.name);
-		// formData.append("company", data.company);
+		formData.append("company", data.company);
 		formData.append("phoneNumber", data.phoneNumber);
 		formData.append("description", data.projectDescription);
-    // formData.append("preferences", JSON.stringify(ways))
-    console.log(ways) //for eslint
+    formData.append("preferences", JSON.stringify(ways))
 
 		if (file) {
 			if (file.size < 24000000) {
 				formData.append("attachment", file);
 			} else {
 				setFileError(true)
+        setIsLoading(false)
 				return;
 			}
 		}
 
 		try {
 			await axios.post(
-				"https://unistory.app/api/contact",
+				"/api/contact/",
 				formData
 			);
       resetFields()
 		} catch (error) {
 			console.error(error);
-		}
+		} finally {
+      setIsLoading(false)
+    }
 	}
 
   const {ref, ...projectField} = register('projectDescription')
@@ -207,8 +212,12 @@ export default function ConnectForm() {
 
 			<button
 				type="submit"
-				className={clsx("!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-300 transition-opacity t-xs:!mt-5", fileError && 'opacity-50')}
-        disabled={fileError}
+				className={clsx(
+          "!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-300 transition-opacity t-xs:!mt-5", 
+          fileError && 'opacity-50', 
+          isLoading && 'animate-pulse'
+        )}
+        disabled={fileError || isLoading}
 			>
 				{data.send}
 			</button>
