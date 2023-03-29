@@ -105,7 +105,7 @@ export const PrinciplesEn: {
 			},
 		},
 		{
-			title: "Talant",
+			title: "Meeting deadlines",
 			description: {
 				beforeHighlight: `	Deadline – is a cut-off date for a task and something we don't break.`,
 				highlight: "Your plans will not be disrupted by poor work organization",

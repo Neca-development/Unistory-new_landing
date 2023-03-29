@@ -11,7 +11,7 @@ export function Connect() {
   }, [locale])
   
   return (
-    <section className='bg-dark-surface'>
+    <section className='bg-dark-surface' id="become-customer">
       <div className='container pt-16 pb-[5.5rem] grid grid-cols-[1fr_38.75rem] gap-[10rem] text-dark-text-primary t-xs:grid-cols-1 t-xs:gap-0'>
         <div>
           <h2 className='font-bold text-5xl leading-[3.25rem] t-xs:text-2xl'>

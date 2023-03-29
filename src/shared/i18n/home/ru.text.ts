@@ -93,7 +93,7 @@ export const PrinciplesRu: {
 			},
 		},
 		{
-			title: "Экспертиза",
+			title: "Экспертность",
 			description: {
 				beforeHighlight: "Планируете",
 				highlight: " сложный сервис или использование новейших технологии?",

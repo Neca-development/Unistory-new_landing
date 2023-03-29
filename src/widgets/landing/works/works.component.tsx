@@ -26,12 +26,12 @@ export function Works() {
 					dangerouslySetInnerHTML={{ __html: text.title }}
 				/>
 
-				<div className="grid grid-cols-3 gap-10 mt-16 t-xs:grid-cols-1 t-xs:mt-6 t-xs:gap-4">
+				<div className="grid grid-cols-3 gap-10 mt-16 t-xs:grid-cols-1 t-xs:mt-6 display t-xs:gap-4">
 					{CASES.slice(0, 7).map((work, index) => (
 						<WorksCard
 							key={index}
 							work={work}
-							additionalClassnames={clsx("[&:nth-child(6n+1)]:col-span-2 t-xs:!col-span-1")}
+							additionalClassnames={clsx("[&:nth-child(6n+1)]:col-span-2 t-xs:!col-span-1 t-xs:[&:nth-child(n+4)]:hidden")}
 						/>
 					))}
 				</div>
