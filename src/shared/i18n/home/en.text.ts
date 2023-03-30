@@ -96,7 +96,7 @@ export const PrinciplesEn: {
 			},
 		},
 		{
-			title: "Expetise",
+			title: "Expertise",
 			description: {
 				beforeHighlight: "Planning",
 				highlight: " a complex service or adoption of the latest technologies?",
@@ -105,7 +105,7 @@ export const PrinciplesEn: {
 			},
 		},
 		{
-			title: "Meeting deadlines",
+			title: "Deadlines",
 			description: {
 				beforeHighlight: `	Deadline – is a cut-off date for a task and something we don't break.`,
 				highlight: "Your plans will not be disrupted by poor work organization",

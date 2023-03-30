@@ -61,6 +61,11 @@ export const Footer = React.memo((props: IFooterProperties) => {
 							{/* <a rel='nofollow' href='https://t.me/unistory_app' target='_blank'>
                 <IconComponent name='telegram' className='w-6' />
               </a> */}
+							 {locale === 'ru' && (
+                <a rel="nofollow" href="https://t.me/unistory_app" target="_blank">
+                  <IconComponent name="telegram" className="w-6" />
+                </a>
+              )}
 							<a
 								rel="nofollow"
 								href="https://wa.me/89117417477"
@@ -68,11 +73,6 @@ export const Footer = React.memo((props: IFooterProperties) => {
 							>
 								<IconComponent name="whatsApp" className="w-6" />
 							</a>
-              {locale === 'ru' && (
-                <a rel="nofollow" href="https://t.me/unistory_app" target="_blank">
-                  <IconComponent name="telegram" className="w-6" />
-                </a>
-              )}
 							<a
 								rel="nofollow"
 								href="https://clutch.co/profile/unistory"
