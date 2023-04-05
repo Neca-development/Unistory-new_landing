@@ -280,6 +280,7 @@ export const CASES: ICase[] = [
     team: [
       TEAM.nursultanBegenov,
       TEAM.daniilSemenov,
+      TEAM.yanSofronov,
       TEAM.nikitaBobkov,
       TEAM.maksimKlimchenko,
       TEAM.vechyaslavValdykin,
@@ -396,6 +397,7 @@ export const CASES: ICase[] = [
     team: [
       TEAM.nursultanBegenov,
       TEAM.andreyJurin,
+      TEAM.yanSofronov,
       TEAM.nikitaBobkov,
       TEAM.maksimKlimchenko,
       TEAM.danilSilverstov,
@@ -772,6 +774,7 @@ export const CASES: ICase[] = [
     team: [
       TEAM.alexanderAksenov,
       TEAM.ilyaSmirnov,
+      TEAM.yanSofronov,
       TEAM.ernestMironov,
       TEAM.maksimKlimchenko,
       TEAM.alekseyChepurin,
@@ -886,6 +889,7 @@ export const CASES: ICase[] = [
     team: [
       TEAM.daniilSemenovHead,
       TEAM.ilyaSmirnov,
+      TEAM.yanSofronov,
       TEAM.ernestMironov,
       TEAM.maksimKlimchenko,
       TEAM. alekseyChepurin,
