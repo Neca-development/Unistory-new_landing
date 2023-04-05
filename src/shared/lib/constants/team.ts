@@ -218,6 +218,16 @@ export const TEAM = {
       en: 'Project manager',
       ru: 'Проектный менеджер'
     }
+  },
+  yanSofronov: {
+    name: {
+      en: 'Yan Sofronov',
+      ru: 'Ян Софронов'
+    },
+    position: {
+      en: 'Account manager',
+      ru: 'Аккаунт менеджер'
+    }
   }
 } as const
 
