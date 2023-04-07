@@ -39,7 +39,8 @@ export function MobileMenu({
 									key={index}
 									className={clsx(
 										"mb-[2rem] block text-[2.25rem] font-medium leading-none text-dark-surface dark:text-light-surface",
-										route === "/#become-customer" && "text-[#EC5F3B]"
+										route === "/#become-customer" &&
+											"dark:text-primary-s text-primary-s"
 									)}
 									href={route}
 								>
