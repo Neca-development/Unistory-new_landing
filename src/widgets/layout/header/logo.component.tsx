@@ -3,7 +3,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export function Logo() {
-	const { theme } = useTheme();
+	const { theme, systemTheme } = useTheme();
+	const _theme = theme === "system" ? systemTheme : theme;
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
@@ -18,8 +19,8 @@ export function Logo() {
 
 	return (
 		<IconComponent
-			key={"logo" + theme}
-			name={theme === "dark" ? "logoDark" : "logoLight"}
+			key={"logo" + _theme}
+			name={_theme === "dark" ? "logoDark" : "logoLight"}
 		/>
 	);
 }

@@ -3,7 +3,9 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export function CloseBtn() {
-	const { theme } = useTheme();
+	const { theme, systemTheme } = useTheme();
+	const _theme = theme === "system" ? systemTheme : theme;
+
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
@@ -18,8 +20,8 @@ export function CloseBtn() {
 
 	return (
 		<IconComponent
-			key={"close" + theme}
-			name={theme === "dark" ? "closeDark" : "closeLight"}
+			key={"close" + _theme}
+			name={_theme === "dark" ? "closeDark" : "closeLight"}
 		/>
 	);
 }

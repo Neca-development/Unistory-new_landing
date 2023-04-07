@@ -7,6 +7,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
 	<ThemeProvider attribute="class">
 		<ThemeContextProvider>
 			<Component {...pageProps} />
+			<div id="portal" />
 		</ThemeContextProvider>
 	</ThemeProvider>
 );

@@ -3,7 +3,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export function MenuBtn() {
-	const { theme } = useTheme();
+	const { theme, systemTheme } = useTheme();
+	const _theme = theme === "system" ? systemTheme : theme;
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
@@ -18,8 +19,8 @@ export function MenuBtn() {
 
 	return (
 		<IconComponent
-			key={"menuBtn" + theme}
-			name={theme === "dark" ? "menuBtnDark" : "menuBtnLight"}
+			key={"menuBtn" + _theme}
+			name={_theme === "dark" ? "menuBtnDark" : "menuBtnLight"}
 		/>
 	);
 }
