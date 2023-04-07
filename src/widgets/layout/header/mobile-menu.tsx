@@ -4,6 +4,7 @@ import { Logo } from "./logo.component";
 import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
 import { Portal } from "@shared/lib/hocs";
+import { CloseBtn } from "./close-btn.component";
 
 export function MobileMenu({
 	routes,
@@ -31,10 +32,7 @@ export function MobileMenu({
 					<div className="flex justify-between items-center">
 						<Logo />
 						<button onClick={onClose} className="p-[0.375rem]">
-							<IconComponent
-								key={"close" + theme}
-								name={theme === "dark" ? "closeDark" : "closeLight"}
-							/>
+							<CloseBtn />
 						</button>
 					</div>
 					<nav className="mt-[65px] flex-1">

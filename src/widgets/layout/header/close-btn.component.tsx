@@ -2,7 +2,7 @@ import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export function Logo() {
+export function CloseBtn() {
 	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
@@ -18,8 +18,8 @@ export function Logo() {
 
 	return (
 		<IconComponent
-			key={"logo" + theme}
-			name={theme === "dark" ? "logoDark" : "logoLight"}
+			key={"close" + theme}
+			name={theme === "dark" ? "closeDark" : "closeLight"}
 		/>
 	);
 }
