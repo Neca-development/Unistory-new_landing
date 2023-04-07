@@ -4,12 +4,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import * as React from "react";
 import { Logo } from "./logo.component";
+import { IconComponent } from "@shared/ui";
+import { MobileMenu } from "./mobile-menu";
 
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
 export const Header = React.memo((props: IHeaderProperties) => {
 	const { className, children } = props;
-	// const router = useRouter()
+	// const router = useRouter()\
+	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
 	const { locale, pathname } = useRouter();
 
@@ -20,15 +23,23 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
 		return ROUTESEN;
 	}, [locale]);
-	console.log(pathname);
+
+	function openMenu() {
+		setIsMenuOpen(true);
+	}
+
+	function closeMenu() {
+		setIsMenuOpen(false);
+	}
+
 	return (
 		<header {...props} className={clsx("relative flex w-full", className)}>
-			<div className="container flex justify-between py-4">
+			<div className="container flex justify-between items-center py-4">
 				<Link href={"/"} className="w-[8.625rem]">
 					<Logo />
 				</Link>
 
-				<div className="flex items-center space-x-10">
+				<div className="hidden lg:flex items-center space-x-10 ">
 					{ROUTES.map(({ label, route }, index) => {
 						return (
 							<Link
@@ -46,6 +57,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
 						);
 					})}
 				</div>
+
+				<MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
+
+				<button onClick={openMenu} className="lg:hidden">
+					<IconComponent name="menuBtn" />
+				</button>
 
 				{children}
 			</div>

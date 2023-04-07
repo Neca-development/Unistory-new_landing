@@ -52,13 +52,13 @@ module.exports = {
     },
     extend: {
       screens: {
-        't-xs': {max: '640px'},
-        'm-2xl': {max: '520px'},
-        'm-xl': {max: '460px'},
-        'm-l': {max: '420px'},
-        'm-m': {max: '360px'},
-        'm-s': {max: '320px'},
-        'm-xs': {max: '260px'},
+        't-xs': { max: '640px' },
+        'm-2xl': { max: '520px' },
+        'm-xl': { max: '460px' },
+        'm-l': { max: '420px' },
+        'm-m': { max: '360px' },
+        'm-s': { max: '320px' },
+        'm-xs': { max: '260px' },
       },
       fontSize: {
         h1: [
@@ -106,6 +106,20 @@ module.exports = {
         navbar:
           '0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 20px rgba(15, 26, 32, 0.08)',
       },
+      keyframes: {
+        moveIn: {
+          '0%': { transform: 'translateY(-110%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        moveOut: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-110%)' },
+        }
+      },
+      animation: {
+        moveIn: 'moveIn 0.3s ease-out forwards',
+        moveOut: 'moveOut 0.3s ease-out forwards',
+      }
     },
   },
   safelist: [
