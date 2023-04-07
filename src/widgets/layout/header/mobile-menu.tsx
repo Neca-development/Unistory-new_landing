@@ -1,10 +1,9 @@
-import Link from "next/link";
-import clsx from "clsx";
-import { Logo } from "./logo.component";
-import { IconComponent } from "@shared/ui";
-import { useTheme } from "next-themes";
 import { Portal } from "@shared/lib/hocs";
+import clsx from "clsx";
+import Link from "next/link";
+
 import { CloseBtn } from "./close-btn.component";
+import { Logo } from "./logo.component";
 
 export function MobileMenu({
 	routes,
@@ -18,18 +17,16 @@ export function MobileMenu({
 	active: boolean;
 	onClose: () => void;
 }) {
-	const { theme } = useTheme();
-
 	return (
 		<Portal>
 			<aside
 				className={clsx(
-					"fixed top-0 left-0 h-screen w-full bg-[#00000030] pt-[80px] lg:hidden -translate-y-full",
+					"fixed top-0 left-0 h-screen w-full -translate-y-full bg-[#00000030] pt-[80px] lg:hidden",
 					active && "animate-moveIn"
 				)}
 			>
-				<div className="bg-light-surface dark:bg-dark-surface h-full px-[1rem] pt-[28px] pb-[40px] flex flex-col">
-					<div className="flex justify-between items-center">
+				<div className="flex h-full flex-col bg-light-surface px-[1rem] pt-[28px] pb-[40px] dark:bg-dark-surface">
+					<div className="flex items-center justify-between">
 						<Logo />
 						<button onClick={onClose} className="p-[0.375rem]">
 							<CloseBtn />
@@ -41,11 +38,8 @@ export function MobileMenu({
 								<Link
 									key={index}
 									className={clsx(
-										"text-dark-surface dark:text-light-surface block mb-[2rem] text-[2.25rem] leading-none font-medium",
+										"mb-[2rem] block text-[2.25rem] font-medium leading-none text-dark-surface dark:text-light-surface",
 										route === "/#become-customer" && "text-[#EC5F3B]"
-										// pathname.includes(route)
-										// 	? "text-light-text-primary dark:text-dark-text-primary underline"
-										// 	: "text-light-text-secondary dark:text-dark-text-secondary"
 									)}
 									href={route}
 								>
@@ -56,7 +50,7 @@ export function MobileMenu({
 					</nav>
 					<a
 						href="mailto:hello@unistory.team"
-						className="text-dark-surface dark:text-light-surface font-medium text-[1.5rem]"
+						className="text-[1.5rem] font-medium text-dark-surface dark:text-light-surface"
 					>
 						hello@unistory.team
 					</a>
