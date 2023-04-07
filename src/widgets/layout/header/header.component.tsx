@@ -14,7 +14,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
 	// const router = useRouter()\
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-	const { locale, pathname } = useRouter();
+	const { locale } = useRouter();
 
 	const ROUTES = React.useMemo(() => {
 		if (locale === "ru") {
