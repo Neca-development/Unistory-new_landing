@@ -37,7 +37,12 @@ export function Hero() {
 	return (
 		<div className={clsx("container pt-[7.125rem] t-xs:pt-12 pb-16")}>
 			<section className="relative pb-[8.875rem] t-xs:pb-16">
-				<h1 className={clsx(textClassName, "pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0")}>
+				<h1
+					className={clsx(
+						textClassName,
+						"pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0"
+					)}
+				>
 					{text?.description.first} <br />
 					{text?.description.second}
 					<button className="relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]">
@@ -81,7 +86,7 @@ export function Hero() {
 			<section className="flex items-center justify-between t-xs:block">
 				<article className="flex items-center text-2xl t-xs:mb-8 font-medium">
 					<p className="relative mr-4 text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
-						40
+						25
 						<span className="relative -top-8 text-[3rem] text-primary-s">
 							+
 						</span>
