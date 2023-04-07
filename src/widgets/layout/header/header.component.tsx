@@ -6,7 +6,6 @@ import * as React from "react";
 import { Logo } from "./logo.component";
 import { MobileMenu } from "./mobile-menu";
 import { MenuBtn } from "./menu-btn.component";
-import { useTheme } from "next-themes";
 
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
