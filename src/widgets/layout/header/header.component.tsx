@@ -46,9 +46,6 @@ export const Header = React.memo((props: IHeaderProperties) => {
 								key={index}
 								className={clsx(
 									"text-light-text-secondary dark:text-dark-text-secondary"
-									// pathname.includes(route)
-									// 	? "text-light-text-primary dark:text-dark-text-primary underline"
-									// 	: "text-light-text-secondary dark:text-dark-text-secondary"
 								)}
 								href={route}
 							>
