@@ -29,11 +29,16 @@ const telegram = dynamic(() => import("@public/assets/icons/telegram.svg"));
 const whatsApp = dynamic(() => import("@public/assets/icons/whatsApp.svg"));
 const clutch = dynamic(() => import("@public/assets/icons/clutch.svg"));
 const upwork = dynamic(() => import("@public/assets/icons/upwork.svg"));
-const menuBtn = dynamic(() => import("@public/assets/icons/menu-btn.svg"));
 const closeLight = dynamic(
 	() => import("@public/assets/icons/close-light.svg")
 );
 const closeDark = dynamic(() => import("@public/assets/icons/close-dark.svg"));
+const menuBtnLight = dynamic(
+	() => import("@public/assets/icons/menu-btn-light.svg")
+);
+const menuBtnDark = dynamic(
+	() => import("@public/assets/icons/menu-btn-dark.svg")
+);
 
 const iconTypes = {
 	unistory,
@@ -60,9 +65,10 @@ const iconTypes = {
 	whatsApp,
 	clutch,
 	upwork,
-	menuBtn,
 	closeLight,
 	closeDark,
+	menuBtnLight,
+	menuBtnDark,
 };
 
 export type IconsTypes = keyof typeof iconTypes;

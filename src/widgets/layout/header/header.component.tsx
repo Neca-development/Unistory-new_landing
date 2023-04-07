@@ -6,6 +6,7 @@ import * as React from "react";
 import { Logo } from "./logo.component";
 import { IconComponent } from "@shared/ui";
 import { MobileMenu } from "./mobile-menu";
+import { useTheme } from "next-themes";
 
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
@@ -13,6 +14,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
 	const { className, children } = props;
 	// const router = useRouter()\
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const { theme } = useTheme();
 
 	const { locale } = useRouter();
 
@@ -61,7 +63,10 @@ export const Header = React.memo((props: IHeaderProperties) => {
 				<MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
 
 				<button onClick={openMenu} className="lg:hidden">
-					<IconComponent name="menuBtn" />
+					<IconComponent
+						key={"menuBtn" + theme}
+						name={theme === "dark" ? "menuBtnDark" : "menuBtnLight"}
+					/>
 				</button>
 
 				{children}
