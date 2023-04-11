@@ -912,7 +912,8 @@ export const CASES: ICase[] = [
         position: {
           en: 'CEO of «HoarderNest»',
           ru: 'исполнительный директор «HoarderNest»'
-        },
+				},
+			photo: '', 
       },
       text: {
         en: '«The skilled team delivered exceptional results and the client is confident that the product launch will be a success. Unistory\'s frequent and clear communication about the project\'s status and roadblocks contributed to a smooth engagement.»' ,
