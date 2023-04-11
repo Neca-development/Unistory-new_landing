@@ -286,7 +286,8 @@ export const CASES: ICase[] = [
         position: {
           en: 'CEO of «Consensus-base Inc.»',
           ru: 'исполнительный директор «Consensus-base Inc.»'
-        },
+				},
+				photo: '', 
       },
       text: {
         en: '«Unistory did a very professional job. They submitted a detailed schedule prior to the estimate and followed it through with no delays. They had a project manager for us the entire time, and when the PM in charge was on vacation, the alternate took care of it. the PM would get back to us as soon as possible. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology.Other contracts are still ongoing, but we would like to continue to work with them in the future.»',
