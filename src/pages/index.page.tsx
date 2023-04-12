@@ -1,7 +1,7 @@
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
 
-import { Hero, Principles, Services, Works } from "@widgets/landing";
+import { Hero, Principles, Reviews, Services, Works } from "@widgets/landing";
 //import {Reviews} from '@widgets/layout'
 import { Layout } from "@widgets/layout";
 
@@ -14,7 +14,7 @@ export function Home() {
 				<Services />
 				<Works />
 				<Principles />
-				{/* <Reviews /> */}
+				<Reviews />
 				<Connect />
 			</Layout.Main>
 			<Layout.Footer showAddress />

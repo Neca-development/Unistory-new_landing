@@ -1,3 +1,4 @@
+import { Reviews } from "@widgets/layout";
 import { IconsTypes } from "@shared/ui";
 
 export const HeroRu = {
@@ -110,4 +111,12 @@ export const PrinciplesRu: {
 			},
 		},
 	],
+};
+
+export const ReviewsRU = {
+	title: {
+		beforeHighlight: "Факт: ",
+		highlight: "9 из 10 клиентов<br />рекомендуют нас",
+		afterHighlight: " и вот почему",
+	},
 };

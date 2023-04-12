@@ -114,3 +114,11 @@ export const PrinciplesEn: {
 		},
 	],
 };
+
+export const ReviewsEN = {
+	title: {
+		beforeHighlight: "Fact: ",
+		highlight: "9 of 10 customers<br />recommend us",
+		afterHighlight: " and here's why",
+	},
+};
