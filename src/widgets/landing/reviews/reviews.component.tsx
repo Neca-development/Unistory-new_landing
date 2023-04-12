@@ -3,11 +3,14 @@ import { CASES } from "@shared/lib";
 import { useInterval } from "@shared/lib/hooks/useInterval.hook";
 import { WorksCard } from "@widgets/works-card";
 import clsx from "clsx";
+import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 function Timer({ duration }: { duration: number }) {
 	const [timeLeft, setTimeLeft] = useState(duration * 0.65);
+	const { theme, systemTheme } = useTheme();
+	const _theme = theme === "system" ? systemTheme : theme;
 
 	useEffect(() => {
 		if (timeLeft === 0) return;
@@ -28,7 +31,7 @@ function Timer({ duration }: { duration: number }) {
 				cx="16"
 				cy="16"
 				r={radius}
-				stroke="#fff"
+				stroke={_theme === "light" ? "#000" : "#fff"}
 				opacity={0.2}
 				strokeWidth="8"
 				fill="none"
@@ -37,7 +40,7 @@ function Timer({ duration }: { duration: number }) {
 				cx="16"
 				cy="16"
 				r={radius}
-				stroke="#fff"
+				stroke={_theme === "light" ? "#000" : "#fff"}
 				strokeWidth="8"
 				fill="none"
 				strokeDasharray={`${circumference} ${circumference}`}
@@ -51,7 +54,7 @@ function Timer({ duration }: { duration: number }) {
 export default Timer;
 
 const reviewsData = CASES.filter((c) => c.review);
-const timerDuration = 10000;
+const timerDuration = 20000;
 
 export function Reviews() {
 	const [activeReviewIndex, setActiveReviewIndex] = useState(0);
