@@ -295,7 +295,7 @@ export const CASES: ICase[] = [
 			},
 		},
 		team: [
-			TEAM.nursultanBegenov,
+			TEAM.alexanderAksenov,
 			TEAM.daniilSemenov,
 			TEAM.yanSofronov,
 			TEAM.nikitaBobkov,
@@ -412,7 +412,7 @@ export const CASES: ICase[] = [
 			},
 		],
 		team: [
-			TEAM.nursultanBegenov,
+			TEAM.daniilSemenovHead,
 			TEAM.andreyJurin,
 			TEAM.yanSofronov,
 			TEAM.nikitaBobkov,
@@ -675,7 +675,7 @@ export const CASES: ICase[] = [
 		},
 		logo: sipsignalLogo.src,
 		team: [
-			TEAM.nursultanBegenov,
+			TEAM.alexanderAksenov,
 			TEAM.daniilSemenov,
 			TEAM.nikitaBobkov,
 			TEAM.maksimKlimchenko,
@@ -784,7 +784,7 @@ export const CASES: ICase[] = [
 			},
 		],
 		team: [
-			TEAM.alexanderAksenov,
+			TEAM.daniilSemenovHead,
 			TEAM.ilyaSmirnov,
 			TEAM.yanSofronov,
 			TEAM.ernestMironov,

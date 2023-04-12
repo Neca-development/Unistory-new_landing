@@ -18,7 +18,7 @@ export const FormEn = {
     },
     phone: {
       placeholder: 'Phone number',
-      error: 'Phone number should be at least 6 letters'
+      error: 'Phone number should be at least 6 digits'
     },
     email: {
       placeholder: 'E-mail',
