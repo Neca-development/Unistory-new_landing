@@ -14,6 +14,7 @@ export function useInterval(
 	}, [callback]);
 
 	// Set up the interval.
+	// @ts-ignore
 	useEffect(() => {
 		function tick() {
 			savedCallback.current();
