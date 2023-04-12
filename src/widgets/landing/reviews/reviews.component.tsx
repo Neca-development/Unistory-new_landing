@@ -1,10 +1,10 @@
 import { ReviewsEN, ReviewsRU } from "@shared/i18n";
 import { CASES } from "@shared/lib";
+import { useInterval } from "@shared/lib/hooks/useInterval.hook";
 import { WorksCard } from "@widgets/works-card";
 import clsx from "clsx";
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
-import { useInterval } from "usehooks-ts";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 function Timer({ duration }: { duration: number }) {
 	const [timeLeft, setTimeLeft] = useState(duration * 0.65);
@@ -65,7 +65,7 @@ export function Reviews() {
 		return ReviewsEN;
 	}, [locale]);
 
-	function nextSlide() {
+	const nextSlide = useCallback(() => {
 		setActiveReviewIndex((activeReviewIndex) => {
 			if (activeReviewIndex === reviewsData.length - 1) {
 				return 0;
@@ -73,9 +73,9 @@ export function Reviews() {
 
 			return activeReviewIndex + 1;
 		});
-	}
+	}, [activeReviewIndex]);
 
-	useInterval(nextSlide, timerDuration);
+	useInterval(nextSlide, timerDuration, [activeReviewIndex]);
 
 	return (
 		<section className="container pt-20 pb-[7.5rem]">
