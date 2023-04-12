@@ -1,4 +1,3 @@
-import { Reviews } from "@widgets/layout";
 import { IconsTypes } from "@shared/ui";
 
 export const HeroRu = {

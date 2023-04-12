@@ -107,7 +107,6 @@ export function Reviews() {
 							: reviewsData[activeReviewIndex]?.review?.author.position.en}
 					</p>
 				</article>
-				{/* @ts-ignore */}
 				<div className="hidden lg:block">
 					<WorksCard work={reviewsData[activeReviewIndex]!} />
 				</div>
