@@ -31,8 +31,8 @@ export const TEAM = {
   },
   maksimKlimchenko: {
     name: {
-      en: 'Maksim Klimchenko',
-      ru: 'Максим Климченко'
+      en: 'Maksim Klimnichenko',
+      ru: 'Максим Климниченко'
     },
     position: {
       en: 'Business analyst',
