@@ -49,7 +49,7 @@ export function Services() {
 					))}
 				</div>
 
-				<div className="pt-12 pb-[3.75rem] t-xs:py-8 t-xs:px-[28px] pl-16 pr-10 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
+				<div className="pt-12 pb-[3.75rem] min-h-[24.5rem] t-xs:py-8 t-xs:px-[28px] pl-16 pr-10 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
 					<h3
 						className="text-4xl font-bold t-xs:text-xl"
 						dangerouslySetInnerHTML={{ __html: data[activeIndex]!.header }}

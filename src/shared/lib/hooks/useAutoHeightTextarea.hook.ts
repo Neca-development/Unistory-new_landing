@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-const normalizeTextareaHeight = 4
+const normalizeTextareaHeight = 0
 
 export const useAutoHeightTextarea = (ref: HTMLTextAreaElement | null, value?: string) => {
   useEffect(() => {

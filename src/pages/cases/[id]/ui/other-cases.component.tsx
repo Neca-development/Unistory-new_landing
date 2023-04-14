@@ -4,6 +4,7 @@ import { ICase } from '@shared/lib/types'
 import { WorksCard } from '@widgets/works-card'
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
 
 interface IProps {
   currentId: string
@@ -29,7 +30,7 @@ export default function OtherCases({ currentId, title }: IProps) {
     <section className='container mt-10 pb-24 t-xs:pb-16'>
       <h2 className='text-5xl font-bold t-xs:text-2xl'>{title}</h2>
 
-      <Swiper className='mt-10 t-xs:mt-8' slidesPerView={1.5} spaceBetween={isMob ? 20 : 40}>
+      <Swiper className='mt-10 select-none t-xs:mt-8' slidesPerView={1.5} spaceBetween={isMob ? 20 : 40}>
         {cases.map((c) => (
           <SwiperSlide key={c.id}>
             <WorksCard work={c} />

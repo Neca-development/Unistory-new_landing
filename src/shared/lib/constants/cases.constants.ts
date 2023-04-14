@@ -62,6 +62,7 @@ export const CASES: ICase[] = [
 			TECHNOLOGIES.nest,
 			TECHNOLOGIES.postgresql,
 			TECHNOLOGIES.reactNative,
+      TECHNOLOGIES.node
 		],
 		banner: personalPromo.src,
 		description: {
@@ -339,6 +340,7 @@ export const CASES: ICase[] = [
 			TECHNOLOGIES.nextjs,
 			TECHNOLOGIES.nest,
 			TECHNOLOGIES.solidity,
+      TECHNOLOGIES.node
 		],
 		banner: heistBanner.src,
 		description: {
