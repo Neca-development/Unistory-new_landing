@@ -193,7 +193,7 @@ export const CASES: ICase[] = [
 				"Клиентская разработка",
 			],
 		},
-		showCategoriesOnPage: true,
+		showCategoriesOnPage: false,
 		icons: ["monitor", "bitcoin"],
 		textColor: "black",
 		technologies: [
@@ -451,7 +451,7 @@ export const CASES: ICase[] = [
 				"Клиентская разработка",
 			],
 		},
-		showCategoriesOnPage: true,
+		showCategoriesOnPage: false,
 		icons: ["monitor", "bitcoin"],
 		textColor: "white",
 		technologies: [
@@ -588,7 +588,7 @@ export const CASES: ICase[] = [
 				"Административная панель",
 			],
 		},
-		showCategoriesOnPage: true,
+		showCategoriesOnPage: false,
 		icons: ["monitor", "phone02"],
 		textColor: "black",
 		technologies: [
@@ -703,7 +703,7 @@ export const CASES: ICase[] = [
 				"Административная панель",
 			],
 		},
-		showCategoriesOnPage: true,
+		showCategoriesOnPage: false,
 		icons: ["monitor", "phone02"],
 		textColor: "black",
 		technologies: [
@@ -846,7 +846,7 @@ export const CASES: ICase[] = [
 			TECHNOLOGIES.postgresql,
 		],
 		textColor: "white",
-		showCategoriesOnPage: true,
+		showCategoriesOnPage: false,
 		main: [
 			{
 				title: {
