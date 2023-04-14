@@ -1,5 +1,5 @@
 import { ICase } from "@shared/lib/types";
-import { CaseCategoryIcon } from "@shared/ui";
+// import { CaseCategoryIcon } from "@shared/ui";
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -32,9 +32,9 @@ export function WorksCard(props: IWorksCardInterface) {
 					alt=""
 				/>
 				<div className="flex items-center space-x-2">
-					{work?.icons.map((icon, idx) => (
+					{/* {work?.icons.map((icon, idx) => (
 						<CaseCategoryIcon key={idx} icon={icon} variant={work?.textColor} />
-					))}
+					))} */}
 				</div>
 			</div>
 			<div
