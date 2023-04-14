@@ -83,7 +83,7 @@ export const PrinciplesRu: {
 	},
 	items: [
 		{
-			title: "Всегда на связи",
+			title: "Коммуникация",
 			description: {
 				beforeHighlight: "",
 				highlight: "Коммуникация важна и точка.",
@@ -102,7 +102,7 @@ export const PrinciplesRu: {
 			},
 		},
 		{
-			title: "Соблюдение сроков",
+			title: "Сроки",
 			description: {
 				beforeHighlight: `Дедлайн – крайний срок выполнения задачи и то, что мы не нарушаем.`,
 				highlight: " Ваши планы не сорвутся из-за плохой организации работ",

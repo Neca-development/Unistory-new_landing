@@ -37,6 +37,7 @@ export function MobileMenu({
 							return (
 								<Link
 									key={index}
+                  onClick={onClose}
 									className={clsx(
 										"mb-[2rem] block text-[2.25rem] font-medium leading-none text-dark-surface dark:text-light-surface",
 										route === "/#become-customer" &&

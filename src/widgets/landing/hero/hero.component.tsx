@@ -85,7 +85,7 @@ export function Hero() {
 
 			<section className="flex items-center justify-between t-xs:block">
 				<article className="flex items-center text-2xl t-xs:mb-8 font-medium">
-					<p className="relative mr-4 text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
+					<p className="relative mr-4 t-xs:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
 						25
 						<span className="relative -top-8 text-[3rem] text-primary-s">
 							+
@@ -95,7 +95,7 @@ export function Hero() {
 				</article>
 
 				<article className="flex items-center text-2xl t-xs:mb-8 font-medium">
-					<p className="relative mr-4 text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
+					<p className="relative mr-4 t-xs:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
 						70
 						<span className="relative -top-8 text-[3rem] text-primary-s">
 							+
@@ -105,7 +105,7 @@ export function Hero() {
 				</article>
 
 				<article className="flex items-center text-2xl font-medium">
-					<p className="relative mr-4 text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
+					<p className="relative mr-4 t-xs:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
 						4.9
 					</p>
 					<span dangerouslySetInnerHTML={{ __html: text?.params?.rating }} />
