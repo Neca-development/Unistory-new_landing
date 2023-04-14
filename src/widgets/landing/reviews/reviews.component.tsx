@@ -93,11 +93,15 @@ export function Reviews() {
 
 			<div className="lg:grid gap-10 grid-cols-[1fr_25rem] mt-10">
 				<article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col">
-					<p className="text-base leading-6 lg:text-2xl lg:leading-10">
-						{locale === "ru"
-							? reviewsData[activeReviewIndex]?.review?.text.ru
-							: reviewsData[activeReviewIndex]?.review?.text.en}
-					</p>
+					<p
+						className="text-base leading-6 lg:text-2xl lg:leading-10"
+						dangerouslySetInnerHTML={{
+							__html:
+								locale === "ru"
+									? reviewsData[activeReviewIndex]?.review?.text.ru ?? ""
+									: reviewsData[activeReviewIndex]?.review?.text.en ?? "",
+						}}
+					></p>
 					<p className="text-sm leading-5 lg:text-xl font-medium mt-10 lg:mt-4 max-w-xl">
 						<span className="font-bold">
 							{locale === "ru"
