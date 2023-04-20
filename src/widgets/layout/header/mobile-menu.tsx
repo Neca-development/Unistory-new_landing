@@ -21,7 +21,7 @@ export function MobileMenu({
 		<Portal>
 			<aside
 				className={clsx(
-					"fixed top-0 left-0 h-screen w-full -translate-y-full bg-[#00000030] pt-[80px] lg:hidden",
+					"fixed top-0 left-0 h-screen w-full -translate-y-full bg-[#00000030] lg:hidden",
 					active && "animate-moveIn"
 				)}
 			>

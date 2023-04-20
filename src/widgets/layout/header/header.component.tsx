@@ -35,7 +35,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
 	return (
 		<header {...props} className={clsx("relative flex w-full", className)}>
 			<div className="container flex justify-between items-center py-4">
-				<Link href={"/"} className="w-[8.625rem]">
+				<Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
 					<Logo />
 				</Link>
 
