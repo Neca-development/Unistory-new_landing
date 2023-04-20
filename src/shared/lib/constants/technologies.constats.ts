@@ -1,5 +1,4 @@
 import reactIcon from '@public/assets/technologies/React-icon.png'
-import reactNativeIcon from '@public/assets/technologies/react-native.png'
 import postgresqlIcon from '@public/assets/technologies/postgresql.png'
 import nestIcon from '@public/assets/technologies/nest.png'
 import nextjsIcon from '@public/assets/technologies/nextjs.png'
@@ -43,7 +42,7 @@ export const TECHNOLOGIES = {
   },
   reactNative: {
     name: 'React Native',
-    icon: reactNativeIcon.src,
+    icon: reactIcon.src,
   },
   nextjs: {
     name: 'Next.js',
