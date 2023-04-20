@@ -91,7 +91,7 @@ export function Reviews() {
 				{text.title.afterHighlight}
 			</h2>
 
-			<div className="lg:grid gap-10 grid-cols-[1fr_25rem] mt-10">
+			<div className="lg:grid gap-10 grid-cols-[1fr_25rem] h-[35rem]">
 				<article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col">
 					<p
 						className="text-base leading-6 lg:text-2xl lg:leading-10"

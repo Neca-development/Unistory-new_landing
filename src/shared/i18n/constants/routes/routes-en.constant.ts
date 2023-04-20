@@ -5,7 +5,7 @@ export const ROUTESEN = [
 	},
   {
     label: 'Get in touch',
-    route: '#become-customer'
+    route: '/#become-customer'
   },
 	// {
 	// 	label: "Services",

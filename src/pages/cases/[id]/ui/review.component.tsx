@@ -16,22 +16,26 @@ export default function CaseReview({ data }: ICaseReviewProps) {
       <article className='max-w-[52.5rem]'>
         <p className='text-3xl leading-[3rem] font-medium t-xs:text-xl'>{review?.text[locale || 'ru']}</p>
         <div className='flex items-center mt-5 t-xs:mt-10 t-xs:block'>
-          <img
-            className='w-[5.5rem] rounded-full t-xs:w-16'
-            src={review?.author.photo}
-            alt={review?.author.name[locale || 'ru']}
-          />
-          <p className='ml-6 text-2xl t-xs:ml-0 t-xs:text-base t-xs:mt-3'>
+          {review?.author.photo &&
+            <img
+              className='w-[5.5rem] rounded-full t-xs:w-16 mr-6'
+              src={review.author.photo}
+              alt={review.author.name[locale || 'ru']}
+            />
+          }
+          <p className='text-2xl t-xs:ml-0 t-xs:text-base t-xs:mt-3'>
             <span className='font-bold'>{review?.author.name[locale || 'ru']}</span>,{' '}
             {review?.author.position[locale || 'ru']}
           </p>
         </div>
       </article>
-      <img
-        className='absolute right-12 -top-8 w-48'
-        src={data.logo}
-        alt={data.title}
-      />
+      {data.logo &&
+        <img
+          className='absolute right-12 -top-8 w-48'
+          src={data.logo}
+          alt={data.title}
+        />
+      }
     </section>
   )
 }
