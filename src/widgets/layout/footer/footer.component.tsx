@@ -84,7 +84,6 @@ export const Footer = React.memo((props: IFooterProperties) => {
 								rel="nofollow"
 								href="https://www.upwork.com/ag/unistory/"
 								target="_blank"
-                className="h-[1.25rem]"
 							>
 								<IconComponent name="upwork" className="w-20" />
 							</a>

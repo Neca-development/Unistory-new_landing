@@ -3,7 +3,6 @@ import { CASES } from "@shared/lib";
 import { ICase } from "@shared/lib/types";
 import { IconComponent } from "@shared/ui";
 import { WorksCard } from "@widgets/works-card";
-import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
@@ -28,7 +27,7 @@ export function Works() {
 			return;
 		}
 
-		setCases(CASES.slice(0, 7));
+		setCases(CASES.slice(0, 3));
 	}, []);
 
 	// function to get 2 cases more on click
@@ -49,9 +48,6 @@ export function Works() {
 						<WorksCard
 							key={index}
 							work={work}
-							additionalClassnames={clsx(
-								"[&:nth-child(6n+1)]:col-span-2 t-xs:!col-span-1"
-							)}
 						/>
 					))}
 				</div>
