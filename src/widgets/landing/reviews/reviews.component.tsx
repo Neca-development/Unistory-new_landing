@@ -102,17 +102,24 @@ export function Reviews() {
 									: reviewsData[activeReviewIndex]?.review?.text.en ?? "",
 						}}
 					></p>
-					<p className="text-sm leading-5 lg:text-xl font-medium mt-10 lg:mt-4">
+					<span className="text-sm leading-5 lg:text-xl font-medium mt-10 lg:mt-4">
 						<span className="font-bold lg:whitespace-nowrap">
 							{locale === "ru"
 								? reviewsData[activeReviewIndex]?.review?.author.name.ru
-								: reviewsData[activeReviewIndex]?.review?.author.name.en}
+								: reviewsData[activeReviewIndex]?.review?.author.name.en},
 						</span>
-						<span>, </span>
-						{locale === "ru"
-							? reviewsData[activeReviewIndex]?.review?.author.position.ru
-							: reviewsData[activeReviewIndex]?.review?.author.position.en}
-					</p>
+						{' '}
+						<span className="mr-2">
+							{locale === "ru"
+								? reviewsData[activeReviewIndex]?.review?.author.position.ru
+								: reviewsData[activeReviewIndex]?.review?.author.position.en}
+						</span>
+						<span>
+							{reviewsData[activeReviewIndex]?.review?.author.company === '«Consensus-base Inc.»' && <br className="hidden lg:block"/>}
+							{reviewsData[activeReviewIndex]?.review?.author.company === '«BP Networking & Design Inc.»' && <br />}
+							{reviewsData[activeReviewIndex]?.review?.author.company}
+						</span>
+					</span>
 				</article>
 				<div className="hidden lg:block">
 					<WorksCard work={reviewsData[activeReviewIndex]!} />
