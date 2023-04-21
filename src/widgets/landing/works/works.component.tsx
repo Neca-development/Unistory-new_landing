@@ -65,9 +65,13 @@ export function Works() {
 				{cases.length < CASES.length && (
 					<button
 						onClick={getMoreCases}
-						className="t-xs:block py-4 pr-8 w-fit mt-10 text-2xl font-medium text-light-text-primary dark:text-dark-text-primary t-xs:mt-6 t-xs:py-2 t-xs:text-base hidden"
+						className="t-xs:flex items-center py-4 pr-8 w-fit mt-10 text-2xl font-medium text-light-text-primary dark:text-dark-text-primary t-xs:mt-6 t-xs:py-2 t-xs:text-base hidden"
 					>
-						{text.moreCases}
+						<IconComponent
+							name="arrowRight"
+							className="w-10 mr-4 first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent t-xs:w-7"
+						/>
+						<span>{text.moreCases}</span>
 					</button>
 				)}
 			</div>

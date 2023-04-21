@@ -5,7 +5,7 @@ import { useMemo } from 'react'
 
 export function CaseHero({ data }: { data: ICase }) {
   const {locale} = useRouter()
-  
+
   if (!data) {
     return <></>
   }
@@ -16,7 +16,7 @@ export function CaseHero({ data }: { data: ICase }) {
 
   const findMonths = (value: number) => {
     if(locale === 'en') return 'months'
-    
+
     if(value <= 1) return 'месяц'
     if(value <= 3 && value > 1) return 'месяца'
     return 'месяцев'
@@ -30,7 +30,7 @@ export function CaseHero({ data }: { data: ICase }) {
 
       <img
         src={data.banner}
-        className='h-[30rem] w-full object-cover mt-[4rem] t-xs:mt-6 t-xs:h-[12.625rem] t-xs:w-[15.875rem] t-xs:mx-auto'
+        className='w-full object-cover mt-[4rem] t-xs:mt-6 t-xs:h-[12.625rem]'
         alt={data.title}
       />
 

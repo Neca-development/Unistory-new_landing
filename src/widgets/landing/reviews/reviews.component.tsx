@@ -91,8 +91,8 @@ export function Reviews() {
 				{text.title.afterHighlight}
 			</h2>
 
-			<div className="lg:grid gap-10 grid-cols-[1fr_25rem] h-[35rem]">
-				<article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col">
+			<div className="lg:grid gap-10 grid-cols-[1fr_25rem]">
+				<article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col h-[35rem]">
 					<p
 						className="text-base leading-6 lg:text-2xl lg:leading-10"
 						dangerouslySetInnerHTML={{
@@ -102,13 +102,13 @@ export function Reviews() {
 									: reviewsData[activeReviewIndex]?.review?.text.en ?? "",
 						}}
 					></p>
-					<p className="text-sm leading-5 lg:text-xl font-medium mt-10 lg:mt-4 max-w-xl">
-						<span className="font-bold">
+					<p className="text-sm leading-5 lg:text-xl font-medium mt-10 lg:mt-4">
+						<span className="font-bold lg:whitespace-nowrap">
 							{locale === "ru"
 								? reviewsData[activeReviewIndex]?.review?.author.name.ru
 								: reviewsData[activeReviewIndex]?.review?.author.name.en}
 						</span>
-						,{" "}
+						<span>, </span>
 						{locale === "ru"
 							? reviewsData[activeReviewIndex]?.review?.author.position.ru
 							: reviewsData[activeReviewIndex]?.review?.author.position.en}
@@ -123,13 +123,13 @@ export function Reviews() {
 				{reviewsData.map((r, idx) => (
 					<button
 						key={idx}
-						className="py-4 px-6 bg-light-surface dark:bg-dark-surface text-base lg:text-2xl rounded-sm flex items-center "
+						className="py-3 px-4 bg-light-surface dark:bg-dark-surface text-base lg:text-2xl rounded-sm flex items-center "
 						onClick={() => setActiveReviewIndex(idx)}
 					>
 						{activeReviewIndex === idx && <Timer duration={timerDuration} />}
 						<span
 							className={clsx(
-								"opacity-50",
+								"opacity-50 h-[32px] flex items-center",
 								activeReviewIndex === idx && "opacity-100 font-bold  ml-[18px]"
 							)}
 						>

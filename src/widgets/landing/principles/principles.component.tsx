@@ -10,7 +10,7 @@ export function Principles() {
 	const { locale } = useRouter();
 
 	const data = React.useMemo(() => {
-		if (locale === "ru") {
+		if (locale === 'ru') {
 			return PrinciplesRu;
 		}
 
@@ -43,7 +43,7 @@ export function Principles() {
 					toggleClassName="absolute top-[-1.5rem] t-xs:-bottom-10 t-xs:top-auto t-xs:left-auto t-xs:right-0 left-[39.2rem]"
 					messageData={data.message}
 				/>
-				<p className="font-bold text-5xl leading-[3.5rem] t-xs:text-2xl t-xs:leading-9">
+				<p className="font-bold text-5xl leading-[3.5rem] t-xs:text-2xl t-xs:leading-9 h-[18rem]">
 					{data.items[activeIdx]!.description?.beforeHighlight}
 					<span className="text-primary-s">
 						{data.items[activeIdx]!.description?.highlight}

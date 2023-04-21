@@ -51,8 +51,8 @@ export const CASES: ICase[] = [
 			ru: "Персонал – мультиплатформенное\n HR приложение",
 		},
 		categories: {
-			en: ["Client development", "Server development"],
-			ru: ["Серверная разработка", "Клиентская разработка"],
+			en: ["Multi-platform\n HR application"],
+			ru: ["Мультиплатформенное\n HR приложение"],
 		},
 		showCategoriesOnPage: false,
 		icons: ["monitor", "phone01"],
@@ -526,7 +526,7 @@ export const CASES: ICase[] = [
 				},
 				position: {
 					en: "CEO of «Consensus-base Inc.»",
-					ru: "исполнительный директор «Consensus-base Inc.»",
+					ru: "исполнительный директор \n «Consensus-base Inc.»",
 				},
 				photo: "",
 			},
