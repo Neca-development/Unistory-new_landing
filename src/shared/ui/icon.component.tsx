@@ -10,6 +10,12 @@ const summer = dynamic(() => import("@public/assets/icons/summer.svg"));
 const earth = dynamic(() => import("@public/assets/icons/earth.svg"));
 const rocket = dynamic(() => import("@public/assets/icons/rocket.svg"));
 const cloud = dynamic(() => import("@public/assets/icons/cloud.svg"));
+const cloudEmpty = dynamic(() => import("@public/assets/icons/cloud-empty.svg"));
+const lightning = dynamic(() => import("@public/assets/icons/lightning.svg"));
+const light = dynamic(() => import("@public/assets/icons/light.svg"));
+const rainOne = dynamic(() => import("@public/assets/icons/rain-1.svg"));
+const rainTwo = dynamic(() => import("@public/assets/icons/rain-2.svg"));
+const rainThree = dynamic(() => import("@public/assets/icons/rain-3.svg"));
 const grid = dynamic(() => import("@public/assets/icons/grid.svg"));
 const layout = dynamic(() => import("@public/assets/icons/layout.svg"));
 const folder = dynamic(() => import("@public/assets/icons/folder.svg"));
@@ -21,6 +27,8 @@ const arrowRight = dynamic(
 	() => import("@public/assets/icons/arrow-right.svg")
 );
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
+const messageOne = dynamic(() => import("@public/assets/icons/message-1.svg"));
+const messageTwo = dynamic(() => import("@public/assets/icons/message-2.svg"));
 const clip = dynamic(() => import("@public/assets/icons/clip.svg"));
 const logoDarkOutline = dynamic(
 	() => import("@public/assets/icons/logo-dark-outline.svg")
@@ -50,6 +58,12 @@ const iconTypes = {
 	earth,
 	rocket,
 	cloud,
+	cloudEmpty,
+	lightning,
+	light,
+	rainOne,
+	rainTwo,
+	rainThree,
 	grid,
 	layout,
 	folder,
@@ -59,6 +73,8 @@ const iconTypes = {
 	bitcoin,
 	arrowRight,
 	message,
+	messageOne,
+	messageTwo,
 	clip,
 	logoDarkOutline,
 	telegram,
