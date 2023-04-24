@@ -5,6 +5,8 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import * as React from "react";
+import CloudComponent from "./cloud.component";
+import RocketComponent from "./rocket.component";
 
 const iconClassnameByTheme =
 	"first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
@@ -35,7 +37,7 @@ export function Hero() {
 	}, [locale]);
 
 	return (
-		<div className={clsx("container pt-[7.125rem] t-xs:pt-12 pb-16")}>
+		<div className={clsx("container pt-[7.125rem] t-xs:pt-12 pb-16 mt-[10rem]")}>
 			<section className="relative pb-[8.875rem] t-xs:pb-16">
 				<h1
 					className={clsx(
@@ -55,9 +57,7 @@ export function Hero() {
 					{text?.description.fourth}
 				</h1>
 
-				<button className="absolute -top-6 left-[18.2rem] w-10 p-2 t-xs:left-[7rem] t-xs:-top-10">
-					<IconComponent name="cloud" className={iconClassnameByTheme} />
-				</button>
+				<CloudComponent />
 
 				<button
 					onClick={toggleTemperatureThemeHandler}
@@ -71,9 +71,7 @@ export function Hero() {
 					/>
 				</button>
 
-				<button className="absolute bottom-[5.375rem] left-[10.5rem] w-10 p-2 t-xs:bottom-2 t-xs:left-6">
-					<IconComponent name="rocket" className={iconClassnameByTheme} />
-				</button>
+				<RocketComponent />
 
 				<button
 					onClick={toggleThemeHandler}

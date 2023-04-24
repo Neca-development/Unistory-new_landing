@@ -22,7 +22,7 @@ export function Services() {
 
 	return (
 		<section className="container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
-			<div className="grid grid-cols-[27.5rem_1fr] h-[30rem] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface">
+			<div className="grid grid-cols-[27.5rem_1fr] lg:h-[30rem] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface">
 				<div className="grid grid-cols-1 content-start gap-4 border-r-2 border-light-bg p-4 pt-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0">
 					{data.map((s, index) => (
 						<div
