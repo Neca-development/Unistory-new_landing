@@ -60,8 +60,14 @@ export const Header = React.memo((props: IHeaderProperties) => {
 	}, [])
 
 	return (
-		<header {...props} className={clsx("relative flex w-full", className)}>
-			<div className={clsx("container flex justify-between items-center fixed z-50 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300", isMenuVisible ? 'top-10' : "top-[-6rem]")}>
+		<header {...props} className={clsx("relative flex w-full justify-center", className)}>
+			<div
+				className={clsx(
+					"container flex justify-between w-full items-center fixed z-10 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300",
+					isMenuVisible ? 'top-10' : "top-[-6rem]"
+				)}
+
+			>
 				<div className={clsx("w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem]", isMenuDown && "bg-light-bg-accent dark:bg-dark-bg-accent shadow-navbar")}>
 					<Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
 						<Logo />
