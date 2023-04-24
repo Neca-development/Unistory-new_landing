@@ -72,16 +72,16 @@ const CloudComponent = () => {
   }, [cloudAnim.isPlay])
 
   return (
-    <button className="absolute -top-6 left-[18.2rem] w-10 p-2 t-xs:left-[7rem] t-xs:-top-10" onClick={toggleCloudAnim}>
+    <button className="absolute -top-6 left-[18.2rem] p-2 t-xs:left-[7rem] t-xs:-top-10 justify-center items-center flex" onClick={toggleCloudAnim}>
       <IconComponent name={cloudName().cloudType} className={iconClassnameByTheme} />
       { cloudName().additionalIcon &&
         <IconComponent
           name={cloudName().additionalIcon!}
-          className={clsx("absolute left-1/2", cloudName().additionalIcon === 'lightning' ? 'top-1/2 -translate-x-[45%]' : 'top-[70%] -translate-x-[40%]')}
+          className={clsx("absolute", cloudName().additionalIcon === 'lightning' ? 'top-1/2' : 'top-[70%]')}
         />
       }
       {
-        cloudAnim.stage === 2 && <IconComponent name="light" className="absolute left-0 top-0 -translate-x-1/4 -translate-y-1/4"/>
+        cloudAnim.stage === 2 && <IconComponent name="light" className="absolute"/>
       }
     </button>
   );
