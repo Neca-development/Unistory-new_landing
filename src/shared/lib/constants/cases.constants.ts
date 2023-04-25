@@ -51,8 +51,8 @@ export const CASES: ICase[] = [
 			ru: "Персонал – мультиплатформенное\n HR приложение",
 		},
 		categories: {
-			en: ["Client development", "Server development"],
-			ru: ["Серверная разработка", "Клиентская разработка"],
+			en: ["Multi-platform\n HR application"],
+			ru: ["Мультиплатформенное\n HR приложение"],
 		},
 		showCategoriesOnPage: false,
 		icons: ["monitor", "phone01"],
@@ -394,9 +394,10 @@ export const CASES: ICase[] = [
 					ru: "Коннор Волкер",
 				},
 				position: {
-					en: "CEO of «HoarderNest»",
-					ru: "исполнительный директор «HoarderNest»",
+					en: "CEO of",
+					ru: "исполнительный директор",
 				},
+				company: '«HoarderNest»',
 				photo: "",
 			},
 			text: {
@@ -525,9 +526,10 @@ export const CASES: ICase[] = [
 					ru: "Хироши Шимо",
 				},
 				position: {
-					en: "CEO of «Consensus-base Inc.»",
-					ru: "исполнительный директор «Consensus-base Inc.»",
+					en: "CEO of",
+					ru: "исполнительный директор",
 				},
+				company: "«Consensus-base Inc.»",
 				photo: "",
 			},
 			text: {
@@ -748,9 +750,10 @@ export const CASES: ICase[] = [
 					ru: "Богдан Пахоменко",
 				},
 				position: {
-					en: "CEO of «BP Networking & Design Inc.»",
-					ru: "исполнительный директор «BP Networking & Design Inc.»",
+					en: "CEO of",
+					ru: "исполнительный директор",
 				},
+				company: "«BP Networking & Design Inc.»",
 				photo: sipsignalClient.src,
 			},
 			text: {

@@ -42,6 +42,7 @@ export interface ICase {
 		author: {
 			name: ILang<string>;
 			position: ILang<string>;
+			company: string
 			photo: string;
 		};
 		text: ILang<string>;
