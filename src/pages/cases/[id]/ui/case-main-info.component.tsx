@@ -1,12 +1,32 @@
-import { ICase } from '@shared/lib/types'
+import { ICase, MainBannerType } from '@shared/lib/types'
 import { useRouter } from 'next/router'
+import { useTheme } from 'next-themes'
 
 interface ICaseInfoItemProps {
   data?: ICase['main'][0]
 }
 
+type BannerByThemeType = {[index: string]: MainBannerType | undefined}
+
 function CaseInfoItem({ data }: ICaseInfoItemProps) {
   const {locale} = useRouter()
+  const {theme} = useTheme()
+  
+  const bannerByThemeConfig: BannerByThemeType =  {
+    dark: data?.darkBanner,
+    light: data?.banner
+  }
+  
+  const bannerByTheme = theme ? bannerByThemeConfig[theme] : undefined
+
+  const getBanner = () => {
+    const existBanner = bannerByTheme ?? data?.banner
+    if(!existBanner) return
+
+    return (typeof existBanner !== 'string') ? existBanner[locale || 'ru'] : existBanner
+  }
+
+  console.log(getBanner())
   
   return (
     <section className='mb-[7.5rem] t-xs:mb-16 last:mb-0'>
@@ -26,12 +46,11 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           ))}
         </article>
       </div>
-      {data?.banner && (
-        <img
-          src={typeof data.banner !== 'string' ? data.banner[locale || 'ru'] : data.banner}
-          className='w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10'
-        />
-      )}
+      <img
+        src={getBanner()}
+        className='w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10'
+        alt='project banner'
+      />
     </section>
   )
 }

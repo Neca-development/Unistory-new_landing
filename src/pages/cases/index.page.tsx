@@ -10,7 +10,7 @@ export function Cases() {
     <Layout Meta={<Meta description='Unistory next' title='Unistory' />}>
       <Layout.Header />
       <Layout.Main>
-        <section className='mt-16 container pb-[7.5rem] t-xs:pb-16 t-xs:mt-8 mt-[10rem]'>
+        <section className='mt-16 container pb-[7.5rem] t-xs:pb-16 t-xs:mt-8'>
           <h2 className='font-bold text-5xl t-xs:text-4xl'>Cases</h2>
 
           <div className='grid grid-cols-3 gap-10 mt-16 t-xs:gap-8 t-xs:mt-8 t-xs:grid-cols-1'>
