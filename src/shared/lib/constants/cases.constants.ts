@@ -39,8 +39,11 @@ import charityplatformImage3 from "@public/assets/images/cases/charityplatform/a
 
 import hoarderBanner from "@public/assets/images/cases/hoarder/banner.jpg";
 import hoarderImage1 from "@public/assets/images/cases/hoarder/data.jpg";
+import hoarderImage1Dark from "@public/assets/images/cases/hoarder/dark-data.jpg";
 import hoarderImage2 from "@public/assets/images/cases/hoarder/vizualization.jpg";
+import hoarderImageDark from "@public/assets/images/cases/hoarder/dark-vizualization.jpg";
 import hoarderImage3 from "@public/assets/images/cases/hoarder/subscription.jpg";
+import hoarderImage3Dark from "@public/assets/images/cases/hoarder/dark-subscription.jpg";
 
 export const CASES: ICase[] = [
 	{
@@ -355,6 +358,7 @@ export const CASES: ICase[] = [
 					},
 				],
 				banner: hoarderImage1.src,
+        darkBanner: hoarderImage1Dark.src
 			},
 			{
 				title: {
@@ -370,6 +374,7 @@ export const CASES: ICase[] = [
 					},
 				],
 				banner: hoarderImage2.src,
+        darkBanner: hoarderImageDark.src
 			},
 			{
 				title: {
@@ -385,6 +390,7 @@ export const CASES: ICase[] = [
 					},
 				],
 				banner: hoarderImage3.src,
+        darkBanner: hoarderImage3Dark.src
 			},
 		],
 		review: {

@@ -14,6 +14,8 @@ export interface ILang<T> {
 	[index: string]: T;
 }
 
+export type MainBannerType = string | ILang<string>
+
 export interface ICase {
 	title: string;
 	id: string;
@@ -24,7 +26,7 @@ export interface ICase {
 	additionalClassnames?: string;
 	textColor: "white" | "black";
 	company?: string;
-	banner: any;
+	banner: string;
 	description: ILang<string>;
 	params: {
 		budget: ILang<number>;
@@ -35,7 +37,8 @@ export interface ICase {
 	main: {
 		title: ILang<string>;
 		text: IDescriptionItem[];
-		banner: string | ILang<string>;
+		banner: MainBannerType;
+    darkBanner?: MainBannerType
 	}[];
 	logo?: string;
 	review?: {
