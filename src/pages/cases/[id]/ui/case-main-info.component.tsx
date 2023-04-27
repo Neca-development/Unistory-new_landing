@@ -10,14 +10,15 @@ type BannerByThemeType = {[index: string]: MainBannerType | undefined}
 
 function CaseInfoItem({ data }: ICaseInfoItemProps) {
   const {locale} = useRouter()
-  const {theme} = useTheme()
+  const {theme, systemTheme} = useTheme()
+  const _theme = theme === "system" ? systemTheme : theme;
   
   const bannerByThemeConfig: BannerByThemeType =  {
     dark: data?.darkBanner,
     light: data?.banner
   }
   
-  const bannerByTheme = theme ? bannerByThemeConfig[theme] : undefined
+  const bannerByTheme = _theme ? bannerByThemeConfig[_theme] : undefined
 
   const getBanner = () => {
     const existBanner = bannerByTheme ?? data?.banner
