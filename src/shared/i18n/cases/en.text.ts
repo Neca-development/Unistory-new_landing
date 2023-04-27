@@ -11,3 +11,7 @@ export const SingleCaseEn = {
   members: 'Worked on the project',
   other: 'Other projects'
 }
+
+export const CasesPageEn = {
+  title: 'Cases'
+}
