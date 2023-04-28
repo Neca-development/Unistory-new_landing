@@ -27,8 +27,6 @@ const arrowRight = dynamic(
 	() => import("@public/assets/icons/arrow-right.svg")
 );
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
-const messageOne = dynamic(() => import("@public/assets/icons/message-1.svg"));
-const messageTwo = dynamic(() => import("@public/assets/icons/message-2.svg"));
 const clip = dynamic(() => import("@public/assets/icons/clip.svg"));
 const logoDarkOutline = dynamic(
 	() => import("@public/assets/icons/logo-dark-outline.svg")
@@ -73,8 +71,6 @@ const iconTypes = {
 	bitcoin,
 	arrowRight,
 	message,
-	messageOne,
-	messageTwo,
 	clip,
 	logoDarkOutline,
 	telegram,
