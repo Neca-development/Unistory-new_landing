@@ -26,6 +26,8 @@ module.exports = {
       'icon-accent': '#0F1A20',
       'icon-on-primary': '#FFFFFFE5',
 
+      'transparent': 'transparent',
+
       'primary-s': 'var(--color-text)',
       // 'primary-text': "#404040",
       // 'primary-text--disable': "#7A798A",
