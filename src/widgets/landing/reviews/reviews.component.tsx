@@ -1,6 +1,7 @@
 import { ReviewsEN, ReviewsRU } from "@shared/i18n";
 import { CASES } from "@shared/lib";
 import { useInterval } from "@shared/lib/hooks/useInterval.hook";
+import { ICase } from "@shared/lib/types";
 import { WorksCard } from "@widgets/works-card";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
@@ -53,7 +54,9 @@ function Timer({ duration }: { duration: number }) {
 
 export default Timer;
 
-const reviewsData = CASES.filter((c) => c.review);
+const setGasMonstersOnFirstPlace = (a: ICase, b: ICase) => (a.id === 'gas-monsters') ? -1 : (b.id === 'gas-monsters') ? 1 : 0
+const reviewsData = CASES.filter((c) => c.review).sort(setGasMonstersOnFirstPlace);
+console.log(reviewsData)
 const timerDuration = 20000;
 
 export function Reviews() {
@@ -82,7 +85,7 @@ export function Reviews() {
 
 	return (
 		<section className="container pt-20 pb-[7.5rem]">
-			<h2 className="text-2xl leading-none lg:text-5xl font-bold lg:leading-[3.25rem]">
+			<h2 className="text-2xl leading-none mb-10 t-xs:mb-8 lg:text-5xl font-bold lg:leading-[3.25rem]">
 				{text.title.beforeHighlight}
 				<span
 					className="text-primary-s"
@@ -92,7 +95,7 @@ export function Reviews() {
 			</h2>
 
 			<div className="lg:grid gap-10 grid-cols-[1fr_25rem]">
-				<article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col h-[35rem]">
+				<article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col h-[35rem] t-xs:h-[28rem]">
 					<p
 						className="text-base leading-6 lg:text-2xl lg:leading-10"
 						dangerouslySetInnerHTML={{

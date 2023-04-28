@@ -83,9 +83,9 @@ export function Hero() {
 
 			<section className="flex items-center justify-between t-xs:block">
 				<article className="flex items-center text-2xl t-xs:mb-8 font-medium">
-					<p className="relative mr-4 t-xs:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
+					<p className="relative mr-[2.75rem] t-xs:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
 						25
-						<span className="relative -top-8 text-[3rem] text-primary-s">
+						<span className="absolute -top-[1.1rem] text-[3rem] text-primary-s">
 							+
 						</span>
 					</p>
@@ -93,9 +93,9 @@ export function Hero() {
 				</article>
 
 				<article className="flex items-center text-2xl t-xs:mb-8 font-medium">
-					<p className="relative mr-4 t-xs:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
+					<p className="relative mr-[2.75rem] t-xs:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
 						70
-						<span className="relative -top-8 text-[3rem] text-primary-s">
+						<span className="absolute -top-[1.1rem] text-[3rem] text-primary-s">
 							+
 						</span>
 					</p>

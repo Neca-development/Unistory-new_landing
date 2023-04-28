@@ -539,7 +539,7 @@ export const CASES: ICase[] = [
 				photo: "",
 			},
 			text: {
-				en: "«Unistory did a very professional job. They submitted a detailed schedule prior to the estimate and followed it through with no delays. They had a project manager for us the entire time, and when the PM in charge was on vacation, the alternate took care of it. the PM would get back to us as soon as possible. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology.Other contracts are still ongoing, but we would like to continue to work with them in the future.»",
+				en: "«Unistory did a very professional job. They submitted a detailed schedule prior to the estimate and followed it through with no delays. They had a project manager for us the entire time, and when the PM in charge was on vacation, the alternate took care of it. The PM would get back to us as soon as possible. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology.Other contracts are still ongoing, but we would like to continue to work with them in the future.»",
 				ru: "«Юнистори выполнили свою работу очень профессионально. Они представили подробный график работ согласно подготовленной смете и следовали ему без задержек. Все это время с нами работал проектный менеджер, но как только он ушел в отпуск, команда позаботилась о том, чтобы предоставить  Они также были доступны для технических консультаций. Они проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Другие контракты еще не завершены, но мы хотели бы продолжать работать с ними в будущем.»",
 			},
 		},
