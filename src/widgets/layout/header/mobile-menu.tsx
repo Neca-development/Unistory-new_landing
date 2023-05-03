@@ -51,10 +51,10 @@ export function MobileMenu({
 						})}
 					</nav>
 					<a
-						href="mailto:hello@unistory.team"
+						href="mailto:contact@unistory.app"
 						className="text-[1.5rem] font-medium text-dark-surface dark:text-light-surface"
 					>
-						hello@unistory.team
+						contact@unistory.app
 					</a>
 				</div>
 			</aside>

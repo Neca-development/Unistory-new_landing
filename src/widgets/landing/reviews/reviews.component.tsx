@@ -56,7 +56,7 @@ export default Timer;
 
 const setGasMonstersOnFirstPlace = (a: ICase, b: ICase) => (a.id === 'gas-monsters') ? -1 : (b.id === 'gas-monsters') ? 1 : 0
 const reviewsData = CASES.filter((c) => c.review).sort(setGasMonstersOnFirstPlace);
-console.log(reviewsData)
+
 const timerDuration = 20000;
 
 export function Reviews() {

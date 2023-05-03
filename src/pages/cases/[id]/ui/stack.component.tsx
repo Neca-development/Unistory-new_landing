@@ -1,6 +1,7 @@
 import { SingleCaseEn, SingleCaseRu } from '@shared/i18n/cases'
 import { TechnologiesValues } from '@shared/lib/constants/technologies.constats'
 import clsx from 'clsx'
+import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 
@@ -10,6 +11,8 @@ interface IStackProps {
 
 export function Stack({ data }: IStackProps) {
   const {locale} = useRouter()
+  const {theme, systemTheme} = useTheme()
+  const _theme = theme === "system" ? systemTheme : theme;
   
   const langData = useMemo(() => {
     return locale === 'ru' ? SingleCaseRu : SingleCaseEn
@@ -28,7 +31,7 @@ export function Stack({ data }: IStackProps) {
                 // idx === data?.length - 1 && idx % 2 === 0 && 'col-span-2'
               )}
             >
-              <img className='h-[7.125rem] t-xs:h-16' src={technology.icon} alt='' />
+              {_theme && <img className='h-[7.125rem] t-xs:h-16' src={technology.icon[_theme]} alt='' />}
               {/* <div className='relative w-full h-28'>
                 <Image src={technology.icon} alt={technology.name} fill />
               </div> */}

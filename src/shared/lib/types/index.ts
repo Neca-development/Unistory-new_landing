@@ -52,3 +52,9 @@ export interface ICase {
 	};
 	team: TeamValues[];
 }
+
+export interface IThemed<T> {
+  dark: T
+  light: T
+  [index: string]: T
+}
