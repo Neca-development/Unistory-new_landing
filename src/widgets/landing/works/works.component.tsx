@@ -1,5 +1,6 @@
 import { WorksRu, WorksEn } from "@shared/i18n";
 import { CASES } from "@shared/lib";
+import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 import { ICase } from "@shared/lib/types";
 import { IconComponent } from "@shared/ui";
 import { WorksCard } from "@widgets/works-card";
@@ -10,6 +11,7 @@ import React, { useEffect } from "react";
 export function Works() {
 	const { locale } = useRouter();
 	const [cases, setCases] = React.useState<ICase[]>([]);
+  const isMob = useDetectDeviceType(647)
 
 	const text = React.useMemo(() => {
 		if (locale === "ru") {
@@ -22,12 +24,12 @@ export function Works() {
 	useEffect(() => {
 		if (!window) return;
 
-		if (window.matchMedia("(max-width: 647px)").matches) {
+		if (isMob) {
 			setCases(CASES.slice(0, 3));
 			return;
 		}
 
-		setCases(CASES.slice(0, 3));
+		setCases(CASES.slice(0, 7));
 	}, []);
 
 	// function to get 2 cases more on click
@@ -43,7 +45,7 @@ export function Works() {
 					dangerouslySetInnerHTML={{ __html: text.title }}
 				/>
 
-				<div className="grid grid-cols-3 gap-10 mt-16 t-xs:grid-cols-1 t-xs:mt-6 display t-xs:gap-4">
+				<div className="grid grid-cols-3 gap-10 mt-16 t-xs:[&>*:nth-child(6n+1)]:col-span-1 [&>*:nth-child(6n+1)]:col-span-2 t-xs:grid-cols-1 t-xs:mt-6 display t-xs:gap-4">
 					{cases.map((work, index) => (
 						<WorksCard
 							key={index}
