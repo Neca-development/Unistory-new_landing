@@ -1,4 +1,4 @@
-import { Checkbox, ControlledInput, IconComponent } from "@shared/ui";
+import { Checkbox, ControlledInput, ControlledTelInput, IconComponent } from "@shared/ui";
 import React, { useMemo, useRef, useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -158,12 +158,13 @@ export default function ConnectForm() {
           placeholder={data.fields.email.placeholder}
           error={errors?.email?.message}
         />
-        <ControlledInput
+
+        <ControlledTelInput
           control={control}
-          name="phoneNumber"
-          type="tel"
-          placeholder={data.fields.phone.placeholder}
           error={errors?.phoneNumber?.message}
+          name="phoneNumber"
+          placeholder={data.fields.phone.placeholder}
+          type="phone"
         />
       </div>
       <div className="py-8 text-xl t-xs:text-[0.875rem]">
