@@ -18,8 +18,6 @@ interface IMobileMenuProps {
 export function MobileMenu(props: IMobileMenuProps) {
   const { active, routes, onClose } = props;
 
-  const { asPath } = useRouter();
-
   return (
     <Portal>
       <aside
@@ -43,7 +41,7 @@ export function MobileMenu(props: IMobileMenuProps) {
                   onClick={onClose}
                   className={clsx(
                     "mb-[2rem] block text-[2.25rem] font-medium leading-none text-dark-surface dark:text-light-surface",
-                    asPath.includes(route) && "dark:text-[#ec5f3b] text-[#ec5f3b]"
+                    route.includes("become-customer") && "dark:text-[#ec5f3b] text-[#ec5f3b]"
                   )}
                   href={route}
                 >
