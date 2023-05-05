@@ -104,7 +104,7 @@ export default function ConnectForm() {
     formData.append("email", data.email);
     formData.append("name", data.name);
     formData.append("company", data.company);
-    formData.append("phoneNumber", data.phoneNumber);
+    formData.append("phoneNumber", data.phoneNumber.replace(/[^0-9]+/g, ""));
     formData.append("description", data.projectDescription);
     formData.append("preferences", JSON.stringify(ways));
 
