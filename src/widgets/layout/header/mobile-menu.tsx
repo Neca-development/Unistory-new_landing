@@ -1,7 +1,6 @@
 import { Portal } from "@shared/lib/hocs";
 import clsx from "clsx";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import { CloseBtn } from "./close-btn.component";
 import { Logo } from "./logo.component";
