@@ -27,8 +27,9 @@ export function ControlledTelInput<T extends FieldValues>(props: IControlledTelI
             {...field}
             {...rest}
             country={"ru"}
-            inputClass={inputClassNames}
-            searchPlaceholder="Phone"
+            inputProps={{ className: inputClassNames }}
+            specialLabel={""}
+            placeholder="Phone"
           />
           {error && <span className={inputErrorClassNames}>{error}</span>}
         </label>
