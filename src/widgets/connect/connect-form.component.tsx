@@ -1,6 +1,6 @@
 import { Checkbox, ControlledInput, ControlledTelInput, IconComponent } from "@shared/ui";
 import React, { useMemo, useRef, useState } from "react";
-import { useForm, useWatch } from "react-hook-form";
+import { Controller, useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import axios from "axios";
@@ -33,14 +33,13 @@ export default function ConnectForm() {
       .string({ required_error: requiredMsg })
       .min(3, { message: data.fields.company.error }),
     phoneNumber: z.string({ required_error: requiredMsg }).min(6, data.fields.phone.error),
-    projectDescription: z.string({ required_error: requiredMsg }),
+    projectDescription: z.string({ required_error: requiredMsg }).min(1, requiredMsg),
   });
 
   type FormType = z.infer<typeof schema>;
 
   const {
     handleSubmit,
-    register,
     control,
     formState: { errors },
     reset,
@@ -49,8 +48,7 @@ export default function ConnectForm() {
     mode: "onSubmit",
   });
 
-  const watch = useWatch({ control });
-  const projectValue = watch["projectDescription"];
+  const { projectDescription } = useWatch({ control });
 
   const [file, setFile] = useState<File | undefined>();
   const [fileError, setFileError] = useState(false);
@@ -63,7 +61,7 @@ export default function ConnectForm() {
   });
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
-  useAutoHeightTextarea(textareaRef.current, projectValue);
+  useAutoHeightTextarea(textareaRef.current, projectDescription);
 
   const contactMethods = useMemo(
     () => [
@@ -128,8 +126,6 @@ export default function ConnectForm() {
     }
   }
 
-  const { ref, ...projectField } = register("projectDescription");
-
   return (
     <form
       onSubmit={handleSubmit(sendFormData)}
@@ -180,15 +176,20 @@ export default function ConnectForm() {
         </div>
       </div>
       <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
-        <textarea
-          {...projectField}
-          placeholder={data.fields.describe.placeholder}
-          required={!file}
-          className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
-          ref={(elem) => {
-            textareaRef.current = elem;
-            ref(elem);
-          }}
+        <Controller
+          control={control}
+          name="projectDescription"
+          render={({ field }) => (
+            <textarea
+              {...field}
+              placeholder={data.fields.describe.placeholder}
+              className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
+              ref={(elem) => {
+                field.ref(elem);
+                textareaRef.current = elem;
+              }}
+            />
+          )}
         />
         {errors.projectDescription && (
           <span className="absolute left-3 top-full mt-2 text-error text-xs">

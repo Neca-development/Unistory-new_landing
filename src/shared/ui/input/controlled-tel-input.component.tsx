@@ -7,6 +7,7 @@ import {
   labelClassNames,
 } from "./input.component";
 import PhoneInput from "react-phone-input-2";
+import { useRouter } from "next/router";
 
 interface IControlledTelInputProps<T extends FieldValues>
   extends IInputProps,
@@ -14,6 +15,8 @@ interface IControlledTelInputProps<T extends FieldValues>
     InputControllerType<T> {}
 
 export function ControlledTelInput<T extends FieldValues>(props: IControlledTelInputProps<T>) {
+  const { locale } = useRouter();
+
   const { control, name, defaultValue, error, withError = false, ...rest } = props;
 
   return (
@@ -26,7 +29,7 @@ export function ControlledTelInput<T extends FieldValues>(props: IControlledTelI
           <PhoneInput
             {...field}
             {...rest}
-            country={"ru"}
+            country={locale === "en" ? undefined : "ru"}
             inputProps={{ className: inputClassNames }}
             specialLabel={""}
             placeholder="Phone"
