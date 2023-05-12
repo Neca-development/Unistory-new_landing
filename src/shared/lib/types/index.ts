@@ -14,7 +14,7 @@ export interface ILang<T> {
   [index: string]: T;
 }
 
-export interface WithDevices<T> {
+export interface IDevices<T> {
   desktop: T;
   mob: T;
 }
@@ -31,7 +31,7 @@ export interface ICase {
   additionalClassnames?: string;
   textColor: "white" | "black";
   company?: string;
-  banner: WithDevices<string>;
+  banner: IDevices<string>;
   description: ILang<string>;
   params: {
     budget: ILang<number>;

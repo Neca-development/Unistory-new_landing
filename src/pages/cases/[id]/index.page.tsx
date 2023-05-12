@@ -44,12 +44,12 @@ export default Case;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { CASES } = await import("@shared/lib");
 
-  const singleCase = CASES.find((c) => c.id === (params?.id as string));
+  const caseData = CASES.find((c) => c.id === (params?.id as string));
   const otherCases = CASES.filter((c) => c.id !== (params?.id as string));
 
   return {
     props: {
-      caseData: singleCase,
+      caseData,
       otherCases,
     },
   };
