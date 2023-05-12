@@ -14,7 +14,6 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  
 }
 
 @layer base {
@@ -48,6 +47,14 @@
   }
 }
 
+input:not([name="name"])::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
 .container {
   @apply w-full px-[1rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[5rem] mx-auto m-l:max-w-full;
 }
@@ -78,7 +85,7 @@
   }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
   select,
   textarea,
   input {

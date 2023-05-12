@@ -105,7 +105,7 @@ export function Reviews() {
                   : reviewsData[activeReviewIndex]?.review?.text.en ?? "",
             }}
           ></p>
-          <span className="text-sm leading-5 lg:text-xl font-medium mt-10 lg:mt-4">
+          <span className="text-sm leading-5 lg:text-xl font-medium mt-auto lg:mt-4">
             <span className="font-bold lg:whitespace-nowrap">
               {locale === "ru" && reviewsData[activeReviewIndex]?.review?.author.name.ru}
               {locale === "en" && reviewsData[activeReviewIndex]?.review?.author.name.en}
