@@ -8,7 +8,7 @@ import clsx from "clsx";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 
-const EVERY_LARGE_IMAGE_INDEX = 6;
+const LARGE_ITEM_STEP = 6;
 
 export function Cases() {
   const { locale } = useRouter();
@@ -29,7 +29,7 @@ export function Cases() {
               <WorksCard
                 key={index}
                 work={work}
-                isLargeImage={index % EVERY_LARGE_IMAGE_INDEX === 0}
+                isLargeImage={index % LARGE_ITEM_STEP === 0}
                 additionalClassnames={clsx(
                   "[&:nth-child(6n+1)]:col-span-2 t-xs:[&:nth-child(6n+1)]:!col-span-1"
                 )}
