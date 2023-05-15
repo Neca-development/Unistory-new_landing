@@ -2,6 +2,7 @@ import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
 import { TechnologiesValues } from "@shared/lib/constants/technologies.constats";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 
@@ -31,9 +32,11 @@ export function Stack({ data }: IStackProps) {
                 // idx === data?.length - 1 && idx % 2 === 0 && 'col-span-2'
               )}
             >
-              <img
+              <Image
                 className="h-[7.125rem] t-xs:h-16"
-                src={technology.icon[_theme || "dark"]}
+                src={technology.icon[_theme || "dark"] || ""}
+                width={230}
+                height={120}
                 alt=""
               />
               {/* <div className='relative w-full h-28'>

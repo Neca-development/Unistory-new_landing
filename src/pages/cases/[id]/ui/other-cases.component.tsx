@@ -23,7 +23,7 @@ export default function OtherCases({ title, otherCases }: IProps) {
       >
         {otherCases.map((c) => (
           <SwiperSlide key={c.id}>
-            <WorksCard work={c} isLargeImage={false} />
+            <WorksCard work={c} isLargeImage={true} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,5 +1,6 @@
 import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
 import { ICase } from "@shared/lib/types";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 
@@ -28,10 +29,13 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         {data.heroTitle[locale || "ru"]}
       </h1>
 
-      <img
+      <Image
         src={data.banner.desktop}
+        width={2880}
+        height={1060}
         className="w-full object-cover mt-[4rem] t-xs:mt-6 t-xs:h-[12.625rem]"
         alt={data.title}
+        priority
       />
 
       {data.showCategoriesOnPage && (
