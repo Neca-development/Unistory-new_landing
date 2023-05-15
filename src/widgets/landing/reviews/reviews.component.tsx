@@ -124,7 +124,7 @@ export function Reviews() {
           </span>
         </article>
         <div className="hidden lg:block">
-          <WorksCard work={reviewsData[activeReviewIndex]!} />
+          <WorksCard work={reviewsData[activeReviewIndex]!} isLargeImage={false} />
         </div>
       </div>
 
