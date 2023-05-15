@@ -63,7 +63,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
     <header {...props} className={clsx("relative flex w-full justify-center", className)}>
       <div
         className={clsx(
-          "container flex justify-between w-full items-center fixed z-10 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300",
+          "flex justify-between w-full items-center fixed z-10 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300",
           isMenuVisible ? "top-0" : "top-[-6rem] shadow-navbar",
           isMenuDown && "bg-light-bg dark:bg-dark-bg"
         )}

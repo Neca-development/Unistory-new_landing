@@ -2,6 +2,7 @@ import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook"
 import { ICase } from "@shared/lib/types";
 // import { CaseCategoryIcon } from "@shared/ui";
 import clsx from "clsx";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -29,8 +30,10 @@ export function WorksCard(props: IWorksCardInterface) {
       href={`/cases/${work?.id}`}
     >
       <div className="p-6 pt-0">
-        <img
+        <Image
           src={work?.banner[isMob ? "mob" : isLargeImage ? "desktop" : "mob"]}
+          width={2880}
+          height={1060}
           className="absolute w-full h-full top-0 left-0 object-cover -z-50 group-hover:scale-105 transition-all"
           alt=""
         />

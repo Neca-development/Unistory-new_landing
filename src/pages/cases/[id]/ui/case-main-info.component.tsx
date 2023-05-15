@@ -1,6 +1,7 @@
 import { ICase, MainBannerType } from "@shared/lib/types";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 interface ICaseInfoItemProps {
   data?: ICase["main"][0];
@@ -22,9 +23,9 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
 
   const getBanner = () => {
     const existBanner = bannerByTheme ?? data?.banner;
-    if (!existBanner) return;
+    if (!existBanner) return "";
 
-    return typeof existBanner !== "string" ? existBanner[locale || "ru"] : existBanner;
+    return typeof existBanner !== "string" ? (existBanner[locale || "ru"] as string) : existBanner;
   };
 
   return (
@@ -49,8 +50,10 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           ))}
         </article>
       </div>
-      <img
+      <Image
         src={getBanner()}
+        width={2880}
+        height={1060}
         className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
         alt="project banner"
       />
