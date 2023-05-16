@@ -131,6 +131,7 @@ export default function ConnectForm() {
       onSubmit={handleSubmit(sendFormData)}
       encType="multipart/form-data"
       className="flex flex-col space-y-6"
+      noValidate
     >
       <ControlledInput
         control={control}

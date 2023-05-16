@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
+import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 
 interface IStackProps {
   data?: TechnologiesValues[];
@@ -14,6 +15,7 @@ export function Stack({ data }: IStackProps) {
   const { locale } = useRouter();
   const { theme, systemTheme } = useTheme();
   const _theme = theme === "system" ? systemTheme : theme;
+  const isMobile = useDetectDeviceType()
 
   const langData = useMemo(() => {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
@@ -33,9 +35,8 @@ export function Stack({ data }: IStackProps) {
               )}
             >
               <Image
-                className="h-[7.125rem] t-xs:h-16"
                 src={technology.icon[_theme || "dark"] || ""}
-                width={230}
+                width={isMobile ? 150 : 180}
                 height={120}
                 alt=""
               />
