@@ -36,6 +36,7 @@ export function WorksCard(props: IWorksCardInterface) {
           height={1060}
           className="absolute w-full h-full top-0 left-0 object-cover -z-50 group-hover:scale-105 transition-all"
           alt=""
+          quality={isMob ? 100 : 75}
         />
         <div className="flex items-center space-x-2">
           {/* {work?.icons.map((icon, idx) => (
