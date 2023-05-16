@@ -15,7 +15,7 @@ interface IWorksCardInterface {
 
 export function WorksCard(props: IWorksCardInterface) {
   const { work, additionalClassnames, isLargeImage } = props;
-  const isMob = useDetectDeviceType();
+  const isMobile = useDetectDeviceType();
   const { locale } = useRouter();
 
   const categories = work?.categories[locale || "ru"]?.join(", ");
@@ -31,12 +31,12 @@ export function WorksCard(props: IWorksCardInterface) {
     >
       <div className="p-6 pt-0">
         <Image
-          src={work?.banner[isMob ? "mob" : isLargeImage ? "desktop" : "mob"]}
+          src={work?.banner[isMobile ? "mob" : isLargeImage ? "desktop" : "mob"]}
           width={2880}
           height={1060}
           className="absolute w-full h-full top-0 left-0 object-cover -z-50 group-hover:scale-105 transition-all"
           alt=""
-          quality={isMob ? 100 : 75}
+          quality={isMobile ? 100 : 75}
         />
         <div className="flex items-center space-x-2">
           {/* {work?.icons.map((icon, idx) => (

@@ -11,7 +11,7 @@ import React, { useEffect } from "react";
 export function Works() {
   const { locale } = useRouter();
   const [cases, setCases] = React.useState<ICase[]>([]);
-  const isMob = useDetectDeviceType(647);
+  const isMobile = useDetectDeviceType(647);
 
   const text = React.useMemo(() => {
     if (locale === "ru") {
@@ -24,7 +24,7 @@ export function Works() {
   useEffect(() => {
     if (!window) return;
 
-    if (isMob) {
+    if (isMobile) {
       setCases(CASES.slice(0, 3));
       return;
     }

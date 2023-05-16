@@ -10,7 +10,7 @@ interface IProps {
 }
 
 export default function OtherCases({ title, otherCases }: IProps) {
-  const isMob = useDetectDeviceType();
+  const isMobile = useDetectDeviceType();
 
   return (
     <section className="container mt-10 pb-24 t-xs:pb-16">
@@ -19,7 +19,7 @@ export default function OtherCases({ title, otherCases }: IProps) {
       <Swiper
         className="mt-10 select-none t-xs:mt-8"
         slidesPerView={1.5}
-        spaceBetween={isMob ? 20 : 40}
+        spaceBetween={isMobile ? 20 : 40}
       >
         {otherCases.map((c) => (
           <SwiperSlide key={c.id}>

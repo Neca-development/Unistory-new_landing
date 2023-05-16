@@ -15,7 +15,7 @@ export function Stack({ data }: IStackProps) {
   const { locale } = useRouter();
   const { theme, systemTheme } = useTheme();
   const _theme = theme === "system" ? systemTheme : theme;
-  const isMob = useDetectDeviceType()
+  const isMobile = useDetectDeviceType()
 
   const langData = useMemo(() => {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
@@ -36,7 +36,7 @@ export function Stack({ data }: IStackProps) {
             >
               <Image
                 src={technology.icon[_theme || "dark"] || ""}
-                width={isMob ? 150 : 180}
+                width={isMobile ? 150 : 180}
                 height={120}
                 alt=""
               />
