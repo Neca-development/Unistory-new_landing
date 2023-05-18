@@ -68,7 +68,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
               )}
 							<a
 								rel="nofollow"
-								href="https://wa.me/89117417477"
+								href="https://wa.me/79117417477"
 								target="_blank"
 							>
 								<IconComponent name="whatsApp" className="w-6" />
