@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 
 interface IStackProps {
@@ -14,13 +14,30 @@ interface IStackProps {
 export function Stack({ data }: IStackProps) {
   const { locale } = useRouter();
   const { theme, systemTheme } = useTheme();
-  const _theme = theme === "system" ? systemTheme : theme;
+  const [mounted, setMounted] = useState(false)
+
+  const _theme = useMemo(() => {
+    const returnTheme = theme === "system" ? systemTheme : theme
+
+    return returnTheme ?? 'dark'
+  }, [theme, systemTheme])
+
   const isMobile = useDetectDeviceType()
 
   const langData = useMemo(() => {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
   }, [locale]);
+
   //grid grid-cols-3 gap-10 mt-16 t-xs:mt-6 t-xs:grid-cols-2 t-xs:gap-4
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
   return (
     <div className="flex bg-light-bg-accent dark:bg-dark-bg-accent pt-20 mt-[7.5rem] t-xs:mt-2 t-xs:pt-10">
       <div className="container">
@@ -35,7 +52,7 @@ export function Stack({ data }: IStackProps) {
               )}
             >
               <Image
-                src={technology.icon[_theme || "dark"] || ""}
+                src={technology.icon[_theme]!}
                 width={isMobile ? 150 : 180}
                 height={120}
                 alt=""
