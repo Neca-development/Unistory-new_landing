@@ -59,8 +59,14 @@ const CloudComponent = () => {
   }
 
   const scaleClass = () => {
-
-    return `scale-[${cloudAnim.stage}]`
+    switch (cloudAnim.stage) {
+      case 5:
+        return 'scale-[1.2]'
+      case 6:
+        return 'scale-[1.4]'
+      default:
+        return ''
+    }
   }
 
   useEffect(() => {
@@ -88,7 +94,7 @@ const CloudComponent = () => {
           className={
           clsx(
             "absolute",
-            cloudName().additionalIcon === 'lightning' ? `top-1/2 ${iconClassnameByTheme}` : 'top-[70%]'
+            cloudName().additionalIcon === 'lightning' ? `top-1/2 ${iconClassnameByTheme}` : 'top-[70%]',
           )
         }
         />
@@ -99,7 +105,7 @@ const CloudComponent = () => {
           name="puddle"
           className={
             clsx(
-              "absolute top-full mt-1",
+              "absolute top-full mt-1.5",
               scaleClass()
             )
           }
