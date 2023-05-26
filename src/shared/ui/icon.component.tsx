@@ -26,6 +26,8 @@ const bitcoin = dynamic(() => import("@public/assets/icons/bitcoin.svg"));
 const arrowRight = dynamic(
 	() => import("@public/assets/icons/arrow-right.svg")
 );
+
+const puddle = dynamic(() => import("@public/assets/icons/puddle.svg"));
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
 const messageOne = dynamic(() => import("@public/assets/icons/message-1.svg"));
 const messageTwo = dynamic(() => import("@public/assets/icons/message-2.svg"));
@@ -72,6 +74,7 @@ const iconTypes = {
 	monitor,
 	bitcoin,
 	arrowRight,
+	puddle,
 	message,
 	messageOne,
 	messageTwo,
