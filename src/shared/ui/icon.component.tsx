@@ -29,8 +29,6 @@ const arrowRight = dynamic(
 
 const puddle = dynamic(() => import("@public/assets/icons/puddle.svg"));
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
-const messageOne = dynamic(() => import("@public/assets/icons/message-1.svg"));
-const messageTwo = dynamic(() => import("@public/assets/icons/message-2.svg"));
 const clip = dynamic(() => import("@public/assets/icons/clip.svg"));
 const logoDarkOutline = dynamic(
 	() => import("@public/assets/icons/logo-dark-outline.svg")
@@ -76,8 +74,6 @@ const iconTypes = {
 	arrowRight,
 	puddle,
 	message,
-	messageOne,
-	messageTwo,
 	clip,
 	logoDarkOutline,
 	telegram,

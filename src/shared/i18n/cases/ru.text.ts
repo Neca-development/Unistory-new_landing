@@ -11,3 +11,7 @@ export const SingleCaseRu = {
   members: 'Над проектом работали',
   other: 'Другие проекты'
 }
+
+export const CasesPageRu = {
+  title: 'Кейсы'
+}

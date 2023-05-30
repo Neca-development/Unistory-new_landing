@@ -12,88 +12,97 @@ import { useScrollDirection } from "@shared/lib/hooks/useScrollDirection.hook";
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
 export const Header = React.memo((props: IHeaderProperties) => {
-	const { className, children } = props;
-	// const router = useRouter()\
-	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-	const [isMenuDown, setIsMenuDown] = useState(false)
+  const { className, children } = props;
+  // const router = useRouter()\
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuDown, setIsMenuDown] = useState(false);
 
-	const { locale } = useRouter();
-	const scrollDir = useScrollDirection()
+  const { locale } = useRouter();
+  const scrollDir = useScrollDirection();
 
-	const isMenuVisible = useMemo(() => {
-		if (scrollDir === "down") {
-			return false
-		}
-		return true
-	}, [scrollDir])
+  const isMenuVisible = useMemo(() => {
+    if (scrollDir === "down") {
+      return false;
+    }
+    return true;
+  }, [scrollDir]);
 
-	const ROUTES = React.useMemo(() => {
-		if (locale === "ru") {
-			return ROUTESRU;
-		}
+  const ROUTES = React.useMemo(() => {
+    if (locale === "ru") {
+      return ROUTESRU;
+    }
 
-		return ROUTESEN;
-	}, [locale]);
+    return ROUTESEN;
+  }, [locale]);
 
-	function openMenu() {
-		setIsMenuOpen(true);
-	}
+  function openMenu() {
+    setIsMenuOpen(true);
+  }
 
-	function closeMenu() {
-		setIsMenuOpen(false);
-	}
+  function closeMenu() {
+    setIsMenuOpen(false);
+  }
 
-	useEffect(() => {
-		const scrollFunc = () => {
-			if(window.scrollY > 100) {
-				setIsMenuDown(true)
-			} else {
-				setIsMenuDown(false)
-			}
-		}
+  useEffect(() => {
+    const scrollFunc = () => {
+      if (window.scrollY > 100) {
+        setIsMenuDown(true);
+      } else {
+        setIsMenuDown(false);
+      }
+    };
 
-		document.addEventListener('scroll', scrollFunc)
+    document.addEventListener("scroll", scrollFunc);
 
-		return () => {
-			document.removeEventListener('scroll', scrollFunc)
-		}
-	}, [])
+    return () => {
+      document.removeEventListener("scroll", scrollFunc);
+    };
+  }, []);
 
-	return (
-		<header {...props} className={clsx("relative flex w-full", className)}>
-			<div className={clsx("container flex justify-between items-center fixed z-50 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300", isMenuVisible ? 'top-10' : "top-[-6rem]")}>
-				<div className={clsx("w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem]", isMenuDown && "bg-light-bg-accent dark:bg-dark-bg-accent shadow-navbar")}>
-					<Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
-						<Logo />
-					</Link>
+  return (
+    <header {...props} className={clsx("relative flex w-full justify-center", className)}>
+      <div
+        className={clsx(
+          "flex justify-between w-full items-center fixed z-10 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300",
+          isMenuVisible ? "top-0" : "top-[-6rem] shadow-navbar",
+          isMenuDown && "bg-light-bg dark:bg-dark-bg"
+        )}
+      >
+        <div
+          className={clsx(
+            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500",
+            isMenuDown && "t-xs:py-2"
+          )}
+        >
+          <Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
+            <Logo />
+          </Link>
 
-					<div className="hidden lg:flex items-center space-x-10">
-						{ROUTES.map(({ label, route }, index) => {
-							return (
-								<Link
-									key={index}
-									className={clsx(
-										"text-light-text-secondary dark:text-dark-text-secondary"
-									)}
-									href={route}
-								>
-									{label}
-								</Link>
-							);
-						})}
-					</div>
+          <div className="hidden lg:flex items-center space-x-10">
+            {ROUTES.map(({ label, route }, index) => {
+              return (
+                <Link
+                  key={index}
+                  className={clsx("text-light-text-secondary dark:text-dark-text-secondary")}
+                  href={route}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+          </div>
 
-					<MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
+          <MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
 
-					<button onClick={openMenu} className="lg:hidden">
-						<MenuBtn />
-					</button>
+          <button onClick={openMenu} className="lg:hidden">
+            <MenuBtn />
+          </button>
 
-					{children}
-				</div>
-			</div>
-		</header>
-	);
+          {children}
+        </div>
+      </div>
+    </header>
+  );
 });
 
 Header.displayName = "Header";
