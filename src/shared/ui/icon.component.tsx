@@ -5,9 +5,11 @@ const unistory = dynamic(() => import("@public/assets/icons/unistory.svg"));
 const logoLight = dynamic(() => import("@public/assets/icons/logo-light.svg"));
 const logoDark = dynamic(() => import("@public/assets/icons/logo-dark.svg"));
 const sun = dynamic(() => import("@public/assets/icons/sun.svg"));
+const sunset = dynamic(() => import("@public/assets/icons/sunset.svg"));
 const winter = dynamic(() => import("@public/assets/icons/winter.svg"));
 const summer = dynamic(() => import("@public/assets/icons/summer.svg"));
 const earth = dynamic(() => import("@public/assets/icons/earth.svg"));
+const earthColor = dynamic(() => import("@public/assets/icons/earth-colored.svg"));
 const rocket = dynamic(() => import("@public/assets/icons/rocket.svg"));
 const cloud = dynamic(() => import("@public/assets/icons/cloud.svg"));
 const cloudEmpty = dynamic(() => import("@public/assets/icons/cloud-empty.svg"));
@@ -53,9 +55,11 @@ const iconTypes = {
 	logoLight,
 	logoDark,
 	sun,
+	sunset,
 	winter,
 	summer,
 	earth,
+	earthColor,
 	rocket,
 	cloud,
 	cloudEmpty,

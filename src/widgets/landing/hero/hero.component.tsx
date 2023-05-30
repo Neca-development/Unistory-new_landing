@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import CloudComponent from "./cloud.component";
 import RocketComponent from "./rocket.component";
+import { useState } from "react";
 
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
@@ -17,6 +18,7 @@ const plusSignClasses =
 export function Hero() {
   const { textClassName, temperatureTheme, setTemperatureTheme } = useThemeContext();
   const { setTheme, theme } = useTheme();
+  const [earthColor, setEarthColor] = useState(false)
 
   const toggleThemeHandler = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -25,6 +27,10 @@ export function Hero() {
   const toggleTemperatureThemeHandler = () => {
     setTemperatureTheme(temperatureTheme === "summer" ? "winter" : "summer");
   };
+
+  const toggleEarthColor = () => {
+    setEarthColor(prevState => !prevState)
+  }
 
   const { locale } = useRouter();
 
@@ -42,8 +48,8 @@ export function Hero() {
         <h1 className={clsx(textClassName, "pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0")}>
           {text?.description.first} <br />
           {text?.description.second}
-          <button className="relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]">
-            <IconComponent name="earth" className={iconClassnameByTheme} />
+          <button className="relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]" onClick={toggleEarthColor}>
+            <IconComponent name={earthColor ? "earthColor" : "earth"} className={iconClassnameByTheme}/>
           </button>
           <span className="font-roboto font-light italic inline-block text-light-text-primary dark:text-dark-text-primary">
             {text?.description.third}
@@ -72,7 +78,7 @@ export function Hero() {
           onClick={toggleThemeHandler}
           className="absolute bottom-8 right-[28rem] w-10 t-xs:right-0 t-xs:-bottom-16"
         >
-          <IconComponent name="sun" className={iconClassnameByTheme} />
+          <IconComponent name={theme === 'light' ? "sun" : "sunset"} className={iconClassnameByTheme} />
         </button>
       </section>
 

@@ -7,7 +7,7 @@ type additionalIconType = 'lightning' | 'rainOne' | 'rainTwo' |'rainThree'
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
 const CloudComponent = () => {
-  const [cloudAnim, setCloudAnim] = useState({stage: 4, isPlay: false})
+  const [cloudAnim, setCloudAnim] = useState({stage: 0, isPlay: false})
   const cloudName = (): {cloudType: cloudType, additionalIcon?: additionalIconType, isPuddle?: boolean} => {
     switch (cloudAnim.stage) {
       case 1:
@@ -61,9 +61,9 @@ const CloudComponent = () => {
   const scaleClass = () => {
     switch (cloudAnim.stage) {
       case 5:
-        return 'scale-[1.2]'
+        return 'scale-[1.3]'
       case 6:
-        return 'scale-[1.4]'
+        return 'scale-[1.6]'
       default:
         return ''
     }
