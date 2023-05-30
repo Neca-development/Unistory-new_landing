@@ -8,12 +8,12 @@ const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
 const CloudComponent = () => {
   const [cloudAnim, setCloudAnim] = useState({stage: 0, isPlay: false})
-  const cloudName = (): {cloudType: cloudType, additionalIcon?: additionalIconType} => {
+  const cloudName = (): {cloudType: cloudType, additionalIcon?: additionalIconType, isPuddle?: boolean} => {
     switch (cloudAnim.stage) {
       case 1:
         return {
           cloudType: 'cloudEmpty',
-          additionalIcon: 'lightning'
+          additionalIcon: 'lightning',
         }
       case 2:
         return {
@@ -27,17 +27,20 @@ const CloudComponent = () => {
       case 4:
         return {
           cloudType: 'cloudEmpty',
-          additionalIcon: 'rainOne'
+          additionalIcon: 'rainOne',
+          isPuddle: true
         }
       case 5:
         return {
           cloudType: 'cloudEmpty',
-          additionalIcon: 'rainTwo'
+          additionalIcon: 'rainTwo',
+          isPuddle: true
         }
       case 6:
         return {
           cloudType: 'cloudEmpty',
-          additionalIcon: 'rainThree'
+          additionalIcon: 'rainThree',
+          isPuddle: true
         }
       default:
         return {
@@ -53,6 +56,17 @@ const CloudComponent = () => {
     }
 
     setCloudAnim({stage: 1, isPlay: true})
+  }
+
+  const scaleClass = () => {
+    switch (cloudAnim.stage) {
+      case 5:
+        return 'scale-[1.3]'
+      case 6:
+        return 'scale-[1.6]'
+      default:
+        return ''
+    }
   }
 
   useEffect(() => {
@@ -77,7 +91,24 @@ const CloudComponent = () => {
       { cloudName().additionalIcon &&
         <IconComponent
           name={cloudName().additionalIcon!}
-          className={clsx("absolute", cloudName().additionalIcon === 'lightning' ? 'top-1/2' : 'top-[70%]')}
+          className={
+          clsx(
+            "absolute",
+            cloudName().additionalIcon === 'lightning' ? `top-1/2 ${iconClassnameByTheme}` : 'top-[70%]',
+          )
+        }
+        />
+      }
+      {
+        cloudName().isPuddle &&
+        <IconComponent
+          name="puddle"
+          className={
+            clsx(
+              "absolute top-full mt-1.5",
+              scaleClass()
+            )
+          }
         />
       }
       {
