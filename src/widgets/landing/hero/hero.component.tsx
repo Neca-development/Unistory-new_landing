@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import CloudComponent from "./cloud.component";
 import RocketComponent from "./rocket.component";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
@@ -19,6 +19,7 @@ export function Hero() {
   const { textClassName, temperatureTheme, setTemperatureTheme } = useThemeContext();
   const { setTheme, theme } = useTheme();
   const [earthColor, setEarthColor] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   const toggleThemeHandler = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -41,6 +42,14 @@ export function Hero() {
 
     return HeroEn;
   }, [locale]);
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <div className={clsx("container pt-[7.125rem] t-xs:pt-12 pb-16")}>
