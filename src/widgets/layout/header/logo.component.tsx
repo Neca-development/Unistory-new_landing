@@ -18,9 +18,14 @@ export function Logo() {
 	}
 
 	return (
-		<IconComponent
-			key={"logo" + _theme}
-			name={_theme === "dark" ? "logoDark" : "logoLight"}
-		/>
+		<div className="absolute animate-logoEnter ml-[0.5rem] lg:ml-[2rem]">
+			<div className="animate-logoOverflow overflow-hidden">
+				<IconComponent
+					key={"logo" + _theme}
+					name={_theme === "dark" ? "logoDark" : "logoLight"}
+					className="animate-mainLogoWidth"
+				/>
+			</div>
+		</div>
 	);
 }

@@ -2,6 +2,8 @@
 
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+const LOGO_ENTER_ANIMATION_DURATION = 5
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
@@ -119,13 +121,59 @@ module.exports = {
         },
         logoEnter: {
           '0%': {
-
+            top: '50vh',
+            left: '50vw',
+          },
+          '10%': {
+            top: '50vh',
+            left: '50vw',
+          },
+          '65%': {
+            top: '50vh',
+            left: '50vw',
+            transform: 'translateY(0%)',
+          },
+          '100%': {
+            top: '50%',
+            transform: 'translateY(-50%)',
+            left: '0%'
           }
+        },
+        logoOverflow: {
+          '0%': {
+            width: '25%',
+            transform: 'translateX(-70%)'
+          },
+          '10%': {
+            width: '25%',
+            transform: 'translateX(-70%)'
+          },
+          '65%': {
+            transform: 'translateX(-60%)',
+            width: '100%'
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          }
+        },
+        mainLogoWidth: {
+          '0%': {
+            width: '30rem'
+          },
+          '65%': {
+            width: '30rem'
+          },
+          '100%': {
+            width: '8rem',
+          },
         }
       },
       animation: {
         moveIn: 'moveIn 0.3s ease-out forwards',
         moveOut: 'moveOut 0.3s ease-out forwards',
+        logoEnter: `logoEnter ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        logoOverflow: `logoOverflow ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        mainLogoWidth: `mainLogoWidth ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
       }
     },
   },

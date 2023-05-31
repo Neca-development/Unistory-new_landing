@@ -70,7 +70,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
       >
         <div
           className={clsx(
-            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500",
+            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500 relative",
             isMenuDown && "t-xs:py-2"
           )}
         >
