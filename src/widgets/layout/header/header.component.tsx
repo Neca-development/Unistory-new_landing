@@ -20,6 +20,9 @@ export const Header = React.memo((props: IHeaderProperties) => {
   const { locale } = useRouter();
   const scrollDir = useScrollDirection();
 
+  const {asPath} = useRouter()
+  const isHome = !asPath.split('/').includes('cases')
+
   const isMenuVisible = useMemo(() => {
     if (scrollDir === "down") {
       return false;
@@ -78,7 +81,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
             <Logo />
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-10">
+          <div className={clsx("hidden lg:flex items-center space-x-10", isHome && 'animate-headerLinksOpacity')}>
             {ROUTES.map(({ label, route }, index) => {
               return (
                 <Link
@@ -94,7 +97,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
           <MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
 
-          <button onClick={openMenu} className="lg:hidden">
+          <button onClick={openMenu} className="lg:hidden animate-headerLinksOpacity">
             <MenuBtn />
           </button>
 

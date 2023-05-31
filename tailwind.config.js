@@ -121,15 +121,15 @@ module.exports = {
         },
         logoEnter: {
           '0%': {
-            top: '50vh',
+            top: '40vh',
             left: '50vw',
           },
           '10%': {
-            top: '50vh',
+            top: '40vh',
             left: '50vw',
           },
           '65%': {
-            top: '50vh',
+            top: '40vh',
             left: '50vw',
             transform: 'translateY(0%)',
           },
@@ -139,7 +139,7 @@ module.exports = {
             left: '0%'
           }
         },
-        logoOverflow: {
+        logoOverflowLg: {
           '0%': {
             width: '25%',
             transform: 'translateX(-70%)'
@@ -156,7 +156,24 @@ module.exports = {
             transform: 'translateX(0)',
           }
         },
-        mainLogoWidth: {
+        logoOverflowMobile: {
+          '0%': {
+            width: '25%',
+            transform: 'translateX(-65%)'
+          },
+          '10%': {
+            width: '25%',
+            transform: 'translateX(-65%)'
+          },
+          '65%': {
+            transform: 'translateX(-55%)',
+            width: '100%'
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          }
+        },
+        mainLogoWidthLg: {
           '0%': {
             width: '30rem'
           },
@@ -166,14 +183,52 @@ module.exports = {
           '100%': {
             width: '8rem',
           },
+        },
+        mainLogoWidthMobile: {
+          '0%': {
+            width: '20rem'
+          },
+          '65%': {
+            width: '20rem'
+          },
+          '100%': {
+            width: '8rem',
+          },
+        },
+        headerHeight: {
+          '0%': {
+            height: '100vh'
+          },
+          '65%': {
+            height: '100vh'
+          },
+          '100%': {
+            height: '0'
+          },
+        },
+        headerLinksOpacity: {
+          '0%': {
+            opacity: 0
+          },
+          '80%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1
+          },
         }
+
       },
       animation: {
         moveIn: 'moveIn 0.3s ease-out forwards',
         moveOut: 'moveOut 0.3s ease-out forwards',
         logoEnter: `logoEnter ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        logoOverflow: `logoOverflow ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        mainLogoWidth: `mainLogoWidth ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        logoOverflowLg: `logoOverflowLg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        logoOverflowMobile: `logoOverflowMobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        mainLogoWidthLg: `mainLogoWidthLg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        mainLogoWidthMobile: `mainLogoWidthMobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        headerHeight: `headerHeight ${LOGO_ENTER_ANIMATION_DURATION+1}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        headerLinksOpacity: `headerLinksOpacity ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
       }
     },
   },
