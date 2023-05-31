@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
@@ -116,11 +114,21 @@ module.exports = {
         moveOut: {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-110%)' },
+        },
+        zoomOut: {
+          '0%': { transform: 'scale(1)'},
+          '100%': { transform: 'scale(1.2)'},
+        },
+        zoomIn: {
+          '0%': { transform: 'scale(1.4)'},
+          '100%': { transform: 'scale(1.2)'},
         }
       },
       animation: {
         moveIn: 'moveIn 0.3s ease-out forwards',
         moveOut: 'moveOut 0.3s ease-out forwards',
+        zoomOut: 'zoomOut 0.3s ease-out forwards',
+        zoomIn: 'zoomIn 0.3s ease-out forwards',
       }
     },
   },

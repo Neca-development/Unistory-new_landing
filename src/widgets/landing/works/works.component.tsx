@@ -38,7 +38,7 @@ export function Works() {
   };
 
   return (
-    <section className="bg-light-surface dark:bg-dark-surface">
+    <section className="bg-light-surface dark:bg-dark-surface duration-300">
       <div className="container pt-20 pb-[3.5rem] t-xs:pt-10">
         <h2
           className="font-bold text-5xl t-xs:text-[1.375rem]"

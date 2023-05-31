@@ -33,6 +33,7 @@ export const ThemeContextProvider = ({ children }: any) => {
           'dark:text-primary-s': true,
           'text-primary-s': temperatureTheme === 'winter',
           'text-light-text-primary': temperatureTheme !== 'winter',
+          'duration-300': true
         },
       }}
     >
