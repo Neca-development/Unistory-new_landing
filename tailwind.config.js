@@ -116,6 +116,11 @@ module.exports = {
         moveOut: {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-110%)' },
+        },
+        logoEnter: {
+          '0%': {
+
+          }
         }
       },
       animation: {
