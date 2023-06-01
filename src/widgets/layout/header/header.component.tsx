@@ -22,7 +22,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
   const scrollDir = useScrollDirection();
 
   const {asPath} = useRouter()
-  const isHome = !asPath.split('/').includes('cases')
+  const isHome = asPath === '/'
 
   const isMenuVisible = useMemo(() => {
     return scrollDir !== "down";
@@ -80,7 +80,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
             <Logo />
           </Link>
 
-          <div className={clsx("hidden lg:flex items-center space-x-10", isHome && shouldAnimate && 'animate-headerLinksOpacity')}>
+          <div className={clsx("hidden lg:flex items-center space-x-10", isHome && shouldAnimate && 'animate-header-links-opacity')}>
             {ROUTES.map(({ label, route }, index) => {
               return (
                 <Link

@@ -5,6 +5,7 @@ import { Hero, Principles, Reviews, Services, Works } from "@widgets/landing";
 import { Layout } from "@widgets/layout";
 import { useEffect } from "react";
 import { useAnimationStore } from "@shared/lib/store";
+import { LOGO_ENTER_ANIMATION_DURATION } from "@shared/lib/constants/animation.constants";
 
 export function Home() {
 	const {setShouldAnimate, shouldAnimate} = useAnimationStore()
@@ -16,7 +17,7 @@ export function Home() {
 		const timeout = setTimeout(() => {
 			document.body.style.overflow = ''
 			setShouldAnimate()
-		}, 6000)
+		}, LOGO_ENTER_ANIMATION_DURATION + 1)
 
 		return () => {
 			clearTimeout(timeout)
@@ -28,7 +29,7 @@ export function Home() {
 			<Layout.Header />
 			<Layout.Main>
 				{
-					shouldAnimate && <div className="animate-headerHeight"/>
+					shouldAnimate && <div className="animate-header-height"/>
 				}
 				<Hero />
 				<Services />
