@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 const LOGO_ENTER_ANIMATION_DURATION = 5
 
 module.exports = {
@@ -53,6 +51,9 @@ module.exports = {
 
       'pale-text': '#ffffffe5',
       'black-text': '#0F1A20',
+
+      'winter': '#4FCCD5',
+      'summer': '#EC5F3B'
     },
     extend: {
       screens: {
@@ -111,13 +112,21 @@ module.exports = {
           '0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 20px rgba(15, 26, 32, 0.08)',
       },
       keyframes: {
-        'move-in': {
+        moveIn: {
           '0%': { transform: 'translateY(-110%)' },
           '100%': { transform: 'translateY(0)' },
         },
-        'move-out': {
+        moveOut: {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-110%)' },
+        },
+        zoomOut: {
+          '0%': { transform: 'scale(1)'},
+          '100%': { transform: 'scale(1.2)'},
+        },
+        zoomIn: {
+          '0%': { transform: 'scale(1.4)'},
+          '100%': { transform: 'scale(1.2)'},
         },
         'logo-enter': {
           '0%': {
@@ -217,7 +226,6 @@ module.exports = {
             opacity: 1
           },
         }
-
       },
       animation: {
         'move-in': 'move-in 0.3s ease-out forwards',
@@ -228,7 +236,7 @@ module.exports = {
         'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION+1}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99)`,
       }
     },
   },

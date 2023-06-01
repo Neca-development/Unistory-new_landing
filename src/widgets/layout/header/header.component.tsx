@@ -85,7 +85,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
               return (
                 <Link
                   key={index}
-                  className={clsx("text-light-text-secondary dark:text-dark-text-secondary")}
+                  className={clsx("text-light-text-secondary dark:text-dark-text-secondary transition duration-300")}
                   href={route}
                 >
                   {label}

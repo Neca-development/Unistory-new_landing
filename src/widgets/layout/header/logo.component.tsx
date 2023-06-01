@@ -1,14 +1,18 @@
 import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import clsx from "clsx";
+
 import { useRouter } from "next/router";
 import { useAnimationStore } from "@shared/lib/store";
+import { useThemeContext } from "@shared/lib";
+import clsx from "clsx";
 
 export function Logo() {
 	const { theme, systemTheme } = useTheme();
+	const {temperatureTheme} = useThemeContext()
 	const _theme = theme === "system" ? systemTheme : theme;
 	const [mounted, setMounted] = useState(false);
+
 	const {asPath} = useRouter()
 	const isHome = asPath === '/'
 	const {shouldAnimate} = useAnimationStore()
@@ -34,13 +38,23 @@ export function Logo() {
 					key="logoLight"
 					name="logoLight"
 					width="8rem"
-					className={clsx(isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg", _theme !== 'light' && 'opacity-0')}
+					className={clsx(
+						"duration-300",
+						isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg",
+						_theme !== 'light' && 'opacity-0',
+						temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
+					)}
 				/>
 				<IconComponent
 					key="logoDark"
 					name="logoDark"
 					width="8rem"
-					className={clsx(isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg", _theme !== 'dark' && 'opacity-0')}
+					className={clsx(
+						"duration-300",
+						isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg",
+						_theme !== 'dark' && 'opacity-0',
+						temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
+					)}
 				/>
 			</div>
 		</div>

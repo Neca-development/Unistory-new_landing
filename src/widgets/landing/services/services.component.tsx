@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 const iconClassnameByTheme =
-	"first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
+	"first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent duration-300";
 
 export function Services() {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -22,14 +22,14 @@ export function Services() {
 
 	return (
 		<section className="container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
-			<div className="grid grid-cols-[27.5rem_1fr] lg:h-[30rem] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface">
-				<div className="grid grid-cols-1 content-start gap-4 border-r-2 border-light-bg p-4 pt-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0">
+			<div className="grid grid-cols-[27.5rem_1fr] lg:h-[30rem] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface duration-300">
+				<div className="grid grid-cols-1 content-start gap-4 border-r-2 border-light-bg p-4 pt-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0 duration-300">
 					{data.map((s, index) => (
 						<div
 							key={index}
 							className={clsx(
-								"flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4",
-								activeIndex === index && "bg-bg-s hover:bg-bg-s"
+								"flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4 duration-300",
+								activeIndex === index && "bg-bg-s hover:bg-bg-s duration-300"
 							)}
 							onClick={() => setActiveIndex(index)}
 						>
@@ -39,7 +39,7 @@ export function Services() {
 							/>
 							<h2
 								className={clsx(
-									"ml-6 text-2xl font-semibold t-xs:text-base",
+									"ml-6 text-2xl font-semibold t-xs:text-base duration-300",
 									activeIndex === index && "text-primary-s"
 								)}
 							>
@@ -51,11 +51,11 @@ export function Services() {
 
 				<div className="pt-12 pb-[3.75rem] min-h-[24.5rem] h-[10rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-16 pr-10 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
 					<h3
-						className="text-4xl font-bold t-xs:text-xl"
+						className="text-4xl font-bold t-xs:text-xl duration-300 will-change-auto"
 						dangerouslySetInnerHTML={{ __html: data[activeIndex]!.header }}
 					/>
 					<p
-						className="mt-10 text-2xl leading-10 t-xs:text-base"
+						className="mt-10 text-2xl leading-10 t-xs:text-base duration-300 will-change-auto"
 						dangerouslySetInnerHTML={{ __html: data[activeIndex]!.description }}
 					/>
 				</div>

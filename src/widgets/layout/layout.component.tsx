@@ -15,15 +15,13 @@ export interface ILayoutProperties extends React.ComponentProps<'div'> {
 
 export const Layout = (props: ILayoutProperties) => {
   const { children, Meta, ...rest } = props
+  const { temperatureTheme } = useThemeContext()
   const {width } = useScrollbarSize();
   const {shouldAnimate} = useAnimationStore()
-
-  const { temperatureTheme } = useThemeContext()
-
   return (
     <div className={temperatureTheme}>
       <div
-        className="h-full bg-light-bg bg-[url('/assets/images/Pattern.png')] dark:bg-dark-bg"
+        className="h-full bg-light-bg bg-[url('/assets/images/Pattern.png')] dark:bg-dark-bg duration-300"
         style={{paddingRight: shouldAnimate ? width : 0}}
       >
         {Meta}
