@@ -4,22 +4,32 @@ import { Connect } from "@widgets/connect";
 import { Hero, Principles, Reviews, Services, Works } from "@widgets/landing";
 import { Layout } from "@widgets/layout";
 import { useEffect } from "react";
+import { useAnimationStore } from "@shared/lib/store";
 
 export function Home() {
+	const {setShouldAnimate, shouldAnimate} = useAnimationStore()
 
 	useEffect(() => {
+		if(!shouldAnimate) return
 		document.body.style.overflow = 'hidden'
 
-		setTimeout(() => {
+		const timeout = setTimeout(() => {
 			document.body.style.overflow = ''
-		}, 5000)
+			setShouldAnimate()
+		}, 6000)
+
+		return () => {
+			clearTimeout(timeout)
+		}
 	}, [])
 
 	return (
 		<Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
 			<Layout.Header />
 			<Layout.Main>
-				<div className="animate-headerHeight"/>
+				{
+					shouldAnimate && <div className="animate-headerHeight"/>
+				}
 				<Hero />
 				<Services />
 				<Works />

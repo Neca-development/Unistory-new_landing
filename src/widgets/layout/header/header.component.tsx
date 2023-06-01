@@ -8,14 +8,15 @@ import { MobileMenu } from "./mobile-menu";
 import { MenuBtn } from "./menu-btn.component";
 import { useEffect, useMemo, useState } from "react";
 import { useScrollDirection } from "@shared/lib/hooks/useScrollDirection.hook";
+import { useAnimationStore } from "@shared/lib/store";
 
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
 export const Header = React.memo((props: IHeaderProperties) => {
   const { className, children } = props;
-  // const router = useRouter()\
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMenuDown, setIsMenuDown] = useState(false);
+  const {shouldAnimate} = useAnimationStore()
 
   const { locale } = useRouter();
   const scrollDir = useScrollDirection();
@@ -24,10 +25,8 @@ export const Header = React.memo((props: IHeaderProperties) => {
   const isHome = !asPath.split('/').includes('cases')
 
   const isMenuVisible = useMemo(() => {
-    if (scrollDir === "down") {
-      return false;
-    }
-    return true;
+    return scrollDir !== "down";
+
   }, [scrollDir]);
 
   const ROUTES = React.useMemo(() => {
@@ -81,7 +80,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
             <Logo />
           </Link>
 
-          <div className={clsx("hidden lg:flex items-center space-x-10", isHome && 'animate-headerLinksOpacity')}>
+          <div className={clsx("hidden lg:flex items-center space-x-10", isHome && shouldAnimate && 'animate-headerLinksOpacity')}>
             {ROUTES.map(({ label, route }, index) => {
               return (
                 <Link
