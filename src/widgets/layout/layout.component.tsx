@@ -21,7 +21,7 @@ export const Layout = (props: ILayoutProperties) => {
   return (
     <div className={temperatureTheme}>
       <div
-        className="h-full bg-light-bg bg-[url('/assets/images/Pattern.png')] dark:bg-dark-bg duration-300"
+        className="h-full bg-light-bg bg-[url('/assets/images/Pattern.png')] dark:bg-dark-bg transition duration-300"
         style={{paddingRight: shouldAnimate ? width : 0}}
       >
         {Meta}

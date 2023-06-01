@@ -2,9 +2,11 @@ import React from "react";
 import { IconComponent } from "@shared/ui";
 import clsx from "clsx";
 import { useThemeContext } from "@shared/lib";
+import { useAnimationStore } from "@shared/lib/store";
 
 const TemperatureComponent = () => {
   const {temperatureTheme, setTemperatureTheme} = useThemeContext()
+  const {shouldAnimate} = useAnimationStore()
   const toggleTemperatureThemeHandler = () => {
     setTemperatureTheme(temperatureTheme === "summer" ? "winter" : "summer");
   };
@@ -12,7 +14,10 @@ const TemperatureComponent = () => {
   return (
     <button
       onClick={toggleTemperatureThemeHandler}
-      className="absolute top-[2rem] right-[3rem] w-10 p-2 t-xs:top-[31rem]"
+      className={clsx(
+      "absolute top-[2rem] right-[3rem] w-10 p-2 t-xs:top-[31rem]",
+        shouldAnimate && "animate-hero-icons-fade-in"
+      )}
     >
       <IconComponent
         name="winter"

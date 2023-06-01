@@ -112,19 +112,19 @@ module.exports = {
           '0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 20px rgba(15, 26, 32, 0.08)',
       },
       keyframes: {
-        moveIn: {
+        'move-in': {
           '0%': { transform: 'translateY(-110%)' },
           '100%': { transform: 'translateY(0)' },
         },
-        moveOut: {
+        'move-out': {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-110%)' },
         },
-        zoomOut: {
+        'zoom-out': {
           '0%': { transform: 'scale(1)'},
           '100%': { transform: 'scale(1.2)'},
         },
-        zoomIn: {
+        'zoom-in': {
           '0%': { transform: 'scale(1.4)'},
           '100%': { transform: 'scale(1.2)'},
         },
@@ -225,17 +225,31 @@ module.exports = {
           '100%': {
             opacity: 1
           },
+        },
+        'hero-icons-fade-in': {
+          '0%': {
+            opacity: 0
+          },
+          '65%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1
+          },
         }
       },
       animation: {
         'move-in': 'move-in 0.3s ease-out forwards',
         'move-out': 'move-out 0.3s ease-out forwards',
+        'zoom-out': 'zoom-out 0.3s ease-out forwards',
+        'zoom-in': 'zoom-in 0.3s ease-out forwards',
         'logo-enter': `logo-enter ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'logo-overflow-lg': `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION+1}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION+3}s linear forwards`,
         'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99)`,
       }
     },
