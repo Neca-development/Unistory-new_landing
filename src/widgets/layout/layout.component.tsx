@@ -16,7 +16,7 @@ export const Layout = (props: ILayoutProperties) => {
 
   return (
     <div className={temperatureTheme}>
-      <div className="h-full bg-light-bg bg-[url('/assets/images/Pattern.png')] dark:bg-dark-bg">
+      <div className="h-full bg-light-bg bg-[url('/assets/images/Pattern.png')] dark:bg-dark-bg duration-300">
         {Meta}
         <div {...rest} className="flex min-h-screen flex-col">
           {children}
