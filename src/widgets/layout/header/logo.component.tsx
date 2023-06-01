@@ -25,14 +25,20 @@ export function Logo() {
 			<IconComponent
 				key="logoLight"
 				name="logoLight"
-				fill={temperatureTheme === 'winter' ? "#4FCCD5" : "#EC5F3B"}
-				className={clsx("duration-300 absolute", _theme === 'light' ? '' : 'opacity-0')}
+				className={clsx(
+					"duration-300 absolute",
+					_theme === 'light' ? '' : 'opacity-0',
+					temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
+				)}
 			/>
 			<IconComponent
 				key="logoDark"
 				name="logoDark"
-				fill={temperatureTheme === 'winter' ? "#4FCCD5" : "#EC5F3B"}
-				className={clsx("duration-300 absolute", _theme === 'dark' ? '' : 'opacity-0')}
+				className={clsx(
+					"duration-300 absolute",
+					_theme === 'dark' ? '' : 'opacity-0',
+					temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
+				)}
 			/>
 		</div>
 	);

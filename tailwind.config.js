@@ -49,6 +49,9 @@ module.exports = {
 
       'pale-text': '#ffffffe5',
       'black-text': '#0F1A20',
+
+      'winter': '#4FCCD5',
+      'summer': '#EC5F3B'
     },
     extend: {
       screens: {
