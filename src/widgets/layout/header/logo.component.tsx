@@ -28,11 +28,11 @@ export function Logo() {
 	}
 
 	return (
-		<div className={clsx("absolute", isHome && shouldAnimate && 'animate-logo-enter ml-[0.5rem] lg:ml-[2rem]')}>
+		<div className={clsx("absolute top-1/2 left-0 -translate-y-1/2 ml-[0.5rem] lg:ml-[2rem]", isHome && shouldAnimate && 'animate-logo-enter')}>
 			<div className={clsx(
-				"overflow-hidden flex",
+				"overflow-hidden flex mt-7",
 				_theme === 'dark' ? 'flex-col-reverse' : 'flex-col',
-				isHome && shouldAnimate && 'animate-logo-overflow-mobile lg:animate-logo-overflow-lg mt-4'
+				isHome && shouldAnimate && 'animate-logo-overflow-mobile lg:animate-logo-overflow-lg'
 			)}>
 				<IconComponent
 					key="logoLight"

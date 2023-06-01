@@ -9,6 +9,7 @@ import { MenuBtn } from "./menu-btn.component";
 import { useEffect, useMemo, useState } from "react";
 import { useScrollDirection } from "@shared/lib/hooks/useScrollDirection.hook";
 import { useAnimationStore } from "@shared/lib/store";
+import useScrollbarSize from "react-scrollbar-size";
 
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
@@ -20,6 +21,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
   const { locale } = useRouter();
   const scrollDir = useScrollDirection();
+  const {width } = useScrollbarSize();
 
   const {asPath} = useRouter()
   const isHome = asPath === '/'
@@ -62,7 +64,16 @@ export const Header = React.memo((props: IHeaderProperties) => {
   }, []);
 
   return (
-    <header {...props} className={clsx("relative flex w-full justify-center", className)}>
+    <header
+      {...props}
+      className={clsx(
+        "relative flex w-full justify-center",
+        className,
+      )}
+      style={{
+        paddingLeft: shouldAnimate ? width : 0,
+      }}
+    >
       <div
         className={clsx(
           "flex justify-between w-full items-center fixed z-10 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300",
@@ -80,7 +91,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
             <Logo />
           </Link>
 
-          <div className={clsx("hidden lg:flex items-center space-x-10", isHome && shouldAnimate && 'animate-header-links-opacity')}>
+          <div
+            className={clsx("hidden lg:flex items-center space-x-10", isHome && shouldAnimate && 'animate-header-links-opacity')}
+            style={{
+              marginRight: shouldAnimate ? width : 0,
+            }}
+          >
             {ROUTES.map(({ label, route }, index) => {
               return (
                 <Link

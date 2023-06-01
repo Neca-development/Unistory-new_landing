@@ -130,21 +130,22 @@ module.exports = {
         },
         'logo-enter': {
           '0%': {
-            top: '40vh',
+            top: '50vh',
             left: '50vw',
           },
           '10%': {
-            top: '40vh',
+            top: '50vh',
             left: '50vw',
           },
           '65%': {
-            top: '40vh',
+            top: '50vh',
             left: '50vw',
-            transform: 'translateY(0%)',
+          },
+          '80%': {
+            transform: 'translateY(-50%)',
           },
           '100%': {
             top: '50%',
-            transform: 'translateY(-50%)',
             left: '0%'
           }
         },
