@@ -112,7 +112,13 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
           <MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
 
-          <button onClick={openMenu} className="lg:hidden animate-headerLinksOpacity">
+          <button
+            onClick={openMenu}
+            className="lg:hidden animate-header-links-opacity"
+            style={{
+              marginRight: shouldAnimate ? width : 0,
+            }}
+          >
             <MenuBtn />
           </button>
 
