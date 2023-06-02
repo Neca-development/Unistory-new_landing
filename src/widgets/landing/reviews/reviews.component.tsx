@@ -23,7 +23,7 @@ function Timer({ duration }: { duration: number }) {
 
   const radius = 12;
   const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (timeLeft / (duration * 0.65)) * circumference;
+  const strokeDashoffset = (timeLeft / (duration * 0.65)) * circumference;
 
   return (
     <svg width="32" height="32">
