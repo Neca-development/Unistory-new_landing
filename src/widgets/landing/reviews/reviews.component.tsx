@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-function Timer({ duration }: { duration: number }) {
+function Timer({ duration, className }: { duration: number; className?: string }) {
   const [timeLeft, setTimeLeft] = useState(duration * 0.65);
   const { theme, systemTheme } = useTheme();
   const _theme = theme === "system" ? systemTheme : theme;
@@ -26,7 +26,7 @@ function Timer({ duration }: { duration: number }) {
   const strokeDashoffset = circumference - (timeLeft / (duration * 0.65)) * circumference;
 
   return (
-    <svg width="32" height="32">
+    <svg className={className} width="32" height="32">
       <circle
         cx="16"
         cy="16"
