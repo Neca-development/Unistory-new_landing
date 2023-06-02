@@ -109,7 +109,8 @@ export function Reviews() {
             <span className="font-bold lg:whitespace-nowrap">
               {locale === "ru" && reviewsData[activeReviewIndex]?.review?.author.name.ru}
               {locale === "en" && reviewsData[activeReviewIndex]?.review?.author.name.en}
-            </span>{" "}
+            </span>
+            {", "}
             <span className="mr-2">
               {locale === "ru" && reviewsData[activeReviewIndex]?.review?.author.position.ru}
               {locale === "en" && reviewsData[activeReviewIndex]?.review?.author.position.en}
