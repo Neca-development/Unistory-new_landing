@@ -5,41 +5,41 @@ import { useThemeContext } from "@shared/lib";
 import clsx from "clsx";
 
 export function Logo() {
-	const { theme, systemTheme } = useTheme();
-	const {temperatureTheme} = useThemeContext()
-	const _theme = theme === "system" ? systemTheme : theme;
-	const [mounted, setMounted] = useState(false);
+  const { theme, systemTheme } = useTheme();
+  const { temperatureTheme } = useThemeContext();
+  const _theme = theme === "system" ? systemTheme : theme;
+  const [mounted, setMounted] = useState(false);
 
-	useEffect(() => {
-		if (window) {
-			setMounted(true);
-		}
-	}, []);
+  useEffect(() => {
+    if (window) {
+      setMounted(true);
+    }
+  }, []);
 
-	if (!mounted) {
-		return null;
-	}
+  if (!mounted) {
+    return null;
+  }
 
-	return (
-		<div className="relative">
-			<IconComponent
-				key="logoLight"
-				name="logoLight"
-				className={clsx(
-					"duration-300 absolute",
-					_theme === 'light' ? '' : 'opacity-0',
-					temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
-				)}
-			/>
-			<IconComponent
-				key="logoDark"
-				name="logoDark"
-				className={clsx(
-					"duration-300 absolute",
-					_theme === 'dark' ? '' : 'opacity-0',
-					temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
-				)}
-			/>
-		</div>
-	);
+  return (
+    <div className="relative h-8">
+      <IconComponent
+        key="logoLight"
+        name="logoLight"
+        className={clsx(
+          "duration-300 absolute",
+          _theme === "light" ? "" : "opacity-0",
+          temperatureTheme === "winter" ? "fill-winter" : "fill-summer"
+        )}
+      />
+      <IconComponent
+        key="logoDark"
+        name="logoDark"
+        className={clsx(
+          "duration-300 absolute",
+          _theme === "dark" ? "" : "opacity-0",
+          temperatureTheme === "winter" ? "fill-winter" : "fill-summer"
+        )}
+      />
+    </div>
+  );
 }

@@ -22,7 +22,6 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
   const isMenuVisible = useMemo(() => {
     return scrollDir !== "down";
-
   }, [scrollDir]);
 
   const ROUTES = React.useMemo(() => {
@@ -72,7 +71,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
             isMenuDown && "t-xs:py-2"
           )}
         >
-          <Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
+          <Link href={"/"} className="flex items-center w-[8.625rem] min-h-[2.5rem]">
             <Logo />
           </Link>
 
@@ -81,7 +80,9 @@ export const Header = React.memo((props: IHeaderProperties) => {
               return (
                 <Link
                   key={index}
-                  className={clsx("text-light-text-secondary dark:text-dark-text-secondary transition duration-300")}
+                  className={clsx(
+                    "text-light-text-secondary dark:text-dark-text-secondary transition duration-300"
+                  )}
                   href={route}
                 >
                   {label}
