@@ -69,15 +69,15 @@ export const Header = React.memo((props: IHeaderProperties) => {
     <header {...props} className={clsx("relative flex w-full justify-center", className)}>
       <div
         className={clsx(
-          "flex rounded-sm inset-x-4 justify-center fixed z-10 transition-all duration-300",
+          "flex inset-x-4 justify-center fixed z-10 transition-all duration-300",
           isMenuVisible ? "top-4" : "top-[-6rem] shadow-navbar"
         )}
       >
         <div
           className={clsx(
-            "w-full flex justify-between max-w-[85rem] py-4 lg:px-10 px-[0.5rem] transition-all duration-500 dark:border dark:border-transparent",
+            "w-full rounded-sm flex justify-between max-w-[85rem] py-4 lg:px-10 px-[0.5rem] transition-all duration-500 border border-transparent",
             isMenuDown &&
-              "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:!border-[#2b2b2b]"
+              "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
           )}
         >
           <Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
@@ -90,10 +90,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
                 <Link
                   key={index}
                   className={clsx(
-                    "text-light-text-secondary dark:text-dark-text-secondary transition duration-300 relative",
-                    "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
+                    "text-light-text-primary/[.5] dark:text-light-bg-accent/[.5] transition duration-300 relative",
                     !isLoad && "after:opacity-0",
-                    _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg"
+                    _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg",
+                    route === "#become-customer"
+                      ? "font-bold	hover:!text-[#ec5f3b]"
+                      : "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off"
                   )}
                   href={route}
                 >
