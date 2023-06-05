@@ -1,18 +1,12 @@
 import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 export function CloseBtn() {
 	const { theme, systemTheme } = useTheme();
 	const _theme = theme === "system" ? systemTheme : theme;
 
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		if (window) {
-			setMounted(true);
-		}
-	}, []);
+	const mounted = useMounted()
 
 	if (!mounted) {
 		return null;

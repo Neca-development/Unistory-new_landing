@@ -8,6 +8,7 @@ import { MobileMenu } from "./mobile-menu";
 import { MenuBtn } from "./menu-btn.component";
 import { useEffect, useMemo, useState } from "react";
 import { useScrollDirection } from "@shared/lib/hooks/useScrollDirection.hook";
+import { useTheme } from "next-themes";
 
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
@@ -16,6 +17,9 @@ export const Header = React.memo((props: IHeaderProperties) => {
   // const router = useRouter()\
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMenuDown, setIsMenuDown] = useState(false);
+  const [isLoad, setIsLoad] = useState(false);
+  const { theme, systemTheme } = useTheme();
+  const _theme = theme === "system" ? systemTheme : theme;
 
   const { locale } = useRouter();
   const scrollDir = useScrollDirection();
@@ -49,10 +53,15 @@ export const Header = React.memo((props: IHeaderProperties) => {
       }
     };
 
+    const timeout = setTimeout(() => {
+      setIsLoad(true);
+    }, 300);
+
     document.addEventListener("scroll", scrollFunc);
 
     return () => {
       document.removeEventListener("scroll", scrollFunc);
+      clearTimeout(timeout);
     };
   }, []);
 
@@ -81,7 +90,10 @@ export const Header = React.memo((props: IHeaderProperties) => {
                 <Link
                   key={index}
                   className={clsx(
-                    "text-light-text-secondary dark:text-dark-text-secondary transition duration-300"
+                    "text-light-text-secondary dark:text-dark-text-secondary transition duration-300 relative",
+                    "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
+                    !isLoad && "after:opacity-0",
+                    _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg"
                   )}
                   href={route}
                 >

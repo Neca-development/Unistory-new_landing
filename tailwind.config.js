@@ -125,13 +125,35 @@ module.exports = {
         zoomIn: {
           '0%': { transform: 'scale(1.4)'},
           '100%': { transform: 'scale(1.2)'},
-        }
+        },
+        'link-hover-on': {
+          '0%': {
+            width: 0,
+            left: 0
+          },
+          '100%': {
+            width: '100%',
+            left: 0
+          }
+        },
+        'link-hover-off': {
+          '0%': {
+            width: '100%',
+            right: 0
+          },
+          '100%': {
+            width: 0,
+            right: 0
+          }
+        },
       },
       animation: {
         moveIn: 'moveIn 0.3s ease-out forwards',
         moveOut: 'moveOut 0.3s ease-out forwards',
         zoomOut: 'zoomOut 0.3s ease-out forwards',
         zoomIn: 'zoomIn 0.3s ease-out forwards',
+        'link-hover-on': 'link-hover-on 0.3s ease-out forwards',
+        'link-hover-off': 'link-hover-off 0.3s ease-out forwards',
       }
     },
   },
