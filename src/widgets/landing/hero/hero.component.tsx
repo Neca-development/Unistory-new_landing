@@ -6,9 +6,10 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import CloudComponent from "./cloud.component";
 import RocketComponent from "./rocket.component";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import TemperatureComponent from "./temperature.component";
 import SunComponent from "@widgets/landing/hero/sun.component";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent first:[&>path]:transition first:[&>path]:duration-300";
@@ -19,7 +20,7 @@ const plusSignClasses =
 export function Hero() {
   const { textClassName } = useThemeContext();
   const [earthColor, setEarthColor] = useState(false)
-  const [mounted, setMounted] = useState(false)
+  const mounted = useMounted()
 
   const toggleEarthColor = () => {
     setEarthColor(prevState => !prevState)
@@ -34,10 +35,6 @@ export function Hero() {
 
     return HeroEn;
   }, [locale]);
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   if (!mounted) {
     return null

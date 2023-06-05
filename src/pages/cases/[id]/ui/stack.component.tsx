@@ -4,8 +4,9 @@ import clsx from "clsx";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 interface IStackProps {
   data?: TechnologiesValues[];
@@ -14,7 +15,7 @@ interface IStackProps {
 export function Stack({ data }: IStackProps) {
   const { locale } = useRouter();
   const { theme, systemTheme } = useTheme();
-  const [mounted, setMounted] = useState(false)
+  const mounted = useMounted()
 
   const _theme = useMemo(() => {
     const returnTheme = theme === "system" ? systemTheme : theme
@@ -28,11 +29,6 @@ export function Stack({ data }: IStackProps) {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
   }, [locale]);
 
-  //grid grid-cols-3 gap-10 mt-16 t-xs:mt-6 t-xs:grid-cols-2 t-xs:gap-4
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   if (!mounted) {
     return null
