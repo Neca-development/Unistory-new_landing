@@ -1,20 +1,14 @@
 import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { useThemeContext } from "@shared/lib";
 import clsx from "clsx";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 export function Logo() {
 	const { theme, systemTheme } = useTheme();
 	const {temperatureTheme} = useThemeContext()
 	const _theme = theme === "system" ? systemTheme : theme;
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		if (window) {
-			setMounted(true);
-		}
-	}, []);
+	const mounted = useMounted()
 
 	if (!mounted) {
 		return null;
