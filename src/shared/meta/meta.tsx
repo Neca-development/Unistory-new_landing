@@ -1,32 +1,24 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
-import { APP_META } from './meta.config'
+import { APP_META } from "./meta.config";
 
 type IMetaProperties = {
-  title: string
-  description: string
-  canonical?: string
-}
+  title: string;
+  description: string;
+  canonical?: string;
+};
 
 const Meta = (props: IMetaProperties) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <>
       <Head>
         <meta charSet="utf8" key="charset" />
-        <meta
-          name="viewport"
-          content="width=device-width,initial-scale=1"
-          key="viewport"
-        />
-        <link
-          rel="apple-touch-icon"
-          href={`${router.basePath}/apple-touch-icon.png`}
-          key="apple"
-        />
+        <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
+        <link rel="apple-touch-icon" href={`${router.basePath}/apple-touch-icon.png`} key="apple" />
         <link
           rel="icon"
           type="image/png"
@@ -56,7 +48,7 @@ const Meta = (props: IMetaProperties) => {
         }}
       />
     </>
-  )
-}
+  );
+};
 
-export { Meta }
+export { Meta };
