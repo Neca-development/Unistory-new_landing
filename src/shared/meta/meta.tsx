@@ -17,8 +17,6 @@ const Meta = (props: IMetaProperties) => {
   const { theme } = useTheme();
   const faviconPrefix = theme === "dark" ? "-dark" : "";
 
-  console.log(theme);
-
   return (
     <>
       <Head>
