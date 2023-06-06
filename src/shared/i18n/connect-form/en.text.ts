@@ -42,4 +42,5 @@ export const FormEn = {
   send: "Send",
   agreement:
     "By clicking the button, you consent to the processing of personal data and agree to the privacy policy.",
+  submitMessage: `Thanks for your application! <br> Our manager will contact you soon!`,
 };
