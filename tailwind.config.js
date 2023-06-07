@@ -231,7 +231,7 @@ module.exports = {
           '0%': {
             opacity: 0
           },
-          '65%': {
+          '85%': {
             opacity: 0
           },
           '100%': {
@@ -249,8 +249,8 @@ module.exports = {
         'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION+1}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION+3}s linear forwards`,
+        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION + 1}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
+        'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION + 2}s linear forwards`,
         'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99)`,
       }
     },
