@@ -415,8 +415,8 @@ export const CASES: ICase[] = [
         photo: "",
       },
       text: {
-        en: "«The skilled team delivered exceptional results and the client is confident that the product launch will be a success. Unistory's frequent and clear communication about the project's status and roadblocks contributed to a smooth engagement.»",
-        ru: "«Это был замечательный опыт от начала до конца! Квалифицированная команда Unistory добилась исключительных результатов, и мы уверены, что запуск продукта будет успешным. Своевременные и четкие оповещения о состоянии проекта и препятствиях по ходу разработки способствовали бесперебойному процессу взаимодействия.»",
+        en: "«It was a great experience from start to finish. The skilled team delivered exceptional results and the client is confident that the product launch will be a success. Unistory's frequent and clear communication about the project's status and roadblocks contributed to a smooth engagement.»",
+        ru: "«Это был замечательный опыт от начала и до конца! Квалифицированная команда Unistory добилась исключительных результатов, и клиент уверен, что запуск продукта будет успешным. Своевременные и четкие оповещения о состоянии проекта и препятствиях по ходу разработки способствовали нашему взаимодействию.»",
       },
     },
     team: [
@@ -546,8 +546,8 @@ export const CASES: ICase[] = [
         photo: "",
       },
       text: {
-        en: "«Unistory did a very professional job. They submitted a detailed schedule prior to the estimate and followed it through with no delays. They had a project manager for us the entire time, and when the PM in charge was on vacation, the alternate took care of it. The PM would get back to us as soon as possible. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology. Other contracts are still ongoing, but we would like to continue to work with them in the future.»",
-        ru: "«Юнистори выполнили свою работу очень профессионально. Они представили подробный график работ согласно подготовленной смете и следовали ему без задержек. Все это время с нами работал проектный менеджер, но как только он ушел в отпуск, команда позаботилась о том, чтобы предоставить  Они также были доступны для технических консультаций. Они проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Другие контракты еще не завершены, но мы хотели бы продолжать работать с ними в будущем.»",
+        en: "«Unistory did a very professional job: submitted a detailed schedule prior to the estimate and followed it through with no delays. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology.Other contracts are still ongoing, but we would like to continue to work with them in the future.»",
+        ru: "«Юнистори выполнили работу профессионально: представили график работ согласно смете и следовали ему без задержек. Они были доступны для консультаций. Проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Мы бы хотели продолжить совместную работу  в будущем.»",
       },
     },
     team: [
@@ -768,8 +768,8 @@ export const CASES: ICase[] = [
         photo: sipsignalClient.src,
       },
       text: {
-        en: "«Good work, friends! Unistory is a well-managed and structured team: weekly updates, quick response times, and quality order fulfillment. I would recommend the Unistory team for any project. We were so pleased with the results that we went straight to our next project. Thank you guys for your hard work.»",
-        ru: "«Хорошая работа, друзья! Unistory - это хорошо управляемая и структурированная команда: еженедельные обновления, быстрое реагирование и качественное выполнение заказов. Я бы рекомендовал команду Unistory для любого проекта. Мы были настолько довольны результатами, что сразу же приступили ко следующему проекту. Спасибо вам, ребята, за вашу тяжелую работу.»",
+        en: "«Good work, friends! Unistory is a well-managed and structured team: weekly updates, quick response times, and quality order fulfillment. I would recommend the Unistory team for any project. We were so pleased with the results that we went straight to our next project. Thank you guys for your hard work!»",
+        ru: "«Хорошая работа, друзья! Еженедельные обновления, быстрое реагирование и качественное выполнение заказов. Я бы рекомендовал команду Unistory для любого проекта. Мы были настолько довольны результатами, что сразу же приступили к следующему. Спасибо вам, ребята, за вашу тяжелую работу!»",
       },
     },
     logo: sipsignalLogo.src,

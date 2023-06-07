@@ -23,7 +23,7 @@ function Timer({ duration, className }: { duration: number; className?: string }
 
   const radius = 12;
   const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (timeLeft / (duration * 0.65)) * circumference;
+  const strokeDashoffset = (circumference / (duration * 0.65)) * timeLeft;
 
   return (
     <svg className={className} width="32" height="32">
@@ -95,7 +95,7 @@ export function Reviews() {
       </h2>
 
       <div className="lg:grid gap-10 grid-cols-[1fr_25rem]">
-        <article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col h-[35rem] t-xs:h-[28rem] justify-between">
+        <article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-surface rounded-sm flex flex-col t-xs:h-[25rem] justify-between">
           <p
             className="text-base leading-6 lg:text-2xl lg:leading-10"
             dangerouslySetInnerHTML={{
@@ -105,7 +105,7 @@ export function Reviews() {
                   : reviewsData[activeReviewIndex]?.review?.text.en ?? "",
             }}
           ></p>
-          <span className="text-sm leading-5 lg:text-xl font-medium mt-auto lg:mt-4">
+          <span className="text-sm leading-5 lg:text-xl mt-auto lg:mt-4">
             <span className="font-bold lg:whitespace-nowrap">
               {locale === "ru" && reviewsData[activeReviewIndex]?.review?.author.name.ru}
               {locale === "en" && reviewsData[activeReviewIndex]?.review?.author.name.en}
@@ -116,10 +116,12 @@ export function Reviews() {
               {locale === "en" && reviewsData[activeReviewIndex]?.review?.author.position.en}
             </span>
             <span>
-              {reviewsData[activeReviewIndex]?.review?.author.company ===
-                "«Consensus-base Inc.»" && <br className="hidden lg:block" />}
-              {reviewsData[activeReviewIndex]?.review?.author.company ===
-                "«BP Networking & Design Inc.»" && <br />}
+              {locale === "ru" &&
+                reviewsData[activeReviewIndex]?.review?.author.company ===
+                  "«Consensus-base Inc.»" && <br className="hidden lg:block" />}
+              {locale === "ru" &&
+                reviewsData[activeReviewIndex]?.review?.author.company ===
+                  "«BP Networking & Design Inc.»" && <br className="hidden lg:block" />}
               {reviewsData[activeReviewIndex]?.review?.author.company}
             </span>
           </span>
