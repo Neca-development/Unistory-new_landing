@@ -17,7 +17,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
   // const router = useRouter()\
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMenuDown, setIsMenuDown] = useState(false);
-  const [isLoad, setIsLoad] = useState(false)
+  const [isLoad, setIsLoad] = useState(false);
   const { theme, systemTheme } = useTheme();
   const _theme = theme === "system" ? systemTheme : theme;
 
@@ -26,7 +26,6 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
   const isMenuVisible = useMemo(() => {
     return scrollDir !== "down";
-
   }, [scrollDir]);
 
   const ROUTES = React.useMemo(() => {
@@ -55,14 +54,14 @@ export const Header = React.memo((props: IHeaderProperties) => {
     };
 
     const timeout = setTimeout(() => {
-      setIsLoad(true)
-    }, 300)
+      setIsLoad(true);
+    }, 300);
 
     document.addEventListener("scroll", scrollFunc);
 
     return () => {
       document.removeEventListener("scroll", scrollFunc);
-      clearTimeout(timeout)
+      clearTimeout(timeout);
     };
   }, []);
 
@@ -70,15 +69,15 @@ export const Header = React.memo((props: IHeaderProperties) => {
     <header {...props} className={clsx("relative flex w-full justify-center", className)}>
       <div
         className={clsx(
-          "flex justify-between w-full items-center fixed z-10 !px-[0.5rem] lg:!px-[3rem] transition-all duration-300",
-          isMenuVisible ? "top-0" : "top-[-6rem] shadow-navbar",
-          isMenuDown && "bg-light-bg dark:bg-dark-bg"
+          "flex inset-x-4 justify-center fixed z-10 transition-all duration-300",
+          isMenuVisible ? "top-4" : "top-[-6rem] shadow-navbar"
         )}
       >
         <div
           className={clsx(
-            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500",
-            isMenuDown && "t-xs:py-2"
+            "w-full rounded-sm flex justify-between max-w-[85rem] py-4 lg:px-10 px-[0.5rem] transition-all duration-500 border border-transparent",
+            isMenuDown &&
+              "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
           )}
         >
           <Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
@@ -91,10 +90,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
                 <Link
                   key={index}
                   className={clsx(
-                    "text-light-text-secondary dark:text-dark-text-secondary transition duration-300 relative",
-                    "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
-                    !isLoad && 'after:opacity-0',
-                    _theme === 'light' ? 'after:bg-dark-bg' : 'after:bg-light-bg'
+                    "text-light-text-primary/[.5] dark:text-light-bg-accent/[.5] transition duration-300 relative",
+                    !isLoad && "after:opacity-0",
+                    _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg",
+                    route === "#become-customer"
+                      ? "font-bold	hover:!text-[#ec5f3b]"
+                      : "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off"
                   )}
                   href={route}
                 >

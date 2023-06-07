@@ -41,7 +41,7 @@ export default function ConnectForm() {
   const {
     handleSubmit,
     control,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful },
     reset,
   } = useForm<FormType>({
     resolver: zodResolver(schema),
@@ -127,111 +127,119 @@ export default function ConnectForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(sendFormData)}
-      encType="multipart/form-data"
-      className="flex flex-col space-y-6"
-      noValidate
-    >
-      <ControlledInput
-        control={control}
-        name="name"
-        placeholder={data.fields.name.placeholder}
-        type="text"
-        error={errors.name?.message}
-      />
-      <ControlledInput
-        placeholder={data.fields.company.placeholder}
-        control={control}
-        name="company"
-        type="text"
-        error={errors?.company?.message}
-      />
-      <div className="grid grid-cols-2 gap-10">
-        <ControlledInput
-          control={control}
-          name="email"
-          type="email"
-          placeholder={data.fields.email.placeholder}
-          error={errors?.email?.message}
-        />
-
-        <ControlledTelInput
-          control={control}
-          error={errors?.phoneNumber?.message}
-          name="phoneNumber"
-          placeholder={data.fields.phone.placeholder}
-          type="phone"
-        />
-      </div>
-      <div className="py-8 text-xl t-xs:text-[0.875rem]">
-        <p>{data.contacts.label}</p>
-        <div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
-          {contactMethods.map((method, idx) => (
-            <Checkbox
-              onChange={() => handleCheckboxChange(method.type)}
-              key={idx}
-              name={method.name}
-            />
-          ))}
+    <>
+      {isSubmitSuccessful ? (
+        <div className="flex flex-col space-y-6 items-center text-2xl t-xs:text-xl t-xs:mt-28 text-center justify-center">
+          <span dangerouslySetInnerHTML={{ __html: data.submitMessage }}></span>
         </div>
-      </div>
-      <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
-        <Controller
-          control={control}
-          name="projectDescription"
-          render={({ field }) => (
-            <textarea
-              {...field}
-              placeholder={data.fields.describe.placeholder}
-              className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
-              ref={(elem) => {
-                field.ref(elem);
-                textareaRef.current = elem;
-              }}
-            />
-          )}
-        />
-        {errors.projectDescription && (
-          <span className="absolute left-3 top-full mt-2 text-error text-xs">
-            {errors.projectDescription.message}
-          </span>
-        )}
-      </label>
-
-      <label className="cursor-pointer flex items-center space-x-3 py-2">
-        <div>
-          <input
-            type="file"
-            className="hidden"
-            onChange={(e) => {
-              setFileError(false);
-              e.target.files && setFile(e.target.files[0]);
-            }}
+      ) : (
+        <form
+          onSubmit={handleSubmit(sendFormData)}
+          encType="multipart/form-data"
+          className="flex flex-col space-y-6"
+          noValidate
+        >
+          <ControlledInput
+            control={control}
+            name="name"
+            placeholder={data.fields.name.placeholder}
+            type="text"
+            error={errors.name?.message}
           />
-          <IconComponent name="clip" className="w-8 t-xs:w-6" />
-        </div>
-        <div className="flex flex-col text-xl leading-7 t-xs:text-[0.875rem]">
-          {file ? file.name : data.attachment.label}
-          <span className="text-sm opacity-50 t-xs:text-[0.75rem]">{data.attachment.sub}</span>
-        </div>
-      </label>
+          <ControlledInput
+            placeholder={data.fields.company.placeholder}
+            control={control}
+            name="company"
+            type="text"
+            error={errors?.company?.message}
+          />
+          <div className="grid grid-cols-2 gap-10">
+            <ControlledInput
+              control={control}
+              name="email"
+              type="email"
+              placeholder={data.fields.email.placeholder}
+              error={errors?.email?.message}
+            />
 
-      {fileError && <div className="text-error">{data.attachment.errors.tooLarge}</div>}
+            <ControlledTelInput
+              control={control}
+              error={errors?.phoneNumber?.message}
+              name="phoneNumber"
+              placeholder={data.fields.phone.placeholder}
+              type="phone"
+            />
+          </div>
+          <div className="py-8 text-xl t-xs:text-[0.875rem]">
+            <p>{data.contacts.label}</p>
+            <div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
+              {contactMethods.map((method, idx) => (
+                <Checkbox
+                  onChange={() => handleCheckboxChange(method.type)}
+                  key={idx}
+                  name={method.name}
+                />
+              ))}
+            </div>
+          </div>
+          <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
+            <Controller
+              control={control}
+              name="projectDescription"
+              render={({ field }) => (
+                <textarea
+                  {...field}
+                  placeholder={data.fields.describe.placeholder}
+                  className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
+                  ref={(elem) => {
+                    field.ref(elem);
+                    textareaRef.current = elem;
+                  }}
+                />
+              )}
+            />
+            {errors.projectDescription && (
+              <span className="absolute left-3 top-full mt-2 text-error text-xs">
+                {errors.projectDescription.message}
+              </span>
+            )}
+          </label>
 
-      <button
-        type="submit"
-        className={clsx(
-          "!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-300 transition-opacity t-xs:!mt-5",
-          fileError && "opacity-50",
-          isLoading && "animate-pulse"
-        )}
-        disabled={fileError || isLoading}
-      >
-        {data.send}
-      </button>
+          <label className="cursor-pointer flex items-center space-x-3 py-2">
+            <div>
+              <input
+                type="file"
+                className="hidden"
+                onChange={(e) => {
+                  setFileError(false);
+                  e.target.files && setFile(e.target.files[0]);
+                }}
+              />
+              <IconComponent name="clip" className="w-8 t-xs:w-6" />
+            </div>
+            <div className="flex flex-col text-xl leading-7 t-xs:text-[0.875rem]">
+              {file ? file.name : data.attachment.label}
+              <span className="text-sm opacity-50 t-xs:text-[0.75rem]">{data.attachment.sub}</span>
+            </div>
+          </label>
 
-      <span className="text-sm text-center opacity-50 px-4">{data.agreement}</span>
-    </form>
+          {fileError && <div className="text-error">{data.attachment.errors.tooLarge}</div>}
+
+          <button
+            type="submit"
+            className={clsx(
+              "!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-300 transition-opacity t-xs:!mt-5",
+              fileError && "opacity-50",
+              isLoading && "animate-pulse"
+            )}
+            disabled={fileError || isLoading}
+          >
+            {data.send}
+          </button>
+
+          <span className="text-sm text-center opacity-50 px-4">{data.agreement}</span>
+        </form>
+      )}
+    </>
   );
 }
