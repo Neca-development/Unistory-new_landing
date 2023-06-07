@@ -42,7 +42,7 @@ export function Services() {
         <div className="grid grid-cols-1 content-start gap-4 border-r-2 border-light-bg p-4 pt-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0 duration-300">
           {data.map((s, index) => (
             <div
-              key={index}
+              key={s.id}
               className={clsx(
                 "flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4 duration-300",
                 activeIndex === index && "bg-bg-s hover:bg-bg-s duration-300"
