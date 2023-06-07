@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const LOGO_ENTER_ANIMATION_DURATION = 5
+const LOGO_ENTER_ANIMATION_DURATION = 4
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -158,6 +158,9 @@ module.exports = {
             width: '25%',
             transform: 'translateX(-70%)'
           },
+          '35%': {
+            opacity: 1
+          },
           '65%': {
             transform: 'translateX(-60%)',
             width: '100%'
@@ -264,14 +267,14 @@ module.exports = {
         'move-out': 'move-out 0.3s ease-out forwards',
         'zoom-out': 'zoom-out 0.3s ease-out forwards',
         'zoom-in': 'zoom-in 0.3s ease-out forwards',
-        'logo-enter': `logo-enter ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'logo-overflow-lg': `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION + 1}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
-        'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION + 2}s linear forwards`,
-        'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99)`,
+        'logo-enter': `logo-enter ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
+        'logo-overflow-lg': `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
+        'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
+        'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
+        'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
+        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
+        'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION + 1}s linear forwards`,
+        'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out`,
         'link-hover-on': 'link-hover-on 0.3s ease-out forwards',
         'link-hover-off': 'link-hover-off 0.3s ease-out forwards',
       }
