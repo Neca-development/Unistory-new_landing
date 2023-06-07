@@ -1,27 +1,20 @@
 import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-
-import { useRouter } from "next/router";
-import { useAnimationStore } from "@shared/lib/store";
 import { useThemeContext } from "@shared/lib";
 import clsx from "clsx";
+import { useMounted } from "@shared/lib/hooks/useMounted";
+import { useAnimationStore } from "@shared/lib/store";
+import { useRouter } from "next/router";
 
 export function Logo() {
 	const { theme, systemTheme } = useTheme();
 	const {temperatureTheme} = useThemeContext()
 	const _theme = theme === "system" ? systemTheme : theme;
-	const [mounted, setMounted] = useState(false);
+	const mounted = useMounted()
 
 	const {asPath} = useRouter()
 	const isHome = asPath === '/'
 	const {shouldAnimate} = useAnimationStore()
-
-	useEffect(() => {
-		if (window) {
-			setMounted(true);
-		}
-	}, []);
 
 	if (!mounted) {
 		return null;

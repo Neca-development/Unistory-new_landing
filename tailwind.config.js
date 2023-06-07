@@ -237,7 +237,27 @@ module.exports = {
           '100%': {
             opacity: 1
           },
-        }
+        },
+        'link-hover-on': {
+          '0%': {
+            width: 0,
+            left: 0
+          },
+          '100%': {
+            width: '100%',
+            left: 0
+          }
+        },
+        'link-hover-off': {
+          '0%': {
+            width: '100%',
+            right: 0
+          },
+          '100%': {
+            width: 0,
+            right: 0
+          }
+        },
       },
       animation: {
         'move-in': 'move-in 0.3s ease-out forwards',
@@ -252,6 +272,8 @@ module.exports = {
         'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION + 1}s cubic-bezier(0.58, 0.08, 0.51, 0.99) forwards`,
         'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION + 2}s linear forwards`,
         'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s cubic-bezier(0.58, 0.08, 0.51, 0.99)`,
+        'link-hover-on': 'link-hover-on 0.3s ease-out forwards',
+        'link-hover-off': 'link-hover-off 0.3s ease-out forwards',
       }
     },
   },

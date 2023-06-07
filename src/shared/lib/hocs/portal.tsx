@@ -1,5 +1,6 @@
-import { useRef, useEffect, useState, ReactNode } from "react";
+import { useRef, useEffect, ReactNode } from "react";
 import { createPortal } from "react-dom";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 interface PortalProps {
 	children: ReactNode;
@@ -7,11 +8,10 @@ interface PortalProps {
 
 export const Portal = (props: PortalProps) => {
 	const ref = useRef<Element | null>(null);
-	const [mounted, setMounted] = useState(false);
+	const mounted = useMounted()
 
 	useEffect(() => {
 		ref.current = document.querySelector<HTMLElement>("#portal");
-		setMounted(true);
 	}, []);
 
 	return mounted && ref.current

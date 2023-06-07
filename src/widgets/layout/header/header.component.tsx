@@ -8,6 +8,7 @@ import { MobileMenu } from "./mobile-menu";
 import { MenuBtn } from "./menu-btn.component";
 import { useEffect, useMemo, useState } from "react";
 import { useScrollDirection } from "@shared/lib/hooks/useScrollDirection.hook";
+import { useTheme } from "next-themes";
 import { useAnimationStore } from "@shared/lib/store";
 import useScrollbarSize from "react-scrollbar-size";
 
@@ -17,6 +18,9 @@ export const Header = React.memo((props: IHeaderProperties) => {
   const { className, children } = props;
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMenuDown, setIsMenuDown] = useState(false);
+  const [isLoad, setIsLoad] = useState(false)
+  const { theme, systemTheme } = useTheme();
+  const _theme = theme === "system" ? systemTheme : theme;
   const {shouldAnimate} = useAnimationStore()
 
   const { locale } = useRouter();
@@ -55,11 +59,15 @@ export const Header = React.memo((props: IHeaderProperties) => {
         setIsMenuDown(false);
       }
     };
+    const timeout = setTimeout(() => {
+      setIsLoad(true)
+    }, 300)
 
     document.addEventListener("scroll", scrollFunc);
 
     return () => {
       document.removeEventListener("scroll", scrollFunc);
+      clearTimeout(timeout)
     };
   }, []);
 
@@ -101,7 +109,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
               return (
                 <Link
                   key={index}
-                  className={clsx("text-light-text-secondary dark:text-dark-text-secondary transition duration-300")}
+                  className={clsx(
+                    "text-light-text-secondary dark:text-dark-text-secondary transition duration-300 relative",
+                    "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
+                    !isLoad && 'after:opacity-0',
+                    _theme === 'light' ? 'after:bg-dark-bg' : 'after:bg-light-bg'
+                  )}
                   href={route}
                 >
                   {label}

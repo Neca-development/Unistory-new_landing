@@ -6,9 +6,10 @@ import { useRouter } from "next/router";
 import * as React from "react";
 import CloudComponent from "./cloud.component";
 import RocketComponent from "./rocket.component";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import TemperatureComponent from "./temperature.component";
-import SunComponent from "./sun.component";
+import SunComponent from "@widgets/landing/hero/sun.component";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 import { useAnimationStore } from "@shared/lib/store";
 
 const iconClassnameByTheme =
@@ -20,7 +21,7 @@ const plusSignClasses =
 export function Hero() {
   const { textClassName } = useThemeContext();
   const [earthColor, setEarthColor] = useState(false)
-  const [mounted, setMounted] = useState(false)
+  const mounted = useMounted()
   const {shouldAnimate} = useAnimationStore()
 
   const toggleEarthColor = () => {
@@ -37,10 +38,6 @@ export function Hero() {
     return HeroEn;
   }, [locale]);
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   if (!mounted) {
     return null
   }
@@ -51,13 +48,11 @@ export function Hero() {
         <h1 className={clsx(textClassName, "pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0 duration-300")}>
           {text?.description.first} <br />
           {text?.description.second}
-          <button
-            className={clsx(
+          <button className={clsx(
             "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]",
-              shouldAnimate && "animate-hero-icons-fade-in"
-            )}
-            onClick={toggleEarthColor}
-          >
+            shouldAnimate && "animate-hero-icons-fade-in"
+          )}
+                  onClick={toggleEarthColor}>
             <IconComponent name={earthColor ? "earthColor" : "earth"} className={iconClassnameByTheme}/>
           </button>
           <span className="font-roboto font-light italic inline-block text-light-text-primary dark:text-dark-text-primary duration-300">
