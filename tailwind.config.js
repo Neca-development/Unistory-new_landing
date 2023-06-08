@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-const LOGO_ENTER_ANIMATION_DURATION = 4
+const LOGO_ENTER_ANIMATION_DURATION = 3.5
+const LOGO_ANIMATION_CURVE = 'ease-in-out'
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -141,9 +142,6 @@ module.exports = {
             top: '50vh',
             left: '50vw',
           },
-          '80%': {
-            transform: 'translateY(-50%)',
-          },
           '100%': {
             top: '50%',
             left: '0%'
@@ -154,12 +152,13 @@ module.exports = {
             width: '25%',
             transform: 'translateX(-70%)'
           },
-          '10%': {
+          '20%': {
             width: '25%',
             transform: 'translateX(-70%)'
           },
-          '35%': {
-            opacity: 1
+          '60%': {
+            transform: 'translateX(-60%)',
+            width: '100%'
           },
           '65%': {
             transform: 'translateX(-60%)',
@@ -174,9 +173,13 @@ module.exports = {
             width: '25%',
             transform: 'translateX(-65%)'
           },
-          '10%': {
+          '20%': {
             width: '25%',
             transform: 'translateX(-65%)'
+          },
+          '60%': {
+            transform: 'translateX(-55%)',
+            width: '100%'
           },
           '65%': {
             transform: 'translateX(-55%)',
@@ -190,7 +193,7 @@ module.exports = {
           '0%': {
             width: '30rem'
           },
-          '65%': {
+          '55%': {
             width: '30rem'
           },
           '100%': {
@@ -267,14 +270,14 @@ module.exports = {
         'move-out': 'move-out 0.3s ease-out forwards',
         'zoom-out': 'zoom-out 0.3s ease-out forwards',
         'zoom-in': 'zoom-in 0.3s ease-out forwards',
-        'logo-enter': `logo-enter ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
-        'logo-overflow-lg': `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
-        'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
-        'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
-        'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
-        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out  forwards`,
+        'logo-enter': `logo-enter ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'logo-overflow-lg': `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION + 1}s linear forwards`,
-        'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out`,
+        'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         'link-hover-on': 'link-hover-on 0.3s ease-out forwards',
         'link-hover-off': 'link-hover-off 0.3s ease-out forwards',
       }
