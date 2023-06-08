@@ -90,9 +90,8 @@ export const Header = React.memo((props: IHeaderProperties) => {
       >
         <div
           className={clsx(
-            "w-full rounded-sm relative flex justify-between max-w-[85rem] py-4 lg:px-10 px-[0.5rem] transition-all duration-500 border border-transparent",
-            isMenuDown &&
-            "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
+            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500 relative",
+            isMenuDown && "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
           )}
         >
           <Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
