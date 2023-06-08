@@ -30,7 +30,7 @@ export function Home() {
 		<Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
 			<Layout.Header />
 			<Layout.Main>
-				<div className={clsx(shouldAnimate && "animate-header-height")}/>
+				<div className={clsx(shouldAnimate && "animate-header-height will-change-[height]")}/>
 				<Hero />
 				<Services />
 				<Works />

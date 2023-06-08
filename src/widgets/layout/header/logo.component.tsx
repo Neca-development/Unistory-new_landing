@@ -21,11 +21,15 @@ export function Logo() {
 	}
 
 	return (
-		<div className={clsx("absolute top-1/2 left-0 -translate-y-1/2 ml-[0.5rem] lg:ml-[2rem]", isHome && shouldAnimate && 'animate-logo-enter')}>
+		<div
+			className={clsx(
+				"absolute top-1/2 left-0 -translate-y-1/2 ml-[0.5rem] lg:ml-[2rem]",
+			isHome && shouldAnimate && 'will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg'
+		)}>
 			<div className={clsx(
 				"overflow-hidden flex mt-7",
 				_theme === 'dark' ? 'flex-col-reverse' : 'flex-col',
-				isHome && shouldAnimate && 'animate-logo-overflow-mobile lg:animate-logo-overflow-lg'
+				isHome && shouldAnimate && 'animate-logo-overflow-mobile lg:animate-logo-overflow-lg will-change-[transform,width]'
 			)}>
 				<IconComponent
 					key="logoLight"
@@ -33,7 +37,7 @@ export function Logo() {
 					width="8rem"
 					className={clsx(
 						"duration-300",
-						isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg",
+						isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
 						_theme !== 'light' && 'opacity-0',
 						temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
 					)}
@@ -44,7 +48,7 @@ export function Logo() {
 					width="8rem"
 					className={clsx(
 						"duration-300",
-						isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg",
+						isHome && shouldAnimate && "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
 						_theme !== 'dark' && 'opacity-0',
 						temperatureTheme === 'winter' ? "fill-winter" : "fill-summer"
 					)}

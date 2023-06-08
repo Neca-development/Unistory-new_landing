@@ -129,7 +129,25 @@ module.exports = {
           '0%': { transform: 'scale(1.4)'},
           '100%': { transform: 'scale(1.2)'},
         },
-        'logo-enter': {
+        'logo-enter-lg': {
+          '0%': {
+            top: '50vh',
+            left: '50%',
+          },
+          '10%': {
+            top: '50vh',
+            left: '50%',
+          },
+          '65%': {
+            top: '50vh',
+            left: '50%',
+          },
+          '100%': {
+            top: '50%',
+            left: '0%',
+          }
+        },
+        'logo-enter-mobile': {
           '0%': {
             top: '50vh',
             left: '50vw',
@@ -193,10 +211,10 @@ module.exports = {
           '0%': {
             width: '30rem'
           },
-          '55%': {
+          '57%': {
             width: '30rem'
           },
-          '100%': {
+          '89%': {
             width: '8rem',
           },
         },
@@ -213,10 +231,10 @@ module.exports = {
         },
         'header-height': {
           '0%': {
-            height: '100vh'
+            height: '150vh'
           },
           '65%': {
-            height: '100vh'
+            height: '150vh'
           },
           '100%': {
             height: '0'
@@ -270,12 +288,13 @@ module.exports = {
         'move-out': 'move-out 0.3s ease-out forwards',
         'zoom-out': 'zoom-out 0.3s ease-out forwards',
         'zoom-in': 'zoom-in 0.3s ease-out forwards',
-        'logo-enter': `logo-enter ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'logo-enter-lg': `logo-enter-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'logo-enter-mobile': `logo-enter-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         'logo-overflow-lg': `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
-        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
+        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION+0.5}s ease-in-out forwards`,
         'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION + 1}s linear forwards`,
         'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         'link-hover-on': 'link-hover-on 0.3s ease-out forwards',
