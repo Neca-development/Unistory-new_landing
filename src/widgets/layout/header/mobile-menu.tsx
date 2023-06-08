@@ -21,13 +21,15 @@ export function MobileMenu(props: IMobileMenuProps) {
     <Portal>
       <aside
         className={clsx(
-          "fixed top-0 left-0 h-screen w-full bg-[#00000030] transition-transform duration-300 lg:hidden z-50",
+          "fixed top-0 left-0 h-screen w-full bg-[#00000030] transition-transform duration-300 lg:hidden z-[100]",
           active ? "translate-y-0" : "-translate-y-full"
         )}
       >
         <div className="flex h-full flex-col bg-light-surface px-[1rem] pt-[28px] pb-[80px] dark:bg-dark-surface">
           <div className="flex items-center justify-between">
-            <Logo />
+            <div className="h-8">
+              <Logo />
+            </div>
             <button onClick={onClose} className="p-[0.375rem]">
               <CloseBtn />
             </button>

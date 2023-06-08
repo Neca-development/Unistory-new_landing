@@ -1,0 +1,1 @@
+export const LOGO_ENTER_ANIMATION_DURATION = 5000 // 4 SEC

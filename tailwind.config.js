@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
+const LOGO_ENTER_ANIMATION_DURATION = 3.5
+const LOGO_ANIMATION_CURVE = 'ease-in-out'
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
@@ -110,21 +113,154 @@ module.exports = {
           '0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 20px rgba(15, 26, 32, 0.08)',
       },
       keyframes: {
-        moveIn: {
+        'move-in': {
           '0%': { transform: 'translateY(-110%)' },
           '100%': { transform: 'translateY(0)' },
         },
-        moveOut: {
+        'move-out': {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-110%)' },
         },
-        zoomOut: {
+        'zoom-out': {
           '0%': { transform: 'scale(1)'},
           '100%': { transform: 'scale(1.2)'},
         },
-        zoomIn: {
+        'zoom-in': {
           '0%': { transform: 'scale(1.4)'},
           '100%': { transform: 'scale(1.2)'},
+        },
+        'logo-enter-lg': {
+          '0%': {
+            top: '50vh',
+            left: '50%',
+          },
+          '10%': {
+            top: '50vh',
+            left: '50%',
+          },
+          '65%': {
+            top: '50vh',
+            left: '50%',
+          },
+          '100%': {
+            top: '50%',
+            left: '0%',
+          }
+        },
+        'logo-enter-mobile': {
+          '0%': {
+            top: '50vh',
+            left: '50vw',
+          },
+          '10%': {
+            top: '50vh',
+            left: '50vw',
+          },
+          '65%': {
+            top: '50vh',
+            left: '50vw',
+          },
+          '100%': {
+            top: '50%',
+            left: '0%'
+          }
+        },
+        'logo-overflow-lg': {
+          '0%': {
+            width: '25%',
+            transform: 'translateX(-70%)'
+          },
+          '20%': {
+            width: '25%',
+            transform: 'translateX(-70%)'
+          },
+          '60%': {
+            transform: 'translateX(-60%)',
+            width: '100%'
+          },
+          '65%': {
+            transform: 'translateX(-60%)',
+            width: '100%'
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          }
+        },
+        'logo-overflow-mobile': {
+          '0%': {
+            width: '25%',
+            transform: 'translateX(-65%)'
+          },
+          '20%': {
+            width: '25%',
+            transform: 'translateX(-65%)'
+          },
+          '60%': {
+            transform: 'translateX(-55%)',
+            width: '100%'
+          },
+          '65%': {
+            transform: 'translateX(-55%)',
+            width: '100%'
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          }
+        },
+        'main-logo-width-lg': {
+          '0%': {
+            width: '30rem'
+          },
+          '57%': {
+            width: '30rem'
+          },
+          '89%': {
+            width: '8rem',
+          },
+        },
+        'main-logo-width-mobile': {
+          '0%': {
+            width: '20rem'
+          },
+          '65%': {
+            width: '20rem'
+          },
+          '100%': {
+            width: '8rem',
+          },
+        },
+        'header-height': {
+          '0%': {
+            height: '150vh'
+          },
+          '65%': {
+            height: '150vh'
+          },
+          '100%': {
+            height: '0'
+          },
+        },
+        'header-links-opacity': {
+          '0%': {
+            opacity: 0
+          },
+          '80%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1
+          },
+        },
+        'hero-icons-fade-in': {
+          '0%': {
+            opacity: 0
+          },
+          '85%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1
+          },
         },
         'link-hover-on': {
           '0%': {
@@ -148,10 +284,19 @@ module.exports = {
         },
       },
       animation: {
-        moveIn: 'moveIn 0.3s ease-out forwards',
-        moveOut: 'moveOut 0.3s ease-out forwards',
-        zoomOut: 'zoomOut 0.3s ease-out forwards',
-        zoomIn: 'zoomIn 0.3s ease-out forwards',
+        'move-in': 'move-in 0.3s ease-out forwards',
+        'move-out': 'move-out 0.3s ease-out forwards',
+        'zoom-out': 'zoom-out 0.3s ease-out forwards',
+        'zoom-in': 'zoom-in 0.3s ease-out forwards',
+        'logo-enter-lg': `logo-enter-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'logo-enter-mobile': `logo-enter-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'logo-overflow-lg': `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'logo-overflow-mobile': `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'main-logo-width-lg': `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'main-logo-width-mobile': `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        'header-height': `header-height ${LOGO_ENTER_ANIMATION_DURATION+0.5}s ease-in-out forwards`,
+        'hero-icons-fade-in': `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION + 1}s linear forwards`,
+        'header-links-opacity': `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         'link-hover-on': 'link-hover-on 0.3s ease-out forwards',
         'link-hover-off': 'link-hover-off 0.3s ease-out forwards',
       }

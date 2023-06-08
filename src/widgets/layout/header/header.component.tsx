@@ -9,6 +9,8 @@ import { MenuBtn } from "./menu-btn.component";
 import { useEffect, useMemo, useState } from "react";
 import { useScrollDirection } from "@shared/lib/hooks/useScrollDirection.hook";
 import { useTheme } from "next-themes";
+import { useAnimationStore } from "@shared/lib/store";
+import useScrollbarSize from "react-scrollbar-size";
 
 export interface IHeaderProperties extends React.ComponentProps<"header"> {}
 
@@ -17,12 +19,17 @@ export const Header = React.memo((props: IHeaderProperties) => {
   // const router = useRouter()\
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMenuDown, setIsMenuDown] = useState(false);
-  const [isLoad, setIsLoad] = useState(false);
+  const [isLoad, setIsLoad] = useState(false)
   const { theme, systemTheme } = useTheme();
   const _theme = theme === "system" ? systemTheme : theme;
+  const {shouldAnimate} = useAnimationStore()
 
   const { locale } = useRouter();
   const scrollDir = useScrollDirection();
+  const {width } = useScrollbarSize();
+
+  const {asPath} = useRouter()
+  const isHome = asPath === '/'
 
   const isMenuVisible = useMemo(() => {
     return scrollDir !== "down";
@@ -54,37 +61,50 @@ export const Header = React.memo((props: IHeaderProperties) => {
     };
 
     const timeout = setTimeout(() => {
-      setIsLoad(true);
-    }, 300);
+      setIsLoad(true)
+    }, 300)
 
     document.addEventListener("scroll", scrollFunc);
 
     return () => {
       document.removeEventListener("scroll", scrollFunc);
-      clearTimeout(timeout);
+      clearTimeout(timeout)
     };
   }, []);
 
   return (
-    <header {...props} className={clsx("relative flex w-full justify-center", className)}>
+    <header
+      {...props}
+      className={clsx(
+        "relative flex w-full justify-center",
+        className,
+      )}
+      style={{
+        paddingLeft: shouldAnimate ? width : 0,
+      }}>
       <div
         className={clsx(
-          "flex inset-x-4 justify-center fixed z-10 transition-all duration-300",
+          "flex w-full justify-center fixed z-10 transition-all duration-300",
+          "w-full px-[0.5rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[3rem] mx-auto m-l:max-w-full",
           isMenuVisible ? "top-4" : "top-[-6rem] shadow-navbar"
         )}
       >
         <div
           className={clsx(
-            "w-full rounded-sm flex justify-between max-w-[85rem] py-4 lg:px-10 px-[0.5rem] transition-all duration-500 border border-transparent",
-            isMenuDown &&
-              "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
+            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500 relative",
+            isMenuDown && "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
           )}
         >
-          <Link href={"/"} className="flex items-center w-[8.625rem] min-h-[2.5rem]">
+          <Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
             <Logo />
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-10">
+          <div
+            className={clsx("hidden lg:flex items-center space-x-10", isHome && shouldAnimate && 'animate-header-links-opacity')}
+            style={{
+              marginRight: shouldAnimate ? width : 0,
+            }}
+          >
             {ROUTES.map(({ label, route }, index) => {
               return (
                 <Link
@@ -107,7 +127,13 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
           <MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
 
-          <button onClick={openMenu} className="lg:hidden">
+          <button
+            onClick={openMenu}
+            className="lg:hidden animate-header-links-opacity"
+            style={{
+              marginRight: shouldAnimate ? width : 0,
+            }}
+          >
             <MenuBtn />
           </button>
 

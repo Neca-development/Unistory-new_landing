@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IconComponent } from "@shared/ui";
 import clsx from "clsx";
+import { useAnimationStore } from "@shared/lib/store";
 
 type cloudType = 'cloud' | 'cloudEmpty'
 type additionalIconType = 'lightning' | 'rainOne' | 'rainTwo' |'rainThree'
@@ -8,6 +9,7 @@ const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
 const CloudComponent = () => {
   const [cloudAnim, setCloudAnim] = useState({stage: 0, isPlay: false})
+  const {shouldAnimate} = useAnimationStore()
   const cloudName = (): {cloudType: cloudType, additionalIcon?: additionalIconType, isPuddle?: boolean} => {
     switch (cloudAnim.stage) {
       case 1:
@@ -86,7 +88,13 @@ const CloudComponent = () => {
   }, [cloudAnim.isPlay])
 
   return (
-    <button className="absolute -top-6 left-[18.2rem] p-2 t-xs:left-[7rem] t-xs:-top-10 justify-center items-center flex" onClick={toggleCloudAnim}>
+    <button
+      className={clsx(
+        "absolute -top-6 left-[18.2rem] p-2 t-xs:left-[7rem] t-xs:-top-10 justify-center items-center flex",
+        shouldAnimate && "animate-hero-icons-fade-in"
+      )}
+      onClick={toggleCloudAnim}
+    >
       <IconComponent name={cloudName().cloudType} className={iconClassnameByTheme} />
       { cloudName().additionalIcon &&
         <IconComponent
