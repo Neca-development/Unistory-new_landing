@@ -15,12 +15,14 @@ export const HeroRu = {
 };
 
 export const ServicesRu: Array<{
+  id: number;
   title: string;
   icon: IconsTypes;
   header: string;
   description: string;
 }> = [
   {
+    id: 1,
     title: "Продуктовый дизайн",
     icon: "grid",
     header: "Из идеи в дизайн-прототип",
@@ -30,6 +32,7 @@ export const ServicesRu: Array<{
     который соответствует целям проекта.`,
   },
   {
+    id: 2,
     title: "Разработка",
     icon: "layout",
     header: "Разработка web & mobile",
@@ -42,6 +45,7 @@ export const ServicesRu: Array<{
     <br />— mobile: React native, Kotlin, Swift`,
   },
   {
+    id: 3,
     title: "Поддержка и развитие",
     icon: "folder",
     header: "Поддержка и развитие",
