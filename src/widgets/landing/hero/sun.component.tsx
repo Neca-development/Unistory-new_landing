@@ -17,6 +17,7 @@ const SunComponent = () => {
 
   useEffect(() => {
     _theme = theme === "system" ? systemTheme : theme;
+    console.log(_theme);
   }, []);
 
   return (
