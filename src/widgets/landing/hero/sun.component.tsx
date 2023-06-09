@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
