@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
@@ -12,8 +12,15 @@ const SunComponent = () => {
   const { shouldAnimate } = useAnimationStore();
 
   const toggleThemeHandler = () => {
+    console.log("Перед измененением", _theme, theme);
     setTheme(theme == "light" ? "dark" : "light");
+    console.log("После измененения", _theme, theme);
   };
+
+  useEffect(() => {
+    _theme = theme === "system" ? systemTheme : theme;
+    console.log("После монтэйна", _theme, theme);
+  }, []);
 
   return (
     <button
