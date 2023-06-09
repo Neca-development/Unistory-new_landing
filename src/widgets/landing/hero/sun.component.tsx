@@ -12,12 +12,12 @@ const SunComponent = () => {
   const { shouldAnimate } = useAnimationStore();
 
   const toggleThemeHandler = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme == "light" ? "dark" : "light");
   };
 
   useEffect(() => {
-    _theme = theme === "system" ? systemTheme : theme;
-    console.log(_theme);
+    _theme = theme == "system" ? systemTheme : theme;
+    console.log(_theme, systemTheme, theme);
   }, []);
 
   return (
@@ -33,7 +33,7 @@ const SunComponent = () => {
         className={clsx(
           iconClassnameByTheme,
           "absolute",
-          _theme === "dark"
+          _theme == "dark"
             ? "animate-zoom-in opacity-100 duration-300"
             : "animate-zoom-out opacity-0 duration-300"
         )}
@@ -43,7 +43,7 @@ const SunComponent = () => {
         className={clsx(
           iconClassnameByTheme,
           "absolute",
-          theme === "light"
+          theme == "light"
             ? "animate-zoom-out opacity-100 duration-300"
             : "animate-zoom-in opacity-0 duration-300"
         )}
