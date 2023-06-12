@@ -12,14 +12,14 @@ const SunComponent = () => {
   const { shouldAnimate } = useAnimationStore();
 
   const toggleThemeHandler = () => {
-    console.log("До изменения", _theme, theme);
-    setTheme(theme == "light" ? "dark" : "light");
-    console.log("После изменения", _theme, theme);
+    console.log("До изменения", _theme, theme, systemTheme);
+    setTheme(_theme == "light" ? "dark" : "light");
+    console.log("После изменения", _theme, theme, systemTheme);
   };
 
   useEffect(() => {
     _theme = theme === "system" ? systemTheme : theme;
-    console.log("После монтэйна", _theme, theme);
+    console.log("После монтэйна", _theme, theme, systemTheme);
   }, []);
 
   return (
