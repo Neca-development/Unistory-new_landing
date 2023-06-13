@@ -9,7 +9,7 @@ import Timer from "../reviews/reviews.component";
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent duration-300";
 
-const timerDuration = 50000;
+const timerDuration = 20000;
 
 export function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
