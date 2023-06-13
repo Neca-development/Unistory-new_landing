@@ -1,4 +1,4 @@
-import { Checkbox, ControlledInput, ControlledTelInput, IconComponent } from "@shared/ui";
+import { ControlledInput, ControlledTelInput, IconComponent, Radio } from "@shared/ui";
 import React, { useMemo, useRef, useState } from "react";
 import { Controller, useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -174,9 +174,10 @@ export default function ConnectForm() {
             <p>{data.contacts.label}</p>
             <div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
               {contactMethods.map((method, idx) => (
-                <Checkbox
+                <Radio
                   onChange={() => handleCheckboxChange(method.type)}
                   key={idx}
+                  radioGroup="form-radio"
                   name={method.name}
                 />
               ))}
