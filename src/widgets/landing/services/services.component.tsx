@@ -51,7 +51,7 @@ export function Services() {
             >
               <div className="w-10 h-10 flex items-center justify-center">
                 {activeIndex === index ? (
-                  <Timer className="min-w-fit" duration={timerDuration} />
+                  <Timer className="min-w-[32px]" duration={timerDuration} />
                 ) : (
                   <IconComponent name={s.icon} className={clsx("w-full", iconClassnameByTheme)} />
                 )}
