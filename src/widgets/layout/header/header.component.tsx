@@ -60,8 +60,6 @@ export const Header = React.memo((props: IHeaderProperties) => {
       }
     };
 
-    console.log(currentPage);
-
     const timeout = setTimeout(() => {
       setIsLoad(true);
     }, 300);
