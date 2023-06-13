@@ -84,7 +84,7 @@ export function Reviews() {
   useInterval(nextSlide, timerDuration, [activeReviewIndex]);
 
   return (
-    <section className="container pt-20 pb-[7.5rem]">
+    <section className="container pt-14 pb-[7.5rem]">
       <h2 className="text-2xl leading-none mb-10 t-xs:mb-8 lg:text-5xl font-bold lg:leading-[3.25rem]">
         {text.title.beforeHighlight}
         <span
