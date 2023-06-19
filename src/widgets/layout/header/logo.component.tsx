@@ -23,19 +23,21 @@ export function Logo() {
   return (
     <div
       className={clsx(
-        "absolute top-1/2 left-0 -translate-y-1/2 ml-[0.5rem] lg:ml-[2rem]",
+        "absolute top-0 left-0",
         isHome &&
           shouldAnimate &&
-          "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg"
+          "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg",
+        !shouldAnimate && "w-[138px] h-[33px]"
       )}
     >
       <div
         className={clsx(
-          "overflow-hidden flex mt-7",
+          "overflow-hidden flex",
           _theme === "dark" ? "flex-col-reverse" : "flex-col",
           isHome &&
             shouldAnimate &&
-            "animate-logo-overflow-mobile lg:animate-logo-overflow-lg will-change-[transform,width]"
+            "animate-logo-overflow-mobile lg:animate-logo-overflow-lg will-change-[transform,width]",
+          !shouldAnimate && "absolute w-full h-full"
         )}
       >
         <IconComponent
@@ -48,6 +50,7 @@ export function Logo() {
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
             _theme !== "light" && "opacity-0",
+            !shouldAnimate && "absolute top-0 left-0 w-full h-full",
             temperatureTheme === "winter" ? "fill-winter" : "fill-summer"
           )}
         />
@@ -61,6 +64,7 @@ export function Logo() {
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
             _theme !== "dark" && "opacity-0",
+            !shouldAnimate && "absolute top-0 left-0 w-full h-full",
             temperatureTheme === "winter" ? "fill-winter" : "fill-summer"
           )}
         />
