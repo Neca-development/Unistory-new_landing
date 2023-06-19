@@ -27,7 +27,7 @@ export function Logo() {
         isHome &&
           shouldAnimate &&
           "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg ",
-        !shouldAnimate && "w-[128px] h-[31px] lg:w-[150px] lg:h-[36px]"
+        !shouldAnimate && "w-[128px] h-[31px] lg:w-[150px] lg:h-[36px] 2xl:w-[166px] 2xl:h-[40px]"
       )}
     >
       <div
@@ -42,9 +42,8 @@ export function Logo() {
         <IconComponent
           key="logoLight"
           name="logoLight"
-          width="150px"
           className={clsx(
-            "duration-300",
+            "duration-300 min-w-[128px] lg:min-w-[150px] 2xl:min-w-[166px]",
             isHome &&
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
@@ -57,9 +56,8 @@ export function Logo() {
         <IconComponent
           key="logoDark"
           name="logoDark"
-          width="150px"
           className={clsx(
-            "duration-300",
+            "duration-300 min-w-[128px] lg:min-w-[150px] 2xl:min-w-[166px]",
             isHome &&
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",

@@ -99,7 +99,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
           <Link
             href={"/"}
             className={clsx(
-              "w-[8.625rem] h-[31px] lg:h-[36px]",
+              "w-[8.625rem] h-[31px] lg:h-[36px] 2xl:h-[40px]",
               !shouldAnimate && "relative",
               !isHome && "relative"
             )}
