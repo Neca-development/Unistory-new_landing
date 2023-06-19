@@ -15,23 +15,22 @@ interface IStackProps {
 export function Stack({ data }: IStackProps) {
   const { locale } = useRouter();
   const { theme, systemTheme } = useTheme();
-  const mounted = useMounted()
+  const mounted = useMounted();
 
   const _theme = useMemo(() => {
-    const returnTheme = theme === "system" ? systemTheme : theme
+    const returnTheme = theme === "system" ? systemTheme : theme;
 
-    return returnTheme ?? 'dark'
-  }, [theme, systemTheme])
+    return returnTheme ?? "dark";
+  }, [theme, systemTheme]);
 
-  const isMobile = useDetectDeviceType()
+  const isMobile = useDetectDeviceType();
 
   const langData = useMemo(() => {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
   }, [locale]);
 
-
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
@@ -43,7 +42,7 @@ export function Stack({ data }: IStackProps) {
             <div
               key={idx}
               className={clsx(
-                "flex bg-light-bg w-[25rem] dark:bg-dark-bg py-8 px-[1.875rem] flex-col items-center"
+                "flex bg-light-bg w-[25rem] md:w-[22.3%] dark:bg-dark-bg py-12 px-[1.5rem] flex-col items-center"
                 // idx === data?.length - 1 && idx % 2 === 0 && 'col-span-2'
               )}
             >
@@ -57,7 +56,7 @@ export function Stack({ data }: IStackProps) {
                 <Image src={technology.icon} alt={technology.name} fill />
               </div> */}
 
-              <h3 className="mt-6">{technology.name}</h3>
+              {/* <h3 className="mt-6">{technology.name}</h3> */}
             </div>
           ))}
         </div>

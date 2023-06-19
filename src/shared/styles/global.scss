@@ -56,7 +56,7 @@ input:not([name="name"])::-webkit-contacts-auto-fill-button {
 }
 
 .container {
-  @apply w-full px-[1rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[5rem] mx-auto m-l:max-w-full;
+  @apply w-full px-[1rem] md:max-w-[790px] lg:max-w-[80rem]  lg:px-[5rem] 2xl:max-w-[90rem] mx-auto m-l:max-w-full;
 }
 
 .winter {

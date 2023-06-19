@@ -83,7 +83,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
       <div
         className={clsx(
           "flex w-full justify-center fixed z-10 transition-all duration-300",
-          "w-full px-[0.5rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[3rem] mx-auto m-l:max-w-full",
+          "w-full px-[0.5rem] md:max-w-[790px] lg:max-w-[80rem] lg:px-[3rem] 2xl:max-w-[90rem] mx-auto m-l:max-w-full",
           isMenuVisible ? "top-4" : "top-[-6rem] shadow-navbar"
         )}
       >
@@ -96,7 +96,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
         >
           <Link
             href={"/"}
-            className={clsx("w-[8.625rem] h-[31px] lg:h-[33px]", !shouldAnimate && "relative")}
+            className={clsx("w-[8.625rem] h-[31px] lg:h-[36px]", !shouldAnimate && "relative")}
           >
             <Logo />
           </Link>
@@ -115,12 +115,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
                 <Link
                   key={index}
                   className={clsx(
-                    "text-light-text-primary/[.5] dark:text-light-bg-accent/[.5] transition duration-300 relative",
+                    " dark:text-light-bg-accent/[.5] transition duration-300 relative",
                     !isLoad && "after:opacity-0",
                     _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg",
                     route === "#become-customer"
-                      ? "font-bold	hover:!text-[#ec5f3b]"
-                      : "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
+                      ? "text-light-text-primary dark:text-light-bg-accent font-bold	hover:!text-[#ec5f3b]"
+                      : "text-light-text-primary/[.5] dark:text-light-bg-accent/[.5] after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
                     currentPage.replace(/\/+$/, "") == route && "after:animate-link-hover-on"
                   )}
                   href={route}
