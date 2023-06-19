@@ -23,7 +23,7 @@ const SunComponent = () => {
     <button
       onClick={toggleThemeHandler}
       className={clsx(
-        "absolute bottom-8 right-[28rem] w-10 h-10 2xl:w-14 t-xs:right-0 t-xs:-bottom-16",
+        "absolute bottom-8 right-[28rem] w-10 h-10 2xl:w-12 t-xs:right-0 t-xs:-bottom-16",
         shouldAnimate && "animate-hero-icons-fade-in"
       )}
     >
