@@ -75,6 +75,12 @@ module.exports = {
             fontWeight: "800",
           },
         ],
+        "large-h1": [
+          "5.75rem",
+          {
+            lineHeight: "6.5rem",
+          },
+        ],
         "mob-h1": [
           "2.25rem",
           {

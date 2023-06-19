@@ -50,13 +50,16 @@ export function Hero() {
     >
       <section className="relative pb-[8rem] lg:mb-[10vh] t-xs:pb-16">
         <h1
-          className={clsx(textClassName, "pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0 duration-300")}
+          className={clsx(
+            textClassName,
+            "pr-24 text-h1 2xl:text-large-h1 t-xs:text-mob-h1 t-xs:pr-0 duration-300"
+          )}
         >
           {text?.description.first} <br />
           {text?.description.second}
           <button
             className={clsx(
-              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]",
+              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 2xl:w-14 t-xs:right-[0.4rem]",
               shouldAnimate && "animate-hero-icons-fade-in"
             )}
             onClick={toggleEarthColor}
@@ -84,35 +87,35 @@ export function Hero() {
 
       <section className="flex items-center justify-between t-xs:block">
         <article className="flex items-center text-2xl t-xs:mb-8 font-medium">
-          <p className="relative mr-[2.75rem] m-xl:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem] m-xl:mr-4">
+          <p className="relative mr-[2.75rem] m-xl:w-[4.875rem] text-[5rem] 2xl:text-8xl m-xl:text-[3rem] font-bold leading-[5rem] m-xl:mr-4">
             25
             <span className={plusSignClasses}>+</span>
           </p>
           <span
-            className="text-2xl m-xl:text-base"
+            className="text-2xl m-xl:text-base 2xl:text-3xl"
             dangerouslySetInnerHTML={{ __html: text?.params?.teamSize }}
           />
         </article>
 
         <article className="flex items-center text-2xl t-xs:mb-8 font-medium">
-          <p className="relative mr-[2.75rem] m-xl:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem] m-xl:mr-4">
+          <p className="relative mr-[2.75rem] m-xl:w-[4.875rem] text-[5rem] 2xl:text-8xl m-xl:text-[3rem] font-bold leading-[5rem] m-xl:mr-4">
             70
             <span className={plusSignClasses}>+</span>
           </p>
           <span
-            className="text-2xl m-xl:text-base"
+            className="text-2xl m-xl:text-base 2xl:text-3xl"
             dangerouslySetInnerHTML={{ __html: text?.params?.projects }}
           />
         </article>
 
         <article className="flex items-center text-2xl font-medium">
-          <p className="relative mr-4 m-xl:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
+          <p className="relative mr-4 m-xl:w-[4.875rem] text-[5rem] 2xl:text-8xl m-xl:text-[3rem] font-bold leading-[5rem]">
             <span>4</span>
             <span className="-mr-[5px]">.</span>
             <span>9</span>
           </p>
           <span
-            className="text-2xl m-xl:text-base"
+            className="text-2xl m-xl:text-base 2xl:text-3xl"
             dangerouslySetInnerHTML={{ __html: text?.params?.rating }}
           />
         </article>
