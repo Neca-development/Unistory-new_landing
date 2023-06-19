@@ -1,5 +1,5 @@
 import reactIcon from "@public/assets/technologies/React-icon.png";
-import reactNativeIcon from "@public/assets/technologies/React-icon.png";
+import reactNativeIcon from "@public/assets/technologies/react-native.png";
 import postgresqlIcon from "@public/assets/technologies/postgresql.png";
 import postgresqDarklIcon from "@public/assets/technologies/postgresql-dark.png";
 import nestIcon from "@public/assets/technologies/nest.png";
@@ -20,6 +20,9 @@ import angularIcon from "@public/assets/technologies/angular.png";
 import expressIcon from "@public/assets/technologies/express.png";
 import expressDarkIcon from "@public/assets/technologies/express-dark.png";
 import typescriptIcon from "@public/assets/technologies/typescript.png";
+import headhunterIcon from "@public/assets/technologies/headhunter.png";
+import avitoIcon from "@public/assets/technologies/avito.png";
+import ukassaIcon from "@public/assets/technologies/ukassa.png";
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
@@ -36,7 +39,10 @@ export type AvailableTechnologiesType =
   | "chainlinkNode"
   | "chainlinkVrf"
   | "theGraph"
-  | "typescript";
+  | "typescript"
+  | "headhunter"
+  | "avito"
+  | "ukassa";
 
 type TechnologyType = {
   [index in AvailableTechnologiesType]: {
@@ -142,6 +148,27 @@ export const TECHNOLOGIES: TechnologyType = {
     icon: {
       dark: typescriptIcon.src,
       light: typescriptIcon.src,
+    },
+  },
+  headhunter: {
+    name: "HeadHunter",
+    icon: {
+      dark: headhunterIcon.src,
+      light: headhunterIcon.src,
+    },
+  },
+  avito: {
+    name: "Avito",
+    icon: {
+      dark: avitoIcon.src,
+      light: avitoIcon.src,
+    },
+  },
+  ukassa: {
+    name: "Ukassa",
+    icon: {
+      dark: ukassaIcon.src,
+      light: ukassaIcon.src,
     },
   },
 } as const;
