@@ -99,7 +99,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
           <Link
             href={"/"}
             className={clsx(
-              "w-[8.625rem] h-[31px] lg:h-[36px]",
+              "w-[8.625rem] h-[31px] lg:h-[36px] 2xl:h-[40px]",
               !shouldAnimate && "relative",
               !isHome && "relative"
             )}
@@ -121,7 +121,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
                 <Link
                   key={index}
                   className={clsx(
-                    " dark:text-light-bg-accent/[.5] transition duration-300 relative lg:text-xl",
+                    " dark:text-light-bg-accent/[.5] transition duration-300 relative lg:text-lg 2xl:text-xl",
                     !isLoad && "after:opacity-0",
                     _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg",
                     route === "#become-customer"
