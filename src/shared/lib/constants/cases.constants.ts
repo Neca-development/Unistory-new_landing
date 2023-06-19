@@ -68,7 +68,7 @@ export const CASES: ICase[] = [
     icons: ["monitor", "phone01"],
     textColor: "white",
     technologies: [
-      TECHNOLOGIES.react,
+      //TECHNOLOGIES.react,
       TECHNOLOGIES.nest,
       TECHNOLOGIES.postgresql,
       TECHNOLOGIES.reactNative,

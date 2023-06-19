@@ -115,12 +115,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
                 <Link
                   key={index}
                   className={clsx(
-                    "text-light-text-primary/[.5] dark:text-light-bg-accent/[.5] transition duration-300 relative",
+                    " dark:text-light-bg-accent/[.5] transition duration-300 relative",
                     !isLoad && "after:opacity-0",
                     _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg",
                     route === "#become-customer"
-                      ? "font-bold	hover:!text-[#ec5f3b]"
-                      : "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
+                      ? "text-light-text-primary dark:text-light-bg-accent font-bold	hover:!text-[#ec5f3b]"
+                      : "text-light-text-primary/[.5] dark:text-light-bg-accent/[.5] after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
                     currentPage.replace(/\/+$/, "") == route && "after:animate-link-hover-on"
                   )}
                   href={route}
