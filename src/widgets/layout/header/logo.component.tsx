@@ -27,7 +27,7 @@ export function Logo() {
         isHome &&
           shouldAnimate &&
           "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg",
-        !shouldAnimate && "w-[138px] h-[33px]"
+        !shouldAnimate && "w-[128px] h-[31px] lg:w-[138px] lg:h-[33px]"
       )}
     >
       <div
@@ -37,7 +37,7 @@ export function Logo() {
           isHome &&
             shouldAnimate &&
             "animate-logo-overflow-mobile lg:animate-logo-overflow-lg will-change-[transform,width]",
-          !shouldAnimate && "absolute w-full h-full"
+          !shouldAnimate && "w-full h-full"
         )}
       >
         <IconComponent

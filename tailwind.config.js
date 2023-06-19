@@ -157,8 +157,8 @@ module.exports = {
             left: "50vw",
           },
           "100%": {
-            top: "50%",
-            left: "0%",
+            top: "1rem",
+            left: "0.5rem",
           },
         },
         "logo-overflow-lg": {
