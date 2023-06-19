@@ -42,7 +42,7 @@ export function Logo() {
         <IconComponent
           key="logoLight"
           name="logoLight"
-          width="138px"
+          width="150px"
           className={clsx(
             "duration-300",
             isHome &&
@@ -57,7 +57,7 @@ export function Logo() {
         <IconComponent
           key="logoDark"
           name="logoDark"
-          width="138px"
+          width="150px"
           className={clsx(
             "duration-300",
             isHome &&
