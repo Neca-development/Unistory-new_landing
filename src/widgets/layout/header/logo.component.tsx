@@ -32,8 +32,7 @@ export function Logo() {
     >
       <div
         className={clsx(
-          "overflow-hidden flex",
-          _theme === "dark" ? "flex-col-reverse" : "flex-col",
+          "overflow-hidden flex flex-col",
           isHome &&
             shouldAnimate &&
             "animate-logo-overflow-mobile lg:animate-logo-overflow-lg will-change-[transform,width]",
@@ -50,6 +49,7 @@ export function Logo() {
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
             _theme !== "light" && "opacity-0",
+            shouldAnimate && _theme !== "light" && "hidden",
             !shouldAnimate && "absolute top-0 left-0 w-full h-full",
             temperatureTheme === "winter" ? "fill-winter" : "fill-summer"
           )}
@@ -64,6 +64,7 @@ export function Logo() {
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
             _theme !== "dark" && "opacity-0",
+            shouldAnimate && _theme !== "dark" && "hidden",
             !shouldAnimate && "absolute top-0 left-0 w-full h-full",
             temperatureTheme === "winter" ? "fill-winter" : "fill-summer"
           )}
