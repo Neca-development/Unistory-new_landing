@@ -43,7 +43,11 @@ export function Hero() {
   }
 
   return (
-    <div className={clsx("container pt-[7.125rem] t-xs:pt-12 pb-16")}>
+    <div
+      className={clsx(
+        "container pt-[7.125rem] t-xs:pt-12 pb-16 lg:flex lg:flex-col justify-center lg:min-h-[91vh]"
+      )}
+    >
       <section className="relative pb-[8.875rem] t-xs:pb-16">
         <h1
           className={clsx(textClassName, "pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0 duration-300")}
