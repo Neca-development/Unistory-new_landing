@@ -129,6 +129,7 @@ module.exports = {
           "0%": {
             top: "50vh",
             left: "50%",
+            transform: "translateY(-50%)",
           },
           "10%": {
             top: "50vh",
@@ -137,16 +138,19 @@ module.exports = {
           "65%": {
             top: "50vh",
             left: "50%",
+            transform: "translateY(-50%)",
           },
           "100%": {
             top: "1rem",
             left: "2rem",
+            transform: "translateY(0%)",
           },
         },
         "logo-enter-mobile": {
           "0%": {
             top: "50vh",
             left: "50vw",
+            transform: "translateY(-50%)",
           },
           "10%": {
             top: "50vh",
@@ -155,10 +159,12 @@ module.exports = {
           "65%": {
             top: "50vh",
             left: "50vw",
+            transform: "translateY(-50%)",
           },
           "100%": {
             top: "1rem",
             left: "0.5rem",
+            transform: "translateY(0)",
           },
         },
         "logo-overflow-lg": {
