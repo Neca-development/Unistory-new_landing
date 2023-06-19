@@ -9,7 +9,7 @@ import Timer from "../reviews/reviews.component";
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent duration-300";
 
-const timerDuration = 50000;
+const timerDuration = 20000;
 
 export function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -51,7 +51,7 @@ export function Services() {
             >
               <div className="w-10 h-10 flex items-center justify-center">
                 {activeIndex === index ? (
-                  <Timer className="min-w-fit" duration={timerDuration} />
+                  <Timer className="min-w-[32px]" duration={timerDuration} />
                 ) : (
                   <IconComponent name={s.icon} className={clsx("w-full", iconClassnameByTheme)} />
                 )}

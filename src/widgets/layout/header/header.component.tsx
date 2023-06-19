@@ -19,17 +19,17 @@ export const Header = React.memo((props: IHeaderProperties) => {
   // const router = useRouter()\
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMenuDown, setIsMenuDown] = useState(false);
-  const [isLoad, setIsLoad] = useState(false)
+  const [isLoad, setIsLoad] = useState(false);
   const { theme, systemTheme } = useTheme();
   const _theme = theme === "system" ? systemTheme : theme;
-  const {shouldAnimate} = useAnimationStore()
+  const { shouldAnimate } = useAnimationStore();
 
   const { locale } = useRouter();
   const scrollDir = useScrollDirection();
-  const {width } = useScrollbarSize();
+  const { width } = useScrollbarSize();
 
-  const {asPath} = useRouter()
-  const isHome = asPath === '/'
+  const { asPath } = useRouter();
+  const currentPage = asPath;
 
   const isMenuVisible = useMemo(() => {
     return scrollDir !== "down";
@@ -61,27 +61,25 @@ export const Header = React.memo((props: IHeaderProperties) => {
     };
 
     const timeout = setTimeout(() => {
-      setIsLoad(true)
-    }, 300)
+      setIsLoad(true);
+    }, 300);
 
     document.addEventListener("scroll", scrollFunc);
 
     return () => {
       document.removeEventListener("scroll", scrollFunc);
-      clearTimeout(timeout)
+      clearTimeout(timeout);
     };
   }, []);
 
   return (
     <header
       {...props}
-      className={clsx(
-        "relative flex w-full justify-center",
-        className,
-      )}
+      className={clsx("relative flex w-full justify-center", className)}
       style={{
         paddingLeft: shouldAnimate ? width : 0,
-      }}>
+      }}
+    >
       <div
         className={clsx(
           "flex w-full justify-center fixed z-10 transition-all duration-300",
@@ -92,15 +90,22 @@ export const Header = React.memo((props: IHeaderProperties) => {
         <div
           className={clsx(
             "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500 relative",
-            isMenuDown && "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
+            isMenuDown &&
+              "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
           )}
         >
-          <Link href={"/"} className="w-[8.625rem] min-h-[2.5rem]">
+          <Link
+            href={"/"}
+            className={clsx("w-[8.625rem] h-[31px] lg:h-[33px]", !shouldAnimate && "relative")}
+          >
             <Logo />
           </Link>
 
           <div
-            className={clsx("hidden lg:flex items-center space-x-10", isHome && shouldAnimate && 'animate-header-links-opacity')}
+            className={clsx(
+              "hidden lg:flex items-center space-x-10",
+              currentPage === "/" && shouldAnimate && "animate-header-links-opacity"
+            )}
             style={{
               marginRight: shouldAnimate ? width : 0,
             }}
@@ -115,7 +120,8 @@ export const Header = React.memo((props: IHeaderProperties) => {
                     _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg",
                     route === "#become-customer"
                       ? "font-bold	hover:!text-[#ec5f3b]"
-                      : "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off"
+                      : "after:content-[''] after:absolute after:-bottom-1 hover:after:animate-link-hover-on after:h-0.5 after:animate-link-hover-off",
+                    currentPage.replace(/\/+$/, "") == route && "after:animate-link-hover-on"
                   )}
                   href={route}
                 >

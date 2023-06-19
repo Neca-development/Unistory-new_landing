@@ -20,13 +20,13 @@ const plusSignClasses =
 
 export function Hero() {
   const { textClassName } = useThemeContext();
-  const [earthColor, setEarthColor] = useState(false)
-  const mounted = useMounted()
-  const {shouldAnimate} = useAnimationStore()
+  const [earthColor, setEarthColor] = useState(false);
+  const mounted = useMounted();
+  const { shouldAnimate } = useAnimationStore();
 
   const toggleEarthColor = () => {
-    setEarthColor(prevState => !prevState)
-  }
+    setEarthColor((prevState) => !prevState);
+  };
 
   const { locale } = useRouter();
 
@@ -39,21 +39,28 @@ export function Hero() {
   }, [locale]);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
     <div className={clsx("container pt-[7.125rem] t-xs:pt-12 pb-16")}>
       <section className="relative pb-[8.875rem] t-xs:pb-16">
-        <h1 className={clsx(textClassName, "pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0 duration-300")}>
+        <h1
+          className={clsx(textClassName, "pr-24 text-h1 t-xs:text-mob-h1 t-xs:pr-0 duration-300")}
+        >
           {text?.description.first} <br />
           {text?.description.second}
-          <button className={clsx(
-            "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]",
-            shouldAnimate && "animate-hero-icons-fade-in"
-          )}
-                  onClick={toggleEarthColor}>
-            <IconComponent name={earthColor ? "earthColor" : "earth"} className={iconClassnameByTheme}/>
+          <button
+            className={clsx(
+              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 t-xs:right-[0.4rem]",
+              shouldAnimate && "animate-hero-icons-fade-in"
+            )}
+            onClick={toggleEarthColor}
+          >
+            <IconComponent
+              name={earthColor ? "earthColor" : "earth"}
+              className={iconClassnameByTheme}
+            />
           </button>
           <span className="font-roboto font-light italic inline-block text-light-text-primary dark:text-dark-text-primary duration-300">
             {text?.description.third}
@@ -96,7 +103,9 @@ export function Hero() {
 
         <article className="flex items-center text-2xl font-medium">
           <p className="relative mr-4 m-xl:w-[4.875rem] text-[5rem] m-xl:text-[3rem] font-bold leading-[5rem]">
-            4.9
+            <span>4</span>
+            <span className="-mr-[5px]">.</span>
+            <span>9</span>
           </p>
           <span
             className="text-2xl m-xl:text-base"
