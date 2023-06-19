@@ -68,11 +68,12 @@ export const CASES: ICase[] = [
     icons: ["monitor", "phone01"],
     textColor: "white",
     technologies: [
-      //TECHNOLOGIES.react,
       TECHNOLOGIES.nest,
       TECHNOLOGIES.postgresql,
       TECHNOLOGIES.reactNative,
-      TECHNOLOGIES.node,
+      TECHNOLOGIES.headhunter,
+      TECHNOLOGIES.avito,
+      TECHNOLOGIES.ukassa,
     ],
     banner: {
       desktop: personalPromo.src,

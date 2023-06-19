@@ -31,6 +31,8 @@ export const Header = React.memo((props: IHeaderProperties) => {
   const { asPath } = useRouter();
   const currentPage = asPath;
 
+  const isHome = asPath === "/";
+
   const isMenuVisible = useMemo(() => {
     return scrollDir !== "down";
   }, [scrollDir]);
@@ -96,7 +98,11 @@ export const Header = React.memo((props: IHeaderProperties) => {
         >
           <Link
             href={"/"}
-            className={clsx("w-[8.625rem] h-[31px] lg:h-[36px]", !shouldAnimate && "relative")}
+            className={clsx(
+              "w-[8.625rem] h-[31px] lg:h-[36px]",
+              !shouldAnimate && "relative",
+              !isHome && "relative"
+            )}
           >
             <Logo />
           </Link>
