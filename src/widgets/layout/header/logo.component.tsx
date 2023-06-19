@@ -27,7 +27,7 @@ export function Logo() {
         isHome &&
           shouldAnimate &&
           "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg ",
-        !shouldAnimate && "w-[128px] h-[31px] lg:w-[138px] lg:h-[33px]"
+        !shouldAnimate && "w-[128px] h-[31px] lg:w-[150px] lg:h-[36px]"
       )}
     >
       <div

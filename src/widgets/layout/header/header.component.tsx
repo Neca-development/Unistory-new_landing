@@ -96,7 +96,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
         >
           <Link
             href={"/"}
-            className={clsx("w-[8.625rem] h-[31px] lg:h-[33px]", !shouldAnimate && "relative")}
+            className={clsx("w-[8.625rem] h-[31px] lg:h-[36px]", !shouldAnimate && "relative")}
           >
             <Logo />
           </Link>
