@@ -46,7 +46,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
           <div
             className={clsx(
               showAddress
-                ? "ml-auto space-y-7 t-xs:ml-0 sm:w-[38.75rem]"
+                ? "ml-auto space-y-7 t-xs:ml-0]"
                 : "flex justify-between items-center grow-[1]"
             )}
           >

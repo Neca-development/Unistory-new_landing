@@ -2,9 +2,9 @@ import { IconsTypes } from "@shared/ui";
 
 export const HeroEn = {
   description: {
-    first: "Developing applications",
-    second: "with complex",
-    third: "integrations",
+    first: "Developing ",
+    second: "digital",
+    third: "solutions",
     fourth: "for web & mobile",
   },
   params: {

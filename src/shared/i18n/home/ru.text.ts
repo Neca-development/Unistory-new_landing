@@ -2,15 +2,15 @@ import { IconsTypes } from "@shared/ui";
 
 export const HeroRu = {
   description: {
-    first: "Разрабатываем приложения",
-    second: "с комлексными",
-    third: "интеграциями",
-    fourth: "для web & mobile",
+    first: "Разрабатываем ",
+    second: "цифровые",
+    third: "решения",
+    fourth: "для бизнеса",
   },
   params: {
     teamSize: "сотрудников <br/>в штате",
     projects: "успешных <br/>проектов",
-    rating: "оценка <br/>на UpWork",
+    rating: "оценка <br/>на Clutch",
   },
 };
 
