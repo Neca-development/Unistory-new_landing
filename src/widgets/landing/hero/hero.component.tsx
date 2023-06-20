@@ -114,7 +114,7 @@ export function Hero() {
             <span className="-mr-[5px]">.</span>
             <span>0</span>
             <span className="absolute top-3 -right-6 text-primary-s 2xl:top-0">
-              <IconComponent name="clutchStar" className="w-[20px] h-[20px]" />
+              <IconComponent name="clutchStar" className="w-6 h-6 m-xl:w-4 m-xl:h-4" />
             </span>
           </p>
           <span
