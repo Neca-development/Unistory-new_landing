@@ -41,7 +41,7 @@ export const ServicesRu: Array<{
     <br /> <br />
     — frontend: React, Angular, Vue, TS
     <br />
-    — backend: Node.js, C#, Битрикс24
+    — backend: Node.js, C#
     <br />— mobile: React native, Kotlin, Swift`,
   },
   {
