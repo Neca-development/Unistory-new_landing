@@ -42,16 +42,19 @@ export function Stack({ data }: IStackProps) {
             <div
               key={idx}
               className={clsx(
-                "flex bg-light-bg w-[25rem] md:w-[22.3%] dark:bg-dark-bg py-12 px-[1.5rem] flex-col items-center"
+                "flex bg-light-bg w-[25rem] md:w-[22.3%] dark:bg-dark-bg p-6 flex-col items-center"
                 // idx === data?.length - 1 && idx % 2 === 0 && 'col-span-2'
               )}
             >
-              <Image
-                src={technology.icon[_theme]!}
-                width={isMobile ? 150 : 180}
-                height={120}
-                alt=""
-              />
+              <div className="relative w-full h-0 pt-[100%]">
+                <Image
+                  src={technology.icon[_theme]!}
+                  width={isMobile ? 150 : 180}
+                  height={120}
+                  alt=""
+                  className="absolute top-0 left-0 w-full h-full object-contain"
+                />
+              </div>
               {/* <div className='relative w-full h-28'>
                 <Image src={technology.icon} alt={technology.name} fill />
               </div> */}
