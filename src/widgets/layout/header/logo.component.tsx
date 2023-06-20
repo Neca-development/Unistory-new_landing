@@ -6,7 +6,11 @@ import { useMounted } from "@shared/lib/hooks/useMounted";
 import { useAnimationStore } from "@shared/lib/store";
 import { useRouter } from "next/router";
 
-export function Logo() {
+interface ILogoProps {
+  mobileMenu?: boolean;
+}
+
+export function Logo(props: ILogoProps) {
   const { theme, systemTheme } = useTheme();
   const { temperatureTheme } = useThemeContext();
   const _theme = theme === "system" ? systemTheme : theme;
@@ -15,6 +19,8 @@ export function Logo() {
   const { asPath } = useRouter();
   const isHome = asPath === "/";
   const { shouldAnimate } = useAnimationStore();
+
+  const { mobileMenu } = props;
 
   if (!mounted) {
     return null;
@@ -27,7 +33,8 @@ export function Logo() {
         isHome &&
           shouldAnimate &&
           "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg ",
-        !shouldAnimate && "w-[128px] h-[31px] lg:w-[150px] lg:h-[36px] 2xl:w-[166px] 2xl:h-[40px]"
+        !shouldAnimate && "w-[128px] h-[31px] lg:w-[150px] lg:h-[36px] 2xl:w-[166px] 2xl:h-[40px]",
+        mobileMenu && "relative"
       )}
     >
       <div

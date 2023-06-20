@@ -28,7 +28,7 @@ export function MobileMenu(props: IMobileMenuProps) {
         <div className="flex h-full flex-col bg-light-surface px-[1rem] pt-[28px] pb-[80px] dark:bg-dark-surface">
           <div className="flex items-center justify-between">
             <div className="h-8">
-              <Logo />
+              <Logo mobileMenu={true} />
             </div>
             <button onClick={onClose} className="p-[0.375rem]">
               <CloseBtn />
@@ -41,7 +41,7 @@ export function MobileMenu(props: IMobileMenuProps) {
                   key={index}
                   onClick={onClose}
                   className={clsx(
-                    "mb-[2rem] block text-[2.25rem] font-medium leading-none text-dark-surface dark:text-light-surface",
+                    "mb-[2rem] block text-[1.5rem] font-medium leading-none text-dark-surface dark:text-light-surface",
                     route.includes("become-customer") && "dark:text-[#ec5f3b] text-[#ec5f3b]"
                   )}
                   href={route}
@@ -53,7 +53,7 @@ export function MobileMenu(props: IMobileMenuProps) {
           </nav>
           <a
             href="mailto:contact@unistory.app"
-            className="text-[1.5rem] font-medium text-dark-surface dark:text-light-surface"
+            className="text-[1.25rem] font-medium text-dark-surface dark:text-light-surface"
           >
             contact@unistory.app
           </a>

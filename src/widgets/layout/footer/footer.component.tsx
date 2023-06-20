@@ -81,9 +81,11 @@ export const Footer = React.memo((props: IFooterProperties) => {
 
         <hr className="mt-8 mb-6 border-2 text-[#2b2b2b]" />
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between t-xs:mx-3">
           <IconComponent name="logoDarkOutline" className="w-[6.5rem]" />
-          <p className=" opacity-50 text-xs">&copy; {new Date().getFullYear()} Unistory</p>
+          <p className=" opacity-50 text-xs t-xs:text-lg">
+            &copy; {new Date().getFullYear()} Unistory
+          </p>
         </div>
       </div>
     </footer>
