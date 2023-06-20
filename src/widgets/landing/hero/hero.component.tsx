@@ -45,10 +45,10 @@ export function Hero() {
   return (
     <div
       className={clsx(
-        "container pt-[7.125rem] t-xs:pt-12 pb-16 lg:flex lg:flex-col justify-center lg:min-h-[91vh]"
+        "container pt-[3.5rem] t-xs:pt-12 pb-14 lg:pb-8 lg:flex lg:flex-col justify-center lg:min-h-[91vh]"
       )}
     >
-      <section className="relative pb-[8rem] lg:mb-[10vh] t-xs:pb-16">
+      <section className="relative pb-[5rem] lg:mb-[10vh] t-xs:pb-16">
         <h1
           className={clsx(
             textClassName,
@@ -113,7 +113,7 @@ export function Hero() {
             <span>5</span>
             <span className="-mr-[5px]">.</span>
             <span>0</span>
-            <span className="absolute top-3 -right-6 text-primary-s">
+            <span className="absolute top-3 -right-6 text-primary-s 2xl:top-0">
               <IconComponent name="clutchStar" className="w-[20px] h-[20px]" />
             </span>
           </p>

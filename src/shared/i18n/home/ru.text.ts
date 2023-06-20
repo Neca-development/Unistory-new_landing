@@ -2,7 +2,7 @@ import { IconsTypes } from "@shared/ui";
 
 export const HeroRu = {
   description: {
-    first: "Разрабатываем",
+    first: "Разрабатываем ",
     second: "цифровые",
     third: "решения",
     fourth: "для бизнеса",

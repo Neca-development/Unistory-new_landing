@@ -68,9 +68,9 @@ module.exports = {
       },
       fontSize: {
         h1: [
-          "4.75rem",
+          "6.0rem",
           {
-            lineHeight: "5.375rem",
+            lineHeight: "6.575rem",
             letterSpacing: "0.02em",
             fontWeight: "800",
           },
