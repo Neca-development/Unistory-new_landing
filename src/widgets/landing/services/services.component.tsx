@@ -4,7 +4,6 @@ import clsx from "clsx";
 import { useInterval } from "@shared/lib/hooks/useInterval.hook";
 import { useRouter } from "next/router";
 import React, { useCallback, useState } from "react";
-import Timer from "../reviews/reviews.component";
 
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent duration-300";
