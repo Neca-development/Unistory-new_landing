@@ -134,22 +134,22 @@ module.exports = {
         "logo-enter-lg": {
           "0%": {
             top: "50vh",
-            left: "50%",
-            transform: "translateY(-50%)",
+            left: "50vh",
+            transform: "translate(-50%, -50%)",
           },
           "10%": {
             top: "50vh",
-            left: "50%",
+            left: "50vh",
           },
           "65%": {
             top: "50vh",
-            left: "50%",
-            transform: "translateY(-50%)",
+            left: "50vh",
+            transform: "translate(-50%, -50%)",
           },
           "100%": {
             top: "1rem",
             left: "2rem",
-            transform: "translateY(0%)",
+            transform: "translate(0%)",
           },
         },
         "logo-enter-mobile": {
@@ -176,11 +176,11 @@ module.exports = {
         "logo-overflow-lg": {
           "0%": {
             width: "25%",
-            transform: "translateX(-70%)",
+            transform: "translateX(-60%)",
           },
           "20%": {
             width: "25%",
-            transform: "translateX(-70%)",
+            transform: "translateX(-60%)",
           },
           "60%": {
             transform: "translateX(-60%)",
