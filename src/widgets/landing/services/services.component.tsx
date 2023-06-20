@@ -1,14 +1,14 @@
 import { ServicesEn, ServicesRu } from "@shared/i18n";
 import { IconComponent } from "@shared/ui";
 import clsx from "clsx";
-import { useInterval } from "@shared/lib/hooks/useInterval.hook";
+// import { useInterval } from "@shared/lib/hooks/useInterval.hook";
 import { useRouter } from "next/router";
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent duration-300";
 
-const timerDuration = 20000;
+//const timerDuration = 20000;
 
 export function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,6 +23,7 @@ export function Services() {
     return ServicesEn;
   }, [locale]);
 
+  /*
   const nextSlide = useCallback(() => {
     setActiveIndex((activeIndex) => {
       if (activeIndex === data.length - 1) {
@@ -31,9 +32,10 @@ export function Services() {
 
       return activeIndex + 1;
     });
-  }, [activeIndex]);
+  }, [activeIndex]); 
+  */
 
-  useInterval(nextSlide, timerDuration, [activeIndex]);
+  //useInterval(nextSlide, timerDuration, [activeIndex]);
 
   return (
     <section className="container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">

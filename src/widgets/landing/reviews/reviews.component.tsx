@@ -1,12 +1,12 @@
 import { ReviewsEN, ReviewsRU } from "@shared/i18n";
 import { CASES } from "@shared/lib";
-import { useInterval } from "@shared/lib/hooks/useInterval.hook";
+// import { useInterval } from "@shared/lib/hooks/useInterval.hook";
 import { ICase } from "@shared/lib/types";
 import { WorksCard } from "@widgets/works-card";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 function Timer({ duration, className }: { duration: number; className?: string }) {
   const [timeLeft, setTimeLeft] = useState(duration * 0.65);
@@ -57,7 +57,7 @@ const setGasMonstersOnFirstPlace = (a: ICase, b: ICase) =>
   a.id === "gas-monsters" ? -1 : b.id === "gas-monsters" ? 1 : 0;
 const reviewsData = CASES.filter((c) => c.review).sort(setGasMonstersOnFirstPlace);
 
-const timerDuration = 20000;
+// const timerDuration = 20000;
 
 export function Reviews() {
   const [activeReviewIndex, setActiveReviewIndex] = useState(0);
@@ -71,6 +71,8 @@ export function Reviews() {
     return ReviewsEN;
   }, [locale]);
 
+  /*
+  
   const nextSlide = useCallback(() => {
     setActiveReviewIndex((activeReviewIndex) => {
       if (activeReviewIndex === reviewsData.length - 1) {
@@ -82,6 +84,7 @@ export function Reviews() {
   }, [activeReviewIndex]);
 
   useInterval(nextSlide, timerDuration, [activeReviewIndex]);
+  */
 
   return (
     <section className="container pt-14 pb-[7.5rem]">
@@ -131,18 +134,18 @@ export function Reviews() {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-wrap gap-6">
+      <div className="mt-10 flex flex-wrap gap-6 t-xs:gap-3">
         {reviewsData.map((r, idx) => (
           <button
             key={idx}
-            className="py-3 px-4 bg-light-surface dark:bg-dark-surface text-base lg:text-2xl rounded-sm flex items-center "
+            className="py-3 px-4 bg-light-surface dark:bg-dark-surface text-base lg:text-2xl rounded-sm flex items-center t-xs:px-2 t-xs:py-1"
             onClick={() => setActiveReviewIndex(idx)}
           >
-            {activeReviewIndex === idx && <Timer duration={timerDuration} />}
+            {/* {activeReviewIndex === idx && <Timer duration={timerDuration} />} */}
             <span
               className={clsx(
                 "opacity-50 h-[32px] flex items-center",
-                activeReviewIndex === idx && "opacity-100 font-bold  ml-[18px]"
+                activeReviewIndex === idx && "opacity-100 font-bold"
               )}
             >
               {r?.title}
