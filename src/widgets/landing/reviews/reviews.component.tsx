@@ -1,12 +1,12 @@
 import { ReviewsEN, ReviewsRU } from "@shared/i18n";
 import { CASES } from "@shared/lib";
-import { useInterval } from "@shared/lib/hooks/useInterval.hook";
+// import { useInterval } from "@shared/lib/hooks/useInterval.hook";
 import { ICase } from "@shared/lib/types";
 import { WorksCard } from "@widgets/works-card";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 function Timer({ duration, className }: { duration: number; className?: string }) {
   const [timeLeft, setTimeLeft] = useState(duration * 0.65);
@@ -57,7 +57,7 @@ const setGasMonstersOnFirstPlace = (a: ICase, b: ICase) =>
   a.id === "gas-monsters" ? -1 : b.id === "gas-monsters" ? 1 : 0;
 const reviewsData = CASES.filter((c) => c.review).sort(setGasMonstersOnFirstPlace);
 
-const timerDuration = 20000;
+// const timerDuration = 20000;
 
 export function Reviews() {
   const [activeReviewIndex, setActiveReviewIndex] = useState(0);
