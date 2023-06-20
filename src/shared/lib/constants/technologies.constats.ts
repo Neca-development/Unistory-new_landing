@@ -3,7 +3,6 @@ import reactNativeIcon from "@public/assets/technologies/react-native.png";
 import postgresqlIcon from "@public/assets/technologies/postgresql.png";
 import postgresqDarklIcon from "@public/assets/technologies/postgresql-dark.png";
 import nestIcon from "@public/assets/technologies/nest.png";
-import nestDarkIcon from "@public/assets/technologies/nest-dark.png";
 import nextjsIcon from "@public/assets/technologies/nextjs.png";
 import nextjsDarkIcon from "@public/assets/technologies/nextjs-dark.png";
 import chainlinkNodeIcon from "@public/assets/technologies/chainlink-node.png";
@@ -21,8 +20,11 @@ import expressIcon from "@public/assets/technologies/express.png";
 import expressDarkIcon from "@public/assets/technologies/express-dark.png";
 import typescriptIcon from "@public/assets/technologies/typescript.png";
 import headhunterIcon from "@public/assets/technologies/headhunter.png";
+import headhunterDarkIcon from "@public/assets/technologies/headhunter-dark.png";
 import avitoIcon from "@public/assets/technologies/avito.png";
+import avitoDarkIcon from "@public/assets/technologies/avito-dark.png";
 import ukassaIcon from "@public/assets/technologies/ukassa.png";
+import ukassaDarkIcon from "@public/assets/technologies/ukassa-dark.png";
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
@@ -90,7 +92,7 @@ export const TECHNOLOGIES: TechnologyType = {
   nest: {
     name: "Nest",
     icon: {
-      dark: nestDarkIcon.src,
+      dark: nestIcon.src,
       light: nestIcon.src,
     },
   },
@@ -153,21 +155,21 @@ export const TECHNOLOGIES: TechnologyType = {
   headhunter: {
     name: "HeadHunter",
     icon: {
-      dark: headhunterIcon.src,
+      dark: headhunterDarkIcon.src,
       light: headhunterIcon.src,
     },
   },
   avito: {
     name: "Avito",
     icon: {
-      dark: avitoIcon.src,
+      dark: avitoDarkIcon.src,
       light: avitoIcon.src,
     },
   },
   ukassa: {
     name: "Ukassa",
     icon: {
-      dark: ukassaIcon.src,
+      dark: ukassaDarkIcon.src,
       light: ukassaIcon.src,
     },
   },
