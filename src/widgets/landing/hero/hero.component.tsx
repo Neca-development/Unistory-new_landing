@@ -52,14 +52,14 @@ export function Hero() {
         <h1
           className={clsx(
             textClassName,
-            "pr-24 text-h1 2xl:text-large-h1 t-xs:text-mob-h1 t-xs:pr-0 duration-300"
+            "pr-24 text-h1 2xl:text-large-h1 t-xs:text-mob-h1 text-center t-xs:pr-0 duration-300"
           )}
         >
           {text?.description.first} <br />
-          {text?.description.second}
+          <span className="t-xs:mr-2">{text?.description.second}</span>
           <button
             className={clsx(
-              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-16 2xl:w-12 t-xs:right-[0.4rem]",
+              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-24 2xl:w-12 t-xs:right-[0.4rem]",
               shouldAnimate && "animate-hero-icons-fade-in"
             )}
             onClick={toggleEarthColor}
@@ -85,7 +85,7 @@ export function Hero() {
         <SunComponent />
       </section>
 
-      <section className="flex items-center justify-between t-xs:block">
+      <section className="flex items-center justify-between t-xs:block t-xs:ml-8">
         <article className="flex items-center text-2xl t-xs:mb-8 font-medium">
           <p className="relative mr-[2.75rem] m-xl:w-[4.875rem] text-[5rem] 2xl:text-8xl m-xl:text-[3rem] font-bold leading-[5rem] m-xl:mr-4">
             25
@@ -109,11 +109,11 @@ export function Hero() {
         </article>
 
         <article className="flex items-center text-2xl font-medium">
-          <p className="relative mr-[2.5rem] m-xl:w-[4.875rem] text-[5rem] 2xl:text-8xl m-xl:text-[3rem] font-bold leading-[5rem]">
+          <p className="relative mr-[2.5rem] m-xl:w-[4.875rem] text-[5rem] 2xl:text-8xl m-xl:text-[3rem] font-bold leading-[5rem] m-xl:mr-5">
             <span>5</span>
             <span className="-mr-[5px]">.</span>
             <span>0</span>
-            <span className="absolute top-3 -right-6 text-primary-s 2xl:top-0">
+            <span className="absolute top-3 -right-6 text-primary-s 2xl:top-0 m-xl:-right-2 m-xl:top-5">
               <IconComponent name="clutchStar" className="w-6 h-6 m-xl:w-4 m-xl:h-4" />
             </span>
           </p>

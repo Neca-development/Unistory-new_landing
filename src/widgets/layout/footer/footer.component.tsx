@@ -23,13 +23,16 @@ export const Footer = React.memo((props: IFooterProperties) => {
   return (
     <footer className={clsx("bg-dark-surface", className)}>
       <div
-        className={clsx("container pb-6 text-dark-text-primary", showAddress ? "pt-14" : "pt-9")}
+        className={clsx(
+          "container pb-6 text-dark-text-primary",
+          showAddress ? "pt-14 t-xs:pt-12" : "pt-9"
+        )}
       >
         <div className="flex items-start t-xs:flex-col">
           {showAddress &&
             text.cities.map((city) => (
               <div
-                className="flex flex-col space-y-3 w-[18.125rem] first:mr-6 t-xs:mb-12"
+                className="flex flex-col space-y-3 md:w-[18.125rem] md:first:mr-6 t-xs:mb-12 t-xs:max-w-[90%] t-xs:mx-auto t-xs:text-center"
                 key={city.name}
               >
                 <p className="text-2xl font-medium t-xs:text-xl">{city.name}</p>
@@ -46,15 +49,15 @@ export const Footer = React.memo((props: IFooterProperties) => {
           <div
             className={clsx(
               showAddress
-                ? "ml-auto space-y-7 t-xs:ml-0]"
+                ? "ml-auto space-y-7 t-xs:mr-auto"
                 : "flex justify-between items-center grow-[1]"
             )}
           >
             <h4
-              className="font-medium text-2xl"
+              className="font-medium text-2xl text-center"
               dangerouslySetInnerHTML={{ __html: text.slogan }}
             />
-            <div className="flex items-center space-x-6 opacity-50">
+            <div className="flex items-center space-x-6 opacity-50 t-xs:justify-center">
               {/* <a rel='nofollow' href='https://t.me/unistory_app' target='_blank'>
                 <IconComponent name='telegram' className='w-6' />
               </a> */}
