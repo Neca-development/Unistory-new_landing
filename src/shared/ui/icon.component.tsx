@@ -25,81 +25,70 @@ const phone01 = dynamic(() => import("@public/assets/icons/phone-01.svg"));
 const phone02 = dynamic(() => import("@public/assets/icons/phone-02.svg"));
 const monitor = dynamic(() => import("@public/assets/icons/monitor.svg"));
 const bitcoin = dynamic(() => import("@public/assets/icons/bitcoin.svg"));
-const arrowRight = dynamic(
-	() => import("@public/assets/icons/arrow-right.svg")
-);
+const arrowRight = dynamic(() => import("@public/assets/icons/arrow-right.svg"));
 
 const puddle = dynamic(() => import("@public/assets/icons/puddle.svg"));
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
 const clip = dynamic(() => import("@public/assets/icons/clip.svg"));
-const logoDarkOutline = dynamic(
-	() => import("@public/assets/icons/logo-dark-outline.svg")
-);
+const logoDarkOutline = dynamic(() => import("@public/assets/icons/logo-dark-outline.svg"));
 const telegram = dynamic(() => import("@public/assets/icons/telegram.svg"));
 const whatsApp = dynamic(() => import("@public/assets/icons/whatsApp.svg"));
 const clutch = dynamic(() => import("@public/assets/icons/clutch.svg"));
 const upwork = dynamic(() => import("@public/assets/icons/upwork.svg"));
-const closeLight = dynamic(
-	() => import("@public/assets/icons/close-light.svg")
-);
+const closeLight = dynamic(() => import("@public/assets/icons/close-light.svg"));
 const closeDark = dynamic(() => import("@public/assets/icons/close-dark.svg"));
-const menuBtnLight = dynamic(
-	() => import("@public/assets/icons/menu-btn-light.svg")
-);
-const menuBtnDark = dynamic(
-	() => import("@public/assets/icons/menu-btn-dark.svg")
-);
+const menuBtnLight = dynamic(() => import("@public/assets/icons/menu-btn-light.svg"));
+const menuBtnDark = dynamic(() => import("@public/assets/icons/menu-btn-dark.svg"));
+const clutchStar = dynamic(() => import("@public/assets/icons/clutch-star.svg"));
 
 const iconTypes = {
-	unistory,
-	logoLight,
-	logoDark,
-	sun,
-	sunset,
-	winter,
-	summer,
-	earth,
-	earthColor,
-	rocket,
-	cloud,
-	cloudEmpty,
-	lightning,
-	light,
-	rainOne,
-	rainTwo,
-	rainThree,
-	grid,
-	layout,
-	folder,
-	phone01,
-	phone02,
-	monitor,
-	bitcoin,
-	arrowRight,
-	puddle,
-	message,
-	clip,
-	logoDarkOutline,
-	telegram,
-	whatsApp,
-	clutch,
-	upwork,
-	closeLight,
-	closeDark,
-	menuBtnLight,
-	menuBtnDark,
+  unistory,
+  logoLight,
+  logoDark,
+  sun,
+  sunset,
+  winter,
+  summer,
+  earth,
+  earthColor,
+  rocket,
+  cloud,
+  cloudEmpty,
+  lightning,
+  light,
+  rainOne,
+  rainTwo,
+  rainThree,
+  grid,
+  layout,
+  folder,
+  phone01,
+  phone02,
+  monitor,
+  bitcoin,
+  arrowRight,
+  puddle,
+  message,
+  clip,
+  logoDarkOutline,
+  telegram,
+  whatsApp,
+  clutch,
+  upwork,
+  closeLight,
+  closeDark,
+  menuBtnLight,
+  menuBtnDark,
+  clutchStar,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
 
-export interface IIconComponentProperties
-	extends React.SVGAttributes<SVGElement> {
-	name: IconsTypes;
+export interface IIconComponentProperties extends React.SVGAttributes<SVGElement> {
+  name: IconsTypes;
 }
 
-export const IconComponent = React.memo(
-	({ name, ...props }: IIconComponentProperties) => {
-		const Icon = iconTypes[name];
-		return <Icon {...props} />;
-	}
-);
+export const IconComponent = React.memo(({ name, ...props }: IIconComponentProperties) => {
+  const Icon = iconTypes[name];
+  return <Icon {...props} />;
+});

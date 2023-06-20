@@ -40,12 +40,12 @@ export function Works() {
   return (
     <section className="bg-light-surface dark:bg-dark-surface duration-300">
       <div className="container pt-20 pb-[3.5rem] t-xs:pt-10">
-        <h2
+        {/* <h2
           className="font-bold text-5xl t-xs:text-[1.375rem]"
           dangerouslySetInnerHTML={{ __html: text.title }}
-        />
+        /> */}
 
-        <div className="grid grid-cols-3 gap-10 mt-16 t-xs:[&>*:nth-child(6n+1)]:col-span-1 [&>*:nth-child(6n+1)]:col-span-2 t-xs:grid-cols-1 t-xs:mt-6 display t-xs:gap-4">
+        <div className="grid grid-cols-3 gap-10 t-xs:[&>*:nth-child(6n+1)]:col-span-1 [&>*:nth-child(6n+1)]:col-span-2 t-xs:grid-cols-1 t-xs:mt-6 display t-xs:gap-4">
           {cases.map((work, index) => (
             <WorksCard key={index} work={work} isLargeImage={index % 6 === 0} />
           ))}
