@@ -71,6 +71,8 @@ export function Reviews() {
     return ReviewsEN;
   }, [locale]);
 
+  /*
+  
   const nextSlide = useCallback(() => {
     setActiveReviewIndex((activeReviewIndex) => {
       if (activeReviewIndex === reviewsData.length - 1) {
@@ -82,6 +84,7 @@ export function Reviews() {
   }, [activeReviewIndex]);
 
   useInterval(nextSlide, timerDuration, [activeReviewIndex]);
+  */
 
   return (
     <section className="container pt-14 pb-[7.5rem]">
@@ -131,18 +134,18 @@ export function Reviews() {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-wrap gap-6">
+      <div className="mt-10 flex flex-wrap gap-6 t-xs:gap-3">
         {reviewsData.map((r, idx) => (
           <button
             key={idx}
-            className="py-3 px-4 bg-light-surface dark:bg-dark-surface text-base lg:text-2xl rounded-sm flex items-center "
+            className="py-3 px-4 bg-light-surface dark:bg-dark-surface text-base lg:text-2xl rounded-sm flex items-center t-xs:px-2 t-xs:py-1"
             onClick={() => setActiveReviewIndex(idx)}
           >
-            {activeReviewIndex === idx && <Timer duration={timerDuration} />}
+            {/* {activeReviewIndex === idx && <Timer duration={timerDuration} />} */}
             <span
               className={clsx(
                 "opacity-50 h-[32px] flex items-center",
-                activeReviewIndex === idx && "opacity-100 font-bold  ml-[18px]"
+                activeReviewIndex === idx && "opacity-100 font-bold"
               )}
             >
               {r?.title}
