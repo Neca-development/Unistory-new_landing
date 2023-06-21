@@ -148,8 +148,30 @@ module.exports = {
             transform: "translate(-50%, -50%)",
           },
           "100%": {
-            top: "1rem",
-            left: "2rem",
+            top: "2rem",
+            left: "calc((100vw - 70rem) / 2)",
+            transform: "translate(0, 0)",
+          },
+        },
+        "logo-enter-xl": {
+          "0%": {
+            top: "50vh",
+            left: "50vw",
+            transform: "translate(-50%, -50%)",
+          },
+          "10%": {
+            top: "50vh",
+            left: "50vw",
+            transform: "translate(-50%, -50%)",
+          },
+          "65%": {
+            top: "50vh",
+            left: "50vw",
+            transform: "translate(-50%, -50%)",
+          },
+          "100%": {
+            top: "2rem",
+            left: "calc((100vw - 80rem) / 2)",
             transform: "translate(0, 0)",
           },
         },
@@ -177,19 +199,15 @@ module.exports = {
         "logo-overflow-lg": {
           "0%": {
             width: "25%",
-            //transform: "translateX(-70%)",
           },
           "20%": {
             width: "25%",
-            //transform: "translateX(-70%)",
           },
           "60%": {
             width: "100%",
-            //transform: "translateX(-60%)",
           },
           "100%": {
             width: "100%",
-            //transform: "translateX(0)",
           },
         },
         "logo-overflow-mobile": {
@@ -295,6 +313,7 @@ module.exports = {
         "zoom-out": "zoom-out 0.3s ease-out forwards",
         "zoom-in": "zoom-in 0.3s ease-out forwards",
         "logo-enter-lg": `logo-enter-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        "logo-enter-xl": `logo-enter-xl ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         "logo-enter-mobile": `logo-enter-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         "logo-overflow-lg": `logo-overflow-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         "logo-overflow-mobile": `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,

@@ -32,7 +32,7 @@ export function Logo(props: ILogoProps) {
         "fixed top-0 left-0",
         isHome &&
           shouldAnimate &&
-          "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg",
+          "will-change-[top,left] animate-logo-enter-mobile lg:animate-logo-enter-lg 2xl:animate-logo-enter-xl",
         !shouldAnimate &&
           "relative w-[128px] h-[31px] lg:w-[150px] lg:h-[36px] 2xl:w-[166px] 2xl:h-[40px]",
         mobileMenu && "relative"
