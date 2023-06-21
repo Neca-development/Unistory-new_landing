@@ -179,21 +179,22 @@ module.exports = {
           "0%": {
             top: "50vh",
             left: "50vw",
-            transform: "translateY(-50%)",
+            transform: "translate(-50%, -50%)",
           },
           "10%": {
             top: "50vh",
             left: "50vw",
+            transform: "translate(-50%, -50%)",
           },
           "65%": {
             top: "50vh",
             left: "50vw",
-            transform: "translateY(-50%)",
+            transform: "translate(-50%, -50%)",
           },
           "100%": {
-            top: "1rem",
-            left: "0.5rem",
-            transform: "translateY(0)",
+            top: "2rem",
+            left: "1rem",
+            transform: "translate(0, 0)",
           },
         },
         "logo-overflow-lg": {
@@ -213,22 +214,15 @@ module.exports = {
         "logo-overflow-mobile": {
           "0%": {
             width: "25%",
-            transform: "translateX(-65%)",
           },
           "20%": {
             width: "25%",
-            transform: "translateX(-65%)",
-          },
-          "60%": {
-            transform: "translateX(-55%)",
-            width: "100%",
           },
           "65%": {
-            transform: "translateX(-55%)",
             width: "100%",
           },
           "100%": {
-            transform: "translateX(0)",
+            width: "100%",
           },
         },
         "main-logo-width-lg": {
