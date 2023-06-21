@@ -1,25 +1,47 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { IconComponent } from "@shared/ui";
 import clsx from "clsx";
 import { useAnimationStore } from "@shared/lib/store";
-import gsap from "gsap";
+import gsap, { Linear } from "gsap";
+import MotionPathPlugin from "gsap/dist/MotionPathPlugin";
+
+gsap.registerPlugin(MotionPathPlugin);
 
 const iconClassnameByTheme =
   "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent";
 const RocketComponent = () => {
   const { shouldAnimate } = useAnimationStore();
   const rocketScope = useRef<HTMLDivElement>(null);
+  const [rocketFly, setRocketFly] = useState<boolean>(false);
+
+  function tlComplete() {
+    setRocketFly(false);
+  }
 
   function rocketLaunch() {
-    let ctx = gsap.context(() => {
-      let gsapTL = gsap.timeline();
-      gsapTL.to(".rocket", { x: 100, duration: 2 });
-      gsapTL.to(".rocket", { x: 200, duration: 2 });
-      gsapTL.to(".rocket", { x: 100, duration: 2 });
-      gsapTL.to(".rocket", { x: 0, duration: 2 });
-    }, rocketScope);
+    if (window.innerWidth >= 992) {
+      if (rocketFly == true) return;
 
-    return () => ctx.revert();
+      setRocketFly(true);
+
+      let ctx = gsap.context(() => {
+        let gsapTL = gsap.timeline({ onComplete: tlComplete });
+        gsapTL.to(".rocket", 3, {
+          motionPath: [
+            { x: 200, y: -200 },
+            { x: 100, y: -300 },
+            { x: 400, y: -300 },
+            { x: 500, y: -100, rotation: 180 },
+            { x: 0, y: 0 },
+          ],
+          ease: Linear.easeInOut,
+        });
+      }, rocketScope);
+
+      return () => ctx.revert();
+    } else {
+      return;
+    }
   }
 
   return (
@@ -32,21 +54,24 @@ const RocketComponent = () => {
         )}
       >
         <IconComponent name="rocket" className={iconClassnameByTheme} />
+        {/* <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 15L9 12M12 15C13.3968 14.4687 14.7369 13.7987 16 13M12 15V20C12 20 15.03 19.45 16 18C17.08 16.38 16 13 16 13M9 12C9.53214 10.6194 10.2022 9.29607 11 8.05C12.1652 6.18699 13.7876 4.65305 15.713 3.5941C17.6384 2.53514 19.8027 1.98637 22 2C22 4.72 21.22 9.5 16 13M9 12H4C4 12 4.55 8.97 6 8C7.62 6.92 11 8 11 8"
+            stroke="#0F1A20"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M4.5 16.5C3 17.76 2.5 21.5 2.5 21.5C2.5 21.5 6.24 21 7.5 19.5C8.21 18.66 8.2 17.37 7.41 16.59C7.02131 16.219 6.50929 16.0046 5.97223 15.988C5.43516 15.9714 4.91088 16.1537 4.5 16.5Z"
+            stroke="#0F1A20"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="red"
+          />
+        </svg> */}
       </button>
-      <svg width="100%" height="100%" viewBox="-20 0 557 190" id="svg" className="hidden">
-        <circle cx="100" cy="100" r="3" />
-        <circle cx="300" cy="20" r="3" />
-        <path
-          id="path"
-          d="M9,100c0,0,18.53-41.58,49.91-65.11c30-22.5,65.81-24.88,77.39-24.88c33.87,0,57.55,11.71,77.05,28.47c23.09,19.85,40.33,46.79,61.71,69.77c24.09,25.89,53.44,46.75,102.37,46.75c22.23,0,40.62-2.83,55.84-7.43c27.97-8.45,44.21-22.88,54.78-36.7c14.35-18.75,16.43-36.37,16.43-36.37"
-        />
-        <g id="rect">
-          <rect width="85" height="30" fill="dodgerblue" />
-          <text x="10" y="19" font-size="14">
-            SVG &lt;rect&gt;
-          </text>
-        </g>
-      </svg>
     </div>
   );
 };

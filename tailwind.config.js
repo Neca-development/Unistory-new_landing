@@ -300,44 +300,6 @@ module.exports = {
             right: 0,
           },
         },
-        "rocket-flight-lg": {
-          "0%": {
-            transform: "translate(0)",
-          },
-          "10%": {
-            transform: "translate(250px, -250px)",
-          },
-          "30%": {
-            transform: "translate(400px, -400px)",
-          },
-          "30%": {
-            transform: "translate(400px, -400px) rotate(45deg)",
-          },
-          "40%": {
-            transform: "translate(700px, -400px) rotate(45deg)",
-          },
-          "45%": {
-            transform: "translate(700px, -400px) rotate(125deg)",
-          },
-          "50%": {
-            transform: "translate(700px, 0) rotate(125deg)",
-          },
-          "55%": {
-            transform: "translate(700px, 0) rotate(225deg)",
-          },
-          "60%": {
-            transform: "translate(400px, 0) rotate(225deg)",
-          },
-          // "80%": {
-          //   transform: "translate(400px, 0) rotate(270deg)",
-          // },
-          "95%": {
-            transform: "translate(0) rotate(225deg)",
-          },
-          "100%": {
-            transform: "translate(0) rotate(0)",
-          },
-        },
       },
       animation: {
         "move-in": "move-in 0.3s ease-out forwards",
@@ -358,7 +320,6 @@ module.exports = {
         "header-links-opacity": `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         "link-hover-on": "link-hover-on 0.3s ease-out forwards",
         "link-hover-off": "link-hover-off 0.3s ease-out forwards",
-        "rocket-flight-lg": "rocket-flight-lg 10s linear forwards",
       },
     },
   },
