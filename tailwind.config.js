@@ -135,17 +135,17 @@ module.exports = {
           "0%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, 20%)",
+            transform: "translate(-50%, -50%)",
           },
           "10%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, 20%)",
+            transform: "translate(-50%, -50%)",
           },
           "65%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, 20%)",
+            transform: "translate(-50%, -50%)",
           },
           "100%": {
             top: "1rem",
