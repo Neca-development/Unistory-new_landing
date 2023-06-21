@@ -236,7 +236,7 @@ export default function ConnectForm() {
           <button
             type="submit"
             className={clsx(
-              "!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-300 transition-opacity t-xs:!mt-5",
+              "!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-150 transition-all t-xs:!mt-5 hover:bg-[#D65838]",
               fileError && "opacity-50",
               isLoading && "animate-pulse"
             )}
