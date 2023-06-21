@@ -14,7 +14,7 @@ export const FooterTextEn: {
     // 	tel: "+7 911 741 7477",
     // },
     {
-      name: "Almaty",
+      name: "Almaty office",
       address: "st. Rozybakieva 289/1, office 36, <br/> Almaty, Kazakhstan, 050060",
       tel: "+7 707 372 8608",
     },

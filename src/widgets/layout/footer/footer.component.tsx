@@ -54,7 +54,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
             )}
           >
             <h4
-              className="font-medium text-2xl text-center"
+              className="font-medium text-2xl"
               dangerouslySetInnerHTML={{ __html: text.slogan }}
             />
             <div className="flex items-center space-x-6 opacity-50 t-xs:justify-center">
