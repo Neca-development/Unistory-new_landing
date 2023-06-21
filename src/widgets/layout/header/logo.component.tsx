@@ -1,4 +1,3 @@
-import { IconComponent } from "@shared/ui";
 import { useTheme } from "next-themes";
 import { useThemeContext } from "@shared/lib";
 import clsx from "clsx";
