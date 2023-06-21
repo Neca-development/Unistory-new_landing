@@ -9,6 +9,7 @@ import { Main } from "./main";
 import useScrollbarSize from "react-scrollbar-size";
 import { useAnimationStore } from "@shared/lib/store";
 import clsx from "clsx";
+import { useRouter } from "next/router";
 
 export interface ILayoutProperties extends React.ComponentProps<"div"> {
   Meta: React.ReactElement<typeof Meta>;
@@ -19,6 +20,10 @@ export const Layout = (props: ILayoutProperties) => {
   const { temperatureTheme } = useThemeContext();
   const { width } = useScrollbarSize();
   const { shouldAnimate } = useAnimationStore();
+
+  const { asPath } = useRouter();
+  const isHome = asPath === "/";
+
   return (
     <div className={temperatureTheme}>
       <div
@@ -28,7 +33,10 @@ export const Layout = (props: ILayoutProperties) => {
         {Meta}
         <div
           {...rest}
-          className={clsx("flex min-h-screen flex-col", shouldAnimate && "pointer-events-none")}
+          className={clsx(
+            "flex min-h-screen flex-col",
+            shouldAnimate && isHome && "pointer-events-none"
+          )}
         >
           {children}
         </div>
