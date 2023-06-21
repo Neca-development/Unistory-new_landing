@@ -9,7 +9,7 @@ const iconClassnameByTheme =
 const RocketComponent = () => {
   const { shouldAnimate } = useAnimationStore();
   // const [launch, setLaunch] = useState(false);
-  const rocketScope = useRef();
+  const rocketScope = useRef<HTMLDivElement>(null);
 
   function rocketLaunch() {
     let ctx = gsap.context(() => {
