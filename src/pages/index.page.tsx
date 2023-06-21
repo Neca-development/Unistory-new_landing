@@ -9,38 +9,43 @@ import { LOGO_ENTER_ANIMATION_DURATION } from "@shared/lib/constants/animation.c
 import clsx from "clsx";
 
 export function Home() {
-	const {setShouldAnimate, shouldAnimate} = useAnimationStore()
+  const { setShouldAnimate, shouldAnimate } = useAnimationStore();
 
-	useEffect(() => {
-		if(!shouldAnimate) return
-		document.body.style.overflow = 'hidden'
-		window.scrollTo(0, -400)
+  useEffect(() => {
+    if (!shouldAnimate) return;
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, -400);
 
-		const timeout = setTimeout(() => {
-			document.body.style.overflow = ''
-			setShouldAnimate()
-		}, LOGO_ENTER_ANIMATION_DURATION + 1)
+    const timeout = setTimeout(() => {
+      document.body.style.overflow = "";
+      setShouldAnimate();
+    }, LOGO_ENTER_ANIMATION_DURATION + 1);
 
-		return () => {
-			clearTimeout(timeout)
-		}
-	}, [])
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
-	return (
-		<Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
-			<Layout.Header />
-			<Layout.Main>
-				<div className={clsx(shouldAnimate && "animate-header-height will-change-[height]")}/>
-				<Hero />
-				<Services />
-				<Works />
-				<Principles />
-				<Reviews />
-				<Connect />
-			</Layout.Main>
-			<Layout.Footer showAddress />
-		</Layout>
-	);
+  return (
+    <Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
+      <Layout.Header />
+      <Layout.Main>
+        <div
+          className={clsx(
+            shouldAnimate &&
+              "fixed top-0 left-0 w-full h-full z-[1] bg-light-bg dark:bg-dark-bg animate-header-height will-change-[height]"
+          )}
+        />
+        <Hero />
+        <Services />
+        <Works />
+        <Principles />
+        <Reviews />
+        <Connect />
+      </Layout.Main>
+      <Layout.Footer showAddress />
+    </Layout>
+  );
 }
 
 export default Home;
