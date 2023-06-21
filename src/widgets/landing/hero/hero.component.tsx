@@ -72,8 +72,9 @@ export function Hero() {
           <span className="font-roboto font-light italic inline-block text-light-text-primary dark:text-dark-text-primary duration-300">
             {text?.description.third}
           </span>
-          <br />
-          {text?.description.fourth}
+          {" " + text?.description.fourth + " "}
+          <br className={clsx(locale === "en" && "t-xs:hidden")} />
+          {text?.description.fifth}
         </h1>
 
         <CloudComponent />

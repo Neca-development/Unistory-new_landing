@@ -5,7 +5,8 @@ export const HeroEn = {
     first: "Developing ",
     second: "digital",
     third: "solutions",
-    fourth: "for web & mobile",
+    fourth: "for",
+    fifth: "web & mobile",
   },
   params: {
     teamSize: "team <br/>members",

@@ -5,7 +5,8 @@ export const HeroRu = {
     first: "Разрабатываем ",
     second: "цифровые",
     third: "решения",
-    fourth: "для бизнеса",
+    fourth: "",
+    fifth: "для бизнеса",
   },
   params: {
     teamSize: "сотрудников <br/>в штате",
