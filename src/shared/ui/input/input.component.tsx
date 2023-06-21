@@ -6,6 +6,7 @@ export interface IInputProps {
   required?: boolean;
   className?: string;
   error?: string;
+  requiredError?: string;
 }
 
 export const labelClassNames =

@@ -11,21 +11,26 @@ export const FormEn = {
     name: {
       placeholder: "Name",
       error: "Name should be at least 3 letters",
+      requiredError: "Fill your name",
     },
     company: {
       placeholder: "Company",
       error: "Company name should be at least 3 letters",
+      requiredError: "Fill your company name",
     },
     phone: {
       placeholder: "Phone number",
       error: "Phone number should be at least 6 digits",
+      requiredError: "Fill your phone number",
     },
     email: {
       placeholder: "Email",
       error: "Incorrect email",
+      requiredError: "Fill your email address",
     },
     describe: {
       placeholder: "Describe your project",
+      requiredError: "Fill description about your project",
     },
   },
   contacts: {
@@ -33,7 +38,7 @@ export const FormEn = {
     phone: "Phone",
   },
   attachment: {
-    label: "Attach a file with Terms of Reference",
+    label: "Attach a file",
     sub: "Maximum file size 24 MB",
     errors: {
       tooLarge: "The file size can not be exceed 24 MB!",

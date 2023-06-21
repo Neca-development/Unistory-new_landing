@@ -58,11 +58,12 @@ export const Footer = React.memo((props: IFooterProperties) => {
               dangerouslySetInnerHTML={{ __html: text.slogan }}
             />
             <div className="flex items-center space-x-6 opacity-50 t-xs:justify-center">
-              {/* <a rel='nofollow' href='https://t.me/unistory_app' target='_blank'>
-                <IconComponent name='telegram' className='w-6' />
-              </a> */}
-              {locale === "ru" && (
+              {locale === "ru" ? (
                 <a rel="nofollow" href="https://t.me/unistory_app" target="_blank">
+                  <IconComponent name="telegram" className="w-6" />
+                </a>
+              ) : (
+                <a rel="nofollow" href="" target="_blank">
                   <IconComponent name="telegram" className="w-6" />
                 </a>
               )}

@@ -10,7 +10,7 @@ export const HeroEn = {
   params: {
     teamSize: "team <br/>members",
     projects: "successful <br/>projects",
-    rating: "UpWork <br/>rating",
+    rating: "Clutch <br/>rating",
   },
 };
 
