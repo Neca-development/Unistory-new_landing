@@ -91,7 +91,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
       >
         <div
           className={clsx(
-            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500 relative",
+            "w-full flex justify-between py-4 lg:px-[2rem] px-[0.5rem] transition-all duration-500 relative items-center",
             isMenuDown &&
               "t-xs:py-2 bg-light-bg-accent shadow-navbar dark:bg-dark-surface dark:border-[#2b2b2b]"
           )}

@@ -25,7 +25,7 @@ export function MobileMenu(props: IMobileMenuProps) {
           active ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        <div className="flex h-full flex-col bg-light-surface px-[1rem] pt-[28px] pb-[80px] dark:bg-dark-surface">
+        <div className="flex h-full flex-col bg-light-surface px-[1rem] pt-[28px] pb-32 dark:bg-dark-surface">
           <div className="flex items-center justify-between">
             <div className="h-8">
               <Logo mobileMenu={true} />
