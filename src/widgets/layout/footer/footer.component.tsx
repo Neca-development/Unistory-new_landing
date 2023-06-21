@@ -36,7 +36,10 @@ export const Footer = React.memo((props: IFooterProperties) => {
                 key={city.name}
               >
                 <p className="text-2xl font-medium t-xs:text-xl">{city.name}</p>
-                <a href={`tel:${city.tel}`} className="text-dark-text-primary text-base">
+                <a
+                  href={`tel:${city.tel}`}
+                  className="text-dark-text-primary text-base w-fit underline-offset-4 hover:underline "
+                >
                   {city.tel}
                 </a>
                 <p
@@ -59,21 +62,41 @@ export const Footer = React.memo((props: IFooterProperties) => {
             />
             <div className="flex items-center space-x-6 opacity-50 t-xs:justify-center">
               {locale === "ru" ? (
-                <a rel="nofollow" href="https://t.me/unistory_app" target="_blank">
+                <a
+                  rel="nofollow"
+                  href="https://t.me/unistory_app"
+                  className="hover:scale-110 duration-150"
+                  target="_blank"
+                >
                   <IconComponent name="telegram" className="w-6" />
                 </a>
               ) : (
-                <a rel="nofollow" href="" target="_blank">
+                <a rel="nofollow" href="" className="hover:scale-110 duration-150" target="_blank">
                   <IconComponent name="telegram" className="w-6" />
                 </a>
               )}
-              <a rel="nofollow" href="https://wa.me/79117417477" target="_blank">
+              <a
+                rel="nofollow"
+                href="https://wa.me/79117417477"
+                className="hover:scale-110 duration-150"
+                target="_blank"
+              >
                 <IconComponent name="whatsApp" className="w-6" />
               </a>
-              <a rel="nofollow" href="https://clutch.co/profile/unistory" target="_blank">
+              <a
+                rel="nofollow"
+                href="https://clutch.co/profile/unistory"
+                className="hover:scale-105 duration-150"
+                target="_blank"
+              >
                 <IconComponent name="clutch" className="w-[4.375rem]" />
               </a>
-              <a rel="nofollow" href="https://www.upwork.com/ag/unistory/" target="_blank">
+              <a
+                rel="nofollow"
+                href="https://www.upwork.com/ag/unistory/"
+                className="hover:scale-105 duration-150"
+                target="_blank"
+              >
                 <IconComponent name="upwork" className="w-20 mt-1" />
               </a>
             </div>
@@ -84,9 +107,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
 
         <div className="flex items-center justify-between t-xs:mx-3">
           <IconComponent name="logoDarkOutline" className="w-[6.5rem]" />
-          <p className=" opacity-50 text-xs t-xs:text-lg">
-            &copy; {new Date().getFullYear()} Unistory
-          </p>
+          <p className="opacity-50 text-lg">&copy; {new Date().getFullYear()} Unistory</p>
         </div>
       </div>
     </footer>

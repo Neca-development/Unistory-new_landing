@@ -6,31 +6,31 @@ export const FormEn = {
   },
   fields: {
     commonErrors: {
-      required: "Fill in the field",
+      required: "Please fill this field",
     },
     name: {
       placeholder: "Name",
       error: "Name should be at least 3 letters",
-      requiredError: "Fill your name",
+      requiredError: "Please fill your name",
     },
     company: {
       placeholder: "Company",
       error: "Company name should be at least 3 letters",
-      requiredError: "Fill your company name",
+      requiredError: "Please fill your company name",
     },
     phone: {
       placeholder: "Phone number",
       error: "Phone number should be at least 6 digits",
-      requiredError: "Fill your phone number",
+      requiredError: "Please fill your phone number",
     },
     email: {
       placeholder: "Email",
       error: "Incorrect email",
-      requiredError: "Fill your email address",
+      requiredError: "Please fill your email address",
     },
     describe: {
       placeholder: "Describe your project",
-      requiredError: "Fill description about your project",
+      requiredError: "Please fill description about your project",
     },
   },
   contacts: {
