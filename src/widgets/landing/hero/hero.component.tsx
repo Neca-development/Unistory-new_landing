@@ -59,7 +59,7 @@ export function Hero() {
           <span className="t-xs:mr-2">{text?.description.second}</span>
           <button
             className={clsx(
-              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-24 2xl:w-12 t-xs:right-[0.4rem]",
+              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-32 2xl:w-12 t-xs:right-[0.4rem]",
               shouldAnimate && "animate-hero-icons-fade-in"
             )}
             onClick={toggleEarthColor}

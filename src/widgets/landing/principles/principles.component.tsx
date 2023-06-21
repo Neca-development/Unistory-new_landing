@@ -18,7 +18,7 @@ export function Principles() {
   }, [locale]);
 
   return (
-    <section className="container pt-20 pb-32 t-xs:pt-[4.5rem] t-xs:pb-16">
+    <section className="container pt-20 pb-32 t-xs:pt-[4.5rem] t-xs:pb-20">
       <div className="flex items-center space-x-4 t-xs:justify-between t-xs:space-x-0">
         {data.items.map((item, index) => (
           <React.Fragment key={item.title}>

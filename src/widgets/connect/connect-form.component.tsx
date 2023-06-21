@@ -27,13 +27,21 @@ export default function ConnectForm() {
   const requiredMsg = data.fields.commonErrors.required;
 
   const schema = z.object({
-    email: z.string({ required_error: requiredMsg }).email(data.fields.email.error),
-    name: z.string({ required_error: requiredMsg }).min(3, { message: data.fields.name.error }),
+    email: z
+      .string({ required_error: data.fields.email.requiredError })
+      .email(data.fields.email.error),
+    name: z
+      .string({ required_error: data.fields.name.requiredError })
+      .min(3, { message: data.fields.name.error }),
     company: z
-      .string({ required_error: requiredMsg })
+      .string({ required_error: data.fields.company.requiredError })
       .min(3, { message: data.fields.company.error }),
-    phoneNumber: z.string({ required_error: requiredMsg }).min(6, data.fields.phone.error),
-    projectDescription: z.string({ required_error: requiredMsg }).min(1, requiredMsg),
+    phoneNumber: z
+      .string({ required_error: data.fields.phone.requiredError })
+      .min(6, data.fields.phone.error),
+    projectDescription: z
+      .string({ required_error: data.fields.describe.requiredError })
+      .min(1, requiredMsg),
   });
 
   type FormType = z.infer<typeof schema>;

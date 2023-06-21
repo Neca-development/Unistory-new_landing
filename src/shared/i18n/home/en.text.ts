@@ -10,7 +10,7 @@ export const HeroEn = {
   params: {
     teamSize: "team <br/>members",
     projects: "successful <br/>projects",
-    rating: "UpWork <br/>rating",
+    rating: "Clutch <br/>rating",
   },
 };
 
@@ -41,7 +41,7 @@ export const ServicesEn: Array<{
     <br /> <br />
     - frontend: React, Angular, Vue, TS
     <br />
-    - backend: Node.js, C#, Bitrix24
+    - backend: Node.js, C#
     <br />- mobile: React native, Kotlin, Swift`,
   },
   {

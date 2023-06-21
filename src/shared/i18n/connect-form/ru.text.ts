@@ -11,21 +11,26 @@ export const FormRu = {
     name: {
       placeholder: "Имя",
       error: "Имя должно содержать больше 3 символов",
+      requiredError: "Введите ваше имя",
     },
     company: {
       placeholder: "Компания",
       error: "Название компании должно содержать больше 3 символов",
+      requiredError: "Введите название вашей компании",
     },
     phone: {
       placeholder: "Телефон",
       error: "Номер телефона должен содержать больше 6 символов",
+      requiredError: "Введите ваш номер телефона",
     },
     email: {
       placeholder: "Эл. почта",
       error: "Неверный email",
+      requiredError: "Введите адрес вашей почты",
     },
     describe: {
       placeholder: "Расскажите о проекте",
+      requiredError: "Введите описание вашего проекта",
     },
   },
   contacts: {
