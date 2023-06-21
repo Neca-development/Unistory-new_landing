@@ -134,22 +134,23 @@ module.exports = {
         "logo-enter-lg": {
           "0%": {
             top: "50vh",
-            left: "50vh",
+            left: "50%",
             transform: "translate(-50%, -50%)",
           },
           "10%": {
             top: "50vh",
-            left: "50vh",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
           },
           "65%": {
             top: "50vh",
-            left: "50vh",
+            left: "50%",
             transform: "translate(-50%, -50%)",
           },
           "100%": {
             top: "1rem",
             left: "2rem",
-            transform: "translate(0%)",
+            transform: "translate(0, 0)",
           },
         },
         "logo-enter-mobile": {
@@ -176,21 +177,17 @@ module.exports = {
         "logo-overflow-lg": {
           "0%": {
             width: "25%",
-            transform: "translateX(-60%)",
+            transform: "translateX(-10%)",
           },
           "20%": {
             width: "25%",
-            transform: "translateX(-60%)",
           },
           "60%": {
-            transform: "translateX(-60%)",
             width: "100%",
-          },
-          "65%": {
-            transform: "translateX(-60%)",
-            width: "100%",
+            transform: "translateX(-10%)",
           },
           "100%": {
+            width: "100%",
             transform: "translateX(0)",
           },
         },
@@ -239,10 +236,10 @@ module.exports = {
         },
         "header-height": {
           "0%": {
-            height: "150vh",
+            height: "100vh",
           },
           "65%": {
-            height: "150vh",
+            height: "100vh",
           },
           "100%": {
             height: "0",
@@ -302,12 +299,8 @@ module.exports = {
         "logo-overflow-mobile": `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         "main-logo-width-lg": `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         "main-logo-width-mobile": `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
-        "header-height": `header-height ${
-          LOGO_ENTER_ANIMATION_DURATION + 0.5
-        }s ease-in-out forwards`,
-        "hero-icons-fade-in": `hero-icons-fade-in ${
-          LOGO_ENTER_ANIMATION_DURATION + 1
-        }s linear forwards`,
+        "header-height": `header-height ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        "hero-icons-fade-in": `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION}s linear forwards`,
         "header-links-opacity": `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         "link-hover-on": "link-hover-on 0.3s ease-out forwards",
         "link-hover-off": "link-hover-off 0.3s ease-out forwards",
