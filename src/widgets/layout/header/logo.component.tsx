@@ -34,7 +34,8 @@ export function Logo(props: ILogoProps) {
           "animate-logo-enter-mobile lg:animate-logo-enter-lg 2xl:animate-logo-enter-xl will-change-[top,left, transform]",
         !shouldAnimate &&
           "relative w-[128px] h-[31px] lg:w-[150px] lg:h-[36px] 2xl:w-[166px] 2xl:h-[40px]",
-        mobileMenu && "relative"
+        mobileMenu && "relative",
+        !isHome && "relative"
       )}
     >
       <div
@@ -43,7 +44,8 @@ export function Logo(props: ILogoProps) {
           isHome &&
             shouldAnimate &&
             "animate-logo-overflow-mobile lg:animate-logo-overflow-lg will-change-[width]",
-          !shouldAnimate && "w-full h-full"
+          !shouldAnimate && "w-full h-full",
+          !isHome && "overflow-visible"
         )}
       >
         <svg
