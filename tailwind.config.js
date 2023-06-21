@@ -249,13 +249,13 @@ module.exports = {
         },
         "header-height": {
           "0%": {
-            height: "100vh",
+            opacity: "1",
           },
           "65%": {
-            height: "100vh",
+            opacity: "1",
           },
           "100%": {
-            height: "0",
+            opacity: "0",
           },
         },
         "header-links-opacity": {
@@ -313,7 +313,9 @@ module.exports = {
         "logo-overflow-mobile": `logo-overflow-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         "main-logo-width-lg": `main-logo-width-lg ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
         "main-logo-width-mobile": `main-logo-width-mobile ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
-        "header-height": `header-height ${LOGO_ENTER_ANIMATION_DURATION}s ${LOGO_ANIMATION_CURVE} forwards`,
+        "header-height": `header-height ${
+          LOGO_ENTER_ANIMATION_DURATION + 1
+        }s ${LOGO_ANIMATION_CURVE} forwards`,
         "hero-icons-fade-in": `hero-icons-fade-in ${LOGO_ENTER_ANIMATION_DURATION}s linear forwards`,
         "header-links-opacity": `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         "link-hover-on": "link-hover-on 0.3s ease-out forwards",
