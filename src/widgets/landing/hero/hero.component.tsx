@@ -1,5 +1,4 @@
 import { HeroRu, HeroEn } from "@shared/i18n";
-import { useThemeContext } from "@shared/lib";
 import { IconComponent } from "@shared/ui";
 import clsx from "clsx";
 import { useRouter } from "next/router";
@@ -19,7 +18,6 @@ const plusSignClasses =
   "absolute -top-[1.1rem] text-[3rem] text-primary-s m-xl:text-4xl m-xl:top-2 duration-300";
 
 export function Hero() {
-  const { textClassName } = useThemeContext();
   const [earthColor, setEarthColor] = useState(false);
   const mounted = useMounted();
   const { shouldAnimate } = useAnimationStore();
