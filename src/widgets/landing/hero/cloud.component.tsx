@@ -94,12 +94,15 @@ const CloudComponent = () => {
   return (
     <button
       className={clsx(
-        "absolute -top-6 left-[18.2rem] p-2 t-xs:left-[7rem] t-xs:-top-10 w-10 h-10 2xl:w-12 2xl:h-12 justify-center items-center flex hover:scale-125 duration-150",
+        "absolute -top-6 left-[18.2rem] t-xs:left-[7rem] t-xs:-top-4 w-6 lg:w-8 lg:h-8 2xl:w-10 2xl:h-10 justify-center items-center flex hover:scale-125 duration-150",
         shouldAnimate && "animate-hero-icons-fade-in"
       )}
       onClick={toggleCloudAnim}
     >
-      <IconComponent name={cloudName().cloudType} className={iconClassnameByTheme} />
+      <IconComponent
+        name={cloudName().cloudType}
+        className={clsx(iconClassnameByTheme, "w-full h-full")}
+      />
       {cloudName().additionalIcon && (
         <IconComponent
           name={cloudName().additionalIcon!}

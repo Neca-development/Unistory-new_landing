@@ -52,14 +52,16 @@ export function Hero() {
         <h1
           className={clsx(
             textClassName,
-            "pr-24 text-h1 2xl:text-large-h1 t-xs:text-mob-h1 text-center t-xs:pr-0 duration-300"
+            "pr-16 text-h1 2xl:text-large-h1 t-xs:text-mob-h1 text-center t-xs:pr-0 duration-300"
           )}
         >
           {text?.description.first} <br />
-          <span className="t-xs:mr-2">{text?.description.second}</span>
+          <span className="t-xs:mr-2 text-summer dark:text-light-bg-accent duration-150">
+            {text?.description.second}
+          </span>
           <button
             className={clsx(
-              "relative top-[-0.5rem] w-10 p-2 t-xs:absolute t-xs:top-32 2xl:w-12 t-xs:right-[0.4rem] hover:scale-125 duration-150",
+              "relative top-[-0.5rem] w-6 lg:w-8 t-xs:absolute t-xs:top-32 t-xs:right-[0.4rem] 2xl:w-8 hover:scale-110 duration-150",
               shouldAnimate && "animate-hero-icons-fade-in"
             )}
             onClick={toggleEarthColor}
@@ -69,7 +71,7 @@ export function Hero() {
               className={iconClassnameByTheme}
             />
           </button>
-          <span className="font-roboto font-light italic inline-block text-light-text-primary dark:text-dark-text-primary duration-300">
+          <span className="text-summer dark:text-light-bg-accent duration-150">
             {text?.description.third}
           </span>
           {" " + text?.description.fourth + " "}
