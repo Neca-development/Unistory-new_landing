@@ -32,7 +32,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         </h1>
         {data.projectUrl && (
           <a
-            className="flex items-center text-light-text-primary/[0.5] hover:text-light-text-primary h-fit mt-5 md:ml-10 sm:mt-10 md:mt-auto duration-200"
+            className="flex items-center text-light-text-primary/[0.5] dark:text-light-bg-accent/[0.5] hover:text-light-text-primary dark:hover:text-light-bg-accent h-fit mt-5 md:ml-10 sm:mt-10 md:mt-auto duration-200"
             href={data.projectUrl}
             rel="nofollow"
             target="_blank"
