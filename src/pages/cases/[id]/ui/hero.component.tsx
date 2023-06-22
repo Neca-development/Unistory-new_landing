@@ -26,13 +26,13 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
   return (
     <>
-      <div className="container mt-16 md:flex t-xs:mt-10">
+      <div className="container mt-16 md:flex md:justify-between	 t-xs:mt-10">
         <h1 className="leading-[4.875rem] text-[4rem] font-bold whitespace-pre-line t-xs:text-[1.75rem] t-xs:leading-[2rem]">
           {data.heroTitle[locale || "ru"]}
         </h1>
         {data.projectUrl && (
           <a
-            className="flex items-center text-light-text-primary/[0.5] hover:text-light-text-primary h-fit mt-5 sm:mt-10 md:mt-auto duration-200"
+            className="flex items-center text-light-text-primary/[0.5] hover:text-light-text-primary h-fit mt-5 md:ml-10 sm:mt-10 md:mt-auto duration-200"
             href={data.projectUrl}
             rel="nofollow"
             target="_blank"
