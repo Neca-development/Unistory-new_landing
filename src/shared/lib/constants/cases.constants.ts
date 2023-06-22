@@ -53,140 +53,120 @@ import hoarderImage3 from "@public/assets/images/cases/hoarder/subscription.jpg"
 import hoarderImage3Dark from "@public/assets/images/cases/hoarder/dark-subscription.jpg";
 
 import flatspaceBanner from "@public/assets/images/cases/flatspace/banner.jpg";
+import flatspaceBannerMob from "@public/assets/images/cases/flatspace/banner_mob.jpg";
 import flatspaceImage1 from "@public/assets/images/cases/flatspace/auction.jpg";
 import flatspaceImage2 from "@public/assets/images/cases/flatspace/actions.jpg";
 import flatspaceImage3 from "@public/assets/images/cases/flatspace/choise.jpg";
 
 export const CASES: ICase[] = [
   {
-    title: "Personal",
-    id: "personal",
+    title: "NFT-Marketplace «FlatSpace»",
+    id: "flatspace",
+    projectUrl: "https://flatspacenfts.com/",
     heroTitle: {
-      en: "Personal – multi-platform\n HR application",
-      ru: "Персонал – мультиплатформенное\n HR приложение",
+      en: "NFT-Marketplace «FlatSpace»",
+      ru: "NFT-Маркетплейс «FlatSpace»",
     },
     categories: {
-      en: ["Multi-platform\n HR application"],
-      ru: ["Мультиплатформенное\n HR приложение"],
+      en: ["Development of NFT-Marketplace «FlatSpace»"],
+      ru: ["Разработка NFT-Маркетплейса «FlatSpace»"],
     },
     showCategoriesOnPage: false,
-    icons: ["monitor", "phone01"],
-    textColor: "white",
+    icons: ["monitor", "phone02"],
+    textColor: "black",
     technologies: [
       TECHNOLOGIES.nest,
+      TECHNOLOGIES.nextjs,
       TECHNOLOGIES.postgresql,
-      TECHNOLOGIES.reactNative,
-      TECHNOLOGIES.headhunter,
-      TECHNOLOGIES.avito,
-      TECHNOLOGIES.ukassa,
+      TECHNOLOGIES.solidity,
     ],
     banner: {
-      desktop: personalPromo.src,
-      mob: personalPromoMob.src,
+      desktop: flatspaceBanner.src,
+      mob: flatspaceBannerMob.src,
     },
     description: {
-      en: "Our team had to develop an HR aggregator application that helps collect all resumes in one place, facilitates communication with candidates and has integration with popular job search platforms.",
-      ru: "Нашей команде предстояло разработать HR приложение-агрегатор, которое помогает собирать все резюме в  одном месте, облегчает общение с кандидатами и имеет интеграцию с популярными платформами для поиска работы.",
+      en: "To create an NFT-marketplace for famous London Art Gallery where real artists with physical arts can sell their work as NFTs. Implement auction functionality and  fixed price payments.",
+      ru: "Создать NFT-маркетплейс для известной Лондонской художественной галереи, где реальные художники с нарисованными картинами могут продавать свои работы как NFT. Реализовать функциональность продажи НФТ на аукционе и по фиксированной стоимости.",
     },
     params: {
       budget: {
-        ru: 2300000,
-        en: 30000,
+        ru: 2000000,
+        en: 25000,
       },
-      period: 9,
-      year: 2022,
+      period: 4,
+      year: "2023",
     },
     main: [
       {
         title: {
-          en: "Integration with HR services",
-          ru: "Интеграция с кадровыми сервисами",
+          en: "Auction creation",
+          ru: "Создание аукциона",
         },
         text: [
           {
             text: {
-              en: "To reduce the time it takes to browse employee search sites, and to bring all resumes together, we decided to aggregate the existing platforms into one application. In total, our team has integrated six major platforms, including HH.ru and Avito. Our integrations allow app users to seamlessly receive candidate resumes from multiple sources at once.",
-              ru: "Чтобы сократить время на просмотр сайтов по поиску сотрудников, и собрать все резюме воедино – мы решили аггрегировать существующие площадки в одном приложении. Всего наша команда интегрировала 6 крупнейших платформ, включая HH.ru и Авито. Наши интеграции позволяют пользователям приложения бесшовно получать резюме кандидатов из сразу нескольких источников.",
+              en: "Approved artists can start an auction and everyone can bid to buy a masterpiece as an NFT. ",
+              ru: "Одобренные художники могут начать аукцион, и все желающие могут принять участие в торгах, чтобы купить шедевр в качестве NFT. ",
             },
           },
         ],
-        banner: personalImage1.src,
+        banner: flatspaceImage1.src,
       },
       {
         title: {
-          en: "Custom templates for interview invitations",
-          ru: "Пользовательские шаблоны для приглашения на интервью",
+          en: "Действия в режиме реального времени",
+          ru: "Дополнительные блоки",
         },
         text: [
           {
             text: {
-              en: "We created a system to create customizable templates cards that users can send to job candidates. This solution significantly saves time in processing a large number of incoming resumes, and this is important, because optimization is the first priority for any business.",
-              ru: "Мы создали систему по созданию кастомизируемых карточек-шаблонов, которые пользователи могут отправлять кандидатам на вакансию. Данное решение значительно экономит время на обработку большого количества входящих предложений, и это важно, ведь оптимизация  является первоочередной задачей для любого бизнеса.",
+              en: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
+              ru: "Простые в использовании приборные панели для отслеживания статуса аукциона со всей необходимой информацией.",
             },
           },
         ],
-        banner: personalImage2.src,
+        banner: flatspaceImage2.src,
       },
       {
         title: {
-          en: "Built-in chat to display messages from HR services",
-          ru: "Встроенный чат для вывода сообщений из других сервисов",
+          en: "All artists have a choise",
+          ru: "У всех художников есть выбор",
         },
         text: [
           {
             text: {
-              en: "The app collects not only candidates resumes, but also their messages from various services. To make this process even more convenient, we created a built-in chat room where users can communicate with future employees from all necessary sources.",
-              ru: "Приложение собирает не только резюме кандидатов, но и их сообщения с различных площадок. Чтобы сделать этот процесс еще более удобным, мы создали встроенный чат, в котором пользователи могут общаться с будущими работниками из всех необходимых источников.",
+              en: "It doesn’t have the “Highest Bid -- Wins” pattern. The artist always can choose who’ll be the winner, no matter what’s the bid. Also, the artist doesn’t pay for mint -- all expenses are up to buyer.",
+              ru: `Здесь нет схемы "Наибольшая ставка - победа". Художник всегда может выбрать, кто станет победителем, независимо от ставки. Кроме того, художник не платит за выпуск НФТ - все расходы ложатся на покупателя.`,
             },
           },
         ],
-        banner: personalImage3.src,
+        banner: flatspaceImage3.src,
       },
       {
         title: {
-          en: "",
-          ru: "",
+          en: "Results",
+          ru: "Результат",
         },
         text: [
           {
-            subtitle: {
-              en: "Smart tips for making up vacancies",
-              ru: "Сбор подсказок для составления вакансий",
-            },
             text: {
-              en: "We parsed over ten thousand different job ads and used statistical analysis to collect the most common requirements. This made it possible to compile smart tips for all kinds of jobs.",
-              ru: "Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.",
-            },
-          },
-          {
-            subtitle: {
-              en: "Placing vacancies in different services",
-              ru: "Размещение вакансий в разных сервисах",
-            },
-            text: {
-              en: "We have unified job requirements across all services, which allows the users to fill out only the app’s form.",
-              ru: "Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.",
+              en: "High-end platform which encourage all types of artists -- from entry to expert levels. Smart contract ensure transparency and honesty and microservices architecture provide seamless user experience at all stages. ",
+              ru: "Высококлассная платформа, которая поощряет все типы художников - от начального до экспертного уровня. Смарт-контракт обеспечивает прозрачность и честность, а архитектура микросервисов обеспечивает беспрепятственный пользовательский опыт на всех этапах.",
             },
           },
         ],
-        banner: personalScheme.src,
       },
     ],
     team: [
       TEAM.alexanderAksenov,
-      TEAM.daniilSemenov,
+      TEAM.ilyaSmirnov,
+      TEAM.yanSofronov,
       TEAM.nikitaBobkov,
       TEAM.maksimKlimchenko,
       TEAM.andreyBarabanov,
-      TEAM.andreyPaskarenko,
-      TEAM.andreyBabenkov,
-      TEAM.alekseyKlimenko,
-      TEAM.ernestMironov,
-      TEAM.kirillElizarov,
       TEAM.vladislavKiribyatev,
     ],
   },
-
   {
     title: "Xillion",
     id: "xillion",
@@ -901,109 +881,130 @@ export const CASES: ICase[] = [
     ],
   },
   {
-    title: "NFT-Marketplace «FlatSpace»",
-    id: "flatspace",
+    title: "Personal",
+    id: "personal",
     heroTitle: {
-      en: "NFT-Marketplace «FlatSpace»",
-      ru: "NFT-Маркетплейс «FlatSpace»",
+      en: "Personal – multi-platform\n HR application",
+      ru: "Персонал – мультиплатформенное\n HR приложение",
     },
     categories: {
-      en: ["Development of NFT-Marketplace «FlatSpace»"],
-      ru: ["Разработка NFT-Маркетплейса «FlatSpace»"],
+      en: ["Multi-platform\n HR application"],
+      ru: ["Мультиплатформенное\n HR приложение"],
     },
     showCategoriesOnPage: false,
-    icons: ["monitor", "phone02"],
-    textColor: "black",
+    icons: ["monitor", "phone01"],
+    textColor: "white",
     technologies: [
       TECHNOLOGIES.nest,
-      TECHNOLOGIES.nextjs,
       TECHNOLOGIES.postgresql,
-      TECHNOLOGIES.solidity,
+      TECHNOLOGIES.reactNative,
+      TECHNOLOGIES.headhunter,
+      TECHNOLOGIES.avito,
+      TECHNOLOGIES.ukassa,
     ],
     banner: {
-      desktop: flatspaceBanner.src,
-      mob: flatspaceBanner.src,
+      desktop: personalPromo.src,
+      mob: personalPromoMob.src,
     },
     description: {
-      en: "To create an NFT-marketplace for famous London Art Gallery where real artists with physical arts can sell their work as NFTs. Implement auction functionality and  fixed price payments.",
-      ru: "Создать NFT-маркетплейс для известной Лондонской художественной галереи, где реальные художники с нарисованными картинами могут продавать свои работы как NFT. Реализовать функциональность продажи НФТ на аукционе и по фиксированной стоимости.",
+      en: "Our team had to develop an HR aggregator application that helps collect all resumes in one place, facilitates communication with candidates and has integration with popular job search platforms.",
+      ru: "Нашей команде предстояло разработать HR приложение-агрегатор, которое помогает собирать все резюме в  одном месте, облегчает общение с кандидатами и имеет интеграцию с популярными платформами для поиска работы.",
     },
     params: {
       budget: {
-        ru: 2000000,
-        en: 25000,
+        ru: 2300000,
+        en: 30000,
       },
-      period: 4,
-      year: "2023",
+      period: 9,
+      year: 2022,
     },
     main: [
       {
         title: {
-          en: "Auction creation",
-          ru: "Создание аукциона",
+          en: "Integration with HR services",
+          ru: "Интеграция с кадровыми сервисами",
         },
         text: [
           {
             text: {
-              en: "Approved artists can start an auction and everyone can bid to buy a masterpiece as an NFT. ",
-              ru: "Одобренные художники могут начать аукцион, и все желающие могут принять участие в торгах, чтобы купить шедевр в качестве NFT. ",
+              en: "To reduce the time it takes to browse employee search sites, and to bring all resumes together, we decided to aggregate the existing platforms into one application. In total, our team has integrated six major platforms, including HH.ru and Avito. Our integrations allow app users to seamlessly receive candidate resumes from multiple sources at once.",
+              ru: "Чтобы сократить время на просмотр сайтов по поиску сотрудников, и собрать все резюме воедино – мы решили аггрегировать существующие площадки в одном приложении. Всего наша команда интегрировала 6 крупнейших платформ, включая HH.ru и Авито. Наши интеграции позволяют пользователям приложения бесшовно получать резюме кандидатов из сразу нескольких источников.",
             },
           },
         ],
-        banner: flatspaceImage1.src,
+        banner: personalImage1.src,
       },
       {
         title: {
-          en: "Действия в режиме реального времени",
-          ru: "Дополнительные блоки",
+          en: "Custom templates for interview invitations",
+          ru: "Пользовательские шаблоны для приглашения на интервью",
         },
         text: [
           {
             text: {
-              en: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
-              ru: "Простые в использовании приборные панели для отслеживания статуса аукциона со всей необходимой информацией.",
+              en: "We created a system to create customizable templates cards that users can send to job candidates. This solution significantly saves time in processing a large number of incoming resumes, and this is important, because optimization is the first priority for any business.",
+              ru: "Мы создали систему по созданию кастомизируемых карточек-шаблонов, которые пользователи могут отправлять кандидатам на вакансию. Данное решение значительно экономит время на обработку большого количества входящих предложений, и это важно, ведь оптимизация  является первоочередной задачей для любого бизнеса.",
             },
           },
         ],
-        banner: flatspaceImage2.src,
+        banner: personalImage2.src,
       },
       {
         title: {
-          en: "All artists have a choise",
-          ru: "У всех художников есть выбор",
+          en: "Built-in chat to display messages from HR services",
+          ru: "Встроенный чат для вывода сообщений из других сервисов",
         },
         text: [
           {
             text: {
-              en: "It doesn’t have the “Highest Bid -- Wins” pattern. The artist always can choose who’ll be the winner, no matter what’s the bid. Also, the artist doesn’t pay for mint -- all expenses are up to buyer.",
-              ru: `Здесь нет схемы "Наибольшая ставка - победа". Художник всегда может выбрать, кто станет победителем, независимо от ставки. Кроме того, художник не платит за выпуск НФТ - все расходы ложатся на покупателя.`,
+              en: "The app collects not only candidates resumes, but also their messages from various services. To make this process even more convenient, we created a built-in chat room where users can communicate with future employees from all necessary sources.",
+              ru: "Приложение собирает не только резюме кандидатов, но и их сообщения с различных площадок. Чтобы сделать этот процесс еще более удобным, мы создали встроенный чат, в котором пользователи могут общаться с будущими работниками из всех необходимых источников.",
             },
           },
         ],
-        banner: flatspaceImage3.src,
+        banner: personalImage3.src,
       },
       {
         title: {
-          en: "Results",
-          ru: "Результат",
+          en: "",
+          ru: "",
         },
         text: [
           {
+            subtitle: {
+              en: "Smart tips for making up vacancies",
+              ru: "Сбор подсказок для составления вакансий",
+            },
             text: {
-              en: "High-end platform which encourage all types of artists -- from entry to expert levels. Smart contract ensure transparency and honesty and microservices architecture provide seamless user experience at all stages. ",
-              ru: "Высококлассная платформа, которая поощряет все типы художников - от начального до экспертного уровня. Смарт-контракт обеспечивает прозрачность и честность, а архитектура микросервисов обеспечивает беспрепятственный пользовательский опыт на всех этапах.",
+              en: "We parsed over ten thousand different job ads and used statistical analysis to collect the most common requirements. This made it possible to compile smart tips for all kinds of jobs.",
+              ru: "Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.",
+            },
+          },
+          {
+            subtitle: {
+              en: "Placing vacancies in different services",
+              ru: "Размещение вакансий в разных сервисах",
+            },
+            text: {
+              en: "We have unified job requirements across all services, which allows the users to fill out only the app’s form.",
+              ru: "Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.",
             },
           },
         ],
+        banner: personalScheme.src,
       },
     ],
     team: [
       TEAM.alexanderAksenov,
-      TEAM.ilyaSmirnov,
-      TEAM.yanSofronov,
+      TEAM.daniilSemenov,
       TEAM.nikitaBobkov,
       TEAM.maksimKlimchenko,
       TEAM.andreyBarabanov,
+      TEAM.andreyPaskarenko,
+      TEAM.andreyBabenkov,
+      TEAM.alekseyKlimenko,
+      TEAM.ernestMironov,
+      TEAM.kirillElizarov,
       TEAM.vladislavKiribyatev,
     ],
   },

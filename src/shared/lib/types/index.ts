@@ -24,6 +24,7 @@ export type MainBannerType = string | ILang<string>;
 export interface ICase {
   title: string;
   id: string;
+  projectUrl?: string;
   heroTitle: ILang<string>;
   categories: ILang<string[]>;
   showCategoriesOnPage: boolean;
