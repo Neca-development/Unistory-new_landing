@@ -34,7 +34,7 @@ export function Stack({ data }: IStackProps) {
   }
 
   return (
-    <div className="flex bg-light-bg-accent dark:bg-dark-bg-accent pt-20 mt-[7.5rem] t-xs:mt-2 t-xs:pt-10">
+    <div className="flex bg-light-bg-accent dark:bg-dark-bg-accent pt-20 mt-20 t-xs:mt-2 t-xs:pt-10">
       <div className="container">
         <h2 className="font-bold text-[2.875rem] t-xs:text-2xl">{langData.techno}</h2>
         <div className="flex items-center justify-center md:justify-start gap-10 mt-16 flex-wrap  t-xs:mt-6 t-xs:gap-4">

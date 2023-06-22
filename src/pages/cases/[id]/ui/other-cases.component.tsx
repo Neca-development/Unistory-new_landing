@@ -13,7 +13,7 @@ export default function OtherCases({ title, otherCases }: IProps) {
   const isMobile = useDetectDeviceType();
 
   return (
-    <section className="container mt-10 pb-24 t-xs:pb-16">
+    <section className="container mt-10 md:mt-20 pb-20 t-xs:pb-16">
       <h2 className="text-5xl font-bold t-xs:text-2xl">{title}</h2>
 
       <Swiper
