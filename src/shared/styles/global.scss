@@ -56,13 +56,14 @@ input:not([name="name"])::-webkit-contacts-auto-fill-button {
 }
 
 .container {
-  @apply w-full px-[1rem] md:max-w-[790px] lg:max-w-[80rem]  lg:px-[5rem] 2xl:max-w-[90rem] mx-auto m-l:max-w-full;
+  @apply w-full px-[1rem] md:max-w-[790px] lg:max-w-[80rem] lg:px-[5rem] 2xl:max-w-[90rem] mx-auto m-l:max-w-full;
 }
 
 .winter {
   --color-text: #4fccd5;
   --color-bg: rgba(79, 204, 213, 0.1);
 }
+
 .summer {
   --color-text: #ec5f3b;
   --color-bg: rgba(236, 95, 59, 0.1);
@@ -86,9 +87,14 @@ input:not([name="name"])::-webkit-contacts-auto-fill-button {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
   select,
   textarea,
   input {
     font-size: 1.25rem;
   }
+}
+
+.light .winter .text-h1 span.text-summer {
+  color: #0F1A20;
 }

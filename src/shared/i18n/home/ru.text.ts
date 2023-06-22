@@ -4,7 +4,7 @@ export const HeroRu = {
   description: {
     first: "Разрабатываем ",
     second: "цифровые",
-    third: "решения",
+    third: "продукты",
     fourth: "",
     fifth: "для бизнеса",
   },

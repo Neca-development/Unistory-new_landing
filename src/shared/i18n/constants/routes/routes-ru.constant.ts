@@ -4,7 +4,7 @@ export const ROUTESRU = [
     route: "/cases",
   },
   {
-    label: "Стать клиентом",
+    label: "Оставить заявку",
     route: "#become-customer",
   },
   // {
