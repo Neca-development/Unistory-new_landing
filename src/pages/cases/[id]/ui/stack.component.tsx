@@ -42,7 +42,7 @@ export function Stack({ data }: IStackProps) {
             <div
               key={idx}
               className={clsx(
-                "flex bg-light-bg w-[48%] md:w-[30.8%] lg:w-[22.3%] dark:bg-dark-bg p-6 flex-col items-center"
+                "flex bg-light-bg w-[47%] md:w-[30.8%] lg:w-[22.3%] dark:bg-dark-bg p-6 flex-col items-center"
                 // idx === data?.length - 1 && idx % 2 === 0 && 'col-span-2'
               )}
             >
