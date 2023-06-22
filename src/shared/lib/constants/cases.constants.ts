@@ -52,6 +52,11 @@ import hoarderImageDark from "@public/assets/images/cases/hoarder/dark-vizualiza
 import hoarderImage3 from "@public/assets/images/cases/hoarder/subscription.jpg";
 import hoarderImage3Dark from "@public/assets/images/cases/hoarder/dark-subscription.jpg";
 
+import flatspaceBanner from "@public/assets/images/cases/flatspace/banner.jpg";
+import flatspaceImage1 from "@public/assets/images/cases/flatspace/auction.jpg";
+import flatspaceImage2 from "@public/assets/images/cases/flatspace/actions.jpg";
+import flatspaceImage3 from "@public/assets/images/cases/flatspace/choise.jpg";
+
 export const CASES: ICase[] = [
   {
     title: "Personal",
@@ -893,6 +898,113 @@ export const CASES: ICase[] = [
       TEAM.andreyPaskarenko,
       TEAM.vladislavKiribyatev,
       TEAM.kirillElizarov,
+    ],
+  },
+  {
+    title: "NFT-Marketplace «FlatSpace»",
+    id: "flatspace",
+    heroTitle: {
+      en: "NFT-Marketplace «FlatSpace»",
+      ru: "Благотварительная платформа Адрес.Люди",
+    },
+    categories: {
+      en: ["Development of NFT-Marketplace «FlatSpace»"],
+      ru: ["Благотварительная платформа Адрес.Люди"],
+    },
+    showCategoriesOnPage: false,
+    icons: ["monitor", "phone02"],
+    textColor: "black",
+    technologies: [
+      TECHNOLOGIES.nest,
+      TECHNOLOGIES.nextjs,
+      TECHNOLOGIES.postgresql,
+      TECHNOLOGIES.solidity,
+    ],
+    banner: {
+      desktop: flatspaceBanner.src,
+      mob: flatspaceBanner.src,
+    },
+    description: {
+      en: "To create an NFT-marketplace for famous London Art Gallery where real artists with physical arts can sell their work as NFTs. Implement auction functionality and  fixed price payments.",
+      ru: "Создание платформы, которая соединяет нуждающихся в помощи людей и тех кто им хочет помочь на безвозмездной основе. Пользователь площадки может разместить просьбу о помощи, а другой человек может помочь лекарствами, продуктами или другими средствами",
+    },
+    params: {
+      budget: {
+        ru: 1300000,
+        en: 25000,
+      },
+      period: 4,
+      year: "2023",
+    },
+    main: [
+      {
+        title: {
+          en: "Auction creation",
+          ru: "Доска объявлений",
+        },
+        text: [
+          {
+            text: {
+              en: "Approved artists can start an auction and everyone can bid to buy a masterpiece as an NFT. ",
+              ru: "Доска объявлений с запросами о помощи является центральным элементом платформы. Зарегестрированный пользователь может разместить свое объявление и добавить всю необходимую информацию: описание, фото и контакты. Благотворители же могут открыть интересующую их карточку и напрямую связаться с нуждающимся человеком. ",
+            },
+          },
+        ],
+        banner: flatspaceImage1.src,
+      },
+      {
+        title: {
+          en: "Real-time actions",
+          ru: "Дополнительные блоки",
+        },
+        text: [
+          {
+            text: {
+              en: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
+              ru: "Помимо доски объявлений, наша команда создала отедьную секцию с афишой бесплатных мероприятий, советами психологов, контактами платформы и со статьями от команды проекта. Каждая из секций представлена отдельной страницей: для бесплатных мероприятий мы разработали ленту ближайших событий, а для советов психологов раздел со встроенным медиа-плеером для отоброжения роликов специалистов.  ",
+            },
+          },
+        ],
+        banner: flatspaceImage2.src,
+      },
+      {
+        title: {
+          en: "All artists have a choise",
+          ru: "Административная панель и личный кабинет для пользователей",
+        },
+        text: [
+          {
+            text: {
+              en: "It doesn’t have the “Highest Bid -- Wins” pattern. The artist always can choose who’ll be the winner, no matter what’s the bid. Also, the artist doesn’t pay for mint -- all expenses are up to buyer.",
+              ru: "Разработали кастомное решение для администрирования площадки. Команда проекта прослеживает публикуемые объявления и остальные действия на площадке, получая необходимые данные в удобном виде.",
+            },
+          },
+        ],
+        banner: flatspaceImage3.src,
+      },
+      {
+        title: {
+          en: "Results",
+          ru: "Административная панель и личный кабинет для пользователей",
+        },
+        text: [
+          {
+            text: {
+              en: "High-end platform which encourage all types of artists -- from entry to expert levels. Smart contrast ensure transparency and honesty and microservices architecture provide seamless user experience at all stages. ",
+              ru: "Разработали кастомное решение для администрирования площадки. Команда проекта прослеживает публикуемые объявления и остальные действия на площадке, получая необходимые данные в удобном виде.",
+            },
+          },
+        ],
+      },
+    ],
+    team: [
+      TEAM.alexanderAksenov,
+      TEAM.ilyaSmirnov,
+      TEAM.yanSofronov,
+      TEAM.nikitaBobkov,
+      TEAM.maksimKlimchenko,
+      TEAM.andreyBarabanov,
+      TEAM.vladislavKiribyatev,
     ],
   },
 ];
