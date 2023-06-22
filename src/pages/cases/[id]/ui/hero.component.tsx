@@ -1,5 +1,6 @@
 import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
 import { ICase } from "@shared/lib/types";
+import { IconComponent } from "@shared/ui";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
@@ -25,9 +26,22 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
   return (
     <>
-      <h1 className="container mt-20 text-[4rem] leading-[4.875rem] font-bold whitespace-pre-line t-xs:text-[1.75rem] t-xs:leading-[2rem] t-xs:mt-6">
-        {data.heroTitle[locale || "ru"]}
-      </h1>
+      <div className="container mt-20 md:flex t-xs:mt-14">
+        <h1 className="leading-[4.875rem] text-[4rem] font-bold whitespace-pre-line t-xs:text-[1.75rem] t-xs:leading-[2rem]">
+          {data.heroTitle[locale || "ru"]}
+        </h1>
+        {data.projectUrl && (
+          <a
+            className="flex items-center text-light-text-primary/[0.5] hover:text-light-text-primary h-fit mt-5 sm:mt-10 md:mt-auto duration-200"
+            href={data.projectUrl}
+            rel="nofollow"
+            target="_blank"
+          >
+            <span className="text-lg sm:text-[20px] lg:text-2xl mr-4">www.flatspacenfts.com</span>
+            <IconComponent name="caseProjectLink" className="w-[24px] h-[24px]" />
+          </a>
+        )}
+      </div>
 
       <Image
         src={data.banner.desktop}

@@ -38,7 +38,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
                 <p className="text-2xl font-medium t-xs:text-xl">{city.name}</p>
                 <a
                   href={`tel:${city.tel}`}
-                  className="text-dark-text-primary text-base w-fit underline-offset-4 hover:underline "
+                  className="text-dark-text-primary text-base w-fit t-xs:mx-auto underline-offset-4 hover:underline "
                 >
                   {city.tel}
                 </a>
@@ -57,7 +57,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
             )}
           >
             <h4
-              className="font-medium text-2xl"
+              className="font-medium text-2xl t-xs:text-center"
               dangerouslySetInnerHTML={{ __html: text.slogan }}
             />
             <div className="flex items-center space-x-6 opacity-50 t-xs:justify-center">

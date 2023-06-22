@@ -82,9 +82,9 @@ module.exports = {
           },
         ],
         "mob-h1": [
-          "2.25rem",
+          "2rem",
           {
-            lineHeight: "2.75rem",
+            lineHeight: "2.55rem",
             letterSpacing: "0.02em",
             fontWeight: "700",
           },
