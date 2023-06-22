@@ -15,21 +15,21 @@ const TemperatureComponent = () => {
     <button
       onClick={toggleTemperatureThemeHandler}
       className={clsx(
-        "absolute top-[2rem] right-[3rem] w-6 h-6 lg:w-8 lg:h-8 2xl:w-9 2xl:h-9 t-xs:top-[31rem] m-xl:right-[1rem] hover:scale-125 duration-150",
+        "absolute top-[2rem] right-[3rem] w-6 h-6 lg:w-7 lg:h-7 2xl:w-9 2xl:h-9 t-xs:top-[31rem] lg:hover:scale-125 duration-150",
         shouldAnimate && "animate-hero-icons-fade-in"
       )}
     >
       <IconComponent
         name="winter"
         className={clsx(
-          "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent block absolute top-0 left-0 w-6 lg:w-8 2xl:w-9 ",
+          "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent block absolute top-0 left-0 w-6 lg:w-7 2xl:w-9 ",
           temperatureTheme === "winter" ? "opacity-100" : "opacity-0"
         )}
       />
       <IconComponent
         name="summer"
         className={clsx(
-          "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent block absolute top-0 left-0 w-6 lg:w-8 2xl:w-9 ",
+          "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent block absolute top-0 left-0 w-6 lg:w-7 2xl:w-9 ",
           temperatureTheme === "summer" ? "opacity-100" : "opacity-0"
         )}
       />
