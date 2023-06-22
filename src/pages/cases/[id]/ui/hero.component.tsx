@@ -37,8 +37,13 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
             rel="nofollow"
             target="_blank"
           >
-            <span className="text-lg sm:text-[20px] lg:text-2xl mr-4">www.flatspacenfts.com</span>
-            <IconComponent name="caseProjectLink" className="w-[24px] h-[24px]" />
+            <span className="text-base sm:text-[20px] sm:leading-[24px] lg:text-2xl mr-2 sm:mr-4">
+              www.flatspacenfts.com
+            </span>
+            <IconComponent
+              name="caseProjectLink"
+              className="w-[16px] h-[16px] sm:w-[24px] sm:h-[24px]"
+            />
           </a>
         )}
       </div>

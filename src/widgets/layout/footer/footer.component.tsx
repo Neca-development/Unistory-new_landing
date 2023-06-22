@@ -107,7 +107,9 @@ export const Footer = React.memo((props: IFooterProperties) => {
 
         <div className="flex items-center justify-between t-xs:mx-3">
           <IconComponent name="logoDarkOutline" className="w-[6.5rem]" />
-          <p className="opacity-50 text-lg">&copy; {new Date().getFullYear()} Unistory</p>
+          <p className="opacity-50 text-base sm:text-lg">
+            &copy; {new Date().getFullYear()} Unistory
+          </p>
         </div>
       </div>
     </footer>
