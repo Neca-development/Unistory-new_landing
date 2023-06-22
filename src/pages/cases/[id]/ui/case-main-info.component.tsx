@@ -50,13 +50,15 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           ))}
         </article>
       </div>
-      <Image
-        src={getBanner()}
-        width={2880}
-        height={1060}
-        className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
-        alt="project banner"
-      />
+      {getBanner() != "" && (
+        <Image
+          src={getBanner()}
+          width={2880}
+          height={1060}
+          className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
+          alt="project banner"
+        />
+      )}
     </section>
   );
 }
