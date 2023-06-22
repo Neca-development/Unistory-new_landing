@@ -56,9 +56,9 @@ const RocketComponent = () => {
   return (
     <div ref={rocketScope}>
       <button
-        onClick={rocketLaunch}
+        // onClick={rocketLaunch}
         className={clsx(
-          "rocket absolute bottom-[1.5rem] left-[10.5rem] w-10 2xl:w-12 p-2 t-xs:bottom-2 t-xs:left-6",
+          "rocket absolute bottom-[1.5rem] left-[10.5rem] w-10 2xl:w-12 p-2 t-xs:bottom-2 t-xs:left-6 hover:scale-125 duration-150",
           shouldAnimate && "animate-hero-icons-fade-in"
         )}
       >

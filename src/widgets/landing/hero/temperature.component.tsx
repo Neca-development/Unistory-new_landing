@@ -15,7 +15,7 @@ const TemperatureComponent = () => {
     <button
       onClick={toggleTemperatureThemeHandler}
       className={clsx(
-        "absolute top-[2rem] right-[3rem] w-8 h-8 2xl:w-9 2xl:h-9 t-xs:top-[31rem] m-xl:right-[1rem]",
+        "absolute top-[2rem] right-[3rem] w-8 h-8 2xl:w-9 2xl:h-9 t-xs:top-[31rem] m-xl:right-[1rem] hover:scale-125 duration-150",
         shouldAnimate && "animate-hero-icons-fade-in"
       )}
     >

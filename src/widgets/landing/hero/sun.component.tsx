@@ -23,7 +23,7 @@ const SunComponent = () => {
     <button
       onClick={toggleThemeHandler}
       className={clsx(
-        "absolute bottom-8 right-[28rem] w-10 h-10 2xl:w-12 t-xs:right-0 t-xs:-bottom-16",
+        "absolute bottom-4 right-[28rem] w-10 h-10 2xl:w-12 t-xs:right-0 t-xs:-bottom-16 hover:scale-125 duration-150",
         shouldAnimate && "animate-hero-icons-fade-in"
       )}
     >
@@ -31,7 +31,7 @@ const SunComponent = () => {
         name="sunset"
         className={clsx(
           iconClassnameByTheme,
-          "absolute",
+          "absolute top-0 left-0 w-full h-full",
           _theme === "dark"
             ? "animate-zoom-in opacity-100 duration-300"
             : "animate-zoom-out opacity-0 duration-300"
@@ -41,7 +41,7 @@ const SunComponent = () => {
         name="sun"
         className={clsx(
           iconClassnameByTheme,
-          "absolute",
+          "absolute top-0 left-0 w-full h-full",
           _theme === "light"
             ? "animate-zoom-out opacity-100 duration-300"
             : "animate-zoom-in opacity-0 duration-300"
