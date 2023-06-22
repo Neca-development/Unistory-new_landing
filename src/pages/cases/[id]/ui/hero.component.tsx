@@ -26,7 +26,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
   return (
     <>
-      <div className="container mt-20 md:flex t-xs:mt-14">
+      <div className="container mt-16 md:flex t-xs:mt-10">
         <h1 className="leading-[4.875rem] text-[4rem] font-bold whitespace-pre-line t-xs:text-[1.75rem] t-xs:leading-[2rem]">
           {data.heroTitle[locale || "ru"]}
         </h1>
@@ -77,7 +77,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         <p className="max-w-[52.5rem] mt-6 text-2xl leading-10 t-xs:text-base t-xs:mt-4 t-xs:leading-6">
           {data.description[locale || "ru"]}
         </p>
-        <ul className="mt-40 flex gap-x-40 t-xs:mt-20 t-xs:block">
+        <ul className="mt-20 flex gap-x-40 t-xs:mt-10 t-xs:block">
           <li className="t-xs:mb-8">
             <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:text-base">
               {langData.hero.budget}
@@ -95,7 +95,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
               {data.params.period} {findMonths(data.params.period)}
             </b>
           </li>
-          <li className="t-xs:mb-8">
+          <li className="t-xs:mb-10">
             <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:text-base">
               {langData.hero.year}
             </h3>
