@@ -40,6 +40,7 @@ const closeDark = dynamic(() => import("@public/assets/icons/close-dark.svg"));
 const menuBtnLight = dynamic(() => import("@public/assets/icons/menu-btn-light.svg"));
 const menuBtnDark = dynamic(() => import("@public/assets/icons/menu-btn-dark.svg"));
 const clutchStar = dynamic(() => import("@public/assets/icons/clutch-star.svg"));
+const caseProjectLink = dynamic(() => import("@public/assets/icons/case-project-link.svg"));
 
 const iconTypes = {
   unistory,
@@ -80,6 +81,7 @@ const iconTypes = {
   menuBtnLight,
   menuBtnDark,
   clutchStar,
+  caseProjectLink,
 };
 
 export type IconsTypes = keyof typeof iconTypes;

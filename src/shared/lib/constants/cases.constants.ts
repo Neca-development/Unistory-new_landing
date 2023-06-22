@@ -905,11 +905,11 @@ export const CASES: ICase[] = [
     id: "flatspace",
     heroTitle: {
       en: "NFT-Marketplace «FlatSpace»",
-      ru: "Благотварительная платформа Адрес.Люди",
+      ru: "NFT-Маркетплейс «FlatSpace»",
     },
     categories: {
       en: ["Development of NFT-Marketplace «FlatSpace»"],
-      ru: ["Благотварительная платформа Адрес.Люди"],
+      ru: ["Разработка NFT-Маркетплейса «FlatSpace»"],
     },
     showCategoriesOnPage: false,
     icons: ["monitor", "phone02"],
@@ -926,11 +926,11 @@ export const CASES: ICase[] = [
     },
     description: {
       en: "To create an NFT-marketplace for famous London Art Gallery where real artists with physical arts can sell their work as NFTs. Implement auction functionality and  fixed price payments.",
-      ru: "Создание платформы, которая соединяет нуждающихся в помощи людей и тех кто им хочет помочь на безвозмездной основе. Пользователь площадки может разместить просьбу о помощи, а другой человек может помочь лекарствами, продуктами или другими средствами",
+      ru: "Создать NFT-маркетплейс для известной Лондонской художественной галереи, где реальные художники с нарисованными картинами могут продавать свои работы как NFT. Реализовать функциональность продажи НФТ на аукционе и по фиксированной стоимости.",
     },
     params: {
       budget: {
-        ru: 1300000,
+        ru: 2000000,
         en: 25000,
       },
       period: 4,
@@ -940,13 +940,13 @@ export const CASES: ICase[] = [
       {
         title: {
           en: "Auction creation",
-          ru: "Доска объявлений",
+          ru: "Создание аукциона",
         },
         text: [
           {
             text: {
               en: "Approved artists can start an auction and everyone can bid to buy a masterpiece as an NFT. ",
-              ru: "Доска объявлений с запросами о помощи является центральным элементом платформы. Зарегестрированный пользователь может разместить свое объявление и добавить всю необходимую информацию: описание, фото и контакты. Благотворители же могут открыть интересующую их карточку и напрямую связаться с нуждающимся человеком. ",
+              ru: "Одобренные художники могут начать аукцион, и все желающие могут принять участие в торгах, чтобы купить шедевр в качестве NFT. ",
             },
           },
         ],
@@ -954,14 +954,14 @@ export const CASES: ICase[] = [
       },
       {
         title: {
-          en: "Real-time actions",
+          en: "Действия в режиме реального времени",
           ru: "Дополнительные блоки",
         },
         text: [
           {
             text: {
               en: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
-              ru: "Помимо доски объявлений, наша команда создала отедьную секцию с афишой бесплатных мероприятий, советами психологов, контактами платформы и со статьями от команды проекта. Каждая из секций представлена отдельной страницей: для бесплатных мероприятий мы разработали ленту ближайших событий, а для советов психологов раздел со встроенным медиа-плеером для отоброжения роликов специалистов.  ",
+              ru: "Простые в использовании приборные панели для отслеживания статуса аукциона со всей необходимой информацией.",
             },
           },
         ],
@@ -970,13 +970,13 @@ export const CASES: ICase[] = [
       {
         title: {
           en: "All artists have a choise",
-          ru: "Административная панель и личный кабинет для пользователей",
+          ru: "У всех художников есть выбор",
         },
         text: [
           {
             text: {
               en: "It doesn’t have the “Highest Bid -- Wins” pattern. The artist always can choose who’ll be the winner, no matter what’s the bid. Also, the artist doesn’t pay for mint -- all expenses are up to buyer.",
-              ru: "Разработали кастомное решение для администрирования площадки. Команда проекта прослеживает публикуемые объявления и остальные действия на площадке, получая необходимые данные в удобном виде.",
+              ru: `Здесь нет схемы "Наибольшая ставка - победа". Художник всегда может выбрать, кто станет победителем, независимо от ставки. Кроме того, художник не платит за выпуск НФТ - все расходы ложатся на покупателя.`,
             },
           },
         ],
@@ -985,13 +985,13 @@ export const CASES: ICase[] = [
       {
         title: {
           en: "Results",
-          ru: "Административная панель и личный кабинет для пользователей",
+          ru: "Результат",
         },
         text: [
           {
             text: {
-              en: "High-end platform which encourage all types of artists -- from entry to expert levels. Smart contrast ensure transparency and honesty and microservices architecture provide seamless user experience at all stages. ",
-              ru: "Разработали кастомное решение для администрирования площадки. Команда проекта прослеживает публикуемые объявления и остальные действия на площадке, получая необходимые данные в удобном виде.",
+              en: "High-end platform which encourage all types of artists -- from entry to expert levels. Smart contract ensure transparency and honesty and microservices architecture provide seamless user experience at all stages. ",
+              ru: "Высококлассная платформа, которая поощряет все типы художников - от начального до экспертного уровня. Смарт-контракт обеспечивает прозрачность и честность, а архитектура микросервисов обеспечивает беспрепятственный пользовательский опыт на всех этапах.",
             },
           },
         ],
