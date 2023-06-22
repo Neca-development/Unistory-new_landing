@@ -49,19 +49,12 @@ export function Hero() {
       )}
     >
       <section className="relative pb-[5rem] lg:mb-[10vh] t-xs:pb-16">
-        <h1
-          className={clsx(
-            textClassName,
-            "pr-16 text-h1 2xl:text-large-h1 t-xs:text-mob-h1 text-center t-xs:pr-0 duration-300"
-          )}
-        >
+        <h1 className="pr-16 text-h1 2xl:text-large-h1 t-xs:text-mob-h1 text-center t-xs:pr-0 duration-300">
           {text?.description.first} <br />
-          <span className="t-xs:mr-2 text-summer dark:text-light-bg-accent duration-150">
-            {text?.description.second}
-          </span>
+          <span className="text-primary-s t-xs:mr-2 duration-300">{text?.description.second}</span>
           <button
             className={clsx(
-              "relative top-[-0.5rem] w-6 lg:w-8 t-xs:absolute t-xs:top-32 t-xs:right-[0.4rem] 2xl:w-8 hover:scale-110 duration-150",
+              "relative top-[-0.5rem] w-6 lg:w-7 t-xs:absolute t-xs:top-32 t-xs:right-[0.4rem] 2xl:w-8 hover:scale-110 duration-150",
               shouldAnimate && "animate-hero-icons-fade-in"
             )}
             onClick={toggleEarthColor}
@@ -71,9 +64,7 @@ export function Hero() {
               className={iconClassnameByTheme}
             />
           </button>
-          <span className="text-summer dark:text-light-bg-accent duration-150">
-            {text?.description.third}
-          </span>
+          <span className="text-primary-s duration-300">{text?.description.third}</span>
           {" " + text?.description.fourth + " "}
           <br className={clsx(locale === "en" && "t-xs:hidden")} />
           {text?.description.fifth}
