@@ -20,7 +20,8 @@ export function Connect() {
             <a href="mailto:contact@unistory.app" className="text-primary-s font-bold">
               contact@unistory.app
             </a>
-            . {data.description.afterEmail}
+            <br />
+            {data.description.afterEmail}
           </p>
         </div>
 
