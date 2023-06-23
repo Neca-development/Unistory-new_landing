@@ -103,9 +103,9 @@ export function Hero() {
         <article className="flex items-center text-2xl font-medium">
           <p className="relative mr-[2.5rem] m-xl:w-[4.875rem] text-[5rem] 2xl:text-8xl m-xl:text-[3rem] font-bold leading-[5rem] m-xl:mr-5">
             <span>5</span>
-            <span className="-mr-[5px]">.</span>
+            <span className="sm:-mx-[5px]">.</span>
             <span>0</span>
-            <span className="absolute top-3 -right-6 text-primary-s 2xl:top-0 m-xl:-right-2 m-xl:top-5">
+            <span className="absolute top-3 -right-6 text-primary-s 2xl:top-0 m-xl:-right-3 m-xl:top-5 duration-300">
               <IconComponent name="clutchStar" className="w-6 h-6 m-xl:w-4 m-xl:h-4" />
             </span>
           </p>
