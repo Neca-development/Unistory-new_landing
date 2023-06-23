@@ -1,8 +1,5 @@
-import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 import { ICase } from "@shared/lib/types";
 import { WorksCard } from "@widgets/works-card";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 interface IProps {
   otherCases: ICase[];
@@ -10,23 +7,19 @@ interface IProps {
 }
 
 export default function OtherCases({ title, otherCases }: IProps) {
-  const isMobile = useDetectDeviceType();
-
   return (
     <section className="container mt-10 md:mt-20 pb-20 t-xs:pb-16">
       <h2 className="text-5xl font-bold t-xs:text-2xl">{title}</h2>
 
-      <Swiper
-        className="mt-10 select-none t-xs:mt-8"
-        slidesPerView={1.5}
-        spaceBetween={isMobile ? 20 : 40}
-      >
+      <div className="grid grid-cols-3 gap-10 mt-16 t-xs:gap-8 t-xs:mt-8 t-xs:grid-cols-1">
         {otherCases.map((c) => (
-          <SwiperSlide key={c.id}>
-            <WorksCard work={c} isLargeImage={true} additionalClassnames="pt-[47.3%]" />
-          </SwiperSlide>
+          <WorksCard
+            work={c}
+            isLargeImage={true}
+            additionalClassnames="[&:nth-child(n+3)]:hidden sm:[&:first-child]:col-span-2 sm:[&:first-child]:pt-[47.3%]"
+          />
         ))}
-      </Swiper>
+      </div>
     </section>
   );
 }

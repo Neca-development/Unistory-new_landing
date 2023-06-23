@@ -28,7 +28,7 @@ export function WorksCard(props: IWorksCardInterface) {
   return (
     <Link
       className={clsx(
-        `noise rounded-sm pt-[100%] h-0 flex flex-col bg-center transform-gpu group overflow-hidden m-xl:h-[20.5rem]`,
+        `noise rounded-sm pt-[100%] h-0 flex flex-col bg-center transform-gpu group overflow-hidden`,
         work?.additionalClassnames,
         additionalClassnames
       )}
