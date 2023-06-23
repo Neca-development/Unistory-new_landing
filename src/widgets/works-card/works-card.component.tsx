@@ -1,4 +1,3 @@
-import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 import { ICase } from "@shared/lib/types";
 // import { CaseCategoryIcon } from "@shared/ui";
 import clsx from "clsx";
