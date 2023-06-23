@@ -26,13 +26,14 @@ export interface ICase {
   id: string;
   projectUrl?: string;
   heroTitle: ILang<string>;
+  thumbnail: IDevices<string>;
   categories: ILang<string[]>;
   showCategoriesOnPage: boolean;
   icons: IconsTypes[];
   additionalClassnames?: string;
   textColor: "white" | "black";
   company?: string;
-  banner: IDevices<string>;
+  heroBanner: IDevices<string>;
   description: ILang<string>;
   params: {
     budget: ILang<number>;

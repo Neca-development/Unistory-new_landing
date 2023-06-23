@@ -41,6 +41,7 @@ module.exports = {
 
       "primary-accent": "",
       "secondary-accent": "",
+      "bg-gradient": "#000000",
 
       success: "#14AE24",
       error: "#D44C4C",
@@ -192,7 +193,7 @@ module.exports = {
             transform: "translate(-50%, -50%)",
           },
           "100%": {
-            top: "2rem",
+            top: "2.3rem",
             left: "1rem",
             transform: "translate(0, 0)",
           },
