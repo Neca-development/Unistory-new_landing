@@ -52,6 +52,8 @@ import hoarderImageDark from "@public/assets/images/cases/hoarder/dark-vizualiza
 import hoarderImage3 from "@public/assets/images/cases/hoarder/subscription.jpg";
 import hoarderImage3Dark from "@public/assets/images/cases/hoarder/dark-subscription.jpg";
 
+import flatspaceThumb from "@public/assets/images/cases/flatspace/thumb.jpg";
+import flatspaceThumbMob from "@public/assets/images/cases/flatspace/thumb_mob.jpg";
 import flatspaceBanner from "@public/assets/images/cases/flatspace/banner.jpg";
 import flatspaceBannerMob from "@public/assets/images/cases/flatspace/banner_mob.jpg";
 import flatspaceImage1 from "@public/assets/images/cases/flatspace/auction.jpg";
@@ -80,7 +82,11 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.postgresql,
       TECHNOLOGIES.solidity,
     ],
-    banner: {
+    thumbnail: {
+      desktop: flatspaceThumb.src,
+      mob: flatspaceBannerMob.src,
+    },
+    heroBanner: {
       desktop: flatspaceBanner.src,
       mob: flatspaceBannerMob.src,
     },
@@ -189,7 +195,11 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.nest,
       TECHNOLOGIES.theGraph,
     ],
-    banner: {
+    thumbnail: {
+      desktop: xilBanner.src,
+      mob: xilBannerMob.src,
+    },
+    heroBanner: {
       desktop: xilBanner.src,
       mob: xilBannerMob.src,
     },
@@ -300,7 +310,11 @@ export const CASES: ICase[] = [
       en: "HoarderNest –innovative NFT aggregator",
       ru: "HoarderNest – инновационный NFT агрегатор",
     },
-    banner: {
+    thumbnail: {
+      desktop: hoarderBanner.src,
+      mob: hoarderBannerMob.src,
+    },
+    heroBanner: {
       desktop: hoarderBanner.src,
       mob: hoarderBannerMob.src,
     },
@@ -441,7 +455,11 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.chainlinkVrf,
       TECHNOLOGIES.chainlinkNode,
     ],
-    banner: {
+    thumbnail: {
+      desktop: gasmonstersBanner.src,
+      mob: gasmonstersBannerMob.src,
+    },
+    heroBanner: {
       desktop: gasmonstersBanner.src,
       mob: gasmonstersBannerMob.src,
     },
@@ -569,7 +587,11 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.solidity,
       TECHNOLOGIES.node,
     ],
-    banner: {
+    thumbnail: {
+      desktop: heistBanner.src,
+      mob: heistBannerMob.src,
+    },
+    heroBanner: {
       desktop: heistBanner.src,
       mob: heistBannerMob.src,
     },
@@ -677,7 +699,11 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.node,
       TECHNOLOGIES.postgresql,
     ],
-    banner: {
+    thumbnail: {
+      desktop: sipsignalBanner.src,
+      mob: sipsignalBannerMob.src,
+    },
+    heroBanner: {
       desktop: sipsignalBanner.src,
       mob: sipsignalBannerMob.src,
     },
@@ -792,7 +818,11 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.node,
       TECHNOLOGIES.postgresql,
     ],
-    banner: {
+    thumbnail: {
+      desktop: charityplatformBanner.src,
+      mob: charityplatformBannerMob.src,
+    },
+    heroBanner: {
       desktop: charityplatformBanner.src,
       mob: charityplatformBannerMob.src,
     },
@@ -902,7 +932,11 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.avito,
       TECHNOLOGIES.ukassa,
     ],
-    banner: {
+    thumbnail: {
+      desktop: personalPromo.src,
+      mob: personalPromoMob.src,
+    },
+    heroBanner: {
       desktop: personalPromo.src,
       mob: personalPromoMob.src,
     },

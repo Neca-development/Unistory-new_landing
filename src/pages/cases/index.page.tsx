@@ -31,7 +31,7 @@ export function Cases() {
                 work={work}
                 isLargeImage={index % LARGE_ITEM_STEP === 0}
                 additionalClassnames={clsx(
-                  "[&:nth-child(6n+1)]:col-span-2 t-xs:[&:nth-child(6n+1)]:!col-span-1"
+                  "[&:nth-child(6n+1)]:col-span-2 sm:[&:nth-child(6n+1)]:pt-[47.3%] t-xs:[&:nth-child(6n+1)]:!col-span-1"
                 )}
               />
             ))}
