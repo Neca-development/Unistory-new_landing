@@ -47,6 +47,14 @@ export function WorksCard(props: IWorksCardInterface) {
 						<CaseCategoryIcon key={idx} icon={icon} variant={work?.textColor} />
 					))} 
       </div> */}
+      {work.thumbGradient && (
+        <div
+          className={clsx(
+            `absolute bottom-0 left-0 w-full h-2/6 work-card-gradient ${work.thumbGradient}`
+          )}
+        ></div>
+      )}
+
       <div
         className={clsx(
           "absolute bottom-0 w-full p-6 t-xs:p-4",

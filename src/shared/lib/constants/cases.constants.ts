@@ -82,9 +82,10 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.postgresql,
       TECHNOLOGIES.solidity,
     ],
+    thumbGradient: "flatspace-gradient",
     thumbnail: {
       desktop: flatspaceThumb.src,
-      mob: flatspaceBannerMob.src,
+      mob: flatspaceThumbMob.src,
     },
     heroBanner: {
       desktop: flatspaceBanner.src,
@@ -459,6 +460,7 @@ export const CASES: ICase[] = [
       desktop: gasmonstersBanner.src,
       mob: gasmonstersBannerMob.src,
     },
+    thumbGradient: "gas-monster-gradient",
     heroBanner: {
       desktop: gasmonstersBanner.src,
       mob: gasmonstersBannerMob.src,

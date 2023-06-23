@@ -27,6 +27,7 @@ export interface ICase {
   projectUrl?: string;
   heroTitle: ILang<string>;
   thumbnail: IDevices<string>;
+  thumbGradient?: string;
   categories: ILang<string[]>;
   showCategoriesOnPage: boolean;
   icons: IconsTypes[];

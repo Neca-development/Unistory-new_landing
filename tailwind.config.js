@@ -41,6 +41,7 @@ module.exports = {
 
       "primary-accent": "",
       "secondary-accent": "",
+      "bg-gradient": "#000000",
 
       success: "#14AE24",
       error: "#D44C4C",
