@@ -192,7 +192,7 @@ module.exports = {
             transform: "translate(-50%, -50%)",
           },
           "100%": {
-            top: "2rem",
+            top: "2.3rem",
             left: "1rem",
             transform: "translate(0, 0)",
           },
