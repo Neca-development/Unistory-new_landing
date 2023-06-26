@@ -1,4 +1,4 @@
-import { IconsTypes } from "@shared/ui";
+import { IMessage, IconsTypes } from "@shared/ui";
 
 export const HeroRu = {
   description: {
@@ -64,12 +64,7 @@ export const WorksRu = {
 };
 
 export const PrinciplesRu: {
-  message: {
-    author: string;
-    avatar: string;
-    message: string;
-    date: string;
-  };
+  messages: IMessage[];
   items: Array<{
     title: string;
     description: {
@@ -79,13 +74,29 @@ export const PrinciplesRu: {
     };
   }>;
 } = {
-  message: {
-    author: "Нурсултан Бегенов",
-    avatar: "/assets/images/nursultan.jpg",
-    message:
-      "Unistory — это подход, культура и фокус на показателях. Рассказываем, как устроена командная игра",
-    date: "только что",
-  },
+  messages: [
+    {
+      author: "Нурсултан Бегенов",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — это подход, культура и фокус на показателях. Рассказываем, как устроена командная игра (1)",
+      date: "только что",
+    },
+    {
+      author: "Нурсултан Бегенов",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — это подход, культура и фокус на показателях. Рассказываем, как устроена командная игра (2)",
+      date: "только что",
+    },
+    {
+      author: "Нурсултан Бегенов",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — это подход, культура и фокус на показателях. Рассказываем, как устроена командная игра (3)",
+      date: "только что",
+    },
+  ],
   items: [
     {
       title: "Коммуникация",
