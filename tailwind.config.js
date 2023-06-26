@@ -136,12 +136,12 @@ module.exports = {
           "0%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-20%, -50%)",
           },
           "10%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-20%, -50%)",
           },
           "65%": {
             top: "50vh",
@@ -158,12 +158,12 @@ module.exports = {
           "0%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-20%, -50%)",
           },
           "10%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-20%, -50%)",
           },
           "65%": {
             top: "50vh",
@@ -180,12 +180,12 @@ module.exports = {
           "0%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-15%, -50%)",
           },
           "10%": {
             top: "50vh",
             left: "50vw",
-            transform: "translate(-50%, -50%)",
+            transform: "translate(-15%, -50%)",
           },
           "65%": {
             top: "50vh",

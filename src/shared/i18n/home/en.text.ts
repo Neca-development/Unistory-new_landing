@@ -1,4 +1,4 @@
-import { IconsTypes } from "@shared/ui";
+import { IMessage, IconsTypes } from "@shared/ui";
 
 export const HeroEn = {
   description: {
@@ -67,12 +67,7 @@ export const WorksEn = {
 };
 
 export const PrinciplesEn: {
-  message: {
-    author: string;
-    avatar: string;
-    message: string;
-    date: string;
-  };
+  messages: IMessage[];
   items: Array<{
     title: string;
     description: {
@@ -82,13 +77,29 @@ export const PrinciplesEn: {
     };
   }>;
 } = {
-  message: {
-    author: "Nursultan Begenov",
-    avatar: "/assets/images/nursultan.jpg",
-    message:
-      "Unistory — is approach, culture and a focus on performance. We tell you how teamwork works",
-    date: "recently",
-  },
+  messages: [
+    {
+      author: "Nursultan Begenov",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — is approach, culture and a focus on performance. We tell you how teamwork works",
+      date: "recently",
+    },
+    {
+      author: "Nursultan Begenov",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — is approach, culture and a focus on performance. We tell you how teamwork works",
+      date: "recently",
+    },
+    {
+      author: "Nursultan Begenov",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — is approach, culture and a focus on performance. We tell you how teamwork works",
+      date: "recently",
+    },
+  ],
   items: [
     {
       title: "Communication",
