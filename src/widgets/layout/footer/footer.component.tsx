@@ -65,7 +65,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
                 <a
                   rel="nofollow"
                   href="https://t.me/unistory_app"
-                  className="text-light-bg-accent	opacity-50 hover:opacity-100 duration-150"
+                  className="text-light-bg-accent	opacity-50 hover:opacity-100"
                   target="_blank"
                 >
                   <IconComponent name="telegram" className="w-6" />
@@ -74,7 +74,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
                 <a
                   rel="nofollow"
                   href=""
-                  className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
+                  className="text-light-bg-accent opacity-50 hover:opacity-100"
                   target="_blank"
                 >
                   <IconComponent name="telegram" className="w-6" />
@@ -83,26 +83,29 @@ export const Footer = React.memo((props: IFooterProperties) => {
               <a
                 rel="nofollow"
                 href="https://wa.me/79117417477"
-                className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
+                className="text-light-bg-accent"
                 target="_blank"
               >
-                <IconComponent name="whatsApp" className="w-6" />
+                <IconComponent name="whatsApp" className="w-6 opacity-50 hover:opacity-100" />
               </a>
               <a
                 rel="nofollow"
                 href="https://clutch.co/profile/unistory"
-                className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
+                className="text-light-bg-accent"
                 target="_blank"
               >
-                <IconComponent name="clutch" className="w-[4.375rem]" />
+                <IconComponent
+                  name="clutch"
+                  className="w-[4.375rem] opacity-50 hover:opacity-100"
+                />
               </a>
               <a
                 rel="nofollow"
                 href="https://www.upwork.com/ag/unistory/"
-                className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
+                className="text-light-bg-accent"
                 target="_blank"
               >
-                <IconComponent name="upwork" className="w-20 mt-1" />
+                <IconComponent name="upwork" className="w-20 mt-1 opacity-50 hover:opacity-100" />
               </a>
             </div>
           </div>
