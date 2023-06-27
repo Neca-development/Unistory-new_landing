@@ -19,6 +19,7 @@ import angularIcon from "@public/assets/technologies/angular.png";
 import expressIcon from "@public/assets/technologies/express.png";
 import expressDarkIcon from "@public/assets/technologies/express-dark.png";
 import typescriptIcon from "@public/assets/technologies/typescript.png";
+import typescriptDarkIcon from "@public/assets/technologies/typescript-dark.png";
 import headhunterIcon from "@public/assets/technologies/headhunter.png";
 import headhunterDarkIcon from "@public/assets/technologies/headhunter-dark.png";
 import avitoIcon from "@public/assets/technologies/avito.png";
@@ -148,7 +149,7 @@ export const TECHNOLOGIES: TechnologyType = {
   typescript: {
     name: "Typescript",
     icon: {
-      dark: typescriptIcon.src,
+      dark: typescriptDarkIcon.src,
       light: typescriptIcon.src,
     },
   },

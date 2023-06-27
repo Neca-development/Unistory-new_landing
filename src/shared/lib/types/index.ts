@@ -19,12 +19,18 @@ export interface IDevices<T> {
   mob: T;
 }
 
+export interface IGoalPoints {
+  en: string;
+  ru: string;
+}
+
 export type MainBannerType = string | ILang<string>;
 
 export interface ICase {
   title: string;
   id: string;
   projectUrl?: string;
+  projectUrlTitle?: string;
   heroTitle: ILang<string>;
   thumbnail: IDevices<string>;
   categories: ILang<string[]>;
@@ -35,6 +41,7 @@ export interface ICase {
   company?: string;
   heroBanner: IDevices<string>;
   description: ILang<string>;
+  goalPoints?: IGoalPoints[];
   params: {
     budget: ILang<number>;
     period: number;

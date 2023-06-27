@@ -38,7 +38,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
             target="_blank"
           >
             <span className="text-base sm:text-[20px] sm:leading-[24px] lg:text-2xl mr-2 sm:mr-4">
-              www.flatspacenfts.com
+              {data.projectUrlTitle != null ? data.projectUrlTitle : data.projectUrl}
             </span>
             <IconComponent
               name="caseProjectLink"
@@ -74,9 +74,19 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         <h2 className="mt-20 text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:mt-10 t-xs:text-xl">
           {langData.goal}
         </h2>
-        <p className="max-w-[52.5rem] mt-6 text-2xl leading-10 t-xs:text-base t-xs:mt-4 t-xs:leading-6">
-          {data.description[locale || "ru"]}
-        </p>
+        <div className="max-w-[52.5rem] text-2xl leading-10 t-xs:text-base t-xs:leading-6">
+          <p className="mt-6 t-xs:mt-4">{data.description[locale || "ru"]}</p>
+          {data.goalPoints && (
+            <ul className="mt-6">
+              {data.goalPoints.map((point, index) => (
+                <li key={index} className="flex [&:not(:last-child)]:mb-2">
+                  <span className="w-5 h-0.5 min-w-[1.25rem] bg-light-text-primary dark:bg-light-bg-accent mr-4 mt-3 sm:mt-5"></span>
+                  {point[locale === "ru" ? "ru" : "en"]}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
         <ul className="mt-20 flex gap-x-40 t-xs:mt-10 t-xs:block">
           <li className="t-xs:mb-8">
             <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:text-base">
