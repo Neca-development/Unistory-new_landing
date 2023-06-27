@@ -60,25 +60,30 @@ export const Footer = React.memo((props: IFooterProperties) => {
               className="font-medium text-2xl t-xs:text-center"
               dangerouslySetInnerHTML={{ __html: text.slogan }}
             />
-            <div className="flex items-center space-x-6 opacity-50 t-xs:justify-center">
+            <div className="flex items-center space-x-6 t-xs:justify-center">
               {locale === "ru" ? (
                 <a
                   rel="nofollow"
                   href="https://t.me/unistory_app"
-                  className="hover:scale-110 duration-150"
+                  className="text-light-bg-accent	opacity-50 hover:opacity-100 duration-150"
                   target="_blank"
                 >
                   <IconComponent name="telegram" className="w-6" />
                 </a>
               ) : (
-                <a rel="nofollow" href="" className="hover:scale-110 duration-150" target="_blank">
+                <a
+                  rel="nofollow"
+                  href=""
+                  className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
+                  target="_blank"
+                >
                   <IconComponent name="telegram" className="w-6" />
                 </a>
               )}
               <a
                 rel="nofollow"
                 href="https://wa.me/79117417477"
-                className="hover:scale-110 duration-150"
+                className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
                 target="_blank"
               >
                 <IconComponent name="whatsApp" className="w-6" />
@@ -86,7 +91,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
               <a
                 rel="nofollow"
                 href="https://clutch.co/profile/unistory"
-                className="hover:scale-105 duration-150"
+                className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
                 target="_blank"
               >
                 <IconComponent name="clutch" className="w-[4.375rem]" />
@@ -94,7 +99,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
               <a
                 rel="nofollow"
                 href="https://www.upwork.com/ag/unistory/"
-                className="hover:scale-105 duration-150"
+                className="text-light-bg-accent opacity-50 hover:opacity-100 duration-150"
                 target="_blank"
               >
                 <IconComponent name="upwork" className="w-20 mt-1" />
