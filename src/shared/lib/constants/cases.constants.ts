@@ -8,12 +8,16 @@ import personalImage2 from "@public/assets/images/cases/personal/templates.jpg";
 import personalImage3 from "@public/assets/images/cases/personal/messenger.jpg";
 import personalScheme from "@public/assets/images/cases/personal/scheme.jpg";
 
+import gasmonstersThumb from "@public/assets/images/cases/gas-monsters/thumb.jpg";
+import gasmonstersThumbMob from "@public/assets/images/cases/gas-monsters/thumb_mob.jpg";
 import gasmonstersBanner from "@public/assets/images/cases/gas-monsters/banner.jpg";
 import gasmonstersBannerMob from "@public/assets/images/cases/gas-monsters/banner_mob.jpg";
 import gasmonstersImage1 from "@public/assets/images/cases/gas-monsters/modern.jpg";
 import gasmonstersImage2 from "@public/assets/images/cases/gas-monsters/random.jpg";
 import gasmonstersScheme from "@public/assets/images/cases/gas-monsters/scheme.jpg";
 
+import heistThumb from "@public/assets/images/cases/heist/thumb.jpg";
+import heistThumbMob from "@public/assets/images/cases/heist/thumb_mob.jpg";
 import heistBanner from "@public/assets/images/cases/heist/banner.jpg";
 import heistBannerMob from "@public/assets/images/cases/heist/banner_mob.jpg";
 import heistScheme from "@public/assets/images/cases/heist/scheme_en.jpg";
@@ -29,6 +33,8 @@ import xilImage1 from "@public/assets/images/cases/xillion/quiz.jpg";
 import xilImage2 from "@public/assets/images/cases/xillion/dao.jpg";
 import xilImage3 from "@public/assets/images/cases/xillion/stacking.jpg";
 
+import sipsignalThumb from "@public/assets/images/cases/sipsignal/thumb.jpg";
+import sipsignalThumbMob from "@public/assets/images/cases/sipsignal/thumb_mob.jpg";
 import sipsignalBanner from "@public/assets/images/cases/sipsignal/banner.jpg";
 import sipsignalBannerMob from "@public/assets/images/cases/sipsignal/banner_mob.jpg";
 import sipsignalImage1 from "@public/assets/images/cases/sipsignal/web.jpg";
@@ -621,8 +627,8 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.chainlinkNode,
     ],
     thumbnail: {
-      desktop: gasmonstersBanner.src,
-      mob: gasmonstersBannerMob.src,
+      desktop: gasmonstersThumb.src,
+      mob: gasmonstersThumbMob.src,
     },
     heroBanner: {
       desktop: gasmonstersBanner.src,
@@ -753,8 +759,8 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.node,
     ],
     thumbnail: {
-      desktop: heistBanner.src,
-      mob: heistBannerMob.src,
+      desktop: heistThumb.src,
+      mob: heistThumbMob.src,
     },
     heroBanner: {
       desktop: heistBanner.src,
@@ -977,8 +983,8 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.postgresql,
     ],
     thumbnail: {
-      desktop: sipsignalBanner.src,
-      mob: sipsignalBannerMob.src,
+      desktop: sipsignalThumb.src,
+      mob: sipsignalThumbMob.src,
     },
     heroBanner: {
       desktop: sipsignalBanner.src,
