@@ -75,7 +75,7 @@ import plagtvImage4 from "@public/assets/images/cases/plagtv/admin-panel.jpg";
 
 export const CASES: ICase[] = [
   {
-    title: "NFT-Marketplace «FlatSpace»",
+    title: "FlatSpace",
     id: "flatspace",
     projectUrl: "https://flatspacenfts.com/",
     projectUrlTitle: "www.flatspacenfts.com",
@@ -464,7 +464,7 @@ export const CASES: ICase[] = [
     title: "HoarderNest",
     id: "hoardernest",
     heroTitle: {
-      en: "HoarderNest –innovative NFT aggregator",
+      en: "HoarderNest – innovative NFT aggregator",
       ru: "HoarderNest – инновационный NFT агрегатор",
     },
     thumbnail: {
@@ -476,7 +476,7 @@ export const CASES: ICase[] = [
       mob: hoarderBannerMob.src,
     },
     categories: {
-      en: ["HoarderNest –innovative NFT aggregator"],
+      en: ["HoarderNest – innovative NFT aggregator"],
       ru: ["HoarderNest – инновационный NFT агрегатор"],
     },
     description: {
