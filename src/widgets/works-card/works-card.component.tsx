@@ -22,7 +22,7 @@ export function WorksCard(props: IWorksCardInterface) {
 
   useEffect(() => {
     setWidth(window.innerWidth);
-  });
+  }, []);
 
   return (
     <Link
