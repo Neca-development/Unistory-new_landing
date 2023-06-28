@@ -52,6 +52,7 @@ export interface ICase {
     title: ILang<string>;
     text: IDescriptionItem[];
     banner?: MainBannerType;
+    bannerMob?: string;
     darkBanner?: MainBannerType;
   }[];
   logo?: string;

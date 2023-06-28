@@ -69,13 +69,17 @@ import plagtvThumbMob from "@public/assets/images/cases/plagtv/thumb_mob.jpg";
 import plagtvBanner from "@public/assets/images/cases/plagtv/banner.jpg";
 import plagtvBannerMob from "@public/assets/images/cases/plagtv/banner_mob.jpg";
 import plagtvImage1 from "@public/assets/images/cases/plagtv/player.jpg";
+import plagtvImage1Mob from "@public/assets/images/cases/plagtv/player_mob.jpg";
 import plagtvImage2 from "@public/assets/images/cases/plagtv/dictionary.jpg";
+import plagtvImage2Mob from "@public/assets/images/cases/plagtv/dictionary_mob.jpg";
 import plagtvImage3 from "@public/assets/images/cases/plagtv/self-test.jpg";
+import plagtvImage3Mob from "@public/assets/images/cases/plagtv/self-test_mob.jpg";
 import plagtvImage4 from "@public/assets/images/cases/plagtv/admin-panel.jpg";
+import plagtvImage4Mob from "@public/assets/images/cases/plagtv/admin-panel_mob.jpg";
 
 export const CASES: ICase[] = [
   {
-    title: "NFT-Marketplace «FlatSpace»",
+    title: "FlatSpace",
     id: "flatspace",
     projectUrl: "https://flatspacenfts.com/",
     projectUrlTitle: "www.flatspacenfts.com",
@@ -258,6 +262,7 @@ export const CASES: ICase[] = [
           },
         ],
         banner: plagtvImage1.src,
+        bannerMob: plagtvImage1Mob.src,
       },
       {
         title: {
@@ -273,6 +278,7 @@ export const CASES: ICase[] = [
           },
         ],
         banner: plagtvImage2.src,
+        bannerMob: plagtvImage2Mob.src,
       },
       {
         title: {
@@ -288,6 +294,7 @@ export const CASES: ICase[] = [
           },
         ],
         banner: plagtvImage3.src,
+        bannerMob: plagtvImage3Mob.src,
       },
       {
         title: {
@@ -303,6 +310,7 @@ export const CASES: ICase[] = [
           },
         ],
         banner: plagtvImage4.src,
+        bannerMob: plagtvImage4Mob.src,
       },
       {
         title: {
@@ -464,7 +472,7 @@ export const CASES: ICase[] = [
     title: "HoarderNest",
     id: "hoardernest",
     heroTitle: {
-      en: "HoarderNest –innovative NFT aggregator",
+      en: "HoarderNest – innovative NFT aggregator",
       ru: "HoarderNest – инновационный NFT агрегатор",
     },
     thumbnail: {
@@ -476,7 +484,7 @@ export const CASES: ICase[] = [
       mob: hoarderBannerMob.src,
     },
     categories: {
-      en: ["HoarderNest –innovative NFT aggregator"],
+      en: ["HoarderNest – innovative NFT aggregator"],
       ru: ["HoarderNest – инновационный NFT агрегатор"],
     },
     description: {

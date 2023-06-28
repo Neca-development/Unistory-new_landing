@@ -2,6 +2,8 @@ import { ICase, MainBannerType } from "@shared/lib/types";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import Fancybox from "@shared/lib/hocs/fancybox";
 
 interface ICaseInfoItemProps {
   data?: ICase["main"][0];
@@ -12,6 +14,7 @@ type BannerByThemeType = { [index: string]: MainBannerType | undefined };
 function CaseInfoItem({ data }: ICaseInfoItemProps) {
   const { locale } = useRouter();
   const { theme, systemTheme } = useTheme();
+  const [width, setWidth] = useState<number>(0);
   const _theme = theme === "system" ? systemTheme : theme;
 
   const bannerByThemeConfig: BannerByThemeType = {
@@ -27,6 +30,10 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
 
     return typeof existBanner !== "string" ? (existBanner[locale || "ru"] as string) : existBanner;
   };
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  });
 
   return (
     <section className="mb-[7.5rem] t-xs:mb-16 last:mb-0">
@@ -50,14 +57,28 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           ))}
         </article>
       </div>
-      {getBanner() != "" && (
-        <Image
-          src={getBanner()}
-          width={2880}
-          height={1060}
-          className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
-          alt="project banner"
-        />
+      {width < 992 && data?.bannerMob ? (
+        <Fancybox>
+          <a href={data?.bannerMob} data-fancybox>
+            <Image
+              src={data?.bannerMob}
+              width={2880}
+              height={1060}
+              className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
+              alt="project banner"
+            />
+          </a>
+        </Fancybox>
+      ) : (
+        getBanner() != "" && (
+          <Image
+            src={getBanner()}
+            width={2880}
+            height={1060}
+            className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
+            alt="project banner"
+          />
+        )
       )}
     </section>
   );

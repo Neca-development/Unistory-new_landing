@@ -1,12 +1,14 @@
 import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
+import Fancybox from "@shared/lib/hocs/fancybox";
 import { ICase } from "@shared/lib/types";
 import { IconComponent } from "@shared/ui";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 export function CaseHero({ data }: { data: ICase | undefined }) {
   const { locale } = useRouter();
+  const [width, setWidth] = useState<number>(0);
 
   const langData = useMemo(() => {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
@@ -19,6 +21,10 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
     if (value <= 3 && value > 1) return "месяца";
     return "месяцев";
   };
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  });
 
   if (!data) {
     return <></>;
@@ -48,14 +54,29 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         )}
       </div>
 
-      <Image
-        src={data.heroBanner.desktop}
-        width={2880}
-        height={1060}
-        className="w-full object-cover mt-[4rem] t-xs:mt-6 t-xs:h-[12.625rem]"
-        alt={data.title}
-        priority
-      />
+      {width >= 992 ? (
+        <Image
+          src={data.heroBanner.desktop}
+          width={2880}
+          height={1060}
+          className="w-full object-cover mt-[4rem] t-xs:mt-6]"
+          alt={data.title}
+          priority
+        />
+      ) : (
+        <Fancybox>
+          <a href={data.heroBanner.mob} data-fancybox>
+            <Image
+              src={data.heroBanner.mob}
+              width={2880}
+              height={1060}
+              className="w-full object-cover mt-[4rem] t-xs:mt-6]"
+              alt={data.title}
+              priority
+            />
+          </a>
+        </Fancybox>
+      )}
 
       {data.showCategoriesOnPage && (
         <div className="container mt-10 flex flex-wrap items-center gap-x-4 gap-y-6 t-xs:mt-5 t-xs:gap-y-2">
