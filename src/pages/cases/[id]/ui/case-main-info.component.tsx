@@ -33,7 +33,7 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
 
   useEffect(() => {
     setWidth(window.innerWidth);
-  });
+  }, []);
 
   return (
     <section className="mb-[7.5rem] t-xs:mb-16 last:mb-0">
@@ -57,15 +57,15 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           ))}
         </article>
       </div>
-      {width < 992 && data?.bannerMob ? (
+      {width < 992 && (data?.bannerMob != null || getBanner() != "") ? (
         <Fancybox>
-          <a href={data?.bannerMob} data-fancybox>
+          <a href={data?.bannerMob ? data?.bannerMob : getBanner()} data-fancybox>
             <Image
-              src={data?.bannerMob}
+              src={data?.bannerMob ? data?.bannerMob : getBanner()}
               width={2880}
               height={1060}
               className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
-              alt="project banner"
+              alt=""
             />
           </a>
         </Fancybox>
@@ -76,7 +76,7 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
             width={2880}
             height={1060}
             className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
-            alt="project banner"
+            alt=""
           />
         )
       )}

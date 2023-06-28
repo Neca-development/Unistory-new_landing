@@ -24,7 +24,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
   useEffect(() => {
     setWidth(window.innerWidth);
-  });
+  }, []);
 
   if (!data) {
     return <></>;
