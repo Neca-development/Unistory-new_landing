@@ -1,4 +1,5 @@
 import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
+import Fancybox from "@shared/lib/hocs/fancybox";
 import { ICase } from "@shared/lib/types";
 import { IconComponent } from "@shared/ui";
 import Image from "next/image";
@@ -48,14 +49,18 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         )}
       </div>
 
-      <Image
-        src={data.heroBanner.desktop}
-        width={2880}
-        height={1060}
-        className="w-full object-cover mt-[4rem] t-xs:mt-6]"
-        alt={data.title}
-        priority
-      />
+      <Fancybox>
+        <a href={data.heroBanner.desktop} data-fancybox>
+          <Image
+            src={data.heroBanner.desktop}
+            width={2880}
+            height={1060}
+            className="w-full object-cover mt-[4rem] t-xs:mt-6]"
+            alt={data.title}
+            priority
+          />
+        </a>
+      </Fancybox>
 
       {data.showCategoriesOnPage && (
         <div className="container mt-10 flex flex-wrap items-center gap-x-4 gap-y-6 t-xs:mt-5 t-xs:gap-y-2">
