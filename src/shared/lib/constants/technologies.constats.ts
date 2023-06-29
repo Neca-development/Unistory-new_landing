@@ -6,16 +6,14 @@ import postgresqDarklIcon from "@public/assets/technologies/postgresql-dark.png"
 import nestIcon from "@public/assets/technologies/nest.png";
 import nextjsIcon from "@public/assets/technologies/nextjs.png";
 import nextjsDarkIcon from "@public/assets/technologies/nextjs-dark.png";
-import chainlinkNodeIcon from "@public/assets/technologies/chainlink-node.png";
-import chainlinkNodeDarkIcon from "@public/assets/technologies/chainlink-node-dark.png";
-import chainlinkVrfIcon from "@public/assets/technologies/chainlink-vrf.png";
-import chainlinkVrfDarkIcon from "@public/assets/technologies/chainlink-vrf-dark.png";
+import chainlinkIcon from "@public/assets/technologies/chainlink.png";
+import chainlinkDarkIcon from "@public/assets/technologies/chainlink-dark.png";
 import solidityIcon from "@public/assets/technologies/solidity.png";
 import solidityDarkIcon from "@public/assets/technologies/solidity-dark.png";
 import nodeIcon from "@public/assets/technologies/node-v2.png";
 import nodeDarkIcon from "@public/assets/technologies/node-v2-dark.png";
-import theGraphIcon from "@public/assets/technologies/the-graph.png";
-import theGraphDarkIcon from "@public/assets/technologies/the-graph-dark.png";
+import graphIcon from "@public/assets/technologies/graph.png";
+import graphDarkIcon from "@public/assets/technologies/graph-dark.png";
 import angularIcon from "@public/assets/technologies/angular.png";
 import angularDarkIcon from "@public/assets/technologies/angular-dark.png";
 import expressIcon from "@public/assets/technologies/express.png";
@@ -41,8 +39,7 @@ export type AvailableTechnologiesType =
   | "reactNative"
   | "nextjs"
   | "solidity"
-  | "chainlinkNode"
-  | "chainlinkVrf"
+  | "chainlink"
   | "theGraph"
   | "typescript"
   | "headhunter"
@@ -127,25 +124,18 @@ export const TECHNOLOGIES: TechnologyType = {
       light: solidityIcon.src,
     },
   },
-  chainlinkNode: {
-    name: "Chainlink Self-hosted node",
+  chainlink: {
+    name: "Chainlink",
     icon: {
-      dark: chainlinkNodeDarkIcon.src,
-      light: chainlinkNodeIcon.src,
-    },
-  },
-  chainlinkVrf: {
-    name: "Chainlink VRF",
-    icon: {
-      dark: chainlinkVrfDarkIcon.src,
-      light: chainlinkVrfIcon.src,
+      dark: chainlinkDarkIcon.src,
+      light: chainlinkIcon.src,
     },
   },
   theGraph: {
     name: "TheGraph",
     icon: {
-      dark: theGraphDarkIcon.src,
-      light: theGraphIcon.src,
+      dark: graphDarkIcon.src,
+      light: graphIcon.src,
     },
   },
   typescript: {
