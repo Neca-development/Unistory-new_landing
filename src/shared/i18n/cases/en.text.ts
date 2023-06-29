@@ -1,17 +1,17 @@
 export const SingleCaseEn = {
-  goal: 'The goal',
+  goal: "The goal",
   hero: {
-    budget: 'Budget',
+    budget: "Budget",
     timeline: {
-      label: 'Timeline',
+      label: "Timeline",
     },
-    year: 'Year'
+    year: "Year",
   },
-  techno: 'Technologies',
-  members: 'Worked on the project',
-  other: 'Other projects'
-}
+  techno: "Technologies",
+  members: "Project team",
+  other: "Other projects",
+};
 
 export const CasesPageEn = {
-  title: 'Cases'
-}
+  title: "Cases",
+};
