@@ -744,8 +744,7 @@ export const CASES: ICase[] = [
       TECHNOLOGIES.nextjs,
       TECHNOLOGIES.solidity,
       TECHNOLOGIES.node,
-      TECHNOLOGIES.chainlinkVrf,
-      TECHNOLOGIES.chainlinkNode,
+      TECHNOLOGIES.chainlink,
     ],
     thumbnail: {
       desktop: gasmonstersThumb.src,
