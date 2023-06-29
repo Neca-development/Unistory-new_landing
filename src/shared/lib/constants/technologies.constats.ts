@@ -1,4 +1,5 @@
-import reactIcon from "@public/assets/technologies/React-icon.png";
+import reactIcon from "@public/assets/technologies/react.png";
+import reactDarkIcon from "@public/assets/technologies/react-dark.png";
 import reactNativeIcon from "@public/assets/technologies/react-native.png";
 import postgresqlIcon from "@public/assets/technologies/postgresql.png";
 import postgresqDarklIcon from "@public/assets/technologies/postgresql-dark.png";
@@ -16,6 +17,7 @@ import nodeDarkIcon from "@public/assets/technologies/node-v2-dark.png";
 import theGraphIcon from "@public/assets/technologies/the-graph.png";
 import theGraphDarkIcon from "@public/assets/technologies/the-graph-dark.png";
 import angularIcon from "@public/assets/technologies/angular.png";
+import angularDarkIcon from "@public/assets/technologies/angular-dark.png";
 import expressIcon from "@public/assets/technologies/express.png";
 import expressDarkIcon from "@public/assets/technologies/express-dark.png";
 import typescriptIcon from "@public/assets/technologies/typescript.png";
@@ -58,14 +60,14 @@ export const TECHNOLOGIES: TechnologyType = {
   react: {
     name: "React",
     icon: {
-      dark: reactIcon.src,
+      dark: reactDarkIcon.src,
       light: reactIcon.src,
     },
   },
   angular: {
     name: "Angular",
     icon: {
-      dark: angularIcon.src,
+      dark: angularDarkIcon.src,
       light: angularIcon.src,
     },
   },

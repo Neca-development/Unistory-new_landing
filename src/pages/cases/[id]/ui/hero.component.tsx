@@ -59,7 +59,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
           src={data.heroBanner.desktop}
           width={2880}
           height={1060}
-          className="w-full object-cover mt-[4rem] t-xs:mt-6]"
+          className="w-full object-cover mt-[4rem] t-xs:mt-10"
           alt={data.title}
           priority
         />
@@ -70,7 +70,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
               src={data.heroBanner.mob}
               width={2880}
               height={1060}
-              className="w-full object-cover mt-[4rem] t-xs:mt-6]"
+              className="w-full object-cover mt-[4rem] t-xs:mt-10"
               alt={data.title}
               priority
             />
