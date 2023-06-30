@@ -841,7 +841,7 @@ export const CASES: ICase[] = [
         photo: "",
       },
       text: {
-        en: "«Unistory did a very professional job: submitted a detailed schedule prior to the estimate and followed it through with no delays. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology. Other contracts are still ongoing, but we would like to continue to work with them in the future.»",
+        en: "«Unistory did a very professional job: submitted a detailed schedule prior to the estimate and followed it through with no\u00A0delays. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology. Other contracts are still ongoing, but we would like to continue to work with them in the future.»",
         ru: "«Юнистори выполнили работу профессионально: представили график работ согласно смете и следовали ему без задержек. Они были доступны для консультаций. Проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Мы бы хотели продолжить совместную работу  в будущем.»",
       },
     },
