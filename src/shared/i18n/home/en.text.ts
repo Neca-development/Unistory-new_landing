@@ -85,6 +85,20 @@ export const PrinciplesEn: {
         "Unistory — is approach, culture and a\u00A0focus on performance. We tell you how teamwork works",
       date: "recently",
     },
+    {
+      author: "Nursultan Begenov",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — is approach, culture and a\u00A0focus on performance. We tell you how teamwork works",
+      date: "recently",
+    },
+    {
+      author: "Nursultan Begenov",
+      avatar: "/assets/images/nursultan.jpg",
+      message:
+        "Unistory — is approach, culture and a\u00A0focus on performance. We tell you how teamwork works",
+      date: "recently",
+    },
   ],
   items: [
     {
