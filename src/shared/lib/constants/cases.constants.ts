@@ -412,7 +412,7 @@ export const CASES: ICase[] = [
       {
         title: {
           en: "Wallet management",
-          ru: "Информация о недвижимости",
+          ru: "Управление кошельком",
         },
         text: [
           {
