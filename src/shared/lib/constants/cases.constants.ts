@@ -83,12 +83,12 @@ import plagtvImage3Mob from "@public/assets/images/cases/plagtv/self-test_mob.jp
 import plagtvImage4 from "@public/assets/images/cases/plagtv/admin-panel.jpg";
 import plagtvImage4Mob from "@public/assets/images/cases/plagtv/admin-panel_mob.jpg";
 
-import advancedRDThumb from "@public/assets/images/cases/advanced-rd/thumb.jpg";
-import advancedRDThumbMob from "@public/assets/images/cases/advanced-rd/thumb_mob.jpg";
-import advancedRDBanner from "@public/assets/images/cases/advanced-rd/banner.jpg";
-import advancedRDImage1 from "@public/assets/images/cases/advanced-rd/image-1.jpg";
-import advancedRDImage2 from "@public/assets/images/cases/advanced-rd/image-2.jpg";
-import advancedRDImage3 from "@public/assets/images/cases/advanced-rd/image-3.jpg";
+// import advancedRDThumb from "@public/assets/images/cases/advanced-rd/thumb.jpg";
+// import advancedRDThumbMob from "@public/assets/images/cases/advanced-rd/thumb_mob.jpg";
+// import advancedRDBanner from "@public/assets/images/cases/advanced-rd/banner.jpg";
+// import advancedRDImage1 from "@public/assets/images/cases/advanced-rd/image-1.jpg";
+// import advancedRDImage2 from "@public/assets/images/cases/advanced-rd/image-2.jpg";
+// import advancedRDImage3 from "@public/assets/images/cases/advanced-rd/image-3.jpg";
 
 export const CASES: ICase[] = [
   {
