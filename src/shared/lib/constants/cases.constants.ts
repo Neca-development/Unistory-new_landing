@@ -387,11 +387,11 @@ export const CASES: ICase[] = [
     },
     params: {
       budget: {
-        ru: 2000000,
-        en: 25000,
+        ru: 7000000,
+        en: 80000,
       },
-      period: 4,
-      year: "2023",
+      period: 6,
+      year: "2022-2023",
     },
     main: [
       {
