@@ -83,12 +83,12 @@ import plagtvImage3Mob from "@public/assets/images/cases/plagtv/self-test_mob.jp
 import plagtvImage4 from "@public/assets/images/cases/plagtv/admin-panel.jpg";
 import plagtvImage4Mob from "@public/assets/images/cases/plagtv/admin-panel_mob.jpg";
 
-// import advancedRDThumb from "@public/assets/images/cases/advanced-rd/thumb.jpg";
-// import advancedRDThumbMob from "@public/assets/images/cases/advanced-rd/thumb_mob.jpg";
-// import advancedRDBanner from "@public/assets/images/cases/advanced-rd/banner.jpg";
-// import advancedRDImage1 from "@public/assets/images/cases/advanced-rd/image-1.jpg";
-// import advancedRDImage2 from "@public/assets/images/cases/advanced-rd/image-2.jpg";
-// import advancedRDImage3 from "@public/assets/images/cases/advanced-rd/image-3.jpg";
+import advancedRDThumb from "@public/assets/images/cases/advanced-rd/thumb.jpg";
+import advancedRDThumbMob from "@public/assets/images/cases/advanced-rd/thumb_mob.jpg";
+import advancedRDBanner from "@public/assets/images/cases/advanced-rd/banner.jpg";
+import advancedRDImage1 from "@public/assets/images/cases/advanced-rd/image-1.jpg";
+import advancedRDImage2 from "@public/assets/images/cases/advanced-rd/image-2.jpg";
+import advancedRDImage3 from "@public/assets/images/cases/advanced-rd/image-3.jpg";
 
 export const CASES: ICase[] = [
   {
@@ -351,120 +351,120 @@ export const CASES: ICase[] = [
       TEAM.danilaSkablov,
     ],
   },
-  // {
-  //   title: "Advanced RD",
-  //   id: "advanced-rd",
-  //   projectUrl: "https://invest.unistory.app",
-  //   projectUrlTitle: "www.invest.unistory.app",
-  //   heroTitle: {
-  //     en: "Advanced RD",
-  //     ru: "Advanced RD",
-  //   },
-  //   categories: {
-  //     en: ["NFT-Marketplace"],
-  //     ru: ["NFT-Маркетплейс"],
-  //   },
-  //   showCategoriesOnPage: false,
-  //   icons: ["monitor", "phone02"],
-  //   textColor: "white",
-  //   technologies: [
-  //     TECHNOLOGIES.nextjs,
-  //     TECHNOLOGIES.nest,
-  //     TECHNOLOGIES.postgresql,
-  //     TECHNOLOGIES.solidity,
-  //   ],
-  //   thumbnail: {
-  //     desktop: advancedRDThumb.src,
-  //     mob: advancedRDThumbMob.src,
-  //   },
-  //   heroBanner: {
-  //     desktop: advancedRDBanner.src,
-  //     mob: advancedRDBanner.src,
-  //   },
-  //   description: {
-  //     en: "To create an NFT-marketplace for famous London Art Gallery where real artists with physical arts can sell their work as NFTs. Implement auction functionality and fixed price payments.",
-  //     ru: "Разработать NFT-Маркетплейс для знаменитой Лондонской Галереи, где художники смогу продавать свои физические работы как NFT. Интегрировать функционал аукциона и фиксированные платежи",
-  //   },
-  //   params: {
-  //     budget: {
-  //       ru: 2000000,
-  //       en: 25000,
-  //     },
-  //     period: 4,
-  //     year: "2023",
-  //   },
-  //   main: [
-  //     {
-  //       title: {
-  //         en: "Auction creation",
-  //         ru: "Создание аукциона",
-  //       },
-  //       text: [
-  //         {
-  //           text: {
-  //             en: "Approved artists can start an auction and everyone can bid to buy a masterpiece as an NFT.",
-  //             ru: "Подтвержденные художники могут начать аукцион и каждый человек может сделать ставку на покупку шедевра искусства как NFT",
-  //           },
-  //         },
-  //       ],
-  //       banner: advancedRDImage1.src,
-  //     },
-  //     {
-  //       title: {
-  //         en: "All artists have a choise",
-  //         ru: "У каждого художника есть выбор",
-  //       },
-  //       text: [
-  //         {
-  //           text: {
-  //             en: "It doesn’t have the «Highest Bid — Wins» pattern. The artist always can choose who’ll be the winner, no matter what’s the bid. Also, the artist doesn’t pay for mint — all expenses are up to buyer.",
-  //             ru: "Здесь нет принципа «Самая высокая ставка - выигрывает». Независимо от того, какой была последняя ставка: художник всегда может выбрать, кто будет победителем.",
-  //           },
-  //         },
-  //       ],
-  //       banner: advancedRDImage2.src,
-  //     },
-  //     {
-  //       title: {
-  //         en: "Real-time actions",
-  //         ru: "Real-time actions",
-  //       },
-  //       text: [
-  //         {
-  //           text: {
-  //             en: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
-  //             ru: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
-  //           },
-  //         },
-  //       ],
-  //       banner: advancedRDImage3.src,
-  //     },
-  //     {
-  //       title: {
-  //         en: "Results",
-  //         ru: "Результат",
-  //       },
-  //       text: [
-  //         {
-  //           text: {
-  //             en: "The platform is as friendly as possible, both for the user and for the author. It is built on a high-end architecture that guarantees scalability and trouble-free operation under load.",
-  //             ru: "Максимально дружелюбная, как для пользователя, так и для автора платформа. Построена на high-end архитектуре, гарантирующей масштабируемость и бесперебойную работу под нагрузкой. ",
-  //           },
-  //         },
-  //       ],
-  //     },
-  //   ],
-  //   team: [
-  //     TEAM.alexanderAksenov,
-  //     TEAM.daniilSemenov,
-  //     TEAM.ernestMironov,
-  //     TEAM.yanSofronov,
-  //     TEAM.alekseyChepurin,
-  //     TEAM.maksimKlimchenko,
-  //     TEAM.andreyBabenkov,
-  //     TEAM.danilaSkablov,
-  //   ],
-  // },
+  {
+    title: "Advanced RD",
+    id: "advanced-rd",
+    projectUrl: "https://invest.unistory.app",
+    projectUrlTitle: "www.invest.unistory.app",
+    heroTitle: {
+      en: "Advanced RD",
+      ru: "Advanced RD",
+    },
+    categories: {
+      en: ["NFT-Marketplace"],
+      ru: ["NFT-Маркетплейс"],
+    },
+    showCategoriesOnPage: false,
+    icons: ["monitor", "phone02"],
+    textColor: "white",
+    technologies: [
+      TECHNOLOGIES.nextjs,
+      TECHNOLOGIES.nest,
+      TECHNOLOGIES.postgresql,
+      TECHNOLOGIES.solidity,
+    ],
+    thumbnail: {
+      desktop: advancedRDThumb.src,
+      mob: advancedRDThumbMob.src,
+    },
+    heroBanner: {
+      desktop: advancedRDBanner.src,
+      mob: advancedRDBanner.src,
+    },
+    description: {
+      en: "To create an NFT-marketplace for famous London Art Gallery where real artists with physical arts can sell their work as NFTs. Implement auction functionality and fixed price payments.",
+      ru: "Разработать NFT-Маркетплейс для знаменитой Лондонской Галереи, где художники смогу продавать свои физические работы как NFT. Интегрировать функционал аукциона и фиксированные платежи",
+    },
+    params: {
+      budget: {
+        ru: 2000000,
+        en: 25000,
+      },
+      period: 4,
+      year: "2023",
+    },
+    main: [
+      {
+        title: {
+          en: "Auction creation",
+          ru: "Создание аукциона",
+        },
+        text: [
+          {
+            text: {
+              en: "Approved artists can start an auction and everyone can bid to buy a masterpiece as an NFT.",
+              ru: "Подтвержденные художники могут начать аукцион и каждый человек может сделать ставку на покупку шедевра искусства как NFT",
+            },
+          },
+        ],
+        banner: advancedRDImage1.src,
+      },
+      {
+        title: {
+          en: "All artists have a choise",
+          ru: "У каждого художника есть выбор",
+        },
+        text: [
+          {
+            text: {
+              en: "It doesn’t have the «Highest Bid — Wins» pattern. The artist always can choose who’ll be the winner, no matter what’s the bid. Also, the artist doesn’t pay for mint — all expenses are up to buyer.",
+              ru: "Здесь нет принципа «Самая высокая ставка - выигрывает». Независимо от того, какой была последняя ставка: художник всегда может выбрать, кто будет победителем.",
+            },
+          },
+        ],
+        banner: advancedRDImage2.src,
+      },
+      {
+        title: {
+          en: "Real-time actions",
+          ru: "Real-time actions",
+        },
+        text: [
+          {
+            text: {
+              en: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
+              ru: "Easy-to-use dashboards to track the auction’s status with all necessary information.",
+            },
+          },
+        ],
+        banner: advancedRDImage3.src,
+      },
+      {
+        title: {
+          en: "Results",
+          ru: "Результат",
+        },
+        text: [
+          {
+            text: {
+              en: "The platform is as friendly as possible, both for the user and for the author. It is built on a high-end architecture that guarantees scalability and trouble-free operation under load.",
+              ru: "Максимально дружелюбная, как для пользователя, так и для автора платформа. Построена на high-end архитектуре, гарантирующей масштабируемость и бесперебойную работу под нагрузкой. ",
+            },
+          },
+        ],
+      },
+    ],
+    team: [
+      TEAM.alexanderAksenov,
+      TEAM.daniilSemenov,
+      TEAM.ernestMironov,
+      TEAM.yanSofronov,
+      TEAM.alekseyChepurin,
+      TEAM.maksimKlimchenko,
+      TEAM.andreyBabenkov,
+      TEAM.danilaSkablov,
+    ],
+  },
   {
     title: "Xillion",
     id: "xillion",
