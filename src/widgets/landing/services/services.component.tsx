@@ -66,7 +66,7 @@ export function Services() {
           ))}
         </div>
 
-        <div className="py-10 t-xs:min-h-[28.5rem] min-h-[25.5rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-8 pr-5 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
+        <div className="py-10 t-xs:min-h-[27.5rem] min-h-[25.5rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-8 pr-5 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
           {data[activeIndex]!.header != "" && (
             <h3
               className="text-4xl font-bold t-xs:text-xl duration-300 mb-10 will-change-auto"
