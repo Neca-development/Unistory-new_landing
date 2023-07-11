@@ -39,13 +39,13 @@ export function Services() {
 
   return (
     <section className="container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
-      <div className="grid grid-cols-[27.5rem_1fr] lg:h-[30rem] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface duration-300">
-        <div className="grid grid-cols-1 content-start gap-4 border-r-2 border-light-bg p-4 pt-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0 duration-300">
+      <div className="grid grid-cols-[27.5rem_1fr] min-h-[31rem] lg:min-h-[32.5rem] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface duration-300">
+        <div className="flex flex-col justify-center content-start border-r-2 border-light-bg p-4 lg:py-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0 duration-300">
           {data.map((s, index) => (
             <div
               key={s.id}
               className={clsx(
-                "flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4 duration-300",
+                "[&:not(:last-child)]:mb-4 flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4 duration-300",
                 activeIndex === index && "bg-bg-s hover:bg-bg-s duration-300"
               )}
               onClick={() => setActiveIndex(index)}
@@ -66,13 +66,16 @@ export function Services() {
           ))}
         </div>
 
-        <div className="pt-12 pb-[3.75rem] min-h-[24.5rem] h-[10rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-16 pr-10 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
-          <h3
-            className="text-4xl font-bold t-xs:text-xl duration-300 will-change-auto"
-            dangerouslySetInnerHTML={{ __html: data[activeIndex]!.header }}
-          />
-          <p
-            className="mt-10 text-2xl leading-10 t-xs:text-base duration-300 will-change-auto"
+        <div className="py-9 min-h-[25.5rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-8 pr-5 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
+          {data[activeIndex]!.header != "" && (
+            <h3
+              className="text-4xl font-bold t-xs:text-xl duration-300 mb-10 will-change-auto"
+              dangerouslySetInnerHTML={{ __html: data[activeIndex]!.header }}
+            />
+          )}
+
+          <div
+            className="text-2xl leading-10 t-xs:text-base duration-300 will-change-auto"
             dangerouslySetInnerHTML={{ __html: data[activeIndex]!.description }}
           />
         </div>
