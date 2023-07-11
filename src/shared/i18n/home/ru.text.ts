@@ -62,7 +62,7 @@ export const ServicesRu: Array<{
   {
     id: 3,
     title: "Блокчейн и ИИ",
-    icon: "folder",
+    icon: "bitcoin",
     header: "",
     description: `      
     <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">

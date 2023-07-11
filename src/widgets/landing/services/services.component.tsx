@@ -45,7 +45,7 @@ export function Services() {
             <div
               key={s.id}
               className={clsx(
-                "[&:not(:last-child)]:mb-4 flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4 duration-300",
+                "[&:not(:last-child)]:mb-8 flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4 duration-300",
                 activeIndex === index && "bg-bg-s hover:bg-bg-s duration-300"
               )}
               onClick={() => setActiveIndex(index)}
@@ -66,7 +66,7 @@ export function Services() {
           ))}
         </div>
 
-        <div className="py-9 min-h-[25.5rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-8 pr-5 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
+        <div className="py-10 min-h-[25.5rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-8 pr-5 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
           {data[activeIndex]!.header != "" && (
             <h3
               className="text-4xl font-bold t-xs:text-xl duration-300 mb-10 will-change-auto"
