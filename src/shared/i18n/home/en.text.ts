@@ -55,7 +55,7 @@ export const ServicesEn: Array<{
       <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Blockchain integration</h4>
       <ul>
         <li>— Tokenomics development</li>
-        <li>— Smark-contracts development</li>
+        <li>— Smart-contracts development</li>
         <li>— DeFi-integration for web and mobile applications</li>
       </ul>
       </div>
