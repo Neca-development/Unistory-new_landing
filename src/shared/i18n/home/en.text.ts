@@ -47,6 +47,29 @@ export const ServicesEn: Array<{
   },
   {
     id: 3,
+    title: "Blockchain и AI",
+    icon: "bitcoin",
+    header: "",
+    description: `      
+    <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Blockchain integration</h4>
+      <ul>
+        <li>— Tokenomics development</li>
+        <li>— Smark-contracts development</li>
+        <li>— DeFi-integration for web and mobile applications</li>
+      </ul>
+      </div>
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Artificial Intelligence</h4>
+      <ul>
+        <li>— Research and processing data</li>
+        <li>— Machine learning</li>
+        <li>— Integration of ChatGPT / Azure OpenAI</li>
+      </ul>
+    </div>`,
+  },
+  {
+    id: 3,
     title: "Maintain & Support",
     icon: "layout",
     header: "Maintain & Support",

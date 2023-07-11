@@ -86,6 +86,11 @@ input:not([name="name"])::-webkit-contacts-auto-fill-button {
   }
 }
 
+.marked-list {
+  list-style: inherit;
+  padding-left: 20px;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 
   select,

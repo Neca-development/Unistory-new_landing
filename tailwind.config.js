@@ -98,6 +98,14 @@ module.exports = {
             fontWeight: "700",
           },
         ],
+        h4: [
+          "2.125rem",
+          {
+            lineHeight: "2.625rem",
+            letterSpacing: "0.02em",
+            fontWeight: "600",
+          },
+        ],
       },
       backgroundImage: {
         noise: "url('/assets/images/noise.png')",

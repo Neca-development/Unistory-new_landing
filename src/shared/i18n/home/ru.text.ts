@@ -24,19 +24,33 @@ export const ServicesRu: Array<{
 }> = [
   {
     id: 1,
-    title: "Продуктовый дизайн",
+    title: "Аналитика и дизайн",
     icon: "grid",
-    header: "Из идеи в дизайн-прототип",
-    description: `Создадим современный и удобный дизайн на основе вашей идеи и нашей
-    экспертизы. Мы придерживаемся прозрачного процесса, выработанного
-    годами практики, и вашей обратной связи, чтобы получить дизайн,
-    который соответствует целям проекта.`,
+    header: "",
+    description: `
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
+        <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Аналитика</h4>
+        <ul>
+          <li>— Аудит дизайна</li>
+          <li>— Продуктовое исследование</li>
+          <li>— Техническое задание</li>
+        </ul>
+      </div>
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Дизайн</h4>
+      <ul>
+        <li>— Проектирование и прототипирование</li>
+        <li>— UI/UX дизайн</li>
+        <li>— Графический дизайн</li>
+      </ul>
+      </div>
+      `,
   },
   {
     id: 2,
     title: "Разработка",
     icon: "layout",
-    header: "Разработка web & mobile",
+    header: "Веб и мобильная разработка",
     description: `Разработаем веб-сервис или мобильное приложение для решения ваших
     уникальных бизнес задач.
     <br /> <br />
@@ -47,6 +61,29 @@ export const ServicesRu: Array<{
   },
   {
     id: 3,
+    title: "Блокчейн и ИИ",
+    icon: "bitcoin",
+    header: "",
+    description: `      
+    <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Блокчейн интеграция</h4>
+      <ul>
+        <li>— Разработка токеномики</li>
+        <li>— Разработка смарт-контрактов</li>
+        <li>— DeFi-интеграция в веб и мобильные приложения</li>
+      </ul>
+      </div>
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Искусственный интеллект</h4>
+      <ul>
+        <li>— Сбор и обработка данных</li>
+        <li>— Машинное обучение</li>
+        <li>— Интеграция ChatGPT / Azure OpenAI</li>
+      </ul>
+    </div>`,
+  },
+  {
+    id: 4,
     title: "Поддержка и развитие",
     icon: "folder",
     header: "Поддержка и развитие",
