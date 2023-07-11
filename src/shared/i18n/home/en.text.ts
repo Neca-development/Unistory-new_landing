@@ -26,11 +26,25 @@ export const ServicesEn: Array<{
     id: 1,
     title: "Product design",
     icon: "grid",
-    header: "From your ideas to design prototype",
-    description: `We provide a modern and user-friendly design based on your ideas
-    and our expertise. We follow a transparent process, developed
-    through years of practice, and your feedback to get a design that
-    meets all the goals of the project.`,
+    header: "",
+    description: `
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
+        <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Analytics</h4>
+        <ul>
+          <li>— Design audit</li>
+          <li>— Product research</li>
+          <li>— Technical specification</li>
+        </ul>
+      </div>
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Design</h4>
+      <ul>
+        <li>— Engineering and prototyping</li>
+        <li>— UI/UX design</li>
+        <li>— Graphic design</li>
+      </ul>
+      </div>
+    `,
   },
   {
     id: 2,

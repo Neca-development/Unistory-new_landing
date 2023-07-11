@@ -63,8 +63,9 @@ export function Hero() {
             />
           </button>
           <span className="inline-block	text-primary-s duration-300">{text?.description.third}</span>
+          <br />
           {" " + text?.description.fourth + " "}
-          <br className={clsx(locale === "en" && "t-xs:hidden")} />
+          {/* <br className={clsx(locale === "en" && "t-xs:hidden")} /> */}
           {text?.description.fifth}
         </h1>
 
