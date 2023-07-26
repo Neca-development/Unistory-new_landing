@@ -25,6 +25,7 @@
 		"clsx": "^1.2.1",
 		"dotenv": "^16.0.3",
 		"formidable": "^2.1.1",
+		"framer-motion": "^10.13.1",
 		"gsap": "^3.12.1",
 		"next": "^13.1.2",
 		"next-seo": "^5.15.0",

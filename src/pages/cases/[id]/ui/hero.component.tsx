@@ -1,54 +1,48 @@
-import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
-import Fancybox from "@shared/lib/hocs/fancybox";
-import { ICase } from "@shared/lib/types";
-import { IconComponent } from "@shared/ui";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { useState, useEffect, useMemo } from "react";
+import { SingleCaseEn, SingleCaseRu } from '@shared/i18n/cases'
+import Fancybox from '@shared/lib/hocs/fancybox'
+import type { ICase } from '@shared/lib/types'
+import { IconComponent } from '@shared/ui'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useEffect, useMemo, useState } from 'react'
+
+import { CaseGoal } from './case-goal.component'
 
 export function CaseHero({ data }: { data: ICase | undefined }) {
-  const { locale } = useRouter();
-  const [width, setWidth] = useState<number>(0);
+  const { locale } = useRouter()
+  const [width, setWidth] = useState<number>(0)
 
   const langData = useMemo(() => {
-    return locale === "ru" ? SingleCaseRu : SingleCaseEn;
-  }, [locale]);
-
-  const findMonths = (value: number) => {
-    if (locale === "en") return "months";
-
-    if (value <= 1) return "месяц";
-    if (value <= 3 && value > 1) return "месяца";
-    return "месяцев";
-  };
+    return locale === 'ru' ? SingleCaseRu : SingleCaseEn
+  }, [locale])
 
   useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
+    setWidth(window.innerWidth)
+  }, [])
 
   if (!data) {
-    return <></>;
+    return <></>
   }
 
   return (
     <>
       <div className="container mt-16 md:flex md:justify-between	 t-xs:mt-10">
-        <h1 className="leading-[4.875rem] text-[4rem] font-bold whitespace-pre-line t-xs:text-[1.75rem] t-xs:leading-[2rem]">
-          {data.heroTitle[locale || "ru"]}
+        <h1 className="whitespace-pre-line text-[4rem] font-bold leading-[4.875rem] t-xs:text-[1.75rem] t-xs:leading-[2rem]">
+          {data.heroTitle[locale || 'ru']}
         </h1>
         {data.projectUrl && (
           <a
-            className="flex items-center text-light-text-primary/[0.5] dark:text-light-bg-accent/[0.5] hover:text-light-text-primary dark:hover:text-light-bg-accent h-fit mt-5 md:ml-10 sm:mt-10 md:mt-auto duration-200"
+            className="mt-5 flex h-fit items-center text-light-text-primary/[0.5] duration-200 hover:text-light-text-primary dark:text-light-bg-accent/[0.5] dark:hover:text-light-bg-accent sm:mt-10 md:ml-10 md:mt-auto"
             href={data.projectUrl}
-            rel="nofollow"
+            rel="nofollow noreferrer"
             target="_blank"
           >
-            <span className="text-base sm:text-[20px] sm:leading-[24px] lg:text-2xl mr-2 sm:mr-4">
-              {data.projectUrlTitle != null ? data.projectUrlTitle : data.projectUrl}
+            <span className="mr-2 text-base sm:mr-4 sm:text-[20px] sm:leading-[24px] lg:text-2xl">
+              {data.projectUrlTitle == null ? data.projectUrl : data.projectUrlTitle}
             </span>
             <IconComponent
               name="caseProjectLink"
-              className="w-[16px] h-[16px] sm:w-[24px] sm:h-[24px]"
+              className="h-[16px] w-[16px] sm:h-[24px] sm:w-[24px]"
             />
           </a>
         )}
@@ -59,7 +53,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
           src={data.heroBanner.desktop}
           width={2880}
           height={1060}
-          className="w-full object-cover mt-[4rem] t-xs:mt-10"
+          className="mt-[4rem] w-full object-cover t-xs:mt-10"
           alt={data.title}
           priority
         />
@@ -70,7 +64,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
               src={data.heroBanner.mob}
               width={2880}
               height={1060}
-              className="w-full object-cover mt-[4rem] t-xs:mt-10"
+              className="mt-[4rem] w-full object-cover t-xs:mt-10"
               alt={data.title}
               priority
             />
@@ -80,10 +74,10 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
       {data.showCategoriesOnPage && (
         <div className="container mt-10 flex flex-wrap items-center gap-x-4 gap-y-6 t-xs:mt-5 t-xs:gap-y-2">
-          {data.categories[locale || "ru"]?.map((tag, idx) => (
+          {data.categories[locale || 'ru']?.map((tag, index) => (
             <p
-              key={idx}
-              className="px-4 py-2 text-2xl bg-light-bg-accent dark:bg-dark-surface t-xs:px-2 t-xs:py-1 t-xs:text-base"
+              key={index}
+              className="bg-light-bg-accent px-4 py-2 text-2xl dark:bg-dark-surface t-xs:px-2 t-xs:py-1 t-xs:text-base"
             >
               {tag}
             </p>
@@ -91,51 +85,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         </div>
       )}
 
-      <div className="container">
-        <h2 className="mt-20 text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:mt-10 t-xs:text-xl">
-          {langData.goal}
-        </h2>
-        <div className="max-w-[52.5rem] text-2xl leading-10 t-xs:text-base t-xs:leading-6">
-          <p className="mt-6 t-xs:mt-4">{data.description[locale || "ru"]}</p>
-          {data.goalPoints && (
-            <ul className="mt-6">
-              {data.goalPoints.map((point, index) => (
-                <li key={index} className="flex [&:not(:last-child)]:mb-2">
-                  <span className="w-5 h-0.5 min-w-[1.25rem] bg-light-text-primary dark:bg-light-bg-accent mr-4 mt-3 sm:mt-5"></span>
-                  {point[locale === "ru" ? "ru" : "en"]}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-        <ul className="mt-20 flex gap-x-40 t-xs:mt-10 t-xs:block">
-          <li className="t-xs:mb-8">
-            <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:text-base">
-              {langData.hero.budget}
-            </h3>
-            <b className="text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block t-xs:text-2xl t-xs:leading-7">
-              {data.params.budget[locale || "ru"]?.toLocaleString("ru-RU")}{" "}
-              {locale === "ru" ? "₽" : "$"}
-            </b>
-          </li>
-          <li className="t-xs:mb-8">
-            <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:text-base">
-              {langData.hero.timeline.label}
-            </h3>
-            <b className="text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block t-xs:text-2xl t-xs:leading-7">
-              {data.params.period} {findMonths(data.params.period)}
-            </b>
-          </li>
-          <li className="t-xs:mb-10">
-            <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-2xl t-xs:text-base">
-              {langData.hero.year}
-            </h3>
-            <b className="text-light-text-primary dark:text-dark-text-primary text-[2.125rem] mt-2 block t-xs:text-2xl t-xs:leading-7">
-              {data.params.year}
-            </b>
-          </li>
-        </ul>
-      </div>
+      <CaseGoal data={data} langData={langData} locale={locale} />
     </>
-  );
+  )
 }
