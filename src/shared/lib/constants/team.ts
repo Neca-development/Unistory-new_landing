@@ -2,233 +2,243 @@ export const TEAM = {
   alexanderAksenov: {
     name: {
       en: 'Alexander Aksenov',
-      ru: 'Александр Аксенов'
+      ru: 'Александр Аксенов',
     } as any,
     position: {
       en: 'Head of Project Management',
-      ru: 'Руководитель проектов'
+      ru: 'Руководитель проектов',
     } as any,
   },
   nursultanBegenov: {
     name: {
       en: 'Nursultan Begenov',
-      ru: 'Нурсултан Бегенов'
+      ru: 'Нурсултан Бегенов',
     },
     position: {
       en: 'Head of Project Management',
-      ru: 'Руководитель проектов'
+      ru: 'Руководитель проектов',
     },
   },
   nikitaBobkov: {
     name: {
       en: 'Nikita Bobkov',
-      ru: 'Никита Бобков'
+      ru: 'Никита Бобков',
     },
     position: {
       en: 'Team lead',
-      ru: 'Тимлид проекта'
+      ru: 'Тимлид проекта',
     },
   },
   maksimKlimchenko: {
     name: {
       en: 'Maksim Klimnichenko',
-      ru: 'Максим Климниченко'
+      ru: 'Максим Климниченко',
     },
     position: {
       en: 'Business analyst',
-      ru: 'Бизнес аналитик'
+      ru: 'Бизнес аналитик',
     },
   },
   andreyBarabanov: {
     name: {
       en: 'Andrey Barabanov',
-      ru: 'Андрей Барабанов'
+      ru: 'Андрей Барабанов',
     },
     position: {
       en: 'Frontend/Blockchain developer',
-      ru: 'Frontend/Blockchain разработчик'
+      ru: 'Frontend/Blockchain разработчик',
     },
   },
   andreyBabenkov: {
     name: {
       en: 'Andrey Babenkov',
-      ru: 'Андрей Бабенков'
+      ru: 'Андрей Бабенков',
     },
     position: {
       en: 'Frontend developer',
-      ru: 'Frontend разработчик'
+      ru: 'Frontend разработчик',
     },
   },
   alekseyKlimenko: {
     name: {
       en: 'Aleksey Klimenko',
-      ru: 'Алексей Клименко'
+      ru: 'Алексей Клименко',
     },
     position: {
       en: 'Frontend developer',
-      ru: 'Frontend разработчик'
+      ru: 'Frontend разработчик',
     },
   },
   andreyPaskarenko: {
     name: {
       en: 'Andrey Paskarenko',
-      ru: 'Андрей Паскаренко'
+      ru: 'Андрей Паскаренко',
     },
     position: {
       en: 'Frontend developer',
-      ru: 'Frontend разработчик'
+      ru: 'Frontend разработчик',
     },
   },
   ernestMironovRN: {
     name: {
       en: 'Ernest Mironov',
-      ru: 'Эрнест Миронов'
+      ru: 'Эрнест Миронов',
     },
     position: {
       en: 'React Native developer',
-      ru: 'React Native разработчик'
+      ru: 'React Native разработчик',
     },
   },
   ernestMironov: {
     name: {
       en: 'Ernest Mironov',
-      ru: 'Эрнест Миронов'
+      ru: 'Эрнест Миронов',
     },
     position: {
       en: 'Frontend developer',
-      ru: 'Frontend разработчик'
+      ru: 'Frontend разработчик',
     },
   },
   daniilSemenov: {
     name: {
       en: 'Daniil Semenov',
-      ru: 'Даниил Семенов'
+      ru: 'Даниил Семенов',
     },
     position: {
       en: 'Project manager',
-      ru: 'Проектный менеджер'
+      ru: 'Проектный менеджер',
     },
   },
   daniilSemenovHead: {
     name: {
       en: 'Daniil Semenov',
-      ru: 'Даниил Семенов'
+      ru: 'Даниил Семенов',
     },
     position: {
       en: 'Head of Project Management',
-      ru: 'Руководитель проектов'
+      ru: 'Руководитель проектов',
     },
   },
   kirillElizarov: {
     name: {
       en: 'Kirill Elizarov',
-      ru: 'Кирилл Елизаров'
+      ru: 'Кирилл Елизаров',
     },
     position: {
       en: 'Backend developer',
-      ru: 'Backend разработчик'
+      ru: 'Backend разработчик',
     },
   },
   vladislavKiribyatev: {
     name: {
       en: 'Vladislav Kiribiatiev',
-      ru: 'Владислав Кирибьятев'
+      ru: 'Владислав Кирибьятев',
     },
     position: {
       en: 'Backend developer',
-      ru: 'Backend разработчик'
+      ru: 'Backend разработчик',
     },
   },
   vechyaslavValdykin: {
     name: {
       en: 'Vyacheslav Vladykin',
-      ru: 'Вячеслав Владыкин'
+      ru: 'Вячеслав Владыкин',
     },
     position: {
       en: 'Frontend/Blockchain developer',
-      ru: 'Frontend/Blockchain разработчик'
+      ru: 'Frontend/Blockchain разработчик',
     },
   },
   danilaSkablov: {
     name: {
       en: 'Danila Skablov',
-      ru: 'Даниил Скаблов'
+      ru: 'Даниил Скаблов',
     },
     position: {
       en: 'Backend developer',
-      ru: 'Backend разработчик'
+      ru: 'Backend разработчик',
     },
   },
   andreyJurin: {
     name: {
       en: 'Andrey Yurin',
-      ru: 'Андрей Юрин'
+      ru: 'Андрей Юрин',
     },
     position: {
       en: 'Project Manager',
-      ru: 'Проектный менеджер'
+      ru: 'Проектный менеджер',
     },
   },
   danilSilverstov: {
     name: {
       en: 'Danil Seliverstov',
-      ru: 'Данил Селиверстов'
+      ru: 'Данил Селиверстов',
     },
     position: {
       en: 'UX/UI designer',
-      ru: 'UX/UI дизайнер'
+      ru: 'UX/UI дизайнер',
     },
   },
   alekseyChepurin: {
     name: {
       en: 'Aleksey Chepurin',
-      ru: 'Алексей Чепурин'
+      ru: 'Алексей Чепурин',
     },
     position: {
       en: 'UX/UI designer',
-      ru: 'UX/UI дизайнер'
+      ru: 'UX/UI дизайнер',
     },
   },
   alexanderYachevsky: {
     name: {
       en: 'Alexander Yachevskiy',
-      ru: 'Александр Ячевский'
+      ru: 'Александр Ячевский',
     },
     position: {
       en: 'Frontend/Blockchain developer',
-      ru: 'Frontend/Blockchain разработчик'
+      ru: 'Frontend/Blockchain разработчик',
     },
   },
   markCherepivskiy: {
     name: {
       en: 'Mark Cherepivskiy',
-      ru: 'Марк Черепивский'
+      ru: 'Марк Черепивский',
     },
     position: {
       en: 'Frontend developer',
-      ru: 'Frontend разработчик'
-    }
+      ru: 'Frontend разработчик',
+    },
   },
   ilyaSmirnov: {
     name: {
       en: 'Ilya Smirnov',
-      ru: 'Илья Смирнов'
+      ru: 'Илья Смирнов',
     },
     position: {
       en: 'Project manager',
-      ru: 'Проектный менеджер'
-    }
+      ru: 'Проектный менеджер',
+    },
   },
   yanSofronov: {
     name: {
       en: 'Yan Sofronov',
-      ru: 'Ян Софронов'
+      ru: 'Ян Софронов',
     },
     position: {
       en: 'Account manager',
-      ru: 'Аккаунт менеджер'
-    }
-  }
+      ru: 'Аккаунт менеджер',
+    },
+  },
+  maximUporov: {
+    name: {
+      en: 'Maxim Uporov',
+      ru: 'Максим Упоров',
+    },
+    position: {
+      en: 'Frontend developer',
+      ru: 'Frontend разработчик',
+    },
+  },
 } as const
 
 type TeamKeys = keyof typeof TEAM
