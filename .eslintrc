@@ -30,8 +30,8 @@
         "project": "./tsconfig.json"
       },
       "rules": {
-        "avoidEscape": 0,
-        "allowTemplateLiterals": 0,
+        "avoidEscape": 1,
+        "allowTemplateLiterals": true,
 
         "prettier/prettier": [
           "warn",
@@ -318,6 +318,15 @@
         "plugin:testing-library/react",
         "plugin:jest-dom/recommended"
       ]
+    },
+    // Configuration for e2e testing (Cypress)
+    {
+      "files": ["**/*.cy.ts"],
+      "plugins": ["cypress"],
+      "extends": ["plugin:cypress/recommended"],
+      "parserOptions": {
+        "project": "./cypress/tsconfig.json"
+      }
     }
   ]
 }
