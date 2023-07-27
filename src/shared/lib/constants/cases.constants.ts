@@ -7,6 +7,7 @@ import advancedRDThumbMob from '@public/assets/images/cases/advanced-rd/thumb_mo
 import bitGraduateImage2 from '@public/assets/images/cases/bit-graduate/document-storage.png'
 import bitGraduateImage1 from '@public/assets/images/cases/bit-graduate/document-verification.png'
 import bitGraduateImage3 from '@public/assets/images/cases/bit-graduate/institute-authority.png'
+import bitGraduateThumb from '@public/assets/images/cases/bit-graduate/thumb.png'
 import charityplatformImage3 from '@public/assets/images/cases/charityplatform/admin.jpg'
 import charityplatformBanner from '@public/assets/images/cases/charityplatform/banner.jpg'
 import charityplatformBannerMob from '@public/assets/images/cases/charityplatform/banner_mob.jpg'
@@ -1347,16 +1348,16 @@ export const CASES: ICase[] = [
       },
     ],
     categories: {
-      en: ['Multi-platform\n HR application'],
-      ru: ['Мультиплатформенное\n HR приложение'],
+      en: ['Blockchain powered documents’ storage and verification'],
+      ru: ['Хранение и верификация\nдокументов в блокчейне'],
     },
     showCategoriesOnPage: false,
     icons: ['monitor', 'phone01'],
-    textColor: 'white',
+    textColor: 'black',
     technologies: [],
     thumbnail: {
-      desktop: '',
-      mob: '',
+      desktop: bitGraduateThumb.src,
+      mob: bitGraduateThumb.src,
     },
     heroBanner: {
       desktop: '',
