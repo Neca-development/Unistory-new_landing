@@ -1333,9 +1333,19 @@ export const CASES: ICase[] = [
     id: 'bit-graduate',
     customHero: CustomHeroes.BitGraduate,
     heroTitle: {
-      en: '',
-      ru: '',
+      en: 'Blockchain powered documents’ storage and verification',
+      ru: 'Хранение и верификация\nдокументов в блокчейне',
     },
+    heroText: [
+      {
+        en: 'Future is here!',
+        ru: 'Будущее уже здесь!',
+      },
+      {
+        en: 'www.bitgraduate.net',
+        ru: 'www.bitgraduate.net',
+      },
+    ],
     categories: {
       en: ['Multi-platform\n HR application'],
       ru: ['Мультиплатформенное\n HR приложение'],
@@ -1353,7 +1363,9 @@ export const CASES: ICase[] = [
       mob: '',
     },
     description: {
-      en: 'Our team had to develop an HR aggregator application that helps collect all resumes in one place, facilitates communication with candidates and has integration with popular job search platforms.',
+      en:
+        'Implement the first stage of the future document circulation system in the blockchain - service for the storage and verification of diplomas and certificates.\n' +
+        'Institutes can issue diplomas and certificates in the form of NFT to their students, and students can share them, guaranteeing their authenticity with BitGraduate.',
       ru:
         'Реализовать первый этап будущей системы документооборота в блокчейне - сервис для хранения и верификации дипломов и сертификатов.\n' +
         'Институты могут выдавать дипломы и сертификаты в виде NFT своим студентам, а студенты - делиться ими, гарантируя их подлинность при помощи BitGraduate.',

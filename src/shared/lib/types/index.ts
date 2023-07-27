@@ -38,6 +38,7 @@ export interface ICase {
   projectUrlTitle?: string
   customHero?: CustomHeroes
   heroTitle: ILang<string>
+  heroText?: ILang<string>[]
   thumbnail: IDevices<string>
   categories: ILang<string[]>
   showCategoriesOnPage: boolean
