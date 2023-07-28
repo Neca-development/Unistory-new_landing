@@ -61,7 +61,7 @@ export const ServicesEn: Array<{
   },
   {
     id: 3,
-    title: "Blockchain и AI",
+    title: "Blockchain & AI",
     icon: "bitcoin",
     header: "",
     description: `      
@@ -83,7 +83,7 @@ export const ServicesEn: Array<{
     </div>`,
   },
   {
-    id: 3,
+    id: 4,
     title: "Maintain & Support",
     icon: "layout",
     header: "Maintain & Support",
