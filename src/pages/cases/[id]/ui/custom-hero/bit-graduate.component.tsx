@@ -67,7 +67,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
   return (
     <>
       <motion.div
-        className="relative -mt-[4.5rem] flex h-screen w-full items-center overflow-hidden bg-[#fff]"
+        className="relative -mt-[4.5rem] flex min-h-screen w-full items-center overflow-hidden bg-[#fff]"
         style={{
           paddingRight: isAnimate ? width : 0,
         }}
@@ -138,7 +138,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           </motion.div>
 
           <motion.div
-            className="flex w-[36.5rem] flex-col justify-between gap-[5rem] text-[3rem] text-bg-gradient pt-[8.75rem] shrink-0"
+            className="flex w-[36.5rem] flex-col justify-between gap-[5rem] text-[3rem] text-bg-gradient pt-[8.75rem] pb-4 shrink-0"
             initial={{
               opacity: 0,
               transform: "translateY(200%)",

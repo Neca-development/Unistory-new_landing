@@ -1,96 +1,103 @@
-import type { IconsTypes } from '@shared/ui'
+import type { IconsTypes } from "@shared/ui";
 
-import type { TeamValues } from '../constants/team'
-import type { TechnologiesValues } from '../constants/technologies.constats'
+import { TeamValues } from "@shared/lib/constants/team";
+import type { TechnologiesValues } from "@shared/lib/constants/technologies.constats";
 
 export interface IDescriptionItem {
-  subtitle?: ILang<string>
-  text?: ILang<string>
-  banner?: string
+  subtitle?: ILang<string>;
+  text?: ILang<string>;
+  banner?: string;
 }
 
 export interface ILang<T> {
-  ru: T
-  en: T
-  [index: string]: T
+  ru: T;
+  en: T;
+  [index: string]: T;
 }
 
 export interface IDevices<T> {
-  desktop: T
-  mob: T
+  desktop: T;
+  mob: T;
 }
 
 export interface IGoalPoints {
-  en: string
-  ru: string
+  en: string;
+  ru: string;
 }
 
-export type MainBannerType = string | ILang<string>
+export type MainBannerType = string | ILang<string>;
 
 export enum CustomHeroes {
   BitGraduate,
 }
 
+export enum CustomMainBanner {
+  BitGraduateVerification,
+  BitGraduateStorage,
+  BitGraduateAuthority,
+}
+
 export interface ICase {
-  title: string
-  id: string
-  projectUrl?: string
-  projectUrlTitle?: string
-  customHero?: CustomHeroes
-  heroTitle: ILang<string>
-  heroText?: ILang<string>[]
-  thumbnail: IDevices<string>
-  categories: ILang<string[]>
-  showCategoriesOnPage: boolean
-  icons: IconsTypes[]
-  additionalClassnames?: string
-  textColor: 'white' | 'black'
-  company?: string
-  heroBanner: IDevices<string>
-  description: ILang<string>
-  goalPoints?: IGoalPoints[]
+  title: string;
+  id: string;
+  projectUrl?: string;
+  projectUrlTitle?: string;
+  customHero?: CustomHeroes;
+  heroTitle: ILang<string>;
+  heroText?: ILang<string>[];
+  thumbnail: IDevices<string>;
+  categories: ILang<string[]>;
+  showCategoriesOnPage: boolean;
+  icons: IconsTypes[];
+  additionalClassnames?: string;
+  textColor: "white" | "black";
+  company?: string;
+  heroBanner: IDevices<string>;
+  description: ILang<string>;
+  goalPoints?: IGoalPoints[];
   params: {
-    budget: ILang<number>
-    period: number
-    year: number | string
-  }
-  technologies: TechnologiesValues[]
+    budget: ILang<number>;
+    period: number;
+    year: number | string;
+  };
+  technologies: TechnologiesValues[];
   main: {
-    title: ILang<string>
-    text: IDescriptionItem[]
-    banner?: MainBannerType
-    bannerMob?: string
-    darkBanner?: MainBannerType
-  }[]
-  logo?: string
+    title: ILang<string>;
+    text: IDescriptionItem[];
+    banner?: MainBannerType;
+    bannerMob?: string;
+    darkBanner?: MainBannerType;
+    customBanner?: CustomMainBanner;
+  }[];
+  logo?: string;
   review?: {
     author: {
-      name: ILang<string>
-      position: ILang<string>
-      company: string
-      photo: string
-    }
-    text: ILang<string>
-  }
-  team: TeamValues[]
+      name: ILang<string>;
+      position: ILang<string>;
+      company: string;
+      photo: string;
+    };
+    text: ILang<string>;
+  };
+  team: TeamValues[];
 }
 
 export interface IThemed<T> {
-  dark: T
-  light: T
-  [index: string]: T
+  dark: T;
+  light: T;
+  [index: string]: T;
 }
 
 export interface ISingleCase {
-  goal: string
+  goal: string;
   hero: {
-    budget: string
+    budget: string;
     timeline: {
-      label: string
-    }
-    year: string
-  }
-  techno: string
-  members: string
-  other: string
+      label: string;
+    };
+    year: string;
+  };
+  techno: string;
+  members: string;
+  other: string;
 }
