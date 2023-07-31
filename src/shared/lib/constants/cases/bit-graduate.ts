@@ -1,7 +1,5 @@
 import { ICase, CustomHeroes, CustomMainBanner } from "@shared/lib/types";
 import { TEAM } from "@shared/lib/constants/team";
-import bitGraduateImage1 from "@public/assets/images/cases/bit-graduate/document-verification.png";
-import bitGraduateImage3 from "@public/assets/images/cases/bit-graduate/institute-authority.png";
 import bitGraduateThumb from "@public/assets/images/cases/bit-graduate/thumb.png";
 
 export const BIT_GRADUATE: ICase = {
