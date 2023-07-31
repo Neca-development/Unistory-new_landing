@@ -1,9 +1,12 @@
-import { ICase, MainBannerType } from "@shared/lib/types";
+import { CustomMainBanner, ICase, MainBannerType } from "@shared/lib/types";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Fancybox from "@shared/lib/hocs/fancybox";
+import { BitGraduateVerification } from "./custom-main/bit-graduate-verification.component";
+import { BitGraduateStorage } from "./custom-main/bit-graduate-storage.component";
+import { BitGraduateAuthority } from "./custom-main/bit-graduate-authority.component";
 
 interface ICaseInfoItemProps {
   data?: ICase["main"][0];
@@ -24,11 +27,28 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
 
   const bannerByTheme = _theme ? bannerByThemeConfig[_theme] : undefined;
 
-  const getBanner = () => {
+  const getBanner = useCallback(() => {
     const existBanner = bannerByTheme ?? data?.banner;
     if (!existBanner) return "";
 
     return typeof existBanner !== "string" ? (existBanner[locale || "ru"] as string) : existBanner;
+  }, [data?.banner, bannerByTheme, locale]);
+
+  const renderCustomBanner = () => {
+    switch (data?.customBanner) {
+      case CustomMainBanner.BitGraduateVerification: {
+        return <BitGraduateVerification />;
+      }
+      case CustomMainBanner.BitGraduateStorage: {
+        return <BitGraduateStorage />;
+      }
+      case CustomMainBanner.BitGraduateAuthority: {
+        return <BitGraduateAuthority />;
+      }
+      default: {
+        return null;
+      }
+    }
   };
 
   useEffect(() => {
@@ -44,9 +64,11 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           </h2>
           {data?.text?.map((item, idx) => (
             <div key={idx} className="mt-10 t-xs:mt-4">
-              <h3 className="font-bold text-3xl mb-5 t-xs:text-xl t-xs:mb-4 t-xs:mt-10">
-                {item.subtitle ? item.subtitle[locale || "ru"] : ""}
-              </h3>
+              {item.subtitle && item.subtitle[locale || "ru"] && (
+                <h3 className="font-bold text-3xl mb-5 t-xs:text-xl t-xs:mb-4 t-xs:mt-10">
+                  {item.subtitle[locale || "ru"]}
+                </h3>
+              )}
               <p
                 className="text-2xl leading-10 t-xs:text-base"
                 dangerouslySetInnerHTML={{
@@ -57,7 +79,10 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           ))}
         </article>
       </div>
-      {width < 992 && (data?.bannerMob != null || getBanner() != "") ? (
+
+      {data?.customBanner != null ? (
+        renderCustomBanner()
+      ) : width < 992 && (data?.bannerMob != null || getBanner() != "") ? (
         <Fancybox>
           <a href={data?.bannerMob ? data?.bannerMob : getBanner()} data-fancybox>
             <Image
