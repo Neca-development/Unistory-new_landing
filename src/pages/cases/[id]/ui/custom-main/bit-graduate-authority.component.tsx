@@ -104,7 +104,7 @@ export const BitGraduateAuthority = () => {
           {displayedCards.map((card) => (
             <article
               key={card.id}
-              className="rounded-[0.625rem] border-[0.3125rem] border-[#DADADA] bg-light-bg shadow-2xl px-5 py-3 text-[#136BFE] min-h-[12.5rem] t-xs:py-5 t-xs:px-2"
+              className="rounded-[0.625rem] border-[0.3125rem] border-[#DADADA] bg-light-bg-accent shadow-2xl px-5 py-3 text-[#136BFE] min-h-[12.5rem] t-xs:py-5 t-xs:px-2"
               onMouseEnter={() => setShowResultCardId(card.id)}
               onMouseLeave={() => setShowResultCardId(null)}
             >

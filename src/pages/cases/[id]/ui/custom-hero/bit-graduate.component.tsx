@@ -90,7 +90,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           },
         }}
       >
-        <div className="container relative z-10 mt-28 flex h-[100%] justify-between items-center gap-10 t-xs:flex-col t-xs:gap-8 t-xs:mt-[5rem] t-xs:min-h-screen">
+        <div className="container relative z-10 mt-28 flex h-[100%] justify-between items-center gap-10 t-xs:flex-col t-xs:gap-8 t-xs:mt-[5.5rem] t-xs:min-h-screen">
           <motion.div
             className="absolute top-1/2 flex items-center gap-2 whitespace-nowrap text-bg-gradient"
             initial={{
