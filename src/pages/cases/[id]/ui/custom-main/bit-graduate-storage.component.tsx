@@ -52,16 +52,16 @@ export const BitGraduateStorage = () => {
         >
           <SplideTrack className="pb-10">
             <SplideSlide className="drop-shadow-xl">
-              <Image src={MobileImage1} alt="Info" objectFit="contain" />
+              <Image src={MobileImage1} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
             <SplideSlide className="drop-shadow-xl">
-              <Image src={MobileImage2} alt="Info" objectFit="contain" />
+              <Image src={MobileImage2} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
             <SplideSlide className="drop-shadow-xl">
-              <Image src={MobileImage3} alt="Info" objectFit="contain" />
+              <Image src={MobileImage3} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
             <SplideSlide className="drop-shadow-xl">
-              <Image src={MobileImage4} alt="Info" objectFit="contain" />
+              <Image src={MobileImage4} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
           </SplideTrack>
 
@@ -94,7 +94,7 @@ export const BitGraduateStorage = () => {
             className="absolute -top-10 -left-[14rem] pointer-events-none"
           />
           <div className="w-[20.625rem] h-[26.875rem] hover:scale-110 transition-transform duration-500 ease-in-out origin-top">
-            <Image src={InfoImage} alt="Info" objectFit="contain" />
+            <Image src={InfoImage} alt="Info" style={{ objectFit: "contain" }} />
           </div>
         </div>
       )}

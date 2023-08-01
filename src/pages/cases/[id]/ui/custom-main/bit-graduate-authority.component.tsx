@@ -99,7 +99,9 @@ export const BitGraduateAuthority = () => {
       <Image src={BgImage} alt="Bg" fill className="w-full object-cover" />
 
       <div className="container relative py-[3.75rem] t-xs:py-5">
-        <p className="text-3xl font-light text-center t-xs:text-base">{renderTitle}</p>
+        <p className="text-3xl font-light text-center text-black-text t-xs:text-base">
+          {renderTitle}
+        </p>
         <div className="grid grid-cols-4 gap-x-10 gap-y-20 mt-20 t-xs:grid-cols-2 t-xs:gap-x-4 t-xs:gap-y-5 t-xs:mt-5">
           {displayedCards.map((card) => (
             <article

@@ -123,6 +123,9 @@ module.exports = {
         "16dp": "0px 0px 8px rgba(0, 0, 0, 0.12), 0px 16px 16px rgba(0, 0, 0, 0.1)",
         navbar: "0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 20px rgba(15, 26, 32, 0.08)",
       },
+      dropShadow: {
+        l: "-8px 8px 16px rgba(0, 0, 0, 0.2)",
+      },
       keyframes: {
         "move-in": {
           "0%": { transform: "translateY(-110%)" },
