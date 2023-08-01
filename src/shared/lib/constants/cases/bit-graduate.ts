@@ -1,8 +1,5 @@
 import { ICase, CustomHeroes, CustomMainBanner } from "@shared/lib/types";
 import { TEAM } from "@shared/lib/constants/team";
-import bitGraduateImage2 from "@public/assets/images/cases/bit-graduate/document-storage.png";
-import bitGraduateImage1 from "@public/assets/images/cases/bit-graduate/document-verification.png";
-import bitGraduateImage3 from "@public/assets/images/cases/bit-graduate/institute-authority.png";
 import bitGraduateThumb from "@public/assets/images/cases/bit-graduate/thumb.png";
 
 export const BIT_GRADUATE: ICase = {
@@ -65,7 +62,7 @@ export const BIT_GRADUATE: ICase = {
         {
           text: {
             en: "We’ve implemented  blockchain integration, now  diplomas’ authentication takes only a few seconds. No cheating - all diplomas are stored in the form of non-fungible tokens, which rules out the chance of forgery.",
-            ru: "Реализовали интеграцию с блокчейном, теперь проверка подлинности занимает всего пару секунд. Смухлевать не получится -- все дипломы хранятся в виде невзаимозаменяемых токенов, что исключает шанс подделки.",
+            ru: "Реализовали интеграцию с блокчейном, теперь проверка подлинности занимает всего пару секунд. Смухлевать не получится - все дипломы хранятся в виде невзаимозаменяемых токенов, что исключает шанс подделки.",
           },
         },
       ],
@@ -73,14 +70,14 @@ export const BIT_GRADUATE: ICase = {
     },
     {
       title: {
-        en: "Custom templates for interview invitations",
+        en: "Easy document storage",
         ru: "Удобное хранение документов",
       },
       text: [
         {
           text: {
             en: "Use your personal account, all certificates and diplomas - in one place. Can’t be damaged, can’t be lost, always with you. You don’t need to keep digital copies anymore.",
-            ru: "Сделали удобный личный кабинет, все сертификаты и дипломы -- в одном месте. Не горят, не тонут, всегда с вами. Больше не надо хранить оцифрованные копии.",
+            ru: "Сделали удобный личный кабинет, все сертификаты и дипломы - в одном месте. Не горят, не тонут, всегда с вами. Больше не надо хранить оцифрованные копии.",
           },
         },
       ],

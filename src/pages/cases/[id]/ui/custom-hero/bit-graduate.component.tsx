@@ -2,6 +2,7 @@ import LinkCircle from "@public/assets/icons/link-circle.svg";
 import AnimatedBackground from "@public/assets/images/cases/bit-graduate/animated-background.svg";
 import Hero from "@public/assets/images/cases/bit-graduate/hero.png";
 import Logo from "@public/assets/images/cases/bit-graduate/logo.svg";
+import MobileHero from "@public/assets/images/cases/bit-graduate/mobile-hero.png";
 import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
 import { getCustomHeroText } from "@shared/lib";
 import type { ICase } from "@shared/lib/types";
@@ -12,6 +13,8 @@ import { useEffect, useMemo, useState } from "react";
 import useScrollbarSize from "react-scrollbar-size";
 
 import { CaseGoal } from "../case-goal.component";
+import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 interface IBitGraduateProperties {
   data: ICase;
@@ -41,6 +44,8 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
   const { locale } = useRouter();
   const [isAnimate, setIsAnimate] = useState(true);
   const { width } = useScrollbarSize();
+  const isMounted = useMounted();
+  const isMobile = useDetectDeviceType();
 
   const langData = useMemo(() => {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
@@ -49,19 +54,24 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    setTimeout(() => {
-      window.scrollTo(0, 0.0001);
-    }, 0);
+    const fixScroll = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 400);
 
-    setTimeout(() => {
+    const afterAnimation = setTimeout(() => {
       window.scrollTo(0, 0);
       document.body.style.overflow = "auto";
       setIsAnimate(false);
     }, STAGES["stage-2"].delay * 1000);
-  }, []);
 
-  if (!data) {
-    return <></>;
+    return () => {
+      clearTimeout(fixScroll);
+      clearTimeout(afterAnimation);
+    };
+  }, [isMounted]);
+
+  if (!isMounted || !data) {
+    return <div className="fixed top-0 left-0 bottom-0 right-0 bg-[#fff] w-full h-screen"></div>;
   }
 
   return (
@@ -80,19 +90,19 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           },
         }}
       >
-        <div className="container relative z-10 mt-28 flex h-[70%] justify-between items-center gap-10">
+        <div className="container relative z-10 mt-28 flex h-[100%] justify-between items-center gap-10 t-xs:flex-col t-xs:gap-8 t-xs:mt-[5rem] t-xs:min-h-screen">
           <motion.div
             className="absolute top-1/2 flex items-center gap-2 whitespace-nowrap text-bg-gradient"
             initial={{
               transform: "translate(-50%, -50%)",
               left: "50%",
               marginTop: "-7rem",
-              fontSize: "6rem",
+              fontSize: isMobile ? "2rem" : "6rem",
             }}
             animate={{
               fontSize: "2rem",
               top: 0,
-              left: "4.5rem",
+              left: isMobile ? "2rem" : "4.5rem",
               transform: "translate(0, 0)",
               marginTop: "0",
               transition: {
@@ -104,7 +114,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           >
             <motion.div
               initial={{
-                width: "10rem",
+                width: isMobile ? "4rem" : "10rem",
               }}
               animate={{
                 width: "4rem",
@@ -138,7 +148,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           </motion.div>
 
           <motion.div
-            className="flex w-[36.5rem] flex-col justify-between gap-[5rem] text-[3rem] text-bg-gradient pt-[8.75rem] pb-4 shrink-0"
+            className="flex w-[36.5rem] flex-col justify-between gap-[5rem] text-[3rem] text-bg-gradient pt-[8.75rem] pb-4 shrink-0 t-xs:w-[15.625rem] t-xs:pt-16 t-xs:gap-5 t-xs:text-base t-xs:pb-0 t-xs:pl-10"
             initial={{
               opacity: 0,
               transform: "translateY(200%)",
@@ -159,15 +169,15 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
               href="https://bitgraduate.net"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 text-[1.5rem] text-light-text-secondary"
+              className="flex items-center gap-2 text-[1.5rem] text-light-text-secondary t-xs:text-xs"
             >
               <p>{getCustomHeroText(1, locale, data.heroText)}</p>
-              <LinkCircle />
+              <LinkCircle className="w-5 h-5 t-xs:w-3 t-xs:h-3" viewBox="0 0 24 24" />
             </a>
           </motion.div>
 
           <motion.div
-            className="relative block aspect-[5/3] w-full"
+            className="relative block aspect-[5/3] w-full t-xs:w-80 t-xs:aspect-[0.85] t-xs:drop-shadow-2xl"
             initial={{
               opacity: 0,
               transform: "translateY(200%)",
@@ -182,7 +192,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
               },
             }}
           >
-            <Image src={Hero} alt="BitGraduate" fill />
+            <Image src={isMobile ? MobileHero : Hero} alt="BitGraduate" fill />
           </motion.div>
         </div>
 
@@ -201,8 +211,9 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
             },
           }}
         />
+
         <motion.div
-          className="absolute left-full aspect-[3/6] h-[150%]"
+          className="absolute left-full aspect-[3/6] h-[150%] t-xs:hidden"
           initial={{
             transform: "translate(50%, -100%) rotate(25deg)",
             opacity: 0,
@@ -220,6 +231,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           <AnimatedBackground className="h-full w-full" />
         </motion.div>
       </motion.div>
+
       <CaseGoal data={data} locale={locale} langData={langData} containerClassNames="mb-12" />
     </>
   );
