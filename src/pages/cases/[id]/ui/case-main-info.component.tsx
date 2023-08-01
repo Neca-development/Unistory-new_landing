@@ -7,6 +7,7 @@ import Fancybox from "@shared/lib/hocs/fancybox";
 import { BitGraduateVerification } from "./custom-main/bit-graduate-verification.component";
 import { BitGraduateStorage } from "./custom-main/bit-graduate-storage.component";
 import { BitGraduateAuthority } from "./custom-main/bit-graduate-authority.component";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 interface ICaseInfoItemProps {
   data?: ICase["main"][0];
@@ -113,6 +114,10 @@ interface ICaseMainInfoProps {
   data?: ICase["main"];
 }
 export function CaseMainInfo({ data }: ICaseMainInfoProps) {
+  const isMounted = useMounted();
+
+  if (!isMounted) return <></>;
+
   return (
     <div className="case-description bg-light-bg-accent dark:bg-dark-bg-accent pt-[7.5rem] t-xs:pt-16">
       {data?.map((item, idx) => (

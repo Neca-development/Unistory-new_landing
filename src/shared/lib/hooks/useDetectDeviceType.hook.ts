@@ -1,7 +1,34 @@
-export const useDetectDeviceType = (width = 640) => {
-  if(typeof window !== 'undefined') {
-    return window.matchMedia(`(max-width: ${width}px)`).matches
-  }
+import { useCallback, useEffect, useState } from "react";
 
-  return false
-}
+export const useDetectDeviceType = (width = 640) => {
+  const [matches, setIsMatches] = useState(false);
+
+  const checkSize = useCallback(() => {
+    const isMatch = window.matchMedia(`(max-width: ${width}px)`).matches;
+    if (isMatch) {
+      setIsMatches(true);
+    } else {
+      setIsMatches(false);
+    }
+  }, [width]);
+
+  useEffect(() => {
+    if (typeof window == "undefined") {
+      return;
+    } else {
+      checkSize();
+    }
+
+    const handleWindowResize = () => {
+      checkSize();
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  return matches;
+};
