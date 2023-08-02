@@ -234,23 +234,23 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
         >
           <AnimatedBackground className="h-full w-full" />
         </motion.div>
-      </motion.div>
 
-      {/* Mobile inner shadow */}
-      {isMobile && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: {
-              duration: STAGES["stage-2"].duration,
-              delay: STAGES["stage-2"].delay,
-              ease: STAGES["stage-2"].ease,
-            },
-          }}
-          className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-[rgba(0,0,0,0.25)] z-10"
-        ></motion.div>
-      )}
+        {/* Mobile inner shadow */}
+        {isMobile && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: STAGES["stage-2"].duration,
+                delay: STAGES["stage-2"].delay,
+                ease: STAGES["stage-2"].ease,
+              },
+            }}
+            className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-[rgba(0,0,0,0.25)] z-10"
+          ></motion.div>
+        )}
+      </motion.div>
 
       <CaseGoal data={data} locale={locale} langData={langData} containerClassNames="mb-12" />
     </>
