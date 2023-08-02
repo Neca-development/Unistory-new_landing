@@ -3,7 +3,7 @@ import { TEAM } from "@shared/lib/constants/team";
 import bitGraduateThumb from "@public/assets/images/cases/bit-graduate/thumb.png";
 
 export const BIT_GRADUATE: ICase = {
-  title: "Bit graduate",
+  title: "BitGraduate",
   id: "bit-graduate",
   customHero: CustomHeroes.BitGraduate,
   heroTitle: {
