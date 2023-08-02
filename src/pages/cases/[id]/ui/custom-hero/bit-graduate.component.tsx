@@ -56,7 +56,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
 
     const fixScroll = setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 400);
+    }, 310);
 
     const afterAnimation = setTimeout(() => {
       window.scrollTo(0, 0);
@@ -90,7 +90,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           },
         }}
       >
-        <div className="container relative z-10 mt-28 flex h-[70%] justify-between items-center gap-10 t-xs:flex-col t-xs:gap-8 t-xs:mt-[5.5rem] t-xs:min-h-[calc(100vh_-_5.5rem)]">
+        <div className="container relative z-10 mt-28 flex h-[70%] justify-between items-center gap-10 t-xs:flex-col t-xs:gap-8 t-xs:mt-[5.5rem] t-xs:h-[calc(100vh_-_5.5rem)] t-xs:justify-start overflow-hidden">
           <motion.div
             className="absolute top-1/2 flex items-center gap-2 whitespace-nowrap text-bg-gradient"
             initial={{
@@ -177,7 +177,7 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           </motion.div>
 
           <motion.div
-            className="relative block aspect-[5/3] w-full t-xs:w-80 t-xs:aspect-[0.85] t-xs:drop-shadow-2xl"
+            className="relative block aspect-[5/3] w-full t-xs:w-[19.375rem] t-xs:aspect-auto t-xs:drop-shadow-2xl"
             initial={{
               opacity: 0,
               transform: "translateY(200%)",
@@ -192,7 +192,11 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
               },
             }}
           >
-            <Image src={isMobile ? MobileHero : Hero} alt="BitGraduate" fill />
+            <Image
+              src={isMobile ? MobileHero : Hero}
+              alt="BitGraduate"
+              style={{ objectFit: "contain" }}
+            />
           </motion.div>
         </div>
 
@@ -231,6 +235,22 @@ export const BitGraduate = (props: IBitGraduateProperties) => {
           <AnimatedBackground className="h-full w-full" />
         </motion.div>
       </motion.div>
+
+      {/* Mobile inner shadow */}
+      {isMobile && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: STAGES["stage-2"].duration,
+              delay: STAGES["stage-2"].delay,
+              ease: STAGES["stage-2"].ease,
+            },
+          }}
+          className="absolute bottom-0 left-0 w-full h-4 bg-gradient-to-t from-[rgba(0,0,0,0.25)] z-10"
+        ></motion.div>
+      )}
 
       <CaseGoal data={data} locale={locale} langData={langData} containerClassNames="mb-12" />
     </>

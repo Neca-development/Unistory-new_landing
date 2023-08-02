@@ -43,24 +43,24 @@ export const BitGraduateStorage = () => {
         <Splide
           hasTrack={false}
           options={{
-            gap: "3rem",
+            gap: "4rem",
             pagination: false,
-            padding: "2rem",
+            padding: "3.5rem",
           }}
-          className="container !py-10"
+          className="pb-10"
           aria-label="BitGraduate Storage Mobile Slider"
         >
-          <SplideTrack className="pb-10">
-            <SplideSlide className="drop-shadow-xl">
+          <SplideTrack className="pb-10 pt-10">
+            <SplideSlide className="drop-shadow-b">
               <Image src={MobileImage1} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
-            <SplideSlide className="drop-shadow-xl">
+            <SplideSlide className="drop-shadow-b">
               <Image src={MobileImage2} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
-            <SplideSlide className="drop-shadow-xl">
+            <SplideSlide className="drop-shadow-b">
               <Image src={MobileImage3} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
-            <SplideSlide className="drop-shadow-xl">
+            <SplideSlide className="drop-shadow-b">
               <Image src={MobileImage4} alt="Info" style={{ objectFit: "contain" }} />
             </SplideSlide>
           </SplideTrack>
