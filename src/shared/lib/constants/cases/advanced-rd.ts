@@ -25,7 +25,7 @@ export const ADVANCED_RD: ICase = {
   icons: ["monitor", "phone02"],
   textColor: "white",
   technologies: [
-    TECHNOLOGIES.nextjs,
+    TECHNOLOGIES.angular,
     TECHNOLOGIES.nest,
     TECHNOLOGIES.postgresql,
     TECHNOLOGIES.solidity,
@@ -39,8 +39,8 @@ export const ADVANCED_RD: ICase = {
     mob: advancedRDBanner.src,
   },
   description: {
-    en: "To create an advanced property investment platform with full-fledged blockchain integration. You don’t need to pay the whole price by your own -- just share it with others and receive the dividents.  ",
-    ru: "Создать продвинутую платформу для инвестиций в недвижимость, с полноценной блокчейн-интеграцией. Вам не нужно платить всю сумму самому -- просто поделите её с другими и получайте дивиденды.",
+    en: "To create an advanced property investment platform with full-fledged blockchain integration. You don’t need to pay the whole price by your own - just share it with others and receive the dividents.",
+    ru: "Создать продвинутую платформу для инвестиций в недвижимость, с полноценной блокчейн-интеграцией. Вам не нужно платить всю сумму самому - просто поделите её с другими и получайте дивиденды.",
   },
   params: {
     budget: {
@@ -60,7 +60,7 @@ export const ADVANCED_RD: ICase = {
         {
           text: {
             en: "Get all necessary information from the property page. Check the description, property price and amount of investments and make a decision to be a part of it. All information are powered by blockchain integration and updates in real time.",
-            ru: "Получайте всю необходимую информацию на одной странице. Прочитайте описание, посмотрите на цену и объем текущих инвестиций и решите -- стать ли частью этого. Вся информация обрабатывается на блокчейне и обрабатывается в режиме реального времени.",
+            ru: "Получайте всю необходимую информацию на одной странице. Прочитайте описание, посмотрите на цену и объем текущих инвестиций и решите - стать ли частью этого. Вся информация обрабатывается на блокчейне и обрабатывается в режиме реального времени.",
           },
         },
       ],
@@ -89,8 +89,8 @@ export const ADVANCED_RD: ICase = {
       text: [
         {
           text: {
-            en: "We’ve implemented a great referral system to help you keep in touch wih your partners. Invite them to be in an investment community.  Here we have a two ways bonus system -- both of you will receive an extra income. And again, all is crystal clear and transparent since it’s managed by blockchain.",
-            ru: "Мы внедрили классную реферальную систему, чтобы вы могли держать связь со своими партнерами. Приглашайте их стать частью коммьюнити инвесторов и оба получайте бонусы -- система работает в обе стороны. И еще раз, все предельно прозрачно и понятно -- всё управляется блокчейном. ",
+            en: "We’ve implemented a great referral system to help you keep in touch wih your partners. Invite them to be in an investment community. Here we have a two ways bonus system -- both of you will receive an extra income. And again, all is crystal clear and transparent since it’s managed by blockchain.",
+            ru: "Мы внедрили классную реферальную систему, чтобы вы могли держать связь со своими партнерами. Приглашайте их стать частью коммьюнити инвесторов и оба получайте бонусы - система работает в обе стороны. И еще раз, все предельно прозрачно и понятно - всё управляется блокчейном. ",
           },
         },
       ],
@@ -104,7 +104,7 @@ export const ADVANCED_RD: ICase = {
       text: [
         {
           text: {
-            en: "We’ve made a comprehensive blockchain integration to make investments transparent and easy.  We took over the whole process from smart contract to stablecoin creation. Besides, we’ve developed an admin panel for staff -- to manage the platform from A to Z. ",
+            en: "We’ve made a comprehensive blockchain integration to make investments transparent and easy.  We took over the whole process from smart contract to stablecoin creation. Besides, we’ve developed an admin panel for staff -- to manage the platform from A to Z.",
             ru: "Мы сделали обширную блокчейн-интеграцию, чтобы сделать инвестиции легким и прозрачным процессом. Мы взяли на себя весь функционал, от смарт контрактов до создания стейблкоина. Кроме того, мы разработали админ панель для сотрудников -- чтобы управлять платформой от А до Я.",
           },
         },
@@ -113,12 +113,11 @@ export const ADVANCED_RD: ICase = {
   ],
   team: [
     TEAM.alexanderAksenov,
-    TEAM.daniilSemenov,
-    TEAM.ernestMironov,
+    TEAM.ilyaSmirnov,
     TEAM.yanSofronov,
-    TEAM.alekseyChepurin,
     TEAM.maksimKlimchenko,
-    TEAM.andreyBabenkov,
-    TEAM.danilaSkablov,
+    TEAM.andreyPaskarenko,
+    TEAM.vladislavKiribyatev,
+    TEAM.kirillElizarov,
   ],
 };

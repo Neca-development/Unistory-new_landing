@@ -122,6 +122,7 @@ module.exports = {
         "8dp": "0px 0px 2px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.08)",
         "10dp": "-10px 10px 10px 0px rgba(0, 0, 0, 0.25)",
         "16dp": "0px 0px 8px rgba(0, 0, 0, 0.12), 0px 16px 16px rgba(0, 0, 0, 0.1)",
+        "24dp": "8px 8px 24px 0px rgba(0, 0, 0, 0.16), -16px 56px 56px 0px rgba(0, 0, 0, 0.2)",
         navbar: "0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 20px rgba(15, 26, 32, 0.08)",
       },
       dropShadow: {

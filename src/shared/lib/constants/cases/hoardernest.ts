@@ -46,11 +46,9 @@ export const HOARDER_NEST: ICase = {
   },
   technologies: [
     TECHNOLOGIES.react,
-    TECHNOLOGIES.nextjs,
-    TECHNOLOGIES.solidity,
-    TECHNOLOGIES.node,
     TECHNOLOGIES.nest,
     TECHNOLOGIES.postgresql,
+    TECHNOLOGIES.solidity,
   ],
   textColor: "white",
   showCategoriesOnPage: false,
