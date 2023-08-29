@@ -22,5 +22,5 @@ export const CASES: ICase[] = [
   CHARITY_PLATFORM,
   SIPSIGNAL,
   PERSONAL,
-  BIT_GRADUATE,
+  // BIT_GRADUATE,
 ];
