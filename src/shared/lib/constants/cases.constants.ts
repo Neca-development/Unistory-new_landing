@@ -9,7 +9,7 @@ import { THE_HEIST } from "./cases/the-heist";
 import { CHARITY_PLATFORM } from "./cases/charity-platform";
 import { SIPSIGNAL } from "./cases/sipsignal";
 import { PERSONAL } from "./cases/personal";
-import { BIT_GRADUATE } from "./cases/bit-graduate";
+// import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
   FLATSPACE,
@@ -22,5 +22,5 @@ export const CASES: ICase[] = [
   CHARITY_PLATFORM,
   SIPSIGNAL,
   PERSONAL,
-  BIT_GRADUATE,
+  // BIT_GRADUATE,
 ];
