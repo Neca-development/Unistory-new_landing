@@ -14,11 +14,11 @@ export const CHARITY_PLATFORM: ICase = {
   id: "charityplatform",
   heroTitle: {
     en: "Development of Charity Platform",
-    ru: "Благотварительная платформа Адрес.Люди",
+    ru: "Благотворительная платформа Адрес.Люди",
   },
   categories: {
     en: ["Development of Charity Platform"],
-    ru: ["Благотварительная платформа Адрес.Люди"],
+    ru: ["Благотворительная платформа Адрес.Люди"],
   },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
