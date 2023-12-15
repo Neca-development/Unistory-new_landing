@@ -39,8 +39,8 @@ export const XILLION: ICase = {
     mob: xilBannerMob.src,
   },
   description: {
-    en: "Modernization of the investment DAO ecosystem in Polygon and BSC blockchain networks: refined the MVP version of the platform, created a separate P2E game module with quizzes, and integrated custom staking infrastructure into the existing decentralized community.",
-    ru: "Модернизация инвестиционной DAO экосистемы в сетях Polygon и BSC: доработали MVP версию площадки, создали отдельный игровой модуль  с P2E-викторинами и интегрировали кастомную стейкинг инфраструктуру в существующее децентрализованное сообщество.",
+    en: "Development of the investment DAO ecosystem in Polygon and BSC blockchain networks: provided platform users with new investment opportunities, created a separate P2E game module with quizzes, and integrated custom staking infrastructure into the existing decentralized community.",
+    ru: "Разработка инвестиционной DAO-экосистемы в сетях Polygon и BSC: дать пользователям площадки новые инвестиционные возможности; создать отдельный игровой модуль с P2E-викторинами; интегрировать кастомную стейкинг-инфраструктуру в существующее децентрализованное сообщество.",
   },
   params: {
     budget: {
@@ -59,8 +59,20 @@ export const XILLION: ICase = {
       text: [
         {
           text: {
-            en: "Xillion – is a constantly progressing product, which has been improved by our team implementing new services for the platform. During the development, owners noted the growing trend of Play2Earn projects in Polygon network. In an effort to improve the product and respond to the market, it was decided to create a separate rewarding blockchain quizzes platform. Together with the product team, we developed and integrated a separate project module running in Polygon network, where the community takes surveys and receives rewards for participation.",
-            ru: "Xillion – это постоянно совершенствующийся продукт, который был улучшен нашей командой посредством реализации новых сервисов для платформы. В ходе разработки проекта владельцы отметили тенденцию роста популярности Play2Earn сегмента в сети Polygon. Так, в стремлении улучшить продукт и своевременно отреагировать на тенденции рынка было решено создать отдельную платформу для участия в поощеряемых блокчейн-викторинах. Совместно с командой продукта мы разработали и интегрировали отдельный модуль проекта, работающий в сети Polygon, где сообщество проходит опросы и получает вознаграждения за участие.",
+            en: "Xillion is a crypto investment platform based in San Francisco. The main idea of the ecosystem is to help every investor earn money and build their financial independence.",
+            ru: "Xillion — инвестиционная крипто-площадка с офисом в Сан-Франциско. Главная идея экосистемы — помочь каждому инвестору заработать и построить свою финансовую независимость.",
+          },
+        },
+        {
+          text: {
+            en: "One of the tools that the service uses to achieve its goal is Play2Earn. In an effort to improve the product and respond to demand, the creators of Xillion decided to prepare a separate platform dedicated to blockchain quizzes.",
+            ru: "Один из инструментов, который использует сервис для достижения своей цели — Play2Earn. В стремлении улучшить продукт и отреагировать на спрос создатели Xillion приняли решение подготовить отдельную платформу, посвященную блокчейн-викторинам.",
+          },
+        },
+        {
+          text: {
+            en: "Together with the platform owners, we decided to give users another opportunity to earn money: take surveys and receive a reward for participation. The Unistory team took on the development and integration of the platform in the form of a separate module running on the Polygon blockchain network.",
+            ru: "Вместе с владельцами площадки мы решили дать пользователям еще одну возможность заработать: пройти опросы и получить вознаграждение за участие. Команда Unistory взяла на себя разработку и интеграцию платформы в виде обособленного модуля, работающего в сети Polygon.",
           },
         },
       ],
@@ -74,8 +86,8 @@ export const XILLION: ICase = {
       text: [
         {
           text: {
-            en: "After investing in the listed projects on Xillion platform, each investor receives project tokens XIL. A separate smart contract of the platform is responsible for their distribution, which is the primitive of the entire protocol. It also automatically creates new smart contracts of listed projects that distribute unique tokens of incubated DAO products.",
-            ru: "После инвестирования в размещенные проекты на площадке Xillion,  каждый из инвесторов получает токены проекта (XIL). За их дистрибьюцию отвечает отдельный смарт контракт платформы, который является основой всего протокола. Он также автоматически создает новые смарт контракты размещаемых проектов, которые распределяют уникальные токены инкубационных DAO продуктов.",
+            en: "The user invests in projects promoted on Xillion and then receives the project's tokens XIL. A separate smart contract of the platform, which is the basis of the entire protocol, is responsible for their distribution. It also automatically creates smart contracts for new projects that distribute unique tokens of incubated DAO products.",
+            ru: "Пользователь инвестирует в размещенные на Xillion проекты, а затем получает токены проекта — XIL. За их дистрибуцию отвечает отдельный смарт-контракт платформы, который является основой всего протокола. Он также автоматически создает смарт-контракты новых проектов, которые распределяют уникальные токены инкубационных DAO-продуктов.",
           },
         },
       ],
@@ -89,8 +101,14 @@ export const XILLION: ICase = {
       text: [
         {
           text: {
-            en: "Our team revamped on-chain voting for the projects promoted on the platform: each user can independently propose ideas to XillionDAO members. Any member of the DAO with a balance of at least 10k XIL tokens can take part in the decentralized voting.  The voting process is implemented by a staking smart contract: the members have to deposit XIL tokens, which will be returned to them along with a percentage of the investment when the promoted project is successfully launched.",
-            ru: "Наша команда модернизировала логику on-chain голосования за продвигаемые на платформе проекты : каждый пользователь может самостоятельно  предложить свою идею участникам XillionDAO. Участие в децентрализованном голосовании может принять любой член сообщества Xillion с балансом не менее 10 тыс. XIL токенов.  Процесс голосования реализован при помощи стейкинг смарт контракта, в котором необходимо заблокировать XIL токены, которые вернуться пользователям вместе с процентов от инвестиций при успешном запуске продвигаемого проекта.",
+            en: "The platform offers an on-chain voting function for projects that are posted and promoted by users. We have modernized the logic of this process: now every platform user who has at least 10k XIL tokens in their account can propose their idea to XillionDAO members.",
+            ru: "На площадке доступна функция on-chain голосования за проекты, которые размещают и продвигают пользователи. Мы провели модернизацию логики этого процесса: теперь каждый пользователь платформы, у которого не менее 10 000 XIL-токенов на счету, может предложить свою идею участникам XillionDAO. ",
+          },
+        },
+        {
+          text: {
+            en: "The Unistory team implemented the voting process using a staking smart contract: users block XIL tokens, which will be returned to them as a percentage of the investment if the project is successful.",
+            ru: "Команда Unistory реализовала процесс голосования при помощи стейкинг смарт-контракта: пользователи блокируют XIL-токены, которые вернутся им в виде процентов от инвестиций, если проект окажется успешным.",
           },
         },
       ],
@@ -104,20 +122,20 @@ export const XILLION: ICase = {
       text: [
         {
           text: {
-            en: "For storing project history, voting results, number of investments, and investor information, we used TheGraph protocol, which can simultaneously work with both old and updated blockchain project architectures.",
-            ru: "Для сохранения истории проектов, результатов голосования, количества инвестиций и информации об инвесторах мы использовали протокол TheGraph, который может одновременно работать как и со старой, так и с обновленной архитектурой блокчейн-проектов.",
+            en: "For storing project history, voting results, number of investments, and information about investors, we used the TheGraph protocol, which can simultaneously work with both the old and the updated architecture of blockchain projects.",
+            ru: "Для сохранения истории проектов, результатов голосования, количества инвестиций и информации об инвесторах мы использовали протокол TheGraph, который может одновременно работать как со старой, так и с обновленной архитектурой блокчейн-проектов.",
           },
         },
         {
           text: {
-            en: "Xillion is deployed on two blockchain networks: Binance Smart Chain and Polygon. Differentiating access to sections of the website and using the capabilities of ether.js library made it comfy for users to switch from one network to another.",
-            ru: "Xillion размещен одновременно сразу на двух блокчейн сетях: Binance Smart Chain и Polygon. Разграничение доступа к разделам сайта и использование возможностей библиотеки ether.js сделали удобными для пользователей переходы от одной сети к друг",
+            en: "Xillion is deployed simultaneously on two blockchain networks: Binance Smart Chain and Polygon. We differentiated access to sections of the platform and used the capabilities of the ether.js library to make the transition of users from one network to another more convenient.",
+            ru: "Xillion размещен одновременно сразу на двух блокчейн сетях: Binance Smart Chain и Polygon. Мы разграничили доступ к разделам сайта и использовали возможности библиотеки ether.js, чтобы сделать переход пользователей от одной сети к другой более удобным. ",
           },
         },
         {
           text: {
-            en: "Also, the project uses a proxy architecture in the blockchain part of the project, which makes it easy to scale and add new modules in the future.",
-            ru: "Также, в проекте используется прокси-архитектура для блокчейн части проекта, что позволяет с легкостью масштабировать продукт и в будущем добавлять новые модули.",
+            en: "Also, we used a proxy architecture in the blockchain part of the project, which makes it easy to scale and add new modules in the future.",
+            ru: "Также использовали прокси-архитектуру для blockchain части проекта. Это позволит Xillion с легкостью масштабировать свой продукт и в будущем добавлять все новые модули.",
           },
         },
       ],
