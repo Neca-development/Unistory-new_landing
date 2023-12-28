@@ -39,8 +39,8 @@ export const PERSONAL: ICase = {
     mob: personalPromoMob.src,
   },
   description: {
-    en: "Our team had to develop an HR aggregator application that helps collect all resumes in one place, facilitates communication with candidates and has integration with popular job search platforms.",
-    ru: "Нашей команде предстояло разработать HR приложение-агрегатор, которое помогает собирать все резюме в  одном месте, облегчает общение с кандидатами и имеет интеграцию с популярными платформами для поиска работы.",
+    en: "Optimization of HR processes: collecting all resumes on one digital platform, simplifying communication with candidates, reducing the labor costs of HR staff. In order to achieve a business goal we decided to develop an aggregator application integrated with popular job search platforms.",
+    ru: "Оптимизация HR-процессов: собрать все резюме на одной цифровой платформе, упростить общение с кандидатами, уменьшить трудозатраты эйчаров. Чтобы решить бизнес-задачу, мы предложили заказчику разработать приложение-агрегатор, интегрированное со всеми популярными площадками поиска работы.",
   },
   params: {
     budget: {
@@ -59,8 +59,8 @@ export const PERSONAL: ICase = {
       text: [
         {
           text: {
-            en: "To reduce the time it takes to browse employee search sites, and to bring all resumes together, we decided to aggregate the existing platforms into one application. In total, our team has integrated six major platforms, including HH.ru and Avito. Our integrations allow app users to seamlessly receive candidate resumes from multiple sources at once.",
-            ru: "Чтобы сократить время на просмотр сайтов по поиску сотрудников, и собрать все резюме воедино – мы решили аггрегировать существующие площадки в одном приложении. Всего наша команда интегрировала 6 крупнейших платформ, включая HH.ru и Авито. Наши интеграции позволяют пользователям приложения бесшовно получать резюме кандидатов из сразу нескольких источников.",
+            en: "The initial issue the client encountered was the excessive time spent by HR personnel on reviewing resumes from various services. To streamline managerial costs, we integrated major platforms. Our solution enables HR managers to access candidate resumes from multiple services on a single screen within a unified application.",
+            ru: "Первая проблема, которая стояла перед клиентом — эйчары тратят слишком много времени на просмотр резюме из разных сервисов. Чтобы оптимизировать трудозатраты менеджеров, мы провели интеграцию крупнейших платформ. Наше решение позволяет эйчарам смотреть резюме кандидатов из нескольких сервисов на одном экране, в одном приложении.",
           },
         },
       ],
@@ -74,8 +74,8 @@ export const PERSONAL: ICase = {
       text: [
         {
           text: {
-            en: "We created a system to create customizable templates cards that users can send to job candidates. This solution significantly saves time in processing a large number of incoming resumes, and this is important, because optimization is the first priority for any business.",
-            ru: "Мы создали систему по созданию кастомизируемых карточек-шаблонов, которые пользователи могут отправлять кандидатам на вакансию. Данное решение значительно экономит время на обработку большого количества входящих предложений, и это важно, ведь оптимизация  является первоочередной задачей для любого бизнеса.",
+            en: "The second objective is to automate responses to candidates who have submitted their resumes. We have devised a system that allows any HR personnel within the application to create personalized response templates. To engage with a candidate, just click the 'Invite to Interview' button. The template can be easily edited if necessary.",
+            ru: "Вторая задача — автоматизация ответов кандидатам, которые прислали свои резюме. Мы разработали систему, благодаря которой любой эйчар может создавать кастомные шаблоны ответа в приложении. Чтобы ответить соискателю, достаточно нажать одну кнопку «Пригласить на интервью». При необходимости шаблон легко отредактировать. ",
           },
         },
       ],
@@ -84,13 +84,13 @@ export const PERSONAL: ICase = {
     {
       title: {
         en: "Built-in chat to display messages from HR services",
-        ru: "Встроенный чат для вывода сообщений из других сервисов",
+        ru: "Встроенный чат для сообщений из других сервисов",
       },
       text: [
         {
           text: {
-            en: "The app collects not only candidates resumes, but also their messages from various services. To make this process even more convenient, we created a built-in chat room where users can communicate with future employees from all necessary sources.",
-            ru: "Приложение собирает не только резюме кандидатов, но и их сообщения с различных площадок. Чтобы сделать этот процесс еще более удобным, мы создали встроенный чат, в котором пользователи могут общаться с будущими работниками из всех необходимых источников.",
+            en: "The application aggregates not only candidates' resumes but also their messages from various platforms. We've developed an integrated chat where managers can communicate with candidates without leaving the application. Applicants send messages from various services, and the manager can respond to them without leaving the \"Personal\" interface.",
+            ru: "Приложение агрегирует не только резюме кандидатов, но и их сообщения из разных площадок. Разработали встроенный чат, внутри которого менеджеры могут общаться с кандидатами, не покидая приложения. Соискатели пишут сообщения из разных сервисов, а менеджер отвечает всем, не выходя из «Персонала». ",
           },
         },
       ],
@@ -108,8 +108,8 @@ export const PERSONAL: ICase = {
             ru: "Сбор подсказок для составления вакансий",
           },
           text: {
-            en: "We parsed over ten thousand different job ads and used statistical analysis to collect the most common requirements. This made it possible to compile smart tips for all kinds of jobs.",
-            ru: "Мы разобрали более десяти тысяч различных объявлений о работе и с помощью статистического анализа собрали наиболее часто встречающиеся требования. Это позволило составить умные подсказки для всех видов вакансий.",
+            en: 'We\'ve analyzed over 10,000 job listings and, through statistical analysis, compiled the most commonly encountered requirements. Now, the HR specialist creating a job listing within the "Personal" application can utilize smart tips to prepare the advertisement.',
+            ru: "Мы разобрали более 10 0000 вакансий и с помощью статистического анализа собрали требования, которые встречаются чаще других. Теперь эйчар, который составляет вакансию внутри «Персонала», может использовать умные подсказки для подготовки объявления.",
           },
         },
         {
@@ -118,8 +118,8 @@ export const PERSONAL: ICase = {
             ru: "Размещение вакансий в разных сервисах",
           },
           text: {
-            en: "We have unified job requirements across all services, which allows the users to fill out only the app’s form.",
-            ru: "Мы унифицировали требования к вакансиям во всех сервисах, что позволяет нам предоставить нашим пользователям возможность заполнять только нашу форму.",
+            en: "We've developed a unified job posting interface. Managers only need to fill out the job listing once within the application, and it will instantly appear on popular services.",
+            ru: "Разработали единый интерфейс размещения вакансии. Менеджеру достаточно один раз заполнить вакансию внутри приложения, чтобы она сразу появилась в популярных сервисах.",
           },
         },
       ],
