@@ -124,9 +124,6 @@ export const SIPSIGNAL: ICase = {
     TEAM.nikitaBobkov,
     TEAM.maksimKlimchenko,
     TEAM.andreyBarabanov,
-    TEAM.ernestMironov,
-    TEAM.alekseyKlimenko,
-    TEAM.andreyPaskarenko,
     TEAM.vladislavKiribyatev,
   ],
 };

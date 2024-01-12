@@ -24,6 +24,29 @@ export const ServicesRu: Array<{
 }> = [
   {
     id: 1,
+    title: "Блокчейн и ИИ",
+    icon: "bitcoin",
+    header: "",
+    description: `      
+    <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Блокчейн интеграция</h4>
+      <ul>
+        <li>— Разработка токеномики</li>
+        <li>— Разработка смарт-контрактов</li>
+        <li>— DeFi-интеграция в веб и мобильные приложения</li>
+      </ul>
+      </div>
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Искусственный интеллект</h4>
+      <ul>
+        <li>— Сбор и обработка данных</li>
+        <li>— Машинное обучение</li>
+        <li>— Интеграция ChatGPT / Azure OpenAI</li>
+      </ul>
+    </div>`,
+  },
+  {
+    id: 2,
     title: "Аналитика и дизайн",
     icon: "grid",
     header: "",
@@ -47,7 +70,7 @@ export const ServicesRu: Array<{
       `,
   },
   {
-    id: 2,
+    id: 3,
     title: "Разработка",
     icon: "layout",
     header: "Веб и мобильная разработка",
@@ -58,29 +81,6 @@ export const ServicesRu: Array<{
     <br />
     — backend: Node.js, C#
     <br />— mobile: React native, Kotlin, Swift`,
-  },
-  {
-    id: 3,
-    title: "Блокчейн и ИИ",
-    icon: "bitcoin",
-    header: "",
-    description: `      
-    <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
-      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Блокчейн интеграция</h4>
-      <ul>
-        <li>— Разработка токеномики</li>
-        <li>— Разработка смарт-контрактов</li>
-        <li>— DeFi-интеграция в веб и мобильные приложения</li>
-      </ul>
-      </div>
-      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
-      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Искусственный интеллект</h4>
-      <ul>
-        <li>— Сбор и обработка данных</li>
-        <li>— Машинное обучение</li>
-        <li>— Интеграция ChatGPT / Azure OpenAI</li>
-      </ul>
-    </div>`,
   },
   {
     id: 4,
@@ -167,8 +167,8 @@ export const PrinciplesRu: {
 
 export const ReviewsRU = {
   title: {
-    beforeHighlight: "Факт: ",
-    highlight: "9 из 10 клиентов<br />рекомендуют нас",
-    afterHighlight: " и вот почему",
+    // beforeHighlight: "Факт: ",
+    highlight: "Клиенты доверяют нам <br/>",
+    afterHighlight: "свои цифровые продукты",
   },
 };

@@ -148,10 +148,7 @@ export const XILLION: ICase = {
     TEAM.nikitaBobkov,
     TEAM.maksimKlimchenko,
     TEAM.andreyBarabanov,
-    TEAM.vechyaslavValdykin,
     TEAM.ernestMironov,
-    TEAM.alekseyKlimenko,
-    TEAM.kirillElizarov,
     TEAM.danilaSkablov,
   ],
 };

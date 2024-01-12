@@ -132,11 +132,6 @@ export const PERSONAL: ICase = {
     TEAM.nikitaBobkov,
     TEAM.maksimKlimchenko,
     TEAM.andreyBarabanov,
-    TEAM.andreyPaskarenko,
-    TEAM.andreyBabenkov,
-    TEAM.alekseyKlimenko,
-    TEAM.ernestMironov,
-    TEAM.kirillElizarov,
     TEAM.vladislavKiribyatev,
   ],
 };

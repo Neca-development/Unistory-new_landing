@@ -89,7 +89,7 @@ export function Reviews() {
   return (
     <section className="container pt-14 pb-[7.5rem] t-xs:pt-20">
       <h2 className="text-2xl leading-none mb-10 t-xs:mb-8 lg:text-5xl font-bold lg:leading-[3.25rem]">
-        {text.title.beforeHighlight}
+        {/* {text.title.beforeHighlight} */}
         <span
           className="text-primary-s"
           dangerouslySetInnerHTML={{ __html: text.title.highlight }}

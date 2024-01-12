@@ -117,8 +117,6 @@ export const CHARITY_PLATFORM: ICase = {
     TEAM.maksimKlimchenko,
     TEAM.alekseyChepurin,
     TEAM.alekseyKlimenko,
-    TEAM.andreyPaskarenko,
-    TEAM.vladislavKiribyatev,
     TEAM.kirillElizarov,
   ],
 };

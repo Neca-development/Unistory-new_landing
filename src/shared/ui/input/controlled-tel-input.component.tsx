@@ -32,7 +32,6 @@ export function ControlledTelInput<T extends FieldValues>(props: IControlledTelI
             country={locale === "en" ? undefined : "ru"}
             inputProps={{ className: inputClassNames }}
             specialLabel={""}
-            placeholder="Phone"
           />
           {error && <span className={inputErrorClassNames}>{error}</span>}
         </label>

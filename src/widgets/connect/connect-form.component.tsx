@@ -1,13 +1,12 @@
-import { ControlledInput, ControlledTelInput, IconComponent, Checkbox } from "@shared/ui";
-import React, { useMemo, useRef, useState } from "react";
-import { Controller, useForm, useWatch } from "react-hook-form";
+import { Checkbox, ControlledInput, ControlledTelInput } from "@shared/ui";
+import React, { useMemo, useState } from "react";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { FormEn, FormRu } from "@shared/i18n";
 import clsx from "clsx";
-import { useAutoHeightTextarea } from "@shared/lib/hooks/useAutoHeightTextarea.hook";
 
 export interface ICheckboxFields {
   email: boolean;
@@ -24,7 +23,7 @@ export default function ConnectForm() {
     return locale === "en" ? FormEn : FormRu;
   }, [locale]);
 
-  const requiredMsg = data.fields.commonErrors.required;
+  // const requiredMsg = data.fields.commonErrors.required;
 
   const schema = z.object({
     email: z
@@ -35,13 +34,16 @@ export default function ConnectForm() {
       .min(3, { message: data.fields.name.error }),
     company: z
       .string({ required_error: data.fields.company.requiredError })
-      .min(3, { message: data.fields.company.error }),
+      .refine((value) => value === "" || value.length >= 3, {
+        message: data.fields.company.error,
+      })
+      .optional(),
     phoneNumber: z
       .string({ required_error: data.fields.phone.requiredError })
       .min(6, data.fields.phone.error),
-    projectDescription: z
-      .string({ required_error: data.fields.describe.requiredError })
-      .min(1, requiredMsg),
+    // projectDescription: z
+    //   .string({ required_error: data.fields.describe.requiredError })
+    //   .min(1, requiredMsg),
   });
 
   type FormType = z.infer<typeof schema>;
@@ -56,10 +58,10 @@ export default function ConnectForm() {
     mode: "onSubmit",
   });
 
-  const { projectDescription } = useWatch({ control });
+  // const { projectDescription } = useWatch({ control });
 
-  const [file, setFile] = useState<File | undefined>();
-  const [fileError, setFileError] = useState(false);
+  // const [file, setFile] = useState<File | undefined>();
+  // const [fileError, setFileError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [ways, setWays] = useState<ICheckboxFields>({
     email: false,
@@ -67,9 +69,9 @@ export default function ConnectForm() {
     whatsapp: false,
     phone: false,
   });
-  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+  // const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
-  useAutoHeightTextarea(textareaRef.current, projectDescription);
+  // useAutoHeightTextarea(textareaRef.current, projectDescription);
 
   const contactMethods = useMemo(
     () => [
@@ -98,7 +100,7 @@ export default function ConnectForm() {
   };
 
   const resetFields = () => {
-    setFile(undefined);
+    // setFile(undefined);
     setWays({ email: false, phone: false, telegram: false, whatsapp: false });
     reset();
   };
@@ -109,20 +111,20 @@ export default function ConnectForm() {
     const formData = new FormData();
     formData.append("email", data.email);
     formData.append("name", data.name);
-    formData.append("company", data.company);
     formData.append("phoneNumber", data.phoneNumber);
-    formData.append("description", data.projectDescription);
+    // formData.append("description", data.projectDescription);
     formData.append("preferences", JSON.stringify(ways));
+    data.company && formData.append("company", data.company);
 
-    if (file) {
-      if (file.size < 24000000) {
-        formData.append("attachment", file);
-      } else {
-        setFileError(true);
-        setIsLoading(false);
-        return;
-      }
-    }
+    // if (file) {
+    //   if (file.size < 24000000) {
+    //     formData.append("attachment", file);
+    //   } else {
+    //     setFileError(true);
+    //     setIsLoading(false);
+    //     return;
+    //   }
+    // }
 
     try {
       await axios.post("/api/contact/", formData);
@@ -150,10 +152,26 @@ export default function ConnectForm() {
           <ControlledInput
             control={control}
             name="name"
-            placeholder={data.fields.name.placeholder}
+            placeholder={data.fields.name.placeholder + " *"}
             type="text"
             error={errors.name?.message}
           />
+          <div className="grid grid-cols-2 gap-10">
+            <ControlledInput
+              control={control}
+              name="email"
+              type="email"
+              placeholder={data.fields.email.placeholder + " *"}
+              error={errors?.email?.message}
+            />
+            <ControlledTelInput
+              control={control}
+              error={errors?.phoneNumber?.message}
+              name="phoneNumber"
+              placeholder={data.fields.phone.placeholder + " *"}
+              type="phone"
+            />
+          </div>
           <ControlledInput
             placeholder={data.fields.company.placeholder}
             control={control}
@@ -161,23 +179,6 @@ export default function ConnectForm() {
             type="text"
             error={errors?.company?.message}
           />
-          <div className="grid grid-cols-2 gap-10">
-            <ControlledInput
-              control={control}
-              name="email"
-              type="email"
-              placeholder={data.fields.email.placeholder}
-              error={errors?.email?.message}
-            />
-
-            <ControlledTelInput
-              control={control}
-              error={errors?.phoneNumber?.message}
-              name="phoneNumber"
-              placeholder={data.fields.phone.placeholder}
-              type="phone"
-            />
-          </div>
           <div className="py-8 text-xl t-xs:text-[0.875rem]">
             <p>{data.contacts.label}</p>
             <div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
@@ -190,7 +191,7 @@ export default function ConnectForm() {
               ))}
             </div>
           </div>
-          <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
+          {/* <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
             <Controller
               control={control}
               name="projectDescription"
@@ -211,9 +212,9 @@ export default function ConnectForm() {
                 {errors.projectDescription.message}
               </span>
             )}
-          </label>
+          </label> */}
 
-          <label className="cursor-pointer flex items-center space-x-3 py-2">
+          {/* <label className="cursor-pointer flex items-center space-x-3 py-2">
             <div>
               <input
                 type="file"
@@ -231,16 +232,17 @@ export default function ConnectForm() {
             </div>
           </label>
 
-          {fileError && <div className="text-error">{data.attachment.errors.tooLarge}</div>}
+          {fileError && <div className="text-error">{data.attachment.errors.tooLarge}</div>} */}
 
           <button
             type="submit"
             className={clsx(
-              "!mt-16 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-150 transition-all t-xs:!mt-5 hover:bg-[#D65838]",
-              fileError && "opacity-50",
+              "!mt-10 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-150 transition-all t-xs:!mt-5 hover:bg-[#D65838]",
+              // fileError && "opacity-50",
               isLoading && "animate-pulse"
             )}
-            disabled={fileError || isLoading}
+            disabled={isLoading}
+            // disabled={fileError || isLoading}
           >
             {data.send}
           </button>
