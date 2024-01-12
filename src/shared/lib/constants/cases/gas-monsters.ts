@@ -135,7 +135,6 @@ export const GAS_MONSTERS: ICase = {
     TEAM.yanSofronov,
     TEAM.nikitaBobkov,
     TEAM.maksimKlimchenko,
-    TEAM.vechyaslavValdykin,
     TEAM.andreyBarabanov,
     TEAM.danilaSkablov,
   ],

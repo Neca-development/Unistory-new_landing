@@ -24,6 +24,29 @@ export const ServicesEn: Array<{
 }> = [
   {
     id: 1,
+    title: "Blockchain & AI",
+    icon: "bitcoin",
+    header: "",
+    description: `      
+    <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Blockchain integration</h4>
+      <ul>
+        <li>— Tokenomics development</li>
+        <li>— Smart-contracts development</li>
+        <li>— DeFi-integration for web and mobile applications</li>
+      </ul>
+      </div>
+      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
+      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Artificial Intelligence</h4>
+      <ul>
+        <li>— Research and processing data</li>
+        <li>— Machine learning</li>
+        <li>— Integration of ChatGPT / Azure OpenAI</li>
+      </ul>
+    </div>`,
+  },
+  {
+    id: 2,
     title: "Product design",
     icon: "grid",
     header: "",
@@ -47,7 +70,7 @@ export const ServicesEn: Array<{
     `,
   },
   {
-    id: 2,
+    id: 3,
     title: "Development",
     icon: "layout",
     header: "Web & Mobile development",
@@ -58,29 +81,6 @@ export const ServicesEn: Array<{
     <br />
     - backend: Node.js, C#
     <br />- mobile: React native, Kotlin, Swift`,
-  },
-  {
-    id: 3,
-    title: "Blockchain & AI",
-    icon: "bitcoin",
-    header: "",
-    description: `      
-    <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
-      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Blockchain integration</h4>
-      <ul>
-        <li>— Tokenomics development</li>
-        <li>— Smart-contracts development</li>
-        <li>— DeFi-integration for web and mobile applications</li>
-      </ul>
-      </div>
-      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
-      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Artificial Intelligence</h4>
-      <ul>
-        <li>— Research and processing data</li>
-        <li>— Machine learning</li>
-        <li>— Integration of ChatGPT / Azure OpenAI</li>
-      </ul>
-    </div>`,
   },
   {
     id: 4,
@@ -170,8 +170,8 @@ export const PrinciplesEn: {
 
 export const ReviewsEN = {
   title: {
-    beforeHighlight: "Fact: ",
-    highlight: "9 of 10 customers<br />recommend us",
-    afterHighlight: " and here's why",
+    // beforeHighlight: "Fact: ",
+    highlight: "Сlients entrust us <br/>",
+    afterHighlight: "with their digital products",
   },
 };

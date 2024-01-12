@@ -117,8 +117,6 @@ export const THE_HEIST: ICase = {
     TEAM.nikitaBobkov,
     TEAM.maksimKlimchenko,
     TEAM.danilSilverstov,
-    TEAM.andreyBarabanov,
     TEAM.alexanderYachevsky,
-    TEAM.vechyaslavValdykin,
   ],
 };

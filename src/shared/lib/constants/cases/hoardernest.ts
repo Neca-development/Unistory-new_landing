@@ -134,8 +134,6 @@ export const HOARDER_NEST: ICase = {
     TEAM.maksimKlimchenko,
     TEAM.alekseyChepurin,
     TEAM.andreyBarabanov,
-    TEAM.andreyPaskarenko,
-    TEAM.kirillElizarov,
     TEAM.danilaSkablov,
   ],
 };

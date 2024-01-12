@@ -157,9 +157,7 @@ export const PLAGTV: ICase = {
     TEAM.yanSofronov,
     TEAM.alekseyChepurin,
     TEAM.maksimKlimchenko,
-    TEAM.alekseyKlimenko,
     TEAM.markCherepivskiy,
-    TEAM.andreyBabenkov,
     TEAM.vladislavKiribyatev,
   ],
 };

@@ -73,7 +73,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
               ) : (
                 <a
                   rel="nofollow"
-                  href=""
+                  href="https://t.me/Antonunistory"
                   className="text-light-bg-accent opacity-50 hover:opacity-100"
                   target="_blank"
                 >
@@ -82,7 +82,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
               )}
               <a
                 rel="nofollow"
-                href="https://wa.me/79117417477"
+                href="https://wa.me/79874490825"
                 className="text-light-bg-accent"
                 target="_blank"
               >

@@ -28,22 +28,22 @@ export const FormEn = {
       error: "Incorrect email",
       requiredError: "Please fill your email address",
     },
-    describe: {
-      placeholder: "Describe your project",
-      requiredError: "Please fill description about your project",
-    },
+    // describe: {
+    //   placeholder: "Describe your project",
+    //   requiredError: "Please fill description about your project",
+    // },
   },
   contacts: {
     label: "Contact preference",
     phone: "Phone",
   },
-  attachment: {
-    label: "Attach a file",
-    sub: "Maximum file size 24 MB",
-    errors: {
-      tooLarge: "The file size can not be exceed 24 MB!",
-    },
-  },
+  // attachment: {
+  //   label: "Attach a file",
+  //   sub: "Maximum file size 24 MB",
+  //   errors: {
+  //     tooLarge: "The file size can not be exceed 24 MB!",
+  //   },
+  // },
   send: "Send",
   agreement:
     "By clicking the button, you consent to the processing of personal data and agree to the privacy policy.",
