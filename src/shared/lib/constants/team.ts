@@ -49,6 +49,16 @@ export const TEAM = {
       ru: "Frontend/Blockchain разработчик",
     },
   },
+  andreyBabenkovRN: {
+    name: {
+      en: "Andrey Babenkov",
+      ru: "Андрей Бабенков",
+    },
+    position: {
+      en: "Mobile developer",
+      ru: "Mobile разработчик",
+    },
+  },
   andreyBabenkov: {
     name: {
       en: "Andrey Babenkov",
@@ -251,8 +261,8 @@ export const TEAM = {
   },
   yanBortsov: {
     name: {
-      en: "Ян Борцов",
-      ru: "Юрий Умнов",
+      en: "Yan Bortsov",
+      ru: "Ян Борцов",
     },
     position: {
       en: "Backend developer",
