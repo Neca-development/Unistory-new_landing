@@ -26,6 +26,10 @@ import avitoIcon from "@public/assets/technologies/avito.png";
 import avitoDarkIcon from "@public/assets/technologies/avito-dark.png";
 import ukassaIcon from "@public/assets/technologies/ukassa.png";
 import ukassaDarkIcon from "@public/assets/technologies/ukassa-dark.png";
+import pythonIcon from "@public/assets/technologies/python.png";
+import csharpIcon from "@public/assets/technologies/c-sharp.png";
+import openaiIcon from "@public/assets/technologies/openai.png";
+import openaiDarkIcon from "@public/assets/technologies/openai-dark.png";
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
@@ -44,7 +48,10 @@ export type AvailableTechnologiesType =
   | "typescript"
   | "headhunter"
   | "avito"
-  | "ukassa";
+  | "ukassa"
+  | "python"
+  | "csharp"
+  | "openai";
 
 type TechnologyType = {
   [index in AvailableTechnologiesType]: {
@@ -164,6 +171,27 @@ export const TECHNOLOGIES: TechnologyType = {
     icon: {
       dark: ukassaDarkIcon.src,
       light: ukassaIcon.src,
+    },
+  },
+  python: {
+    name: "Python",
+    icon: {
+      dark: pythonIcon.src,
+      light: pythonIcon.src,
+    },
+  },
+  csharp: {
+    name: "C-Sharp",
+    icon: {
+      dark: csharpIcon.src,
+      light: csharpIcon.src,
+    },
+  },
+  openai: {
+    name: "OpenAI",
+    icon: {
+      dark: openaiDarkIcon.src,
+      light: openaiIcon.src,
     },
   },
 } as const;
