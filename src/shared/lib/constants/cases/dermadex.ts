@@ -3,12 +3,18 @@ import { TEAM } from "../team";
 import { TECHNOLOGIES } from "../technologies.constats";
 import dermadexBanner from "@public/assets/images/cases/dermadex/banner.jpg";
 import dermadexImage1EN from "@public/assets/images/cases/dermadex/killer-feature-en.jpg";
+import dermadexImage1RU from "@public/assets/images/cases/dermadex/killer-feature-ru.jpg";
 import dermadexImage2EN from "@public/assets/images/cases/dermadex/monetization-en.jpg";
-import dermadexImage3EN from "@public/assets/images/cases/dermadex/kickoff-en.jpg";
+import dermadexImage2RU from "@public/assets/images/cases/dermadex/monetization-ru.jpg";
+import dermadexImage3 from "@public/assets/images/cases/dermadex/kickoff-en.jpg";
 import dermadexImage4EN from "@public/assets/images/cases/dermadex/dataset-en.jpg";
+import dermadexImage4RU from "@public/assets/images/cases/dermadex/dataset-ru.jpg";
 import dermadexImage5EN from "@public/assets/images/cases/dermadex/diagnostic-en.jpg";
+import dermadexImage5RU from "@public/assets/images/cases/dermadex/diagnostic-ru.jpg";
 import dermadexImage6EN from "@public/assets/images/cases/dermadex/appointment-en.jpg";
+import dermadexImage6RU from "@public/assets/images/cases/dermadex/appointment-ru.jpg";
 import dermadexImage7EN from "@public/assets/images/cases/dermadex/hipaa-en.jpg";
+import dermadexImage7RU from "@public/assets/images/cases/dermadex/hipaa-ru.jpg";
 import dermadexThumb from "@public/assets/images/cases/dermadex/thumb.jpg";
 import dermadexThumbMob from "@public/assets/images/cases/dermadex/thumb_mob.jpg";
 
@@ -67,7 +73,10 @@ export const DERMADEX: ICase = {
           },
         },
       ],
-      banner: dermadexImage1EN.src,
+      banner: {
+        en: dermadexImage1EN.src,
+        ru: dermadexImage1RU.src,
+      },
     },
     {
       title: {
@@ -114,7 +123,10 @@ export const DERMADEX: ICase = {
           },
         },
       ],
-      banner: dermadexImage2EN.src,
+      banner: {
+        en: dermadexImage2EN.src,
+        ru: dermadexImage2RU.src,
+      },
     },
     {
       title: {
@@ -141,7 +153,7 @@ export const DERMADEX: ICase = {
           },
         },
       ],
-      banner: dermadexImage3EN.src,
+      banner: dermadexImage3.src,
     },
     {
       title: {
@@ -162,7 +174,7 @@ export const DERMADEX: ICase = {
           },
         },
       ],
-      banner: dermadexImage4EN.src,
+      banner: { en: dermadexImage4EN.src, ru: dermadexImage4RU.src },
     },
     {
       title: {
@@ -203,7 +215,7 @@ export const DERMADEX: ICase = {
           },
         },
       ],
-      banner: dermadexImage5EN.src,
+      banner: { en: dermadexImage5EN.src, ru: dermadexImage5RU.src },
     },
     {
       title: {
@@ -238,7 +250,7 @@ export const DERMADEX: ICase = {
           },
         },
       ],
-      banner: dermadexImage6EN.src,
+      banner: { en: dermadexImage6EN.src, ru: dermadexImage6RU.src },
     },
     {
       title: {
@@ -273,7 +285,7 @@ export const DERMADEX: ICase = {
           },
         },
       ],
-      banner: dermadexImage7EN.src,
+      banner: { en: dermadexImage7EN.src, ru: dermadexImage7RU.src },
     },
   ],
   review: {
