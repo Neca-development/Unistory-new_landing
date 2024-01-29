@@ -9,9 +9,11 @@ import { THE_HEIST } from "./cases/the-heist";
 import { CHARITY_PLATFORM } from "./cases/charity-platform";
 import { SIPSIGNAL } from "./cases/sipsignal";
 import { PERSONAL } from "./cases/personal";
+import { DERMADEX } from "./cases/dermadex";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
+  DERMADEX,
   FLATSPACE,
   PLAGTV,
   ADVANCED_RD,
