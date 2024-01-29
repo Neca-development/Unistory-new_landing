@@ -222,7 +222,7 @@ export const DERMADEX: ICase = {
     {
       title: {
         en: "Data Volume",
-        ru: "Результат разработки",
+        ru: "Объем данных",
       },
       text: [
         {
@@ -290,8 +290,8 @@ export const DERMADEX: ICase = {
       photo: "",
     },
     text: {
-      en: "«I posted the task on Upwork, and one of the responses came from the Unistory team. The company's cases impressed me: the attention to detail, technologies, and experience in the medical field. I immediately decided that these guys are a great fit for us, and I wasn't wrong: everything has been fantastic since then and continues to be.»",
-      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: детали, технологии, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе.»",
+      en: "«I posted the task on Upwork, and one of the responses came from the Unistory team. The company's cases impressed me: the attention to detail, technologies, and experience in the medical field. I immediately decided that these guys are a great fit for us, and I wasn't wrong: everything has been fantastic since then and continues to be».",
+      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: детали, технологии, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе».",
     },
   },
   team: [
@@ -299,7 +299,7 @@ export const DERMADEX: ICase = {
     TEAM.ilyaSmirnov,
     TEAM.alekseyChepurin,
     TEAM.yuriUmnov,
-    TEAM.andreyBabenkov,
+    TEAM.andreyBabenkovRN,
     TEAM.yanBortsov,
   ],
 };
