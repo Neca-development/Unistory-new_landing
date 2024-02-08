@@ -10,9 +10,11 @@ import { CHARITY_PLATFORM } from "./cases/charity-platform";
 import { SIPSIGNAL } from "./cases/sipsignal";
 import { PERSONAL } from "./cases/personal";
 import { DERMADEX } from "./cases/dermadex";
+import { UNIVERSITY_CHATBOT } from "./cases/university-chatbot";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
+  UNIVERSITY_CHATBOT,
   DERMADEX,
   FLATSPACE,
   PLAGTV,

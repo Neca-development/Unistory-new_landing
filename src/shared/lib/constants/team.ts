@@ -259,6 +259,16 @@ export const TEAM = {
       ru: "R&D инженер",
     },
   },
+  daniilBoiko: {
+    name: {
+      en: "Daniil Boiko",
+      ru: "Даниил Бойко",
+    },
+    position: {
+      en: "Frontend developer",
+      ru: "Frontend разработчик",
+    },
+  },
   yanBortsov: {
     name: {
       en: "Yan Bortsov",
