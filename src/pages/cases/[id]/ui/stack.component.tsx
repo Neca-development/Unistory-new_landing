@@ -1,43 +1,43 @@
-import { SingleCaseEn, SingleCaseRu } from '@shared/i18n/cases'
-import type { TechnologiesValues } from '@shared/lib/constants/technologies.constats'
-import { useDetectDeviceType } from '@shared/lib/hooks/useDetectDeviceType.hook'
-import { useMounted } from '@shared/lib/hooks/useMounted'
-import clsx from 'clsx'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { useTheme } from 'next-themes'
-import { useMemo } from 'react'
+import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
+import type { TechnologiesValues } from "@shared/lib/constants/technologies.constats";
+import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
+import { useMounted } from "@shared/lib/hooks/useMounted";
+import clsx from "clsx";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
+import { useMemo } from "react";
 
 interface IStackProperties {
-  data?: TechnologiesValues[]
+  data: TechnologiesValues[];
 }
 
 export function Stack({ data }: IStackProperties) {
-  const { locale } = useRouter()
-  const { theme, systemTheme } = useTheme()
-  const mounted = useMounted()
+  const { locale } = useRouter();
+  const { theme, systemTheme } = useTheme();
+  const mounted = useMounted();
 
   const _theme = useMemo(() => {
-    const returnTheme = theme === 'system' ? systemTheme : theme
+    const returnTheme = theme === "system" ? systemTheme : theme;
 
-    return returnTheme ?? 'dark'
-  }, [theme, systemTheme])
+    return returnTheme ?? "dark";
+  }, [theme, systemTheme]);
 
-  const isMobile = useDetectDeviceType()
+  const isMobile = useDetectDeviceType();
 
   const langData = useMemo(() => {
-    return locale === 'ru' ? SingleCaseRu : SingleCaseEn
-  }, [locale])
+    return locale === "ru" ? SingleCaseRu : SingleCaseEn;
+  }, [locale]);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   return (
     <div
       className={clsx(
-        'mt-20 flex bg-light-bg-accent pt-20 dark:bg-dark-bg-accent t-xs:mt-2 t-xs:pt-10',
-        data?.length === 0 && 'hidden'
+        "mt-20 flex bg-light-bg-accent pt-20 dark:bg-dark-bg-accent t-xs:mt-2 t-xs:pt-10",
+        data?.length === 0 && "hidden"
       )}
     >
       <div className="container">
@@ -47,7 +47,7 @@ export function Stack({ data }: IStackProperties) {
             <div
               key={index}
               className={clsx(
-                'flex w-[47%] flex-col items-center bg-light-bg p-6 dark:bg-dark-bg md:w-[30.8%] lg:w-[22.3%]'
+                "flex w-[47%] flex-col items-center bg-light-bg p-6 dark:bg-dark-bg md:w-[30.8%] lg:w-[22.3%]"
                 // idx === data?.length - 1 && idx % 2 === 0 && 'col-span-2'
               )}
             >
@@ -70,5 +70,5 @@ export function Stack({ data }: IStackProperties) {
         </div>
       </div>
     </div>
-  )
+  );
 }

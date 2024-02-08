@@ -52,15 +52,15 @@ export interface ICase {
   additionalClassnames?: string;
   textColor: "white" | "black";
   company?: string;
-  heroBanner: IDevices<string>;
-  description: ILang<string>;
+  heroBanner: IDevices<string> | IDevices<ILang<string>>;
+  description?: ILang<string>;
   goalPoints?: IGoalPoints[];
-  params: {
+  params?: {
     budget: ILang<number>;
     period: number;
     year: number | string;
   };
-  technologies: TechnologiesValues[];
+  technologies?: TechnologiesValues[];
   main: {
     title: ILang<string>;
     text: IDescriptionItem[];
@@ -79,7 +79,8 @@ export interface ICase {
     };
     text: ILang<string>;
   };
-  team: TeamValues[];
+  team?: TeamValues[];
+  disableOtherProjects?: boolean;
 }
 
 export interface IThemed<T> {

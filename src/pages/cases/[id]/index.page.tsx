@@ -41,11 +41,13 @@ export function Case(props: { caseData: ICase; otherCases: ICase[] }) {
       <Layout.Header />
       <Layout.Main>
         {renderHero()}
-        <Stack data={caseData?.technologies} />
+        {caseData.technologies && <Stack data={caseData.technologies} />}
         <CaseMainInfo data={caseData?.main} />
-        {caseData?.review && <CaseReview data={caseData} />}
-        <Team title={langData.members} data={caseData?.team} />
-        <OtherCases title={langData.other} otherCases={otherCases} />
+        {caseData.review && <CaseReview data={caseData} />}
+        {caseData.team && <Team title={langData.members} data={caseData.team} />}
+        {!caseData.disableOtherProjects && (
+          <OtherCases title={langData.other} otherCases={otherCases} />
+        )}
         <Connect />
       </Layout.Main>
       <Layout.Footer showAddress />
