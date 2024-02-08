@@ -148,7 +148,7 @@ export function Reviews() {
                 activeReviewIndex === idx && "opacity-100 font-bold"
               )}
             >
-              {r?.title}
+              {typeof r?.title === "object" ? r.title[locale || "ru"] : r.title}
             </span>
           </button>
         ))}

@@ -30,6 +30,7 @@ import pythonIcon from "@public/assets/technologies/python.png";
 import csharpIcon from "@public/assets/technologies/c-sharp.png";
 import openaiIcon from "@public/assets/technologies/openai.png";
 import openaiDarkIcon from "@public/assets/technologies/openai-dark.png";
+import azureIcon from "@public/assets/technologies/azure.png";
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
@@ -51,7 +52,8 @@ export type AvailableTechnologiesType =
   | "ukassa"
   | "python"
   | "csharp"
-  | "openai";
+  | "openai"
+  | "azure";
 
 type TechnologyType = {
   [index in AvailableTechnologiesType]: {
@@ -192,6 +194,13 @@ export const TECHNOLOGIES: TechnologyType = {
     icon: {
       dark: openaiDarkIcon.src,
       light: openaiIcon.src,
+    },
+  },
+  azure: {
+    name: "Azure",
+    icon: {
+      dark: azureIcon.src,
+      light: azureIcon.src,
     },
   },
 } as const;
