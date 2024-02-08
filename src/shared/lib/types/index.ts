@@ -38,7 +38,7 @@ export enum CustomMainBanner {
 }
 
 export interface ICase {
-  title: ILang<string[]> | string;
+  title: string | ILang<string>;
   id: string;
   projectUrl?: string;
   projectUrlTitle?: string;

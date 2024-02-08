@@ -16,7 +16,8 @@ export function WorksCard(props: IWorksCardInterface) {
   const { work, additionalClassnames, isLargeImage } = props;
   const { locale } = useRouter();
 
-  const cardTitle = typeof work?.title === "object" ? work.title[locale || "ru"] : work.title;
+  const cardTitle =
+    typeof work?.title === "object" ? (work.title[locale || "ru"] as string) : work.title;
   const categories = work?.categories[locale || "ru"]?.join(", ");
 
   const [width, setWidth] = useState<number>(0);
@@ -39,7 +40,7 @@ export function WorksCard(props: IWorksCardInterface) {
         width={2880}
         height={1060}
         className="absolute top-0 left-0 -z-50 h-full w-full object-cover transition-all group-hover:scale-105"
-        alt=""
+        alt={cardTitle}
         quality={width <= 640 ? 100 : 75}
       />
       {/* <div className="flex items-center space-x-2">

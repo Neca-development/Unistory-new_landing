@@ -14,8 +14,8 @@ import csusmThumbMob from "@public/assets/images/cases/university-chatbot/thumb_
 
 export const UNIVERSITY_CHATBOT: ICase = {
   title: {
-    en: ["University Chatbot"],
-    ru: ["Чат-бот для университета"],
+    en: "University Chatbot",
+    ru: "Чат-бот для университета",
   },
   id: "university-chatbot",
   heroTitle: {

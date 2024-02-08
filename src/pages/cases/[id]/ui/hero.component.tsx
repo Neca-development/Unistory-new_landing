@@ -1,34 +1,37 @@
-import { SingleCaseEn, SingleCaseRu } from '@shared/i18n/cases'
-import Fancybox from '@shared/lib/hocs/fancybox'
-import type { ICase } from '@shared/lib/types'
-import { IconComponent } from '@shared/ui'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { useEffect, useMemo, useState } from 'react'
+import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
+import Fancybox from "@shared/lib/hocs/fancybox";
+import type { ICase } from "@shared/lib/types";
+import { IconComponent } from "@shared/ui";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect, useMemo, useState } from "react";
 
-import { CaseGoal } from './case-goal.component'
+import { CaseGoal } from "./case-goal.component";
 
 export function CaseHero({ data }: { data: ICase | undefined }) {
-  const { locale } = useRouter()
-  const [width, setWidth] = useState<number>(0)
+  const { locale } = useRouter();
+  const [width, setWidth] = useState<number>(0);
 
   const langData = useMemo(() => {
-    return locale === 'ru' ? SingleCaseRu : SingleCaseEn
-  }, [locale])
+    return locale === "ru" ? SingleCaseRu : SingleCaseEn;
+  }, [locale]);
 
   useEffect(() => {
-    setWidth(window.innerWidth)
-  }, [])
+    setWidth(window.innerWidth);
+  }, []);
 
   if (!data) {
-    return <></>
+    return <></>;
   }
+
+  const altText =
+    typeof data.title === "object" ? (data.title[locale || "ru"] as string) : data.title;
 
   return (
     <>
       <div className="container mt-16 md:flex md:justify-between	 t-xs:mt-10">
         <h1 className="whitespace-pre-line text-[4rem] font-bold leading-[4.875rem] t-xs:text-[1.75rem] t-xs:leading-[2rem]">
-          {data.heroTitle[locale || 'ru']}
+          {data.heroTitle[locale || "ru"]}
         </h1>
         {data.projectUrl && (
           <a
@@ -54,7 +57,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
           width={2880}
           height={1060}
           className="mt-[4rem] w-full object-cover t-xs:mt-10"
-          alt={data.title}
+          alt={altText}
           priority
         />
       ) : (
@@ -65,7 +68,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
               width={2880}
               height={1060}
               className="mt-[4rem] w-full object-cover t-xs:mt-10"
-              alt={data.title}
+              alt={altText}
               priority
             />
           </a>
@@ -74,7 +77,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
       {data.showCategoriesOnPage && (
         <div className="container mt-10 flex flex-wrap items-center gap-x-4 gap-y-6 t-xs:mt-5 t-xs:gap-y-2">
-          {data.categories[locale || 'ru']?.map((tag, index) => (
+          {data.categories[locale || "ru"]?.map((tag, index) => (
             <p
               key={index}
               className="bg-light-bg-accent px-4 py-2 text-2xl dark:bg-dark-surface t-xs:px-2 t-xs:py-1 t-xs:text-base"
@@ -87,5 +90,5 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
       <CaseGoal data={data} langData={langData} locale={locale} />
     </>
-  )
+  );
 }

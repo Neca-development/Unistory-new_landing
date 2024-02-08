@@ -11,6 +11,7 @@ export function CaseReview({ data }: ICaseReviewProperties) {
   const { locale } = useRouter();
 
   const { review, logo, title } = data;
+  const altText = typeof title === "object" ? (title[locale || "ru"] as string) : title;
 
   return (
     <section className="container relative mt-20 pb-[7.5rem] t-xs:mt-16 t-xs:pb-16">
@@ -40,7 +41,7 @@ export function CaseReview({ data }: ICaseReviewProperties) {
           width={400}
           height={240}
           src={logo}
-          alt={title}
+          alt={altText}
         />
       )}
     </section>
