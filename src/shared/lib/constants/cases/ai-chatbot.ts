@@ -17,7 +17,7 @@ export const AI_CHATBOT: ICase = {
   },
   id: "ai-chatbot",
   heroTitle: {
-    en: "Services: Development of a clever LLM-based chatbot",
+    en: "Product: LLM chatbot",
     ru: "Услуга: разработка умного чат-бота на основе LLM",
   },
   categories: {
