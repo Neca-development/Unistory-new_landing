@@ -27,6 +27,16 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
   const altText =
     typeof data.title === "object" ? (data.title[locale || "ru"] as string) : data.title;
 
+  const heroDesktopBanner =
+    typeof data.heroBanner.desktop === "object"
+      ? (data.heroBanner.desktop[locale || "ru"] as string)
+      : data.heroBanner.desktop;
+
+  const heroMobileBanner =
+    typeof data.heroBanner.mob === "object"
+      ? (data.heroBanner.mob[locale || "ru"] as string)
+      : data.heroBanner.mob;
+
   return (
     <>
       <div className="container mt-16 md:flex md:justify-between	 t-xs:mt-10">
@@ -53,7 +63,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
 
       {width >= 992 ? (
         <Image
-          src={data.heroBanner.desktop}
+          src={heroDesktopBanner}
           width={2880}
           height={1060}
           className="mt-[4rem] w-full object-cover t-xs:mt-10"
@@ -62,9 +72,9 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         />
       ) : (
         <Fancybox>
-          <a href={data.heroBanner.mob} data-fancybox>
+          <a href={heroMobileBanner} data-fancybox>
             <Image
-              src={data.heroBanner.mob}
+              src={heroMobileBanner}
               width={2880}
               height={1060}
               className="mt-[4rem] w-full object-cover t-xs:mt-10"
@@ -88,7 +98,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         </div>
       )}
 
-      <CaseGoal data={data} langData={langData} locale={locale} />
+      {data.params && <CaseGoal data={data} langData={langData} locale={locale} />}
     </>
   );
 }

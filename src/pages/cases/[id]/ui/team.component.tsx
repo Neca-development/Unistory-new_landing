@@ -2,7 +2,7 @@ import { ICase } from "@shared/lib/types";
 import { useRouter } from "next/router";
 
 interface ITeamProps {
-  data?: ICase["team"];
+  data: ICase["team"];
   title: string;
 }
 
