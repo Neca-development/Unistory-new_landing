@@ -1,18 +1,12 @@
 import { IMessage, IconsTypes } from "@shared/ui";
 
 export const HeroRu = {
-  description: {
-    first: "Разрабатываем ",
-    second: "цифровые",
-    third: " продукты",
-    fourth: "",
-    fifth: "для бизнеса",
+  title: {
+    first: "Интегрируем будущее",
+    second: "Веб-сервисы и приложения",
+    third: "на базе AI & блокчейн",
   },
-  params: {
-    teamSize: "сотрудников <br/>в штате",
-    projects: "успешных <br/>проектов",
-    rating: "оценка <br/>на Clutch",
-  },
+  subtitle: "анализируем / дизайним / разрабатываем",
 };
 
 export const ServicesRu: Array<{

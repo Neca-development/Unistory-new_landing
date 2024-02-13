@@ -21,8 +21,8 @@ module.exports = {
       "light-text-primary": "#0F1A20",
       "dark-text-primary": "#FFFFFF",
 
-      "light-text-secondary": "#0F1A2080",
-      "dark-text-secondary": "#FFFFFF80",
+      "light-text-secondary": "#6F7483",
+      "dark-text-secondary": "#C3C3C3",
 
       "icon-accent": "#0F1A20",
       "icon-on-primary": "#FFFFFFE5",
@@ -68,28 +68,6 @@ module.exports = {
         "m-xs": { max: "260px" },
       },
       fontSize: {
-        h1: [
-          "6.0rem",
-          {
-            lineHeight: "6.575rem",
-            letterSpacing: "0.02em",
-            fontWeight: "800",
-          },
-        ],
-        "large-h1": [
-          "5.75rem",
-          {
-            lineHeight: "6.5rem",
-          },
-        ],
-        "mob-h1": [
-          "2rem",
-          {
-            lineHeight: "2.55rem",
-            letterSpacing: "0.02em",
-            fontWeight: "700",
-          },
-        ],
         h2: [
           "2.875rem",
           {

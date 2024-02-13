@@ -24,7 +24,7 @@
       font-size: 1.111vw;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 767px) {
       font-size: 16px;
     }
   }
@@ -35,6 +35,8 @@
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    --color-text: #ec5f3b;
+    --color-bg: rgba(236, 95, 59, 0.1);
   }
 
   code {
@@ -57,16 +59,6 @@ input:not([name="name"])::-webkit-contacts-auto-fill-button {
 
 .container {
   @apply w-full px-[1rem] md:max-w-[790px] lg:max-w-[80rem] lg:px-[5rem] 2xl:max-w-[90rem] mx-auto m-l:max-w-full;
-}
-
-.winter {
-  --color-text: #4fccd5;
-  --color-bg: rgba(79, 204, 213, 0.1);
-}
-
-.summer {
-  --color-text: #ec5f3b;
-  --color-bg: rgba(236, 95, 59, 0.1);
 }
 
 .noise {

@@ -1,29 +1,29 @@
-import { LOGO_ENTER_ANIMATION_DURATION } from '@shared/lib/constants/animation.constants'
-import { useAnimationStore } from '@shared/lib/store'
-import { Meta } from '@shared/meta'
-import { Connect } from '@widgets/connect'
-import { Hero, Principles, Reviews, Services, Works } from '@widgets/landing'
-import { Layout } from '@widgets/layout'
-import clsx from 'clsx'
-import { useEffect } from 'react'
+import { LOGO_ENTER_ANIMATION_DURATION } from "@shared/lib/constants/animation.constants";
+import { useAnimationStore } from "@shared/lib/store";
+import { Meta } from "@shared/meta";
+import { Connect } from "@widgets/connect";
+import { Hero, Principles, Reviews, Services, Works } from "@widgets/landing";
+import { Layout } from "@widgets/layout";
+import clsx from "clsx";
+import { useEffect } from "react";
 
 export function Home() {
-  const { setShouldAnimate, shouldAnimate } = useAnimationStore()
+  const { setShouldAnimate, shouldAnimate } = useAnimationStore();
 
   useEffect(() => {
-    if (!shouldAnimate) return
-    document.body.style.overflow = 'hidden'
-    window.scrollTo(0, -400)
+    if (!shouldAnimate) return;
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, -400);
 
     const timeout = setTimeout(() => {
-      document.body.style.overflow = ''
-      setShouldAnimate()
-    }, LOGO_ENTER_ANIMATION_DURATION + 1)
+      document.body.style.overflow = "";
+      setShouldAnimate();
+    }, LOGO_ENTER_ANIMATION_DURATION + 1);
 
     return () => {
-      clearTimeout(timeout)
-    }
-  }, [])
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
     <Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
@@ -32,11 +32,11 @@ export function Home() {
         <div
           className={clsx(
             shouldAnimate &&
-              'fixed top-0 left-0 z-[1] h-full w-full animate-header-height bg-light-bg will-change-[height] dark:bg-dark-bg'
+              "fixed top-0 left-0 z-[1] h-full w-full animate-header-height bg-light-bg will-change-[height] dark:bg-dark-bg"
           )}
         />
         <Hero />
-        <Services />
+        {/* <Services /> */}
         <Works />
         <Principles />
         <Reviews />
@@ -44,7 +44,7 @@ export function Home() {
       </Layout.Main>
       <Layout.Footer showAddress />
     </Layout>
-  )
+  );
 }
 
-export default Home
+export default Home;
