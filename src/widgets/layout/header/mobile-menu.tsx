@@ -4,12 +4,10 @@ import Link from "next/link";
 
 import { CloseBtn } from "./close-btn.component";
 import { Logo } from "./logo.component";
+import { IRoutes } from "@shared/i18n";
 
 interface IMobileMenuProps {
-  routes: {
-    label: string;
-    route: string;
-  }[];
+  routes: IRoutes;
   active: boolean;
   onClose: () => void;
 }
@@ -35,7 +33,20 @@ export function MobileMenu(props: IMobileMenuProps) {
             </button>
           </div>
           <nav className="mt-[65px] flex-1">
-            {routes.map(({ label, route }, index) => {
+            {Object.keys(routes).map((key) => {
+              const page = routes[key as keyof typeof routes];
+              return (
+                <Link
+                  className="mb-[2rem] block text-[1.5rem] font-medium leading-none text-dark-surface dark:text-light-surface"
+                  key={key}
+                  onClick={onClose}
+                  href={page.route}
+                >
+                  {page.label}
+                </Link>
+              );
+            })}
+            {/* {routes.map(({ label, route }, index) => {
               return (
                 <Link
                   key={index}
@@ -49,7 +60,7 @@ export function MobileMenu(props: IMobileMenuProps) {
                   {label}
                 </Link>
               );
-            })}
+            })} */}
           </nav>
           <a
             href="mailto:contact@unistory.app"

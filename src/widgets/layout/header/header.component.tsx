@@ -116,32 +116,19 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
           <div
             className={clsx(
-              "hidden items-center space-x-10 lg:flex",
+              "hidden items-center space-x-4 lg:flex",
               currentPage === "/" && shouldAnimate && "animate-header-links-opacity"
             )}
             style={{
               marginRight: shouldAnimate ? width : 0,
             }}
           >
-            {ROUTES.map(({ label, route }, index) => {
-              return (
-                <Link
-                  key={index}
-                  className={clsx(
-                    "relative transition duration-300 dark:text-light-bg-accent/[.5] lg:text-lg 2xl:text-xl",
-                    !isLoad && "after:opacity-0",
-                    _theme === "light" ? "after:bg-dark-bg" : "after:bg-light-bg",
-                    route === "#become-customer"
-                      ? "font-bold text-light-text-primary hover:!text-[#ec5f3b]	dark:text-light-bg-accent"
-                      : "text-light-text-primary/[.5] after:absolute after:-bottom-1 after:h-0.5 after:animate-link-hover-off after:content-[''] hover:after:animate-link-hover-on dark:text-light-bg-accent/[.5]",
-                    currentPage.replace(/\/+$/, "") == route && "after:animate-link-hover-on"
-                  )}
-                  href={route}
-                >
-                  {label}
-                </Link>
-              );
-            })}
+            <Link className="btn-secondary px-4 py-2" href={ROUTES.CASES.route}>
+              {ROUTES.CASES.label}
+            </Link>
+            <Link className="btn-primary px-4 py-2" href={ROUTES.CTA.route}>
+              {ROUTES.CTA.label}
+            </Link>
           </div>
 
           <MobileMenu active={isMenuOpen} routes={ROUTES} onClose={closeMenu} />
