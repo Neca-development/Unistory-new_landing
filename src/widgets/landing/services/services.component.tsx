@@ -10,7 +10,7 @@ import Web3 from "@public/assets/images/homepage/services-web3.png";
 import Web3Dark from "@public/assets/images/homepage/services-web3_dark.png";
 import Decentralized from "@public/assets/images/homepage/service-decentralized.png";
 import DecentralizedDark from "@public/assets/images/homepage/service-decentralized_dark.png";
-import Blur from "@public/assets/images/homepage/test.png";
+import LLMChatBotBlur from "@public/assets/images/homepage/llm-chatbot-blur.png";
 
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -32,13 +32,18 @@ export function Services() {
 
   return (
     <section className="relative container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
-      <div className="grid gap-3 relative z-[1] md:grid-cols-12 xl:grid-cols-services">
+      <div className="absolute z-[0] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-bg-accent/[0.5] pointer-events-none blur-3xl md:w-2/5 md:h-96 xl:top-[60%]"></div>
+      <div className="relative grid gap-3 md:grid-cols-12 xl:grid-cols-services">
         <ServiceCard
           title={services.LLM.title}
           subtitle={services.LLM.subtitle}
           className="relative md:col-span-6 xl:col-span-5"
         >
-          <Image src={Blur} alt="" className="absolute left-0 bottom-0 w-2/3 opacity-50" />
+          <Image
+            src={LLMChatBotBlur}
+            alt=""
+            className="absolute left-0 bottom-0 w-2/3 opacity-50"
+          />
           {/* <div className="absolute z-[0] bottom-0 left-0 -translate-x-1/2 translate-y-[60%] w-[200px] h-[300px] rounded-l bg-bg-accent/[0.5] pointer-events-none blur-[104px]"></div> */}
           <Link
             className="btn-primary ml-4 mb-7 block w-fit px-4 py-2 relative z-[1]"
@@ -108,7 +113,6 @@ export function Services() {
           </Link>
         </ServiceCard>
       </div>
-      <div className="absolute z-[0] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-bg-accent/[0.5] pointer-events-none blur-3xl md:w-2/5 md:h-96 xl:top-[60%]"></div>
     </section>
   );
 }

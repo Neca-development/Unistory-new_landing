@@ -32,7 +32,7 @@ export function Home() {
         <div
           className={clsx(
             shouldAnimate &&
-              "fixed top-0 left-0 z-[1] h-full w-full animate-header-height bg-light-bg will-change-[height] dark:bg-dark-bg"
+              "fixed top-0 left-0 z-10 h-full w-full animate-header-height bg-light-bg will-change-[height] dark:bg-dark-bg"
           )}
         />
         <Hero />
