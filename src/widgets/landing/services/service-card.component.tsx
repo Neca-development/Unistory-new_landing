@@ -13,11 +13,11 @@ export const ServiceCard = (props: IServiceCard) => {
   return (
     <div
       className={clsx(
-        "flex flex-col bg-light-bg-accent dark:bg-dark-bg-secondary rounded-2xl border border-[#EDEAE8] dark:border-[#353535] overflow-hidden",
+        "flex flex-col bg-light-bg-accent dark:bg-dark-bg-secondary rounded-2xl border border-[#EDEAE8] dark:border-[#353535] overflow-hidden min-h-[20rem]",
         className
       )}
     >
-      <div className="px-4 pt-7">
+      <div className="px-4 pt-7 pb-4">
         <h2 className="text-lg font-semibold mb-2 leading-tight md:text-[2.125rem] lg:text-2xl xl:text-xl">
           {title}
         </h2>

@@ -48,7 +48,7 @@ export function Services() {
         <ServiceCard
           title={services.COMPUTER_VISION.title}
           subtitle={services.COMPUTER_VISION.subtitle}
-          className="md:col-span-9 xl:col-span-5"
+          className="md:col-span-6 xl:col-span-5"
         >
           {isMounted && (
             <Image
@@ -61,7 +61,7 @@ export function Services() {
         <ServiceCard
           title={services.AI.title}
           subtitle={services.AI.subtitle}
-          className="md:col-span-3 xl:col-span-3"
+          className="md:col-span-4 xl:col-span-3"
         >
           {isMounted && (
             <Image
@@ -72,18 +72,9 @@ export function Services() {
           )}
         </ServiceCard>
         <ServiceCard
-          title={services.WEB3.title}
-          subtitle={services.WEB3.subtitle}
-          className="md:col-span-6 xl:col-span-3"
-        >
-          {isMounted && (
-            <Image src={theme === "dark" ? Web3Dark : Web3} className="object-contain" alt="Web3" />
-          )}
-        </ServiceCard>
-        <ServiceCard
           title={services.DECENTRALIZED.title}
           subtitle={services.DECENTRALIZED.subtitle}
-          className="md:col-span-6 xl:col-span-7"
+          className="md:col-span-8 xl:col-span-7 xl:order-5"
         >
           {isMounted && (
             <Image
@@ -94,9 +85,18 @@ export function Services() {
           )}
         </ServiceCard>
         <ServiceCard
+          title={services.WEB3.title}
+          subtitle={services.WEB3.subtitle}
+          className="md:col-span-6 xl:col-span-3 xl:order-4"
+        >
+          {isMounted && (
+            <Image src={theme === "dark" ? Web3Dark : Web3} className="object-contain" alt="Web3" />
+          )}
+        </ServiceCard>
+        <ServiceCard
           title={services.INDIVIDUAL.title}
           subtitle={services.INDIVIDUAL.subtitle}
-          className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3"
+          className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
         >
           <Link
             className="btn-primary ml-4 mb-7 block w-fit px-4 py-2"
