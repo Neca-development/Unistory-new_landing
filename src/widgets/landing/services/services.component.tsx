@@ -10,11 +10,11 @@ import Web3 from "@public/assets/images/homepage/services-web3.png";
 import Web3Dark from "@public/assets/images/homepage/services-web3_dark.png";
 import Decentralized from "@public/assets/images/homepage/service-decentralized.png";
 import DecentralizedDark from "@public/assets/images/homepage/service-decentralized_dark.png";
+import Blur from "@public/assets/images/homepage/test.png";
 
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import clsx from "clsx";
 import { useMounted } from "@shared/lib/hooks/useMounted";
 
 export function Services() {
@@ -38,7 +38,8 @@ export function Services() {
           subtitle={services.LLM.subtitle}
           className="relative md:col-span-6 xl:col-span-5"
         >
-          <div className="absolute z-[0] bottom-0 left-0 -translate-x-1/2 translate-y-[60%] w-96 h-96 rounded-full bg-bg-accent/[0.5] pointer-events-none blur-[104px]"></div>
+          <Image src={Blur} alt="" className="absolute left-0 bottom-0 w-2/3 opacity-50" />
+          {/* <div className="absolute z-[0] bottom-0 left-0 -translate-x-1/2 translate-y-[60%] w-[200px] h-[300px] rounded-l bg-bg-accent/[0.5] pointer-events-none blur-[104px]"></div> */}
           <Link
             className="btn-primary ml-4 mb-7 block w-fit px-4 py-2 relative z-[1]"
             href={services.LLM.button.url}
@@ -107,7 +108,7 @@ export function Services() {
           </Link>
         </ServiceCard>
       </div>
-      <div className="absolute z-[0] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-bg-accent/[0.5] pointer-events-none blur-3xl md:w-96 md:h-96 xl:left-[40%] xl:top-[60%]"></div>
+      <div className="absolute z-[0] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-bg-accent/[0.5] pointer-events-none blur-3xl md:w-2/5 md:h-96 xl:top-[60%]"></div>
     </section>
   );
 }
