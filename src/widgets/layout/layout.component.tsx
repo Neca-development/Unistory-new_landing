@@ -24,7 +24,7 @@ export const Layout = (props: ILayoutProperties) => {
   return (
     <div>
       <div
-        className="h-full bg-light-bg bg-[url('/assets/images/Pattern.png')] transition duration-300 dark:bg-dark-bg"
+        className="h-full bg-light-bg transition duration-300 dark:bg-dark-bg"
         style={{ paddingRight: shouldAnimate && isHome ? width : 0 }}
       >
         {Meta}

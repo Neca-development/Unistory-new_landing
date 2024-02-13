@@ -1,21 +1,28 @@
 import { ServicesEn, ServicesRu } from "@shared/i18n";
-import { IconComponent } from "@shared/ui";
-import clsx from "clsx";
-// import { useInterval } from "@shared/lib/hooks/useInterval.hook";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React from "react";
+import { ServiceCard } from "./service-card.component";
+import ComputerVisionImage from "@public/assets/images/homepage/services-computer-vision.png";
+import ComputerVisionImageDark from "@public/assets/images/homepage/services-computer-vision_dark.png";
+import AIImage from "@public/assets/images/homepage/services-ai.png";
+import AIImageDark from "@public/assets/images/homepage/services-ai_dark.png";
+import Web3 from "@public/assets/images/homepage/services-web3.png";
+import Web3Dark from "@public/assets/images/homepage/services-web3_dark.png";
+import Decentralized from "@public/assets/images/homepage/service-decentralized.png";
+import DecentralizedDark from "@public/assets/images/homepage/service-decentralized_dark.png";
 
-const iconClassnameByTheme =
-  "first:dark:[&>*]:stroke-icon-on-primary first:[&>path]:stroke-icon-accent duration-300";
-
-//const timerDuration = 20000;
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import clsx from "clsx";
+import { useMounted } from "@shared/lib/hooks/useMounted";
 
 export function Services() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   const { locale } = useRouter();
+  const { theme } = useTheme();
+  const isMounted = useMounted();
 
-  const data = React.useMemo(() => {
+  const services = React.useMemo(() => {
     if (locale === "ru") {
       return ServicesRu;
     }
@@ -23,62 +30,75 @@ export function Services() {
     return ServicesEn;
   }, [locale]);
 
-  /*
-  const nextSlide = useCallback(() => {
-    setActiveIndex((activeIndex) => {
-      if (activeIndex === data.length - 1) {
-        return 0;
-      }
-
-      return activeIndex + 1;
-    });
-  }, [activeIndex]); 
-  */
-
-  //useInterval(nextSlide, timerDuration, [activeIndex]);
-
   return (
     <section className="container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
-      <div className="grid grid-cols-[27.5rem_1fr] min-h-[31rem] lg:min-h-[32.5rem] t-xs:block rounded-sm bg-light-surface dark:bg-dark-surface duration-300">
-        <div className="flex flex-col justify-center content-start border-r-2 border-light-bg p-4 lg:py-10 dark:border-dark-bg t-xs:pt-6 t-xs:border-r-0 duration-300">
-          {data.map((s, index) => (
-            <div
-              key={s.id}
-              className={clsx(
-                "[&:not(:last-child)]:mb-8 flex cursor-pointer items-center rounded-sm px-4 py-6 hover:bg-bg-hover t-xs:p-4 duration-300",
-                activeIndex === index && "bg-bg-s hover:bg-bg-s duration-300"
-              )}
-              onClick={() => setActiveIndex(index)}
-            >
-              <div className="w-10 h-10 flex items-center justify-center">
-                <IconComponent name={s.icon} className={clsx("w-full", iconClassnameByTheme)} />
-              </div>
-
-              <h2
-                className={clsx(
-                  "ml-6 text-2xl font-semibold t-xs:text-base duration-300",
-                  activeIndex === index && "text-primary-s"
-                )}
-              >
-                {s.title}
-              </h2>
-            </div>
-          ))}
-        </div>
-
-        <div className="py-10 t-xs:min-h-[27.5rem] min-h-[25.5rem] lg:h-auto t-xs:py-8 t-xs:px-[28px] pl-8 pr-5 t-xs:border-light-bg dark:border-dark-bg t-xs:border-t-2 border-solid">
-          {data[activeIndex]!.header != "" && (
-            <h3
-              className="text-4xl font-bold t-xs:text-xl duration-300 mb-10 will-change-auto"
-              dangerouslySetInnerHTML={{ __html: data[activeIndex]!.header }}
+      <div className="grid gap-3 md:grid-cols-12 xl:grid-cols-services">
+        <ServiceCard
+          title={services.LLM.title}
+          subtitle={services.LLM.subtitle}
+          className="md:col-span-6 xl:col-span-5"
+        >
+          <Link className="btn-primary ml-4 mb-7 block w-fit px-4 py-2" href="/cases/ai-chatbot/">
+            {locale === "ru" ? "Подробнее" : "Read more"}
+          </Link>
+        </ServiceCard>
+        <ServiceCard
+          title={services.COMPUTER_VISION.title}
+          subtitle={services.COMPUTER_VISION.subtitle}
+          className="md:col-span-9 xl:col-span-5"
+        >
+          {isMounted && (
+            <Image
+              src={theme === "dark" ? ComputerVisionImageDark : ComputerVisionImage}
+              className="object-contain"
+              alt="AI"
             />
           )}
-
-          <div
-            className="text-2xl leading-10 t-xs:text-base duration-300 will-change-auto"
-            dangerouslySetInnerHTML={{ __html: data[activeIndex]!.description }}
-          />
-        </div>
+        </ServiceCard>
+        <ServiceCard
+          title={services.AI.title}
+          subtitle={services.AI.subtitle}
+          className="md:col-span-3 xl:col-span-3"
+        >
+          {isMounted && (
+            <Image
+              src={theme === "dark" ? AIImageDark : AIImage}
+              className="object-contain"
+              alt="AI"
+            />
+          )}
+        </ServiceCard>
+        <ServiceCard
+          title={services.WEB3.title}
+          subtitle={services.WEB3.subtitle}
+          className="md:col-span-6 xl:col-span-3"
+        >
+          {isMounted && (
+            <Image src={theme === "dark" ? Web3Dark : Web3} className="object-contain" alt="Web3" />
+          )}
+        </ServiceCard>
+        <ServiceCard
+          title={services.DECENTRALIZED.title}
+          subtitle={services.DECENTRALIZED.subtitle}
+          className="md:col-span-6 xl:col-span-7"
+        >
+          {isMounted && (
+            <Image
+              src={theme === "dark" ? DecentralizedDark : Decentralized}
+              className="w-3/5 mx-4 mb-7 object-contain"
+              alt="Decentralized apps"
+            />
+          )}
+        </ServiceCard>
+        <ServiceCard
+          title={services.INDIVIDUAL.title}
+          subtitle={services.INDIVIDUAL.subtitle}
+          className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3"
+        >
+          <Link className="btn-primary ml-4 mb-7 block w-fit px-4 py-2" href="#become-customer">
+            {locale === "ru" ? "Оставить заявку" : "Contact us"}
+          </Link>
+        </ServiceCard>
       </div>
     </section>
   );

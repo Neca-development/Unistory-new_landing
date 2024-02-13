@@ -12,14 +12,18 @@ module.exports = {
       roboto: ["Roboto", "sans-serif"],
     },
     colors: {
-      "light-bg": "#F5F5F5",
-      "dark-bg": "#141414",
+      "light-bg": "#F6F4F2",
+      "dark-bg": "#222222",
 
+      "bg-accent": "#FF4800",
       "light-bg-accent": "#FFFFFF",
       "dark-bg-accent": "#1F1F1F",
 
       "light-text-primary": "#0F1A20",
       "dark-text-primary": "#FFFFFF",
+
+      "bg-secondary": "#ffffff",
+      "dark-bg-secondary": "#2A2A2A",
 
       "light-text-secondary": "#6F7483",
       "dark-text-secondary": "#C3C3C3",
@@ -55,7 +59,7 @@ module.exports = {
       "black-text": "#0F1A20",
 
       winter: "#4FCCD5",
-      summer: "#EC5F3B",
+      summer: "#FF4800",
     },
     extend: {
       screens: {
@@ -106,6 +110,9 @@ module.exports = {
       dropShadow: {
         l: "-8px 8px 16px rgba(0, 0, 0, 0.2)",
         b: "-10px 10px 10px rgba(0, 0, 0, 0.25)",
+      },
+      gridTemplateColumns: {
+        services: "repeat(13, minmax(0, 1fr))",
       },
       keyframes: {
         "move-in": {

@@ -36,7 +36,7 @@ export function Home() {
           )}
         />
         <Hero />
-        {/* <Services /> */}
+        <Services />
         <Works />
         <Principles />
         <Reviews />

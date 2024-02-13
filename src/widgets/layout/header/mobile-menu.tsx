@@ -46,21 +46,6 @@ export function MobileMenu(props: IMobileMenuProps) {
                 </Link>
               );
             })}
-            {/* {routes.map(({ label, route }, index) => {
-              return (
-                <Link
-                  key={index}
-                  onClick={onClose}
-                  className={clsx(
-                    "mb-[2rem] block text-[1.5rem] font-medium leading-none text-dark-surface dark:text-light-surface",
-                    route.includes("become-customer") && "dark:text-[#ec5f3b] text-[#ec5f3b]"
-                  )}
-                  href={route}
-                >
-                  {label}
-                </Link>
-              );
-            })} */}
           </nav>
           <a
             href="mailto:contact@unistory.app"

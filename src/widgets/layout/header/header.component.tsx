@@ -92,7 +92,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
       <div
         className={clsx(
           "fixed z-10 flex w-full justify-center transition-all duration-300",
-          "mx-auto w-full px-[0.5rem] md:max-w-[790px] lg:max-w-[80rem] lg:px-[3rem] 2xl:max-w-[90rem] m-l:max-w-full",
+          "mx-auto w-full px-[0.5rem] md:max-w-[790px] lg:max-w-[90rem] lg:px-[3rem] m-l:max-w-full",
           isMenuVisible ? "top-4" : "top-[-6rem] shadow-navbar"
         )}
       >
