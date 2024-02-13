@@ -123,10 +123,16 @@ export const Header = React.memo((props: IHeaderProperties) => {
               marginRight: shouldAnimate ? width : 0,
             }}
           >
-            <Link className="btn-secondary px-4 py-2" href={ROUTES.CASES.route}>
+            <Link
+              className="flex items-center btn-secondary px-4 lg:h-[36px] 2xl:h-[40px]"
+              href={ROUTES.CASES.route}
+            >
               {ROUTES.CASES.label}
             </Link>
-            <Link className="btn-primary px-4 py-2" href={ROUTES.CTA.route}>
+            <Link
+              className="flex items-center btn-primary px-4 lg:h-[36px] 2xl:h-[40px]"
+              href={ROUTES.CTA.route}
+            >
               {ROUTES.CTA.label}
             </Link>
           </div>

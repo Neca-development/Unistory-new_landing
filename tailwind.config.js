@@ -150,7 +150,7 @@ module.exports = {
           },
           "100%": {
             top: "2rem",
-            left: "calc((100vw - 70rem) / 2)",
+            left: "calc((100vw - 80rem) / 2)",
             transform: "translate(0, 0)",
           },
         },
