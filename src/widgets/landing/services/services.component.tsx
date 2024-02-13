@@ -38,8 +38,11 @@ export function Services() {
           subtitle={services.LLM.subtitle}
           className="md:col-span-6 xl:col-span-5"
         >
-          <Link className="btn-primary ml-4 mb-7 block w-fit px-4 py-2" href="/cases/ai-chatbot/">
-            {locale === "ru" ? "Подробнее" : "Read more"}
+          <Link
+            className="btn-primary ml-4 mb-7 block w-fit px-4 py-2"
+            href={services.LLM.button.url}
+          >
+            {services.LLM.button.text}
           </Link>
         </ServiceCard>
         <ServiceCard
@@ -95,8 +98,11 @@ export function Services() {
           subtitle={services.INDIVIDUAL.subtitle}
           className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3"
         >
-          <Link className="btn-primary ml-4 mb-7 block w-fit px-4 py-2" href="#become-customer">
-            {locale === "ru" ? "Оставить заявку" : "Contact us"}
+          <Link
+            className="btn-primary ml-4 mb-7 block w-fit px-4 py-2"
+            href={services.INDIVIDUAL.button.url}
+          >
+            {services.INDIVIDUAL.button.text}
           </Link>
         </ServiceCard>
       </div>

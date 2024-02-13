@@ -1,4 +1,4 @@
-import { IMessage, IconsTypes } from "@shared/ui";
+import { IMessage } from "@shared/ui";
 
 export const HeroRu = {
   title: {
@@ -11,16 +11,20 @@ export const HeroRu = {
 
 export const ServicesRu = {
   LLM: {
-    title: "LLM chat bots",
-    subtitle: "Расширяем границы <br /> бизнес-коммуникаций",
+    title: "LLM чатботы",
+    subtitle: "Умные помощники <br /> клиентов и сотрудников",
+    button: {
+      text: "Подробнее",
+      url: "/cases/ai-chatbot/",
+    },
   },
   COMPUTER_VISION: {
-    title: "Computer vision",
-    subtitle: "Будущее цифровой свободы и безопасности",
+    title: "Компьютерное зрение",
+    subtitle: "Найдем и распознаем объекты, <br /> а потом расскажем о них",
   },
   AI: {
-    title: "Text, video, image AI generation",
-    subtitle: "Гарантия безопасности <br /> и удобства",
+    title: "Генерация текста, видео, изображений",
+    subtitle: "Автоматизируем создание контента",
   },
   WEB3: {
     title: "Web3 services",
@@ -28,11 +32,15 @@ export const ServicesRu = {
   },
   DECENTRALIZED: {
     title: "Decentralized apps",
-    subtitle: "Будущее цифровой свободы <br /> и безопасности",
+    subtitle: "DApp — софт на основе смарт-контрактов",
   },
   INDIVIDUAL: {
     title: "Индивидуальное решение",
-    subtitle: "Закроем нетипичную задачу, сделаем то что другие не могут",
+    subtitle: "Закроем нетипичную задачу, сделаем то, что другие не могут",
+    button: {
+      text: "Оставить заявку",
+      url: "#become-customer",
+    },
   },
 };
 

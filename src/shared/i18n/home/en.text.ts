@@ -1,38 +1,46 @@
-import { IMessage, IconsTypes } from "@shared/ui";
+import { IMessage } from "@shared/ui";
 
 export const HeroEn = {
   title: {
-    first: "Интегрируем будущее",
-    second: "Веб-сервисы и приложения",
-    third: "на базе AI & блокчейн",
+    first: "Integrating the future",
+    second: "Web services and applications",
+    third: "based on AI & blockchain",
   },
-  subtitle: "анализируем / дизайним / разрабатываем",
+  subtitle: "analytics / design / development",
 };
 
 export const ServicesEn = {
   LLM: {
     title: "LLM chat bots",
-    subtitle: "Расширяем границы <br /> бизнес-коммуникаций",
+    subtitle: "AI assistants for your <br /> customers and employees",
+    button: {
+      text: "Learn more",
+      url: "/cases/ai-chatbot/",
+    },
   },
   COMPUTER_VISION: {
     title: "Computer vision",
-    subtitle: "Будущее цифровой свободы и безопасности",
+    subtitle: "Detecting, classifying and <br /> analysing objects",
   },
   AI: {
     title: "Text, video, image AI generation",
-    subtitle: "Гарантия безопасности <br /> и удобства",
+    subtitle: "Automate content creation with <br /> AI tools",
   },
   WEB3: {
     title: "Web3 services",
-    subtitle: "Кошельки, блокэксплореры, биржи, аналитические инструменты",
+    subtitle: "Wallets, block explorers, exchanges, analytical tools",
   },
   DECENTRALIZED: {
     title: "Decentralized apps",
-    subtitle: "Будущее цифровой свободы <br /> и безопасности",
+    subtitle: "DApp — smart contract platforms",
   },
   INDIVIDUAL: {
-    title: "Индивидуальное решение",
-    subtitle: "Закроем нетипичную задачу, сделаем то что другие не могут",
+    title: "Custom solution",
+    subtitle: "We can do what others cannot",
+    button: {
+      text: "Get in touch",
+      url: "#become-customer",
+    },
   },
 };
 
