@@ -68,6 +68,7 @@ export interface ICase {
     bannerMob?: string;
     darkBanner?: MainBannerType;
     customBanner?: CustomMainBanner;
+    sectionClassnames?: string;
   }[];
   logo?: string;
   review?: {

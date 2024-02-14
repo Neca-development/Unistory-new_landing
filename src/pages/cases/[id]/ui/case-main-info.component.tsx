@@ -8,6 +8,7 @@ import { BitGraduateVerification } from "./custom-main/bit-graduate-verification
 import { BitGraduateStorage } from "./custom-main/bit-graduate-storage.component";
 import { BitGraduateAuthority } from "./custom-main/bit-graduate-authority.component";
 import { useMounted } from "@shared/lib/hooks/useMounted";
+import clsx from "clsx";
 
 interface ICaseInfoItemProps {
   data?: ICase["main"][0];
@@ -57,7 +58,7 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
   }, []);
 
   return (
-    <section className="mb-[7.5rem] t-xs:mb-16 last:mb-0">
+    <section className={clsx("pb-[7.5rem] t-xs:pb-16 last:pb-0", data?.sectionClassnames)}>
       <div className="container">
         <article className="max-w-[52.5rem]">
           <h2 className="font-bold text-[2.875rem] whitespace-pre-line t-xs:text-2xl">
