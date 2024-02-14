@@ -1,7 +1,6 @@
-import { useOnScreen } from "@shared/lib/hooks/useOnScreen.hook";
 import { useAnimationStore } from "@shared/lib/store";
 import clsx from "clsx";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { ReactNode, useEffect, useRef } from "react";
 
 interface IServiceCard {
@@ -12,6 +11,7 @@ interface IServiceCard {
   children?: ReactNode;
   className?: string;
   animationDelay?: number;
+  rootMargin?: string;
 }
 
 export const ServiceCard = (props: IServiceCard) => {
@@ -26,8 +26,8 @@ export const ServiceCard = (props: IServiceCard) => {
   } = props;
 
   const controls = useAnimation();
-  const rootRef = useRef();
-  const onScreen = useOnScreen(rootRef, "0%");
+  const rootRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(rootRef);
   const { shouldAnimate } = useAnimationStore();
 
   const animationInit = () => {
@@ -43,10 +43,11 @@ export const ServiceCard = (props: IServiceCard) => {
   };
 
   useEffect(() => {
-    if (onScreen && !shouldAnimate) {
+    console.log("isInView", isInView);
+    if (isInView && !shouldAnimate) {
       animationInit();
     }
-  }, [onScreen, controls, shouldAnimate]);
+  }, [isInView, controls, shouldAnimate]);
 
   return (
     <motion.div

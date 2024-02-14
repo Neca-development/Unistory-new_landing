@@ -1,6 +1,6 @@
 import { ServicesEn, ServicesRu } from "@shared/i18n";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { ServiceCard } from "./service-card.component";
 import ComputerVisionImage from "@public/assets/images/homepage/services-computer-vision.png";
 import ComputerVisionImageDark from "@public/assets/images/homepage/services-computer-vision_dark.png";
@@ -61,6 +61,7 @@ export function Services() {
           animationDuration={0.75}
           animationYOffset={80}
           animationDelay={1.5}
+          rootMargin="-200px"
           className="md:col-span-6 xl:col-span-5"
         >
           {isMounted && (
@@ -88,12 +89,22 @@ export function Services() {
           )}
         </ServiceCard>
         <ServiceCard
+          title={services.WEB3.title}
+          subtitle={services.WEB3.subtitle}
+          animationDuration={1}
+          animationYOffset={40}
+          className="md:col-span-6 xl:col-span-3"
+        >
+          {isMounted && (
+            <Image src={theme === "dark" ? Web3Dark : Web3} className="object-contain" alt="Web3" />
+          )}
+        </ServiceCard>
+        <ServiceCard
           title={services.DECENTRALIZED.title}
           subtitle={services.DECENTRALIZED.subtitle}
           animationDuration={1}
-          animationYOffset={40}
-          animationDelay={0.25}
-          className="md:col-span-8 xl:col-span-7 xl:order-5"
+          animationYOffset={80}
+          className="md:col-span-8 xl:col-span-7"
         >
           {isMounted && (
             <Image
@@ -104,22 +115,10 @@ export function Services() {
           )}
         </ServiceCard>
         <ServiceCard
-          title={services.WEB3.title}
-          subtitle={services.WEB3.subtitle}
-          animationDuration={0.75}
-          animationYOffset={80}
-          className="md:col-span-6 xl:col-span-3 xl:order-4"
-        >
-          {isMounted && (
-            <Image src={theme === "dark" ? Web3Dark : Web3} className="object-contain" alt="Web3" />
-          )}
-        </ServiceCard>
-        <ServiceCard
           title={services.INDIVIDUAL.title}
           subtitle={services.INDIVIDUAL.subtitle}
-          animationDuration={0.5}
+          animationDuration={1}
           animationYOffset={120}
-          animationDelay={0.5}
           className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
         >
           <Link

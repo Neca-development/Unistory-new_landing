@@ -1,6 +1,5 @@
-import { useOnScreen } from "@shared/lib/hooks/useOnScreen.hook";
 import { useAnimationStore } from "@shared/lib/store";
-import { useAnimation, motion } from "framer-motion";
+import { useAnimation, motion, useInView } from "framer-motion";
 import { ReactNode, useEffect, useRef } from "react";
 
 interface ILazyShow {
@@ -9,12 +8,12 @@ interface ILazyShow {
 export const LazyShow = (props: ILazyShow) => {
   const { children } = props;
   const controls = useAnimation();
-  const rootRef = useRef();
-  const onScreen = useOnScreen(rootRef, "-25%");
+  const rootRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(rootRef);
   const { shouldAnimate } = useAnimationStore();
 
   useEffect(() => {
-    if (onScreen && !shouldAnimate) {
+    if (isInView && !shouldAnimate) {
       controls.start({
         opacity: 1,
         transition: {
@@ -23,7 +22,7 @@ export const LazyShow = (props: ILazyShow) => {
         },
       });
     }
-  }, [onScreen, controls, shouldAnimate]);
+  }, [isInView, controls, shouldAnimate]);
 
   return (
     <motion.div ref={rootRef} initial={{ opacity: 0 }} animate={controls}>
