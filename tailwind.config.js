@@ -314,10 +314,10 @@ module.exports = {
           "30%": {
             transform: "translate(20px,6px)",
           },
-          "55%": {
+          "50%": {
             transform: "translate(45px,33px)",
           },
-          "65%": {
+          "60%": {
             transform: "translate(45px,33px)",
           },
           "75%": {
@@ -325,6 +325,32 @@ module.exports = {
           },
           "85%": {
             transform: "translate(9px,26px)",
+          },
+        },
+        "solution-small-circle": {
+          "0%,100%": {
+            transform: "translate(0,0)",
+          },
+          "10%": {
+            transform: "translate(0,0)",
+          },
+          "25%": {
+            transform: "translate(-45px,22px)",
+          },
+          "30%": {
+            transform: "translate(-45px,22px)",
+          },
+          "50%": {
+            transform: "translate(-45px,-24px)",
+          },
+          "60%": {
+            transform: "translate(-45px,-24px)",
+          },
+          "75%": {
+            transform: "translate(0,-5px)",
+          },
+          "85%": {
+            transform: "translate(0,-5px)",
           },
         },
       },
@@ -348,6 +374,7 @@ module.exports = {
         "link-hover-on": "link-hover-on 0.3s ease-out forwards",
         "link-hover-off": "link-hover-off 0.3s ease-out forwards",
         "solution-big-circle": "solution-big-circle 6s ease-out infinite",
+        "solution-small-circle": "solution-small-circle 6s ease-out infinite",
       },
     },
   },
