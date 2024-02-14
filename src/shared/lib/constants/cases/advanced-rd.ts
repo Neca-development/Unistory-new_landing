@@ -1,5 +1,4 @@
 import { ICase } from "@shared/lib/types";
-import { TEAM } from "../team";
 import { TECHNOLOGIES } from "../technologies.constats";
 import advancedRDBanner from "@public/assets/images/cases/advanced-rd/banner.jpg";
 import advancedRDImage1 from "@public/assets/images/cases/advanced-rd/image-1.jpg";
@@ -39,13 +38,13 @@ export const ADVANCED_RD: ICase = {
     mob: advancedRDBanner.src,
   },
   description: {
-    en: "To create an advanced property investment platform with full-fledged blockchain integration. You don’t need to pay the whole price by your own - just share it with others and receive the dividents.",
-    ru: "Создать продвинутую платформу для инвестиций в недвижимость, с полноценной блокчейн-интеграцией. Вам не нужно платить всю сумму самому - просто поделите её с другими и получайте дивиденды.",
+    en: "Development of a real estate investment platform with blockchain integration. The platform allows purchasing real estate assets in fractions alongside other investors. The service's employees take care of renting out the properties, while users can calmly receive dividends and withdraw them in fiat.",
+    ru: "Разработка платформы для инвестиций в недвижимость с блокчейн-интеграцией. Площадка дает возможность купить объект недвижимости по частям вместе с другими инвесторами. О сдаче объектов в аренду позаботятся сотрудники сервиса, а пользователи могут спокойно получать дивиденды и выводить их в фиат.",
   },
   params: {
     budget: {
-      ru: 7_000_000,
-      en: 80_000,
+      ru: 10_000_000,
+      en: 100_000,
     },
     period: 6,
     year: "2022-2023",
@@ -53,14 +52,14 @@ export const ADVANCED_RD: ICase = {
   main: [
     {
       title: {
-        en: "Property page",
-        ru: "Информация о недвижимости",
+        en: "Assets, Smart Contracts, Stablecoin",
+        ru: "Объекты, смарт-контракты, стейблкоин",
       },
       text: [
         {
           text: {
-            en: "Get all necessary information from the property page. Check the description, property price and amount of investments and make a decision to be a part of it. All information are powered by blockchain integration and updates in real time.",
-            ru: "Получайте всю необходимую информацию на одной странице. Прочитайте описание, посмотрите на цену и объем текущих инвестиций и решите - стать ли частью этого. Вся информация обрабатывается на блокчейне и обрабатывается в режиме реального времени.",
+            en: "We have developed smart contracts for each real estate asset that appears on the platform. When a user tops up their balance and buys a part of the asset, they receive tokens from this smart contract. The token is a stablecoin pegged to the euro and serves as a guarantee of ownership rights.",
+            ru: "Разработали смарт-контракты для каждого объекта недвижимости, который появляется на платформе. Когда пользователь пополняет баланс и покупает часть объекта, то получает токены этого смарт-контракта. Токен — стейблокоин, привязанный к евро, и служит гарантией права собственности.  ",
           },
         },
       ],
@@ -68,14 +67,14 @@ export const ADVANCED_RD: ICase = {
     },
     {
       title: {
-        en: "Wallet management",
-        ru: "Управление кошельком",
+        en: "Wallet and Personal Account",
+        ru: "Кошелек и личный кабинет",
       },
       text: [
         {
           text: {
-            en: "Track and manage your income on the wallet page. Ready to deposit or want to withdraw? You can make it happens in the one place.  Use the power of blockchain to proceed with all kind of payments and track your activity and income.",
-            ru: "Следите за своим заработком и управляйте им на странице кошелька. Готовы внести депозит или хотите вывести средства? Всё это можно сделать в одном месте. Используйте силу блокчейна чтобы управлять всеми видами платежей и следить за своей активностью и заработком.",
+            en: "On the Wallet page, investors can track their earnings and withdraw them in fiat. For investor login authentication, we used the Know Your Customer (KYC) system and opted for Sumsub. During registration, the user provides their details, a photo of their ID, and undergoes video verification. This technology serves two functions: it addresses legal nuances and ensures user security.",
+            ru: "На странице Wallet инвестор может следить за своими доходами и выводить их в фиат. Для авторизации в личный кабинет инвестора использовали систему Know your customer (KYC). Выбрали вариант Sumsub. Во время регистрации пользователь указывает свои данные, фото удостоверения личности и проходит подтверждение по видео. Эта технология несет две функции: решает юридические нюансы и гарантирует безопасность пользователя.",
           },
         },
       ],
@@ -89,8 +88,8 @@ export const ADVANCED_RD: ICase = {
       text: [
         {
           text: {
-            en: "We’ve implemented a great referral system to help you keep in touch wih your partners. Invite them to be in an investment community. Here we have a two ways bonus system -- both of you will receive an extra income. And again, all is crystal clear and transparent since it’s managed by blockchain.",
-            ru: "Мы внедрили классную реферальную систему, чтобы вы могли держать связь со своими партнерами. Приглашайте их стать частью коммьюнити инвесторов и оба получайте бонусы - система работает в обе стороны. И еще раз, все предельно прозрачно и понятно - всё управляется блокчейном. ",
+            en: "We implemented a referral system, allowing users to collectively purchase real estate and subsequently receive dividends. It minimizes legal complexities and enables investment in real estate even with small amounts.",
+            ru: "Внедрили реферальную систему, благодаря которой пользователи могут вместе купить недвижимость, а затем получать дивиденды. Минимум юридических сложностей и возможность инвестировать в недвижимость даже небольшие суммы.",
           },
         },
       ],
@@ -98,26 +97,32 @@ export const ADVANCED_RD: ICase = {
     },
     {
       title: {
-        en: "Results",
+        en: "Admin Panel",
+        ru: "Админ-панель",
+      },
+      text: [
+        {
+          text: {
+            en: "We developed an admin panel from scratch, allowing service employees to manage real estate assets, add them to the platform, and edit information. Additionally, smart contracts for assets are deployed in the admin panel simultaneously with the publication of real estate on the website.",
+            ru: "Разработали с нуля админ-панель, где сотрудники сервиса могут управлять объектами недвижимости, добавлять их на площадку и редактировать информацию. Также в админ-панели выпускается смарт-контракт для объектов — одновременно с публикацией недвижимости на сайте. ",
+          },
+        },
+      ],
+    },
+    {
+      title: {
+        en: "Outcome",
         ru: "Результат",
       },
       text: [
         {
           text: {
-            en: "We’ve made a comprehensive blockchain integration to make investments transparent and easy.  We took over the whole process from smart contract to stablecoin creation. Besides, we’ve developed an admin panel for staff -- to manage the platform from A to Z.",
-            ru: "Мы сделали обширную блокчейн-интеграцию, чтобы сделать инвестиции легким и прозрачным процессом. Мы взяли на себя весь функционал, от смарт контрактов до создания стейблкоина. Кроме того, мы разработали админ панель для сотрудников -- чтобы управлять платформой от А до Я.",
+            en: "We have implemented extensive blockchain integration to make investments a straightforward and transparent process. We have taken on all functionality from smart contracts to creating stablecoins. Furthermore, we have developed a convenient admin panel for employees, while users have been provided with the option of authentication via KYC.",
+            ru: "Мы внедрили обширную блокчейн-интеграцию, чтобы сделать инвестиции легким и прозрачным процессом. Взяли на себя весь функционал от смарт-контрактов до создания стейблкоина. Кроме того, разработали удобную админ-панель для сотрудников, а пользователям предоставили возможность авторизации через KYC",
           },
         },
       ],
+      sectionClassnames: "!pb-[7.5rem] !t-xs:pb-16",
     },
-  ],
-  team: [
-    TEAM.alexanderAksenov,
-    TEAM.ilyaSmirnov,
-    TEAM.yanSofronov,
-    TEAM.maksimKlimchenko,
-    TEAM.andreyPaskarenko,
-    TEAM.vladislavKiribyatev,
-    TEAM.kirillElizarov,
   ],
 };
