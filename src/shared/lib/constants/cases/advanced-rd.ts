@@ -122,7 +122,7 @@ export const ADVANCED_RD: ICase = {
           },
         },
       ],
-      sectionClassnames: "!pb-[7.5rem] !t-xs:pb-16",
+      sectionClassnames: "!pb-[7.5rem] t-xs:!pb-16",
     },
   ],
 };
