@@ -18,7 +18,7 @@ export function Home() {
     const timeout = setTimeout(() => {
       document.body.style.overflow = "";
       setShouldAnimate();
-    }, LOGO_ENTER_ANIMATION_DURATION + 1);
+    }, LOGO_ENTER_ANIMATION_DURATION - 1000);
 
     return () => {
       clearTimeout(timeout);

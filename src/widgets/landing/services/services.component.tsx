@@ -37,6 +37,9 @@ export function Services() {
         <ServiceCard
           title={services.LLM.title}
           subtitle={services.LLM.subtitle}
+          animationDuration={1}
+          animationYOffset={40}
+          animationDelay={1.25}
           className="relative md:col-span-6 xl:col-span-5"
         >
           <Image
@@ -55,6 +58,9 @@ export function Services() {
         <ServiceCard
           title={services.COMPUTER_VISION.title}
           subtitle={services.COMPUTER_VISION.subtitle}
+          animationDuration={0.75}
+          animationYOffset={80}
+          animationDelay={1.5}
           className="md:col-span-6 xl:col-span-5"
         >
           {isMounted && (
@@ -68,6 +74,9 @@ export function Services() {
         <ServiceCard
           title={services.AI.title}
           subtitle={services.AI.subtitle}
+          animationDuration={0.5}
+          animationYOffset={120}
+          animationDelay={1.75}
           className="md:col-span-4 xl:col-span-3"
         >
           {isMounted && (
@@ -81,6 +90,9 @@ export function Services() {
         <ServiceCard
           title={services.DECENTRALIZED.title}
           subtitle={services.DECENTRALIZED.subtitle}
+          animationDuration={1}
+          animationYOffset={40}
+          animationDelay={0.25}
           className="md:col-span-8 xl:col-span-7 xl:order-5"
         >
           {isMounted && (
@@ -94,6 +106,8 @@ export function Services() {
         <ServiceCard
           title={services.WEB3.title}
           subtitle={services.WEB3.subtitle}
+          animationDuration={0.75}
+          animationYOffset={80}
           className="md:col-span-6 xl:col-span-3 xl:order-4"
         >
           {isMounted && (
@@ -103,6 +117,9 @@ export function Services() {
         <ServiceCard
           title={services.INDIVIDUAL.title}
           subtitle={services.INDIVIDUAL.subtitle}
+          animationDuration={0.5}
+          animationYOffset={120}
+          animationDelay={0.5}
           className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
         >
           <Link
