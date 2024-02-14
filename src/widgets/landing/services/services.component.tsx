@@ -16,6 +16,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useMounted } from "@shared/lib/hooks/useMounted";
+import { Web3AnimatedNotice } from "@features/service-card/web3-notice.component";
 
 export function Services() {
   const { locale } = useRouter();
@@ -107,11 +108,12 @@ export function Services() {
           subtitle={services.WEB3.subtitle}
           animationDuration={1}
           animationYOffset={40}
-          className="md:col-span-6 xl:col-span-3 xl:order-4"
+          className="md:col-span-6 xl:col-span-3 xl:order-4 relative"
         >
           {isMounted && (
             <Image src={theme === "dark" ? Web3Dark : Web3} className="object-contain" alt="Web3" />
           )}
+          <Web3AnimatedNotice />
         </ServiceCard>
         <ServiceCard
           title={services.INDIVIDUAL.title}
