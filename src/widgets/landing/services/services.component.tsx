@@ -63,7 +63,7 @@ export function Services() {
           animationDelay={typeof window !== "undefined" && window.innerWidth > 767 ? 1.5 : 0}
           className="md:col-span-6 xl:col-span-5"
         >
-          {isMounted && (
+          {isMounted && theme && (
             <Image
               src={theme === "dark" ? ComputerVisionImageDark : ComputerVisionImage}
               className="object-contain"
@@ -79,7 +79,7 @@ export function Services() {
           animationDelay={typeof window !== "undefined" && window.innerWidth > 767 ? 1.75 : 0}
           className="md:col-span-4 xl:col-span-3"
         >
-          {isMounted && (
+          {isMounted && theme && (
             <Image
               src={theme === "dark" ? AIImageDark : AIImage}
               className="object-contain"
@@ -94,7 +94,7 @@ export function Services() {
           animationYOffset={80}
           className="md:col-span-8 xl:col-span-7 xl:order-5"
         >
-          {isMounted && (
+          {isMounted && theme && (
             <Image
               src={theme === "dark" ? DecentralizedDark : Decentralized}
               className="w-3/5 mx-4 mb-7 object-contain"
