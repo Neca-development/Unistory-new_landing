@@ -11,7 +11,6 @@ interface IServiceCard {
   children?: ReactNode;
   className?: string;
   animationDelay?: number;
-  rootMargin?: string;
 }
 
 export const ServiceCard = (props: IServiceCard) => {
@@ -43,7 +42,6 @@ export const ServiceCard = (props: IServiceCard) => {
   };
 
   useEffect(() => {
-    console.log("isInView", isInView);
     if (isInView && !shouldAnimate) {
       animationInit();
     }
