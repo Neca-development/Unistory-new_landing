@@ -17,6 +17,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useMounted } from "@shared/lib/hooks/useMounted";
 import { Web3AnimatedNotice } from "@features/service-card/web3-notice.component";
+import { SolutionAnimatedBlock } from "@features/service-card/solution-block.component";
 
 export function Services() {
   const { locale } = useRouter();
@@ -122,6 +123,7 @@ export function Services() {
           animationYOffset={120}
           className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
         >
+          <SolutionAnimatedBlock />
           <Link
             className="btn-primary ml-4 mb-7 block w-fit px-4 py-2"
             href={services.INDIVIDUAL.button.url}

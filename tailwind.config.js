@@ -301,6 +301,32 @@ module.exports = {
             right: 0,
           },
         },
+        "solution-big-circle": {
+          "0%,100%": {
+            transform: "translate(0,0)",
+          },
+          "10%": {
+            transform: "translate(0,0)",
+          },
+          "25%": {
+            transform: "translate(20px,6px)",
+          },
+          "30%": {
+            transform: "translate(20px,6px)",
+          },
+          "55%": {
+            transform: "translate(45px,33px)",
+          },
+          "65%": {
+            transform: "translate(45px,33px)",
+          },
+          "75%": {
+            transform: "translate(9px,26px)",
+          },
+          "85%": {
+            transform: "translate(9px,26px)",
+          },
+        },
       },
       animation: {
         "move-in": "move-in 0.3s ease-out forwards",
@@ -321,6 +347,7 @@ module.exports = {
         "header-links-opacity": `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         "link-hover-on": "link-hover-on 0.3s ease-out forwards",
         "link-hover-off": "link-hover-off 0.3s ease-out forwards",
+        "solution-big-circle": "solution-big-circle 6s ease-out infinite",
       },
     },
   },
