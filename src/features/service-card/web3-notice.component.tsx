@@ -27,10 +27,10 @@ export const Web3AnimatedNotice = () => {
       ref={rootRef}
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
-      className="absolute bottom-0 left-14 w-[200px] flex items-center p-3 overflow-hidden border-text-dark-text-secondary rounded-lg border-[#EDEAE8] bg-[#EDEAE8]/[0.6]"
+      className="absolute bottom-4 left-14 w-[70%] flex items-center p-3 overflow-hidden border-text-dark-text-secondary rounded-lg border-[#EDEAE8] bg-[#EDEAE8]/[0.6] lg:bottom-0"
     >
       <Image src={convertImage} alt="Web3 services" className="w-4 h-4" />
-      <div className="text-[0.65rem] w-[calc(100%_-_1rem)] ml-2">
+      <div className="text-[0.65rem] leading-tight w-[calc(100%_-_1rem)] ml-2 md:text-base xl:text-[0.65rem] xl:leading-tight">
         <div className="flex justify-between text-[#000000] font-semibold">
           <span>Converted ETH</span>
           <span>+0.063 BTC</span>
