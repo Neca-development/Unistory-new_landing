@@ -8,7 +8,7 @@ const imageClasses = "absolute object-contain w-24";
 
 export const DecentralizedAnimatedBlock = ({ theme }: { theme: string }) => {
   return (
-    <div className="relative">
+    <div className="relative t-xs:scale-75 m-xl:scale-50 m-xl:-mr-20">
       <Image
         className={clsx("decentralized-1 bottom-[9.1rem] right-[21.65rem]", imageClasses)}
         src={theme === "dark" ? nodeDark : node}

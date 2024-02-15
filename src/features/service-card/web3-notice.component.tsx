@@ -13,7 +13,7 @@ export const Web3AnimatedNotice = () => {
       y: -5,
       opacity: 1,
       transition: {
-        duration: 3,
+        duration: 2,
         ease: "easeOut",
         repeat: Infinity,
         repeatType: "reverse",
@@ -27,7 +27,11 @@ export const Web3AnimatedNotice = () => {
       ref={rootRef}
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
-      className="absolute bottom-3 left-14 w-[70%] flex items-center p-3 overflow-hidden border-text-dark-text-secondary rounded-lg border-[#EDEAE8] bg-[#EDEAE8]/[0.6]"
+      className="absolute bottom-3 left-14 w-[70%] flex items-center p-3 overflow-hidden border-text-dark-text-secondary rounded-lg"
+      style={{
+        background:
+          "radial-gradient(at left bottom, rgba(232,232,232,0.9) 0%, rgba(240,240,240,0.3) 100%)",
+      }}
     >
       <Image src={convertImage} alt="Web3 services" className="w-4 h-4" />
       <div className="text-[0.65rem] leading-tight w-[calc(100%_-_1rem)] ml-2 md:text-base xl:text-[0.65rem] xl:leading-tight">

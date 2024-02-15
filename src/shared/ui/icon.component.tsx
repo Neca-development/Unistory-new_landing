@@ -41,6 +41,8 @@ const menuBtnLight = dynamic(() => import("@public/assets/icons/menu-btn-light.s
 const menuBtnDark = dynamic(() => import("@public/assets/icons/menu-btn-dark.svg"));
 const clutchStar = dynamic(() => import("@public/assets/icons/clutch-star.svg"));
 const caseProjectLink = dynamic(() => import("@public/assets/icons/case-project-link.svg"));
+const serviceAI = dynamic(() => import("@public/assets/images/homepage/services-ai.svg"));
+const serviceAIDark = dynamic(() => import("@public/assets/images/homepage/services-ai_dark.svg"));
 const decentralizedServiceLight = dynamic(
   () => import("@public/assets/images/homepage/service-decentralized.svg")
 );
@@ -93,6 +95,8 @@ const iconTypes = {
   menuBtnDark,
   clutchStar,
   caseProjectLink,
+  serviceAI,
+  serviceAIDark,
   decentralizedServiceLight,
   decentralizedServiceDark,
   decLine1,

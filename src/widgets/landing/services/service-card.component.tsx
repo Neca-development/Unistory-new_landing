@@ -53,7 +53,7 @@ export const ServiceCard = (props: IServiceCard) => {
       initial={{ opacity: 0, y: animationYOffset }}
       animate={controls}
       className={clsx(
-        "flex flex-col bg-light-bg-accent dark:bg-dark-bg-secondary rounded-2xl border border-[#EDEAE8] dark:border-[#353535] overflow-hidden min-h-[20rem]",
+        "flex flex-col bg-light-bg-accent dark:bg-dark-bg-secondary rounded-2xl border border-[#EDEAE8] dark:border-[#353535] overflow-hidden min-h-[20rem] m-xl:min-h-[17rem]",
         className
       )}
     >
