@@ -30,7 +30,7 @@ export const DecentralizedAnimatedBlock = ({ theme }: { theme: string }) => {
         alt=""
       />
       <Image
-        className={clsx("decentralized-5 bottom-[6.3rem] right-6", imageClasses)}
+        className={clsx("decentralized-5 bottom-[6.3rem] right-[1.4rem]", imageClasses)}
         src={theme === "dark" ? nodeDark : node}
         alt=""
       />
@@ -45,11 +45,11 @@ export const DecentralizedAnimatedBlock = ({ theme }: { theme: string }) => {
       />
       <IconComponent
         name="decLine2"
-        className={clsx("absolute bottom-[9.1rem] right-[16.8rem] w-[4.9rem]")}
+        className={clsx("decentralized-3 absolute bottom-[9.1rem] right-[16.8rem] w-[4.9rem]")}
       />
       <IconComponent
         name="decLine3"
-        className={clsx("absolute bottom-[10.7rem] right-[7.3rem] w-[3.8rem]")}
+        className={clsx("decentralized-4 absolute bottom-[10.7rem] right-[7.3rem] w-[3.8rem]")}
       />
       <IconComponent
         name="decLine4"
@@ -57,7 +57,7 @@ export const DecentralizedAnimatedBlock = ({ theme }: { theme: string }) => {
       />
       <IconComponent
         name="decLine5"
-        className={clsx("absolute bottom-[4.2rem] right-[7.4rem] w-[3.7rem]")}
+        className={clsx("decentralized-6 absolute bottom-[4.2rem] right-[7.4rem] w-[3.7rem]")}
       />
     </div>
   );

@@ -1,0 +1,59 @@
+.decentralized-3 {
+  animation: decentralized-3-animation 10s linear infinite;
+}
+
+.decentralized-4 {
+  animation: decentralized-4-animation 10s linear infinite;
+}
+
+.decentralized-6 {
+  animation: decentralized-6-animation 10s linear infinite;
+}
+
+@keyframes decentralized-3-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+  }
+  15% {
+    @apply opacity-0;
+  }
+  25% {
+    @apply opacity-100;
+  }
+  90% {
+    @apply opacity-100;
+  }
+}
+
+@keyframes decentralized-4-animation {
+  0%, 
+  100% {
+    @apply opacity-100;
+  }
+  45% {
+    @apply opacity-100;
+  }
+  55% {
+    @apply opacity-0;
+  }
+  90% {
+    @apply opacity-0;
+  }
+}
+
+@keyframes decentralized-6-animation {
+  0%, 
+  100% {
+    @apply opacity-100;
+  }
+  65% {
+    @apply opacity-100;
+  }
+  75% {
+    @apply opacity-0;
+  }
+  90% {
+    @apply opacity-0;
+  }
+}
