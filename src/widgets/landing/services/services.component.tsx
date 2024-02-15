@@ -4,8 +4,6 @@ import React from "react";
 import { ServiceCard } from "./service-card.component";
 import ComputerVisionImage from "@public/assets/images/homepage/services-computer-vision.png";
 import ComputerVisionImageDark from "@public/assets/images/homepage/services-computer-vision_dark.png";
-import AIImage from "@public/assets/images/homepage/services-ai.png";
-import AIImageDark from "@public/assets/images/homepage/services-ai_dark.png";
 import Web3 from "@public/assets/images/homepage/services-web3.png";
 import Web3Dark from "@public/assets/images/homepage/services-web3_dark.png";
 import LLMChatBotBlur from "@public/assets/images/homepage/llm-chatbot-blur.png";
@@ -82,10 +80,9 @@ export function Services() {
           className="md:col-span-4 xl:col-span-3"
         >
           {isMounted && theme && (
-            <Image
-              src={theme === "dark" ? AIImageDark : AIImage}
-              className="object-contain"
-              alt="AI"
+            <IconComponent
+              name={theme === "dark" ? "serviceAIDark" : "serviceAI"}
+              className="w-full"
             />
           )}
         </ServiceCard>
