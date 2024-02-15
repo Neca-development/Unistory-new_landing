@@ -33,23 +33,23 @@
 @keyframes llm-wrapper-animation {
   0%, 
   100% {
-    opacity: 0;
+    @apply opacity-0;
     transform: translateY(2rem);
   }
   10% {
-    opacity: 1;
-  }
-  40% {
-    transform: translateY(2rem);
+    @apply opacity-100;
   }
   50% {
+    transform: translateY(2rem);
+  }
+  60% {
     transform: translateY(-5rem);
   }
   90% {
-    opacity: 1;
+    @apply opacity-100;
   }
   95% {
-    opacity: 0;
+    @apply opacity-0;
   }
   99% {
     transform: translateY(-5rem);
@@ -59,16 +59,16 @@
 @keyframes llm-row-1-animation {
   0%, 
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
   10% {
-    opacity: 1;
+    @apply opacity-100;
   }
-  40% {
-    opacity: 1;
+  50% {
+    @apply opacity-100;
   }
-  45% {
-    opacity: 0;
+  55% {
+    @apply opacity-0;
   }
 
 }
@@ -76,80 +76,80 @@
 @keyframes llm-row-2-animation {
   0%, 
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
   10% {
-    opacity: 0;
+    @apply opacity-0;
   }
   20% {
-    opacity: 1;
+    @apply opacity-100;
   }
   90% {
-    opacity: 1;
+    @apply opacity-100;
   }
 }
 
 @keyframes llm-row-3-animation {
   0%, 
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
   20% {
-    opacity: 0;
+    @apply opacity-0;
   }
   30% {
-    opacity: 1;
+    @apply opacity-100;
   }
   90% {
-    opacity: 1;
+    @apply opacity-100;
   }
 }
 
 @keyframes llm-row-4-animation {
   0%, 
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
-  40% {
-    opacity: 0;
+  60% {
+    @apply opacity-0;
   }
-  45% {
-    opacity: 1;
+  65% {
+    @apply opacity-100;
   }
   95% {
-    opacity: 1;
+    @apply opacity-100;
   }
 }
 
 @keyframes llm-row-5-animation {
   0%, 
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
-  50% {
-    opacity: 0;
+  70% {
+    @apply opacity-0;
   }
-  55% {
-    opacity: 1;
+  75% {
+    @apply opacity-100;
   }
   95% {
-    opacity: 1;
+    @apply opacity-100;
   }
 }
 
 @keyframes llm-row-6-animation {
   0%, 
   100% {
-    opacity: 0;
+    @apply opacity-0;
   }
-  60% {
-    opacity: 0;
+  80% {
+    @apply opacity-0;
   }
-  65% {
-    opacity: 1;
+  85% {
+    @apply opacity-100;
   }
   95% {
-    opacity: 1;
+    @apply opacity-100;
   }
 }
 
@@ -158,10 +158,10 @@
   100% {
     @apply bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] scale-100;
   }
-  15% {
+  35% {
     @apply bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] scale-100;
   }
-  20% {
+  40% {
     @apply bg-[#FC4700];
   }
   65% {
