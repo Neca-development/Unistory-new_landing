@@ -41,6 +41,17 @@ const menuBtnLight = dynamic(() => import("@public/assets/icons/menu-btn-light.s
 const menuBtnDark = dynamic(() => import("@public/assets/icons/menu-btn-dark.svg"));
 const clutchStar = dynamic(() => import("@public/assets/icons/clutch-star.svg"));
 const caseProjectLink = dynamic(() => import("@public/assets/icons/case-project-link.svg"));
+const decentralizedServiceLight = dynamic(
+  () => import("@public/assets/images/homepage/service-decentralized.svg")
+);
+const decentralizedServiceDark = dynamic(
+  () => import("@public/assets/images/homepage/service-decentralized_dark.svg")
+);
+const decLine1 = dynamic(() => import("@public/assets/images/homepage/dec-line-1.svg"));
+const decLine2 = dynamic(() => import("@public/assets/images/homepage/dec-line-2.svg"));
+const decLine3 = dynamic(() => import("@public/assets/images/homepage/dec-line-3.svg"));
+const decLine4 = dynamic(() => import("@public/assets/images/homepage/dec-line-4.svg"));
+const decLine5 = dynamic(() => import("@public/assets/images/homepage/dec-line-5.svg"));
 
 const iconTypes = {
   unistory,
@@ -82,6 +93,13 @@ const iconTypes = {
   menuBtnDark,
   clutchStar,
   caseProjectLink,
+  decentralizedServiceLight,
+  decentralizedServiceDark,
+  decLine1,
+  decLine2,
+  decLine3,
+  decLine4,
+  decLine5,
 };
 
 export type IconsTypes = keyof typeof iconTypes;

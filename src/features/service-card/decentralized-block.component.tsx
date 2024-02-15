@@ -1,0 +1,64 @@
+import node from "@public/assets/images/homepage/decentralized-node.png";
+import nodeDark from "@public/assets/images/homepage/decentralized-node_dark.png";
+import { IconComponent } from "@shared/ui";
+import clsx from "clsx";
+import Image from "next/image";
+
+const imageClasses = "absolute object-contain w-24";
+
+export const DecentralizedAnimatedBlock = ({ theme }: { theme: string }) => {
+  return (
+    <div className="relative">
+      <Image
+        className={clsx("decentralized-1 bottom-[8.6rem] right-[21.8rem]", imageClasses)}
+        src={theme === "dark" ? nodeDark : node}
+        alt=""
+      />
+      <Image
+        className={clsx("decentralized-2 bottom-[12.8rem] right-[10.9rem]", imageClasses)}
+        src={theme === "dark" ? nodeDark : node}
+        alt=""
+      />
+      <Image
+        className={clsx("decentralized-3 bottom-[8rem] right-[11rem]", imageClasses)}
+        src={theme === "dark" ? nodeDark : node}
+        alt=""
+      />
+      <Image
+        className={clsx("decentralized-4 bottom-40 right-6", imageClasses)}
+        src={theme === "dark" ? nodeDark : node}
+        alt=""
+      />
+      <Image
+        className={clsx("decentralized-5 bottom-[6.3rem] right-6", imageClasses)}
+        src={theme === "dark" ? nodeDark : node}
+        alt=""
+      />
+      <Image
+        className={clsx("decentralized-6 bottom-[3.5rem] right-[10.65rem]", imageClasses)}
+        src={theme === "dark" ? nodeDark : node}
+        alt=""
+      />
+      <IconComponent
+        name="decLine1"
+        className={clsx("absolute bottom-[9.4rem] right-[16.8rem] w-18")}
+      />
+      <IconComponent
+        name="decLine2"
+        className={clsx("absolute bottom-[8.75rem] right-[16.8rem] w-18")}
+      />
+      <IconComponent
+        name="decLine3"
+        className={clsx("absolute bottom-[10.7rem] right-[7.3rem] w-14")}
+      />
+      <IconComponent
+        name="decLine4"
+        className={clsx("absolute bottom-[7rem] right-[7.15rem] w-16")}
+      />
+      <IconComponent
+        name="decLine5"
+        className={clsx("absolute bottom-[4.2rem] right-[7.4rem] w-14")}
+      />
+    </div>
+  );
+};

@@ -8,10 +8,7 @@ import AIImage from "@public/assets/images/homepage/services-ai.png";
 import AIImageDark from "@public/assets/images/homepage/services-ai_dark.png";
 import Web3 from "@public/assets/images/homepage/services-web3.png";
 import Web3Dark from "@public/assets/images/homepage/services-web3_dark.png";
-import Decentralized from "@public/assets/images/homepage/service-decentralized.png";
-import DecentralizedDark from "@public/assets/images/homepage/service-decentralized_dark.png";
 import LLMChatBotBlur from "@public/assets/images/homepage/llm-chatbot-blur.png";
-
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -19,6 +16,8 @@ import { useMounted } from "@shared/lib/hooks/useMounted";
 import { Web3AnimatedNotice } from "@features/service-card/web3-notice.component";
 import { SolutionAnimatedBlock } from "@features/service-card/solution-block.component";
 import { LLMAnimatedBlock } from "@features/service-card/llm-chat.component";
+import { IconComponent } from "@shared/ui";
+import { DecentralizedAnimatedBlock } from "@features/service-card/decentralized-block.component";
 
 export function Services() {
   const { locale } = useRouter();
@@ -100,14 +99,18 @@ export function Services() {
               ? 2.25
               : 0
           }
-          className="md:col-span-8 xl:col-span-7 xl:order-5"
+          className="relative md:col-span-8 xl:col-span-7 xl:order-5"
         >
           {isMounted && theme && (
-            <Image
-              src={theme === "dark" ? DecentralizedDark : Decentralized}
-              className="w-3/5 mx-4 mb-7 object-contain"
-              alt="Decentralized apps"
-            />
+            <>
+              <DecentralizedAnimatedBlock theme={theme} />
+              <div className="absolute w-2/3 bottom-4 left-6">
+                <IconComponent
+                  className="w-full h-full"
+                  name={theme === "dark" ? "decentralizedServiceDark" : "decentralizedServiceLight"}
+                />
+              </div>
+            </>
           )}
         </ServiceCard>
         <ServiceCard
