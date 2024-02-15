@@ -95,6 +95,11 @@ export function Services() {
           subtitle={services.DECENTRALIZED.subtitle}
           animationDuration={1}
           animationYOffset={80}
+          animationDelay={
+            typeof window !== "undefined" && (window.innerWidth > 767 || window.innerHeight > 1300)
+              ? 2.25
+              : 0
+          }
           className="md:col-span-8 xl:col-span-7 xl:order-5"
         >
           {isMounted && theme && (
@@ -110,6 +115,11 @@ export function Services() {
           subtitle={services.WEB3.subtitle}
           animationDuration={1}
           animationYOffset={40}
+          animationDelay={
+            typeof window !== "undefined" && (window.innerWidth > 767 || window.innerHeight > 1300)
+              ? 2
+              : 0
+          }
           className="md:col-span-6 xl:col-span-3 xl:order-4 relative"
         >
           {isMounted && (
@@ -122,6 +132,11 @@ export function Services() {
           subtitle={services.INDIVIDUAL.subtitle}
           animationDuration={1}
           animationYOffset={120}
+          animationDelay={
+            typeof window !== "undefined" && (window.innerWidth > 767 || window.innerHeight > 1300)
+              ? 2.5
+              : 0
+          }
           className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
         >
           <SolutionAnimatedBlock />

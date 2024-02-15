@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const LLMAnimatedBlock = () => {
   return (
-    <div className="relative h-52 overflow-hidden ml-8 text-[0.5rem] w-4/5 md:w-3/5">
+    <div className="relative h-52 overflow-hidden ml-8 text-[0.5rem] w-4/5 md:w-3/5 max-w-[350px]">
       <div className="llm-wrapper">
         <div className="llm-row-1">
           <div className="flex">
