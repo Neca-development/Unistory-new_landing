@@ -28,7 +28,7 @@ export const LLMAnimatedBlock = () => {
             <div className="bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] py-1 px-2 rounded-full shadow-lg">
               //// //////////
             </div>
-            <div className="bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] py-1 px-2 rounded-full shadow-lg">
+            <div className="bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] py-1 px-2 rounded-full shadow-lg llm-button">
               ////////// ////
             </div>
           </div>
@@ -39,10 +39,10 @@ export const LLMAnimatedBlock = () => {
           </div>
         </div>
         <div className="mt-4">
-          <div className="flex">
-            <Image src={LLMChatBotAvatar} alt="" className="llm-row-4 w-5 h-5" />
+          <div className="flex llm-row-4">
+            <Image src={LLMChatBotAvatar} alt="" className=" w-5 h-5" />
             <div className="space-y-2 w-44">
-              <div className="llm-row-4 bg-light-bg-accent py-2 px-3 shadow-lg rounded-md ml-2 dark:bg-dark-bg-secondary">
+              <div className="bg-light-bg-accent py-2 px-3 shadow-lg rounded-md ml-2 dark:bg-dark-bg-secondary">
                 <span>///////////////////// /////////////// ////////////////////////////</span>
                 <ul className="list-disc pl-2">
                   <li>//// ////////////// // //////////</li>

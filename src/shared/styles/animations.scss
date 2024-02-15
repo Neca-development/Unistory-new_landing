@@ -26,6 +26,10 @@
   animation: llm-row-6-animation 10s linear infinite;
 }
 
+.llm-button {
+  animation: llm-button 10s linear infinite;
+}
+
 @keyframes llm-wrapper-animation {
   0%, 
   100% {
@@ -35,16 +39,16 @@
   10% {
     opacity: 1;
   }
-  30% {
+  40% {
     transform: translateY(2rem);
   }
-  40% {
+  50% {
     transform: translateY(-5rem);
   }
-  97% {
+  90% {
     opacity: 1;
   }
-  98% {
+  95% {
     opacity: 0;
   }
   99% {
@@ -60,10 +64,10 @@
   10% {
     opacity: 1;
   }
-  30% {
+  40% {
     opacity: 1;
   }
-  35% {
+  45% {
     opacity: 0;
   }
 
@@ -112,7 +116,7 @@
   45% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 1;
   }
 }
@@ -128,7 +132,7 @@
   55% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 1;
   }
 }
@@ -138,13 +142,29 @@
   100% {
     opacity: 0;
   }
-  70% {
+  60% {
     opacity: 0;
   }
-  75% {
+  65% {
     opacity: 1;
   }
   95% {
     opacity: 1;
+  }
+}
+
+@keyframes llm-button {
+  0%, 
+  100% {
+    @apply bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] scale-100;
+  }
+  15% {
+    @apply bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] scale-100;
+  }
+  20% {
+    @apply bg-[#FC4700];
+  }
+  65% {
+    @apply bg-[#FC4700];
   }
 }
