@@ -18,6 +18,7 @@ import Link from "next/link";
 import { useMounted } from "@shared/lib/hooks/useMounted";
 import { Web3AnimatedNotice } from "@features/service-card/web3-notice.component";
 import { SolutionAnimatedBlock } from "@features/service-card/solution-block.component";
+import { LLMAnimatedBlock } from "@features/service-card/llm-chat.component";
 
 export function Services() {
   const { locale } = useRouter();
@@ -47,9 +48,9 @@ export function Services() {
           <Image
             src={LLMChatBotBlur}
             alt=""
-            className="absolute left-0 bottom-0 w-2/3 opacity-50"
+            className="absolute left-0 bottom-0 w-4/5 opacity-50"
           />
-          {/* <div className="absolute z-[0] bottom-0 left-0 -translate-x-1/2 translate-y-[60%] w-[200px] h-[300px] rounded-l bg-bg-accent/[0.5] pointer-events-none blur-[104px]"></div> */}
+          <LLMAnimatedBlock />
           <Link
             className="btn-primary ml-4 mb-7 block w-fit px-4 py-2 relative z-[1]"
             href={services.LLM.button.url}
