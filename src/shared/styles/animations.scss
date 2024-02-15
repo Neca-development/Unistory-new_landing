@@ -1,25 +1,29 @@
 .llm-wrapper {
-  animation: llm-wrapper-animation 11s ease-out infinite;
+  animation: llm-wrapper-animation 10s linear infinite;
 }
 
 .llm-row-1 {
-  animation: llm-row-1-animation 11s ease-out infinite;
+  animation: llm-row-1-animation 10s linear infinite;
 }
 
 .llm-row-2 {
-  animation: llm-row-2-animation 11s ease-out infinite;
+  animation: llm-row-2-animation 10s linear infinite;
 }
 
 .llm-row-3 {
-  animation: llm-row-3-animation 11s ease-out infinite;
+  animation: llm-row-3-animation 10s linear infinite;
 }
 
 .llm-row-4 {
-  animation: llm-row-4-animation 11s ease-out infinite;
+  animation: llm-row-4-animation 10s linear infinite;
 }
 
 .llm-row-5 {
-  animation: llm-row-5-animation 11s ease-out infinite;
+  animation: llm-row-5-animation 10s linear infinite;
+}
+
+.llm-row-6 {
+  animation: llm-row-6-animation 10s linear infinite;
 }
 
 @keyframes llm-wrapper-animation {
@@ -37,10 +41,10 @@
   40% {
     transform: translateY(-5rem);
   }
-  94% {
+  97% {
     opacity: 1;
   }
-  97% {
+  98% {
     opacity: 0;
   }
   99% {
@@ -59,7 +63,7 @@
   30% {
     opacity: 1;
   }
-  40% {
+  35% {
     opacity: 0;
   }
 
@@ -102,10 +106,10 @@
   100% {
     opacity: 0;
   }
-  60% {
+  40% {
     opacity: 0;
   }
-  65% {
+  45% {
     opacity: 1;
   }
   90% {
@@ -118,13 +122,29 @@
   100% {
     opacity: 0;
   }
-  75% {
+  50% {
     opacity: 0;
   }
-  80% {
+  55% {
     opacity: 1;
   }
   90% {
+    opacity: 1;
+  }
+}
+
+@keyframes llm-row-6-animation {
+  0%, 
+  100% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  95% {
     opacity: 1;
   }
 }
