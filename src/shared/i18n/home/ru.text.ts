@@ -27,11 +27,11 @@ export const ServicesRu = {
     subtitle: "Автоматизируем создание контента",
   },
   WEB3: {
-    title: "Web3 services",
+    title: "Web3 сервисы",
     subtitle: "Кошельки, блокэксплореры, биржи, аналитические инструменты",
   },
   DECENTRALIZED: {
-    title: "Decentralized apps",
+    title: "Децентрализованные приложения",
     subtitle: "DApp — софт на основе смарт-контрактов",
   },
   INDIVIDUAL: {
