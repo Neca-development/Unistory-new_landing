@@ -11,11 +11,12 @@ import { SIPSIGNAL } from "./cases/sipsignal";
 import { PERSONAL } from "./cases/personal";
 import { DERMADEX } from "./cases/dermadex";
 import { UNIVERSITY_CHATBOT } from "./cases/university-chatbot";
+import { AI_CHATBOT } from "./cases/ai-chatbot";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
   UNIVERSITY_CHATBOT,
-  // AI_CHATBOT,
+  AI_CHATBOT,
   DERMADEX,
   FLATSPACE,
   PLAGTV,
