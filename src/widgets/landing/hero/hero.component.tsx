@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <div
       className={clsx(
-        "container justify-center pt-[3.5rem] pb-14 lg:flex lg:flex-col lg:pb-8 t-xs:pt-12"
+        "container justify-center pt-14 pb-20 lg:flex lg:flex-col lg:pb-8 t-xs:pt-12"
       )}
     >
       <section className="relative">
@@ -41,7 +41,7 @@ export function Hero() {
             <span className="inline-block duration-300">{text?.title.third}</span>
           </h1>
           {process.env.NODE_ENV === "development" && <SunComponent />}
-          <div className="text-center mt-5 text-light-text-secondary dark:text-dark-text-secondary md:text-3xl md:mt-16">
+          <div className="text-center mt-5 text-light-text-secondary dark:text-dark-text-secondary md:text-3xl md:mt-10">
             {text?.subtitle}
           </div>
         </LazyShow>

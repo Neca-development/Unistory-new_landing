@@ -37,8 +37,8 @@ export function Services() {
   }, [_theme]);
 
   return (
-    <section className="relative container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
-      <div className="absolute z-[0] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-bg-accent/[0.5] pointer-events-none blur-3xl md:w-2/5 md:h-96 xl:top-[60%]"></div>
+    <section className="relative container pt-20 pb-20 t-xs:pb-10 t-xs:pt-2">
+      <div className="absolute z-[0] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-bg-accent/[0.2] pointer-events-none blur-3xl md:w-2/5 md:h-96 xl:top-[60%]"></div>
       <div className="relative grid gap-3 md:grid-cols-12 xl:grid-cols-services">
         <ServiceCard
           title={services.LLM.title}
@@ -104,7 +104,7 @@ export function Services() {
           {isMounted && _theme && (
             <>
               <DecentralizedAnimatedBlock theme={_theme} />
-              <div className="absolute w-2/3 bottom-4 left-6 flex">
+              <div className="absolute w-3/5 md:w-2/3 bottom-4 left-6 flex">
                 <IconComponent
                   className="flex-1 backdrop-blur-sm rounded-full overflow-hidden"
                   name={_theme === "dark" ? "decentralizedBtcDark" : "decentralizedBtcLight"}
@@ -130,14 +130,16 @@ export function Services() {
           }
           className="md:col-span-6 xl:col-span-3 xl:order-4 relative"
         >
-          {isMounted && (
-            <Image
-              src={_theme === "dark" ? Web3Dark : Web3}
-              className="object-contain"
-              alt="Web3"
-            />
+          {isMounted && _theme && (
+            <>
+              <Image
+                src={_theme === "dark" ? Web3Dark : Web3}
+                className="object-contain"
+                alt="Web3"
+              />
+              <Web3AnimatedNotice theme={_theme} />
+            </>
           )}
-          <Web3AnimatedNotice />
         </ServiceCard>
         <ServiceCard
           title={services.INDIVIDUAL.title}
@@ -151,6 +153,7 @@ export function Services() {
               : 0
           }
           className="relative bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
+          subtitleClassName="text-dark-text-primary dark:text-dark-text-primary"
         >
           <SolutionAnimatedBlock />
           <div className="group">

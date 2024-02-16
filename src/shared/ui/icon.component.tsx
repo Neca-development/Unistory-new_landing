@@ -43,6 +43,7 @@ const clutchStar = dynamic(() => import("@public/assets/icons/clutch-star.svg"))
 const caseProjectLink = dynamic(() => import("@public/assets/icons/case-project-link.svg"));
 const serviceAI = dynamic(() => import("@public/assets/images/homepage/services-ai.svg"));
 const serviceAIDark = dynamic(() => import("@public/assets/images/homepage/services-ai_dark.svg"));
+const web3Convert = dynamic(() => import("@public/assets/images/homepage/web3convert.svg"));
 const decentralizedBtcLight = dynamic(
   () => import("@public/assets/images/homepage/service-decentralized-btc.svg")
 );
@@ -103,6 +104,7 @@ const iconTypes = {
   caseProjectLink,
   serviceAI,
   serviceAIDark,
+  web3Convert,
   decentralizedBtcLight,
   decentralizedBtcDark,
   decentralizedEthLight,
