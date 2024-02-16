@@ -92,7 +92,8 @@ export function Services() {
           animationDuration={1}
           animationYOffset={80}
           animationDelay={
-            typeof window !== "undefined" && (window.innerWidth > 767 || window.innerHeight > 1300)
+            typeof window !== "undefined" &&
+            ((window.innerWidth > 767 && window.innerWidth < 1280) || window.innerHeight > 1000)
               ? 2.25
               : 0
           }
@@ -116,7 +117,8 @@ export function Services() {
           animationDuration={1}
           animationYOffset={40}
           animationDelay={
-            typeof window !== "undefined" && (window.innerWidth > 767 || window.innerHeight > 1300)
+            typeof window !== "undefined" &&
+            ((window.innerWidth > 767 && window.innerWidth < 1280) || window.innerHeight > 1000)
               ? 2
               : 0
           }
@@ -133,7 +135,8 @@ export function Services() {
           animationDuration={1}
           animationYOffset={120}
           animationDelay={
-            typeof window !== "undefined" && (window.innerWidth > 767 || window.innerHeight > 1300)
+            typeof window !== "undefined" &&
+            ((window.innerWidth > 767 && window.innerWidth < 1280) || window.innerHeight > 1000)
               ? 2.5
               : 0
           }
