@@ -6,7 +6,8 @@ import ComputerVisionImage from "@public/assets/images/homepage/services-compute
 import ComputerVisionImageDark from "@public/assets/images/homepage/services-computer-vision_dark.png";
 import Web3 from "@public/assets/images/homepage/services-web3.png";
 import Web3Dark from "@public/assets/images/homepage/services-web3_dark.png";
-import LLMChatBotBlur from "@public/assets/images/homepage/llm-chatbot-blur.png";
+import LLMChatBotBg from "@public/assets/images/homepage/llm-chatbot-bg.png";
+import SolutionBg from "@public/assets/images/homepage/solution-bg.png";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -42,11 +43,7 @@ export function Services() {
           animationDelay={1.25}
           className="relative md:col-span-6 xl:col-span-5"
         >
-          <Image
-            src={LLMChatBotBlur}
-            alt=""
-            className="absolute left-0 bottom-0 w-4/5 opacity-50"
-          />
+          <Image src={LLMChatBotBg} alt="" className="absolute left-0 bottom-0 w-4/5 opacity-50" />
           <LLMAnimatedBlock />
           <Link
             className="btn-primary ml-4 mb-7 block w-fit px-4 py-2 relative z-[1]"
@@ -144,15 +141,22 @@ export function Services() {
               ? 2.5
               : 0
           }
-          className="bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
+          className="relative bg-bg-accent dark:bg-bg-accent text-dark-text-primary md:col-span-6 xl:col-span-3 xl:order-6"
         >
           <SolutionAnimatedBlock />
-          <Link
-            className="btn-primary ml-4 mb-7 block w-fit px-4 py-2"
-            href={services.INDIVIDUAL.button.url}
-          >
-            {services.INDIVIDUAL.button.text}
-          </Link>
+          <div className="group">
+            <Link
+              className="btn-primary ml-4 mb-7 block w-fit px-4 py-2 relative z-[1]"
+              href={services.INDIVIDUAL.button.url}
+            >
+              {services.INDIVIDUAL.button.text}
+            </Link>
+            <Image
+              className="absolute bottom-0 left-0 w-full object-contain pointer-events-none z-0 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500	"
+              src={SolutionBg}
+              alt=""
+            />
+          </div>
         </ServiceCard>
       </div>
     </section>
