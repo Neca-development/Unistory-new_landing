@@ -4,7 +4,6 @@ import { useAnimationStore } from "@shared/lib/store";
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useTheme } from "next-themes";
 import * as React from "react";
 import { useEffect, useMemo, useState } from "react";
 import useScrollbarSize from "react-scrollbar-size";
@@ -21,9 +20,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
   // const router = useRouter()\
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMenuDown, setIsMenuDown] = useState(false);
-  const [isLoad, setIsLoad] = useState(false);
-  const { theme, systemTheme } = useTheme();
-  const _theme = theme === "system" ? systemTheme : theme;
+  // const [isLoad, setIsLoad] = useState(false);
   const { shouldAnimate } = useAnimationStore();
   const isMounted = useMounted();
 
@@ -65,15 +62,15 @@ export const Header = React.memo((props: IHeaderProperties) => {
       }
     };
 
-    const timeout = setTimeout(() => {
-      setIsLoad(true);
-    }, 300);
+    // const timeout = setTimeout(() => {
+    //   setIsLoad(true);
+    // }, 300);
 
     document.addEventListener("scroll", scrollFunction);
 
     return () => {
       document.removeEventListener("scroll", scrollFunction);
-      clearTimeout(timeout);
+      // clearTimeout(timeout);
     };
   }, []);
 
