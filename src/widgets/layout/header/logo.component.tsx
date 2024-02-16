@@ -29,9 +29,8 @@ export function Logo(props: ILogoProps) {
         "fixed top-0 left-0",
         isHome &&
           shouldAnimate &&
-          "z-[10] animate-logo-enter-mobile lg:animate-logo-enter-lg 2xl:animate-logo-enter-xl will-change-[top,left, transform]",
-        !shouldAnimate &&
-          "relative w-[128px] h-[31px] lg:w-[150px] lg:h-[36px] 2xl:w-[166px] 2xl:h-[40px]",
+          "z-[10] animate-logo-enter-mobile lg:animate-logo-enter-lg will-change-[top,left,transform]",
+        !shouldAnimate && "relative w-[128px] h-[31px] lg:w-[150px] lg:h-[36px]",
         mobileMenu && "relative",
         !isHome && "relative"
       )}
@@ -53,7 +52,7 @@ export function Logo(props: ILogoProps) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={clsx(
-            "m-0 duration-300 min-w-[128px] lg:min-w-[150px] 2xl:min-w-[166px] fill-summer",
+            "m-0 duration-300 min-w-[128px] lg:min-w-[150px] fill-summer",
             isHome &&
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
@@ -89,7 +88,7 @@ export function Logo(props: ILogoProps) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={clsx(
-            "m-0 duration-300 min-w-[128px] lg:min-w-[150px] 2xl:min-w-[166px] fill-summer",
+            "m-0 duration-300 min-w-[128px] lg:min-w-[150px] fill-summer",
             isHome &&
               shouldAnimate &&
               "animate-main-logo-width-mobile lg:animate-main-logo-width-lg will-change-[width]",
