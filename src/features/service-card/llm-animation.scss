@@ -1,0 +1,169 @@
+.llm-wrapper {
+  animation: llm-wrapper-animation 10s linear infinite;
+}
+
+.llm-row-1 {
+  animation: llm-row-1-animation 10s linear infinite;
+}
+
+.llm-row-2 {
+  animation: llm-row-2-animation 10s linear infinite;
+}
+
+.llm-row-3 {
+  animation: llm-row-3-animation 10s linear infinite;
+}
+
+.llm-row-4 {
+  animation: llm-row-4-animation 10s linear infinite;
+}
+
+.llm-row-5 {
+  animation: llm-row-5-animation 10s linear infinite;
+}
+
+.llm-row-6 {
+  animation: llm-row-6-animation 10s linear infinite;
+}
+
+.llm-button {
+  animation: llm-button 10s linear infinite;
+}
+
+@keyframes llm-wrapper-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+    transform: translateY(2rem);
+  }
+  10% {
+    @apply opacity-100;
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  60% {
+    transform: translateY(-5rem);
+  }
+  90% {
+    @apply opacity-100;
+  }
+  95% {
+    @apply opacity-0;
+  }
+  99% {
+    transform: translateY(-5rem);
+  }
+}
+
+@keyframes llm-row-1-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+  }
+  10% {
+    @apply opacity-100;
+  }
+  50% {
+    @apply opacity-100;
+  }
+  55% {
+    @apply opacity-0;
+  }
+}
+
+@keyframes llm-row-2-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+  }
+  10% {
+    @apply opacity-0;
+  }
+  20% {
+    @apply opacity-100;
+  }
+  90% {
+    @apply opacity-100;
+  }
+}
+
+@keyframes llm-row-3-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+  }
+  20% {
+    @apply opacity-0;
+  }
+  30% {
+    @apply opacity-100;
+  }
+  90% {
+    @apply opacity-100;
+  }
+}
+
+@keyframes llm-row-4-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+  }
+  60% {
+    @apply opacity-0;
+  }
+  65% {
+    @apply opacity-100;
+  }
+  95% {
+    @apply opacity-100;
+  }
+}
+
+@keyframes llm-row-5-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+  }
+  70% {
+    @apply opacity-0;
+  }
+  75% {
+    @apply opacity-100;
+  }
+  95% {
+    @apply opacity-100;
+  }
+}
+
+@keyframes llm-row-6-animation {
+  0%, 
+  100% {
+    @apply opacity-0;
+  }
+  80% {
+    @apply opacity-0;
+  }
+  85% {
+    @apply opacity-100;
+  }
+  95% {
+    @apply opacity-100;
+  }
+}
+
+@keyframes llm-button {
+  0%, 
+  100% {
+    @apply bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] scale-100;
+  }
+  35% {
+    @apply bg-light-bg-accent/[0.5] dark:bg-dark-bg-secondary/[0.5] scale-100;
+  }
+  40% {
+    @apply bg-[#FC4700];
+  }
+  65% {
+    @apply bg-[#FC4700];
+  }
+}

@@ -1,0 +1,15 @@
+.btn-primary {
+  @apply bg-[#000000] dark:bg-light-bg-accent;
+  @apply text-light-bg-accent dark:text-[#000000];
+  @apply hover:bg-[#FF0000] hover:text-light-bg-accent dark:hover:bg-[#FF4800];
+  @apply rounded-lg;
+  @apply transition-all;
+}
+
+.btn-secondary {
+  @apply bg-light-bg-accent dark:bg-[#323232];
+  @apply text-light-text-secondary dark:text-dark-text-secondary;
+  @apply hover:text-[#FF4800] dark:hover:bg-[#F6F4F2];
+  @apply rounded-lg;
+  @apply transition-all;
+}

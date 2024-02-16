@@ -1,9 +1,9 @@
-export const ROUTESEN = [
-  {
+export const ROUTESEN = {
+  CASES: {
     label: "Сases",
     route: "/cases",
   },
-  {
+  CTA: {
     label: "Get in touch",
     route: "#become-customer",
   },
@@ -23,4 +23,4 @@ export const ROUTESEN = [
   // 	label: "Get in touch",
   // 	route: "/",
   // },
-];
+};

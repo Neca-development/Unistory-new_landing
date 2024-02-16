@@ -12,17 +12,21 @@ module.exports = {
       roboto: ["Roboto", "sans-serif"],
     },
     colors: {
-      "light-bg": "#F5F5F5",
-      "dark-bg": "#141414",
+      "light-bg": "#F6F4F2",
+      "dark-bg": "#222222",
 
+      "bg-accent": "#FF4800",
       "light-bg-accent": "#FFFFFF",
       "dark-bg-accent": "#1F1F1F",
 
       "light-text-primary": "#0F1A20",
       "dark-text-primary": "#FFFFFF",
 
-      "light-text-secondary": "#0F1A2080",
-      "dark-text-secondary": "#FFFFFF80",
+      "bg-secondary": "#ffffff",
+      "dark-bg-secondary": "#2A2A2A",
+
+      "light-text-secondary": "#6F7483",
+      "dark-text-secondary": "#C3C3C3",
 
       "icon-accent": "#0F1A20",
       "icon-on-primary": "#FFFFFFE5",
@@ -55,10 +59,11 @@ module.exports = {
       "black-text": "#0F1A20",
 
       winter: "#4FCCD5",
-      summer: "#EC5F3B",
+      summer: "#FF4800",
     },
     extend: {
       screens: {
+        "m-xl1": { max: "1279px" },
         "t-xs": { max: "640px" },
         "m-2xl": { max: "520px" },
         "m-xl": { max: "460px" },
@@ -68,28 +73,6 @@ module.exports = {
         "m-xs": { max: "260px" },
       },
       fontSize: {
-        h1: [
-          "6.0rem",
-          {
-            lineHeight: "6.575rem",
-            letterSpacing: "0.02em",
-            fontWeight: "800",
-          },
-        ],
-        "large-h1": [
-          "5.75rem",
-          {
-            lineHeight: "6.5rem",
-          },
-        ],
-        "mob-h1": [
-          "2rem",
-          {
-            lineHeight: "2.55rem",
-            letterSpacing: "0.02em",
-            fontWeight: "700",
-          },
-        ],
         h2: [
           "2.875rem",
           {
@@ -129,6 +112,9 @@ module.exports = {
         l: "-8px 8px 16px rgba(0, 0, 0, 0.2)",
         b: "-10px 10px 10px rgba(0, 0, 0, 0.25)",
       },
+      gridTemplateColumns: {
+        services: "repeat(13, minmax(0, 1fr))",
+      },
       keyframes: {
         "move-in": {
           "0%": { transform: "translateY(-110%)" },
@@ -164,7 +150,7 @@ module.exports = {
           },
           "100%": {
             top: "2rem",
-            left: "calc((100vw - 70rem) / 2)",
+            left: "calc((100vw - 80rem) / 2)",
             transform: "translate(0, 0)",
           },
         },
@@ -315,6 +301,58 @@ module.exports = {
             right: 0,
           },
         },
+        "solution-big-circle": {
+          "0%,100%": {
+            transform: "translate(0,0)",
+          },
+          "10%": {
+            transform: "translate(0,0)",
+          },
+          "25%": {
+            transform: "translate(20px,6px)",
+          },
+          "30%": {
+            transform: "translate(20px,6px)",
+          },
+          "50%": {
+            transform: "translate(45px,33px)",
+          },
+          "60%": {
+            transform: "translate(45px,33px)",
+          },
+          "75%": {
+            transform: "translate(9px,26px)",
+          },
+          "85%": {
+            transform: "translate(9px,26px)",
+          },
+        },
+        "solution-small-circle": {
+          "0%,100%": {
+            transform: "translate(0,0)",
+          },
+          "10%": {
+            transform: "translate(0,0)",
+          },
+          "25%": {
+            transform: "translate(-45px,22px)",
+          },
+          "30%": {
+            transform: "translate(-45px,22px)",
+          },
+          "50%": {
+            transform: "translate(-45px,-24px)",
+          },
+          "60%": {
+            transform: "translate(-45px,-24px)",
+          },
+          "75%": {
+            transform: "translate(0,-5px)",
+          },
+          "85%": {
+            transform: "translate(0,-5px)",
+          },
+        },
       },
       animation: {
         "move-in": "move-in 0.3s ease-out forwards",
@@ -335,6 +373,8 @@ module.exports = {
         "header-links-opacity": `header-links-opacity ${LOGO_ENTER_ANIMATION_DURATION}s ease-in-out forwards`,
         "link-hover-on": "link-hover-on 0.3s ease-out forwards",
         "link-hover-off": "link-hover-off 0.3s ease-out forwards",
+        "solution-big-circle": "solution-big-circle 6s ease-out infinite",
+        "solution-small-circle": "solution-small-circle 6s ease-out infinite",
       },
     },
   },

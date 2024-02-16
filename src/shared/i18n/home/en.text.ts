@@ -1,100 +1,48 @@
-import { IMessage, IconsTypes } from "@shared/ui";
+import { IMessage } from "@shared/ui";
 
 export const HeroEn = {
-  description: {
-    first: "Developing ",
-    second: "digital",
-    third: "solutions",
-    fourth: "for",
-    fifth: "web & mobile",
+  title: {
+    first: "Integrating the future",
+    second: "Web services and applications",
+    third: "based on AI & blockchain",
   },
-  params: {
-    teamSize: "team <br/>members",
-    projects: "successful <br/>projects",
-    rating: "Clutch <br/>rating",
-  },
+  subtitle: "analytics / design / development",
 };
 
-export const ServicesEn: Array<{
-  id: number;
-  title: string;
-  icon: IconsTypes;
-  header: string;
-  description: string;
-}> = [
-  {
-    id: 1,
-    title: "Blockchain & AI",
-    icon: "bitcoin",
-    header: "",
-    description: `      
-    <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
-      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Blockchain integration</h4>
-      <ul>
-        <li>— Tokenomics development</li>
-        <li>— Smart-contracts development</li>
-        <li>— DeFi-integration for web and mobile applications</li>
-      </ul>
-      </div>
-      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
-      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Artificial Intelligence</h4>
-      <ul>
-        <li>— Research and processing data</li>
-        <li>— Machine learning</li>
-        <li>— Integration of ChatGPT / Azure OpenAI</li>
-      </ul>
-    </div>`,
+export const ServicesEn = {
+  LLM: {
+    title: "LLM chat bots",
+    subtitle: "AI assistants for your <br /> customers and employees",
+    button: {
+      text: "Learn more",
+      url: "/cases/ai-chatbot/",
+    },
   },
-  {
-    id: 2,
-    title: "Product design",
-    icon: "grid",
-    header: "",
-    description: `
-      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6">
-        <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Analytics</h4>
-        <ul>
-          <li>— Design audit</li>
-          <li>— Product research</li>
-          <li>— Technical specification</li>
-        </ul>
-      </div>
-      <div class="bg-light-bg/[0.8] dark:bg-dark-bg/[0.8] p-4 lg:p-6 mt-4">
-      <h4 class="mb-3 text-xl lg:text-3xl font-semibold">Design</h4>
-      <ul>
-        <li>— Engineering and prototyping</li>
-        <li>— UI/UX design</li>
-        <li>— Graphic design</li>
-      </ul>
-      </div>
-    `,
+  COMPUTER_VISION: {
+    title: "Computer vision",
+    subtitle: "Detecting, classifying and <br /> analysing objects",
   },
-  {
-    id: 3,
-    title: "Development",
-    icon: "layout",
-    header: "Web & Mobile development",
-    description: `We develop a web service or mobile application to solve your
-    unique business tasks.
-    <br /> <br />
-    - frontend: React, Angular, Vue, TS
-    <br />
-    - backend: Node.js, C#
-    <br />- mobile: React native, Kotlin, Swift`,
+  AI: {
+    title: "Text, video, image AI generation",
+    subtitle: "Automate content creation with <br /> AI tools",
   },
-  {
-    id: 4,
-    title: "Maintain & Support",
-    icon: "layout",
-    header: "Maintain & Support",
-    description: `Provide an online or offline formed team of professionals to your
-    project at any stage of product development. We will refine,
-    improve or completely modernize existing IT solutions.
-    <br /> <br />
-    And you don’t even have to invite us to team buildings! Though we
-    certainly wouldn’t refuse :)`,
+  WEB3: {
+    title: "Web3 services",
+    subtitle: "Wallets, block explorers, exchanges, analytical tools",
   },
-];
+  DECENTRALIZED: {
+    title: "Decentralized apps",
+    subtitle: "DApp — smart contract platforms",
+  },
+  INDIVIDUAL: {
+    title: "Custom solution",
+    subtitle: "We can do what others cannot",
+    button: {
+      text: "Get in touch",
+      url: "#become-customer",
+    },
+  },
+};
 
 export const WorksEn = {
   title: `We help businesses develop

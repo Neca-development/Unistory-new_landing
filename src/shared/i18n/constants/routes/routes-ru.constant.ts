@@ -1,9 +1,9 @@
-export const ROUTESRU = [
-  {
+export const ROUTESRU = {
+  CASES: {
     label: "Кейсы",
     route: "/cases",
   },
-  {
+  CTA: {
     label: "Оставить заявку",
     route: "#become-customer",
   },
@@ -23,4 +23,4 @@ export const ROUTESRU = [
   // 	label: "Стать клиентом",
   // 	route: "/",
   // },
-];
+};

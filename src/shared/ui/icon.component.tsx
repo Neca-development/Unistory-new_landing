@@ -41,6 +41,25 @@ const menuBtnLight = dynamic(() => import("@public/assets/icons/menu-btn-light.s
 const menuBtnDark = dynamic(() => import("@public/assets/icons/menu-btn-dark.svg"));
 const clutchStar = dynamic(() => import("@public/assets/icons/clutch-star.svg"));
 const caseProjectLink = dynamic(() => import("@public/assets/icons/case-project-link.svg"));
+const serviceAI = dynamic(() => import("@public/assets/images/homepage/services-ai.svg"));
+const serviceAIDark = dynamic(() => import("@public/assets/images/homepage/services-ai_dark.svg"));
+const decentralizedBtcLight = dynamic(
+  () => import("@public/assets/images/homepage/service-decentralized-btc.svg")
+);
+const decentralizedBtcDark = dynamic(
+  () => import("@public/assets/images/homepage/service-decentralized-btc_dark.svg")
+);
+const decentralizedEthLight = dynamic(
+  () => import("@public/assets/images/homepage/service-decentralized-eth.svg")
+);
+const decentralizedEthDark = dynamic(
+  () => import("@public/assets/images/homepage/service-decentralized-eth_dark.svg")
+);
+const decLine1 = dynamic(() => import("@public/assets/images/homepage/dec-line-1.svg"));
+const decLine2 = dynamic(() => import("@public/assets/images/homepage/dec-line-2.svg"));
+const decLine3 = dynamic(() => import("@public/assets/images/homepage/dec-line-3.svg"));
+const decLine4 = dynamic(() => import("@public/assets/images/homepage/dec-line-4.svg"));
+const decLine5 = dynamic(() => import("@public/assets/images/homepage/dec-line-5.svg"));
 
 const iconTypes = {
   unistory,
@@ -82,6 +101,17 @@ const iconTypes = {
   menuBtnDark,
   clutchStar,
   caseProjectLink,
+  serviceAI,
+  serviceAIDark,
+  decentralizedBtcLight,
+  decentralizedBtcDark,
+  decentralizedEthLight,
+  decentralizedEthDark,
+  decLine1,
+  decLine2,
+  decLine3,
+  decLine4,
+  decLine5,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
