@@ -102,10 +102,14 @@ export function Services() {
           {isMounted && theme && (
             <>
               <DecentralizedAnimatedBlock theme={theme} />
-              <div className="absolute w-2/3 bottom-4 left-6">
+              <div className="absolute w-2/3 bottom-4 left-6 flex">
                 <IconComponent
-                  className="w-full h-full"
-                  name={theme === "dark" ? "decentralizedServiceDark" : "decentralizedServiceLight"}
+                  className="flex-1 backdrop-blur-sm rounded-full overflow-hidden"
+                  name={theme === "dark" ? "decentralizedBtcDark" : "decentralizedBtcLight"}
+                />
+                <IconComponent
+                  className="flex-1 backdrop-blur-sm rounded-full overflow-hidden"
+                  name={theme === "dark" ? "decentralizedEthDark" : "decentralizedEthLight"}
                 />
               </div>
             </>
