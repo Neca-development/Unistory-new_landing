@@ -1,6 +1,5 @@
 import { IconComponent } from "@shared/ui";
 import { motion, useAnimation } from "framer-motion";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 export const Web3AnimatedNotice = ({ theme }: { theme: string }) => {
