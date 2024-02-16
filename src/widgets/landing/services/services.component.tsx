@@ -1,6 +1,6 @@
 import { ServicesEn, ServicesRu } from "@shared/i18n";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { ServiceCard } from "./service-card.component";
 import ComputerVisionImage from "@public/assets/images/homepage/services-computer-vision.png";
 import ComputerVisionImageDark from "@public/assets/images/homepage/services-computer-vision_dark.png";
@@ -20,8 +20,9 @@ import { DecentralizedAnimatedBlock } from "@features/service-card/decentralized
 
 export function Services() {
   const { locale } = useRouter();
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
   const isMounted = useMounted();
+  const _theme = theme === "system" ? systemTheme : theme;
 
   const services = React.useMemo(() => {
     if (locale === "ru") {
@@ -30,6 +31,10 @@ export function Services() {
 
     return ServicesEn;
   }, [locale]);
+
+  useEffect(() => {
+    console.log(_theme);
+  }, [_theme]);
 
   return (
     <section className="relative container pt-12 pb-20 t-xs:pb-10 t-xs:pt-2">
@@ -60,9 +65,9 @@ export function Services() {
           animationDelay={typeof window !== "undefined" && window.innerWidth > 767 ? 1.5 : 0}
           className="md:col-span-6 xl:col-span-5"
         >
-          {isMounted && theme && (
+          {isMounted && _theme && (
             <Image
-              src={theme === "dark" ? ComputerVisionImageDark : ComputerVisionImage}
+              src={_theme === "dark" ? ComputerVisionImageDark : ComputerVisionImage}
               className="object-contain"
               alt="AI"
             />
@@ -76,9 +81,9 @@ export function Services() {
           animationDelay={typeof window !== "undefined" && window.innerWidth > 767 ? 1.75 : 0}
           className="md:col-span-4 xl:col-span-3"
         >
-          {isMounted && theme && (
+          {isMounted && _theme && (
             <IconComponent
-              name={theme === "dark" ? "serviceAIDark" : "serviceAI"}
+              name={_theme === "dark" ? "serviceAIDark" : "serviceAI"}
               className="w-full"
             />
           )}
@@ -96,17 +101,17 @@ export function Services() {
           }
           className="relative md:col-span-8 xl:col-span-7 xl:order-5"
         >
-          {isMounted && theme && (
+          {isMounted && _theme && (
             <>
-              <DecentralizedAnimatedBlock theme={theme} />
+              <DecentralizedAnimatedBlock theme={_theme} />
               <div className="absolute w-2/3 bottom-4 left-6 flex">
                 <IconComponent
                   className="flex-1 backdrop-blur-sm rounded-full overflow-hidden"
-                  name={theme === "dark" ? "decentralizedBtcDark" : "decentralizedBtcLight"}
+                  name={_theme === "dark" ? "decentralizedBtcDark" : "decentralizedBtcLight"}
                 />
                 <IconComponent
                   className="flex-1 backdrop-blur-sm rounded-full overflow-hidden"
-                  name={theme === "dark" ? "decentralizedEthDark" : "decentralizedEthLight"}
+                  name={_theme === "dark" ? "decentralizedEthDark" : "decentralizedEthLight"}
                 />
               </div>
             </>
@@ -126,7 +131,11 @@ export function Services() {
           className="md:col-span-6 xl:col-span-3 xl:order-4 relative"
         >
           {isMounted && (
-            <Image src={theme === "dark" ? Web3Dark : Web3} className="object-contain" alt="Web3" />
+            <Image
+              src={_theme === "dark" ? Web3Dark : Web3}
+              className="object-contain"
+              alt="Web3"
+            />
           )}
           <Web3AnimatedNotice />
         </ServiceCard>
