@@ -11,6 +11,7 @@ interface IServiceCard {
   children?: ReactNode;
   className?: string;
   animationDelay?: number;
+  subtitleClassName?: string;
 }
 
 export const ServiceCard = (props: IServiceCard) => {
@@ -22,6 +23,7 @@ export const ServiceCard = (props: IServiceCard) => {
     animationDelay,
     animationDuration,
     animationYOffset,
+    subtitleClassName,
   } = props;
 
   const controls = useAnimation();
@@ -61,7 +63,12 @@ export const ServiceCard = (props: IServiceCard) => {
         <h2 className="text-lg font-semibold mb-2 leading-tight md:text-[2.125rem] lg:text-2xl xl:text-xl">
           {title}
         </h2>
-        <h3 className="text-lg leading-tight md:text-[1.65rem] lg:text-base">
+        <h3
+          className={clsx(
+            "text-lg leading-tight text-light-text-secondary dark:text-dark-text-secondary md:text-[1.65rem] lg:text-base",
+            subtitleClassName
+          )}
+        >
           <span dangerouslySetInnerHTML={{ __html: subtitle }}></span>
         </h3>
       </div>
