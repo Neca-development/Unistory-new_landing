@@ -104,7 +104,7 @@ export function Services() {
           {isMounted && _theme && (
             <>
               <DecentralizedAnimatedBlock theme={_theme} />
-              <div className="absolute w-2/3 bottom-4 left-6 flex">
+              <div className="absolute w-3/5 md:w-2/3 bottom-4 left-6 flex">
                 <IconComponent
                   className="flex-1 backdrop-blur-sm rounded-full overflow-hidden"
                   name={_theme === "dark" ? "decentralizedBtcDark" : "decentralizedBtcLight"}
