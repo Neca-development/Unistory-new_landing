@@ -31,6 +31,10 @@ import csharpIcon from "@public/assets/technologies/c-sharp.png";
 import openaiIcon from "@public/assets/technologies/openai.png";
 import openaiDarkIcon from "@public/assets/technologies/openai-dark.png";
 import azureIcon from "@public/assets/technologies/azure.png";
+import metamaskIcon from "@public/assets/technologies/metamask.png";
+import stripeIcon from "@public/assets/technologies/stripe.png";
+import wagmiIcon from "@public/assets/technologies/wagmi.png";
+import wagmiDarkIcon from "@public/assets/technologies/wagmi-dark.png";
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
@@ -53,7 +57,10 @@ export type AvailableTechnologiesType =
   | "python"
   | "csharp"
   | "openai"
-  | "azure";
+  | "azure"
+  | "metamask"
+  | "stripe"
+  | "wagmi";
 
 type TechnologyType = {
   [index in AvailableTechnologiesType]: {
@@ -201,6 +208,27 @@ export const TECHNOLOGIES: TechnologyType = {
     icon: {
       dark: azureIcon.src,
       light: azureIcon.src,
+    },
+  },
+  metamask: {
+    name: "MetaMask",
+    icon: {
+      dark: metamaskIcon.src,
+      light: metamaskIcon.src,
+    },
+  },
+  stripe: {
+    name: "Stripe",
+    icon: {
+      dark: stripeIcon.src,
+      light: stripeIcon.src,
+    },
+  },
+  wagmi: {
+    name: "Stripe",
+    icon: {
+      dark: wagmiDarkIcon.src,
+      light: wagmiIcon.src,
     },
   },
 } as const;

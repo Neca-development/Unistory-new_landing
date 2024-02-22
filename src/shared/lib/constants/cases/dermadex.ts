@@ -48,7 +48,7 @@ export const DERMADEX: ICase = {
     mob: dermadexBanner.src,
   },
   description: {
-    en: "Rami immigrated to Canada from Iran many years ago. Back in his homeland, he left his business partner - Dr. Hudami, a professional dermatologist. Together, they decided to develop an application where a neural network would determine dermatological diagnosis based on photos of problematic skin - and entrusted us with this task. The goal of the application is to help patients worldwide treat skin conditions.",
+    en: "Rami immigrated to Canada from Iran many years ago. Back in his homeland, he left his business partner - Dr. Khoddami, a professional dermatologist. Together, they decided to develop an application where a neural network would determine dermatological diagnosis based on photos of problematic skin - and entrusted us with this task. The goal of the application is to help patients worldwide treat skin conditions.",
     ru: "Рами иммигрировал в Канаду из Ирана много лет назад. На Родине у него остался партнер по бизнесу — доктор Худами, профессиональный дерматолог. Вместе они решили сделать приложение, где нейросеть будет определять дерматологический диагноз по фото проблемной кожи — и доверили эту задачу нам. Цель приложения — помочь пациентам по всему миру лечить кожные заболевания.",
   },
   params: {
@@ -86,7 +86,7 @@ export const DERMADEX: ICase = {
       text: [
         {
           text: {
-            en: "At the outset, Rami and Dr. Hudami defined the main user scenario:",
+            en: "At the outset, Rami and Dr. Khoddami defined the main user scenario:",
             ru: "Рами и доктор Худами на старте определили главный пользовательский сценарий:",
           },
         },
@@ -302,8 +302,8 @@ export const DERMADEX: ICase = {
       photo: "",
     },
     text: {
-      en: "«I posted the task on Upwork, and one of the responses came from the Unistory team. The company's cases impressed me: the attention to detail, technologies, and experience in the medical field. I immediately decided that these guys are a great fit for us, and I wasn't wrong: everything has been fantastic since then and continues to be».",
-      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: детали, технологии, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе».",
+      en: "«I posted a task on Upwork, and one of the responses was from the Unistory team. The company's portfolio impressed me: the details, technologies, experience in the medical field. I immediately decided that these guys are perfect for us, and I was not mistaken: from that moment until now, everything has been amazing. Initially, Dr. Khoddami and I weren't sure if we could implement our idea — but Unistory pulled it off».",
+      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: детали, технологии, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе. Изначально мы с доктором Худдами не были уверены, что сможем реализовать свою идею — но Unistory справились».",
     },
   },
   team: [
@@ -313,5 +313,7 @@ export const DERMADEX: ICase = {
     TEAM.yuriUmnov,
     TEAM.andreyBabenkovRN,
     TEAM.yanBortsov,
+    TEAM.vladislavKiribyatev,
+    TEAM.rostislavPetrov,
   ],
 };

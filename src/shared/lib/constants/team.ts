@@ -229,6 +229,16 @@ export const TEAM = {
       ru: "Проектный менеджер",
     },
   },
+  ilyaSokolov: {
+    name: {
+      en: "Ilya Sokolov",
+      ru: "Илья Соколов",
+    },
+    position: {
+      en: "Project manager",
+      ru: "Проектный менеджер",
+    },
+  },
   yanSofronov: {
     name: {
       en: "Yan Sofronov",
@@ -267,6 +277,16 @@ export const TEAM = {
     position: {
       en: "Frontend developer",
       ru: "Frontend разработчик",
+    },
+  },
+  rostislavPetrov: {
+    name: {
+      en: "Rostislav Petrov",
+      ru: "Ростислав Петров",
+    },
+    position: {
+      en: "QA",
+      ru: "Тестировщик",
     },
   },
   yanBortsov: {
