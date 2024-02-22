@@ -1,7 +1,8 @@
 import { ICase } from "@shared/lib/types";
 import { TEAM } from "../team";
 import { TECHNOLOGIES } from "../technologies.constats";
-import csusmBanner from "@public/assets/images/cases/university-chatbot/banner.jpg";
+import csusmBannerEN from "@public/assets/images/cases/university-chatbot/banner-en.jpg";
+import csusmBannerRU from "@public/assets/images/cases/university-chatbot/banner-ru.jpg";
 import csusmImage1EN from "@public/assets/images/cases/university-chatbot/uikit-en.jpg";
 import csusmImage1RU from "@public/assets/images/cases/university-chatbot/uikit-ru.jpg";
 import csusmImage2EN from "@public/assets/images/cases/university-chatbot/answering-en.jpg";
@@ -41,8 +42,14 @@ export const UNIVERSITY_CHATBOT: ICase = {
     mob: csusmThumbMob.src,
   },
   heroBanner: {
-    desktop: csusmBanner.src,
-    mob: csusmBanner.src,
+    desktop: {
+      en: csusmBannerEN.src,
+      ru: csusmBannerRU.src,
+    },
+    mob: {
+      en: csusmBannerEN.src,
+      ru: csusmBannerRU.src,
+    },
   },
   description: {
     en: "Automation of communication between the American university, its applicants, and students. Reduction of the workload of operators and costs associated with the call center operations. Providing users with accurate information from the university's data 24/7. Segmentation of applicants into multiple distinct audiences for marketing purposes.",

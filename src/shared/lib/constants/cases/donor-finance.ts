@@ -8,8 +8,8 @@ import donorEarnings from "@public/assets/images/cases/donor/earnings.png";
 import donorStacking from "@public/assets/images/cases/donor/stacking.jpg";
 import donorReferal from "@public/assets/images/cases/donor/referal.png";
 import donorBlockchain from "@public/assets/images/cases/donor/blockhain.png";
-import chatbotBannerThumb from "@public/assets/images/cases/ai-chatbot/thumb.jpg";
-import chatbotBannerThumbMob from "@public/assets/images/cases/ai-chatbot/thumb_mob.jpg";
+import chatbotBannerThumb from "@public/assets/images/cases/donor/thumb.jpg";
+import chatbotBannerThumbMob from "@public/assets/images/cases/donor/thumb_mob.jpg";
 import { TECHNOLOGIES } from "../technologies.constats";
 import { TEAM } from "../team";
 
