@@ -21,7 +21,7 @@ export const DONOR: ICase = {
   id: "donor",
   heroTitle: {
     en: "Donor Finance - a charitable blockchain project blurring the boundaries between web3 and web2",
-    ru: "Donor FInance — благотворительный блокчейн-проект, стирающий границы между web3 и web2",
+    ru: "Donor Finance — благотворительный блокчейн-проект, стирающий границы между web3 и web2",
   },
   categories: {
     en: ["A charitable platform at the intersection of web3 and web2"],
@@ -47,7 +47,7 @@ export const DONOR: ICase = {
   },
   description: {
     en: "The main idea of the Donor Finance project is to help those in need around the world while simultaneously providing people engaged in charity work with an opportunity for additional income. An accompanying goal is to unite the worlds of blockchain and fiat, web3 and web2, and lower the entry barrier for users into the crypto industry.",
-    ru: "Главная идея проекта Donor Finance — помочь нуждающимся по всему миру и одновременно дать людям, которые занимаются благотворительностью, возможность дополнительного заработка",
+    ru: "Главная идея проекта Donor Finance — помочь нуждающимся по всему миру и одновременно дать людям, которые занимаются благотворительностью, возможность дополнительного заработка. Сопутствующая цель — объединить миры блокчейна и фиата, web3 и web2, снизить порог входа пользователей в крипто-индустрию.",
   },
   params: {
     budget: {
@@ -114,7 +114,7 @@ export const DONOR: ICase = {
         {
           text: {
             en: "An important aspect of any charitable project is proving to people that you are really doing good deeds and that all funds raised are going where they are needed. What are we doing for this? Several important things: voting system and algorithmic feed; KYC integration; reporting for creators of charitable campaigns; IPFS storage.",
-            ru: "Важный момент для любого благотворительного проекта — доказать людям, что ты действительно делаешь добрые дела, и что все собранные средства идут куда нужно.  Что мы для этого делаем? Несколько важных вещей:система голосования и алгоритмической ленты; интеграция KYC; отчетность для создателей благотворительных кампаний; хранилище IPFS",
+            ru: "Важный момент для любого благотворительного проекта — доказать людям, что ты действительно делаешь добрые дела, и что все собранные средства идут куда нужно.  Что мы для этого делаем? Несколько важных вещей: система голосования и алгоритмической ленты; интеграция KYC; отчетность для создателей благотворительных кампаний; хранилище IPFS.",
           },
         },
       ],
@@ -123,7 +123,7 @@ export const DONOR: ICase = {
     {
       title: {
         en: "Voting System and Algorithmic Feed",
-        ru: "Система голосования и алгоритмической ленты.",
+        ru: "Система голосования и алгоритмической ленты",
       },
       text: [
         {
