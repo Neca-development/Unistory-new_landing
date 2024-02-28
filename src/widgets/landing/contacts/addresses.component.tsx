@@ -13,7 +13,7 @@ export const ContactsAddresses = () => {
   }, [locale]);
 
   return (
-    <div className="container py-10 md:py-20">
+    <div className="container bg-light-bg-accent dark:bg-dark-bg py-10 md:py-20">
       <div className={clsx("justify-between mb-10 md:mb-20 md:flex", locale === "en" && "!hidden")}>
         <div className="mb-10 md:mb-0 md:w-1/3">
           <h2 className="text-3xl font-bold mb-4">{langData.ADDRESSES.SPB.title}</h2>
