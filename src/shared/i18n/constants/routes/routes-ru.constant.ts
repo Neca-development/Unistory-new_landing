@@ -4,8 +4,12 @@ export const ROUTESRU = {
     route: "/cases",
   },
   CTA: {
-    label: "Оставить заявку",
+    label: "Стать клиентом",
     route: "#become-customer",
+  },
+  CONTACTS: {
+    label: "Контакты",
+    route: "/contacts",
   },
   // {
   // 	label: "Услуги",

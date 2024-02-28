@@ -1,22 +1,22 @@
 export const ROUTES = [
   {
-    label: 'Сases',
-    route: '/cases',
+    label: "Сases",
+    route: "/cases",
   },
   {
-    label: 'Services',
-    route: '/',
+    label: "Services",
+    route: "/",
   },
   {
-    label: 'About',
-    route: '/',
+    label: "About",
+    route: "/",
   },
   {
-    label: 'Contacts',
-    route: '/',
+    label: "Contacts",
+    route: "/contacts",
   },
   {
-    label: 'Get in touch',
-    route: '/',
+    label: "Get in touch",
+    route: "/",
   },
-]
+];

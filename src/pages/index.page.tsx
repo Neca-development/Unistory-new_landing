@@ -26,7 +26,7 @@ export function Home() {
   }, []);
 
   return (
-    <Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
+    <Layout Meta={<Meta description="Unistory homepage" title="Unistory" />}>
       <Layout.Header />
       <Layout.Main>
         <div
