@@ -122,7 +122,10 @@ export const Header = React.memo((props: IHeaderProperties) => {
           >
             <Link
               className={clsx(
-                "text-light-text-primary dark:text-dark-text-primary hover:underline underline-offset-4"
+                "text-light-text-primary dark:text-dark-text-primary hover:underline underline-offset-8 hover:opacity-100",
+                currentPage.replace(/\/+$/, "") === ROUTES.CASES.route
+                  ? "opacity-100 underline"
+                  : "opacity-50"
               )}
               href={ROUTES.CASES.route}
             >
@@ -130,13 +133,19 @@ export const Header = React.memo((props: IHeaderProperties) => {
             </Link>
             <Link
               className={clsx(
-                "text-light-text-primary dark:text-dark-text-primary hover:underline underline-offset-4"
+                "text-light-text-primary dark:text-dark-text-primary hover:underline underline-offset-8 hover:opacity-100",
+                currentPage.replace(/\/+$/, "") === ROUTES.CONTACTS.route
+                  ? "opacity-100 underline"
+                  : "opacity-50"
               )}
               href={ROUTES.CONTACTS.route}
             >
               {ROUTES.CONTACTS.label}
             </Link>
-            <Link className="hover:underline underline-offset-4 font-bold" href={ROUTES.CTA.route}>
+            <Link
+              className="hover:underline underline-offset-8 font-bold dark:text-light-bg-accent"
+              href={ROUTES.CTA.route}
+            >
               {ROUTES.CTA.label}
             </Link>
           </div>

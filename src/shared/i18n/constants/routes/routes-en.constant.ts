@@ -9,7 +9,7 @@ export const ROUTESEN = {
   },
   CONTACTS: {
     label: "Contacts",
-    route: "/",
+    route: "/contacts",
   },
   // {
   // 	label: "Services",

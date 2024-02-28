@@ -62,6 +62,10 @@ const decLine3 = dynamic(() => import("@public/assets/images/homepage/dec-line-3
 const decLine4 = dynamic(() => import("@public/assets/images/homepage/dec-line-4.svg"));
 const decLine5 = dynamic(() => import("@public/assets/images/homepage/dec-line-5.svg"));
 
+const contactsMail = dynamic(() => import("@public/assets/icons/contacts-mail.svg"));
+const contactsTelegram = dynamic(() => import("@public/assets/icons/contacts-telegram.svg"));
+const contactsWhatsApp = dynamic(() => import("@public/assets/icons/contacts-whatsapp.svg"));
+
 const iconTypes = {
   unistory,
   logoLight,
@@ -114,6 +118,9 @@ const iconTypes = {
   decLine3,
   decLine4,
   decLine5,
+  contactsMail,
+  contactsTelegram,
+  contactsWhatsApp,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
