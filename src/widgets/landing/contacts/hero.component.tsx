@@ -11,9 +11,9 @@ export const ContactsHero = () => {
   }, [locale]);
 
   return (
-    <div className="noise">
-      <div className="container py-10 md:py-20">
-        <h1 className="text-4xl font-bold mb-24 md:text-[5rem] md:leading-tight">
+    <div className="bg-[url('/assets/images/Pattern.png')] -mt-[4.5rem] pt-[4.5rem]">
+      <div className="container py-10 md:py-28">
+        <h1 className="text-4xl font-bold mb-10 md:mb-28 md:text-[5rem] md:leading-tight">
           {langData.HERO.title}
         </h1>
         <div className="justify-between space-y-10 md:flex md:space-y-0">

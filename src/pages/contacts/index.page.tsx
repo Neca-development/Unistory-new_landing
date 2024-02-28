@@ -1,6 +1,5 @@
 import { Meta } from "@shared/meta";
-import { Connect } from "@widgets/connect";
-import { ContactsHero } from "@widgets/landing";
+import { ContactsHero, ContactsAddresses } from "@widgets/landing";
 import { Layout } from "@widgets/layout";
 
 export function Contacts() {
@@ -9,7 +8,7 @@ export function Contacts() {
       <Layout.Header />
       <Layout.Main>
         <ContactsHero />
-        <Connect />
+        <ContactsAddresses />
       </Layout.Main>
       <Layout.Footer showAddress />
     </Layout>
