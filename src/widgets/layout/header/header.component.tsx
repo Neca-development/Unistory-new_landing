@@ -113,7 +113,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
           <div
             className={clsx(
-              "hidden items-center space-x-4 lg:flex",
+              "hidden items-center space-x-10 lg:flex",
               currentPage === "/" && shouldAnimate && "animate-header-links-opacity"
             )}
             style={{
@@ -121,13 +121,29 @@ export const Header = React.memo((props: IHeaderProperties) => {
             }}
           >
             <Link
-              className="flex items-center btn-secondary px-4 lg:h-[36px] 2xl:h-[40px]"
+              className={clsx(
+                "text-light-text-primary dark:text-dark-text-primary hover:underline underline-offset-8 hover:opacity-100",
+                currentPage.replace(/\/+$/, "") === ROUTES.CASES.route
+                  ? "opacity-100 underline"
+                  : "opacity-50"
+              )}
               href={ROUTES.CASES.route}
             >
               {ROUTES.CASES.label}
             </Link>
             <Link
-              className="flex items-center btn-primary px-4 lg:h-[36px] 2xl:h-[40px]"
+              className={clsx(
+                "text-light-text-primary dark:text-dark-text-primary hover:underline underline-offset-8 hover:opacity-100",
+                currentPage.replace(/\/+$/, "") === ROUTES.CONTACTS.route
+                  ? "opacity-100 underline"
+                  : "opacity-50"
+              )}
+              href={ROUTES.CONTACTS.route}
+            >
+              {ROUTES.CONTACTS.label}
+            </Link>
+            <Link
+              className="hover:underline underline-offset-8 font-bold dark:text-light-bg-accent"
               href={ROUTES.CTA.route}
             >
               {ROUTES.CTA.label}

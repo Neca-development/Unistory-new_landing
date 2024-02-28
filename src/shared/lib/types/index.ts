@@ -43,6 +43,7 @@ export interface ICase {
   projectUrl?: string;
   projectUrlTitle?: string;
   customHero?: CustomHeroes;
+  notDisplayInGrid?: boolean;
   heroTitle: ILang<string>;
   heroText?: ILang<string>[];
   thumbnail: IDevices<string>;

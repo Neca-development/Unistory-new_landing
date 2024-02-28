@@ -4,8 +4,12 @@ export const ROUTESEN = {
     route: "/cases",
   },
   CTA: {
-    label: "Get in touch",
+    label: "Become customer",
     route: "#become-customer",
+  },
+  CONTACTS: {
+    label: "Contacts",
+    route: "/contacts",
   },
   // {
   // 	label: "Services",
@@ -13,10 +17,6 @@ export const ROUTESEN = {
   // },
   // {
   // 	label: "About",
-  // 	route: "/",
-  // },
-  // {
-  // 	label: "Contacts",
   // 	route: "/",
   // },
   // {

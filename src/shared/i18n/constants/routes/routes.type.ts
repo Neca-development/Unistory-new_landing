@@ -6,4 +6,5 @@ export interface IRoute {
 export interface IRoutes {
   CASES: IRoute;
   CTA: IRoute;
+  CONTACTS: IRoute;
 }
