@@ -6,7 +6,7 @@ export const ContactsTextEn = {
     SPB: {
       title: "Санкт-Петербург",
       phone: "+7 987 449 0825",
-      address: "ул. Гатчинская, 16, 1-й этаж, Санкт-Петербург, Россия, 197198",
+      address: "ул. Большая Посадская 12, офис 505, 197046",
     },
     ALMATA: {
       title: "Almaty",

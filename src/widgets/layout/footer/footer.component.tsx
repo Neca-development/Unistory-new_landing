@@ -53,7 +53,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
             className={clsx(
               showAddress
                 ? "ml-auto space-y-7 t-xs:mr-auto"
-                : "flex justify-between items-center grow-[1]"
+                : "mx-auto justify-between items-center grow-[1] sm:flex"
             )}
           >
             <h4

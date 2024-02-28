@@ -10,7 +10,7 @@ export function Contacts() {
         <ContactsHero />
         <ContactsAddresses />
       </Layout.Main>
-      <Layout.Footer showAddress />
+      <Layout.Footer />
     </Layout>
   );
 }
