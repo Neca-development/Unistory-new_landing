@@ -340,7 +340,6 @@ export const DONOR: ICase = {
           },
         },
       ],
-      banner: donorBlockchain.src,
     },
     {
       title: {
@@ -361,8 +360,27 @@ export const DONOR: ICase = {
           },
         },
       ],
+      banner: donorBlockchain.src,
     },
   ],
+  review: {
+    author: {
+      name: {
+        en: "(c) Ron",
+        ru: "(c) Рон",
+      },
+      position: {
+        en: "",
+        ru: "",
+      },
+      company: "Donor Finance",
+      photo: "",
+    },
+    text: {
+      en: "«When we met with your company, I asked many questions to understand if you really understand web3. I quickly realized that stumbling upon Unistory was a great stroke of luck. What I like about Unistory is that if we have a question, you always respond quickly or arrange a meeting. Usually on the same day. Vamsi and I often have many questions, and our project manager, Ilya, always responds promptly to them. Everything is transparent, the price is excellent, and we are happy to work with you from day one».",
+      ru: "«Когда мы встретились с вашей компанией, я задавал много вопросов, чтобы понять, что вы действительно разбираетесь в web3. Быстро понял, что наткнуться на Unistory было большой удачей. Что мне нравится в Unistory — если у нас есть вопрос, вы всегда быстро отвечаете или организовываете встречу. Обычно в тот же день. У нас с Вамси часто бывает много вопросов, и менеджер проектов, Илья, всегда оперативно на них отвечает. Все прозрачно, цена отличная, мы счастливы работать с вами с первого дня».",
+    },
+  },
   team: [
     TEAM.ilyaSokolov,
     TEAM.andreyBabenkov,

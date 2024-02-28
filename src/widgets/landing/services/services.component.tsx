@@ -1,6 +1,6 @@
 import { ServicesEn, ServicesRu } from "@shared/i18n";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import { ServiceCard } from "./service-card.component";
 import ComputerVisionImage from "@public/assets/images/homepage/services-computer-vision.png";
 import ComputerVisionImageDark from "@public/assets/images/homepage/services-computer-vision_dark.png";
@@ -32,9 +32,9 @@ export function Services() {
     return ServicesEn;
   }, [locale]);
 
-  useEffect(() => {
-    console.log(_theme);
-  }, [_theme]);
+  // useEffect(() => {
+  //   console.log(_theme);
+  // }, [_theme]);
 
   return (
     <section className="relative container pt-20 pb-20 t-xs:pb-10 t-xs:pt-2">

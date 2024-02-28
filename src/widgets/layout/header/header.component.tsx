@@ -154,7 +154,10 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
           <button
             onClick={openMenu}
-            className="animate-header-links-opacity lg:hidden"
+            className={clsx(
+              "lg:hidden",
+              currentPage === "/" && shouldAnimate && "animate-header-links-opacity"
+            )}
             style={{
               marginRight: shouldAnimate ? width : 0,
             }}
