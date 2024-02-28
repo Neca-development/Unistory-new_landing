@@ -25,6 +25,7 @@ export const AI_CHATBOT: ICase = {
     ru: ["Разработка умного чат-бота"],
   },
   showCategoriesOnPage: false,
+  notDisplayInGrid: true,
   icons: ["monitor", "phone02"],
   textColor: "white",
   thumbnail: {
