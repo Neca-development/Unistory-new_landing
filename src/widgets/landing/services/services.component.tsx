@@ -1,6 +1,6 @@
 import { ServicesEn, ServicesRu } from "@shared/i18n";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import { ServiceCard } from "./service-card.component";
 import ComputerVisionImage from "@public/assets/images/homepage/services-computer-vision.png";
 import ComputerVisionImageDark from "@public/assets/images/homepage/services-computer-vision_dark.png";
