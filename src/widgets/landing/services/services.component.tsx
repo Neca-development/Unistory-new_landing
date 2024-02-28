@@ -32,9 +32,9 @@ export function Services() {
     return ServicesEn;
   }, [locale]);
 
-  useEffect(() => {
-    console.log(_theme);
-  }, [_theme]);
+  // useEffect(() => {
+  //   console.log(_theme);
+  // }, [_theme]);
 
   return (
     <section className="relative container pt-20 pb-20 t-xs:pb-10 t-xs:pt-2">

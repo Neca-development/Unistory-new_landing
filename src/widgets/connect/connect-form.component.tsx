@@ -25,7 +25,7 @@ interface IFormData {
 }
 
 interface IEmailFormData extends IFormData {
-  preferences: string;
+  preferences: ICheckboxFields;
 }
 
 interface IAmoFormData extends IFormData {
@@ -125,7 +125,7 @@ export default function ConnectForm() {
       formData.company = data.company;
     }
 
-    const emailFormData: IEmailFormData = { ...formData, preferences: JSON.stringify(ways) };
+    const emailFormData: IEmailFormData = { ...formData, preferences: ways };
     const amoFormData: IAmoFormData = {
       ...formData,
       isEmail: ways.email,
