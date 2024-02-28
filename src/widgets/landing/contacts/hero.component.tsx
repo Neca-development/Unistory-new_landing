@@ -19,7 +19,7 @@ export const ContactsHero = () => {
         <div className="justify-between space-y-10 md:flex md:space-y-0">
           <div>
             <div className="flex items-center space-x-3 font-semibold mb-3 text-2xl">
-              <span>{langData.HERO.socials.mailLabel}</span>
+              <span>Email</span>
               <IconComponent name="contactsMail" />
             </div>
             <a
@@ -31,7 +31,7 @@ export const ContactsHero = () => {
           </div>
           <div>
             <div className="flex items-center space-x-3 font-semibold mb-3 text-2xl">
-              <span>{langData.HERO.socials.telegramLabel}</span>
+              <span>Telegram</span>
               <IconComponent name="contactsTelegram" />
             </div>
             <a
@@ -43,7 +43,7 @@ export const ContactsHero = () => {
           </div>
           <div>
             <div className="flex items-center space-x-3 font-semibold mb-3 text-2xl">
-              <span>{langData.HERO.socials.whatsappLabel}</span>
+              <span>WhatsApp</span>
               <IconComponent name="contactsWhatsApp" />
             </div>
             <a
