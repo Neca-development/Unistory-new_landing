@@ -52,7 +52,7 @@ export const ContactsAddresses = () => {
           </div>
         </div>
         <div className="h-72 md:w-3/5 md:h-96">
-          <YMaps query={{ lang: "en_RU" }}>
+          <YMaps query={{ lang: locale === "ru" ? "ru_RU" : "en_US" }}>
             <Map
               width="100%"
               height="100%"
