@@ -17,8 +17,8 @@ export function Connect() {
           <h2 className="font-bold text-5xl leading-[3.25rem] t-xs:text-2xl">{data.slogan}</h2>
           <p className="mt-9 text-2xl leading-10 t-xs:text-base">
             {data.description.beforeEmail}{" "}
-            <a href="mailto:contact@unistory.app" className="text-primary-s font-bold">
-              contact@unistory.app
+            <a href="mailto:business@unistory.org" className="text-primary-s font-bold">
+              business@unistory.org
             </a>
             <br />
             {data.description.afterEmail}

@@ -22,10 +22,10 @@ export const ContactsHero = () => {
             <IconComponent name="contactsMail" />
           </div>
           <a
-            href="mailto:asmolnikov@unistory.app"
+            href="mailto:business@unistory.org"
             className="text-2xl font-bold dark:text-light-bg-accent hover:opacity-50 transition-all md:text-4xl"
           >
-            asmolnikov@unistory.app
+            business@unistory.org
           </a>
         </div>
         <div>
