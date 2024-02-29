@@ -16,14 +16,31 @@ export interface ICheckboxFields {
   [index: string]: any;
 }
 
+interface IFormData {
+  email: string;
+  name: string;
+  phoneNumber: string;
+  company?: string;
+  url: string;
+}
+
+interface IEmailFormData extends IFormData {
+  preferences: ICheckboxFields;
+}
+
+interface IAmoFormData extends IFormData {
+  isEmail: boolean;
+  isWhatsapp: boolean;
+  isPhone: boolean;
+  isTelegram: boolean;
+}
+
 export default function ConnectForm() {
   const { locale } = useRouter();
 
   const data = useMemo(() => {
     return locale === "en" ? FormEn : FormRu;
   }, [locale]);
-
-  // const requiredMsg = data.fields.commonErrors.required;
 
   const schema = z.object({
     email: z
@@ -41,9 +58,6 @@ export default function ConnectForm() {
     phoneNumber: z
       .string({ required_error: data.fields.phone.requiredError })
       .min(6, data.fields.phone.error),
-    // projectDescription: z
-    //   .string({ required_error: data.fields.describe.requiredError })
-    //   .min(1, requiredMsg),
   });
 
   type FormType = z.infer<typeof schema>;
@@ -58,10 +72,6 @@ export default function ConnectForm() {
     mode: "onSubmit",
   });
 
-  // const { projectDescription } = useWatch({ control });
-
-  // const [file, setFile] = useState<File | undefined>();
-  // const [fileError, setFileError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [ways, setWays] = useState<ICheckboxFields>({
     email: false,
@@ -69,9 +79,6 @@ export default function ConnectForm() {
     whatsapp: false,
     phone: false,
   });
-  // const textareaRef = useRef<HTMLTextAreaElement | null>(null);
-
-  // useAutoHeightTextarea(textareaRef.current, projectDescription);
 
   const contactMethods = useMemo(
     () => [
@@ -100,7 +107,6 @@ export default function ConnectForm() {
   };
 
   const resetFields = () => {
-    // setFile(undefined);
     setWays({ email: false, phone: false, telegram: false, whatsapp: false });
     reset();
   };
@@ -108,26 +114,31 @@ export default function ConnectForm() {
   async function sendFormData(data: FormType) {
     setIsLoading(true);
 
-    const formData = new FormData();
-    formData.append("email", data.email);
-    formData.append("name", data.name);
-    formData.append("phoneNumber", data.phoneNumber);
-    // formData.append("description", data.projectDescription);
-    formData.append("preferences", JSON.stringify(ways));
-    data.company && formData.append("company", data.company);
+    const formData: IFormData = {
+      email: data.email,
+      name: data.name,
+      phoneNumber: data.phoneNumber,
+      url: window.location.href,
+    };
 
-    // if (file) {
-    //   if (file.size < 24000000) {
-    //     formData.append("attachment", file);
-    //   } else {
-    //     setFileError(true);
-    //     setIsLoading(false);
-    //     return;
-    //   }
-    // }
+    if (data.company) {
+      formData.company = data.company;
+    }
+
+    const emailFormData: IEmailFormData = { ...formData, preferences: ways };
+    const amoFormData: IAmoFormData = {
+      ...formData,
+      isEmail: ways.email,
+      isWhatsapp: ways.whatsapp,
+      isPhone: ways.phone,
+      isTelegram: ways.telegram,
+    };
 
     try {
-      await axios.post("/api/contact/", formData);
+      await Promise.all([
+        axios.post("/api/contact/", emailFormData),
+        axios.post("/api/amo-crm/create-lead/", amoFormData),
+      ]);
       resetFields();
     } catch (error) {
       console.error(error);
@@ -191,49 +202,6 @@ export default function ConnectForm() {
               ))}
             </div>
           </div>
-          {/* <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
-            <Controller
-              control={control}
-              name="projectDescription"
-              render={({ field }) => (
-                <textarea
-                  {...field}
-                  placeholder={data.fields.describe.placeholder}
-                  className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
-                  ref={(elem) => {
-                    field.ref(elem);
-                    textareaRef.current = elem;
-                  }}
-                />
-              )}
-            />
-            {errors.projectDescription && (
-              <span className="absolute left-3 top-full mt-2 text-error text-xs">
-                {errors.projectDescription.message}
-              </span>
-            )}
-          </label> */}
-
-          {/* <label className="cursor-pointer flex items-center space-x-3 py-2">
-            <div>
-              <input
-                type="file"
-                className="hidden"
-                onChange={(e) => {
-                  setFileError(false);
-                  e.target.files && setFile(e.target.files[0]);
-                }}
-              />
-              <IconComponent name="clip" className="w-8 t-xs:w-6" />
-            </div>
-            <div className="flex flex-col text-xl leading-7 t-xs:text-[0.875rem]">
-              {file ? file.name : data.attachment.label}
-              <span className="text-sm opacity-50 t-xs:text-[0.75rem]">{data.attachment.sub}</span>
-            </div>
-          </label>
-
-          {fileError && <div className="text-error">{data.attachment.errors.tooLarge}</div>} */}
-
           <button
             type="submit"
             className={clsx(

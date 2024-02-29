@@ -7,6 +7,10 @@ export const ROUTESRU = {
     label: "Оставить заявку",
     route: "#become-customer",
   },
+  CONTACTS: {
+    label: "Контакты",
+    route: "/contacts",
+  },
   // {
   // 	label: "Услуги",
   // 	route: "/",

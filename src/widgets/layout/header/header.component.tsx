@@ -127,6 +127,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
               {ROUTES.CASES.label}
             </Link>
             <Link
+              className="flex items-center btn-secondary px-4 lg:h-[36px] 2xl:h-[40px]"
+              href={ROUTES.CONTACTS.route}
+            >
+              {ROUTES.CONTACTS.label}
+            </Link>
+            <Link
               className="flex items-center btn-primary px-4 lg:h-[36px] 2xl:h-[40px]"
               href={ROUTES.CTA.route}
             >
@@ -138,7 +144,10 @@ export const Header = React.memo((props: IHeaderProperties) => {
 
           <button
             onClick={openMenu}
-            className="animate-header-links-opacity lg:hidden"
+            className={clsx(
+              "lg:hidden",
+              currentPage === "/" && shouldAnimate && "animate-header-links-opacity"
+            )}
             style={{
               marginRight: shouldAnimate ? width : 0,
             }}

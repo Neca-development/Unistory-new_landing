@@ -7,16 +7,16 @@ export const ROUTESEN = {
     label: "Get in touch",
     route: "#become-customer",
   },
+  CONTACTS: {
+    label: "Contacts",
+    route: "/contacts",
+  },
   // {
   // 	label: "Services",
   // 	route: "/",
   // },
   // {
   // 	label: "About",
-  // 	route: "/",
-  // },
-  // {
-  // 	label: "Contacts",
   // 	route: "/",
   // },
   // {

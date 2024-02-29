@@ -1,11 +1,11 @@
 import { HeroEn, HeroRu } from "@shared/i18n";
 import { useMounted } from "@shared/lib/hooks/useMounted";
 import { LazyShow } from "@shared/ui/animations/lazy-show.component";
-import StarComponent from "@widgets/landing/hero/star.component";
 import SunComponent from "@widgets/landing/hero/sun.component";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import * as React from "react";
+import StarComponent from "./star.component";
 
 export function Hero() {
   const mounted = useMounted();
