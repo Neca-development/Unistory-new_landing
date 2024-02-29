@@ -4,7 +4,7 @@ export const ROUTESEN = {
     route: "/cases",
   },
   CTA: {
-    label: "Become customer",
+    label: "Get in touch",
     route: "#become-customer",
   },
   CONTACTS: {
