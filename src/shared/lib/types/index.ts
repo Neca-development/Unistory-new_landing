@@ -58,6 +58,7 @@ export interface ICase {
   goalPoints?: IGoalPoints[];
   params?: {
     budget: ILang<number>;
+    client?: string;
     period: number;
     year: number | string;
   };
@@ -95,6 +96,7 @@ export interface ISingleCase {
   goal: string;
   hero: {
     budget: string;
+    client?: string;
     timeline: {
       label: string;
     };

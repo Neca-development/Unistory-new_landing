@@ -36,15 +36,16 @@ export const CaseGoal = (props: ICaseGoalProperties) => {
       </div>
       {data.params && (
         <ul className="mt-20 flex gap-x-40 t-xs:mt-10 t-xs:block">
-          <li className="t-xs:mb-8">
-            <h3 className="text-2xl text-light-text-secondary dark:text-dark-text-secondary t-xs:text-base">
-              {langData.hero.budget}
-            </h3>
-            <b className="mt-2 block text-[2.125rem] text-light-text-primary dark:text-dark-text-primary t-xs:text-2xl t-xs:leading-7">
-              {data.params.budget[locale || "ru"]?.toLocaleString("ru-RU")}{" "}
-              {locale === "ru" ? "₽" : "$"}
-            </b>
-          </li>
+          {data.params.client && (
+            <li className="t-xs:mb-8">
+              <h3 className="text-2xl text-light-text-secondary dark:text-dark-text-secondary t-xs:text-base">
+                {langData.hero.client}
+              </h3>
+              <b className="mt-2 block text-[2.125rem] text-light-text-primary dark:text-dark-text-primary t-xs:text-2xl t-xs:leading-7">
+                {data.params.client}
+              </b>
+            </li>
+          )}
           <li className="t-xs:mb-8">
             <h3 className="text-2xl text-light-text-secondary dark:text-dark-text-secondary t-xs:text-base">
               {langData.hero.timeline.label}
