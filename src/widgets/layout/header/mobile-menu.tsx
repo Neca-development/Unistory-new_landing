@@ -48,10 +48,10 @@ export function MobileMenu(props: IMobileMenuProps) {
             })}
           </nav>
           <a
-            href="mailto:contact@unistory.app"
+            href="mailto:business@unistory.org"
             className="text-[1.25rem] font-medium text-dark-surface dark:text-light-surface"
           >
-            contact@unistory.app
+            business@unistory.org
           </a>
         </div>
       </aside>
