@@ -16,6 +16,8 @@ import llmAzureEN from "@public/assets/images/cases/llm-chatbot/azure-en.jpg";
 import llmAzureRU from "@public/assets/images/cases/llm-chatbot/azure-ru.jpg";
 import llmGptTurboEN from "@public/assets/images/cases/llm-chatbot/gpt-turbo-en.jpg";
 import llmGptTurboRU from "@public/assets/images/cases/llm-chatbot/gpt-turbo-ru.jpg";
+import llmResultsEN from "@public/assets/images/cases/llm-chatbot/result-en.jpg";
+import llmResultsRU from "@public/assets/images/cases/llm-chatbot/result-ru.jpg";
 import llmBannerThumb from "@public/assets/images/cases/llm-chatbot/thumb.jpg";
 import llmBannerThumbMob from "@public/assets/images/cases/llm-chatbot/thumb_mob.jpg";
 import { TECHNOLOGIES } from "../technologies.constats";
@@ -402,11 +404,15 @@ export const LLM_CHATBOT: ICase = {
       text: [
         {
           text: {
-            en: "The implementation of the chatbot has reduced the costs of maintaining the call center and operators by threefold. Users instantly receive the necessary information about the company's products. The chatbot addresses 80% of customer inquiries, and only in 1 out of 5 cases do users request assistance from an operator.",
-            ru: "Внедрение чат-бота позволило снизить затраты на содержание колл-центра и операторов в три раза. Пользователи мгновенно получают нужную информацию о продукции компании. Чат-бот закрывает запросы 80% покупателей. Лишь в 1 из 5 случаев пользователи запрашивают помощь оператора.",
+            en: "Users instantly receive the necessary information about the company's products. The chatbot addresses 80% of customer inquiries, and only in 1 out of 5 cases do users request assistance from an operator.",
+            ru: "Пользователи мгновенно получают нужную информацию о продукции компании. Чат-бот закрывает запросы 80% покупателей. Лишь в 1 из 5 случаев пользователи запрашивают помощь оператора.",
           },
         },
       ],
+      banner: {
+        en: llmResultsEN.src,
+        ru: llmResultsRU.src,
+      },
     },
   ],
 };

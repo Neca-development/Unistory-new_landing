@@ -11,7 +11,7 @@ export const ContactsTextRu = {
     ALMATA: {
       title: "Алматы",
       phone: "+7 705 973 8337",
-      address: "​ул. Байзакова, 252, 3-й этаж, 050037",
+      address: "Ул. Розыбакиева 289/1, офис 36, 050060",
     },
   },
 };

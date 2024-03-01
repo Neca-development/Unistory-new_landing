@@ -11,7 +11,7 @@ export const ContactsTextEn = {
     ALMATA: {
       title: "Almaty",
       phone: "+7 705 973 8337",
-      address: "​252 Baizakova Street, 3rd floor, 050037",
+      address: "289/1 Rozybakieva Street, office 36, 050060",
     },
   },
 };

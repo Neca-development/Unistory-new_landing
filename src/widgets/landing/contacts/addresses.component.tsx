@@ -53,9 +53,9 @@ export const ContactsAddresses = () => {
             </div>
           </div>
           <div className="h-72 md:w-3/5 md:h-96">
-            <Map width="100%" height="100%" state={{ center: [43.241209, 76.91494], zoom: 16 }}>
+            <Map width="100%" height="100%" state={{ center: [43.195338, 76.893632], zoom: 16 }}>
               <Placemark
-                geometry={[43.241209, 76.91494]}
+                geometry={[43.195338, 76.893632]}
                 options={{
                   iconLayout: "default#image",
                   iconImageSize: [50, 62],
