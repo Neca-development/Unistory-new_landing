@@ -13,10 +13,12 @@ import { DERMADEX } from "./cases/dermadex";
 import { UNIVERSITY_CHATBOT } from "./cases/university-chatbot";
 import { AI_CHATBOT } from "./cases/ai-chatbot";
 import { DONOR } from "./cases/donor-finance";
+import { LLM_CHATBOT } from "./cases/llm-chatbot";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
   DONOR,
+  LLM_CHATBOT,
   UNIVERSITY_CHATBOT,
   DERMADEX,
   FLATSPACE,

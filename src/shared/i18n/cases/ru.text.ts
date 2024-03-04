@@ -1,19 +1,20 @@
-import type { ISingleCase } from '@shared/lib/types'
+import type { ISingleCase } from "@shared/lib/types";
 
 export const SingleCaseRu: ISingleCase = {
-  goal: 'Задача',
+  goal: "Задача",
   hero: {
-    budget: 'Бюджет',
+    budget: "Бюджет",
+    client: "Клиент",
     timeline: {
-      label: 'Срок',
+      label: "Срок",
     },
-    year: 'Год',
+    year: "Год",
   },
-  techno: 'Технологии',
-  members: 'Над проектом работали',
-  other: 'Другие проекты',
-}
+  techno: "Технологии",
+  members: "Над проектом работали",
+  other: "Другие проекты",
+};
 
 export const CasesPageRu = {
-  title: 'Кейсы',
-}
+  title: "Кейсы",
+};
