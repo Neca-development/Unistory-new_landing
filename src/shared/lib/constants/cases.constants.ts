@@ -17,8 +17,8 @@ import { LLM_CHATBOT } from "./cases/llm-chatbot";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
-  LLM_CHATBOT,
   DONOR,
+  LLM_CHATBOT,
   UNIVERSITY_CHATBOT,
   DERMADEX,
   FLATSPACE,
