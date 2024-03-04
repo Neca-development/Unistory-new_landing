@@ -259,7 +259,7 @@ export const LLM_CHATBOT: ICase = {
         {
           text: {
             en: "<ol><li>Using the commercial GPT-4 Turbo API.</li><li>Deploying the GPT-4 model on a private Azure server.</li></ol>",
-            ru: "<ol><li>Использование коммерческого API GPT-4 Turbo</li><li>Развертывание модели GPT 4 на приватном сервере Azure.</li></ol>",
+            ru: "<ol><li>Использование коммерческого API GPT-4 Turbo.</li><li>Развертывание модели GPT 4 на приватном сервере Azure.</li></ol>",
           },
         },
         {
@@ -312,7 +312,7 @@ export const LLM_CHATBOT: ICase = {
     },
     {
       title: {
-        en: "Semantic Search Engine:",
+        en: "Semantic Search Engine",
         ru: "Движок семантического поиска",
       },
       text: [
@@ -384,17 +384,7 @@ export const LLM_CHATBOT: ICase = {
             ru: "Исполняет роль дискриминатора - обрабатывает конечный ответ языковой модели непосредственно перед выводом ответа пользователю. Дискриминатор проверяет, что модель не включила в свой ответ информацию о ценах и конкурентах. ",
           },
         },
-        {
-          text: {
-            en: "The agent is based on the GPT 3.5 Turbo language model deployed on an Azure server. It can be modified through the administrator panel and has the ability to act based on pre-defined prompts.",
-            ru: "В основе агента лежит языковая модель GPT 3.5 Turbo, развернутая на сервере Azure. Агент может быть модифицирован через панель администратора и имеет возможность действовать, исходя из заранее прописанных промтов.",
-          },
-        },
       ],
-      banner: {
-        en: llmGptTurboEN.src,
-        ru: llmGptTurboRU.src,
-      },
     },
     {
       title: {
