@@ -39,7 +39,12 @@ export const LLM_CHATBOT: ICase = {
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "white",
-  technologies: [TECHNOLOGIES.csharp, TECHNOLOGIES.react, TECHNOLOGIES.azure],
+  technologies: [
+    TECHNOLOGIES.csharp,
+    TECHNOLOGIES.react,
+    TECHNOLOGIES.azure,
+    TECHNOLOGIES.postgresql,
+  ],
   thumbnail: {
     desktop: llmBannerThumb.src,
     mob: llmBannerThumbMob.src,
