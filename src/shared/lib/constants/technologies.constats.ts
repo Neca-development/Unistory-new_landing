@@ -2,7 +2,6 @@ import reactIcon from "@public/assets/technologies/react.png";
 import reactDarkIcon from "@public/assets/technologies/react-dark.png";
 import reactNativeIcon from "@public/assets/technologies/react-native.png";
 import postgresqlIcon from "@public/assets/technologies/postgresql.png";
-import postgresqDarklIcon from "@public/assets/technologies/postgresql-dark.png";
 import nestIcon from "@public/assets/technologies/nest.png";
 import nextjsIcon from "@public/assets/technologies/nextjs.png";
 import nextjsDarkIcon from "@public/assets/technologies/nextjs-dark.png";
@@ -115,7 +114,7 @@ export const TECHNOLOGIES: TechnologyType = {
   postgresql: {
     name: "PostgreSQL",
     icon: {
-      dark: postgresqDarklIcon.src,
+      dark: postgresqlIcon.src,
       light: postgresqlIcon.src,
     },
   },

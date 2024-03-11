@@ -38,6 +38,7 @@ export const DERMADEX: ICase = {
     TECHNOLOGIES.python,
     TECHNOLOGIES.postgresql,
     TECHNOLOGIES.openai,
+    TECHNOLOGIES.react,
   ],
   thumbnail: {
     desktop: dermadexThumb.src,
