@@ -34,6 +34,8 @@ import metamaskIcon from "@public/assets/technologies/metamask.png";
 import stripeIcon from "@public/assets/technologies/stripe.png";
 import wagmiIcon from "@public/assets/technologies/wagmi.png";
 import wagmiDarkIcon from "@public/assets/technologies/wagmi-dark.png";
+import firebaseIcon from "@public/assets/technologies/firebase.png";
+import firebaseDarkIcon from "@public/assets/technologies/firebase-dark.png";
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
@@ -59,7 +61,8 @@ export type AvailableTechnologiesType =
   | "azure"
   | "metamask"
   | "stripe"
-  | "wagmi";
+  | "wagmi"
+  | "firebase";
 
 type TechnologyType = {
   [index in AvailableTechnologiesType]: {
@@ -228,6 +231,13 @@ export const TECHNOLOGIES: TechnologyType = {
     icon: {
       dark: wagmiDarkIcon.src,
       light: wagmiIcon.src,
+    },
+  },
+  firebase: {
+    name: "Firebase",
+    icon: {
+      dark: firebaseDarkIcon.src,
+      light: firebaseIcon.src,
     },
   },
 } as const;
