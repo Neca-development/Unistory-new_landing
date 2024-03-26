@@ -17,8 +17,8 @@ export const BVKS: ICase = {
   title: "BVKS",
   id: "bvks",
   heroTitle: {
-    en: "BVKS — Platform Development, Video to Text Translation Automation, Elasticsearch Integration",
-    ru: "BVKS — Разработка площадки, автоматизация перевода видео в текст, интеграция Elasticsearch",
+    en: "BVKS — A video hosting platform with automatic transcription of videos into text",
+    ru: "BVKS — Видеохостинг с автоматической транскрибацией видео в текст",
   },
   categories: {
     en: ["Video to Text Translation Automation"],
