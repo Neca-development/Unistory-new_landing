@@ -62,7 +62,8 @@ export default function ConnectForm() {
       .min(6, data.fields.phone.error),
     description: z
       .string({ required_error: data.fields.describe.requiredError })
-      .min(1, data.fields.commonErrors.required),
+      .min(1, data.fields.commonErrors.required)
+      .optional(),
   });
 
   type FormType = z.infer<typeof schema>;
