@@ -28,10 +28,10 @@ export const FormRu = {
       error: "Неверный email",
       requiredError: "Пожалуйста, введите адрес вашей почты",
     },
-    // describe: {
-    //   placeholder: "Расскажите о проекте",
-    //   requiredError: "Пожалуйста, введите описание вашего проекта",
-    // },
+    describe: {
+      placeholder: "Расскажите о проекте",
+      requiredError: "Пожалуйста, введите описание вашего проекта",
+    },
   },
   contacts: {
     label: "Предпочтительный способ связи",
