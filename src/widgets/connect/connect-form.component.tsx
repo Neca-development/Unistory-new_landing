@@ -1,12 +1,13 @@
 import { Checkbox, ControlledInput, ControlledTelInput } from "@shared/ui";
-import React, { useMemo, useState } from "react";
-import { useForm } from "react-hook-form";
+import React, { useMemo, useRef, useState } from "react";
+import { Controller, useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { FormEn, FormRu } from "@shared/i18n";
 import clsx from "clsx";
+import { useAutoHeightTextarea } from "@shared/lib/hooks/useAutoHeightTextarea.hook";
 
 export interface ICheckboxFields {
   email: boolean;
@@ -21,6 +22,7 @@ interface IFormData {
   name: string;
   phoneNumber: string;
   company?: string;
+  description?: string;
   url: string;
 }
 
@@ -58,6 +60,9 @@ export default function ConnectForm() {
     phoneNumber: z
       .string({ required_error: data.fields.phone.requiredError })
       .min(6, data.fields.phone.error),
+    description: z
+      .string({ required_error: data.fields.describe.requiredError })
+      .min(1, data.fields.commonErrors.required),
   });
 
   type FormType = z.infer<typeof schema>;
@@ -79,6 +84,12 @@ export default function ConnectForm() {
     whatsapp: false,
     phone: false,
   });
+
+  const { description } = useWatch({ control });
+
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
+
+  useAutoHeightTextarea(textareaRef.current, description);
 
   const contactMethods = useMemo(
     () => [
@@ -112,6 +123,8 @@ export default function ConnectForm() {
   };
 
   async function sendFormData(data: FormType) {
+    if (isLoading) return;
+
     setIsLoading(true);
 
     const formData: IFormData = {
@@ -119,11 +132,9 @@ export default function ConnectForm() {
       name: data.name,
       phoneNumber: data.phoneNumber,
       url: window.location.href,
+      description: data.description ?? undefined,
+      company: data.company ?? undefined,
     };
-
-    if (data.company) {
-      formData.company = data.company;
-    }
 
     const emailFormData: IEmailFormData = { ...formData, preferences: ways };
     const amoFormData: IAmoFormData = {
@@ -202,6 +213,28 @@ export default function ConnectForm() {
               ))}
             </div>
           </div>
+          <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
+            <Controller
+              control={control}
+              name="description"
+              render={({ field }) => (
+                <textarea
+                  {...field}
+                  placeholder={data.fields.describe.placeholder}
+                  className="bg-[inherit] w-full outline-none placeholder:text-dark-text-primary h-7 resize-none"
+                  ref={(elem) => {
+                    field.ref(elem);
+                    textareaRef.current = elem;
+                  }}
+                />
+              )}
+            />
+            {errors.description && (
+              <span className="absolute left-3 top-full mt-2 text-error text-xs">
+                {errors.description.message}
+              </span>
+            )}
+          </label>
           <button
             type="submit"
             className={clsx(

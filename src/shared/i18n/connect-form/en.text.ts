@@ -28,10 +28,10 @@ export const FormEn = {
       error: "Incorrect email",
       requiredError: "Please fill your email address",
     },
-    // describe: {
-    //   placeholder: "Describe your project",
-    //   requiredError: "Please fill description about your project",
-    // },
+    describe: {
+      placeholder: "Describe your project",
+      requiredError: "Please fill description about your project",
+    },
   },
   contacts: {
     label: "Contact preference",
