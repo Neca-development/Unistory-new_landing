@@ -202,18 +202,6 @@ export default function ConnectForm() {
             type="text"
             error={errors?.company?.message}
           />
-          <div className="py-8 text-xl t-xs:text-[0.875rem]">
-            <p>{data.contacts.label}</p>
-            <div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
-              {contactMethods.map((method, idx) => (
-                <Checkbox
-                  onChange={() => handleCheckboxChange(method.type)}
-                  key={idx}
-                  name={method.name}
-                />
-              ))}
-            </div>
-          </div>
           <label className="text-dark-text-primary relative text-xl leading-7 border-b-2 pb-3 pt-7 t-xs:text-[0.875rem] t-xs:pb-1">
             <Controller
               control={control}
@@ -236,6 +224,18 @@ export default function ConnectForm() {
               </span>
             )}
           </label>
+          <div className="py-4 text-xl t-xs:text-[0.875rem]">
+            <p>{data.contacts.label}</p>
+            <div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
+              {contactMethods.map((method, idx) => (
+                <Checkbox
+                  onChange={() => handleCheckboxChange(method.type)}
+                  key={idx}
+                  name={method.name}
+                />
+              ))}
+            </div>
+          </div>
           <button
             type="submit"
             className={clsx(
