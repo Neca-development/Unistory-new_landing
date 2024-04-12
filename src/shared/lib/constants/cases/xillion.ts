@@ -19,6 +19,14 @@ export const XILLION: ICase = {
     en: ["Blockchain project incubator"],
     ru: ["Инкубатор блокчейн-проектов"],
   },
+  metaTitle: {
+    en: "Decentralized blockchain project incubator",
+    ru: "Децентрализованный инкубатор блокчейн-проектов",
+  },
+  metaDescription: {
+    en: "Development of an investment DAO ecosystem on Polygon and BSC networks. New investment opportunities for users. Preparation of a separate gaming module with P2E quizzes. Integration of custom staking architecture into an existing decentralized community.",
+    ru: "Разработка инвестиционной DAO-экосистемы в сетях Polygon и BSC. Новые инвестиционные возможности для пользователей. Подготовка отдельного игрового модуля с P2E-викторинами. Интеграция кастомной стейкинг-архитектуры в существующее децентрализованное сообщество.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "bitcoin"],
   textColor: "white",

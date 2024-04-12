@@ -36,6 +36,14 @@ export const LLM_CHATBOT: ICase = {
     en: ["Assistant for Electrical Installation Product Distributor"],
     ru: ["Ассистент для дистрибьютора электромонтажных изделий"],
   },
+  metaTitle: {
+    en: "LLM chatbot for the manufacturer of electrical products",
+    ru: "LLM чат-бот для производителя электромонтажных изделий",
+  },
+  metaDescription: {
+    en: "We have developed a smart assistant that significantly reduces operator maintenance costs. Technology stack: Azure AI search, GPT-4, React, C#. GPT-4 model is deployed on a private Azure server.",
+    ru: "Разработали умного помощника, который позволяет существенно уменьшить затраты на содержание операторов. Стек технологий: Azure AI search, GPT 4, React, С#. Развернули модель GPT 4 на приватном сервере Azure.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "white",

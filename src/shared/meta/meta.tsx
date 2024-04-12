@@ -4,10 +4,11 @@ import { NextSeo } from "next-seo";
 import { useTheme } from "next-themes";
 
 import { APP_META } from "./meta.config";
+import { ILang } from "@shared/lib/types";
 
 type IMetaProperties = {
-  title: string;
-  description: string;
+  title: ILang<string>;
+  description: ILang<string>;
   canonical?: string;
 };
 
@@ -16,6 +17,8 @@ const Meta = (props: IMetaProperties) => {
 
   const { theme } = useTheme();
   const faviconPrefix = theme === "dark" ? "-dark" : "";
+
+  const { locale } = useRouter();
 
   return (
     <>
@@ -44,12 +47,12 @@ const Meta = (props: IMetaProperties) => {
         <link rel="icon" href={`${router.basePath}/favicon${faviconPrefix}.ico`} key="favicon" />
       </Head>
       <NextSeo
-        title={props.title}
-        description={props.description}
+        title={props.title[locale || "en"]}
+        description={props.description[locale || "en"]}
         canonical={props.canonical}
         openGraph={{
-          title: props.title,
-          description: props.description,
+          title: props.title[locale || "en"],
+          description: props.description[locale || "en"],
           url: props.canonical,
           locale: APP_META.locale,
           site_name: APP_META.site_name,

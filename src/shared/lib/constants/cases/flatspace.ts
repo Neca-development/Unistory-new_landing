@@ -22,6 +22,14 @@ export const FLATSPACE: ICase = {
     en: ["Development of NFT-Marketplace «FlatSpace»"],
     ru: ["Разработка NFT-Маркетплейса «FlatSpace»"],
   },
+  metaTitle: {
+    en: "Development of the NFT marketplace FlatSpace",
+    ru: "Разработка NFT-маркетплейса FlatSpace",
+  },
+  metaDescription: {
+    en: "High-end platform which encourage all types of artists from entry to expert levels. Smart contract ensure transparency and honesty and microservices architecture provide seamless user experience at all stages.",
+    ru: "Высококлассная платформа, которая поощряет все типы художников — от начального до экспертного уровня. Смарт-контракт обеспечивает прозрачность и честность, а архитектура микросервисов обеспечивает беспрепятственный пользовательский опыт на всех этапах.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "black",
