@@ -29,6 +29,14 @@ export const DERMADEX: ICase = {
     en: ["Photo-based AI skin diagnosis"],
     ru: ["Определяем болезни кожи по фото с помощью AI"],
   },
+  metaTitle: {
+    en: "Dermadex App: photo-based AI dermatologic diagnosis",
+    ru: "Dermadex: определяем болезни кожи по фото с помощью AI",
+  },
+  metaDescription: {
+    en: "Together with our dermatologist clients from Canada, we have developed an application that identifies dermatological diagnoses based on photos of problematic skin. Our specially trained CLIP neural network allows identifying 30 groups of different diseases and providing recommendations to the user.",
+    ru: "Вместе с нашими клиентами-дерматологами из Канады мы разработали приложение, определяющее дерматологический диагноз по фото проблемной кожи. Специально обученная нами нейросеть CLIP позволяет определить 30 групп различных заболеваний и помочь ему записаться к специалисту.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "white",
@@ -303,8 +311,8 @@ export const DERMADEX: ICase = {
       photo: "",
     },
     text: {
-      en: "«I posted a task on Upwork, and one of the responses was from the Unistory team. The company's portfolio impressed me: the details, technologies, experience in the medical field. I immediately decided that these guys are perfect for us, and I was not mistaken: from that moment until now, everything has been amazing. Initially, Dr. Khoddami and I weren't sure if we could implement our idea — but Unistory pulled it off».",
-      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: детали, технологии, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе. Изначально мы с доктором Худдами не были уверены, что сможем реализовать свою идею — но Unistory справились».",
+      en: "«I posted a task on Upwork, and one of the responses was from the Unistory team. The company's portfolio impressed me: expertise in neural networks and computer vision, experience in the medical field. I immediately decided that these guys are perfect for us, and I was not mistaken: from that moment until now, everything has been amazing. Initially, Dr. Khoddami and I were not sure if we could implement our idea — but Unistory managed it».",
+      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: экспертиза в нейросетях и компьютерном зрении, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе. Изначально мы с доктором Худдами не были уверены, что сможем реализовать свою идею — но Unistory справились».",
     },
   },
   team: [

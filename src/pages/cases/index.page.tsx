@@ -18,7 +18,20 @@ export function Cases() {
   }, [locale]);
 
   return (
-    <Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
+    <Layout
+      Meta={
+        <Meta
+          description={{
+            en: "Check out our experiences working with clients to achieve business goals with AI / ML / web3 / blockchain solutions.",
+            ru: "Наши проекты — веб-сервисы и мобильные приложения с AI / ML / blockchain / web3 интеграциями.",
+          }}
+          title={{
+            en: "Projects | Unistory",
+            ru: "Кейсы | Unistory",
+          }}
+        />
+      }
+    >
       <Layout.Header />
       <Layout.Main>
         <section className="mt-16 container pb-[7.5rem] t-xs:pb-16 t-xs:mt-8">
