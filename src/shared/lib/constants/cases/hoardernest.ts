@@ -35,6 +35,14 @@ export const HOARDER_NEST: ICase = {
     en: "For a crypto startup with a team of  Tesla and eBay formers, we developed  «HoarderNest» – a service with comprehensive data aggregation and further multilevel analysis.",
     ru: "Для крипто-стартапа с командой из выходцев Tesla и eBay мы разработали сервис  «HoarderNest» с комлексным агрегированием данных и их дальнейшим многоуровневым анализом.",
   },
+  metaTitle: {
+    en: "HoarderNest — an innovative NFT aggregator",
+    ru: "HoarderNest — инновационный NFT-агрегатор",
+  },
+  metaDescription: {
+    en: "For a crypto startup with a team from Tesla and eBay alumni, we have developed the HoarderNest service with comprehensive data aggregation and subsequent multi-level analysis. Our team has prepared and implemented the project architecture, where data is collected both on-chain and off-chain.",
+    ru: "Для крипто-стартапа с командой из выходцев Tesla и eBay мы разработали сервис HoarderNest с комплексным агрегированием данных и их дальнейшим многоуровневым анализом. Наша команда подготовила и реализовала архитектуру проекта, при которой данные собираются как on-chain, так и off-chain способом.",
+  },
   icons: ["monitor", "bitcoin"],
   params: {
     budget: {
@@ -122,8 +130,8 @@ export const HOARDER_NEST: ICase = {
       photo: "",
     },
     text: {
-      en: "«It was a great experience from start to finish. The skilled team delivered exceptional results and the client is confident that the product launch will be a success. Unistory's frequent and clear communication about the project's status and roadblocks contributed to a smooth engagement.»",
-      ru: "«Это был замечательный опыт от начала и до конца! Квалифицированная команда Unistory добилась исключительных результатов, и клиент уверен, что запуск продукта будет успешным. Своевременные и четкие оповещения о состоянии проекта и препятствиях по ходу разработки способствовали нашему взаимодействию.»",
+      en: "«We hired Unistory to develop a complex blockchain-based web service. The manager kept us informed of all the important details and discussed possible challenges with us in a timely manner. Thanks to this, the SaaS launch went smoothly - and I never doubted it for a second while working with Unistory. It was a wonderful experience from start to finish!».",
+      ru: "«Мы наняли Unistory, чтобы разработать сложный веб-сервис на блокчейне. Менеджер держал нас в курсе всех важных нюансов и вовремя обсуждал с нами возможные сложности. Благодаря этому запуск SaaS прошел успешно — и я ни секунду в этом не сомневался, работая с Unistory. Это был замечательный опыт от начала и до конца!».",
     },
   },
   team: [

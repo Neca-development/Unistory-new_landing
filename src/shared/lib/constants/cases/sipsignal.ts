@@ -22,6 +22,14 @@ export const SIPSIGNAL: ICase = {
     en: ["Development of a platform for VoIP provider"],
     ru: ["Разработка платформы для VoIP провайдера "],
   },
+  metaTitle: {
+    en: "Platform development for VoIP provider",
+    ru: "Разработка платформы для провайдера VoIP решений",
+  },
+  metaDescription: {
+    en: "We have developed easy-to-navigate e-commerce application for choosing and purchasing cloud and telecom services. From the ground up, we created a custom card where platform clients can select the product they are interested in.",
+    ru: "Мы разработали удобное и в то же время понятное приложение для электронной коммерции, позволяющее выбирать и приобретать облачные и телекоммуникационные услуги. С нуля создали пользовательскую карту, по которой клиенты платформы могут выбрать интересующий их товар.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "black",
@@ -113,8 +121,8 @@ export const SIPSIGNAL: ICase = {
       photo: sipsignalClient.src,
     },
     text: {
-      en: "«Good work, friends! Unistory is a well-managed and structured team: weekly updates, quick response times, and quality order fulfillment. I would recommend the Unistory team for any project. We were so pleased with the results that we went straight to our next project. Thank you guys for your hard work!»",
-      ru: "«Хорошая работа, друзья! Еженедельные обновления, быстрое реагирование и качественное выполнение заказов. Я бы рекомендовал команду Unistory для любого проекта. Мы были настолько довольны результатами, что сразу же приступили к следующему. Спасибо вам, ребята, за вашу тяжелую работу!»",
+      en: "«Our company is a provider of VoIP solutions. We had long planned to develop our own custom eFax solution for our clients. The guys from Unistory did a great job: they dealt with the complexities and offered solutions that were beneficial for us. I would recommend this company for the development of any project».",
+      ru: "«Наша компания — провайдер VoIP-решений. Мы долго планировали разработать собственное кастомное eFax-решение для наших клиентов. Ребята из Unistory провели отличную работу: справились со сложностями и предложили выгодные для нас решения. Я бы рекомендовал эту компанию для разработки любого проекта».",
     },
   },
   logo: sipsignalLogo.src,

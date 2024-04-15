@@ -20,6 +20,14 @@ export const ADVANCED_RD: ICase = {
     en: ["Blockchain powered property investment platform"],
     ru: ["Платформа для инвестиций в недвижимость на базе блокчейна"],
   },
+  metaTitle: {
+    en: "Platform for real estate investments with web3 integration",
+    ru: "Платформа для инвестиций в недвижимость с web3-интеграцией",
+  },
+  metaDescription: {
+    en: "The platform allows purchasing real estate properties in fractions with other investors. The service's staff will take care of renting out the properties, while users can calmly receive dividends and withdraw them in fiat currency.",
+    ru: "Площадка дает возможность купить объект недвижимости по частям вместе с другими инвесторами. О сдаче объектов в аренду позаботятся сотрудники сервиса, а пользователи могут спокойно получать дивиденды и выводить их в фиат.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "white",

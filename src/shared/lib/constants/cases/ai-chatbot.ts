@@ -20,6 +20,14 @@ export const AI_CHATBOT: ICase = {
     en: "Product: LLM chatbot",
     ru: "Услуга: разработка умного чат-бота на основе LLM",
   },
+  metaTitle: {
+    en: "AI chatbot development | Unistory",
+    ru: "Разработка AI чат-бота | Unistory",
+  },
+  metaDescription: {
+    en: "The development and implementation of a chatbot into business processes reduce operator maintenance costs and enhance the quality of customer service. We design intelligent LLM chatbots that interact with users in natural language. We conduct bot integration with your CRM, ERP, database, or third-party API.",
+    ru: "Разработка и внедрение чат-бота в бизнес-процессы сокращает расходы на содержание операторов и повышает качество клиентского сервиса. Мы разрабатываем умные LLM чат-боты, которые отвечают пользователям на естественном языке. Проводим интеграцию бота с вашей CRM, ERP, базой данных или сторонним API. ",
+  },
   categories: {
     en: ["AI chatbot development"],
     ru: ["Разработка умного чат-бота"],

@@ -27,6 +27,14 @@ export const UNIVERSITY_CHATBOT: ICase = {
     en: ["Clever Assistant for Students"],
     ru: ["Помощник студентов и абитуриентов"],
   },
+  metaTitle: {
+    en: "Azure-based Chatbot: Assistant for University Students",
+    ru: "Чат-бот на базе Azure: помощник студентов университета в США",
+  },
+  metaDescription: {
+    en: "The bot is trained to provide relevant answers to questions asked in any wording. Communication between the university, applicants, and students is automated. The workload on the call center has been reduced. The chatbot assists the user in completing a specific action.",
+    ru: "Научили бота давать релевантные ответы на вопросы, заданные в любых формулировках. Автоматизировали общение между университетом, абитуриентами и студентами. Снизили нагрузку на колл-центр. Помогаем пользователю совершить целевое действие и сегментируем аудитории в маркетинговых целях.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "white",

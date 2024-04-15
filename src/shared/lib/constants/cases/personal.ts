@@ -19,6 +19,14 @@ export const PERSONAL: ICase = {
     en: ["Multi-platform\n HR application"],
     ru: ["Мультиплатформенное\n HR приложение"],
   },
+  metaTitle: {
+    en: "Personal — multi-platform HR application",
+    ru: "Персонал — мультиплатформенное HR-приложение",
+  },
+  metaDescription: {
+    en: "HR process optimization: we aggregated several popular job search platforms and compiled all vacancies on one platform. The service allows reducing HR efforts and optimizing hiring processes.",
+    ru: "Оптимизация HR-процессов: мы агрегировали несколько популярных площадок по поиску работы и собрали все вакансии на одной платформе. Сервис позволяет сократить трудозатраты эйчаров и оптимизировать бизнес-процессы найма.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone01"],
   textColor: "white",

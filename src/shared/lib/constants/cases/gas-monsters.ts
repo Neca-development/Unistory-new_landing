@@ -20,6 +20,14 @@ export const GAS_MONSTERS: ICase = {
     en: ["Creation of a gamified NFT collection"],
     ru: ["Создание геймифицированной NFT коллекции"],
   },
+  metaTitle: {
+    en: "Gamified NFT collection Gas Monsters",
+    ru: "Геймифицированная NFT-коллекция Gas Monsters",
+  },
+  metaDescription: {
+    en: "The main goal of the project is to develop a minting website for the NFT collection, where users can buy NFTs and then upgrade them for the gas they spend on Ethereum network.",
+    ru: "Основная цель проекта — разработка минтинг вебсайта для NFT коллекции, где пользователи могут приобрести NFT, а затем модернизировать их за потраченные газ комиссии в сети Ethereum.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "bitcoin"],
   textColor: "black",
@@ -125,8 +133,8 @@ export const GAS_MONSTERS: ICase = {
       photo: "",
     },
     text: {
-      en: "«Unistory did a very professional job: submitted a detailed schedule prior to the estimate and followed it through with no\u00A0delays. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology. Other contracts are still ongoing, but we would like to continue to work with them in the future.»",
-      ru: "«Юнистори выполнили работу профессионально: представили график работ согласно смете и следовали ему без задержек. Они были доступны для консультаций. Проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Мы бы хотели продолжить совместную работу  в будущем.»",
+      en: "«Unistory did a very professional job: submitted a detailed schedule prior to the estimate and followed it through with no delays. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology. Other contracts are still ongoing, but we would like to continue to work with them in the future».",
+      ru: "«Unistory выполнили работу профессионально: представили график работ согласно смете и следовали ему без задержек. Они были доступны для консультаций. Проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Мы бы хотели продолжить совместную работу в будущем».",
     },
   },
   team: [

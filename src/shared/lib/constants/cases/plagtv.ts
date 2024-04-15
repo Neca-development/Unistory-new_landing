@@ -27,6 +27,14 @@ export const PLAGTV: ICase = {
     en: ["English learning platform"],
     ru: ["Платформа для изучения английского"],
   },
+  metaTitle: {
+    en: "Development of a platform for learning English",
+    ru: "Разработка платформы для изучения английского языка",
+  },
+  metaDescription: {
+    en: "The development of a service that allows users to learn English through viewing educational and entertaining content. The platform incorporates advanced functionality for students' self-assessment.",
+    ru: "Разработка сервиса, позволяющего пользователям изучать английский язык через просмотр обучающего и развлекательного контента. На платформе реализован расширенный функционал для самопроверки учеников.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "white",

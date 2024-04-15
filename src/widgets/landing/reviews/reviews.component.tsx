@@ -54,7 +54,7 @@ function Timer({ duration, className }: { duration: number; className?: string }
 export default Timer;
 
 const setGasMonstersOnFirstPlace = (a: ICase, b: ICase) =>
-  a.id === "gas-monsters" ? -1 : b.id === "gas-monsters" ? 1 : 0;
+  a.id === "dermadex" ? -1 : b.id === "dermadex" ? 1 : 0;
 const reviewsData = CASES.filter((c) => c.review).sort(setGasMonstersOnFirstPlace);
 
 // const timerDuration = 20000;

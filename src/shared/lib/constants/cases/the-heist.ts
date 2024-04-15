@@ -18,6 +18,14 @@ export const THE_HEIST: ICase = {
     en: "The Heist – Play2Earn based on NFT collection",
     ru: "The Heist – Play2Earn игра на базе NFT коллекции",
   },
+  metaTitle: {
+    en: "The Heist: Play2Earn based on NFT collection",
+    ru: "The Heist — Play2Earn игра на базе NFT-коллекции",
+  },
+  metaDescription: {
+    en: "Creating a web application using NFT technology to implement game mechanics: development of the website, the in-game stacking system, the smart collection contract on the BSC network, and the tokenomics of the entire project.",
+    ru: "Создание веб-приложения с использованием технологии NFT для реализации игровых механик: разработали вебсайт, внутриигровую стейкинг систему, смарт-контракт коллекции в сети BSC и токеномику всего проекта.",
+  },
   categories: {
     en: ["P2E game based on NFT collection"],
     ru: ["P2E игра на базе NFT коллекции"],

@@ -24,6 +24,14 @@ export const BVKS: ICase = {
     en: ["Video to Text Translation Automation"],
     ru: ["Автоматизация перевода видео в текст"],
   },
+  metaTitle: {
+    en: "Video platform with automatic video-to-text transcription",
+    ru: "Видеохостинг с автоматической транскрибацией видео в текст",
+  },
+  metaDescription: {
+    en: "Development of a web service for automatic transcription of thousands of videos. Integration of Elasticsearch for searching within the videos and transcriptions by keyword.",
+    ru: "Разработка веб-сервиса для автоматической транскрибации нескольких тысяч видео. Интеграция Elasticsearch для поиска по слову внутри видео и расшифровок.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "bitcoin"],
   textColor: "white",

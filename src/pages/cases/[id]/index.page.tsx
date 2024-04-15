@@ -1,5 +1,5 @@
 import { SingleCaseEn, SingleCaseRu } from "@shared/i18n/cases";
-import type { ICase } from "@shared/lib/types";
+import type { ICase, ILang } from "@shared/lib/types";
 import { CustomHeroes } from "@shared/lib/types";
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
@@ -15,6 +15,15 @@ import { OtherCases } from "./ui/other-cases.component";
 import { CaseReview } from "./ui/review.component";
 import { Stack } from "./ui/stack.component";
 import { Team } from "./ui/team.component";
+
+const getMetaTitle = (title: string | ILang<string>, titleLocale: "en" | "ru"): string => {
+  if (typeof title !== "string") {
+    if (titleLocale) return title[titleLocale];
+  } else {
+    return title;
+  }
+  return "";
+};
 
 export function Case(props: { caseData: ICase; otherCases: ICase[] }) {
   const { caseData, otherCases } = props;
@@ -37,7 +46,20 @@ export function Case(props: { caseData: ICase; otherCases: ICase[] }) {
   };
 
   return (
-    <Layout Meta={<Meta description="Unistory next" title="Unistory" />}>
+    <Layout
+      Meta={
+        <Meta
+          description={{
+            en: caseData?.metaDescription?.en ?? caseData.heroTitle.en,
+            ru: caseData?.metaDescription?.ru ?? caseData.heroTitle.ru,
+          }}
+          title={{
+            en: caseData?.metaTitle?.en ?? getMetaTitle(caseData.title, "en"),
+            ru: caseData?.metaTitle?.ru ?? getMetaTitle(caseData.title, "ru"),
+          }}
+        />
+      }
+    >
       <Layout.Header />
       <Layout.Main>
         {renderHero()}

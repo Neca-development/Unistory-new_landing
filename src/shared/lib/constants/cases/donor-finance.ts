@@ -27,6 +27,14 @@ export const DONOR: ICase = {
     en: ["A charitable platform at the intersection of web3 and web2"],
     ru: ["Благотворительная площадка на грани web3 и web2"],
   },
+  metaTitle: {
+    en: "Development of a charitable blockchain project",
+    ru: "Разработка благотворительного блокчейн-проекта",
+  },
+  metaDescription: {
+    en: "Together with our clients, we have developed a charitable platform that utilizes financial tools to motivate users to do good deeds.",
+    ru: "Вместе с нашими заказчиками мы разработали благотворительную площадку, которая использует финансовые инструменты, чтобы мотивировать пользователей делать добрые дела.",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "white",
@@ -377,8 +385,8 @@ export const DONOR: ICase = {
       photo: "",
     },
     text: {
-      en: "«When we met with your company, I asked many questions to understand if you really understand web3. I quickly realized that stumbling upon Unistory was a great stroke of luck. What I like about Unistory is that if we have a question, you always respond quickly or arrange a meeting. Usually on the same day. Vamsi and I often have many questions, and our project manager, Ilya, always responds promptly to them. Everything is transparent, the price is excellent, and we are happy to work with you from day one».",
-      ru: "«Когда мы встретились с вашей компанией, я задавал много вопросов, чтобы понять, что вы действительно разбираетесь в web3. Быстро понял, что наткнуться на Unistory было большой удачей. Что мне нравится в Unistory — если у нас есть вопрос, вы всегда быстро отвечаете или организовываете встречу. Обычно в тот же день. У нас с Вамси часто бывает много вопросов, и менеджер проектов, Илья, всегда оперативно на них отвечает. Все прозрачно, цена отличная, мы счастливы работать с вами с первого дня».",
+      en: "«When we first met your company, I asked many questions to understand if you truly understand web3. I quickly realized that coming across Unistory was a stroke of luck. Vamsi and I often have many questions, and our project manager, Ilya, always responds to them promptly. Everything is transparent, the price is excellent, and we are happy to work with you from day one».",
+      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: экспертиза в нейросетях и компьютерном зрении, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе. Unistory полностью справились со сложной задачей, которую мы поставили».",
     },
   },
   team: [

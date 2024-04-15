@@ -20,6 +20,14 @@ export const CHARITY_PLATFORM: ICase = {
     en: ["Development of Charity Platform"],
     ru: ["Благотворительная платформа Адрес.Люди"],
   },
+  metaTitle: {
+    en: "Development of the charitable platform Address.People",
+    ru: "Разработка благотворительной платформы Адрес.Люди",
+  },
+  metaDescription: {
+    en: "Creating a platform that connects people in need of assistance with those who want to help them, on a voluntary basis. A user of the platform can post a request for help, and another person can provide assistance with medications, groceries, or other means.",
+    ru: "Создание платформы, которая соединяет нуждающихся в помощи людей и тех, кто им хочет помочь, на безвозмездной основе. Пользователь площадки может разместить просьбу о помощи, а другой человек может помочь лекарствами, продуктами или другими средствами",
+  },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "black",

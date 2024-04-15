@@ -26,7 +26,20 @@ export function Home() {
   }, []);
 
   return (
-    <Layout Meta={<Meta description="Unistory homepage" title="Unistory" />}>
+    <Layout
+      Meta={
+        <Meta
+          description={{
+            en: "Custom web services and mobile applications. Expertise in AI / ML / blockchain / web3 technologies. Clients from 20+ countries.",
+            ru: "Разрабатываем веб-сервисы и мобильные приложения на заказ. Эксперты в области технологий AI / ML / blockchain / web3. Работаем с заказчиками из 20+стран.",
+          }}
+          title={{
+            en: "Unistory | Integrating The Future",
+            ru: "Unistory | Интегрируем будущее",
+          }}
+        />
+      }
+    >
       <Layout.Header />
       <Layout.Main>
         <div
