@@ -312,7 +312,7 @@ export const DERMADEX: ICase = {
     },
     text: {
       en: "«I posted a task on Upwork, and one of the responses was from the Unistory team. The company's portfolio impressed me: expertise in neural networks and computer vision, experience in the medical field. I immediately decided that these guys are perfect for us, and I was not mistaken: from that moment until now, everything has been amazing. Initially, Dr. Khoddami and I were not sure if we could implement our idea — but Unistory managed it».",
-      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: экспертиза в нейросетях и компьютерном зрении, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе. Изначально мы с доктором Худдами не были уверены, что сможем реализовать свою идею — но Unistory справились».",
+      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: экспертиза в нейросетях и компьютерном зрении, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе. Unistory полностью справились со сложной задачей, которую мы поставили».",
     },
   },
   team: [
