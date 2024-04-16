@@ -1,0 +1,46 @@
+import { CompanyHeroEn, CompanyHeroRu } from "@shared/i18n";
+import { IconComponent } from "@shared/ui";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
+
+export const CompanyHero = () => {
+  const { locale } = useRouter();
+
+  const langData = useMemo(() => {
+    return locale === "ru" ? CompanyHeroRu : CompanyHeroEn;
+  }, [locale]);
+
+  return (
+    <div className="container py-10 md:py-28">
+      <div className="mb-8 md:mb-12">
+        <h1 className="text-4xl font-bold text-primary-s leading-tight mb-4 md:text-[5rem] md:mb-6">
+          <span className="flex items-center">
+            {langData.title.first}
+            <IconComponent className="inline w-24 md:w-40" name="companyHeroLine" />
+          </span>
+          <span className="lg:block">{langData.title.second}</span>
+          <span>{langData.title.third}</span>
+        </h1>
+        <h2 className="md:text-3xl">
+          <span className="md:block">{langData.subtitle.first}</span>
+          <span>{langData.subtitle.second}</span>
+        </h2>
+      </div>
+      <div className="flex space-x-2 overflow-hidden md:space-x-4 md:text-2xl">
+        <div className="flex items-center bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+          <IconComponent className="w-12 md:w-28" name="companyClutch" />
+          <span className="ml-1 mr-1 md:ml-2">5.0</span>
+          <IconComponent className="w-4 md:w-6" name="companyStar" />
+        </div>
+        <div className="flex items-center bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+          <IconComponent className="w-12 md:w-28" name="companyUpwork" />
+          <span className="ml-1 md:ml-2">100% </span>
+        </div>
+        <div className="flex items-center bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+          <IconComponent className="w-5 md:w-10" name="companyHh" />
+          <span className="ml-1 md:ml-2">100% </span>
+        </div>
+      </div>
+    </div>
+  );
+};

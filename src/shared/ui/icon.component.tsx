@@ -66,6 +66,12 @@ const contactsMail = dynamic(() => import("@public/assets/icons/contacts-mail.sv
 const contactsTelegram = dynamic(() => import("@public/assets/icons/contacts-telegram.svg"));
 const contactsWhatsApp = dynamic(() => import("@public/assets/icons/contacts-whatsapp.svg"));
 
+const companyHeroLine = dynamic(() => import("@public/assets/icons/company-hero-line.svg"));
+const companyClutch = dynamic(() => import("@public/assets/icons/company-clutch.svg"));
+const companyStar = dynamic(() => import("@public/assets/icons/company-star.svg"));
+const companyUpwork = dynamic(() => import("@public/assets/icons/company-upwork.svg"));
+const companyHh = dynamic(() => import("@public/assets/icons/company-hh.svg"));
+
 const iconTypes = {
   unistory,
   logoLight,
@@ -121,6 +127,11 @@ const iconTypes = {
   contactsMail,
   contactsTelegram,
   contactsWhatsApp,
+  companyHeroLine,
+  companyClutch,
+  companyStar,
+  companyUpwork,
+  companyHh,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
