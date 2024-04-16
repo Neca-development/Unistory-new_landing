@@ -1,6 +1,6 @@
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
-import { CompanyHero } from "@widgets/landing/company";
+import { CompanyFeatures, CompanyHero } from "@widgets/landing/company";
 import { Layout } from "@widgets/layout";
 
 export function Contacts() {
@@ -22,6 +22,7 @@ export function Contacts() {
       <Layout.Header />
       <Layout.Main>
         <CompanyHero />
+        <CompanyFeatures />
         <Connect />
       </Layout.Main>
       <Layout.Footer />

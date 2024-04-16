@@ -11,7 +11,7 @@ export const CompanyHero = () => {
   }, [locale]);
 
   return (
-    <div className="container py-10 md:py-28">
+    <div className="container py-9 md:py-16">
       <div className="mb-8 md:mb-12">
         <h1 className="text-4xl font-bold text-primary-s leading-tight mb-4 md:text-[5rem] md:mb-6">
           <span className="flex items-center">
