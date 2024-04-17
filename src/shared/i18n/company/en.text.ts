@@ -90,4 +90,9 @@ export const CompanyVacanciesEn = {
     button: "Text Us",
     bottomText: "We’re waiting for your CVs",
   },
+  vacancyCTA: {
+    title: "How to apply for the vacancy:",
+    desc: "To apply for the vacancy, please contact us on Telegram.",
+    buttonText: "Contact via Telegram ",
+  },
 };

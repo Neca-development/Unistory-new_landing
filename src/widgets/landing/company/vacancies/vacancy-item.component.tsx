@@ -1,6 +1,8 @@
+import { CompanyVacanciesRu, CompanyVacanciesEn } from "@shared/i18n";
 import { IVacancy } from "@shared/lib";
 import { IconComponent } from "@shared/ui";
 import clsx from "clsx";
+import { useMemo } from "react";
 
 interface IVacancyItem {
   locale: "ru" | "en";
@@ -12,6 +14,10 @@ interface IVacancyItem {
 export const VacancyItem = (props: IVacancyItem) => {
   const { locale, vacancy, accordionOpenedId, onAccordionButtonCLick } = props;
 
+  const vacanciesData = useMemo(() => {
+    return locale === "ru" ? CompanyVacanciesRu : CompanyVacanciesEn;
+  }, [locale]);
+
   return (
     <div className="py-4 border-b-[1px] border-[#353535]">
       <div className="flex items-center justify-between">
@@ -19,16 +25,16 @@ export const VacancyItem = (props: IVacancyItem) => {
           <h3 className="block mb-1 text-lg font-semibold md:inline md:mb-0 md:w-2/5 lg:text-2xl">
             {vacancy.post[locale]}
           </h3>
-          <p className="dark:text-dark-text-secondary text-xs mr-4 md:w-[30%] md:text-sm md:mr-0">
+          <p className="dark:text-dark-text-secondary inline text-xs mr-4 md:w-[30%] md:text-sm md:mr-0">
             {vacancy.location[locale]}
           </p>
-          <p className="dark:text-dark-text-secondary text-xs md:w-[30%] md:text-sm">
+          <p className="dark:text-dark-text-secondary inline text-xs md:w-[30%] md:text-sm">
             {vacancy.format[locale]}
           </p>
         </div>
         <div
           className={clsx(
-            "w-10 h-10 cursor-pointer transition-all",
+            "w-10 h-10 cursor-pointer transition-all hover:text-bg-accent",
             accordionOpenedId === vacancy.id ? "rotate-180" : ""
           )}
           onClick={onAccordionButtonCLick}
@@ -58,6 +64,20 @@ export const VacancyItem = (props: IVacancyItem) => {
               </ul>
             </div>
           ))}
+        </div>
+        <div>
+          <p className="font-semibold mb-2 lg:mb-4 lg:text-lg">{vacanciesData.vacancyCTA.title}</p>
+          <p className="text-xs mb-4 dark:text-dark-text-secondary lg:text-sm">
+            {vacanciesData.vacancyCTA.desc}
+          </p>
+          <a
+            href="https://t.me/unistorymanager"
+            target="_blank"
+            rel="nofollow"
+            className="block w-fit text-xs py-2 px-4 rounded-lg lg:text-sm dark:bg-light-bg hover:!bg-bg-accent hover:!text-light-bg"
+          >
+            {vacanciesData.vacancyCTA.buttonText}
+          </a>
         </div>
       </div>
     </div>

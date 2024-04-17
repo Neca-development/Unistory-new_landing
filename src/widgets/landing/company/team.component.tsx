@@ -32,7 +32,7 @@ export const CompanyTeam = () => {
                   href={link}
                   target="_blank"
                   rel="nofollow"
-                  className="w-8 dark:text-dark-text-secondary text-light-text-secondary hover:!text-primary-s"
+                  className="w-8 text-dark-text-secondary group border border-[#939393] rounded-md hover:text-light-bg-accent hover:bg-[#939393] active:bg-[#353535] active:border-[#353535]"
                 >
                   {social === "linkedIn" && (
                     <IconComponent className="w-full h-full" name="companyLinkedIn" />

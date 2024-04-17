@@ -88,6 +88,11 @@ export const CompanyVacanciesRu = {
     title: "Не нашли подходящую вакансию?",
     desc: "Если вы крутой и хотите работать с нами, то пишите в Telegram",
     button: "Написать",
-    bottomText: "Наш CEO Александр ждет ваши CV",
+    bottomText: "Мы ждем ваши CV",
+  },
+  vacancyCTA: {
+    title: "Как откликнуться на вакансию:",
+    desc: "Для отклика на вакансию пишите нам в Telegram.",
+    buttonText: "Написать в Telegram ",
   },
 };

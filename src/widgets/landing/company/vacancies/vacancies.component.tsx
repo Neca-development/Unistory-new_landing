@@ -4,6 +4,7 @@ import { CompanyVacanciesEn, CompanyVacanciesRu } from "@shared/i18n";
 import contactIcon from "@public/assets/images/company/contact-icon.jpeg";
 import { VACANCIES } from "@shared/lib";
 import { VacancyItem } from "./vacancy-item.component";
+import { IconComponent } from "@shared/ui";
 
 export const CompanyVacancies = () => {
   const { locale } = useRouter();
@@ -30,7 +31,7 @@ export const CompanyVacancies = () => {
         <span>{vacanciesData.title.second}</span>
       </h2>
       <div className="md:flex md:justify-between">
-        <div className="md:w-[calc(70%_-_3rem)]">
+        <div className="mb-8 md:mb-0 md:w-[calc(70%_-_3rem)]">
           {locale &&
             VACANCIES.map((vacancy) => (
               <VacancyItem
@@ -42,28 +43,35 @@ export const CompanyVacancies = () => {
               />
             ))}
         </div>
-        <aside className="p-4 rounded-xl bg-light-bg-accent dark:bg-dark-bg-accent h-fit md:sticky md:top-24 md:w-[30%] lg:px-8 lg:py-6">
-          <div className="mb-14">
-            <p className="text-lg mb-2">{vacanciesData.sidebar.title}</p>
+        <aside className="p-4 rounded-xl bg-light-bg-accent dark:bg-dark-bg-accent h-fit md:sticky md:top-32 md:w-[30%] lg:px-8 lg:py-6">
+          <div className="mb-14 md:mb-20">
+            <p className="text-lg mb-2 font-semibold lg:text-2xl">{vacanciesData.sidebar.title}</p>
             <p className="text-xs text-dark-text-secondary md:text-sm">
               {vacanciesData.sidebar.desc}
             </p>
           </div>
-          <div>
-            <div></div>
+          <div className="flex items-center mb-3">
+            <img className="w-16 h-16 rounded-full lg:w-20 lg:h-20" src={contactIcon.src} />
             <a
               href="https://t.me/unistorymanager"
               rel="nofollow"
               target="_blank"
-              className="flex relative items-center justify-center h-16"
+              className="flex flex-grow relative items-center justify-center h-16 text-light-bg-accent bg-bg-accent rounded-full -ml-4 transition-all lg:h-20 hover:bg-light-bg-accent hover:text-bg-gradient active:bg-dark-text-secondary"
             >
-              <img
-                className="left-1 top-1 absolute w-12 h-12 rounded-full lg:left-2 lg:top-2"
-                src={contactIcon.src}
-              />
-              <span>{vacanciesData.sidebar.button}</span>
+              <span className="left-1 top-1 absolute w-14 h-14 bg-dark-bg-secondary rounded-full flex items-center p-3 justify-center lg:left-2 lg:top-2 lg:w-16 lg:h-16 lg:p-4">
+                <IconComponent
+                  className="w-full h-full -ml-1 text-light-bg-accent"
+                  name="telegram"
+                />
+              </span>
+              <span className="font-semibold text-lg lg:text-2xl lg:pl-6">
+                {vacanciesData.sidebar.button}
+              </span>
             </a>
           </div>
+          <p className="dark:text-dark-text-secondary text-xs lg:text-sm">
+            {vacanciesData.sidebar.bottomText}
+          </p>
         </aside>
       </div>
     </div>
