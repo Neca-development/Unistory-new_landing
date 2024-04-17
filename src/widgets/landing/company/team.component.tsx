@@ -1,21 +1,21 @@
 import { CompanyTeamEn, CompanyTeamRu } from "@shared/i18n";
-import { IIconComponentProperties, IconComponent } from "@shared/ui";
+import { IconComponent } from "@shared/ui";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 
 export const CompanyTeam = () => {
   const { locale } = useRouter();
 
-  const featuresData = useMemo(() => {
+  const teamData = useMemo(() => {
     return locale === "ru" ? CompanyTeamRu : CompanyTeamEn;
   }, [locale]);
 
   return (
-    <div className="container py-9 md:py-16">
-      <h2 className="mb-6 font-bold text-3xl md:mb-10 md:text-5xl">{featuresData.title}</h2>
+    <div className="container py-7 md:py-16">
+      <h2 className="mb-6 font-bold text-3xl md:mb-10 md:text-5xl">{teamData.title}</h2>
       <div className="grid gap-3 grid-cols-team overflow-x-auto no-scrollbar md:gap-6 md:grid-cols-4">
-        {featuresData.team.map((member, index) => (
-          <div key={index}>
+        {teamData.team.map((member) => (
+          <div key={member.name}>
             <div className="mb-4 relative h-0 pt-[100%] rounded-xl overflow-hidden md:mb-5">
               <img
                 className="w-full h-full absolute left-0 top-0 object-cover"
@@ -28,6 +28,7 @@ export const CompanyTeam = () => {
             <div className="flex">
               {Object.entries(member.socials).map(([social, link]) => (
                 <a
+                  key={link}
                   href={link}
                   target="_blank"
                   rel="nofollow"

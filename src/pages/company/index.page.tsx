@@ -1,6 +1,7 @@
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
 import { CompanyFeatures, CompanyHero, CompanyTeam } from "@widgets/landing/company";
+import { CompanyVideo } from "@widgets/landing/company/video.component";
 import { Layout } from "@widgets/layout";
 
 export function Contacts() {
@@ -24,6 +25,7 @@ export function Contacts() {
         <CompanyHero />
         <CompanyFeatures />
         <CompanyTeam />
+        <CompanyVideo />
         <Connect />
       </Layout.Main>
       <Layout.Footer />

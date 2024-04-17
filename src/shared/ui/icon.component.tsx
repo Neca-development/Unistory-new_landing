@@ -26,6 +26,7 @@ const phone02 = dynamic(() => import("@public/assets/icons/phone-02.svg"));
 const monitor = dynamic(() => import("@public/assets/icons/monitor.svg"));
 const bitcoin = dynamic(() => import("@public/assets/icons/bitcoin.svg"));
 const arrowRight = dynamic(() => import("@public/assets/icons/arrow-right.svg"));
+const playButton = dynamic(() => import("@public/assets/icons/play-button.svg"));
 
 const puddle = dynamic(() => import("@public/assets/icons/puddle.svg"));
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
@@ -136,6 +137,7 @@ const iconTypes = {
   companyHh,
   companyLinkedIn,
   companyTelegram,
+  playButton,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
