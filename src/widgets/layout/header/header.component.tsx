@@ -128,6 +128,12 @@ export const Header = React.memo((props: IHeaderProperties) => {
             </Link>
             <Link
               className="flex items-center btn-secondary px-4 lg:h-[36px] 2xl:h-[40px]"
+              href={ROUTES.COMPANY.route}
+            >
+              {ROUTES.COMPANY.label}
+            </Link>
+            <Link
+              className="flex items-center btn-secondary px-4 lg:h-[36px] 2xl:h-[40px]"
               href={ROUTES.CONTACTS.route}
             >
               {ROUTES.CONTACTS.label}

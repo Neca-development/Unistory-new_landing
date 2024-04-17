@@ -114,6 +114,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         services: "repeat(13, minmax(0, 1fr))",
+        team: "repeat(4, 250px)",
       },
       keyframes: {
         "move-in": {

@@ -102,6 +102,17 @@ article {
   }
 
   ul {
-    @apply list-disc  pl-4 md:pl-6;
+    @apply list-disc pl-4 md:pl-6;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

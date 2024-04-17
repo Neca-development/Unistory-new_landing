@@ -11,6 +11,10 @@ export const ROUTESRU = {
     label: "Контакты",
     route: "/contacts",
   },
+  COMPANY: {
+    label: "Мы",
+    route: "/company",
+  },
   // {
   // 	label: "Услуги",
   // 	route: "/",

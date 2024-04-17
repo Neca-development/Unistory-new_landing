@@ -319,6 +319,16 @@ export const TEAM = {
       ru: "Frontend разработчик",
     },
   },
+  antonSmolnikov: {
+    name: {
+      en: "Anton Smolnikov",
+      ru: "Антон Смольников",
+    },
+    position: {
+      en: "R&D manager",
+      ru: "R&D менеджер",
+    },
+  },
 } as const;
 
 type TeamKeys = keyof typeof TEAM;
