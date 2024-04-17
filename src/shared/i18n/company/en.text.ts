@@ -78,3 +78,16 @@ export const CompanyTeamEn = {
     },
   ],
 };
+
+export const CompanyVacanciesEn = {
+  title: {
+    first: "Always on the lookout ",
+    second: "for talented ones",
+  },
+  sidebar: {
+    title: "Didn't find the right vacancy?",
+    desc: "If you are an expert willing to work with us, feel free to text us on Telegram",
+    button: "Text Us",
+    bottomText: "We’re waiting for your CVs",
+  },
+};

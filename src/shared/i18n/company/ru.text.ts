@@ -78,3 +78,16 @@ export const CompanyTeamRu = {
     },
   ],
 };
+
+export const CompanyVacanciesRu = {
+  title: {
+    first: "Мы всегда в поиске ",
+    second: "толковых ребят",
+  },
+  sidebar: {
+    title: "Не нашли подходящую вакансию?",
+    desc: "Если вы крутой и хотите работать с нами, то пишите в Telegram",
+    button: "Написать",
+    bottomText: "Наш CEO Александр ждет ваши CV",
+  },
+};
