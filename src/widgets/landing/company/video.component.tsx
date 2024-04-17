@@ -28,7 +28,7 @@ export const CompanyVideo = () => {
         <div
           onClick={onPlayButtonCLick}
           className={clsx(
-            "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 text-light-bg-accent bg-text-bg-gradient dark:text-bg-gradient dark:bg-light-bg-accent rounded-full flex items-center justify-center cursor-pointer transition-all hover:!bg-bg-accent md:w-20 md:h-20",
+            "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 text-light-bg-accent bg-bg-gradient dark:text-bg-gradient dark:bg-light-bg-accent rounded-full flex items-center justify-center cursor-pointer transition-all hover:!bg-bg-accent md:w-20 md:h-20",
             isPlaying && "opacity-0 pointer-events-none"
           )}
         >

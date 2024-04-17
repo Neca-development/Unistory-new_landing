@@ -27,16 +27,16 @@ export const CompanyHero = () => {
         </h2>
       </div>
       <div className="flex space-x-2 overflow-hidden md:space-x-4 md:text-2xl">
-        <div className="flex items-center bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+        <div className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
           <IconComponent className="w-12 md:w-28" name="companyClutch" />
           <span className="ml-1 mr-1 md:ml-2">5.0</span>
           <IconComponent className="w-4 md:w-6" name="companyStar" />
         </div>
-        <div className="flex items-center bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+        <div className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
           <IconComponent className="w-12 md:w-28" name="companyUpwork" />
           <span className="ml-1 md:ml-2">100% </span>
         </div>
-        <div className="flex items-center bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+        <div className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
           <IconComponent className="w-5 md:w-10" name="companyHh" />
           <span className="ml-1 md:ml-2">100% </span>
         </div>

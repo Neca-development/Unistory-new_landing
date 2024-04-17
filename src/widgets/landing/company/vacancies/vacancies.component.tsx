@@ -46,7 +46,7 @@ export const CompanyVacancies = () => {
         <aside className="p-4 rounded-xl bg-light-bg-accent dark:bg-dark-bg-accent h-fit md:sticky md:top-32 md:w-[30%] lg:px-8 lg:py-6">
           <div className="mb-14 md:mb-20">
             <p className="text-lg mb-2 font-semibold lg:text-2xl">{vacanciesData.sidebar.title}</p>
-            <p className="text-xs text-dark-text-secondary md:text-sm">
+            <p className="text-xs text-light-text-secondary dark:text-dark-text-secondary md:text-sm">
               {vacanciesData.sidebar.desc}
             </p>
           </div>
@@ -69,7 +69,7 @@ export const CompanyVacancies = () => {
               </span>
             </a>
           </div>
-          <p className="dark:text-dark-text-secondary text-xs lg:text-sm">
+          <p className="text-light-text-secondary dark:text-dark-text-secondary text-xs lg:text-sm">
             {vacanciesData.sidebar.bottomText}
           </p>
         </aside>

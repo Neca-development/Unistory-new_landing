@@ -24,7 +24,9 @@ export const CompanyTeam = () => {
               />
             </div>
             <h3 className="mb-1 font-semibold md:text-lg md:mb-2">{member.name}</h3>
-            <p className="text-dark-text-secondary mb-4 text-xs md:text-sm">{member.post}</p>
+            <p className="text-light-text-secondary dark:text-dark-text-secondary mb-4 text-xs md:text-sm">
+              {member.post}
+            </p>
             <div className="flex">
               {Object.entries(member.socials).map(([social, link]) => (
                 <a

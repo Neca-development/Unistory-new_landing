@@ -26,7 +26,7 @@ export function Contacts() {
       }
     >
       <Layout.Header />
-      <Layout.Main>
+      <Layout.Main className="bg-light-bg dark:bg-dark-bg">
         <CompanyHero />
         <CompanyFeatures />
         <CompanyTeam />

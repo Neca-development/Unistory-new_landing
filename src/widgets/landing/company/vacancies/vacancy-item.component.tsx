@@ -19,22 +19,22 @@ export const VacancyItem = (props: IVacancyItem) => {
   }, [locale]);
 
   return (
-    <div className="py-4 border-b-[1px] border-[#353535]">
+    <div className="py-4 border-b-[1px] border-[#EDEAE8] dark:border-[#353535]">
       <div className="flex items-center justify-between">
         <div className="w-[calc(100%_-_3.5rem)] md:flex md:items-center md:space-x-3">
           <h3 className="block mb-1 text-lg font-semibold md:inline md:mb-0 md:w-2/5 lg:text-2xl">
             {vacancy.post[locale]}
           </h3>
-          <p className="dark:text-dark-text-secondary inline text-xs mr-4 md:w-[30%] md:text-sm md:mr-0">
+          <p className="text-light-text-secondary dark:text-dark-text-secondary inline text-xs mr-4 md:w-[30%] md:text-sm md:mr-0">
             {vacancy.location[locale]}
           </p>
-          <p className="dark:text-dark-text-secondary inline text-xs md:w-[30%] md:text-sm">
+          <p className="text-light-text-secondary dark:text-dark-text-secondary inline text-xs md:w-[30%] md:text-sm">
             {vacancy.format[locale]}
           </p>
         </div>
         <div
           className={clsx(
-            "w-10 h-10 cursor-pointer transition-all hover:text-bg-accent",
+            "w-10 h-10 text-[#838383] cursor-pointer transition-all hover:!text-bg-accent",
             accordionOpenedId === vacancy.id ? "rotate-180" : ""
           )}
           onClick={onAccordionButtonCLick}
@@ -48,7 +48,7 @@ export const VacancyItem = (props: IVacancyItem) => {
           accordionOpenedId === vacancy.id ? "block" : "hidden"
         )}
       >
-        <div className="space-y-2 dark:text-dark-text-secondary text-xs md:text-sm">
+        <div className="space-y-2 text-light-text-secondary dark:text-dark-text-secondary text-xs md:text-sm">
           {vacancy.description[locale].map((descriptionString, index) => (
             <p key={`desc-${index}`}>{descriptionString}</p>
           ))}
@@ -57,7 +57,7 @@ export const VacancyItem = (props: IVacancyItem) => {
           {vacancy.jobPoints[locale].map((point) => (
             <div>
               <p className="font-semibold mb-2 lg:mb-4 lg:text-lg">{point.title}</p>
-              <ul className="text-xs dark:text-dark-text-secondary space-y-2 list-disc pl-4 md:text-sm">
+              <ul className="text-xs text-light-text-secondary dark:text-dark-text-secondary space-y-2 list-disc pl-4 md:text-sm">
                 {point.listItems.map((item) => (
                   <li>{item}</li>
                 ))}
@@ -74,7 +74,7 @@ export const VacancyItem = (props: IVacancyItem) => {
             href="https://t.me/unistorymanager"
             target="_blank"
             rel="nofollow"
-            className="block w-fit text-xs py-2 px-4 rounded-lg lg:text-sm dark:bg-light-bg hover:!bg-bg-accent hover:!text-light-bg"
+            className="block w-fit text-xs py-2 px-4 rounded-lg bg-dark-bg text-light-bg dark:bg-light-bg dark:text-bg-gradient hover:!bg-bg-accent hover:!text-light-bg lg:text-sm "
           >
             {vacanciesData.vacancyCTA.buttonText}
           </a>
