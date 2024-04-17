@@ -153,7 +153,7 @@ export default function ConnectForm() {
       ]);
       resetFields();
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     } finally {
       setIsLoading(false);
     }
