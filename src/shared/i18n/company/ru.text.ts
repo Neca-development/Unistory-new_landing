@@ -1,5 +1,11 @@
 import featureImage1 from "@public/assets/images/company/company-feature.jpg";
 
+import teamImage1 from "@public/assets/images/company/team-aksenov.jpg";
+import teamImage2 from "@public/assets/images/company/team-semenov.jpg";
+import teamImage3 from "@public/assets/images/company/team-kiribiatiev.jpg";
+import teamImage4 from "@public/assets/images/company/team-smolnikov.jpg";
+import { TEAM } from "@shared/lib/constants/team";
+
 export const CompanyHeroRu = {
   title: {
     first: "Привет!",
@@ -34,3 +40,41 @@ export const CompanyFeaturesRu = [
     image: featureImage1.src,
   },
 ];
+
+export const CompanyTeamRu = {
+  title: "Наша команда",
+  team: [
+    {
+      name: TEAM.alexanderAksenov.name.ru,
+      post: "Ко-фаундер компании и SEO. Фанат децентрализации и блокчейн-энтузиаст.",
+      image: teamImage1.src,
+      socials: {
+        linkedIn: "https://www.linkedin.com/in/aiaksenov/",
+      },
+    },
+    {
+      name: TEAM.daniilSemenov.name.ru,
+      post: "Руководитель проектного офиса. Менеджерит менеджеров проектов, а они менеджерят разработчиков.",
+      image: teamImage2.src,
+      socials: {
+        linkedIn: "https://www.linkedin.com/in/danil2205/",
+      },
+    },
+    {
+      name: TEAM.vladislavKiribyatev.name.ru,
+      post: "Главный бэкенд-самурай и монстр адекватных эстимейтов.",
+      image: teamImage3.src,
+      socials: {
+        linkedIn: "https://ru.linkedin.com/in/vladislav-kirbiatev-2b2724216",
+      },
+    },
+    {
+      name: TEAM.antonSmolnikov.name.ru,
+      post: "Эксперт по новым технологиям. Ответит на любые вопросы о web3, нейросетях и искусственном интеллекте.",
+      image: teamImage4.src,
+      socials: {
+        telegram: "https://t.me/Antonunistory",
+      },
+    },
+  ],
+};

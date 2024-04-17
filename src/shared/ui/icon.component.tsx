@@ -71,6 +71,8 @@ const companyClutch = dynamic(() => import("@public/assets/icons/company-clutch.
 const companyStar = dynamic(() => import("@public/assets/icons/company-star.svg"));
 const companyUpwork = dynamic(() => import("@public/assets/icons/company-upwork.svg"));
 const companyHh = dynamic(() => import("@public/assets/icons/company-hh.svg"));
+const companyLinkedIn = dynamic(() => import("@public/assets/images/company/linkedin.svg"));
+const companyTelegram = dynamic(() => import("@public/assets/images/company/telegram.svg"));
 
 const iconTypes = {
   unistory,
@@ -132,6 +134,8 @@ const iconTypes = {
   companyStar,
   companyUpwork,
   companyHh,
+  companyLinkedIn,
+  companyTelegram,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
