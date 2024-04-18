@@ -3,6 +3,7 @@ import { Connect } from "@widgets/connect";
 import {
   CompanyFeatures,
   CompanyHero,
+  CompanyMap,
   CompanyTeam,
   CompanyVacancies,
   CompanyVideo,
@@ -15,12 +16,12 @@ export function Contacts() {
       Meta={
         <Meta
           description={{
-            en: "Out software development company is based in Almaty, Kazakhstan.",
-            ru: "Офисы студии разработки Unistory расположены в Санкт-Петербурге и Алматы.",
+            en: "We are Unistory, a software development company. Our main expertise lies in AI and web3 technologies. Our office is located in Almaty, Kazakhstan.",
+            ru: "Мы — Unistory, разрабатываем веб-сервисы и мобильные приложения. Главные доменные экспертизы — AI и web3. Офисы находятся в Санкт-Петербурге и Алматы.",
           }}
           title={{
-            en: "Contact us | Unistory",
-            ru: "Контакты | Unistory",
+            en: "About Us | Unistory",
+            ru: "О компании | Unistory",
           }}
         />
       }
@@ -29,6 +30,7 @@ export function Contacts() {
       <Layout.Main className="bg-light-bg dark:bg-dark-bg">
         <CompanyHero />
         <CompanyFeatures />
+        <CompanyMap />
         <CompanyTeam />
         <CompanyVideo />
         <CompanyVacancies />

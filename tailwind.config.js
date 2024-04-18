@@ -64,6 +64,7 @@ module.exports = {
     extend: {
       screens: {
         "m-xl1": { max: "1279px" },
+        "m-md": { max: "767px" },
         "t-xs": { max: "640px" },
         "m-2xl": { max: "520px" },
         "m-xl": { max: "460px" },

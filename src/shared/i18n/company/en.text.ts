@@ -46,7 +46,7 @@ export const CompanyTeamEn = {
   team: [
     {
       name: TEAM.alexanderAksenov.name.en,
-      post: "Co-founder of the company and the CEO. A crypto enthusiast and a fan of decentralization.",
+      post: "CEO. A crypto enthusiast and a fan of decentralization.",
       image: teamImage1.src,
       socials: {
         linkedIn: "https://www.linkedin.com/in/aiaksenov/",
@@ -95,4 +95,8 @@ export const CompanyVacanciesEn = {
     desc: "To apply for the vacancy, please contact us on Telegram.",
     buttonText: "Contact via Telegram ",
   },
+};
+
+export const CompanyMapEn = {
+  title: "Our clients represent the whole world",
 };

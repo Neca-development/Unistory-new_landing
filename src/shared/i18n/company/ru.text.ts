@@ -46,7 +46,7 @@ export const CompanyTeamRu = {
   team: [
     {
       name: TEAM.alexanderAksenov.name.ru,
-      post: "Ко-фаундер компании и SEO. Фанат децентрализации и блокчейн-энтузиаст.",
+      post: "CEO. Фанат децентрализации и блокчейн-энтузиаст.",
       image: teamImage1.src,
       socials: {
         linkedIn: "https://www.linkedin.com/in/aiaksenov/",
@@ -95,4 +95,8 @@ export const CompanyVacanciesRu = {
     desc: "Для отклика на вакансию пишите нам в Telegram.",
     buttonText: "Написать в Telegram ",
   },
+};
+
+export const CompanyMapRu = {
+  title: "Наши клиенты — со всего мира",
 };

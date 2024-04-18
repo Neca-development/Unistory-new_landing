@@ -55,11 +55,11 @@ export const VacancyItem = (props: IVacancyItem) => {
         </div>
         <div className="space-y-4 lg:space-y-8">
           {vacancy.jobPoints[locale].map((point) => (
-            <div>
+            <div key={point.title}>
               <p className="font-semibold mb-2 lg:mb-4 lg:text-lg">{point.title}</p>
               <ul className="text-xs text-light-text-secondary dark:text-dark-text-secondary space-y-2 list-disc pl-4 md:text-sm">
                 {point.listItems.map((item) => (
-                  <li>{item}</li>
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>
