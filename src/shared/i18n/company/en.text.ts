@@ -1,4 +1,7 @@
-import featureImage1 from "@public/assets/images/company/company-feature.jpg";
+import featureImage1 from "@public/assets/images/company/feature-team-building.jpg";
+import featureImage2 from "@public/assets/images/company/feature-techs.jpg";
+import featureImage3 from "@public/assets/images/company/feature-growth.jpg";
+import featureImage4 from "@public/assets/images/company/feature-spirit.jpg";
 
 import teamImage1 from "@public/assets/images/company/team-aksenov.jpg";
 import teamImage2 from "@public/assets/images/company/team-semenov.jpg";
@@ -23,19 +26,19 @@ export const CompanyFeaturesEn = [
     title: "Team Building",
     subtitle:
       "We go hiking, boating on the lake, handcraft stone saunas, and organize tours of St. Petersburg bars.",
-    image: featureImage1.src,
+    image: featureImage2.src,
   },
   {
     title: "Technologies",
     subtitle:
       "We don't just create simple websites and landing pages. Instead, we develop complex web services and applications with AI and blockchain.",
-    image: featureImage1.src,
+    image: featureImage3.src,
   },
   {
     title: "Rapid Growth ",
     subtitle:
       "The team works on complex projects under the careful guidance of team leaders. Developers constantly exchange expertise.",
-    image: featureImage1.src,
+    image: featureImage4.src,
   },
   {
     title: "Spirit of Innovation",

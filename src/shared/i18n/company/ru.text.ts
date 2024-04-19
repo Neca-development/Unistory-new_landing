@@ -1,5 +1,7 @@
-import featureImage1 from "@public/assets/images/company/company-feature.jpg";
-
+import featureImage1 from "@public/assets/images/company/feature-team-building.jpg";
+import featureImage2 from "@public/assets/images/company/feature-techs.jpg";
+import featureImage3 from "@public/assets/images/company/feature-growth.jpg";
+import featureImage4 from "@public/assets/images/company/feature-spirit.jpg";
 import teamImage1 from "@public/assets/images/company/team-aksenov.jpg";
 import teamImage2 from "@public/assets/images/company/team-semenov.jpg";
 import teamImage3 from "@public/assets/images/company/team-kiribiatiev.jpg";
@@ -29,19 +31,19 @@ export const CompanyFeaturesRu = [
     title: "Технологии",
     subtitle:
       "Мы не пилим простые сайты и лендинги. Вместо этого разрабатываем сложные веб-сервисы и приложения с AI и блокчейном.",
-    image: featureImage1.src,
+    image: featureImage2.src,
   },
   {
     title: "Быстрый рост",
     subtitle:
       "Команда работает над сложными проектами под чутким наставничеством тимлидов. Разработчики постоянно обмениваются обытом.",
-    image: featureImage1.src,
+    image: featureImage3.src,
   },
   {
     title: "Дух изобретательства",
     subtitle:
       "Создаем то, чего до нас никто не делал: децентрализованный AI, определение болезни по фото, работа с лидаром.",
-    image: featureImage1.src,
+    image: featureImage4.src,
   },
 ];
 
@@ -65,7 +67,7 @@ export const CompanyTeamRu = {
     },
     {
       name: TEAM.antonSmolnikov.name.ru,
-      post: "Эксперт по новым технологиям. Ответит на любые вопросы о web3, нейросетях и искусственном интеллекте.",
+      post: "Business development manager, хотя сам предпочитает просто sales. Эксперт в области AI и web3.",
       image: teamImage4.src,
     },
   ],
