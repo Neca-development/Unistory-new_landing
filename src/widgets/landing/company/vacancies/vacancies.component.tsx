@@ -9,6 +9,8 @@ import { IconComponent } from "@shared/ui";
 export const CompanyVacancies = () => {
   const { locale } = useRouter();
 
+  if (locale === "en") return null;
+
   const vacanciesData = useMemo(() => {
     return locale === "ru" ? CompanyVacanciesRu : CompanyVacanciesEn;
   }, [locale]);
@@ -53,7 +55,7 @@ export const CompanyVacancies = () => {
           <div className="flex items-center mb-3">
             <img className="w-16 h-16 rounded-full lg:w-20 lg:h-20" src={contactIcon.src} />
             <a
-              href="https://t.me/unistorymanager"
+              href="https://t.me/unistory223"
               rel="nofollow"
               target="_blank"
               className="flex flex-grow relative items-center justify-center h-16 text-light-bg-accent bg-bg-accent rounded-full -ml-4 transition-all lg:h-20 hover:bg-light-bg-accent hover:text-bg-gradient active:bg-dark-text-secondary"
