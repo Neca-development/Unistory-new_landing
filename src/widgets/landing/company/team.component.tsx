@@ -1,5 +1,4 @@
 import { CompanyTeamEn, CompanyTeamRu } from "@shared/i18n";
-import { IconComponent } from "@shared/ui";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
 
