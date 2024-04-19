@@ -20,23 +20,27 @@ export const CompanyHeroEn = {
 
 export const CompanyFeaturesEn = [
   {
-    title: "Cutting-edge stack",
-    subtitle: "We operate on the basis of future technologies, including AI and web3.",
+    title: "Team Building",
+    subtitle:
+      "We go hiking, boating on the lake, handcraft stone saunas, and organize tours of St. Petersburg bars.",
     image: featureImage1.src,
   },
   {
-    title: "Сorporate events and team building",
-    subtitle: "We organize active team building events to help employees connect.",
+    title: "Technologies",
+    subtitle:
+      "We don't just create simple websites and landing pages. Instead, we develop complex web services and applications with AI and blockchain.",
     image: featureImage1.src,
   },
   {
-    title: "Opportunity for rapid growth",
-    subtitle: "We facilitate growth: our juniors quickly gain experience and evolve into seniors.",
+    title: "Rapid Growth ",
+    subtitle:
+      "The team works on complex projects under the careful guidance of team leaders. Developers constantly exchange expertise.",
     image: featureImage1.src,
   },
   {
-    title: "Breakthrough inventions",
-    subtitle: "We create new, unique things. Unistory employees are true pioneers.",
+    title: "Spirit of Innovation",
+    subtitle:
+      "We create what no one has done before us: decentralized AI, disease detection through photos, and LiDAR work.",
     image: featureImage1.src,
   },
 ];
@@ -48,33 +52,21 @@ export const CompanyTeamEn = {
       name: TEAM.alexanderAksenov.name.en,
       post: "CEO. A crypto enthusiast and a fan of decentralization.",
       image: teamImage1.src,
-      socials: {
-        linkedIn: "https://www.linkedin.com/in/aiaksenov/",
-      },
     },
     {
       name: TEAM.daniilSemenov.name.en,
-      post: "Head of the project office. The chief responsible for creating teams and managing projects.",
+      post: "Head of the project office. Takes care of developers and is always ready to assist PMs.",
       image: teamImage2.src,
-      socials: {
-        linkedIn: "https://www.linkedin.com/in/danil2205/",
-      },
     },
     {
       name: TEAM.vladislavKiribyatev.name.en,
       post: "The superior backend samurai and the unparalleled master of accurate estimates.",
       image: teamImage3.src,
-      socials: {
-        linkedIn: "https://ru.linkedin.com/in/vladislav-kirbiatev-2b2724216",
-      },
     },
     {
       name: TEAM.antonSmolnikov.name.en,
       post: "Expert in new technologies. Will answer any questions about web3, neural networks, and artificial intelligence.",
       image: teamImage4.src,
-      socials: {
-        telegram: "https://t.me/Antonunistory",
-      },
     },
   ],
 };

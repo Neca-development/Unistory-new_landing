@@ -20,23 +20,27 @@ export const CompanyHeroRu = {
 
 export const CompanyFeaturesRu = [
   {
-    title: "Передовые технологии",
-    subtitle: "Мы работаем на основе актуального стека и технологий будущего, AI и web3.",
+    title: "Тимбилдинг",
+    subtitle:
+      "Ходим в горы, плаваем на лодках по озеру, вручную делаем баню из камней, устраиваем туры по питерским барам.",
     image: featureImage1.src,
   },
   {
-    title: "Крутые корпоративы и тимбилдинги",
-    subtitle: "Проводим активные тимбилдинги, помогаем сотрудникам установить коннект.",
+    title: "Технологии",
+    subtitle:
+      "Мы не пилим простые сайты и лендинги. Вместо этого разрабатываем сложные веб-сервисы и приложения с AI и блокчейном.",
     image: featureImage1.src,
   },
   {
-    title: "Возможность быстрого роста",
-    subtitle: "Обеспечиваем рост: наши джуны быстро набирают  опыт и превращаются в сеньоров.",
+    title: "Быстрый рост",
+    subtitle:
+      "Команда работает над сложными проектами под чутким наставничеством тимлидов. Разработчики постоянно обмениваются обытом.",
     image: featureImage1.src,
   },
   {
-    title: "Наши сотрудники — изобретатели",
-    subtitle: "Создаем новые, уникальные вещи. Сотрудники Unistory — настоящие первопроходцы.",
+    title: "Дух изобретательства",
+    subtitle:
+      "Создаем то, чего до нас никто не делал: децентрализованный AI, определение болезни по фото, работа с лидаром.",
     image: featureImage1.src,
   },
 ];
@@ -48,33 +52,21 @@ export const CompanyTeamRu = {
       name: TEAM.alexanderAksenov.name.ru,
       post: "CEO. Фанат децентрализации и блокчейн-энтузиаст.",
       image: teamImage1.src,
-      socials: {
-        linkedIn: "https://www.linkedin.com/in/aiaksenov/",
-      },
     },
     {
       name: TEAM.daniilSemenov.name.ru,
-      post: "Руководитель проектного офиса. Менеджерит менеджеров проектов, а они менеджерят разработчиков.",
+      post: "Руководитель проектного офиса. Заботится о разработчиках и всегда готов прийти на помощь ПМ'ам",
       image: teamImage2.src,
-      socials: {
-        linkedIn: "https://www.linkedin.com/in/danil2205/",
-      },
     },
     {
       name: TEAM.vladislavKiribyatev.name.ru,
       post: "Главный бэкенд-самурай и монстр адекватных эстимейтов.",
       image: teamImage3.src,
-      socials: {
-        linkedIn: "https://ru.linkedin.com/in/vladislav-kirbiatev-2b2724216",
-      },
     },
     {
       name: TEAM.antonSmolnikov.name.ru,
       post: "Эксперт по новым технологиям. Ответит на любые вопросы о web3, нейросетях и искусственном интеллекте.",
       image: teamImage4.src,
-      socials: {
-        telegram: "https://t.me/Antonunistory",
-      },
     },
   ],
 };

@@ -2,7 +2,7 @@ export const TEAM = {
   alexanderAksenov: {
     name: {
       en: "Alexander Aksenov",
-      ru: "Александр Аксенов",
+      ru: "Александр Аксёнов",
     } as any,
     position: {
       en: "Head of Project Management",
@@ -112,7 +112,7 @@ export const TEAM = {
   daniilSemenov: {
     name: {
       en: "Daniil Semenov",
-      ru: "Даниил Семенов",
+      ru: "Даниил Семёнов",
     },
     position: {
       en: "Project manager",
@@ -122,7 +122,7 @@ export const TEAM = {
   daniilSemenovHead: {
     name: {
       en: "Daniil Semenov",
-      ru: "Даниил Семенов",
+      ru: "Даниил Семёнов",
     },
     position: {
       en: "Head of Project Management",

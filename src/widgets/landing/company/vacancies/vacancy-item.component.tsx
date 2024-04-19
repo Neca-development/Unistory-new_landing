@@ -25,10 +25,10 @@ export const VacancyItem = (props: IVacancyItem) => {
           <h3 className="block mb-1 text-lg font-semibold md:inline md:mb-0 md:w-2/5 lg:text-2xl">
             {vacancy.post[locale]}
           </h3>
-          <p className="text-light-text-secondary dark:text-dark-text-secondary inline text-xs mr-4 md:w-[30%] md:text-sm md:mr-0">
+          <p className="text-light-text-secondary dark:text-dark-text-secondary inline text-xs mr-4 md:w-[30%] md:mt-2 md:text-sm md:mr-0">
             {vacancy.location[locale]}
           </p>
-          <p className="text-light-text-secondary dark:text-dark-text-secondary inline text-xs md:w-[30%] md:text-sm">
+          <p className="text-light-text-secondary dark:text-dark-text-secondary inline text-xs md:w-[30%] md:mt-2 md:text-sm">
             {vacancy.format[locale]}
           </p>
         </div>
@@ -71,7 +71,7 @@ export const VacancyItem = (props: IVacancyItem) => {
             {vacanciesData.vacancyCTA.desc}
           </p>
           <a
-            href="https://t.me/unistorymanager"
+            href="https://t.me/unistory223"
             target="_blank"
             rel="nofollow"
             className="block w-fit text-xs py-2 px-4 rounded-lg bg-dark-bg text-light-bg dark:bg-light-bg dark:text-bg-gradient hover:!bg-bg-accent hover:!text-light-bg lg:text-sm "
