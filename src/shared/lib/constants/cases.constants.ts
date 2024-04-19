@@ -15,9 +15,11 @@ import { AI_CHATBOT } from "./cases/ai-chatbot";
 import { DONOR } from "./cases/donor-finance";
 import { LLM_CHATBOT } from "./cases/llm-chatbot";
 import { BVKS } from "./cases/bvks";
+import { FAIRY_TALE_AI } from "./cases/fairy-tale-ai";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
+  FAIRY_TALE_AI,
   BVKS,
   DONOR,
   LLM_CHATBOT,
