@@ -17,8 +17,8 @@ export const FAIRY_TALE_AI: ICase = {
   },
   id: "fairy-tale-ai",
   heroTitle: {
-    en: "Prompt engineering and backend development for a fairy tale generation service",
-    ru: "Промпт-инжиниринг и бэкенд-разработка для сервиса генерации сказок",
+    en: "Prompt engineering and development for a fairy tale generation service",
+    ru: "Промпт-инжиниринг и разработка для сервиса генерации сказок",
   },
   categories: {
     en: ["Assistant in composing tales for children"],
@@ -76,32 +76,8 @@ export const FAIRY_TALE_AI: ICase = {
         },
         {
           text: {
-            en: "— Title. The user chooses the title, which influences the final text.",
-            ru: "— Название. Пользователь указывает его сам, и название оказывает влияние на итоговый текст.",
-          },
-        },
-        {
-          text: {
-            en: "— Location. Options include a magical forest, a princess's castle, an enchanted kingdom, or a modern city.",
-            ru: "— Локация — волшебный лес, замок принцессы, заколдованное королевство, обычный современный город.",
-          },
-        },
-        {
-          text: {
-            en: "— Genre. Adventure, comedy, fantasy, or stories tailored for the youngest audience.",
-            ru: "— Жанр — приключения, комедия, фантастика, для самых маленьких.",
-          },
-        },
-        {
-          text: {
-            en: "— Characters. In this service, the main characters of the tale can be the user's child and their favorite pet, for example, a hamster.",
-            ru: "— Персонажи. В этом сервисе героями сказки могут стать ваш ребенок и его любимый хомячок. ",
-          },
-        },
-        {
-          text: {
-            en: "— Number of Chapters. Each chapter in the tale consists of approximately 5000 characters. Subscribers to the service can access up to 10 chapters in one tale. Handling a large volume of text was the main challenge, which we addressed at the prompt engineering level.",
-            ru: "— Количество глав. Одна глава в сказке — это около 5000 символов. Для обладателей подписки на сервис будет доступно до 10 глав в одной сказке. Большой объем текста стал основным челленджем, который мы решили на уровне промпт-инжиринга. ",
+            en: "<ul><li>Title. The user chooses the title, which influences the final text.</li><li>Location. Options include a magical forest, a princess's castle, an enchanted kingdom, or a modern city.</li><li>Genre. Adventure, comedy, fantasy, or stories tailored for the youngest audience.</li><li>Characters. In this service, the main characters of the tale can be the user's child and their favorite pet, for example, a hamster.</li><li>Number of Chapters. Each chapter in the tale consists of approximately 5000 characters. Subscribers to the service can access up to 10 chapters in one tale. Handling a large volume of text was the main challenge, which we addressed at the prompt engineering level.</li></ul>",
+            ru: "<ul><li>Название. Пользователь указывает его сам, и название оказывает влияние на итоговый текст.</li><li>Локация — волшебный лес, замок принцессы, заколдованное королевство, обычный современный город.</li><li>Жанр — приключения, комедия, фантастика, для самых маленьких.</li><li>Персонажи. В этом сервисе героями сказки могут стать ваш ребенок и его любимый хомячок.</li><li>Количество глав. Одна глава в сказке — это около 5000 символов. Для обладателей подписки на сервис будет доступно до 10 глав в одной сказке. Большой объем текста стал основным челленджем, который мы решили на уровне промпт-инжиринга.</li></ul>",
           },
         },
       ],
