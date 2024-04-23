@@ -53,7 +53,7 @@ export const CompanyTeamEn = {
   team: [
     {
       name: TEAM.alexanderAksenov.name.en,
-      post: "CEO. A crypto enthusiast and a fan of decentralization.",
+      post: "CEO of Unistory. Keen on surfing the waves of the Fourth Industrial Revolution.",
       image: teamImage1.src,
     },
     {

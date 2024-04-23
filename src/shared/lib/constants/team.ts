@@ -141,8 +141,8 @@ export const TEAM = {
   },
   vladislavKiribyatev: {
     name: {
-      en: "Vladislav Kiribiatiev",
-      ru: "Владислав Кирибьятев",
+      en: "Vladislav Kirbiatev",
+      ru: "Владислав Кирбятьев",
     },
     position: {
       en: "Backend developer",

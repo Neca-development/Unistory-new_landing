@@ -52,7 +52,7 @@ export const CompanyTeamRu = {
   team: [
     {
       name: TEAM.alexanderAksenov.name.ru,
-      post: "CEO. Фанат децентрализации и блокчейн-энтузиаст.",
+      post: "CEO Unistory. Увлекается сёрфингом по волнам четвёртой технологической революции\n",
       image: teamImage1.src,
     },
     {
@@ -79,14 +79,14 @@ export const CompanyVacanciesRu = {
     second: "толковых ребят",
   },
   sidebar: {
-    title: "Не нашли подходящую вакансию?",
-    desc: "Если вы крутой и хотите работать с нами, то пишите в Telegram",
+    title: "Нет подходящей вакансии?",
+    desc: "Если ты крутой и хочешь работать с нами, то пиши в Telegram",
     button: "Написать",
-    bottomText: "Мы ждем ваши CV",
+    bottomText: "Мы ждем твое резюме",
   },
   vacancyCTA: {
     title: "Как откликнуться на вакансию:",
-    desc: "Для отклика на вакансию пишите нам в Telegram.",
+    desc: "Для отклика на вакансию пиши нам в Telegram.",
     buttonText: "Написать в Telegram ",
   },
 };
