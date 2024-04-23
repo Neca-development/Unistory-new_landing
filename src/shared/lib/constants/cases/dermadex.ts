@@ -311,8 +311,8 @@ export const DERMADEX: ICase = {
       photo: "",
     },
     text: {
-      en: "«I posted a task on Upwork, and one of the responses was from the Unistory team. The company's portfolio impressed me: expertise in neural networks and computer vision, experience in the medical field. I immediately decided that these guys are perfect for us, and I was not mistaken: from that moment until now, everything has been amazing».",
-      ru: "«Я выложил задачу на Upwork, и один из откликов был от команды Unistory. Кейсы компании впечатлили меня: экспертиза в нейросетях и компьютерном зрении, опыт работы в медицинской сфере. Я сразу решил, что эти ребята нам отлично подходят, и не ошибся: с того момента и до сих пор все было потрясающе».",
+      en: "«I was looking for a team that can develop a mobile app capable of identifying skin disease from a photo. The Unistory’s portfolio impressed me: expertise in neural networks and computer vision, experience in the medical field. I immediately decided that these guys are perfect for us, and I was not mistaken. The result is the mobile app with a trained CLIP model that identifies six groups of skin diseases with high accuracy».",
+      ru: "«Я долго искал команду, способную разработать мобильное приложение для определения кожных болезней по фото. Портфолио Unistory впечатлило меня: экспертиза в нейросетях и компьютерном зрении, опыт в медицинской сфере. Я сразу решил, что эти ребята — идеальный выбор для нас, и не ошибся. Результат — мобильное приложение с интеграцией AI-модели CLIP, способное определить 6 групп заболеваний»." ,
     },
   },
   team: [

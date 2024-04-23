@@ -133,8 +133,8 @@ export const GAS_MONSTERS: ICase = {
       photo: "",
     },
     text: {
-      en: "«Unistory did a very professional job: submitted a detailed schedule prior to the estimate and followed it through with no delays. They were also available for technical consultation. They were flexible about ambiguous specifications and cutting edge technology. Other contracts are still ongoing, but we would like to continue to work with them in the future».",
-      ru: "«Unistory выполнили работу профессионально: представили график работ согласно смете и следовали ему без задержек. Они были доступны для консультаций. Проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Мы бы хотели продолжить совместную работу в будущем».",
+      en: "«Unistory performed the work professionally: they provided a schedule of work according to the estimate and adhered to it without delays. They were available for consultations and showed flexibility regarding ambiguous specifications and advanced technologies. Thanks to the Unistory developers, we were able to implement a complex technical product concept. We would definitely like to continue working with this company in the future».",
+      ru: "«Unistory выполнили работу профессионально: представили график работ согласно смете и следовали ему без задержек. Они были доступны для консультаций. Проявляли гибкость в отношении неоднозначных спецификаций и передовых технологий. Благодаря разработчикам Unistory у нас получилось реализовать сложную техническую концепцию продукта. Мы бы хотели продолжить совместную работу с этой компанией в будущем».",
     },
   },
   team: [

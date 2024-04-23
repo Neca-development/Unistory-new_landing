@@ -121,8 +121,8 @@ export const SIPSIGNAL: ICase = {
       photo: sipsignalClient.src,
     },
     text: {
-      en: "«Our company is a provider of VoIP solutions. We had long planned to develop our own custom eFax solution for our clients. The guys from Unistory did a great job: they dealt with the complexities and offered solutions that were beneficial for us. I would recommend this company for the development of any project».",
-      ru: "«Наша компания — провайдер VoIP-решений. Мы долго планировали разработать собственное кастомное eFax-решение для наших клиентов. Ребята из Unistory провели отличную работу: справились со сложностями и предложили выгодные для нас решения. Я бы рекомендовал эту компанию для разработки любого проекта».",
+      en: "«Our company is a VoIP solutions provider. We have long been planning to develop our own custom eFax solution for our clients. The team at Unistory did an excellent job: they handled the challenges well and offered advantageous options for us. The eFax solution was developed on time, fully meeting our technical and business requirements. I would recommend this company for the development of any project. Unistory truly has an expertise».",
+      ru: "«Наша компания — провайдер VoIP-решений. Мы долго планировали разработать собственное кастомное eFax-решение для наших клиентов. Ребята из Unistory провели отличную работу: справились со сложностями и предложили выгодные для нас опции. eFax-решение было разработано в срок, полностью соответствовало нашим техническим и бизнес-требованиям. Я бы рекомендовал эту компанию для разработки любого проекта».",
     },
   },
   logo: sipsignalLogo.src,
