@@ -130,8 +130,8 @@ export const HOARDER_NEST: ICase = {
       photo: "",
     },
     text: {
-      en: "«We hired Unistory to develop a complex blockchain-based web service. The manager kept us informed of all the important details and discussed possible challenges with us in a timely manner. Thanks to this, the SaaS launch went smoothly - and I never doubted it for a second while working with Unistory. It was a wonderful experience from start to finish!».",
-      ru: "«Мы наняли Unistory, чтобы разработать сложный веб-сервис на блокчейне. Менеджер держал нас в курсе всех важных нюансов и вовремя обсуждал с нами возможные сложности. Благодаря этому запуск SaaS прошел успешно — и я ни секунду в этом не сомневался, работая с Unistory. Это был замечательный опыт от начала и до конца!».",
+      en: "«We hired Unistory to develop a web app for blockchain and social media analytics. The developers provided me with a detailed outline of their work strategy right from the beginning of the project. The manager kept us informed of all the important details and discussed possible challenges with us in a timely manner. Thanks to this, the SaaS launch went smoothly and I never doubted it for a second while working with Unistory. It was a wonderful experience from start to finish!».",
+      ru: "«Мы наняли Unistory, чтобы разработать веб-приложение для аналитики блокчейнов и социальных сетей. Разработчики детально расписали мне свою стратегию работы еще на старте проекта. Менеджер держал нас в курсе всех важных деталей и вовремя обсуждал с нами возможные челленджи. Благодаря этому запуск SaaS прошел гладко, и я ни секунды в этом не сомневался, работая с Unistory. Это был прекрасный опыт от начала до конца!».",
     },
   },
   team: [

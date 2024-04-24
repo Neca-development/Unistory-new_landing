@@ -26,6 +26,8 @@ const phone02 = dynamic(() => import("@public/assets/icons/phone-02.svg"));
 const monitor = dynamic(() => import("@public/assets/icons/monitor.svg"));
 const bitcoin = dynamic(() => import("@public/assets/icons/bitcoin.svg"));
 const arrowRight = dynamic(() => import("@public/assets/icons/arrow-right.svg"));
+const playButton = dynamic(() => import("@public/assets/icons/play-button.svg"));
+const accordionIcon = dynamic(() => import("@public/assets/icons/accordion-arrow.svg"));
 
 const puddle = dynamic(() => import("@public/assets/icons/puddle.svg"));
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
@@ -65,6 +67,14 @@ const decLine5 = dynamic(() => import("@public/assets/images/homepage/dec-line-5
 const contactsMail = dynamic(() => import("@public/assets/icons/contacts-mail.svg"));
 const contactsTelegram = dynamic(() => import("@public/assets/icons/contacts-telegram.svg"));
 const contactsWhatsApp = dynamic(() => import("@public/assets/icons/contacts-whatsapp.svg"));
+
+const companyHeroLine = dynamic(() => import("@public/assets/icons/company-hero-line.svg"));
+const companyClutch = dynamic(() => import("@public/assets/icons/company-clutch.svg"));
+const companyStar = dynamic(() => import("@public/assets/icons/company-star.svg"));
+const companyUpwork = dynamic(() => import("@public/assets/icons/company-upwork.svg"));
+const companyHh = dynamic(() => import("@public/assets/icons/company-hh.svg"));
+const companyLinkedIn = dynamic(() => import("@public/assets/images/company/linkedin.svg"));
+const companyTelegram = dynamic(() => import("@public/assets/images/company/telegram.svg"));
 
 const iconTypes = {
   unistory,
@@ -121,6 +131,15 @@ const iconTypes = {
   contactsMail,
   contactsTelegram,
   contactsWhatsApp,
+  companyHeroLine,
+  companyClutch,
+  companyStar,
+  companyUpwork,
+  companyHh,
+  companyLinkedIn,
+  companyTelegram,
+  playButton,
+  accordionIcon,
 };
 
 export type IconsTypes = keyof typeof iconTypes;

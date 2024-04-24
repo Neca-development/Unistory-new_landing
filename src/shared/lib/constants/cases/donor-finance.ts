@@ -385,8 +385,8 @@ export const DONOR: ICase = {
       photo: "",
     },
     text: {
-      en: "«When we first met your company, I asked many questions to understand if you truly understand web3. I quickly realized that coming across Unistory was a stroke of luck. Vamsi and I often have many questions, and our project manager, Ilya, always responds to them promptly. Everything is transparent, the price is excellent, and we are happy to work with you from day one».",
-      ru: "«Когда мы встретились с вашей компанией, я задавал много вопросов, чтобы понять, что вы действительно разбираетесь в web3. Быстро понял, что наткнуться на Unistory было большой удачей. У нас с Вамси часто бывает много вопросов, и менеджер проектов, Илья, всегда оперативно на них отвечает. Мы счастливы работать с вами с первого дня».",
+      en: "«When we first met Unistory, I asked many questions to understand if you truly understand web3. I quickly realized that coming across Unistory was a stroke of luck. Unistory created a decentralized charity SaaS for us in a short period of time. My business partner and I often have many questions, and our project manager, Ilya, always promptly addresses them. Everything is transparent and we are happy to work with you from day one».\n",
+      ru: "«Когда мы впервые встретились с Unistory, я задавал много вопросов, чтобы понять, что вы действительно разбираетесь в web3. Быстро понял, что наткнуться на эту команду было большой удачей. Unistory в короткие сроки разработали для нас благотворительную площадку на блокчейне. Менеджер проекта, Илья, оперативно отвечает на наши вопросы. Процессы в компании прозрачные, и мы счастливы сотрудничать с первого дня».",
     },
   },
   team: [

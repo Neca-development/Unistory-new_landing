@@ -2,7 +2,7 @@ export const TEAM = {
   alexanderAksenov: {
     name: {
       en: "Alexander Aksenov",
-      ru: "Александр Аксенов",
+      ru: "Александр Аксёнов",
     } as any,
     position: {
       en: "Head of Project Management",
@@ -112,7 +112,7 @@ export const TEAM = {
   daniilSemenov: {
     name: {
       en: "Daniil Semenov",
-      ru: "Даниил Семенов",
+      ru: "Даниил Семёнов",
     },
     position: {
       en: "Project manager",
@@ -122,7 +122,7 @@ export const TEAM = {
   daniilSemenovHead: {
     name: {
       en: "Daniil Semenov",
-      ru: "Даниил Семенов",
+      ru: "Даниил Семёнов",
     },
     position: {
       en: "Head of Project Management",
@@ -141,8 +141,8 @@ export const TEAM = {
   },
   vladislavKiribyatev: {
     name: {
-      en: "Vladislav Kiribiatiev",
-      ru: "Владислав Кирибьятев",
+      en: "Vladislav Kirbiatev",
+      ru: "Владислав Кирбятьев",
     },
     position: {
       en: "Backend developer",
@@ -317,6 +317,36 @@ export const TEAM = {
     position: {
       en: "Frontend developer",
       ru: "Frontend разработчик",
+    },
+  },
+  antonSmolnikov: {
+    name: {
+      en: "Anton Smolnikov",
+      ru: "Антон Смольников",
+    },
+    position: {
+      en: "R&D manager",
+      ru: "R&D менеджер",
+    },
+  },
+  zaharDoroshenko: {
+    name: {
+      en: "Zakhar Doroshenko",
+      ru: "Захар Дорошенко",
+    },
+    position: {
+      en: "Project Manager",
+      ru: "Менеджер проектов",
+    },
+  },
+  maximIvanov: {
+    name: {
+      en: "Maxim Ivanov",
+      ru: "Максим Иванов",
+    },
+    position: {
+      en: "R&D Engineer",
+      ru: "R&D инженер",
     },
   },
 } as const;
