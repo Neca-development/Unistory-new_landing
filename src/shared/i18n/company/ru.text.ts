@@ -82,7 +82,7 @@ export const CompanyVacanciesRu = {
     title: "Нет подходящей вакансии?",
     desc: "Если ты крутой и хочешь работать с нами, то пиши в Telegram",
     button: "Написать",
-    bottomText: "Мы ждем твое резюме",
+    bottomText: "Мы ждём твое резюме",
   },
   vacancyCTA: {
     title: "Как откликнуться на вакансию:",

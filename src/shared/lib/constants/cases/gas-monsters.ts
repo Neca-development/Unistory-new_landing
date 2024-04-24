@@ -127,7 +127,7 @@ export const GAS_MONSTERS: ICase = {
       },
       position: {
         en: "CEO of",
-        ru: "исполнительный директор",
+        ru: "CEO",
       },
       company: "«Consensus-base Inc.»",
       photo: "",
