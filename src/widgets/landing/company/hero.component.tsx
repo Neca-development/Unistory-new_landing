@@ -27,16 +27,16 @@ export const CompanyHero = () => {
         </h2>
       </div>
       <div className="flex space-x-2 overflow-hidden md:space-x-4 md:text-3xl">
-        <a href = 'https://clutch.co/profile/unistory' style={{textDecoration:  'none', color: 'inherit'}} className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+        <a href = 'https://clutch.co/profile/unistory'  target='_blank' style={{textDecoration:  'none', color: 'inherit'}} className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
           <IconComponent className="w-12 md:w-28" name="companyClutch" />
           <span className="font-bold mx-1 mt-1 md:ml-2" >5.0</span>
           <IconComponent className="w-4 mt-1 md:w-6" name="companyStar" />
         </a>
-      <a href = 'https://www.upwork.com/agencies/unistory/' style={{textDecoration:  'none', color: 'inherit'}} className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+      <a href = 'https://www.upwork.com/agencies/unistory/'  target='_blank' style={{textDecoration:  'none', color: 'inherit'}} className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
         <IconComponent className="w-12 md:w-28" name="companyUpwork" />
         <span className="font-bold ml-1 md:ml-2">97% </span>
       </a>
-      <a href = 'https://hh.ru/employer/5166243' style={{textDecoration:  'none', color: 'inherit'}} className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
+      <a href = 'https://hh.ru/employer/5166243' target='_blank' style={{textDecoration:  'none', color: 'inherit'}} className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4">
         <IconComponent className="w-5 md:w-10" name="companyHh" />
         <span className="font-bold mx-1 md:ml-2">4.8 </span>
         <IconComponent className="w-4 md:w-6" name="companyStar" />

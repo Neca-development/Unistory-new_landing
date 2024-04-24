@@ -115,7 +115,7 @@ export const SIPSIGNAL: ICase = {
       },
       position: {
         en: "CEO of",
-        ru: "исполнительный директор",
+        ru: "CEO",
       },
       company: "«BP Networking & Design Inc.»",
       photo: sipsignalClient.src,

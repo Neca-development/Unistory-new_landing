@@ -121,10 +121,10 @@ export function Reviews() {
             <span>
               {locale === "ru" &&
                 reviewsData[activeReviewIndex]?.review?.author.company ===
-                  "«Consensus-base Inc.»" && <br className="hidden lg:block" />}
+                  "«Consensus-base Inc.»" }
               {locale === "ru" &&
                 reviewsData[activeReviewIndex]?.review?.author.company ===
-                  "«BP Networking & Design Inc.»" && <br className="hidden lg:block" />}
+                  "«BP Networking & Design Inc.»"}
               {reviewsData[activeReviewIndex]?.review?.author.company}
             </span>
           </span>
