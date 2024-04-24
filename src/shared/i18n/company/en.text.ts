@@ -26,25 +26,25 @@ export const CompanyFeaturesEn = [
     title: "Team Building",
     subtitle:
       "We go hiking, boating on the lake, handcraft stone saunas, and organize tours of St. Petersburg bars.",
-    image: featureImage2.src,
+    image: featureImage1.src,
   },
   {
     title: "Technologies",
     subtitle:
       "We don't just create simple websites and landing pages. Instead, we develop complex web services and applications with AI and blockchain.",
-    image: featureImage3.src,
+    image: featureImage2.src,
   },
   {
     title: "Rapid Growth ",
     subtitle:
       "The team works on complex projects under the careful guidance of team leaders. Developers constantly exchange expertise.",
-    image: featureImage4.src,
+    image: featureImage3.src,
   },
   {
     title: "Spirit of Innovation",
     subtitle:
       "We create what no one has done before us: decentralized AI, disease detection through photos, and LiDAR work.",
-    image: featureImage1.src,
+    image: featureImage4.src,
   },
 ];
 
@@ -68,7 +68,7 @@ export const CompanyTeamEn = {
     },
     {
       name: TEAM.antonSmolnikov.name.en,
-      post: "Expert in new technologies. Will answer any questions about web3, neural networks, and artificial intelligence.",
+      post: "Expert in new technologies. Will answer any questions about web3 and neural networks.",
       image: teamImage4.src,
     },
   ],
