@@ -29,9 +29,9 @@ export const Header = React.memo((props: IHeaderProperties) => {
   const { width } = useScrollbarSize();
 
   const { asPath } = useRouter();
-  const currentPage = asPath;
 
-  const isHome = asPath === "/";
+  const baseRoute = asPath.split("?")[0];
+  const isHome = baseRoute === "/";
 
   const isMenuVisible = useMemo(() => {
     return scrollDir !== "down";
@@ -114,7 +114,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
           <div
             className={clsx(
               "hidden items-center space-x-4 lg:flex",
-              currentPage === "/" && shouldAnimate && "animate-header-links-opacity"
+              baseRoute === "/" && shouldAnimate && "animate-header-links-opacity"
             )}
             style={{
               marginRight: shouldAnimate ? width : 0,
@@ -152,7 +152,7 @@ export const Header = React.memo((props: IHeaderProperties) => {
             onClick={openMenu}
             className={clsx(
               "lg:hidden",
-              currentPage === "/" && shouldAnimate && "animate-header-links-opacity"
+              baseRoute === "/" && shouldAnimate && "animate-header-links-opacity"
             )}
             style={{
               marginRight: shouldAnimate ? width : 0,

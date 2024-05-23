@@ -14,7 +14,9 @@ export function Logo(props: ILogoProps) {
   const mounted = useMounted();
 
   const { asPath } = useRouter();
-  const isHome = asPath === "/";
+  const baseRoute = asPath.split("?")[0];
+  const isHome = baseRoute === "/";
+  
   const { shouldAnimate } = useAnimationStore();
 
   const { mobileMenu } = props;

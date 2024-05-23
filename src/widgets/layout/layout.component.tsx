@@ -19,7 +19,9 @@ export const Layout = (props: ILayoutProperties) => {
   const { shouldAnimate } = useAnimationStore();
 
   const { asPath } = useRouter();
-  const isHome = asPath === "/";
+  const baseRoute = asPath.split("?")[0];
+  const isHome = baseRoute === "/";
+  console.log(baseRoute);
 
   return (
     <div>
