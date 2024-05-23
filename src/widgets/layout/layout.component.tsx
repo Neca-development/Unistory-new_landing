@@ -21,7 +21,6 @@ export const Layout = (props: ILayoutProperties) => {
   const { asPath } = useRouter();
   const baseRoute = asPath.split("?")[0];
   const isHome = baseRoute === "/";
-  console.log(baseRoute);
 
   return (
     <div>
