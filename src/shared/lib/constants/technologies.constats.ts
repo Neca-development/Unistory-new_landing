@@ -36,6 +36,7 @@ import wagmiIcon from "@public/assets/technologies/wagmi.png";
 import wagmiDarkIcon from "@public/assets/technologies/wagmi-dark.png";
 import firebaseIcon from "@public/assets/technologies/firebase.png";
 import firebaseDarkIcon from "@public/assets/technologies/firebase-dark.png";
+import javaIcon from "@public/assets/technologies/java.png";
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
@@ -62,6 +63,7 @@ export type AvailableTechnologiesType =
   | "metamask"
   | "stripe"
   | "wagmi"
+  | "java"
   | "firebase";
 
 type TechnologyType = {
@@ -238,6 +240,13 @@ export const TECHNOLOGIES: TechnologyType = {
     icon: {
       dark: firebaseDarkIcon.src,
       light: firebaseIcon.src,
+    },
+  },
+  java: {
+    name: "Java",
+    icon: {
+      dark: javaIcon.src,
+      light: javaIcon.src,
     },
   },
 } as const;

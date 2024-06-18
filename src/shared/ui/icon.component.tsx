@@ -29,6 +29,9 @@ const arrowRight = dynamic(() => import("@public/assets/icons/arrow-right.svg"))
 const playButton = dynamic(() => import("@public/assets/icons/play-button.svg"));
 const accordionIcon = dynamic(() => import("@public/assets/icons/accordion-arrow.svg"));
 
+const appStore = dynamic(() => import("@public/assets/icons/app-store.svg"));
+const googlePlay = dynamic(() => import("@public/assets/icons/google-play.svg"));
+
 const puddle = dynamic(() => import("@public/assets/icons/puddle.svg"));
 const message = dynamic(() => import("@public/assets/icons/message.svg"));
 const clip = dynamic(() => import("@public/assets/icons/clip.svg"));
@@ -140,6 +143,8 @@ const iconTypes = {
   companyTelegram,
   playButton,
   accordionIcon,
+  appStore,
+  googlePlay,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
