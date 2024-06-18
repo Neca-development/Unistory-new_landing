@@ -212,7 +212,7 @@ export const UDBARA: ICase = {
         {
           text: {
             en: "To help users find the right specialist, we are working on further integration with neural networks. Integration with a large language model like ChatGPT will allow us to create an AI assistant capable of helping users at any time.",
-            ru: "Чтобы помочь пользователю найти нужного специалиста, проводим дополнительную интеграцию с нейросетями. Интеграция с большой языковой моделью наподобие ChatGPT позволит создать AI-ассистента, который сможет помочь пользователю в любое время.",
+            ru: "Чтобы помочь пользователю найти нужного специалиста, проводим дополнительную интеграцию с нейросетями. Интеграция с большой языковой моделью, такой как ChatGPT, позволит создать AI-ассистента, способного оказать помощь пользователю в любой момент.",
           },
         },
       ],

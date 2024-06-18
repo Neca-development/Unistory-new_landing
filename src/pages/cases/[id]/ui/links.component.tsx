@@ -5,16 +5,16 @@ import Link from "next/link";
 export function Links(props: { links: ICaseLink[] }) {
   return (
     <div className="case-description bg-light-bg-accent dark:bg-dark-bg-accent">
-      <div className="container flex gap-4 ">
+      <div className="container flex gap-4">
         {props.links.map(({ link, label, iconName }) => (
-          <div className="flex items-center">
+          <div className="flex items-center mt-[7.5rem] t-xs:mt-10">
             {iconName ? (
               <Link
-                className="w-fit text-2xl font-medium text-light-text-primary dark:text-dark-text-primary t-xs:mt-6 t-xs:py-2 t-xs:text-base"
+                className="w-fit text-2xl font-medium text-light-text-primary dark:text-dark-text-primary t-xs:py-2 t-xs:text-base"
                 target={"_blank"}
                 href={link}
               >
-                <IconComponent className="w-[10rem]" name={iconName} />
+                <IconComponent name={iconName} />
               </Link>
             ) : (
               <Link
