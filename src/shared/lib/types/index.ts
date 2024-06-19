@@ -37,6 +37,12 @@ export enum CustomMainBanner {
   BitGraduateAuthority,
 }
 
+export interface ICaseLink {
+  link: string;
+  label: string;
+  iconName?: IconsTypes;
+}
+
 export interface ICase {
   title: string | ILang<string>;
   id: string;
@@ -86,6 +92,7 @@ export interface ICase {
   };
   team?: TeamValues[];
   disableOtherProjects?: boolean;
+  links?: ICaseLink[];
 }
 
 export interface IThemed<T> {

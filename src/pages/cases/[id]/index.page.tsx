@@ -11,6 +11,7 @@ import { useMemo } from "react";
 import { CaseMainInfo } from "./ui/case-main-info.component";
 import { BitGraduate } from "./ui/custom-hero/bit-graduate.component";
 import { CaseHero } from "./ui/hero.component";
+import { Links } from "./ui/links.component";
 import { OtherCases } from "./ui/other-cases.component";
 import { CaseReview } from "./ui/review.component";
 import { Stack } from "./ui/stack.component";
@@ -65,6 +66,7 @@ export function Case(props: { caseData: ICase; otherCases: ICase[] }) {
         {renderHero()}
         {caseData.technologies && <Stack data={caseData.technologies} />}
         <CaseMainInfo data={caseData?.main} />
+        {caseData.links && <Links links={caseData.links} />}
         {caseData.review && <CaseReview data={caseData} />}
         {caseData.team && <Team title={langData.members} data={caseData.team} />}
         {!caseData.disableOtherProjects && (
