@@ -25,7 +25,7 @@ export const CompanyFeaturesEn = [
   {
     title: "Team Building",
     subtitle:
-      "We go hiking, boating on the lake, handcraft stone saunas, and organize tours of St. Petersburg bars.",
+      "We go hiking, boating on the lake, handcraft stone saunas, and organize tours of the best pubs in the city.",
     image: featureImage1.src,
   },
   {
@@ -43,7 +43,7 @@ export const CompanyFeaturesEn = [
   {
     title: "Spirit of Innovation",
     subtitle:
-      "We create what no one has done before us: decentralized AI, disease detection through photos, and LiDAR work.",
+      "We create what no one has done before us: decentralized AI, disease detection through photos, and LiDAR experiments.",
     image: featureImage4.src,
   },
 ];
