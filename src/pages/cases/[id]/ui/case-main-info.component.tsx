@@ -83,7 +83,7 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
         </article>
       </div>
 
-      <div className="container">{!data?.banner && <VideoComponent video={data?.video} />}</div>
+      <div className="container">{data?.video && <VideoComponent video={data?.video} />}</div>
 
       {data?.customBanner != null ? (
         renderCustomBanner()
