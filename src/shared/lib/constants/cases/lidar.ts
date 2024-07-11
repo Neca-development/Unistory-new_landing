@@ -164,7 +164,7 @@ export const LIDAR: ICase = {
 
     {
       title: {
-        en: "How to Teach a Neural Network to 'See' Coordinates?s",
+        en: "How to Teach a Neural Network to 'See' Coordinates?",
         ru: "Как научить нейросеть «видеть» координаты?",
       },
       text: [
@@ -253,7 +253,7 @@ export const LIDAR: ICase = {
       text: [
         {
           text: {
-            en: "We have prepared an engineering solution that our client and their clients, corporate marketers, can already use. Looking ahead, our future plans involve integrating the LiDAR, mini-computer, and modem into a single device capable of operating in any weather conditions",
+            en: "We have prepared an engineering solution that our client and their clients, corporate marketers, can already use. Looking ahead, our future plans involve integrating the LiDAR, mini-computer, and modem into a single device capable of operating in any weather conditions.",
             ru: "Мы подготовили инженерное решение, которым уже сейчас может пользоваться заказчик и его клиенты-маркетологи. В будущем планируем собрать из лидара, мини-компьютера и модема единое устройство, которое сможет работать в любых погодных условиях.",
           },
         },
