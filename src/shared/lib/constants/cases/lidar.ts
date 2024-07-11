@@ -2,7 +2,7 @@ import { ICase } from "@shared/lib/types";
 import { TECHNOLOGIES } from "@shared/lib/constants/technologies.constats";
 import { TEAM } from "@shared/lib/constants/team";
 
-import lidarPreview from "@public/assets/images/cases/lidar/prevLid.jpg";
+import lidarPreview from "@public/assets/images/cases/lidar/prevlid.jpg";
 import lidarBilboardsRu from "@public/assets/images/cases/lidar/lidar-ru-billboards.jpg";
 import lidarBilboardsEn from "@public/assets/images/cases/lidar/lidar-en-billboards.jpg";
 import lidarFinesRu from "@public/assets/images/cases/lidar/lidar-ru-fines.jpg";
@@ -14,7 +14,7 @@ import lidarLivoxEn from "@public/assets/images/cases/lidar/lidar-en-livox.jpg";
 import lidarWariesRu from "@public/assets/images/cases/lidar/lidar-ru-wires.jpg";
 import lidarWariesEn from "@public/assets/images/cases/lidar/lidar-en-wires.jpg";
 import lidarFieldRu from "@public/assets/images/cases/lidar/lidar-ru-field.jpg";
-import lidarFieldEn from "@public/assets/images/cases/lidar/lidar-En-field.jpg";
+import lidarFieldEn from "@public/assets/images/cases/lidar/lidar-en-field.jpg";
 
 export const LIDAR: ICase = {
   title: {
