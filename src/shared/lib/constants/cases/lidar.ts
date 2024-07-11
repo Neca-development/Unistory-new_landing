@@ -63,8 +63,8 @@ export const LIDAR: ICase = {
     },
   },
   description: {
-    en: "Granting the residents of Arab countries an opportunity to receive medical consultations from European and American doctors.",
-    ru: "The client is a European provider of digital tools for corporate marketers. The task is to create a technological solution for analyzing the effectiveness of billboard advertising.",
+    en: "The client is a European provider of digital tools for corporate marketers. The task is to create a technological solution for analyzing the effectiveness of billboard advertising.",
+    ru: "Заказчик — европейский поставщик цифровых инструментов для маркетологов крупных компаний. Задача — создать технологическое решение для анализа эффективности рекламных билбордов.",
   },
   params: {
     period: 7,
@@ -98,7 +98,7 @@ export const LIDAR: ICase = {
     {
       title: {
         en: "Why We Couldn't Use Regular Cameras",
-        ru: "Почему мы решили использовать лидары",
+        ru: "Почему мы не могли использовать обычные камеры",
       },
       text: [
         {
@@ -244,6 +244,20 @@ export const LIDAR: ICase = {
         en: lidarFieldEn.src,
         ru: lidarFieldRu.src,
       },
+    },
+    {
+      title: {
+        en: "Our Next Steps",
+        ru: "Наши следующие шаги",
+      },
+      text: [
+        {
+          text: {
+            en: "We have prepared an engineering solution that our client and their clients, corporate marketers, can already use. Looking ahead, our future plans involve integrating the LiDAR, mini-computer, and modem into a single device capable of operating in any weather conditions",
+            ru: "Мы подготовили инженерное решение, которым уже сейчас может пользоваться заказчик и его клиенты-маркетологи. В будущем планируем собрать из лидара, мини-компьютера и модема единое устройство, которое сможет работать в любых погодных условиях.",
+          },
+        },
+      ],
     },
   ],
 
