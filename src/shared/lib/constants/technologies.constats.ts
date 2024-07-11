@@ -37,9 +37,16 @@ import wagmiDarkIcon from "@public/assets/technologies/wagmi-dark.png";
 import firebaseIcon from "@public/assets/technologies/firebase.png";
 import firebaseDarkIcon from "@public/assets/technologies/firebase-dark.png";
 import javaIcon from "@public/assets/technologies/java.png";
+import roboflow from "@public/assets/technologies/roboflow.png";
+import ansible from "@public/assets/technologies/ansible.png";
+import yolo from "@public/assets/technologies/yolo.png";
+
 import { IThemed } from "../types";
 
 export type AvailableTechnologiesType =
+  | "ansible"
+  | "yolo"
+  | "roboflow"
   | "react"
   | "angular"
   | "vue"
@@ -247,6 +254,27 @@ export const TECHNOLOGIES: TechnologyType = {
     icon: {
       dark: javaIcon.src,
       light: javaIcon.src,
+    },
+  },
+  roboflow: {
+    name: "Roboflow",
+    icon: {
+      dark: roboflow.src,
+      light: roboflow.src,
+    },
+  },
+  ansible: {
+    name: "Ansible",
+    icon: {
+      dark: ansible.src,
+      light: ansible.src,
+    },
+  },
+  yolo: {
+    name: "YOLO",
+    icon: {
+      dark: yolo.src,
+      light: yolo.src,
     },
   },
 } as const;
