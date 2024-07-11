@@ -9,8 +9,9 @@ import { BitGraduateStorage } from "./custom-main/bit-graduate-storage.component
 import { BitGraduateAuthority } from "./custom-main/bit-graduate-authority.component";
 import { useMounted } from "@shared/lib/hooks/useMounted";
 import clsx from "clsx";
+import { VideoComponent } from "@shared/ui/video/video.component";
 
-interface ICaseInfoItemProps {
+export interface ICaseInfoItemProps {
   data?: ICase["main"][0];
 }
 
@@ -81,6 +82,8 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           ))}
         </article>
       </div>
+
+      <div className="container">{!data?.banner && <VideoComponent video={data?.video} />}</div>
 
       {data?.customBanner != null ? (
         renderCustomBanner()

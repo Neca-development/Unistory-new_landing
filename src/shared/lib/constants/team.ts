@@ -369,6 +369,16 @@ export const TEAM = {
       ru: "Backend разработчик",
     },
   },
+  ivanRazumovskiy: {
+    name: {
+      en: "Ivan Razumovskiy",
+      ru: "ИванРазумовский",
+    },
+    position: {
+      en: "Backend developer",
+      ru: "Backend разработчик",
+    },
+  },
 } as const;
 
 type TeamKeys = keyof typeof TEAM;

@@ -17,9 +17,11 @@ import { LLM_CHATBOT } from "./cases/llm-chatbot";
 import { BVKS } from "./cases/bvks";
 import { FAIRY_TALE_AI } from "./cases/fairy-tale-ai";
 import { UDBARA } from "./cases/udbara";
+import { LIDAR } from "@shared/lib/constants/cases/lidar";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
+  LIDAR,
   UDBARA,
   FAIRY_TALE_AI,
   BVKS,
