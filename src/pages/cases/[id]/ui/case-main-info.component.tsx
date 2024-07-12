@@ -9,8 +9,9 @@ import { BitGraduateStorage } from "./custom-main/bit-graduate-storage.component
 import { BitGraduateAuthority } from "./custom-main/bit-graduate-authority.component";
 import { useMounted } from "@shared/lib/hooks/useMounted";
 import clsx from "clsx";
+import { VideoComponent } from "@shared/ui/video/video.component";
 
-interface ICaseInfoItemProps {
+export interface ICaseInfoItemProps {
   data?: ICase["main"][0];
 }
 
@@ -29,12 +30,27 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
 
   const bannerByTheme = _theme ? bannerByThemeConfig[_theme] : undefined;
 
-  const getBanner = useCallback(() => {
-    const existBanner = bannerByTheme ?? data?.banner;
-    if (!existBanner) return "";
-
-    return typeof existBanner !== "string" ? (existBanner[locale || "ru"] as string) : existBanner;
-  }, [data?.banner, bannerByTheme, locale]);
+  const getBanner = useCallback(
+    (type: "desktop" | "mob") => {
+      const banner = bannerByTheme ?? data?.banner;
+      if (!banner) {
+        return "";
+      }
+      if (typeof banner === "string") {
+        return banner;
+      }
+      if (Object.hasOwn(banner, type)) {
+        const deviceBanner = banner[type];
+        if (typeof deviceBanner === "string") {
+          return deviceBanner;
+        }
+        return deviceBanner[locale || "ru"] ?? "";
+      }
+      // impossible to type check ILang case
+      return (banner as any)[locale || "ru"] ?? "";
+    },
+    [data?.banner, bannerByTheme, locale]
+  );
 
   const renderCustomBanner = () => {
     switch (data?.customBanner) {
@@ -82,13 +98,15 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
         </article>
       </div>
 
+      <div className="container">{data?.video && <VideoComponent video={data?.video} />}</div>
+
       {data?.customBanner != null ? (
         renderCustomBanner()
-      ) : width < 992 && (data?.bannerMob != null || getBanner() != "") ? (
+      ) : width < 992 && (data?.bannerMob != null || getBanner("mob") != "") ? (
         <Fancybox>
-          <a href={data?.bannerMob ? data?.bannerMob : getBanner()} data-fancybox>
+          <a href={data?.bannerMob ?? getBanner("mob")} data-fancybox>
             <Image
-              src={data?.bannerMob ? data?.bannerMob : getBanner()}
+              src={data?.bannerMob ?? getBanner("mob")}
               width={2880}
               height={1060}
               className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"
@@ -97,9 +115,9 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
           </a>
         </Fancybox>
       ) : (
-        getBanner() != "" && (
+        getBanner("desktop") != "" && (
           <Image
-            src={getBanner()}
+            src={getBanner("desktop")}
             width={2880}
             height={1060}
             className="w-full h-auto object-cover mt-[7.5rem] t-xs:mt-10"

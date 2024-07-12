@@ -25,7 +25,7 @@ export interface IGoalPoints {
   ru: string;
 }
 
-export type MainBannerType = string | ILang<string>;
+export type MainBannerType = string | ILang<string> | IDevices<string> | IDevices<ILang<string>>;
 
 export enum CustomHeroes {
   BitGraduate,
@@ -65,7 +65,7 @@ export interface ICase {
   description?: ILang<string>;
   goalPoints?: IGoalPoints[];
   params?: {
-    budget: ILang<number>;
+    budget?: ILang<number>;
     client?: string;
     period: number;
     year: number | string;
@@ -75,6 +75,7 @@ export interface ICase {
     title: ILang<string>;
     text: IDescriptionItem[];
     banner?: MainBannerType;
+    video?: string;
     bannerMob?: string;
     darkBanner?: MainBannerType;
     customBanner?: CustomMainBanner;
