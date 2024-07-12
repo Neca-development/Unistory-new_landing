@@ -4,9 +4,9 @@ import { TEAM } from "@shared/lib/constants/team";
 
 import lidarPreview from "@public/assets/images/cases/lidar/prevlid.jpg";
 import lidarBilboardsRu from "@public/assets/images/cases/lidar/lidar-ru-billboards.jpg";
-import lidarSquare from "@public/assets/images/cases/lidar/lidar-square-ru-bilboards.jpg";
+import lidarSquare from "@public/assets/images/cases/lidar/lidar-square.jpg";
 import lidarBilboardsEn from "@public/assets/images/cases/lidar/lidar-en-billboards.jpg";
-import lidarSquareBilboardsEn from "@public/assets/images/cases/lidar/lidar-square-ru-bilboards.jpg";
+import lidarSquareBilboardsEn from "@public/assets/images/cases/lidar/lidar-square-en-billboards.jpg";
 import lidarSquareBilboardsRu from "@public/assets/images/cases/lidar/lidar-square-ru-bilboards.jpg";
 import lidarFinesRu from "@public/assets/images/cases/lidar/lidar-ru-fines.jpg";
 import lidarSquareFineseEn from "@public/assets/images/cases/lidar/lidar-square-en-fines.jpg";
