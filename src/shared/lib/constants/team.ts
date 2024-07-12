@@ -265,8 +265,8 @@ export const TEAM = {
       ru: "Юрий Умнов",
     },
     position: {
-      en: "R&D engineer",
-      ru: "R&D инженер",
+      en: "ML engineer",
+      ru: "ML-инженер",
     },
   },
   daniilBoiko: {
@@ -371,8 +371,8 @@ export const TEAM = {
   },
   ivanRazumovskiy: {
     name: {
-      en: "Ivan Razumovskiy",
-      ru: "ИванРазумовский",
+      en: "Ivan Petrov",
+      ru: "Иван Петров",
     },
     position: {
       en: "Backend developer",
