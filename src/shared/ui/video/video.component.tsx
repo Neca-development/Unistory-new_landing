@@ -4,7 +4,7 @@ interface VideoProps {
 
 export const VideoComponent = ({ video }: VideoProps) => {
   return (
-    <div className="mt-[4rem] w-full max-w-[59.625rem] relative pb-[46.25%]">
+    <div className="mt-[4rem] w-full max-w-[59.625rem] relative pb-[46.25%] m-md:!w-[20rem] m-md:!h-[20rem]   mx-auto ">
       <iframe
         className="absolute top-0 left-0 w-full h-full"
         src={video}

@@ -4,17 +4,29 @@ import { TEAM } from "@shared/lib/constants/team";
 
 import lidarPreview from "@public/assets/images/cases/lidar/prevlid.jpg";
 import lidarBilboardsRu from "@public/assets/images/cases/lidar/lidar-ru-billboards.jpg";
+import lidarSquare from "@public/assets/images/cases/lidar/lidar-square-ru-bilboards.jpg";
 import lidarBilboardsEn from "@public/assets/images/cases/lidar/lidar-en-billboards.jpg";
+import lidarSquareBilboardsEn from "@public/assets/images/cases/lidar/lidar-square-ru-bilboards.jpg";
+import lidarSquareBilboardsRu from "@public/assets/images/cases/lidar/lidar-square-ru-bilboards.jpg";
 import lidarFinesRu from "@public/assets/images/cases/lidar/lidar-ru-fines.jpg";
+import lidarSquareFineseEn from "@public/assets/images/cases/lidar/lidar-square-en-fines.jpg";
+import lidarSquareFineseRu from "@public/assets/images/cases/lidar/lidar-square-ru-fines.jpg";
 import lidarFineseEn from "@public/assets/images/cases/lidar/lidar-en-fines.jpg";
 import lidarShemes from "@public/assets/images/cases/lidar/lidar-schemes.jpg";
+import lidarSquareShemes from "@public/assets/images/cases/lidar/lidar-square-schemes.jpg";
 import lidar from "@public/assets/images/cases/lidar/lidar.jpg";
 import lidarLivoxRu from "@public/assets/images/cases/lidar/lidar-ru-livox.jpg";
 import lidarLivoxEn from "@public/assets/images/cases/lidar/lidar-en-livox.jpg";
+import lidarSquareLivoxRu from "@public/assets/images/cases/lidar/lidar-square-ru-livox.jpg";
+import lidarSquareLivoxEn from "@public/assets/images/cases/lidar/lidar-square-en-livox.jpg";
 import lidarWariesRu from "@public/assets/images/cases/lidar/lidar-ru-wires.jpg";
 import lidarWariesEn from "@public/assets/images/cases/lidar/lidar-en-wires.jpg";
+import lidarSquareWariesRu from "@public/assets/images/cases/lidar/lidar-square-ru-wires.jpg";
+import lidarSquareWariesEn from "@public/assets/images/cases/lidar/lidar-square-en-wires.jpg";
 import lidarFieldRu from "@public/assets/images/cases/lidar/lidar-ru-field.jpg";
 import lidarFieldEn from "@public/assets/images/cases/lidar/lidar-en-field.jpg";
+import lidarSquareFieldRu from "@public/assets/images/cases/lidar/lidar-square-ru-field.jpg";
+import lidarSquareFieldEn from "@public/assets/images/cases/lidar/lidar-square-en-field.jpg";
 
 export const LIDAR: ICase = {
   title: {
@@ -58,8 +70,8 @@ export const LIDAR: ICase = {
       ru: lidar.src,
     },
     mob: {
-      en: lidar.src,
-      ru: lidar.src,
+      en: lidarSquare.src,
+      ru: lidarSquare.src,
     },
   },
   description: {
@@ -91,8 +103,14 @@ export const LIDAR: ICase = {
         },
       ],
       banner: {
-        en: lidarBilboardsEn.src,
-        ru: lidarBilboardsRu.src,
+        desktop: {
+          en: lidarBilboardsEn.src,
+          ru: lidarBilboardsRu.src,
+        },
+        mob: {
+          en: lidarSquareBilboardsEn.src,
+          ru: lidarSquareBilboardsRu.src,
+        },
       },
     },
     {
@@ -115,8 +133,14 @@ export const LIDAR: ICase = {
         },
       ],
       banner: {
-        en: lidarFineseEn.src,
-        ru: lidarFinesRu.src,
+        desktop: {
+          en: lidarFineseEn.src,
+          ru: lidarFinesRu.src,
+        },
+        mob: {
+          en: lidarSquareFineseEn.src,
+          ru: lidarSquareFineseRu.src,
+        },
       },
     },
     {
@@ -139,8 +163,14 @@ export const LIDAR: ICase = {
         },
       ],
       banner: {
-        en: lidarShemes.src,
-        ru: lidarShemes.src,
+        desktop: {
+          en: lidarShemes.src,
+          ru: lidarShemes.src,
+        },
+        mob: {
+          en: lidarSquareShemes.src,
+          ru: lidarSquareShemes.src,
+        },
       },
     },
     {
@@ -157,8 +187,14 @@ export const LIDAR: ICase = {
         },
       ],
       banner: {
-        en: lidarLivoxEn.src,
-        ru: lidarLivoxRu.src,
+        desktop: {
+          en: lidarLivoxEn.src,
+          ru: lidarLivoxRu.src,
+        },
+        mob: {
+          en: lidarSquareLivoxEn.src,
+          ru: lidarSquareLivoxRu.src,
+        },
       },
     },
 
@@ -204,8 +240,14 @@ export const LIDAR: ICase = {
         },
       ],
       banner: {
-        en: lidarWariesEn.src,
-        ru: lidarWariesRu.src,
+        desktop: {
+          en: lidarWariesEn.src,
+          ru: lidarWariesRu.src,
+        },
+        mob: {
+          en: lidarSquareWariesEn.src,
+          ru: lidarSquareWariesRu.src,
+        },
       },
     },
 
@@ -241,8 +283,14 @@ export const LIDAR: ICase = {
         },
       ],
       banner: {
-        en: lidarFieldEn.src,
-        ru: lidarFieldRu.src,
+        desktop: {
+          en: lidarFieldEn.src,
+          ru: lidarFieldRu.src,
+        },
+        mob: {
+          en: lidarSquareFieldEn.src,
+          ru: lidarSquareFieldRu.src,
+        },
       },
     },
     {

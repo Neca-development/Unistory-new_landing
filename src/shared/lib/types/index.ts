@@ -25,7 +25,7 @@ export interface IGoalPoints {
   ru: string;
 }
 
-export type MainBannerType = string | ILang<string>;
+export type MainBannerType = string | ILang<string> | IDevices<string> | IDevices<ILang<string>>;
 
 export enum CustomHeroes {
   BitGraduate,
