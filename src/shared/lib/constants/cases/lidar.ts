@@ -39,8 +39,8 @@ export const LIDAR: ICase = {
     ru: "Разработка ПО для вычисления человекопотока с помощью лидара",
   },
   categories: {
-    en: ["How to Calculate the Effectiveness of Billboards?"],
-    ru: ["Как проанализировать эффективность билбордов?"],
+    en: ["Software Development for Calculating Foot Traffic"],
+    ru: ["Разработка ПО для вычисления человекопотока"],
   },
   metaTitle: {
     en: "Software Development for Analyzing the Effectiveness of Offline Advertising",
