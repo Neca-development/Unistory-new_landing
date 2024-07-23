@@ -7,9 +7,8 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={APP_META.locale}>
-        <Head />
-        <body>
-          {/* <!-- Yandex.Metrika counter --> */}
+        <Head>
+          {/* <!-- Google tag (gtag.js) --> */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3N3QQXJV3"></script>
           <script
             dangerouslySetInnerHTML={{
@@ -21,8 +20,9 @@ class MyDocument extends Document {
               `,
             }}
           />
-          {/* <!-- /Yandex.Metrika counter --> */}
-
+          {/* <!-- /Google tag (gtag.js) --> */}
+        </Head>
+        <body>
           {/* <!-- Yandex.Metrika counter --> */}
           <script
             dangerouslySetInnerHTML={{
