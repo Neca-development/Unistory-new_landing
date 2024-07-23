@@ -3,7 +3,6 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { hotjar } from "react-hotjar";
 import { useEffect } from "react";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -13,7 +12,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <ThemeProvider attribute="class">
       {/* <ThemeContextProvider> */}
       <Component {...pageProps} />
-      <GoogleTagManager gtmId="G-Q3N3QQXJV3" />
       <div id="portal" />
       {/* </ThemeContextProvider> */}
     </ThemeProvider>
