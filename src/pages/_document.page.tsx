@@ -1,6 +1,5 @@
 import { APP_META } from "@shared/meta";
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import Script from "next/script";
 // Need to create a custom _document because i18n support is not compatible with `next export`.
 class MyDocument extends Document {
   // eslint-disable-next-line class-methods-use-this
@@ -11,7 +10,21 @@ class MyDocument extends Document {
         <Head />
         <body>
           {/* <!-- Yandex.Metrika counter --> */}
-          <Script
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3N3QQXJV3"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-Q3N3QQXJV3');
+              `,
+            }}
+          />
+          {/* <!-- /Yandex.Metrika counter --> */}
+
+          {/* <!-- Yandex.Metrika counter --> */}
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
