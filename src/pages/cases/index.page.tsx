@@ -13,6 +13,18 @@ const LARGE_ITEM_STEP = 6;
 export function Cases() {
   const { locale } = useRouter();
 
+  const filteredCases = useMemo(() => {
+    return CASES.filter((work) => {
+      if (work.notDisplayInGrid) {
+        return false
+      }
+      if (locale === 'en' && work.id === 'advanced-rd') {
+        return false
+      }
+      return true
+    })
+  }, [locale])
+
   const langData = useMemo(() => {
     return locale === "ru" ? CasesPageRu : CasesPageEn;
   }, [locale]);
@@ -38,16 +50,7 @@ export function Cases() {
           <h2 className="font-bold text-5xl t-xs:text-4xl">{langData.title}</h2>
 
           <div className="grid grid-cols-3 gap-10 mt-16 t-xs:gap-8 t-xs:mt-8 t-xs:grid-cols-1">
-            {CASES.filter((work) => {
-              if (work.notDisplayInGrid === true) {
-                return false
-              }
-              if (locale === 'en' && work.id === 'advanced-rd') {
-                return false
-              }
-              return true
-            })
-              .map((work, index) => (
+            {filteredCases.map((work, index) => (
               <WorksCard
                 key={index}
                 work={work}
