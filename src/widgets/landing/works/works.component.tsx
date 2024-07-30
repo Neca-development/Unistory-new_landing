@@ -15,11 +15,11 @@ export function Works() {
 
   const text = React.useMemo(() => {
     if (locale === "ru") {
-      return WorksRu;
+      return WorksRu
     }
 
-    return WorksEn;
-  }, [locale]);
+    return WorksEn
+  }, [locale])
 
   const filteredCases = React.useMemo(() => {
     return CASES.filter((work) => {
