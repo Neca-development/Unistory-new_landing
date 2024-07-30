@@ -38,7 +38,15 @@ export function Cases() {
           <h2 className="font-bold text-5xl t-xs:text-4xl">{langData.title}</h2>
 
           <div className="grid grid-cols-3 gap-10 mt-16 t-xs:gap-8 t-xs:mt-8 t-xs:grid-cols-1">
-            {CASES.filter((work) => work.notDisplayInGrid !== true && locale === 'en' && work.title !== 'Advanced RD')
+            {CASES.filter((work) => {
+              if (work.notDisplayInGrid === true) {
+                return false
+              }
+              if (locale === 'en' && work.id === 'advanced-rd') {
+                return false
+              }
+              return true
+            })
               .map((work, index) => (
               <WorksCard
                 key={index}

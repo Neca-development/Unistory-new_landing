@@ -46,7 +46,12 @@ export function Works() {
         /> */}
 
         <div className="grid grid-cols-3 gap-10 t-xs:[&>*:nth-child(6n+1)]:col-span-1 [&>*:nth-child(6n+1)]:col-span-2 sm:[&>*:nth-child(6n+1)]:pt-[47.3%] t-xs:grid-cols-1 t-xs:mt-6 display t-xs:gap-4">
-          {cases.map((work, index) => (
+          {cases.filter((work) => {
+              if (locale === 'en' && work.id === 'advanced-rd') {
+                return false
+              }
+              return true;
+            }).map((work, index) => (
             <WorksCard key={index} work={work} isLargeImage={index % 6 === 0} />
           ))}
         </div>
