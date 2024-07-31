@@ -22,13 +22,13 @@ export function Works() {
   }, [locale])
 
   const filteredCases = React.useMemo(() => {
-    return CASES.filter((work) => {
+    return cases.filter((work) => {
       if (locale === 'en' && work.id === 'advanced-rd') {
         return false
       }
       return true
     })
-  }, [locale])
+  }, [locale, cases])
 
   useEffect(() => {
     if (!window) return;
