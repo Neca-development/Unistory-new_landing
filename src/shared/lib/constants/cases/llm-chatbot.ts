@@ -28,13 +28,15 @@ export const LLM_CHATBOT: ICase = {
     ru: "LLM чат-бот",
   },
   id: "llm-chatbot",
+  videoPreview: 'assets/videos/llm-bot.mp4',
+  tag: 'LLM',
   heroTitle: {
     en: "LLM chatbot — a business assistant for a major manufacturer and distributor of electrical installation products",
     ru: "LLM чат-бот — бизнес-ассистент для крупного производителя и дистрибьютора электромонтажных изделий",
   },
   categories: {
     en: ["Assistant for Electrical Installation Product Distributor"],
-    ru: ["Ассистент для дистрибьютора электромонтажных изделий"],
+    ru: ["Бизнес-ассистент для крупного производителя и дистрибьютора электромонтажных изделий"],
   },
   metaTitle: {
     en: "LLM chatbot for the manufacturer of electrical products",

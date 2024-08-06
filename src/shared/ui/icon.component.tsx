@@ -28,7 +28,7 @@ const bitcoin = dynamic(() => import("@public/assets/icons/bitcoin.svg"));
 const arrowRight = dynamic(() => import("@public/assets/icons/arrow-right.svg"));
 const playButton = dynamic(() => import("@public/assets/icons/play-button.svg"));
 const accordionIcon = dynamic(() => import("@public/assets/icons/accordion-arrow.svg"));
-
+const arrowRightIcon = dynamic(() => import("@public/assets/icons/arrow-right-icon.svg"));
 const appStore = dynamic(() => import("@public/assets/icons/app-store.svg"));
 const googlePlay = dynamic(() => import("@public/assets/icons/google-play.svg"));
 
@@ -145,6 +145,7 @@ const iconTypes = {
   accordionIcon,
   appStore,
   googlePlay,
+  arrowRightIcon
 };
 
 export type IconsTypes = keyof typeof iconTypes;
