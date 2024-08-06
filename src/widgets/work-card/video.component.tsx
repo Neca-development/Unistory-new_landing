@@ -39,6 +39,8 @@ const Video: React.FC<VideoComponentProps> = ({ videoSrc }) => {
         onEnded={handleVideoEnd}
         muted
         loop
+        playsInline
+        preload='auto'
       />
     </div>
   )
