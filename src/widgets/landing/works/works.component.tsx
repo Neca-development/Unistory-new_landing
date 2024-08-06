@@ -45,8 +45,14 @@ export function Works() {
       return;
     }
 
-    setCases(CASES.filter(item => showCases.some(caseId => item.id.includes(caseId))));
-    }, []);
+    if (locale === 'ru') {
+      setCases(CASES.filter(item => showCases.some(caseId => item.id.includes(caseId))));
+      return
+    }
+
+    setCases(CASES.slice(0, 7));
+
+  }, []);
 
   // function to get 2 cases more on click
   const getMoreCases = () => {
