@@ -31,6 +31,10 @@ module.exports = {
       "icon-accent": "#0F1A20",
       "icon-on-primary": "#FFFFFFE5",
 
+      'tag-background': 'rgba(161, 159, 159, 0.4)',
+
+      'case-hover': 'rgba(255, 72, 0, 1)',
+
       transparent: "transparent",
 
       "primary-s": "var(--color-text)",
@@ -64,6 +68,7 @@ module.exports = {
     extend: {
       screens: {
         "m-xl1": { max: "1279px" },
+        'lg': { min: '768px'},
         "m-md": { max: "767px" },
         "t-xs": { max: "640px" },
         "m-2xl": { max: "520px" },
@@ -72,6 +77,11 @@ module.exports = {
         "m-m": { max: "360px" },
         "m-s": { max: "320px" },
         "m-xs": { max: "260px" },
+      },
+      spacing: {
+        '105': '420px',
+        '92': '23rem',
+        '132': '528px'
       },
       fontSize: {
         h2: [

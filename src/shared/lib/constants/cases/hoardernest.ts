@@ -15,6 +15,8 @@ import hoarderImage2 from "@public/assets/images/cases/hoarder/vizualization.jpg
 export const HOARDER_NEST: ICase = {
   title: "HoarderNest",
   id: "hoardernest",
+  videoPreview: 'assets/videos/hoardernest.mp4',
+  tag: 'NFT',
   heroTitle: {
     en: "HoarderNest – innovative NFT aggregator",
     ru: "HoarderNest – инновационный NFT агрегатор",
@@ -29,7 +31,7 @@ export const HOARDER_NEST: ICase = {
   },
   categories: {
     en: ["HoarderNest – innovative NFT aggregator"],
-    ru: ["HoarderNest – инновационный NFT агрегатор"],
+    ru: ["Сервис с комлексным агрегированием данных и их дальнейшим многоуровневым анализом"],
   },
   description: {
     en: "For a crypto startup with a team of  Tesla and eBay formers, we developed  «HoarderNest» – a service with comprehensive data aggregation and further multilevel analysis.",

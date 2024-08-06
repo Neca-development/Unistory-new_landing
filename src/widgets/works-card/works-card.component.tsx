@@ -48,7 +48,6 @@ export function WorksCard(props: IWorksCardInterface) {
 						<CaseCategoryIcon key={idx} icon={icon} variant={work?.textColor} />
 					))} 
       </div> */}
-
       <div
         className={clsx(
           "absolute bottom-0 w-full p-6 t-xs:p-4",

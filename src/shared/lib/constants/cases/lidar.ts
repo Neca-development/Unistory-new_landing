@@ -28,6 +28,7 @@ import lidarFieldEn from "@public/assets/images/cases/lidar/lidar-en-field.jpg";
 import lidarSquareFieldRu from "@public/assets/images/cases/lidar/lidar-square-ru-field.jpg";
 import lidarSquareFieldEn from "@public/assets/images/cases/lidar/lidar-square-en-field.jpg";
 
+
 export const LIDAR: ICase = {
   title: {
     en: "Lidar",
@@ -38,9 +39,11 @@ export const LIDAR: ICase = {
     en: "Software Development for Calculating Foot Traffic Using LiDAR",
     ru: "Разработка ПО для вычисления человекопотока с помощью лидара",
   },
+  videoPreview: "/assets/videos/lidar.mp4",
+  tag: 'CV',
   categories: {
     en: ["Software Development for Calculating Foot Traffic"],
-    ru: ["Разработка ПО для вычисления человекопотока"],
+    ru: ["Разработка ПО для вычисления человекопотока с помощью лидара"],
   },
   metaTitle: {
     en: "Software Development for Analyzing the Effectiveness of Offline Advertising",
