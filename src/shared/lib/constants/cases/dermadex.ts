@@ -21,6 +21,8 @@ import dermadexThumbMob from "@public/assets/images/cases/dermadex/thumb_mob.jpg
 export const DERMADEX: ICase = {
   title: "Dermadex",
   id: "dermadex",
+  tag: "CV",
+  videoPreview: 'assets/videos/dermadex.mp4',
   heroTitle: {
     en: "Dermadex App: photo-based AI dermatologic diagnosis",
     ru: "Приложение Dermadex: определяем болезни кожи по фото с помощью AI",

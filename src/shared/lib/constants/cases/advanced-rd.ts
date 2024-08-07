@@ -10,6 +10,8 @@ import advancedRDThumbMob from "@public/assets/images/cases/advanced-rd/thumb_mo
 export const ADVANCED_RD: ICase = {
   title: "Advanced RD",
   id: "advanced-rd",
+  videoPreview: 'assets/videos/advanced-rd.mp4',
+  tag: "web3",
   projectUrl: "https://invest.unistory.app",
   projectUrlTitle: "www.invest.unistory.app",
   heroTitle: {
@@ -18,7 +20,8 @@ export const ADVANCED_RD: ICase = {
   },
   categories: {
     en: ["Blockchain powered property investment platform"],
-    ru: ["Платформа для инвестиций в недвижимость на базе блокчейна"],
+    ru: ["Платформа для инвестиций в недвижимость с блокчейн-интеграцией"
+      ],
   },
   metaTitle: {
     en: "Platform for real estate investments with web3 integration",
