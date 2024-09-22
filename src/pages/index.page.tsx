@@ -3,8 +3,12 @@ import { useAnimationStore } from "@shared/lib/store";
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
 import { Hero, Principles, Reviews, Services, Works } from "@widgets/landing";
+import { Advantages } from "@widgets/advantages/advantages.component";
+import { MailingList } from "@widgets/landing/mailing-list";
+import { News } from "@widgets/landing/news/news.component";
 import { Layout } from "@widgets/layout";
 import clsx from "clsx";
+
 import { useEffect } from "react";
 
 export function Home() {
@@ -49,10 +53,13 @@ export function Home() {
           )}
         />
         <Hero />
+        <Advantages />
         <Services />
         <Works />
         <Principles />
         <Reviews />
+        <News />
+        <MailingList />
         <Connect />
       </Layout.Main>
       <Layout.Footer showAddress />

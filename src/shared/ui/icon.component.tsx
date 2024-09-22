@@ -78,10 +78,15 @@ const companyUpwork = dynamic(() => import("@public/assets/icons/company-upwork.
 const companyHh = dynamic(() => import("@public/assets/icons/company-hh.svg"));
 const companyLinkedIn = dynamic(() => import("@public/assets/images/company/linkedin.svg"));
 const companyTelegram = dynamic(() => import("@public/assets/images/company/telegram.svg"));
+const telegramIcon = dynamic(() => import("@public/assets/icons/telegram-icon.svg"));
+const telegramIconSmall = dynamic(() => import("@public/assets/icons/telegram-small-icon.svg"));
+const eyeIcon = dynamic(() => import("@public/assets/icons/eye-icon.svg"));
 
 const iconTypes = {
   unistory,
   logoLight,
+  eyeIcon,
+  telegramIconSmall,
   logoDark,
   sun,
   sunset,
@@ -145,7 +150,8 @@ const iconTypes = {
   accordionIcon,
   appStore,
   googlePlay,
-  arrowRightIcon
+  arrowRightIcon,
+  telegramIcon,
 };
 
 export type IconsTypes = keyof typeof iconTypes;
