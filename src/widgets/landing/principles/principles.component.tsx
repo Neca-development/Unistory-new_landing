@@ -18,13 +18,13 @@ export function Principles() {
   }, [locale]);
 
   return (
-    <section className="container pt-20 pb-32 t-xs:pt-[4.5rem] t-xs:pb-20 bg-light-bg ">
+    <section className="container pt-20 pb-32 t-xs:pt-[4.5rem] t-xs:pb-20">
       <div className="flex items-center space-x-4 t-xs:justify-between t-xs:space-x-0">
         {data.items.map((item, index) => (
           <React.Fragment key={item.title}>
             <button
               className={clsx(
-                "text-2xl p-2 font-medium t-xs:text-base t-xs:px-0 dark:text-[black]",
+                "text-2xl p-2 font-medium t-xs:text-base t-xs:px-0",
                 activeIdx === index && "text-primary-s"
               )}
               onClick={() => setActiveIdx(index)}
@@ -37,7 +37,6 @@ export function Principles() {
           </React.Fragment>
         ))}
       </div>
-
       <div className="mt-12 relative t-xs:mt-10">
         <MessageToggler
           toggleClassName="absolute top-[-1.5rem] t-xs:-bottom-10 t-xs:top-auto t-xs:left-auto t-xs:right-0 left-[39.2rem]"
@@ -45,13 +44,11 @@ export function Principles() {
           noticeIndex={activeIdx}
         />
         <p className="font-bold text-5xl leading-[3.5rem] t-xs:text-2xl t-xs:leading-9">
-          <span className="dark:text-[black]">
-            {data.items[activeIdx]!.description?.beforeHighlight}
-          </span>
-          <span className="text-primary-s">{data.items[activeIdx]!.description?.highlight}</span>{" "}
-          <span className="dark:text-[black]">
-            {data.items[activeIdx]!.description?.afterHighlight}
-          </span>
+          {data.items[activeIdx]!.description?.beforeHighlight}
+          <span className="text-primary-s">
+            {data.items[activeIdx]!.description?.highlight}
+          </span>{" "}
+          {data.items[activeIdx]!.description?.afterHighlight}
         </p>
       </div>
     </section>

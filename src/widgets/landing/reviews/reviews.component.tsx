@@ -87,18 +87,18 @@ export function Reviews() {
   */
 
   return (
-    <section className="container pt-14 pb-[7.5rem] t-xs:pt-20 bg-light-bg ">
+    <section className="container pt-14 pb-[7.5rem] t-xs:pt-20">
       <h2 className="text-2xl leading-none mb-10 t-xs:mb-8 lg:text-5xl font-bold lg:leading-[3.25rem]">
         {/* {text.title.beforeHighlight} */}
         <span
           className="text-primary-s"
           dangerouslySetInnerHTML={{ __html: text.title.highlight }}
         ></span>
-        <span className="dark:text-[black]">{text.title.afterHighlight}</span>
+        {text.title.afterHighlight}
       </h2>
 
       <div className="lg:grid gap-10 grid-cols-[1fr_25rem]">
-        <article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:text-[black] rounded-sm flex flex-col t-xs:h-[25rem] justify-between">
+        <article className="py-6 lg:py-10 px-4 lg:px-16 bg-light-surface dark:bg-dark-bg-accent rounded-sm flex flex-col t-xs:h-[25rem] justify-between">
           <p
             className="text-base leading-6 lg:text-[1.2rem] lg:leading-10 2xl:text-2xl 2xl:leading-10"
             dangerouslySetInnerHTML={{
@@ -137,7 +137,7 @@ export function Reviews() {
         {reviewsData.map((r, idx) => (
           <button
             key={idx}
-            className="py-3 px-4 bg-light-surface dark:text-[black] text-base lg:text-2xl rounded-sm flex items-center t-xs:px-2 t-xs:py-1"
+            className="py-3 px-4 bg-light-surface dark:bg-dark-bg-accent text-base lg:text-2xl rounded-sm flex items-center t-xs:px-2 t-xs:py-1"
             onClick={() => setActiveReviewIndex(idx)}
           >
             {/* {activeReviewIndex === idx && <Timer duration={timerDuration} />} */}
