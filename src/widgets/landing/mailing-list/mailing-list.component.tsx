@@ -40,7 +40,9 @@ export const MailingList = () => {
           },
         }
       );
-      setSuccess(true);
+      if (response.status === 200) {
+        setSuccess(true);
+      }
     } catch (error: any) {
       setErrorResponse(error.message);
     }
