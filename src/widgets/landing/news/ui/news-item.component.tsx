@@ -12,7 +12,7 @@ export const NewsItem: React.FC<NewsItemProps> = ({ item, lang }) => (
     <div className="dark:bg-dark-bg-secondary bg-light-bg-accent rounded-xl p-3 w-[18.875rem] m-md:flex m-md:w-full m-md:flex-row-reverse m-md:mt-4">
       <img src={item.image} alt="" className="m-md:h-[7.5rem] m-md:w-24" />
       <div className="pr-1">
-        <p className="text-lg font-semibold leading-[1.375rem] mt-4 h-12 m-md:text-sm m-md:h-[3.75rem]">
+        <p className="text-lg font-semibold dark:text-[white] leading-[1.375rem] mt-4 h-12 m-md:text-sm m-md:h-[3.75rem]">
           {lang == "ru" ? item.title : item.titleEN}
         </p>
         <div className="flex justify-between items-center mt-12 m-md:justify-start m-md:mt-[1rem]">
