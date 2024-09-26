@@ -13,7 +13,7 @@ export const News = () => {
   const displayedNews = newsData.slice(0, newsPerPage * (currentPage + 1));
 
   return (
-    <div className="px-[5rem] m-md:mx-[1.125rem]  m-md:p-0">
+    <div className="container">
       <div className="flex justify-between items-end m-md:block">
         <div className="text-[2.875rem] font-bold m-md:text-[1.75rem] leading-[3.375rem] m-md:leading-[2rem]">
           {locale === "ru" ? (
@@ -23,25 +23,20 @@ export const News = () => {
             </>
           ) : (
             <>
-              <div className="m-md:hidden">
-                <p>We talk about working in IT,</p>
-                <p>neural networks and web3</p>
-              </div>
-              <div className="md:hidden">
-                <p>We talk about</p>
-                <p>working in IT, neural networks and web3</p>
-              </div>
+              <p>Blog posts about web3 and AI</p>
             </>
           )}
         </div>
         {locale === "ru" && (
-          <button className="rounded-full p-2 bg-light-bg-accent dark:bg-dark-bg-secondary flex items-center max-h-[3.75rem] m-md:max-h-10 m-md:mt-6">
-            <span className="ml-9 mr-6 text-lg font-semibold m-md:text-sm m-md:ml-5">
-              Читать в телеграм
-            </span>
-            <IconComponent name="telegramIcon" className="block m-md:hidden" />
-            <IconComponent name="telegramIconSmall" className="lg:hidden" />
-          </button>
+          <a href="https://t.me/unistory_app" target="_blank">
+            <button className="rounded-full p-2 bg-light-bg-accent dark:bg-dark-bg-secondary flex items-center max-h-[3.75rem] m-md:max-h-10 m-md:mt-6">
+              <span className="ml-9 mr-6 text-lg font-semibold m-md:text-sm m-md:ml-5 dark:text-[white]">
+                Читать в телеграм
+              </span>
+              <IconComponent name="telegramIcon" className="block m-md:hidden" />
+              <IconComponent name="telegramIconSmall" className="lg:hidden" />
+            </button>
+          </a>
         )}
       </div>
       <div className="grid grid-cols-4 gap-6 mt-10 m-md:block">

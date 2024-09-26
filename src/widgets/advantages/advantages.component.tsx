@@ -6,21 +6,25 @@ const advantages = [
   {
     text: "Топ-10 разработчиков корпоративных решений",
     textEN: "Winner of Hackathons",
-    advantageNumber: 10,
+    advantageNumber: "10",
+    advantageNumberEN: "5.0",
     link: "https://ratingruneta.ru/corporate/erp-integration/",
     linkEN: "https://devpost.com/unistory/challenges",
+    icon: "crown",
   },
   {
     text: "Топ-5 разработчиков ПО на международном рынке",
     textEN: "Clutch Rating 5.0",
-    advantageNumber: 5,
+    advantageNumber: "5",
+    advantageNumberEN: "5.0",
     link: "https://ratingruneta.ru/foreign/",
     linkEN: "https://clutch.co/profile/unistory",
   },
   {
     text: "Наши разработчики — победители хакатонов",
     textEN: "Upwork Rating 5.0",
-    advantageNumber: 1,
+    advantageNumber: "1",
+    advantageNumberEN: "5.0",
     link: "https://devpost.com/unistory/challenges",
     linkEN: "https://www.upwork.com/agencies/unistory/",
   },
@@ -35,8 +39,10 @@ export const Advantages: React.FC = () => {
         <Advantage
           key={item.advantageNumber}
           text={locale === "ru" ? item.text : item.textEN}
-          advantageNumber={item.advantageNumber}
+          advantageNumber={locale === "ru" ? item.advantageNumber : item.advantageNumberEN}
           link={locale === "ru" ? item.link : item.linkEN}
+          icon={item.icon}
+          lang={locale}
         />
       ))}
     </div>

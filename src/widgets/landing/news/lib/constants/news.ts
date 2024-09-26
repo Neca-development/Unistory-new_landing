@@ -16,35 +16,35 @@ export const news: News[] = [
     title: 'Объединили 4 нейросети  и научили их анализировать TV-эфир в реальном времени',
     link: 'https://habr.com/ru/articles/837660/https://habr.com/ru/articles/837660/',
     site: 'habr',
-    views: 231.4
+    views: 2.8
   },
   {
     image: medConf.src,
     title: 'Сходили на конференцию медиков: топ-7 инсайтов на стыке AI и медицины',
     link: 'https://vc.ru/opinions/1376344-my-shodili-na-konferenciyu-medikov-chtoby-vam-ne-prishlos-top-7-insaitov-na-styke-neirosetei-i-mediciny',
     site: 'vc.ru',
-    views: 46.2
+    views: 2.4
   },
   {
     image: earnMillion.src,
     title: 'Как бизнесу использовать нейросети, чтобы заработать миллионы',
     link: 'https://vc.ru/services/1165649-ne-tolko-teksty-i-kartinki-kak-biznesu-ispolzovat-ai-chtoby-zarabotat-milliony',
     site: 'vc.ru',
-    views: 4.4
+    views: 26.8
   },
   {
     image: ourGrow.src,
     title: 'Как мы выросли с нуля до $500,000 оборота',
     link: 'https://www.youtube.com/watch?v=ux8H89LDmyo',
     site: 'YouTube',
-    views: 11
+    views: 1
   },
 ]
 
 export const newsEN: News[] = [
   {
-    title: 'Not Just Texts and Images: How Businesses Can Use AI to Make Millions',
-    link: "https://medium.com/@aksenov.unistory/not-just-texts-and-images-how-businesses-can-use-ai-to-earn-millions-aad1a713e520",
+    title: 'How We Taught the Neural Network to Identify Herpes by Photo',
+    link: "https://medium.com/@aksenov.unistory/how-we-taught-the-neural-network-to-identify-herpes-by-photo-a1899faa7ebb",
     site: "medium.com",
     image: nNetworks.src
   },
@@ -55,8 +55,8 @@ export const newsEN: News[] = [
     image: steganographyItem.src
   }, 
   {
-    title: 'Blog posts about web3 and AI',
-    link: 'https://medium.com/@aksenov.unistory/how-we-taught-the-neural-network-to-identify-herpes-by-photo-a1899faa7ebb',
+    title: 'Business Startup Guide: How to Build Your Company from Scratch',
+    link: 'https://medium.com/@aksenov.unistory/business-startup-guide-how-to-build-your-company-from-scratch-and-take-it-online-acb6d8470094',
     site: "medium.com",
     image: startupGuide.src
   }

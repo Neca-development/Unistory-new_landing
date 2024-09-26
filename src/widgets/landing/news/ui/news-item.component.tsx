@@ -7,7 +7,7 @@ interface NewsItemProps {
 }
 
 export const NewsItem: React.FC<NewsItemProps> = ({ item, lang }) => (
-  <a href={item.link}>
+  <a href={item.link} target="_blank">
     <div className="dark:bg-dark-bg-secondary bg-light-bg-accent rounded-xl p-3 m-md:flex m-md:w-full m-md:flex-row-reverse m-md:mt-4">
       <img src={item.image} alt="" className="m-md:h-[7.5rem] m-md:w-24" />
       <div className="pr-1">
