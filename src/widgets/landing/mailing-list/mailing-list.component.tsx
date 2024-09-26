@@ -21,7 +21,7 @@ export const MailingList = () => {
   const onSubmit: SubmitHandler<EmailForm> = async (e) => {
     if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(e.email)) {
       setError("email", {
-        message: locale === "ru" ? "Введите валидный email" : "Enter a valid email",
+        message: locale === "ru" ? "Неверный email" : "Incorrect email",
       });
       return;
     }
@@ -64,11 +64,16 @@ export const MailingList = () => {
       <div className="mt-[6.25rem] flex justify-between m-md:block m-md:mt-5">
         <div className="text-lg dark:text-dark-text-secondary w-[25.0625rem] leading-[1.375rem] m-md:w-full m-md:text-sm">
           <p>{locale === "ru" ? "Только раз в месяц." : "Only once a month."}</p>
-          <p>
-            {locale === "ru"
-              ? "Инсайды по внедрению AI в веб-сервисы и приложения по всему миру."
-              : "Insights into the implementation of AI in web services and applications around the world."}
-          </p>
+          <div>
+            {locale === "ru" ? (
+              <>
+                <p>Инсайды по внедрению AI в веб-сервисы</p>
+                <p>и приложения по всему миру.</p>
+              </>
+            ) : (
+              "Insights into the implementation of AI in web services and applications around the world."
+            )}
+          </div>
         </div>
         <form
           className="flex h-[4.25rem] m-md:block m-md:mt-20 m-md:h-auto"
@@ -89,8 +94,8 @@ export const MailingList = () => {
             {success && (
               <p className="text-success">
                 {locale === "ru"
-                  ? "Вы успешно подписались на рассылку"
-                  : "You have successfully subscribed to the mailing list"}
+                  ? "Вам на почту отправлена ​​ссылка для подтверждения"
+                  : "A confirmation link has been sent to your email"}
               </p>
             )}
           </div>
