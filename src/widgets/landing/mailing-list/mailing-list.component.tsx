@@ -25,24 +25,24 @@ export const MailingList = () => {
       });
       return;
     }
-    const response = await axios.post(
-      "https://api.unisender.com/ru/api/subscribe",
-      {},
-      {
-        params: {
-          format: "json",
-          api_key: "6mtbkaz96uogygfxpsr6qbsmz4dduxr4pdwdy1ke",
-          list_ids: 10,
-          fields: {
-            email: e.email,
+    try {
+      const response = await axios.post(
+        "https://api.unisender.com/ru/api/subscribe",
+        {},
+        {
+          params: {
+            format: "json",
+            api_key: "6mtbkaz96uogygfxpsr6qbsmz4dduxr4pdwdy1ke",
+            list_ids: 10,
+            fields: {
+              email: e.email,
+            },
           },
-        },
-      }
-    );
-    if (response.status === 200) {
+        }
+      );
       setSuccess(true);
-    } else {
-      setErrorResponse(response.statusText.toString());
+    } catch (error: any) {
+      setErrorResponse(error.message);
     }
   };
 
