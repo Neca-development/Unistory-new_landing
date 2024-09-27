@@ -120,8 +120,7 @@ export function Reviews() {
             </span>
             <span>
               {locale === "ru" &&
-                reviewsData[activeReviewIndex]?.review?.author.company ===
-                  "«Consensus-base Inc.»" }
+                reviewsData[activeReviewIndex]?.review?.author.company === "«Consensus-base Inc.»"}
               {locale === "ru" &&
                 reviewsData[activeReviewIndex]?.review?.author.company ===
                   "«BP Networking & Design Inc.»"}

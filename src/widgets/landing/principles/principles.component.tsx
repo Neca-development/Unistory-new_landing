@@ -37,7 +37,6 @@ export function Principles() {
           </React.Fragment>
         ))}
       </div>
-
       <div className="mt-12 relative t-xs:mt-10">
         <MessageToggler
           toggleClassName="absolute top-[-1.5rem] t-xs:-bottom-10 t-xs:top-auto t-xs:left-auto t-xs:right-0 left-[39.2rem]"

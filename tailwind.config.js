@@ -11,6 +11,7 @@ module.exports = {
       sans: ["Manrope", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
     },
+    
     colors: {
       "light-bg": "#F6F4F2",
       "dark-bg": "#222222",
@@ -24,6 +25,8 @@ module.exports = {
 
       "bg-secondary": "#ffffff",
       "dark-bg-secondary": "#2A2A2A",
+
+      'bg-gradient-gray-start': '#4B4B4B',
 
       "light-text-secondary": "#6F7483",
       "dark-text-secondary": "#C3C3C3",
@@ -111,6 +114,9 @@ module.exports = {
         card_bg_rzhd: "url('/assets/images/cases/rzhd.jpg')",
         card_bg_safety_platform: "url('/assets/images/cases/safety-platform.jpg')",
         card_bg_sberbank: "url('/assets/images/cases/sberbank.jpg')",
+        'mailing-list-bg': 'linear-gradient(140deg, rgba(255, 72, 0, 0.5) 1%, #1E1E1E 20%);',
+        'mailing-list-bg-light': 'linear-gradient(140deg, rgba(255, 72, 0, 0.5) 1%, #FFFFFF  20%);'
+
       },
       boxShadow: {
         "8dp": "0px 0px 2px rgba(0, 0, 0, 0.08), 0px 4px 16px rgba(0, 0, 0, 0.08)",

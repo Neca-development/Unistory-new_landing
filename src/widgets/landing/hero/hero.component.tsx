@@ -25,11 +25,7 @@ export function Hero() {
   }
 
   return (
-    <div
-      className={clsx(
-        "container justify-center pt-14 pb-20 lg:flex lg:flex-col lg:pb-8 t-xs:pt-12"
-      )}
-    >
+    <div className={clsx("container justify-center pt-14 lg:flex lg:flex-col lg:pb-8 t-xs:pt-12")}>
       <section className="relative">
         <LazyShow>
           <h1 className="text-center text-4xl font-bold duration-300 md:text-[5.2rem] md:leading-[1.1] lg:text-[5rem]">

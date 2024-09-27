@@ -36,12 +36,6 @@ export const Footer = React.memo((props: IFooterProperties) => {
                 key={city.name}
               >
                 <p className="text-2xl font-medium t-xs:text-xl">{city.name}</p>
-                <a
-                  href={`tel:${city.tel}`}
-                  className="text-dark-text-primary text-base w-fit t-xs:mx-auto underline-offset-4 hover:underline "
-                >
-                  {city.tel}
-                </a>
                 <p
                   className="opacity-50 text-base"
                   dangerouslySetInnerHTML={{ __html: city.address }}
@@ -73,21 +67,13 @@ export const Footer = React.memo((props: IFooterProperties) => {
               ) : (
                 <a
                   rel="nofollow"
-                  href="https://t.me/Antonunistory"
+                  href="https://t.me/alexgrowler"
                   className="text-light-bg-accent opacity-50 hover:opacity-100"
                   target="_blank"
                 >
                   <IconComponent name="telegram" className="w-6" />
                 </a>
               )}
-              <a
-                rel="nofollow"
-                href="https://wa.me/79874490825"
-                className="text-light-bg-accent"
-                target="_blank"
-              >
-                <IconComponent name="whatsApp" className="w-6 opacity-50 hover:opacity-100" />
-              </a>
               <a
                 rel="nofollow"
                 href="https://clutch.co/profile/unistory"
@@ -105,7 +91,10 @@ export const Footer = React.memo((props: IFooterProperties) => {
                 className="text-light-bg-accent"
                 target="_blank"
               >
-                <IconComponent name="upwork" className="w-20 mt-1 opacity-50 hover:opacity-100" />
+                <IconComponent
+                  name="upwork"
+                  className="w-[5rem] mt-1 opacity-50 hover:opacity-100"
+                />
               </a>
             </div>
           </div>

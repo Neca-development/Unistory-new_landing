@@ -20,7 +20,6 @@ export const ContactsAddresses = () => {
             <div className="mb-10 md:mb-0 md:w-1/3">
               <h2 className="text-3xl font-bold mb-4">{langData.ADDRESSES.SPB.title}</h2>
               <div className="text-xl space-y-2 opacity-50 xl:w-4/5">
-                <div>{langData.ADDRESSES.SPB.phone}</div>
                 <address
                   className="not-italic"
                   dangerouslySetInnerHTML={{ __html: langData.ADDRESSES.SPB.address }}
@@ -28,9 +27,9 @@ export const ContactsAddresses = () => {
               </div>
             </div>
             <div className="h-72 md:w-3/5 md:h-96">
-              <Map width="100%" height="100%" state={{ center: [59.96, 30.324], zoom: 16 }}>
+              <Map width="100%" height="100%" state={{ center: [59.94545, 30.355385], zoom: 16 }}>
                 <Placemark
-                  geometry={[59.96, 30.324]}
+                  geometry={[59.94545, 30.355385]}
                   options={{
                     iconLayout: "default#image",
                     iconImageSize: [50, 62],
@@ -45,7 +44,6 @@ export const ContactsAddresses = () => {
           <div className="mb-10 md:mb-0 md:w-1/3">
             <h2 className="text-3xl font-bold mb-4">{langData.ADDRESSES.ALMATA.title}</h2>
             <div className="text-xl space-y-2 opacity-50 xl:w-4/5">
-              <div>{langData.ADDRESSES.ALMATA.phone}</div>
               <address
                 className="not-italic"
                 dangerouslySetInnerHTML={{ __html: langData.ADDRESSES.ALMATA.address }}
