@@ -58,7 +58,7 @@ export const CompanyVacancies = () => {
               href="https://t.me/unistory223"
               rel="nofollow"
               target="_blank"
-              className="flex flex-grow relative items-center justify-center h-16 text-light-bg-accent bg-bg-accent rounded-full -ml-4 transition-all lg:h-20 hover:bg-light-bg-accent hover:text-bg-gradient active:bg-dark-text-secondary"
+              className="flex flex-grow relative items-center justify-center h-16 text-light-bg-accent bg-bg-accent rounded-full -ml-4 transition-all lg:h-20 hover:bg-[#D65838] active:bg-dark-text-secondary"
             >
               <span className="left-1 top-1 absolute w-14 h-14 bg-dark-bg-secondary rounded-full flex items-center p-3 justify-center lg:left-2 lg:top-2 lg:w-16 lg:h-16 lg:p-4">
                 <IconComponent
