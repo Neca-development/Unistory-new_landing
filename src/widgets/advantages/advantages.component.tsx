@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const advantages = [
   {
     text: "Топ-10 разработчиков корпоративных решений",
-    textEN: "Winner of Hackathon",
+    textEN: "Hackathon winner",
     advantageNumber: "10",
     advantageNumberEN: "5.0",
     link: "https://ratingruneta.ru/corporate/erp-integration/",

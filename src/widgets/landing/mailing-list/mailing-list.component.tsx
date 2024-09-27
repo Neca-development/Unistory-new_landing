@@ -90,10 +90,12 @@ export const MailingList = () => {
                 placeholder={locale === "ru" ? "Эл. почта" : "Email"}
                 className="w-[20.5625rem] dark:placeholder:text-[white] h-full border-b-2 outline-none rounded-none pt-6 pb-3 leading-7 dark:border-bg-secondary bg-transparent mr-6 m-md:w-full"
               />
-              {errors.email && <p className="text-error">{errors.email.message}</p>}
-              {error && <p className="text-error">{error}</p>}
+              {errors.email && (
+                <p className="text-error text-xs ml-3 mt-0.5">{errors.email.message}</p>
+              )}
+              {error && <p className="text-error text-xs ml-3 mt-0.5">{error}</p>}
               {success && (
-                <p className="text-success">
+                <p className="text-success text-xs ml-3 mt-0.5">
                   {locale === "ru"
                     ? "Вам на почту отправлена ​​ссылка для подтверждения"
                     : "A confirmation link has been sent to your email"}
