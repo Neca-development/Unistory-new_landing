@@ -28,7 +28,7 @@ export const News = () => {
           )}
         </div>
         {locale === "ru" && (
-          <a href="https://t.me/unistory_app" target="_blank">
+          <a href=" https://t.me/+w6LmXXe_ejI1ZGZi" target="_blank">
             <button className="rounded-full p-2 bg-light-bg-accent dark:bg-dark-bg-secondary flex items-center max-h-[3.75rem] m-md:max-h-10 m-md:mt-6">
               <span className="ml-9 mr-6 text-lg font-semibold m-md:text-sm m-md:ml-5 dark:text-[white]">
                 Читать в телеграм
