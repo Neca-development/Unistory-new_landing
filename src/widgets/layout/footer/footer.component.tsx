@@ -58,7 +58,7 @@ export const Footer = React.memo((props: IFooterProperties) => {
               {locale === "ru" ? (
                 <a
                   rel="nofollow"
-                  href="https://t.me/unistory_app"
+                  href=" https://t.me/+w6LmXXe_ejI1ZGZi"
                   className="text-light-bg-accent	opacity-50 hover:opacity-100"
                   target="_blank"
                 >

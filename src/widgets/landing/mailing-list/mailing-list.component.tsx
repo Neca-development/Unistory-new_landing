@@ -26,21 +26,21 @@ export const MailingList = () => {
       return;
     }
     try {
+      const basePath =
+        process.env.NODE_ENV === "development"
+          ? "http://135.181.216.90:49490/"
+          : "https://unistory.app/";
       const response = await axios.post(
-        "https://api.unisender.com/ru/api/subscribe",
+        basePath + "api/contact/add",
         {},
         {
           params: {
-            format: "json",
-            api_key: "6mtbkaz96uogygfxpsr6qbsmz4dduxr4pdwdy1ke",
-            list_ids: 10,
-            fields: {
-              email: e.email,
-            },
+            listIds: 10,
+            email: e.email,
           },
         }
       );
-      if (response.status === 200) {
+      if (response.status === 200 || response.status === 201) {
         setSuccess(true);
       }
     } catch (error: any) {
