@@ -5,6 +5,7 @@ import ourGrow from '@public/assets/images/news/news-ru-our-grow.png'
 import steganographyItem from '@public/assets/images/news/news-en-steganography.png'
 import nNetworks from '@public/assets/images/news/news-en-nn.png'
 import startupGuide from '@public/assets/images/news/news-en-startup-guide.jpeg'
+import tempImage from '@public/assets/images/news/temp-image.jpg'
 
 
 import { News } from '../types'
@@ -59,5 +60,35 @@ export const newsEN: News[] = [
     link: 'https://medium.com/@aksenov.unistory/business-startup-guide-how-to-build-your-company-from-scratch-and-take-it-online-acb6d8470094',
     site: "medium.com",
     image: startupGuide.src
-  }
+  }, 
+  {
+    title: 'Not Just Texts and Images: How Businesses Can Use AI to Earn Millions',
+    link: 'https://medium.com/@aksenov.unistory/not-just-texts-and-images-how-businesses-can-use-ai-to-earn-millions-aad1a713e520',
+    site: "medium.com",
+    image: tempImage.src
+  }, 
+  {
+    title: "Neural Networks: The Best Friends of Restaurants and Food Tech",
+    link: 'https://medium.com/@aksenov.unistory/why-neural-networks-are-the-best-friends-of-restaurants-chefs-and-foodtech-giants-b82d29e6cb05',
+    site: "medium.com",
+    image: tempImage.src
+  },
+  {
+    title: 'Where to Find 3 Key Ideas for Your Startup? The Story of Creating a Charitable Blockchain Platform',
+    link: "https://medium.com/@aksenov.unistory/where-to-find-3-key-ideas-for-your-startup-the-story-of-creating-a-charitable-blockchain-platform-e526118e73a1",
+    site: "medium.com",
+    image: tempImage.src
+  },
+  {
+    title: 'How we implemented AI on the website of one of the leaders of ISKCON',
+    link: "https://medium.com/@aksenov.unistory/how-we-implemented-ai-on-the-website-of-one-of-the-leaders-of-iskcon-4703982b7479",
+    site: "medium.com",
+    image: tempImage.src
+  },
+  {
+    title: 'Crypto for Charity: Myth or Reality? Explore this with the founders of the Donor Finance service',
+    link: "https://medium.com/@aksenov.unistory/crypto-for-charity-myth-or-reality-explore-this-with-the-founders-of-the-donor-finance-service-c0c3a639cb23",
+    site: "medium.com",
+    image: tempImage.src
+  }, 
 ]
