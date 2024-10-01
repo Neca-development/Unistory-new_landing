@@ -6,6 +6,16 @@ import steganographyItem from '@public/assets/images/news/news-en-steganography.
 import nNetworks from '@public/assets/images/news/news-en-nn.png'
 import startupGuide from '@public/assets/images/news/news-en-startup-guide.jpeg'
 import tempImage from '@public/assets/images/news/temp-image.jpg'
+import historyImage from '@public/assets/images/news/news-u-history.png'
+import computerVision from '@public/assets/images/news/news-computer-vision.png'
+import foodTech from '@public/assets/images/news/news-food-tech.png'
+import piarCompany from '@public/assets/images/news/news-piar.png'
+import worksLLM from '@public/assets/images/news/news-work-llm.png'
+import worksLidar from '@public/assets/images/news/news-lidar.png'
+import topInsights from '@public/assets/images/news/news-insights.png'
+import searchHerpes from '@public/assets/images/news/news-gerpes.png'
+
+
 
 
 import { News } from '../types'
@@ -40,6 +50,62 @@ export const news: News[] = [
     site: 'YouTube',
     views: 1
   },
+  {
+    image: historyImage.src,
+    title: 'Unicorn Story: история нашей компании',
+    link: 'https://vc.ru/life/1425090-ot-zakazov-po-100-do-godovoi-vyruchki-v-500-000-kak-sozdavalas-studiya-ai-i-blokchein-razrabotki',
+    site: 'vc.ru',
+    views: 5.9
+  },
+  {
+    image: computerVision.src,
+    title: 'Computer vision для маркетологов — DataFest 2024',
+    link: 'https://youtu.be/ABDvnSHduF8?si=jy5YvfkGHc8b4YPx',
+    site: 'YouTube',
+    views: 0.28
+  },
+  {
+    image: foodTech.src,
+    title: 'Нейросети для фудтеха, доставок и ресторанов',
+    link: 'https://vc.ru/ai/1276547-kak-ii-ne-daet-sgnit-vashei-kurochke-ili-pochemu-neiroseti-luchshie-druzya-restoranov-povarov-i-monstrov-fudtehahttps://vc.ru/ai/1276547-kak-ii-ne-daet-sgnit-vashei-kurochke-ili-pochemu-neiroseti-luchshie-druzya-restoranov-povarov-i-monstrov-fudteha',
+    site: 'vc.ru',
+    views: 3.3
+  },
+  {
+    image: piarCompany.src,
+    title: 'Как пиарить студию разработки в 2024 году',
+    link: 'https://vc.ru/life/1388297-kak-my-poprobovali-vse-metody-piara-potratili-1-500-000-rublei-i-zarabotali-menshe-10-lidov',
+    site: 'vc.ru',
+    views: 1.2
+  },
+  {
+    image: worksLLM.src,
+    title: 'Как работают LLM и ChatGPT — простыми словами',
+    link: 'https://vc.ru/chatgpt/1217030-kak-na-samom-dele-rabotaet-chatgpt-bolshie-yazykovye-modeli-prostymi-slovami',
+    site: 'vc.ru',
+    views: 2.5
+  },
+  {
+    image: worksLidar.src,
+    title: 'Научили Computer Vision работать с лидаром',
+    link: 'https://habr.com/ru/articles/829298/',
+    site: 'habr.com',
+    views: 2.9
+  },
+  {
+    image: topInsights.src,
+    title: 'Где найти 3 ключевые идеи для своего стартапа?',
+    link: 'https://vc.ru/services/1064460-gde-naiti-3-klyuchevye-idei-dlya-svoego-startapa-rasskazyvaem-na-primere-blagotvoritelnoi-blokchein-ploshadki',
+    site: 'vc.ru',
+    views: 7.6
+  },
+  {
+    image: searchHerpes.src,
+    title: 'Как мы научили нейросеть искать герпес',
+    link: 'https://vc.ru/services/1010933-nauchili-neiroset-iskat-gerpes-ili-telemedicina-v-kanade',
+    site: 'vc.ru',
+    views: 5.3
+  }
 ]
 
 export const newsEN: News[] = [
