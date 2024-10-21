@@ -26,20 +26,16 @@ export const MailingList = () => {
       return;
     }
     try {
+      const group = locale === "ru" ? 12 : 13;
       const basePath =
         process.env.NODE_ENV === "development"
           ? "http://135.181.216.90:49490/"
           : "https://unistory.app/";
-      const response = await axios.post(
-        basePath + "api/contact/add",
-        {},
-        {
-          params: {
-            listIds: 10,
-            email: e.email,
-          },
-        }
-      );
+      const response = await axios.post(basePath + "api/contact/add", {
+        listIds: [group],
+        email: e.email,
+        lang: "ru",
+      });
       if (response.status === 200 || response.status === 201) {
         setSuccess(true);
       }
