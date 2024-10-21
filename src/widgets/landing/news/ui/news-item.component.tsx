@@ -9,8 +9,8 @@ interface NewsItemProps {
 export const NewsItem: React.FC<NewsItemProps> = ({ item, lang }) => (
   <a href={item.link} target="_blank">
     <div className="dark:bg-dark-bg-secondary bg-light-bg-accent rounded-xl p-3 m-md:flex m-md:w-full m-md:flex-row-reverse m-md:mt-4">
-      <img src={item.image} alt="" className="m-md:h-[7.5rem] m-md:w-24" />
-      <div className="pr-1">
+      <img src={item.image} alt="" className="object-cover m-md:h-[7.5rem] m-md:w-24" />
+      <div className="pr-1 grow">
         <p className="text-lg font-semibold dark:text-[white] leading-[1.375rem] mt-4 h-12 m-md:text-sm m-md:h-[3.75rem]">
           {item.title}
         </p>
