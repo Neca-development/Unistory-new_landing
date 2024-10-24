@@ -47,7 +47,8 @@ export interface ICase {
   title: string | ILang<string>;
   id: string;
   tag?: string;
-  videoPreview?: string,
+  videoPreview?: string;
+  isVideoPreviewAutoplay?: boolean;
   projectUrl?: string;
   projectUrlTitle?: string;
   metaTitle?: ILang<string>;

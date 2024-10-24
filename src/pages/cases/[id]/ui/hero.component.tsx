@@ -4,7 +4,7 @@ import type { ICase } from "@shared/lib/types";
 import { IconComponent } from "@shared/ui";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { CaseGoal } from "./case-goal.component";
 
@@ -16,6 +16,59 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
   }, [locale]);
 
+  const altText =
+    typeof data?.title === "object" ? (data.title[locale || "ru"] as string) : data?.title;
+
+  const getBannerSrc = (banner: any, locale?: string) =>
+    typeof banner === "object" ? (banner[locale || "ru"] as string) : banner;
+
+  const heroDesktopBanner = getBannerSrc(data?.heroBanner.desktop, locale);
+  const heroMobileBanner = getBannerSrc(data?.heroBanner.mob, locale);
+
+  const renderMedia = (src: string, isVideo: boolean) => {
+    if (isVideo) {
+      return (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-auto mt-[4rem] object-cover t-xs:mt-10"
+        >
+          <source src={src} type="video/mp4" />
+        </video>
+      );
+    }
+    return (
+      <Image
+        src={src}
+        width={2880}
+        height={1060}
+        className="mt-[4rem] w-full object-cover t-xs:mt-10"
+        alt={altText || ""}
+        priority
+      />
+    );
+  };
+
+  const renderBanner = useCallback(() => {
+    const isDesktopView = width >= 992;
+    const bannerSrc = isDesktopView ? heroDesktopBanner : heroMobileBanner;
+    const isVideo = bannerSrc.includes("mp4");
+
+    if (!isDesktopView) {
+      return (
+        <Fancybox>
+          <a href={bannerSrc} data-fancybox>
+            {renderMedia(bannerSrc, isVideo)}
+          </a>
+        </Fancybox>
+      );
+    }
+
+    return renderMedia(bannerSrc, isVideo);
+  }, [width, heroDesktopBanner, heroMobileBanner, altText]);
+
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
@@ -23,19 +76,6 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
   if (!data) {
     return <></>;
   }
-
-  const altText =
-    typeof data.title === "object" ? (data.title[locale || "ru"] as string) : data.title;
-
-  const heroDesktopBanner =
-    typeof data.heroBanner.desktop === "object"
-      ? (data.heroBanner.desktop[locale || "ru"] as string)
-      : data.heroBanner.desktop;
-
-  const heroMobileBanner =
-    typeof data.heroBanner.mob === "object"
-      ? (data.heroBanner.mob[locale || "ru"] as string)
-      : data.heroBanner.mob;
 
   return (
     <>
@@ -61,7 +101,9 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
         )}
       </div>
 
-      {width >= 992 ? (
+      {renderBanner()}
+
+      {/* {width >= 992 ? (
         <Image
           src={heroDesktopBanner}
           width={2880}
@@ -83,7 +125,7 @@ export function CaseHero({ data }: { data: ICase | undefined }) {
             />
           </a>
         </Fancybox>
-      )}
+      )} */}
 
       {data.showCategoriesOnPage && (
         <div className="container mt-10 flex flex-wrap items-center gap-x-4 gap-y-6 t-xs:mt-5 t-xs:gap-y-2">

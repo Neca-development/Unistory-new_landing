@@ -18,6 +18,7 @@ import { BVKS } from "./cases/bvks";
 import { FAIRY_TALE_AI } from "./cases/fairy-tale-ai";
 import { UDBARA } from "./cases/udbara";
 import { LIDAR } from "@shared/lib/constants/cases/lidar";
+import { LIS } from "./cases/lis";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
@@ -27,6 +28,7 @@ export const CASES: ICase[] = [
   BVKS,
   DONOR,
   LLM_CHATBOT,
+  LIS,
   UNIVERSITY_CHATBOT,
   DERMADEX,
   FLATSPACE,

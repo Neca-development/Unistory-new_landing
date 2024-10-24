@@ -149,6 +149,16 @@ export const TEAM = {
       ru: "Backend разработчик",
     },
   },
+  vladislavKiribyatevDevOps: {
+    name: {
+      en: "Vladislav Kirbiatev",
+      ru: "Владислав Кирбятьев",
+    },
+    position: {
+      en: "DevOps",
+      ru: "DevOps",
+    },
+  },
   vechyaslavValdykin: {
     name: {
       en: "Vyacheslav Vladykin",
@@ -377,6 +387,26 @@ export const TEAM = {
     position: {
       en: "Backend developer",
       ru: "Backend разработчик",
+    },
+  },
+  viktorKryuchkov: {
+    name: {
+      en: "Viktor Kryuchkov",
+      ru: "Виктор Крючков",
+    },
+    position: {
+      en: "Frontend/Blockchain developer",
+      ru: "Frontend/Blockchain разработчик",
+    },
+  },
+  viktorOdinetc: {
+    name: {
+      en: "Viktor Odinetc",
+      ru: "Виктор Одинец",
+    },
+    position: {
+      en: "Blockchain developer",
+      ru: "Blockchain разработчик",
     },
   },
 } as const;
