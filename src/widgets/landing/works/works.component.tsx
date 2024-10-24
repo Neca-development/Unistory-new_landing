@@ -12,12 +12,12 @@ import clsx from "clsx";
 import { AllCasesButton } from "./all-cases-button.component";
 
 const showCasesRu: string[] = [
+  "lis",
   "lidar",
   "llm-chatbot",
   "dermadex",
   "advanced-rd",
   "hoardernest",
-  "lis",
 ];
 
 export function Works() {

@@ -40,12 +40,7 @@ export const LIS: ICase = {
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
   textColor: "black",
-  technologies: [
-    TECHNOLOGIES.metamask,
-    TECHNOLOGIES.wagmi,
-    TECHNOLOGIES.typescript,
-    TECHNOLOGIES.react,
-  ],
+  technologies: [TECHNOLOGIES.react, TECHNOLOGIES.solidity, TECHNOLOGIES.node, TECHNOLOGIES.wagmi],
   thumbnail: {
     desktop: "/assets/videos/lis/1000_video.mp4",
     mob: "/assets/videos/lis/1080_video.mp4",

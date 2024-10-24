@@ -22,13 +22,13 @@ import { LIS } from "./cases/lis";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
+  LIS,
   LIDAR,
   UDBARA,
   FAIRY_TALE_AI,
   BVKS,
   DONOR,
   LLM_CHATBOT,
-  LIS,
   UNIVERSITY_CHATBOT,
   DERMADEX,
   FLATSPACE,

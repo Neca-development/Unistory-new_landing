@@ -236,7 +236,7 @@ export const TECHNOLOGIES: TechnologyType = {
     },
   },
   wagmi: {
-    name: "Stripe",
+    name: "Wagmi",
     icon: {
       dark: wagmiDarkIcon.src,
       light: wagmiIcon.src,
