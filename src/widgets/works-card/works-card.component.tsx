@@ -15,12 +15,13 @@ interface IWorksCardInterface {
 export function WorksCard(props: IWorksCardInterface) {
   const { work, additionalClassnames, isLargeImage } = props;
   const { locale } = useRouter();
+  const [width, setWidth] = useState<number>(1920);
 
   const cardTitle =
     typeof work?.title === "object" ? (work.title[locale || "ru"] as string) : work.title;
   const categories = work?.categories[locale || "ru"]?.join(", ");
-
-  const [width, setWidth] = useState<number>(0);
+  const thumbnailSrc = work?.thumbnail[width <= 640 ? "mob" : isLargeImage ? "desktop" : "mob"];
+  const isVideo = thumbnailSrc.split(".").pop() === "mp4";
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -35,14 +36,27 @@ export function WorksCard(props: IWorksCardInterface) {
       )}
       href={`/cases/${work?.id}`}
     >
-      <Image
-        src={work?.thumbnail[width <= 640 ? "mob" : isLargeImage ? "desktop" : "mob"]}
-        width={2880}
-        height={1060}
-        className="absolute top-0 left-0 -z-50 h-full w-full object-cover transition-all group-hover:scale-105"
-        alt={cardTitle}
-        quality={width <= 640 ? 100 : 75}
-      />
+      {isVideo ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 -z-50 h-full w-full object-cover transition-all group-hover:scale-105"
+        >
+          <source src={thumbnailSrc} type="video/mp4" />
+        </video>
+      ) : (
+        <Image
+          src={thumbnailSrc}
+          width={2880}
+          height={1060}
+          className="absolute top-0 left-0 -z-50 h-full w-full object-cover transition-all group-hover:scale-105"
+          alt={cardTitle}
+          quality={width <= 640 ? 100 : 75}
+        />
+      )}
+
       {/* <div className="flex items-center space-x-2">
         {work?.icons.map((icon, idx) => (
 						<CaseCategoryIcon key={idx} icon={icon} variant={work?.textColor} />
