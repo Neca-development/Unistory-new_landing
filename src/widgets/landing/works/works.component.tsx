@@ -1,5 +1,5 @@
 import { WorksRu, WorksEn } from "@shared/i18n";
-import { CASES } from "@shared/lib";
+import { CASES, HIDDEN_CASES_ID_EN, LANDING_CASES_ID_RU } from "@shared/lib";
 import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 import { ICase } from "@shared/lib/types";
 import { IconComponent } from "@shared/ui";
@@ -10,15 +10,6 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import clsx from "clsx";
 import { AllCasesButton } from "./all-cases-button.component";
-
-const showCasesRu: string[] = [
-  "lis",
-  "lidar",
-  "llm-chatbot",
-  "dermadex",
-  "advanced-rd",
-  "hoardernest",
-];
 
 export function Works() {
   const { locale } = useRouter();
@@ -43,7 +34,7 @@ export function Works() {
 
     if (locale === "ru") {
       const filtered = [];
-      for (const showId of showCasesRu) {
+      for (const showId of LANDING_CASES_ID_RU) {
         const item = CASES.find((item) => item.id === showId);
         if (item) {
           filtered.push(item);
@@ -53,8 +44,12 @@ export function Works() {
       return;
     }
 
-    setCases(CASES.slice(0, 7));
-  }, []);
+    if (locale === "en") {
+      const filtered = CASES.filter((item) => !HIDDEN_CASES_ID_EN.includes(item.id));
+      setCases(filtered.slice(0, 7));
+      return;
+    }
+  }, [locale, isMobile]);
 
   // function to get 2 cases more on click
   const getMoreCases = () => {

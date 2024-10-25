@@ -1,5 +1,5 @@
 import { CasesPageRu, CasesPageEn } from "@shared/i18n/cases";
-import { CASES } from "@shared/lib";
+import { CASES, HIDDEN_CASES_ID_EN } from "@shared/lib";
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
 import { Layout } from "@widgets/layout";
@@ -16,14 +16,14 @@ export function Cases() {
   const filteredCases = useMemo(() => {
     return CASES.filter((work) => {
       if (work.notDisplayInGrid) {
-        return false
+        return false;
       }
-      if (locale === 'en' && work.id === 'advanced-rd') {
-        return false
+      if (locale === "en" && HIDDEN_CASES_ID_EN.includes(work.id)) {
+        return false;
       }
-      return true
-    })
-  }, [locale])
+      return true;
+    });
+  }, [locale]);
 
   const langData = useMemo(() => {
     return locale === "ru" ? CasesPageRu : CasesPageEn;

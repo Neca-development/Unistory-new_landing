@@ -2,15 +2,22 @@ import { ICase } from "@shared/lib/types";
 import { TECHNOLOGIES } from "@shared/lib/constants/technologies.constats";
 import { TEAM } from "@shared/lib/constants/team";
 
-import lisAboutRu from "@public/assets/images/cases/lis/lis-01.jpg";
-import lisAboutEn from "@public/assets/images/cases/lis/lis-07.jpg";
+import lisPreviewRu from "@public/assets/images/cases/lis/lis-1000-preview.jpg";
+import lisAboutRu from "@public/assets/images/cases/lis/lis-001-ru.png";
+import lisAboutEn from "@public/assets/images/cases/lis/lis-001-en.png";
+import lisAboutRuMob from "@public/assets/images/cases/lis/lis-001-ru-m.png";
 import lisScenario from "@public/assets/images/cases/lis/lis-02.jpg";
+import lisScenarioMob from "@public/assets/images/cases/lis/lis-002-ru-m.jpg";
 import lisCharityRu from "@public/assets/images/cases/lis/lis-03.jpg";
 import lisCharityEn from "@public/assets/images/cases/lis/lis-08.jpg";
+import lisCharityRuMob from "@public/assets/images/cases/lis/lis-003-ru-m.jpg";
 import lisReportsRu from "@public/assets/images/cases/lis/lis-04.jpg";
 import lisReportsEn from "@public/assets/images/cases/lis/lis-09.jpg";
+import lisReportsRuMob from "@public/assets/images/cases/lis/lis-004-ru-m.jpg";
 import lisMath from "@public/assets/images/cases/lis/lis-05.jpg";
+import lisMathMob from "@public/assets/images/cases/lis/lis-005-ru-m.jpg";
 import lisSpeed from "@public/assets/images/cases/lis/lis-06.jpg";
+import lisSpeedMob from "@public/assets/images/cases/lis/lis-006-ru-m.jpg";
 
 export const LIS: ICase = {
   title: {
@@ -23,7 +30,6 @@ export const LIS: ICase = {
     ru: "Разработка веб-сервиса для стейкинга Ethereum с возможностями отчислений на благотворительность",
   },
   videoPreview: "/assets/videos/lis/1080_video.mp4",
-  isVideoPreviewAutoplay: true,
   tag: "web3",
   categories: {
     en: ["ETH Staking Service with Charitable Donations"],
@@ -39,16 +45,16 @@ export const LIS: ICase = {
   },
   showCategoriesOnPage: false,
   icons: ["monitor", "phone02"],
-  textColor: "black",
+  textColor: "white",
   technologies: [TECHNOLOGIES.react, TECHNOLOGIES.solidity, TECHNOLOGIES.node, TECHNOLOGIES.wagmi],
   thumbnail: {
-    desktop: "/assets/videos/lis/1000_video.mp4",
-    mob: "/assets/videos/lis/1080_video.mp4",
+    desktop: lisPreviewRu.src,
+    mob: lisPreviewRu.src,
   },
 
   heroBanner: {
     desktop: "/assets/videos/lis/2880_video.mp4",
-    mob: "/assets/videos/lis/1000_video.mp4",
+    mob: "/assets/videos/lis/1920_video.mp4",
   },
   description: {
     en: "Development of a web service for staking ETH. Ensuring the possibility to donate a percentage of staking rewards to global charitable foundations. Providing enthusiasts with a tool to help those in need and giving non-profit organizations a new source of funding.",
@@ -79,7 +85,7 @@ export const LIS: ICase = {
         },
         mob: {
           en: lisAboutEn.src,
-          ru: lisAboutRu.src,
+          ru: lisAboutRuMob.src,
         },
       },
     },
@@ -98,7 +104,7 @@ export const LIS: ICase = {
         {
           text: {
             en: "For example, we can enter the platform, stake 3 ETH, and allocate a percentage of the earnings to a non-profit organization. This can be any amount from 1 to 100 percent of our earnings.",
-            ru: "Например, мы можем зайти на платформу, застейкать 3 ETH, и перечислять процент суммы, которую зарабатываем, в НКО. Это может быть любая сумма от 1 до 100 процентов нашего заработка.",
+            ru: "Например, мы можем зайти на платформу, застейкать 3 ETH, и перечислять процент суммы, которую зарабатываем, в благотворительные организации. Это может быть любая сумма от 1 до 100 процентов нашего заработка.",
           },
         },
       ],
@@ -108,8 +114,8 @@ export const LIS: ICase = {
           ru: lisScenario.src,
         },
         mob: {
-          en: lisScenario.src,
-          ru: lisScenario.src,
+          en: lisScenarioMob.src,
+          ru: lisScenarioMob.src,
         },
       },
     },
@@ -139,7 +145,7 @@ export const LIS: ICase = {
         },
         mob: {
           en: lisCharityEn.src,
-          ru: lisCharityRu.src,
+          ru: lisCharityRuMob.src,
         },
       },
     },
@@ -175,7 +181,7 @@ export const LIS: ICase = {
         },
         mob: {
           en: lisReportsEn.src,
-          ru: lisReportsRu.src,
+          ru: lisReportsRuMob.src,
         },
       },
     },
@@ -207,7 +213,7 @@ export const LIS: ICase = {
         {
           text: {
             en: "The formulas utilize numerous indicators: total ETH amount of the user, amount of staked ETH, share of the non-profit organization, share of the platform, share of the user, overall staking percentage.",
-            ru: "В формулах используется множество показателей: общая сумма ETH пользователя, сумма застейканного ETH, доля НКО, доля платформы, доля пользователя, общий процент со стейкинга.",
+            ru: "В формулах используется множество показателей: общая сумма ETH пользователя, сумма застейканного ETH, доля благотворительных организаций, доля платформы, доля пользователя, общий процент со стейкинга.",
           },
         },
       ],
@@ -217,8 +223,8 @@ export const LIS: ICase = {
           ru: lisMath.src,
         },
         mob: {
-          en: lisMath.src,
-          ru: lisMath.src,
+          en: lisMathMob.src,
+          ru: lisMathMob.src,
         },
       },
     },
@@ -248,8 +254,8 @@ export const LIS: ICase = {
           ru: lisSpeed.src,
         },
         mob: {
-          en: lisSpeed.src,
-          ru: lisSpeed.src,
+          en: lisSpeedMob.src,
+          ru: lisSpeedMob.src,
         },
       },
     },

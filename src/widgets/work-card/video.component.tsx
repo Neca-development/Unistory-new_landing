@@ -3,25 +3,20 @@ import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook"
 
 interface VideoComponentProps {
   videoSrc: string;
-  autoplay?: boolean;
 }
 
-const Video: React.FC<VideoComponentProps> = ({ videoSrc, autoplay = false }) => {
+const Video: React.FC<VideoComponentProps> = ({ videoSrc }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isMobile = useDetectDeviceType(647);
 
   const handleMouseEnter = () => {
-    if (autoplay) return;
-
     if (videoRef.current) {
       videoRef.current.play();
     }
   };
 
   const handleMouseLeave = () => {
-    if (autoplay) return;
-
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
@@ -85,7 +80,6 @@ const Video: React.FC<VideoComponentProps> = ({ videoSrc, autoplay = false }) =>
         loop
         playsInline
         preload="auto"
-        autoPlay={autoplay}
       />
     </div>
   );

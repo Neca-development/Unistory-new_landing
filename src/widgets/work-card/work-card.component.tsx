@@ -21,7 +21,7 @@ export default function WorkCard({ work, className }: WorkCardProps) {
           <div className="text-sm leading-5 rounded-lg text-[white] px-3 py-1 bg-tag-background absolute left-3 top-3">
             {work.tag}
           </div>
-          <Video videoSrc={work.videoPreview || ""} autoplay={work.isVideoPreviewAutoplay} />
+          <Video videoSrc={work.videoPreview || ""} />
         </div>
         <div className="mt-5 group">
           <p className="leading-8 text-2xl font-bold group-hover:text-case-hover">{cardTitle}</p>
