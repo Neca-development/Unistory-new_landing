@@ -1,22 +1,20 @@
 import { WorksRu, WorksEn } from "@shared/i18n";
 import { CASES, HIDDEN_CASES_ID_EN, LANDING_CASES_ID_RU } from "@shared/lib";
-import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 import { ICase } from "@shared/lib/types";
 import { IconComponent } from "@shared/ui";
 import { WorksCard } from "@widgets/works-card";
 import WorkCard from "@widgets/work-card/work-card.component";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import clsx from "clsx";
 import { AllCasesButton } from "./all-cases-button.component";
 
 export function Works() {
   const { locale } = useRouter();
-  const [cases, setCases] = React.useState<ICase[]>([]);
-  const isMobile = useDetectDeviceType(647);
+  const [cases, setCases] = useState<ICase[]>([]);
 
-  const text = React.useMemo(() => {
+  const text = useMemo(() => {
     if (locale === "ru") {
       return WorksRu;
     }
@@ -24,36 +22,42 @@ export function Works() {
     return WorksEn;
   }, [locale]);
 
-  useEffect(() => {
-    if (!window) return;
-
-    if (isMobile) {
-      setCases(CASES.slice(0, 3));
-      return;
-    }
-
-    if (locale === "ru") {
-      const filtered = [];
-      for (const showId of LANDING_CASES_ID_RU) {
-        const item = CASES.find((item) => item.id === showId);
-        if (item) {
-          filtered.push(item);
-        }
+  const filterRuCases = useCallback(() => {
+    const filtered = [];
+    for (const showId of LANDING_CASES_ID_RU) {
+      const item = CASES.find((item) => item.id === showId);
+      if (item) {
+        filtered.push(item);
       }
+    }
+    return filtered;
+  }, []);
+
+  const filterEnCases = useCallback(() => {
+    const filtered = CASES.filter((item) => !HIDDEN_CASES_ID_EN.includes(item.id));
+    return filtered;
+  }, []);
+
+  useEffect(() => {
+    if (locale === "ru") {
+      const filtered = filterRuCases();
       setCases(filtered);
       return;
     }
 
     if (locale === "en") {
-      const filtered = CASES.filter((item) => !HIDDEN_CASES_ID_EN.includes(item.id));
-      setCases(filtered.slice(0, 7));
+      const filtered = filterEnCases().slice(0, 7);
+      setCases(filtered);
       return;
     }
-  }, [locale, isMobile]);
+  }, [locale]);
 
   // function to get 2 cases more on click
   const getMoreCases = () => {
-    setCases(CASES.slice(0, cases.length + 2));
+    if (locale === "en") {
+      const filtered = filterEnCases().slice(0, cases.length + 2);
+      setCases(filtered);
+    }
   };
 
   return (
