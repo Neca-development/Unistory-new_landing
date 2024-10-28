@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { useDetectDeviceType } from '@shared/lib/hooks/useDetectDeviceType.hook';
-
+import React, { useRef, useEffect } from "react";
+import { useDetectDeviceType } from "@shared/lib/hooks/useDetectDeviceType.hook";
 
 interface VideoComponentProps {
   videoSrc: string;
@@ -13,22 +12,21 @@ const Video: React.FC<VideoComponentProps> = ({ videoSrc }) => {
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
-      videoRef.current.play()
+      videoRef.current.play();
     }
-  }
+  };
 
   const handleMouseLeave = () => {
     if (videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.currentTime = 0
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
     }
-  }
-
+  };
 
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: "0px",
       threshold: 0.5,
     };
 
@@ -37,40 +35,39 @@ const Video: React.FC<VideoComponentProps> = ({ videoSrc }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (videoRef.current) {
-              videoRef.current.play().catch(error => {
-                console.error("Autoplay was prevented:", error)
+              videoRef.current.play().catch((error) => {
+                console.error("Autoplay was prevented:", error);
               });
             }
           } else {
             if (videoRef.current) {
               videoRef.current.pause();
-              videoRef.current.currentTime = 0
+              videoRef.current.currentTime = 0;
             }
           }
         });
-      }, options)
-  
+      }, options);
+
       if (containerRef.current) {
-        observer.observe(containerRef.current)
+        observer.observe(containerRef.current);
       }
-  
+
       return () => {
         if (containerRef.current) {
-          observer.unobserve(containerRef.current)
+          observer.unobserve(containerRef.current);
         }
-      }
+      };
     }
 
     return () => {};
-  }, [isMobile])
-
+  }, [isMobile]);
 
   const handleVideoEnd = () => {
     if (videoRef.current) {
-      videoRef.current.currentTime = 0
-      videoRef.current.play()
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
     }
-  }
+  };
 
   return (
     <div ref={containerRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

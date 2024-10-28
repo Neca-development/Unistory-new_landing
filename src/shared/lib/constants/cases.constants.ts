@@ -18,9 +18,11 @@ import { BVKS } from "./cases/bvks";
 import { FAIRY_TALE_AI } from "./cases/fairy-tale-ai";
 import { UDBARA } from "./cases/udbara";
 import { LIDAR } from "@shared/lib/constants/cases/lidar";
+import { LIS } from "./cases/lis";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
+  LIS,
   LIDAR,
   UDBARA,
   FAIRY_TALE_AI,
@@ -42,3 +44,14 @@ export const CASES: ICase[] = [
   AI_CHATBOT,
   // BIT_GRADUATE,
 ];
+
+export const LANDING_CASES_ID_RU: string[] = [
+  LIS.id,
+  LIDAR.id,
+  LLM_CHATBOT.id,
+  DERMADEX.id,
+  ADVANCED_RD.id,
+  HOARDER_NEST.id,
+];
+
+export const HIDDEN_CASES_ID_EN: string[] = [LIS.id, ADVANCED_RD.id];
