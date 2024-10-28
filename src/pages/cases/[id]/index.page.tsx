@@ -16,6 +16,7 @@ import { OtherCases } from "./ui/other-cases.component";
 import { CaseReview } from "./ui/review.component";
 import { Stack } from "./ui/stack.component";
 import { Team } from "./ui/team.component";
+import { HIDDEN_CASES_ID_EN } from "@shared/lib";
 
 const getMetaTitle = (title: string | ILang<string>, titleLocale: "en" | "ru"): string => {
   if (typeof title !== "string") {
@@ -28,12 +29,18 @@ const getMetaTitle = (title: string | ILang<string>, titleLocale: "en" | "ru"): 
 
 export function Case(props: { caseData: ICase; otherCases: ICase[] }) {
   const { caseData, otherCases } = props;
-
   const { locale } = useRouter();
 
   const langData = useMemo(() => {
     return locale === "ru" ? SingleCaseRu : SingleCaseEn;
   }, [locale]);
+
+  const filteredOtherCases = useMemo(() => {
+    if (locale === "en") {
+      return otherCases.filter((item) => !HIDDEN_CASES_ID_EN.includes(item.id));
+    }
+    return otherCases;
+  }, [otherCases]);
 
   const renderHero = () => {
     switch (caseData.customHero) {
@@ -70,7 +77,7 @@ export function Case(props: { caseData: ICase; otherCases: ICase[] }) {
         {caseData.review && <CaseReview data={caseData} />}
         {caseData.team && <Team title={langData.members} data={caseData.team} />}
         {!caseData.disableOtherProjects && (
-          <OtherCases title={langData.other} otherCases={otherCases} />
+          <OtherCases title={langData.other} otherCases={filteredOtherCases} />
         )}
         <Connect />
       </Layout.Main>

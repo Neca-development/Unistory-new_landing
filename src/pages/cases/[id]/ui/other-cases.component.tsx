@@ -1,10 +1,10 @@
-import type { ICase } from '@shared/lib/types'
+import type { ICase } from "@shared/lib/types";
 // eslint-disable-next-line boundaries/element-types
-import { WorksCard } from '@widgets/works-card'
+import { WorksCard } from "@widgets/works-card";
 
 interface IProperties {
-  otherCases: ICase[]
-  title: string
+  otherCases: ICase[];
+  title: string;
 }
 
 export function OtherCases({ title, otherCases }: IProperties) {
@@ -18,10 +18,10 @@ export function OtherCases({ title, otherCases }: IProperties) {
             key={c.id}
             work={c}
             isLargeImage={index == 0}
-            additionalClassnames="[&:nth-child(n+3)]:hidden sm:[&:first-child]:col-span-2 sm:[&:first-child]:pt-[47.3%]"
+            additionalClassnames="!h-full [&:nth-child(n+3)]:hidden sm:[&:first-child]:col-span-2 sm:[&:first-child]:pt-[47.3%]"
           />
         ))}
       </div>
     </section>
-  )
+  );
 }
