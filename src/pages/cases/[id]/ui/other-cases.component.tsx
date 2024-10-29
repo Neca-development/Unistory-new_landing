@@ -18,7 +18,7 @@ export function OtherCases({ title, otherCases }: IProperties) {
             key={c.id}
             work={c}
             isLargeImage={index == 0}
-            additionalClassnames="!h-full [&:nth-child(n+3)]:hidden sm:[&:first-child]:col-span-2 sm:[&:first-child]:pt-[47.3%]"
+            additionalClassnames="[&:nth-child(n+3)]:hidden sm:[&:first-child]:col-span-2 sm:[&:first-child]:pt-[47.3%]"
           />
         ))}
       </div>
