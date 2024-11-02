@@ -6,7 +6,7 @@ import React from "react";
 import GenerateBookHero from "@widgets/landing/generate-book/hero.component";
 import SelectionComponent from "@widgets/landing/generate-book/selection.component";
 
-const TestPage = () => {
+const GenerateBook = () => {
   return (
     <Layout
       Meta={
@@ -33,4 +33,4 @@ const TestPage = () => {
   );
 };
 
-export default TestPage;
+export default GenerateBook;

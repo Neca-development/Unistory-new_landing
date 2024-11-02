@@ -5,7 +5,7 @@ import GenerateBookHero from "@widgets/landing/generate-book/hero.component";
 import { Layout } from "@widgets/layout";
 import React from "react";
 
-const IndexPage = () => {
+const GeneratedBook = () => {
   return (
     <Layout
       Meta={
@@ -32,4 +32,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default GeneratedBook;
