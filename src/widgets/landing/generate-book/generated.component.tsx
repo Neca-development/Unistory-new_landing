@@ -22,20 +22,20 @@ const GeneratedComponent = () => {
             background: "radial-gradient(circle at 0% 0%, rgba(255, 72, 0, 0.5), transparent 60%)",
           }}
         >
-          <h1 className="text-center py-6 text-2xl  font-bold mb-6">
+          <h1 className="text-center py-12 text-3xl font-bold mb-6">
             {langData.GENERATED.heading}
           </h1>
           <div className="flex flex-col md:flex-row items-start gap-4">
-            <div className="w-full md:w-1/2 text-base leading-relaxed text-left">
+            <div className="w-full md:w-1/2 text-lg text-bold leading-relaxed text-left">
               {langData.GENERATED.sampleText}
             </div>
             <div className="w-full md:w-1/2">
               <Image
                 src={generatedImage}
                 alt="Generated image"
-                width={500}
-                height={500}
-                className="rounded-lg"
+                width={600}
+                height={600}
+                className="rounded-xl"
               />
             </div>
           </div>
