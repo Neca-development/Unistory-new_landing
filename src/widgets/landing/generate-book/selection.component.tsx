@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { StaticImageData } from "next/image";
 import { useState } from "react";
 import { GenerateBookTextRu } from "@shared/i18n/generate-book/ru.text";
+import BookCheckbox from "./generated-book-checkbox/checkbox.component";
 
 const SelectionComponent = () => {
   const [selectedPictureStyle, setSelectedPictureStyle] = useState<number | null>(null);
@@ -122,13 +123,12 @@ const SelectionComponent = () => {
                   >
                     {style.title}
                   </div>
-                  <input
-                    type="checkbox"
-                    checked={selectedPictureStyle === index}
-                    onClick={() =>
+
+                  <BookCheckbox
+                    isChecked={selectedPictureStyle === index}
+                    onToggle={() =>
                       setSelectedPictureStyle(selectedPictureStyle === index ? null : index)
                     }
-                    className=" absolute w-5 h-5 bg-light-bg rounded-xl top-1 right-1 pointer-events-none"
                   />
                 </div>
               )
