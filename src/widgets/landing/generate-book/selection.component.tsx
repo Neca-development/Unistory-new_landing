@@ -75,11 +75,10 @@ const SelectionComponent = () => {
                     {genre.title}
                   </div>
 
-                  <input
-                    type="checkbox"
-                    checked={selectedGenre === index}
-                    onClick={() => setSelectedGenre(selectedGenre === index ? null : index)}
-                    className=" absolute w-5 h-5 bg-light-bg rounded-xl top-1 right-1 pointer-events-none"
+                  <BookCheckbox
+                    className="absolute bg-light-bg top-2 right-2 pointer-events-none"
+                    isChecked={selectedGenre === index}
+                    onToggle={() => setSelectedGenre(selectedGenre === index ? null : index)}
                   />
                 </div>
               )
@@ -125,6 +124,7 @@ const SelectionComponent = () => {
                   </div>
 
                   <BookCheckbox
+                    className="absolute bg-light-bg top-2 right-2 pointer-events-none"
                     isChecked={selectedPictureStyle === index}
                     onToggle={() =>
                       setSelectedPictureStyle(selectedPictureStyle === index ? null : index)
