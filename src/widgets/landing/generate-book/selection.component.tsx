@@ -41,10 +41,10 @@ const SelectionComponent = () => {
         </div>
       ))}
 
-      <div className="bg-light-bg-accent  dark:bg-dark-bg-secondary p-4 py-8 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
-        <div className="flex justify-around items-center space-x-8">
-          <div className="text-white">{langData.GENRE_SELECTION}</div>
-          <div className="flex  justify-between gap-6 flex-wrap">
+      <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
+        <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-around md:space-y-0 md:items-center md:space-x-8">
+          <div className="text-white text-center md:text-left">{langData.GENRE_SELECTION}</div>
+          <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6">
             {langData.GENRE_STYLES.map(
               (genre: { title: string; image: string | StaticImageData }, index: number) => (
                 <div
@@ -88,10 +88,12 @@ const SelectionComponent = () => {
       </div>
 
       <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
-        <div className="flex justify-evenly  items-center space-x-8">
-          <div className="text-white">{langData.PICTURE_STYLE_SELECTION}</div>
+        <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-evenly md:space-y-0 md:items-center md:space-x-8">
+          <div className="text-white text-center md:text-left">
+            {langData.PICTURE_STYLE_SELECTION}
+          </div>
 
-          <div className="flex justify-between gap-6 flex-wrap">
+          <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6">
             {langData.PICTURE_STYLES.map(
               (style: { title: string; image: string | StaticImageData }, index: number) => (
                 <div
@@ -99,7 +101,7 @@ const SelectionComponent = () => {
                   className={clsx(
                     "group relative rounded-2xl overflow-hidden w-32 h-32 cursor-pointer transition-transform-shadow duration-500",
                     {
-                      "shadow-lg -translate-y-2  shadow-summer": selectedPictureStyle === index,
+                      "shadow-lg -translate-y-2 shadow-summer": selectedPictureStyle === index,
                     }
                   )}
                   onClick={() =>
