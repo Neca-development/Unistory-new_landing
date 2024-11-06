@@ -5,9 +5,9 @@ import clsx from "clsx";
 import { StaticImageData } from "next/image";
 import { useState } from "react";
 import { GenerateBookTextRu } from "@shared/i18n/generate-book/ru.text";
-import BookCheckbox from "./generated-book-checkbox/checkbox.component";
+import { BookCheckbox } from "./ui";
 
-const SelectionComponent = () => {
+export const SelectionComponent = () => {
   const [selectedPictureStyle, setSelectedPictureStyle] = useState<number | null>(null);
   const [selectedGenre, setSelectedGenre] = useState<number | null>(null);
 
@@ -43,8 +43,8 @@ const SelectionComponent = () => {
 
       <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
         <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-around md:space-y-0 md:items-center md:space-x-8">
-          <div className="text-white text-center md:text-left">{langData.GENRE_SELECTION}</div>
-          <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6">
+          <div className="text-white  text-center md:text-left">{langData.GENRE_SELECTION}</div>
+          <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6 ">
             {langData.GENRE_STYLES.map(
               (genre: { title: string; image: string | StaticImageData }, index: number) => (
                 <div
@@ -76,7 +76,7 @@ const SelectionComponent = () => {
                   </div>
 
                   <BookCheckbox
-                    className="absolute bg-light-bg top-2 right-2 pointer-events-none"
+                    className="absolute bg-light-bg  top-2 right-2 pointer-events-none"
                     isChecked={selectedGenre === index}
                     onToggle={() => setSelectedGenre(selectedGenre === index ? null : index)}
                   />
@@ -153,5 +153,3 @@ const SelectionComponent = () => {
     </div>
   );
 };
-
-export default SelectionComponent;

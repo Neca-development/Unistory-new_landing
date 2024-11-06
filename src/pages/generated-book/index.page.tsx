@@ -1,7 +1,7 @@
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
-import GeneratedComponent from "@widgets/landing/generate-book/generated.component";
-import GenerateBookHero from "@widgets/landing/generate-book/hero.component";
+import { GeneratedComponent } from "@widgets/landing/generate-book/generated.component";
+import { GenerateBookHero } from "@widgets/landing/generate-book/hero.component";
 import { Layout } from "@widgets/layout";
 import React from "react";
 

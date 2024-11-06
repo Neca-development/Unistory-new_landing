@@ -4,10 +4,10 @@ import styles from "./checkbox.module.scss";
 interface BookCheckboxProps {
   isChecked: boolean;
   onToggle: () => void;
-  className?: string; // Добавляем className как необязательное свойство
+  className?: string;
 }
 
-const BookCheckbox: React.FC<BookCheckboxProps> = ({ isChecked, onToggle, className }) => {
+export const BookCheckbox: React.FC<BookCheckboxProps> = ({ isChecked, onToggle, className }) => {
   return (
     <label className={`${styles.wrapper} ${className || ""}`}>
       <input type="checkbox" checked={isChecked} onChange={onToggle} className={styles.checkbox} />
@@ -15,5 +15,3 @@ const BookCheckbox: React.FC<BookCheckboxProps> = ({ isChecked, onToggle, classN
     </label>
   );
 };
-
-export default BookCheckbox;

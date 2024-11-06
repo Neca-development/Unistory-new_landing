@@ -3,8 +3,8 @@ import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
 import React from "react";
 
-import GenerateBookHero from "@widgets/landing/generate-book/hero.component";
-import SelectionComponent from "@widgets/landing/generate-book/selection.component";
+import { GenerateBookHero } from "@widgets/landing/generate-book/hero.component";
+import { SelectionComponent } from "@widgets/landing/generate-book/selection.component";
 
 const GenerateBook = () => {
   return (

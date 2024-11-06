@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import React, { useMemo } from "react";
 import StarComponent from "../hero/star.component";
 
-const GenerateBookHero = () => {
+export const GenerateBookHero = () => {
   const { locale } = useRouter();
 
   const langData = useMemo(() => {
@@ -27,5 +27,3 @@ const GenerateBookHero = () => {
     </div>
   );
 };
-
-export default GenerateBookHero;

@@ -6,7 +6,7 @@ import { useMemo } from "react";
 
 import generatedImage from "@public/assets/images/generate-book/generated-image.png";
 
-const GeneratedComponent = () => {
+export const GeneratedComponent = () => {
   const { locale } = useRouter();
 
   const langData: GenerateBookText = useMemo(() => {
@@ -17,19 +17,20 @@ const GeneratedComponent = () => {
     <div className="container p-6  px-4text-white rounded-3xl shadow-lg">
       <div className="relative rounded-3xl bg-light-bg-accent dark:bg-dark-bg-secondary  border border-[#EDEAE8] dark:border-[#353535] overflow-hidden">
         <div
-          className="rounded-3xl  bg-light-bg-accent dark:bg-dark-bg-secondary p-6"
+          className="rounded-3xl bg-light-bg-accent dark:bg-dark-bg-secondary p-6"
           style={{
-            background: "radial-gradient(circle at 0% 0%, rgba(255, 72, 0, 0.5), transparent 60%)",
+            background:
+              "radial-gradient(ellipse 75% 340% at 0% 20%, rgba(255, 72, 0, 0.5), transparent 27%)",
           }}
         >
-          <h1 className="text-center py-12 text-3xl font-bold mb-6">
+          <h1 className="text-center sm:py-2 py-12 text-3xl font-bold mb-6">
             {langData.GENERATED.heading}
           </h1>
           <div className="flex flex-col md:flex-row items-start gap-4">
-            <div className="w-full md:w-1/2 text-lg text-bold leading-relaxed text-left">
+            <div className="w-full md:w-1/2 text-lg  text-bold leading-relaxed text-left">
               {langData.GENERATED.sampleText}
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full py-4 md:w-1/2">
               <Image
                 src={generatedImage}
                 alt="Generated image"
@@ -52,5 +53,3 @@ const GeneratedComponent = () => {
     </div>
   );
 };
-
-export default GeneratedComponent;
