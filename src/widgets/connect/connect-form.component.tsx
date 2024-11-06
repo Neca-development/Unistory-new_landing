@@ -226,7 +226,7 @@ export default function ConnectForm() {
           </label>
           <div className="py-4 text-xl t-xs:text-[0.875rem]">
             <p>{data.contacts.label}</p>
-            <div className="mt-4 grid grid-cols-4 gap-2 t-xs:inline-grid t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5 ">
+            <div className="mt-4 grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-2  t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5">
               {contactMethods.map((method, idx) => (
                 <Checkbox
                   onChange={() => handleCheckboxChange(method.type)}
