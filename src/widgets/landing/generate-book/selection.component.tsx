@@ -33,6 +33,7 @@ export const SelectionComponent = () => {
 
   const handleGenerateClick = async (data: inputType) => {
     try {
+      setLoading(true);
       const { character, events, name, secondary } = data;
 
       const body: IBookDto = {
