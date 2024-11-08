@@ -32,36 +32,21 @@ export const SelectionComponent = () => {
   type inputType = typeof langData.INPUT;
 
   const handleGenerateClick = async (data: inputType) => {
-    // const { character, events, name, secondary } = data;
-
-    // const body: IBookDto = {
-    //   chapterCount: 1,
-    //   title: name,
-    //   genre: selectedGenre ? selectedGenre : GenreEnum.ADVENTURE,
-    //   keyEvents: events.split(","),
-    //   mainCharacter: character,
-    //   secondaryCharater: secondary,
-    //   theme: ThemesEnum.FOREST,
-    //   stylistic: StylisticsEnum.ILLUSTRATION,
-    // };
-
     try {
-      setLoading(true);
-      const anotherBody = {
-        mainCharacter: "Josh",
-        description: "Boy collects mushrooms",
-        title: "Boy in forest",
-        summary: "Boy collect mushrooms",
-        keyEvents: ["happines", "boy"],
-        secondaryCharater: "witch",
-        location: "forest",
-        genre: GenreEnum.ADVENTURE,
-        stylistic: StylisticsEnum.ILLUSTRATION,
-        theme: ThemesEnum.FOREST,
+      const { character, events, name, secondary } = data;
+
+      const body: IBookDto = {
         chapterCount: 1,
+        title: name,
+        genre: selectedGenre ? selectedGenre : GenreEnum.ADVENTURE,
+        keyEvents: events.split(","),
+        mainCharacter: character,
+        secondaryCharater: secondary,
+        theme: ThemesEnum.FOREST,
+        stylistic: StylisticsEnum.ILLUSTRATION,
       };
 
-      const res = await createBook(anotherBody);
+      const res = await createBook(body);
 
       setBookStore(res.data);
       push(`/generated-book`);
