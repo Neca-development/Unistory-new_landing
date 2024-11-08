@@ -8,6 +8,7 @@ import styleManga from "@public/assets/images/generate-book/style-manga.png";
 import styleRealistic from "@public/assets/images/generate-book/style-realistic.png";
 import generatedImage from "@public/assets/images/generate-book/generated-image.png";
 import { GenerateBookText } from "./en.text";
+import { GenreEnum, StylisticsEnum } from "@shared/lib/enums";
 
 export const GenerateBookTextRu: GenerateBookText = {
   HERO: {
@@ -20,6 +21,7 @@ export const GenerateBookTextRu: GenerateBookText = {
     character: "Главный герой",
     name: "Назовите вашу сказку",
     events: "Какие события должны произойти в сказке?",
+    description: "Какое описание у сказки?",
     secondary: "Второстепенный герой",
     location: "Местоположение",
   },
@@ -29,17 +31,17 @@ export const GenerateBookTextRu: GenerateBookText = {
   GENERATE_BUTTON: "Сгенерировать сказку",
 
   GENRE_STYLES: [
-    { title: "Приключения", image: genreAdventure },
-    { title: "Комедия", image: genreComedy },
-    { title: "Детектив", image: genreDetective },
-    { title: "Фантастика", image: genreFiction },
+    { title: "Приключения", value: GenreEnum.ADVENTURE, image: genreAdventure },
+    { title: "Комедия", value: GenreEnum.COMEDY, image: genreComedy },
+    { title: "Детектив", value: GenreEnum.DETECTIVE, image: genreDetective },
+    { title: "Фантастика", value: GenreEnum.FICTION, image: genreFiction },
   ],
 
   PICTURE_STYLES: [
-    { title: "Реализм", image: styleRealistic },
-    { title: "Комиксы", image: styleComics },
-    { title: "Манга", image: styleManga },
-    { title: "Иллюстрация", image: styleIllustration },
+    { title: "Реализм", value: StylisticsEnum.REALISTIC, image: styleRealistic },
+    { title: "Комиксы", value: StylisticsEnum.CARTOONISH, image: styleComics },
+    { title: "Манга", value: StylisticsEnum.CARTOONISH, image: styleManga },
+    { title: "Иллюстрация", value: StylisticsEnum.ILLUSTRATION, image: styleIllustration },
   ],
 
   GENERATED: {

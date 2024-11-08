@@ -8,6 +8,7 @@ import styleIllustration from "@public/assets/images/generate-book/style-illustr
 import styleManga from "@public/assets/images/generate-book/style-manga.png";
 import styleRealistic from "@public/assets/images/generate-book/style-realistic.png";
 import generatedImage from "@public/assets/images/generate-book/generated-image.png";
+import { GenreEnum, StylisticsEnum } from "@shared/lib/enums";
 
 interface InputText {
   character: string;
@@ -15,10 +16,12 @@ interface InputText {
   events: string;
   secondary: string;
   location: string;
+  description: string;
 }
 
-interface PictureStyle {
+interface PictureStyle<T> {
   title: string;
+  value: T;
   image: StaticImageData;
 }
 
@@ -40,8 +43,8 @@ export interface GenerateBookText {
   GENRE_SELECTION: string;
   PICTURE_STYLE_SELECTION: string;
   GENERATE_BUTTON: string;
-  GENRE_STYLES: PictureStyle[];
-  PICTURE_STYLES: PictureStyle[];
+  GENRE_STYLES: PictureStyle<GenreEnum>[];
+  PICTURE_STYLES: PictureStyle<StylisticsEnum>[];
   GENERATED: GeneratedSection;
 }
 
@@ -58,6 +61,7 @@ export const GenerateBookTextEn: GenerateBookText = {
     events: "What events should be in the fairy tale?",
     secondary: "Secondary character",
     location: "Location",
+    description: "Description",
   },
 
   GENRE_SELECTION: "Choose genre of the fairy tale",
@@ -65,17 +69,17 @@ export const GenerateBookTextEn: GenerateBookText = {
   GENERATE_BUTTON: "Generate a fairy tale",
 
   GENRE_STYLES: [
-    { title: "Adventure", image: genreAdventure },
-    { title: "Comedy", image: genreComedy },
-    { title: "Detective", image: genreDetective },
-    { title: "Fiction", image: genreFiction },
+    { title: "Adventure", value: GenreEnum.ADVENTURE, image: genreAdventure },
+    { title: "Comedy", value: GenreEnum.COMEDY, image: genreComedy },
+    { title: "Detective", value: GenreEnum.DETECTIVE, image: genreDetective },
+    { title: "Fiction", value: GenreEnum.FICTION, image: genreFiction },
   ],
 
   PICTURE_STYLES: [
-    { title: "Realistic", image: styleRealistic },
-    { title: "Comics", image: styleComics },
-    { title: "Manga", image: styleManga },
-    { title: "Illustration", image: styleIllustration },
+    { title: "Realistic", value: StylisticsEnum.REALISTIC, image: styleRealistic },
+    { title: "Comics", value: StylisticsEnum.CARTOONISH, image: styleComics },
+    { title: "Manga", value: StylisticsEnum.CARTOONISH, image: styleManga },
+    { title: "Illustration", value: StylisticsEnum.ILLUSTRATION, image: styleIllustration },
   ],
 
   GENERATED: {

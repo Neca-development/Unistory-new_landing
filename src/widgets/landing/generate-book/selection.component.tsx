@@ -6,150 +6,196 @@ import { StaticImageData } from "next/image";
 import { useState } from "react";
 import { GenerateBookTextRu } from "@shared/i18n/generate-book/ru.text";
 import { BookCheckbox } from "./ui";
+import { useBookStore } from "@shared/lib/store/book/book.store";
+import { createBook } from "@shared/api/controllers/createBook";
+import { useForm } from "react-hook-form";
+import { ControlledInput } from "@shared/ui";
+import { IBookDto } from "@shared/lib/types";
+import { GenreEnum, StylisticsEnum, ThemesEnum } from "@shared/lib/enums";
 
 export const SelectionComponent = () => {
   const [selectedPictureStyle, setSelectedPictureStyle] = useState<number | null>(null);
-  const [selectedGenre, setSelectedGenre] = useState<number | null>(null);
+  const [selectedGenre, setSelectedGenre] = useState<GenreEnum | null>(null);
+  const [isLoading, setLoading] = useState<boolean>(false);
 
-  const { locale } = useRouter();
+  const { locale, push } = useRouter();
+  const { setBookStore } = useBookStore();
 
-  const handleGenerateClick = () => {
-    console.log("Запрос отправлен (заглушка)");
-  };
+  const { handleSubmit, control } = useForm<inputType>({
+    mode: "onSubmit",
+  });
 
   const langData: GenerateBookText = useMemo(() => {
     return locale === "ru" ? GenerateBookTextRu : GenerateBookTextEn;
   }, [locale]);
 
+  type inputType = typeof langData.INPUT;
+
+  const handleGenerateClick = async (data: inputType) => {
+    // const { character, events, name, secondary } = data;
+
+    // const body: IBookDto = {
+    //   chapterCount: 1,
+    //   title: name,
+    //   genre: selectedGenre ? selectedGenre : GenreEnum.ADVENTURE,
+    //   keyEvents: events.split(","),
+    //   mainCharacter: character,
+    //   secondaryCharater: secondary,
+    //   theme: ThemesEnum.FOREST,
+    //   stylistic: StylisticsEnum.ILLUSTRATION,
+    // };
+
+    try {
+      setLoading(true);
+      const anotherBody = {
+        mainCharacter: "Josh",
+        description: "Boy collects mushrooms",
+        title: "Boy in forest",
+        summary: "Boy collect mushrooms",
+        keyEvents: ["happines", "boy"],
+        secondaryCharater: "witch",
+        location: "forest",
+        genre: GenreEnum.ADVENTURE,
+        stylistic: StylisticsEnum.ILLUSTRATION,
+        theme: ThemesEnum.FOREST,
+        chapterCount: 1,
+      };
+
+      const res = await createBook(anotherBody);
+
+      setBookStore(res.data);
+      push(`/generated-book`);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
-    <div className="container sm:py-4 py-9 grid gap-0 md:gap-6 md:grid-cols-2 md:py-16">
-      {(Object.keys(langData.INPUT) as (keyof typeof langData.INPUT)[]).map((field) => (
-        <div
-          key={field}
-          className={clsx(
-            "bg-light-bg-accent dark:bg-dark-bg-secondary my-4 p-4 border border-[#EDEAE8] dark:border-[#353535] rounded-3xl text-2xl md:p-8 flex items-center justify-between",
-            {
-              "md:col-span-2": field === "events",
-            }
-          )}
-        >
-          <span className="text-2xl md:mr-4">{langData.INPUT[field]}</span>
-          <textarea
-            placeholder=""
-            className="bg-[inherit] w-full max-w-[60%] outline-none h-8 resize-none border-b-2 border-[#EDEAE8] dark:border-[#717171] overflow-hidden"
-          />
-        </div>
-      ))}
-
-      <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
-        <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-around md:space-y-0 md:items-center md:space-x-8">
-          <div className="text-white  text-center md:text-left">{langData.GENRE_SELECTION}</div>
-          <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6 ">
-            {langData.GENRE_STYLES.map(
-              (genre: { title: string; image: string | StaticImageData }, index: number) => (
-                <div
-                  key={index}
-                  className={clsx(
-                    "group relative rounded-2xl overflow-hidden w-32 h-32 cursor-pointer transition-transform-shadow duration-500",
-                    {
-                      "shadow-lg -translate-y-2  shadow-summer": selectedGenre === index,
-                    }
-                  )}
-                  onClick={() => setSelectedGenre(selectedGenre === index ? null : index)}
-                >
-                  <img
-                    src={typeof genre.image === "string" ? genre.image : genre.image.src}
-                    alt={genre.title}
-                    className="w-full h-full object-cover"
-                  />
-
-                  <div
-                    className={clsx(
-                      "absolute bottom-1 right-1 py-0 px-2 bg-light-bg text-[#000000] text-sm rounded-full shadow-md transition-colors duration-500",
-                      {
-                        "text-summer": selectedGenre === index,
-                        "group-hover:text-summer": selectedGenre !== index,
-                      }
-                    )}
-                  >
-                    {genre.title}
-                  </div>
-
-                  <BookCheckbox
-                    className="absolute bg-light-bg  top-2 right-2 pointer-events-none"
-                    isChecked={selectedGenre === index}
-                    onToggle={() => setSelectedGenre(selectedGenre === index ? null : index)}
-                  />
-                </div>
-              )
+    <form onSubmit={handleSubmit(handleGenerateClick)} encType="multipart/form-data" noValidate>
+      <div className="container sm:py-4 py-9 grid gap-0 md:gap-6 md:grid-cols-2 md:py-16">
+        {(Object.keys(langData.INPUT) as (keyof inputType)[]).map((field) => (
+          <div
+            key={field}
+            className={clsx(
+              "bg-light-bg-accent dark:bg-dark-bg-secondary my-4 p-4 border border-[#EDEAE8] dark:border-[#353535] rounded-3xl text-2xl md:p-8 flex items-center justify-between",
+              {
+                "md:col-span-2": field === "events" || field === "description",
+              }
             )}
+          >
+            <span className="text-2xl md:mr-4">{langData.INPUT[field]}</span>
+            <ControlledInput control={control} name={field} placeholder={""} type="text" />
           </div>
-        </div>
-      </div>
-
-      <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
-        <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-evenly md:space-y-0 md:items-center md:space-x-8">
-          <div className="text-white text-center md:text-left">
-            {langData.PICTURE_STYLE_SELECTION}
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6">
-            {langData.PICTURE_STYLES.map(
-              (style: { title: string; image: string | StaticImageData }, index: number) => (
-                <div
-                  key={index}
-                  className={clsx(
-                    "group relative rounded-2xl overflow-hidden w-32 h-32 cursor-pointer transition-transform-shadow duration-500",
-                    {
-                      "shadow-lg -translate-y-2 shadow-summer": selectedPictureStyle === index,
-                    }
-                  )}
-                  onClick={() =>
-                    setSelectedPictureStyle(selectedPictureStyle === index ? null : index)
-                  }
-                >
-                  <img
-                    src={typeof style.image === "string" ? style.image : style.image.src}
-                    alt={style.title}
-                    className="w-full h-full object-cover"
-                  />
+        ))}
+        <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
+          <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-around md:space-y-0 md:items-center md:space-x-8">
+            <div className="text-white  text-center md:text-left">{langData.GENRE_SELECTION}</div>
+            <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6 ">
+              {langData.GENRE_STYLES.map((genre) => {
+                return (
                   <div
+                    key={genre.title}
                     className={clsx(
-                      "absolute bottom-1 right-1 py-0 px-2 bg-light-bg text-[#000000] text-sm rounded-full shadow-md transition-colors duration-500",
+                      "group relative rounded-2xl overflow-hidden w-32 h-32 cursor-pointer transition-transform-shadow duration-500",
                       {
-                        "text-summer": selectedPictureStyle === index,
-                        "group-hover:text-summer": selectedPictureStyle !== index,
+                        "shadow-lg -translate-y-2  shadow-summer": selectedGenre === genre.value,
                       }
                     )}
+                    onClick={() =>
+                      setSelectedGenre(selectedGenre === genre.value ? null : genre.value)
+                    }
                   >
-                    {style.title}
-                  </div>
+                    <img
+                      src={typeof genre.image === "string" ? genre.image : genre.image.src}
+                      alt={genre.title}
+                      className="w-full h-full object-cover"
+                    />
 
-                  <BookCheckbox
-                    className="absolute bg-light-bg top-2 right-2 pointer-events-none"
-                    isChecked={selectedPictureStyle === index}
-                    onToggle={() =>
+                    <div
+                      className={clsx(
+                        "absolute bottom-1 right-1 py-0 px-2 bg-light-bg text-[#000000] text-sm rounded-full shadow-md transition-colors duration-500",
+                        {
+                          "text-summer": selectedGenre === genre.value,
+                          "group-hover:text-summer": selectedGenre !== genre.value,
+                        }
+                      )}
+                    >
+                      {genre.title}
+                    </div>
+
+                    <BookCheckbox
+                      className="absolute bg-light-bg  top-2 right-2 pointer-events-none"
+                      isChecked={selectedGenre === genre.value}
+                      onToggle={() =>
+                        setSelectedGenre(selectedGenre === genre.value ? null : genre.value)
+                      }
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
+          <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-evenly md:space-y-0 md:items-center md:space-x-8">
+            <div className="text-white text-center md:text-left">
+              {langData.PICTURE_STYLE_SELECTION}
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6">
+              {langData.PICTURE_STYLES.map(
+                (style: { title: string; image: string | StaticImageData }, index: number) => (
+                  <div
+                    key={index}
+                    className={clsx(
+                      "group relative rounded-2xl overflow-hidden w-32 h-32 cursor-pointer transition-transform-shadow duration-500",
+                      {
+                        "shadow-lg -translate-y-2 shadow-summer": selectedPictureStyle === index,
+                      }
+                    )}
+                    onClick={() =>
                       setSelectedPictureStyle(selectedPictureStyle === index ? null : index)
                     }
-                  />
-                </div>
-              )
-            )}
+                  >
+                    <img
+                      src={typeof style.image === "string" ? style.image : style.image.src}
+                      alt={style.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div
+                      className={clsx(
+                        "absolute bottom-1 right-1 py-0 px-2 bg-light-bg text-[#000000] text-sm rounded-full shadow-md transition-colors duration-500",
+                        {
+                          "text-summer": selectedPictureStyle === index,
+                          "group-hover:text-summer": selectedPictureStyle !== index,
+                        }
+                      )}
+                    >
+                      {style.title}
+                    </div>
+
+                    <BookCheckbox
+                      className="absolute bg-light-bg top-2 right-2 pointer-events-none"
+                      isChecked={selectedPictureStyle === index}
+                      onToggle={() =>
+                        setSelectedPictureStyle(selectedPictureStyle === index ? null : index)
+                      }
+                    />
+                  </div>
+                )
+              )}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="md:col-span-2 flex justify-end">
-        <button
-          className="btn-primary px-6 py-2"
-          onClick={(e) => {
-            e.preventDefault();
-            handleGenerateClick();
-          }}
-        >
-          {langData.GENERATE_BUTTON}
-        </button>
+        <div className="md:col-span-2 flex justify-end">
+          <button type="submit" className="btn-primary px-6 py-2" disabled={isLoading}>
+            {isLoading ? "Загрузка" : langData.GENERATE_BUTTON}
+          </button>
+        </div>
       </div>
-    </div>
+    </form>
   );
 };

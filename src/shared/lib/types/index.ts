@@ -2,6 +2,7 @@ import type { IconsTypes } from "@shared/ui";
 
 import { TeamValues } from "@shared/lib/constants/team";
 import type { TechnologiesValues } from "@shared/lib/constants/technologies.constats";
+import { GenreEnum, StylisticsEnum, ThemesEnum } from "../enums";
 
 export interface IDescriptionItem {
   subtitle?: ILang<string>;
@@ -117,4 +118,28 @@ export interface ISingleCase {
   techno: string;
   members: string;
   other: string;
+}
+
+export interface IBookDto {
+  mainCharacter: string;
+  title: string;
+  keyEvents: string[];
+  chapterCount: number;
+
+  theme: ThemesEnum;
+  stylistic: StylisticsEnum;
+
+  genre: GenreEnum;
+  secondaryCharater: string;
+}
+
+export interface IParagraph {
+  paragraph_title: string;
+  paragraph_number: number;
+  paragraph_text: string;
+}
+
+export interface IBookResponse {
+  paragraphs: IParagraph[];
+  bookImage: string | null;
 }

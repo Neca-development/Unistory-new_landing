@@ -1,3 +1,4 @@
+import { useBookStore } from "@shared/lib/store/book/book.store";
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
 import { GeneratedComponent } from "@widgets/landing/generate-book/generated.component";
@@ -6,6 +7,9 @@ import { Layout } from "@widgets/layout";
 import React from "react";
 
 const GeneratedBook = () => {
+  const { paragraphs } = useBookStore();
+  console.log("🚀 ~ GeneratedBook ~ paragraphs:", paragraphs);
+
   return (
     <Layout
       Meta={
