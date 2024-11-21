@@ -10,6 +10,7 @@ import { BitGraduateAuthority } from "./custom-main/bit-graduate-authority.compo
 import { useMounted } from "@shared/lib/hooks/useMounted";
 import clsx from "clsx";
 import { VideoComponent } from "@shared/ui/video/video.component";
+import { FairyTaleButton } from "./fairy-tale-button/fairy-tale-button";
 
 export interface ICaseInfoItemProps {
   data?: ICase["main"][0];
@@ -76,6 +77,9 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
   return (
     <section className={clsx("pb-[7.5rem] t-xs:pb-16 last:pb-0", data?.sectionClassnames)}>
       <div className="container">
+        <div className="fixed bottom-10 right-10">
+          <FairyTaleButton />
+        </div>
         <article className="max-w-[52.5rem]">
           <h2 className="font-bold text-[2.875rem] whitespace-pre-line t-xs:text-2xl">
             {data?.title[locale || "ru"]}
