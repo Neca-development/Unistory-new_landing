@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import styles from "./fairy-tale.module.scss";
 import Link from "next/link";
 import { SparklesSvgComponent } from "./button.sparkles.component";
+import { CasesPageRu, CasesPageEn } from "@shared/i18n/cases";
+import { useRouter } from "next/router";
 
 interface FairyTaleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
@@ -9,22 +11,11 @@ export const FairyTaleButton: React.FC<FairyTaleButtonProps> = ({ className, ...
   const [, setIsActive] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      const threshold = 75;
+  const { locale } = useRouter();
 
-      const isBelowThreshold = (scrollPosition / documentHeight) * 100 >= threshold;
-      setIsVisible(!isBelowThreshold);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const langData = useMemo(() => {
+    return locale === "ru" ? CasesPageRu : CasesPageEn;
+  }, [locale]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,7 +76,7 @@ export const FairyTaleButton: React.FC<FairyTaleButtonProps> = ({ className, ...
               stroke-linejoin="round"
             />
           </svg>
-          <span className={styles.text}>Попробовать</span>
+          <span className={styles.text}>{langData.generateBookButton}</span>
         </button>
         <div className={styles.bodydrop}></div>
         <span aria-hidden="true" className={styles.particlePen}>
