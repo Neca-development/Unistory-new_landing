@@ -75,7 +75,7 @@ export const SelectionComponent = () => {
           </div>
         ))}
         <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
-          <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-around md:space-y-0 md:items-center md:space-x-8">
+          <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-between px-14 w-50 md:space-y-0 md:items-center md:space-x-8">
             <div className="text-white  text-center md:text-left">{langData.GENRE_SELECTION}</div>
             <div className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between md:gap-6 ">
               {langData.GENRE_STYLES.map((genre) => {
@@ -125,7 +125,7 @@ export const SelectionComponent = () => {
         </div>
 
         <div className="bg-light-bg-accent dark:bg-dark-bg-secondary p-4 px-2 my-4 rounded-3xl border border-[#EDEAE8] dark:border-[#353535] text-2xl md:p-4 md:col-span-2">
-          <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-evenly md:space-y-0 md:items-center md:space-x-8">
+          <div className="flex flex-col items-center space-y-4 md:flex-row md:justify-between px-14 w-50 md:space-y-0 md:items-center md:space-x-8">
             <div className="text-white text-center md:text-left">
               {langData.PICTURE_STYLE_SELECTION}
             </div>
