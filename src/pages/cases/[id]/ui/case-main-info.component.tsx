@@ -10,6 +10,8 @@ import { BitGraduateAuthority } from "./custom-main/bit-graduate-authority.compo
 import { useMounted } from "@shared/lib/hooks/useMounted";
 import clsx from "clsx";
 import { VideoComponent } from "@shared/ui/video/video.component";
+import { FairyTaleButton } from "../../../../widgets/landing/generate-book/ui/fairy-tale-button/fairytale.button";
+import Link from "next/link";
 
 export interface ICaseInfoItemProps {
   data?: ICase["main"][0];
@@ -22,6 +24,9 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
   const { theme, systemTheme } = useTheme();
   const [width, setWidth] = useState<number>(0);
   const _theme = theme === "system" ? systemTheme : theme;
+
+  const { query } = useRouter();
+  const { id } = query;
 
   const bannerByThemeConfig: BannerByThemeType = {
     dark: data?.darkBanner,
@@ -76,6 +81,7 @@ function CaseInfoItem({ data }: ICaseInfoItemProps) {
   return (
     <section className={clsx("pb-[7.5rem] t-xs:pb-16 last:pb-0", data?.sectionClassnames)}>
       <div className="container">
+        {id === "fairy-tale-ai" && <FairyTaleButton />}
         <article className="max-w-[52.5rem]">
           <h2 className="font-bold text-[2.875rem] whitespace-pre-line t-xs:text-2xl">
             {data?.title[locale || "ru"]}
