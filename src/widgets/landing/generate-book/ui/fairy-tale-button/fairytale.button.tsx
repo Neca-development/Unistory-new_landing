@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./fairyTale.module.scss";
+import styles from "./fairytale.module.scss";
 import Link from "next/link";
 import { SparklesSvgComponent } from "./button.sparkles.component";
 
@@ -27,28 +27,27 @@ export const FairyTaleButton: React.FC<FairyTaleButtonProps> = ({ className, ...
   }, []);
 
   useEffect(() => {
-    const activeBodyClass = styles.activeBody;
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const threshold = 75;
 
-    if (isActive && activeBodyClass) {
-      document.body.classList.add(activeBodyClass);
-    } else if (activeBodyClass) {
-      document.body.classList.remove(activeBodyClass);
-    }
+      const isBelowThreshold = (scrollPosition / documentHeight) * 100 >= threshold;
+      setIsVisible(!isBelowThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      if (activeBodyClass) {
-        document.body.classList.remove(activeBodyClass);
-      }
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [isActive]);
-
-  if (!isVisible) return null;
+  }, []);
 
   return (
     <>
-      <Link href={"/generate-book/"} className="fixed right-10 bottom-10">
+      <Link href={"/generate-book/"} className="fixed right-10 bottom-10 ">
         <button
-          className={`${styles.fairyButton} ${className}`}
+          className={`${styles.fairyButton} ${!isVisible ? styles.fairyButtonHidden : ""}`}
           onMouseEnter={() => setIsActive(true)}
           onMouseLeave={() => setIsActive(false)}
           onFocus={() => setIsActive(true)}
