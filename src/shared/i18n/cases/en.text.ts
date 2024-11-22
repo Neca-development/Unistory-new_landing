@@ -17,5 +17,5 @@ export const SingleCaseEn: ISingleCase = {
 
 export const CasesPageEn = {
   title: "Cases",
-  generateBookButton: "Generate",
+  generateBookButton: "Try it out",
 };
