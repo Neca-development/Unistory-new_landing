@@ -1,3 +1,3 @@
 export * from "./button.sparkles.component";
-export * from "./fairyTale.module.scss";
+export * from "./fairy-tale.module.scss";
 export * from "./fairytale.button";

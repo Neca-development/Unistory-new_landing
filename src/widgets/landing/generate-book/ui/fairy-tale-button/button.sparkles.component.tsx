@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./fairytale.module.scss";
+import styles from "./fairy-tale.module.scss";
 
 export const SparklesSvgComponent = () => {
   return (

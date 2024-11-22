@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./fairytale.module.scss";
+import styles from "./fairy-tale.module.scss";
 import Link from "next/link";
 import { SparklesSvgComponent } from "./button.sparkles.component";
 
