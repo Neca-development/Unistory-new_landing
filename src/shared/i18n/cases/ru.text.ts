@@ -17,4 +17,5 @@ export const SingleCaseRu: ISingleCase = {
 
 export const CasesPageRu = {
   title: "Кейсы",
+  generateBookButton: "Попробовать",
 };

@@ -15,12 +15,12 @@ const GeneratedBook = () => {
       Meta={
         <Meta
           description={{
-            en: "We are Unistory, a software development company. Our main expertise lies in AI and web3 technologies. Our office is located in Almaty, Kazakhstan.",
-            ru: "Мы — Unistory, разрабатываем веб-сервисы и мобильные приложения. Главные доменные экспертизы — AI и web3. Офисы находятся в Санкт-Петербурге и Алматы.",
+            en: "Coordination of the work of ChatGPT, DALL·E 3, and the Google Cloud Text-to-Speech API. Development of the backend component and meticulous crafting of the query system for the neural network, enabling the generation of long captivating stories with illustrations.",
+            ru: "Скоординировали работу ChatGPT, DALL·E 3 и Google Cloud Text-to-Speech API. Разработали бэкенд-составляющую и детально проработали систему запросов в нейросети, чтобы генерировать длинные захватывающие истории с иллюстрациями. ",
           }}
           title={{
-            en: "About Us | Unistory",
-            ru: "О компании | Unistory",
+            en: "Fairy tale generator: AI integration and prompt engineering",
+            ru: "Сервис генерации сказок: интеграция AI и промпт-инжиниринг",
           }}
         />
       }
