@@ -6,7 +6,7 @@ import { SparklesSvgComponent } from "./button.sparkles.component";
 interface FairyTaleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export const FairyTaleButton: React.FC<FairyTaleButtonProps> = ({ className, ...props }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [, setIsActive] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
