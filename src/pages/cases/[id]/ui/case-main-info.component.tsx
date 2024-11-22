@@ -11,7 +11,6 @@ import { useMounted } from "@shared/lib/hooks/useMounted";
 import clsx from "clsx";
 import { VideoComponent } from "@shared/ui/video/video.component";
 import { FairyTaleButton } from "../../../../widgets/landing/generate-book/ui/fairy-tale-button/fairytale.button";
-import Link from "next/link";
 
 export interface ICaseInfoItemProps {
   data?: ICase["main"][0];
