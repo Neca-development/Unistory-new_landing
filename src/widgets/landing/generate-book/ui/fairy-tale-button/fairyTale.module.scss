@@ -3,15 +3,15 @@
   --active: 0;
   --bg: radial-gradient(
       40% 50% at center 100%,
-      hsl(270 calc(var(--active) * 97%) 72% / var(--active)),
+      hsl(15 calc(var(--active) * 97%) 72% / var(--active)),
       transparent
     ),
     radial-gradient(
       80% 100% at center 120%,
-      hsl(260 calc(var(--active) * 97%) 70% / var(--active)),
+      hsl(15 calc(var(--active) * 97%) 70% / var(--active)),
       transparent
     ),
-    hsl(260 calc(var(--active) * 97%) calc((var(--active) * 44%) + 12%));
+    hsl(15 calc(var(--active) * 97%) calc((var(--active) * 44%) + 12%));
   background: var(--bg);
   font-size: 1.2rem;
   font-weight: 500;
@@ -24,19 +24,17 @@
   white-space: nowrap;
   border-radius: 20px;
   position: relative;
-  box-shadow: 0 0 calc(var(--active) * 6em) calc(var(--active) * 3em) hsl(260 97% 61% / 0.75),
-    0 0.05em 0 0 hsl(260 calc(var(--active) * 97%) calc((var(--active) * 50%) + 30%)) inset,
-    0 -0.05em 0 0 hsl(260 calc(var(--active) * 97%) calc(var(--active) * 60%)) inset;
+  box-shadow: 0 0 calc(var(--active) * 6em) calc(var(--active) * 3em) hsla(22, 100%, 50%, 0.893),
+    0 0.05em 0 0 hsl(30 calc(var(--active) * 97%) calc((var(--active) * 50%) + 30%)) inset,
+    0 -0.05em 0 0 hsl(30 calc(var(--active) * 97%) calc(var(--active) * 60%)) inset;
   transition: box-shadow var(0.25s), scale var(0.25s), background 0.25s;
   scale: calc(1 + (var(--active) * 0.1));
 }
 
+
+
 .fairyButton:active {
   scale: 1;
-}
-
-.sparkle .particle {
-  overflow: visible !important;
 }
 
 .sparkle path {
@@ -66,27 +64,11 @@
   --base: 40%;
 }
 
-.sparkle path:nth-of-type(2) {
-  --scale: 1.5;
-  --delay: 0.2;
-  --base: 20%;
-}
 
 .sparkle path:nth-of-type(3) {
   --scale: 2.5;
   --delay: 0.35;
   --base: 30%;
-}
-
-.fairyButton:before {
-  content: "";
-  position: absolute;
-  inset: -0.25em;
-  z-index: -1;
-  border: 0.25em solid hsl(260 97% 50% / 0.5);
-  border-radius: 20px;
-  opacity: var(--active, 0);
-  transition: opacity var(0.25s);
 }
 
 .spark {
@@ -105,22 +87,6 @@
   }
 }
 
-.spark:before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  aspect-ratio: 1;
-  top: 0%;
-  left: 50%;
-  z-index: -1;
-  translate: -50% -15%;
-  rotate: 0;
-  transform: rotate(-90deg);
-  opacity: calc((var(--active)) + 0.4);
-  background: conic-gradient(from 0deg, transparent 0 340deg, white 360deg);
-  transition: opacity var(0.25s);
-  animation: rotate var(1.8s) linear infinite both;
-}
 
 .spark:after {
   content: "";
@@ -171,21 +137,12 @@
   --play-state: running;
 }
 
-.bodydrop {
-  position: fixed;
-  z-index: -1;
-}
-
 .fairyButton:is(:hover, :focus-visible) {
   --active: 1;
   --play-state: running;
 }
 
-.sparkle-button {
-  position: relative;
-}
-
-.particle-pen {
+.particlePen {
   position: absolute;
   width: 200%;
   aspect-ratio: 1;
@@ -221,6 +178,129 @@
   animation-direction: reverse;
 }
 
+.fairyButton svg {
+  inline-size: 1.25em;
+  translate: -25% -5%;
+}
+
+
+.sparkle .particle {
+  overflow: visible !important;
+}
+
+@keyframes bounce {
+  35%,
+  65% {
+    scale: var(--scale);
+  }
+}
+.sparkle path:nth-of-type(1) {
+  --scale: 0.5;
+  --delay: 0.1;
+  --base: 40%;
+}
+
+.sparkle path:nth-of-type(2) {
+  --scale: 1.5;
+  --delay: 0.2;
+  --base: 20%;
+}
+
+
+.fairyButton:before {
+  content: "";
+  position: absolute;
+  inset: -0.25em;
+  z-index: -1;
+  border: 0.25em solid hsla(15, 100%, 50%, 0.5);
+  border-radius: 20px;
+  opacity: var(--active, 0);
+  transition: opacity var(0.25s);
+}
+
+
+.spark:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  aspect-ratio: 1;
+  top: 0%;
+  left: 50%;
+  z-index: -1;
+  translate: -50% -15%;
+  rotate: 0;
+  transform: rotate(-90deg);
+  opacity: calc((var(--active)) + 0.4);
+  background: conic-gradient(from 0deg, transparent 0 340deg, hsl(35, 100%, 96%) 360deg);
+  transition: opacity (0.25s);
+  animation: rotate (1.8s) linear infinite both;
+}
+
+.spark:after {
+  content: "";
+  position: absolute;
+  inset: var(--cut);
+  border-radius: 20px;
+}
+
+
+@keyframes rotate {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.activeBody {
+  --active: 1;
+  --play-state: running;
+
+  .bodydrop {
+    display: none;
+  }
+}
+
+.fairyButton {
+  --cut: 0.1em;
+  --active: 0;
+  transition: all 0.25s;
+  position: relative;
+  z-index: 1;
+
+  &:hover,
+  &:focus-visible {
+    --active: 1;
+    --play-state: running;
+  }
+}
+
+.fairyButton:is(:hover, :focus-visible) ~ :is(.bodydrop, .particlePen) {
+  --active: 1;
+  --play-state: running;
+}
+
+.bodydrop {
+  position: fixed;
+  z-index: -1;
+}
+
+.fairyButton:is(:hover, :focus-visible) {
+  --active: 1;
+  --play-state: running;
+}
+
+// .sparkle-button {
+//   position: relative;
+// }
+
+.particle path {
+  fill: hsl(0 0% 90%);
+  stroke: none;
+}
+
+.particle:nth-of-type(even) {
+  animation-direction: reverse;
+}
+
 @keyframes float-out {
   to {
     rotate: 360deg;
@@ -233,14 +313,9 @@
   background: linear-gradient(
     90deg,
     hsl(0 0% calc((var(--active) * 100%) + 65%)),
-    hsl(0 0% calc((var(--active) * 100%) + 26%))
+    hsl(0 0% calc((var(--active) * 100%) + 46%))
   );
   -webkit-background-clip: text;
   color: transparent;
   transition: background 0.25s;
-}
-
-.fairyButton svg {
-  inline-size: 1.25em;
-  translate: -25% -5%;
 }
