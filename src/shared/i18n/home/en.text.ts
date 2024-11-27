@@ -45,10 +45,8 @@ export const ServicesEn = {
 };
 
 export const WorksEn = {
-  title: `We help businesses develop
-  <br />
-  digital products`,
-  moreCases: "More cases",
+  title: "We change the world for the better",
+  allCases: "All cases",
 };
 
 export const PrinciplesEn: {

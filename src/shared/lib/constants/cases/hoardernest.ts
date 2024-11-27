@@ -15,8 +15,8 @@ import hoarderImage2 from "@public/assets/images/cases/hoarder/vizualization.jpg
 export const HOARDER_NEST: ICase = {
   title: "HoarderNest",
   id: "hoardernest",
-  videoPreview: 'assets/videos/hoardernest.mp4',
-  tag: 'NFT',
+  videoPreview: "/assets/videos/hoardernest.mp4",
+  tag: "NFT",
   heroTitle: {
     en: "HoarderNest – innovative NFT aggregator",
     ru: "HoarderNest – инновационный NFT агрегатор",

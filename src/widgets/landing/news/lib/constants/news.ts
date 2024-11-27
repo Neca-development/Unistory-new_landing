@@ -157,4 +157,10 @@ export const newsEN: News[] = [
     site: "medium.com",
     image: cryptoForCharity.src,
   },
+  {
+    title: "Launching a Dermatology AI-Powered App: An Interview with the Founder ",
+    link: "https://medium.com/@aksenov.unistory/how-iranian-dermatologists-are-launching-an-ai-based-diagnostic-app-in-canada-66f59f88afc3",
+    site: "medium.com",
+    image: searchHerpes.src,
+  },
 ];
