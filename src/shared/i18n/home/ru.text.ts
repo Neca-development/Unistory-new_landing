@@ -45,8 +45,8 @@ export const ServicesRu = {
 };
 
 export const WorksRu = {
-  title: `Мы помогаем предприятиям<br/>разрабатывать цифровые продукты`,
-  moreCases: "Еще кейсы",
+  title: "Изменяем мир к лучшему",
+  allCases: "Все кейсы",
 };
 
 export const PrinciplesRu: {

@@ -22,7 +22,7 @@ export const DERMADEX: ICase = {
   title: "Dermadex",
   id: "dermadex",
   tag: "CV",
-  videoPreview: 'assets/videos/dermadex.mp4',
+  videoPreview: "/assets/videos/dermadex.mp4",
   heroTitle: {
     en: "Dermadex App: photo-based AI dermatologic diagnosis",
     ru: "Приложение Dermadex: определяем болезни кожи по фото с помощью AI",
@@ -314,7 +314,7 @@ export const DERMADEX: ICase = {
     },
     text: {
       en: "«I was looking for a team that can develop a mobile app capable of identifying skin disease from a photo. The Unistory's portfolio impressed me: expertise in neural networks and computer vision, experience in the medical field. I immediately decided that these guys are perfect for us, and I was not mistaken: from that moment until now, everything has been amazing. The result is the mobile app with a trained CLIP model that identifies six groups of skin diseases with high accuracy».",
-      ru: "«Я долго искал команду, способную разработать мобильное приложение для определения кожных болезней по фото. Портфолио Unistory впечатлило меня: экспертиза в нейросетях и компьютерном зрении, опыт в медицинской сфере. Я сразу решил, что эти ребята — идеальный выбор для нас, и не ошибся. Результат — мобильное приложение с интеграцией AI-модели CLIP, способное определить 6 групп заболеваний»." ,
+      ru: "«Я долго искал команду, способную разработать мобильное приложение для определения кожных болезней по фото. Портфолио Unistory впечатлило меня: экспертиза в нейросетях и компьютерном зрении, опыт в медицинской сфере. Я сразу решил, что эти ребята — идеальный выбор для нас, и не ошибся. Результат — мобильное приложение с интеграцией AI-модели CLIP, способное определить 6 групп заболеваний».",
     },
   },
   team: [
