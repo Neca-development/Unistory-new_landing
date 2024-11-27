@@ -25,7 +25,7 @@ export default function WorkCard({ work, className }: WorkCardProps) {
         </div>
         <div className="mt-5 group">
           <p className="leading-8 text-2xl font-bold group-hover:text-case-hover">{cardTitle}</p>
-          <p className="opacity-80 leading-6 mt-1 w-92 t-xs:w-auto group-hover:opacity-100">
+          <p className="opacity-80 leading-6 mt-1 max-w-[23rem] t-xs:w-auto group-hover:opacity-100">
             {categories}
           </p>
         </div>

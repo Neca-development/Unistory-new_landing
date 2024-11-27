@@ -10,10 +10,10 @@ export interface IInputProps {
 }
 
 export const labelClassNames =
-  "text-dark-text-primary text-xl leading-7 border-b-2 pb-3 pt-7 relative t-xs:text-[0.875rem]";
+  " text-xl w-full leading-7 border-b-2 pb-3 pt-7 relative t-xs:text-[0.875rem]";
 export const inputClassNames =
   "bg-[inherit] w-full outline-none placeholder:text-dark-text-primary";
-export const inputErrorClassNames = "absolute left-3 top-full mt-1 text-error text-xs";
+export const inputErrorClassNames = "absolute left-3 top-full  text-error text-xs";
 
 export const Input = forwardRef((props: IInputProps, ref: any) => {
   const { placeholder, type, required, className, error, ...restProps } = props;
