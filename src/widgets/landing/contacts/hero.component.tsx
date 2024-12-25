@@ -34,10 +34,10 @@ export const ContactsHero = () => {
             <IconComponent name="contactsTelegram" />
           </div>
           <a
-            href="https://t.me/alexgrowler"
+            href="https://t.me/alexgrowler2"
             className="text-2xl font-bold dark:text-light-bg-accent hover:opacity-50 transition-all md:text-4xl"
           >
-            @alexgrowler
+            @alexgrowler2
           </a>
         </div>
         {/* <div>
