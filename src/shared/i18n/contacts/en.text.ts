@@ -2,6 +2,9 @@ export const ContactsTextEn = {
   HERO: {
     title: "Feel free to contact us",
   },
+  CONTACTS: {
+    notification: "Contact was changed recently",
+  },
   ADDRESSES: {
     SPB: {
       title: "Санкт-Петербург",
