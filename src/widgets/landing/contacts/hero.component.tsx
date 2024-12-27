@@ -32,6 +32,9 @@ export const ContactsHero = () => {
           <div className="flex items-center space-x-3 font-semibold mb-3 text-2xl">
             <span>Telegram</span>
             <IconComponent name="contactsTelegram" />
+            <span className="px-3 py-1 text-sm bg-yellow-400 dark:bg-yellow-500 text-black rounded-sm transform -rotate-2 shadow-md hover:rotate-0 transition-transform">
+              {langData.CONTACTS.notification}
+            </span>
           </div>
           <a
             href="https://t.me/alexgrowler2"
