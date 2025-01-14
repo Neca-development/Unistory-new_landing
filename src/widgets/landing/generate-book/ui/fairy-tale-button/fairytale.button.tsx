@@ -38,6 +38,14 @@ export const FairyTaleButton: React.FC<FairyTaleButtonProps> = ({ className, ...
     <>
       <Link href={"/generate-book/"} className="fixed right-10 bottom-10 ">
         <button
+          onClick={() => {
+            if (typeof window !== "undefined" && (window as any).gtag) {
+              (window as any).gtag("event", "redirect_to_book_generation", {
+                event_category: "Book Generation",
+                event_label: "Generate Book Redirect",
+              });
+            }
+          }}
           className={`${styles.fairyButton} ${!isVisible ? styles.fairyButtonHidden : ""}`}
           onMouseEnter={() => setIsActive(true)}
           onMouseLeave={() => setIsActive(false)}
