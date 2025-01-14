@@ -16,8 +16,8 @@ const GenerateBook = () => {
             ru: "Скоординировали работу ChatGPT, DALL·E 3 и Google Cloud Text-to-Speech API. Разработали бэкенд-составляющую и детально проработали систему запросов в нейросети, чтобы генерировать длинные захватывающие истории с иллюстрациями. ",
           }}
           title={{
-            en: "Fairy tale generator: AI integration and prompt engineering",
-            ru: "Сервис генерации сказок: интеграция AI и промпт-инжиниринг",
+            en: "Fairy tale generation service: generate a book in a few minutes",
+            ru: "Сервис генерации сказок: генерация книги за несколько минут",
           }}
         />
       }
