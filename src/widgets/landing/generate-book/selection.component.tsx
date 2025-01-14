@@ -177,7 +177,19 @@ export const SelectionComponent = () => {
         </div>
 
         <div className="md:col-span-2 flex justify-end">
-          <button type="submit" className="btn-primary px-6 py-2" disabled={isLoading}>
+          <button
+            type="submit"
+            className="btn-primary px-6 py-2"
+            disabled={isLoading}
+            onClick={() => {
+              if (typeof window !== "undefined" && (window as any).gtag) {
+                (window as any).gtag("event", "generate_book_click", {
+                  event_category: "Book Generation",
+                  event_label: "Generate Book Button",
+                });
+              }
+            }}
+          >
             {isLoading ? "Загрузка" : langData.GENERATE_BUTTON}
           </button>
         </div>
