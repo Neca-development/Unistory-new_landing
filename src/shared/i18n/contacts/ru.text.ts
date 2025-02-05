@@ -2,9 +2,6 @@ export const ContactsTextRu = {
   HERO: {
     title: "Свяжитесь с нами",
   },
-  CONTACTS: {
-    notification: "Контакт был недавно изменен",
-  },
   ADDRESSES: {
     SPB: {
       title: "Санкт-Петербург",

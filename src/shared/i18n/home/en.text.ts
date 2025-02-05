@@ -2,9 +2,9 @@ import { IMessage } from "@shared/ui";
 
 export const HeroEn = {
   title: {
-    first: "Integrating the future",
-    second: "Web services and applications",
-    third: "based on AI & blockchain",
+    first: "Shaping the Future",
+    second: "AI & Blockchain-Powered",
+    third: "Web Solutions",
   },
   subtitle: "analytics / design / development",
 };

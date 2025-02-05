@@ -51,14 +51,14 @@ export const Footer = React.memo((props: IFooterProperties) => {
             )}
           >
             <h4
-              className="font-medium text-2xl t-xs:text-center"
+              className="font-medium text-2xl t-xs:text-center opacity-0"
               dangerouslySetInnerHTML={{ __html: text.slogan }}
             />
             <div className="flex items-center space-x-6 t-xs:justify-center">
               {locale === "ru" ? (
                 <a
                   rel="nofollow"
-                  href=" https://t.me/+w6LmXXe_ejI1ZGZi"
+                  href=" https://t.me/unistoryapp"
                   className="text-light-bg-accent	opacity-50 hover:opacity-100"
                   target="_blank"
                 >

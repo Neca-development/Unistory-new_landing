@@ -16,7 +16,7 @@ export const CompanyHeroEn = {
     third: "development company.",
   },
   subtitle: {
-    first: "Our expertise lies in development of mobile applications,",
+    first: "Our expertise lies in the development of mobile applications,",
     second: "complex web services, and custom integrations.",
   },
 };
@@ -25,7 +25,7 @@ export const CompanyFeaturesEn = [
   {
     title: "Team Building",
     subtitle:
-      "We go hiking, boating on the lake, handcraft stone saunas, and organize tours of the best pubs in the city.",
+      "We enjoy hiking, boating on lakes, building stone saunas by hand, and organizing tours of the city’s best pubs.",
     image: featureImage1.src,
   },
   {
@@ -37,7 +37,7 @@ export const CompanyFeaturesEn = [
   {
     title: "Rapid Growth ",
     subtitle:
-      "The team works on complex projects under the careful guidance of team leaders. Developers constantly exchange expertise.",
+      "Our team tackles complex projects under the careful guidance of team leaders, with developers continuously sharing their expertise.",
     image: featureImage3.src,
   },
   {

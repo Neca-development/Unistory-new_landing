@@ -1,4 +1,4 @@
-import { Checkbox, ControlledInput, ControlledTelInput } from "@shared/ui";
+import { ControlledInput } from "@shared/ui";
 import React, { useMemo, useRef, useState } from "react";
 import { Controller, useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,32 +9,13 @@ import { FormEn, FormRu } from "@shared/i18n";
 import clsx from "clsx";
 import { useAutoHeightTextarea } from "@shared/lib/hooks/useAutoHeightTextarea.hook";
 
-export interface ICheckboxFields {
-  email: boolean;
-  telegram: boolean;
-  whatsapp: boolean;
-  phone: boolean;
-  [index: string]: any;
-}
-
 interface IFormData {
-  email: string;
-  name: string;
-  phoneNumber: string;
+  email?: string;
+  name?: string;
+  telegram?: string;
   company?: string;
   description?: string;
-  url: string;
-}
-
-interface IEmailFormData extends IFormData {
-  preferences: ICheckboxFields;
-}
-
-interface IAmoFormData extends IFormData {
-  isEmail: boolean;
-  isWhatsapp: boolean;
-  isPhone: boolean;
-  isTelegram: boolean;
+  // url?: string;
 }
 
 export default function ConnectForm() {
@@ -44,27 +25,18 @@ export default function ConnectForm() {
     return locale === "en" ? FormEn : FormRu;
   }, [locale]);
 
-  const schema = z.object({
-    email: z
-      .string({ required_error: data.fields.email.requiredError })
-      .email(data.fields.email.error),
-    name: z
-      .string({ required_error: data.fields.name.requiredError })
-      .min(3, { message: data.fields.name.error }),
-    company: z
-      .string({ required_error: data.fields.company.requiredError })
-      .refine((value) => value === "" || value.length >= 3, {
-        message: data.fields.company.error,
-      })
-      .optional(),
-    phoneNumber: z
-      .string({ required_error: data.fields.phone.requiredError })
-      .min(6, data.fields.phone.error),
-    description: z
-      .string({ required_error: data.fields.describe.requiredError })
-      .min(1, data.fields.commonErrors.required)
-      .optional(),
-  });
+  const schema = z
+    .object({
+      email: z.string().email(data.fields.email.error).optional(),
+      telegram: z.string().optional(),
+      name: z.string().optional(),
+      company: z.string().optional(),
+      description: z.string().optional(),
+    })
+    .refine((data) => data.email || data.telegram, {
+      message: "Email or Telegram is required",
+      path: ["email"],
+    });
 
   type FormType = z.infer<typeof schema>;
 
@@ -79,12 +51,6 @@ export default function ConnectForm() {
   });
 
   const [isLoading, setIsLoading] = useState(false);
-  const [ways, setWays] = useState<ICheckboxFields>({
-    email: false,
-    telegram: false,
-    whatsapp: false,
-    phone: false,
-  });
 
   const { description } = useWatch({ control });
 
@@ -92,34 +58,7 @@ export default function ConnectForm() {
 
   useAutoHeightTextarea(textareaRef.current, description);
 
-  const contactMethods = useMemo(
-    () => [
-      {
-        name: data.fields.email.placeholder,
-        type: "email",
-      },
-      {
-        name: data.contacts.phone,
-        type: "phone",
-      },
-      {
-        name: "WhatsApp",
-        type: "whatsapp",
-      },
-      {
-        name: "Telegram",
-        type: "telegram",
-      },
-    ],
-    [locale]
-  );
-
-  const handleCheckboxChange = (field: string) => {
-    setWays((prev) => ({ ...prev, [field]: !prev[field] }));
-  };
-
   const resetFields = () => {
-    setWays({ email: false, phone: false, telegram: false, whatsapp: false });
     reset();
   };
 
@@ -131,26 +70,14 @@ export default function ConnectForm() {
     const formData: IFormData = {
       email: data.email,
       name: data.name,
-      phoneNumber: data.phoneNumber,
-      url: window.location.href,
-      description: data.description ?? undefined,
-      company: data.company ?? undefined,
-    };
-
-    const emailFormData: IEmailFormData = { ...formData, preferences: ways };
-    const amoFormData: IAmoFormData = {
-      ...formData,
-      isEmail: ways.email,
-      isWhatsapp: ways.whatsapp,
-      isPhone: ways.phone,
-      isTelegram: ways.telegram,
+      telegram: data.telegram,
+      // url: window.location.href,
+      description: data.description,
+      company: data.company,
     };
 
     try {
-      await Promise.all([
-        axios.post("/api/contact/", emailFormData),
-        axios.post("/api/amo-crm/create-lead/", amoFormData),
-      ]);
+      await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/contact/`, formData);
       resetFields();
     } catch (error) {
       // console.error(error);
@@ -175,7 +102,7 @@ export default function ConnectForm() {
           <ControlledInput
             control={control}
             name="name"
-            placeholder={data.fields.name.placeholder + " *"}
+            placeholder={data.fields.name.placeholder}
             type="text"
             error={errors.name?.message}
           />
@@ -184,15 +111,15 @@ export default function ConnectForm() {
               control={control}
               name="email"
               type="email"
-              placeholder={data.fields.email.placeholder + " *"}
+              placeholder={data.fields.email.placeholder}
               error={errors?.email?.message}
             />
-            <ControlledTelInput
+            <ControlledInput
               control={control}
-              error={errors?.phoneNumber?.message}
-              name="phoneNumber"
-              placeholder={data.fields.phone.placeholder + " *"}
-              type="phone"
+              name="telegram"
+              type="text"
+              placeholder="Telegram"
+              error={errors?.telegram?.message}
             />
           </div>
           <ControlledInput
@@ -224,27 +151,13 @@ export default function ConnectForm() {
               </span>
             )}
           </label>
-          <div className="py-4 text-xl t-xs:text-[0.875rem]">
-            <p>{data.contacts.label}</p>
-            <div className="mt-4 grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-2  t-xs:grid-cols-2 t-xs:gap-x-9 t-xs:gap-y-5">
-              {contactMethods.map((method, idx) => (
-                <Checkbox
-                  onChange={() => handleCheckboxChange(method.type)}
-                  key={idx}
-                  name={method.name}
-                />
-              ))}
-            </div>
-          </div>
           <button
             type="submit"
             className={clsx(
               "!mt-10 text-2xl w-full py-[1.125rem] bg-primary-s rounded-sm font-semibold duration-150 transition-all t-xs:!mt-5 hover:bg-[#D65838]",
-              // fileError && "opacity-50",
               isLoading && "animate-pulse"
             )}
             disabled={isLoading}
-            // disabled={fileError || isLoading}
           >
             {data.send}
           </button>
