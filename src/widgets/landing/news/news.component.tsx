@@ -1,4 +1,3 @@
-import { IconComponent } from "@shared/ui";
 import { news, newsEN } from "./lib";
 import { NewsItem } from "./ui/news-item.component";
 import { useRouter } from "next/router";
