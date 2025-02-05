@@ -19,5 +19,5 @@ export const FooterTextEn: {
       tel: "+7 707 372 8608",
     },
   ],
-  slogan: `From fascinating ideas <br /> to incredibly great products`,
+  slogan: `Integrating the future`,
 };
