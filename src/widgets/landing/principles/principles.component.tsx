@@ -1,5 +1,4 @@
 import { PrinciplesRu, PrinciplesEn } from "@shared/i18n";
-import { MessageToggler } from "@shared/ui";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -38,11 +37,11 @@ export function Principles() {
         ))}
       </div>
       <div className="mt-12 relative t-xs:mt-10">
-        <MessageToggler
+        {/* <MessageToggler
           toggleClassName="absolute top-[-1.5rem] t-xs:-bottom-10 t-xs:top-auto t-xs:left-auto t-xs:right-0 left-[39.2rem]"
           messageData={data.messages}
           noticeIndex={activeIdx}
-        />
+        /> */}
         <p className="font-bold text-5xl leading-[3.5rem] t-xs:text-2xl t-xs:leading-9">
           {data.items[activeIdx]!.description?.beforeHighlight}
           <span className="text-primary-s">
