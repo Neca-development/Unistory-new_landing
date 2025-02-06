@@ -1,3 +1,5 @@
+import { error } from "console";
+
 export const FormRu = {
   slogan: "Готовы обсудить ваш проект?",
   description: {
@@ -15,7 +17,7 @@ export const FormRu = {
     },
     company: {
       placeholder: "Компания",
-      error: "Название компании должно содержать больше 3 символов",
+      error: "Название компании должно быть менее 100 символов.",
       requiredError: "Пожалуйста, введите название вашей компании",
     },
     phone: {
@@ -28,9 +30,18 @@ export const FormRu = {
       error: "Неверный email",
       requiredError: "Пожалуйста, введите адрес вашей почты",
     },
+    telegram: {
+      placeholder: "Телеграм",
+      error: "Неверный формат telegram",
+      requiredError: "Проверьте правильность написания или используйте другой никнейм.",
+    },
     describe: {
       placeholder: "Расскажите о проекте",
+      error: "Описание должно быть менее 1000 символов.",
       requiredError: "Пожалуйста, введите описание вашего проекта",
+    },
+    require: {
+      error: "Требуется электронная почта или Telegram.",
     },
   },
   contacts: {
