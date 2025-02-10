@@ -1,7 +1,5 @@
-import { error } from "console";
-
 export const FormEn = {
-  slogan: "Ready to discuss your project?",
+  slogan: "scuss your project?",
   description: {
     beforeEmail: "Fill out the form to the right or email",
     afterEmail: "We'll get back to you shortly!",

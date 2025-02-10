@@ -1,5 +1,3 @@
-import { error } from "console";
-
 export const FormRu = {
   slogan: "Готовы обсудить ваш проект?",
   description: {
