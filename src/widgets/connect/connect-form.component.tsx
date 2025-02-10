@@ -80,7 +80,7 @@ export default function ConnectForm() {
     };
 
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/contact/`, formData);
+      await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}api/contact/`, formData);
       resetFields();
     } catch (error) {
       // console.error(error);
