@@ -28,13 +28,16 @@ export default function ConnectForm() {
   const schema = z
     .object({
       email: z.string().email(data.fields.email.error).optional(),
-      telegram: z.string().optional(),
+      telegram: z
+        .string()
+        .regex(/^@?[a-zA-Z0-9_]*$/, data.fields.telegram.error)
+        .optional(),
       name: z.string().optional(),
-      company: z.string().optional(),
-      description: z.string().optional(),
+      company: z.string().max(100, data.fields.company.error).optional(),
+      description: z.string().max(1000, data.fields.describe.error).optional(),
     })
     .refine((data) => data.email || data.telegram, {
-      message: "Email or Telegram is required",
+      message: data.fields.require.error,
       path: ["email"],
     });
 
@@ -77,7 +80,7 @@ export default function ConnectForm() {
     };
 
     try {
-      await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/contact/`, formData);
+      await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}api/contact/`, formData);
       resetFields();
     } catch (error) {
       // console.error(error);

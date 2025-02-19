@@ -1,5 +1,5 @@
 export const FormEn = {
-  slogan: "Ready to discuss your project?",
+  slogan: "scuss your project?",
   description: {
     beforeEmail: "Fill out the form to the right or email",
     afterEmail: "We'll get back to you shortly!",
@@ -15,7 +15,7 @@ export const FormEn = {
     },
     company: {
       placeholder: "Company",
-      error: "Company name should be at least 3 letters",
+      error: "Company name must be less than 100 characters",
       requiredError: "Please fill your company name",
     },
     phone: {
@@ -28,9 +28,18 @@ export const FormEn = {
       error: "Incorrect email",
       requiredError: "Please fill your email address",
     },
+    telegram: {
+      placeholder: "Telegram",
+      error: "Invalid telegram",
+      requiredError: "Please check the spelling or use a different username.",
+    },
     describe: {
       placeholder: "Describe your project",
+      error: "Description must be less than 1000 characters",
       requiredError: "Please fill description about your project",
+    },
+    require: {
+      error: "Email or Telegram is required",
     },
   },
   contacts: {

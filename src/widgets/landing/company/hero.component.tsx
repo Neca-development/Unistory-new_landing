@@ -50,16 +50,18 @@ export const CompanyHero = () => {
           <span className=" ml-1 mt-[0.2rem] m-md:mb-1 md:ml-2 mr-1">5.0</span>
           <IconComponent className="w-4 mt-[0.3rem] m-md:mt-0 md:w-6" name="companyStar" />
         </a>
-        <a
-          href="https://hh.ru/employer/5166243"
-          target="_blank"
-          style={{ textDecoration: "none", color: "inherit" }}
-          className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4"
-        >
-          <IconComponent className="w-5 md:w-10" name="companyHh" />
-          <span className="mt-[0.2rem] mx-1 md:ml-2">4.8 </span>
-          <IconComponent className="w-4 mt-[0.3rem] md:w-6 m-md:mt-[0.2rem]" name="companyStar" />
-        </a>
+        {locale === "ru" && (
+          <a
+            href="https://hh.ru/employer/5166243"
+            target="_blank"
+            style={{ textDecoration: "none", color: "inherit" }}
+            className="flex items-center bg-light-bg-accent dark:bg-dark-bg-secondary rounded-lg p-2 md:px-6 md:py-4"
+          >
+            <IconComponent className="w-5 md:w-10" name="companyHh" />
+            <span className="mt-[0.2rem] mx-1 md:ml-2">4.8 </span>
+            <IconComponent className="w-4 mt-[0.3rem] md:w-6 m-md:mt-[0.2rem]" name="companyStar" />
+          </a>
+        )}
       </div>
     </div>
   );
