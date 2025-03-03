@@ -1,5 +1,5 @@
 export const FormEn = {
-  slogan: "scuss your project?",
+  slogan: "Ready to discuss your project?",
   description: {
     beforeEmail: "Fill out the form to the right or email",
     afterEmail: "We'll get back to you shortly!",
