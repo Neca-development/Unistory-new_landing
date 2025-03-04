@@ -1,5 +1,6 @@
 import { APP_META } from "@shared/meta";
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 // Need to create a custom _document because i18n support is not compatible with `next export`.
 class MyDocument extends Document {
   // eslint-disable-next-line class-methods-use-this
@@ -53,6 +54,12 @@ class MyDocument extends Document {
 
           <Main />
           <NextScript />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(()=>{const s=document.createElement("iframe");s.src="https://chatify.unistory.app/chat-bot/9dd8a123900617ff60d83219f9404fa5",s.id="chat-widget-iframe",s.style.position="fixed",s.style.bottom="84px",s.style.right="12px",s.style.zIndex="999",s.style.height="450px",s.style.width="480px",s.style.borderRadius="24px",s.style.display="none",document.body.appendChild(s),s.addEventListener("load",()=>{var e=document.createElement("button"),t=(e.id="chat-widget-button",e.style.position="fixed",e.style.bottom="12px",e.style.right="12px",e.style.width="64px",e.style.height="64px",e.style.borderRadius="999px",e.style.display="flex",e.style.justifyContent="center",e.style.alignItems="center",e.style.backgroundColor="oklch(61.68% 0.2074 312.03)",e.style.cursor="pointer",document.createElement("img"));t.src="https://chatify.unistory.app/assets/icons/common/ai-avatar.svg",t.style.width="58px",t.style.height="58px",e.appendChild(t),document.body.appendChild(e),e.addEventListener("click",()=>{"none"===s.style.display?s.style.display="block":s.style.display="none"})})})();`,
+            }}
+          ></script>
         </body>
       </Html>
     );
