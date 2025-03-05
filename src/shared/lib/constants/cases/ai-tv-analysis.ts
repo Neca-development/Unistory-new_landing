@@ -48,7 +48,7 @@ export const AI_TV_ANALYSIS: ICase = {
   // Case page content
   showCategoriesOnPage: false,
   heroTitle: {
-    en: "How We Developed a System of Five Neural Networks for TV Broadcast Analysis",
+    en: "Development of a System of Five Neural Networks for TV Broadcast Analysis",
     ru: "Как мы разработали систему из 5 нейросетей для анализа TV эфира",
   },
   heroBanner: {
@@ -176,7 +176,7 @@ export const AI_TV_ANALYSIS: ICase = {
     {
       title: {
         en: "Project Status and Next Steps",
-        ru: "На какой стадии сейчас проект. И что будет дальше",
+        ru: "Развитие проекта",
       },
       text: [
         {
