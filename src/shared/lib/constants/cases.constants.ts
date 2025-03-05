@@ -19,9 +19,11 @@ import { FAIRY_TALE_AI } from "./cases/fairy-tale-ai";
 import { UDBARA } from "./cases/udbara";
 import { LIDAR } from "@shared/lib/constants/cases/lidar";
 import { LIS } from "./cases/lis";
+import { AI_TV_ANALYSIS } from "./cases/ai-tv-analysis";
 // import { BIT_GRADUATE } from "./cases/bit-graduate";
 
 export const CASES: ICase[] = [
+  AI_TV_ANALYSIS,
   LIS,
   LIDAR,
   UDBARA,
