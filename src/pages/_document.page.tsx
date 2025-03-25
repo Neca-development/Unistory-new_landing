@@ -55,12 +55,12 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
 
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html:
                 '(()=>{const i=document.createElement("iframe");i.src="https://chatify.unistory.app/chat-bot/9dd8a123900617ff60d83219f9404fa5",i.id="chat-widget-iframe",i.style.position="fixed",i.style.bottom="84px",i.style.right="12px",i.style.zIndex="999",i.style.borderRadius="24px",i.style.display="none",document.body.appendChild(i),i.addEventListener("load",()=>{var e=document.createElement("button"),t=(e.id="chat-widget-button",e.style.position="fixed",e.style.bottom="12px",e.style.right="12px",e.style.width="64px",e.style.height="64px",e.style.borderRadius="999px",e.style.display="flex",e.style.justifyContent="center",e.style.alignItems="center",e.style.backgroundColor="oklch(61.68% 0.2074 312.03)",e.style.cursor="pointer",document.createElement("img"));t.src="https://chatify.unistory.app/assets/icons/common/ai-avatar.svg",t.style.width="58px",t.style.height="58px",e.appendChild(t),document.body.appendChild(e);e.addEventListener("click",()=>{var e;"none"===i.style.display?(i.style.height=(e=window.innerHeight-96)<=450||window.innerWidth<768?e+"px":"450px",i.style.width=(e=window.innerWidth-24)<=480?e+"px":"480px",i.style.display="block",window.innerWidth<768&&(document.body.style.overflow="hidden")):(i.style.display="none",window.innerWidth<768&&(document.body.style.overflow="auto"))})})})();',
             }}
-          ></script>
+          ></script> */}
         </body>
       </Html>
     );
