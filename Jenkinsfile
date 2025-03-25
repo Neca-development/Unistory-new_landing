@@ -9,14 +9,6 @@ pipeline {
   }
 
   stages {
-    stage ('Check build') {
-      when { changeRequest() }
-
-      steps {
-        build_pr('unistory-node', 16)
-      }
-    }
-
     stage('Build') {
       when {
         allOf {
@@ -26,17 +18,48 @@ pipeline {
           anyOf {
             branch 'master'
             branch 'main'
-            branch 'dev'
+            branch 'stage'
             branch 'development'
+            branch 'dev'
           }
         }
       }
 
       steps {
-        build_image()
         script {
+            sh """
+              case \$BRANCH_NAME in
+                development | dev)
+                  BUILD_ENV=development
+                  ;;
+                stage)
+                  BUILD_ENV=staging
+                  ;;
+                master | main)
+                  BUILD_ENV=production
+                  ;;
+                *)
+                  BUILD_ENV=development
+                  ;;
+              esac
+
+              docker build . \
+                -f Dockerfile \
+                --build-arg build_env=\${BUILD_ENV} \
+                -t ${GIT_REPO_NAME}.\${BRANCH_NAME} \
+                -t ${GIT_REPO_NAME}.\${BRANCH_NAME}:\${BUILD_NUMBER} \
+                -t \${REGISTRY_HOST}/${GIT_REPO_NAME}.\${BRANCH_NAME} \
+                -t \${REGISTRY_HOST}/${GIT_REPO_NAME}.\${BRANCH_NAME}:\${BUILD_NUMBER} \
+                -t ${GIT_REPO_NAME}-\${BRANCH_NAME} \
+                -t ${GIT_REPO_NAME}-\${BRANCH_NAME}:\${BUILD_NUMBER} \
+                -t \${REGISTRY_HOST}/${GIT_REPO_NAME}-\${BRANCH_NAME} \
+                -t \${REGISTRY_HOST}/${GIT_REPO_NAME}-\${BRANCH_NAME}:\${BUILD_NUMBER}
+
+              docker push -a \${REGISTRY_HOST}/${GIT_REPO_NAME}.\${BRANCH_NAME}
+            """
+
           if (env.BRANCH_NAME == "master" || env.BRANCH_NAME == "main") {
-            notify_slack('Production build success')
+            slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Production build success"
           }
         }
       }
@@ -90,7 +113,7 @@ pipeline {
                       docker-compose -f docker-compose.prod.yml --env-file ${ENV_FILE} up -d
                   fi
                 '''
-                notify_slack("Production deployment success")
+                slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Build for ${GIT_REPO_NAME}/${BRANCH_NAME} is successfull"
               }
             }
           }
@@ -135,7 +158,7 @@ pipeline {
                 fi
               """
             }
-            notify_slack("Traefik startup success")
+            slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Build for ${GIT_REPO_NAME}/${BRANCH_NAME} is successfull"
           }
         }
       }
@@ -151,10 +174,9 @@ pipeline {
           env.BRANCH_NAME == "master" ||
           env.BRANCH_NAME == "main"
          ) {
-          notify_slack('Build failure')
+          slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Build for ${GIT_REPO_NAME}/${BRANCH_NAME} is successfull"
         }
       }
     }
   }
 }
-
