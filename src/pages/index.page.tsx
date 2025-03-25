@@ -8,11 +8,13 @@ import { MailingList } from "@widgets/landing/mailing-list";
 import { News } from "@widgets/landing/news/news.component";
 import { Layout } from "@widgets/layout";
 import clsx from "clsx";
+import { useRouter } from "next/router";
 
 import { useEffect } from "react";
 
 export function Home() {
   const { setShouldAnimate, shouldAnimate } = useAnimationStore();
+  const router = useRouter();
 
   useEffect(() => {
     if (!shouldAnimate) return;
@@ -41,6 +43,7 @@ export function Home() {
             en: "Unistory | Integrating The Future",
             ru: "Unistory | Интегрируем будущее",
           }}
+          canonical={`${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`}
         />
       }
     >
