@@ -36,7 +36,7 @@ pipeline {
         build_image()
         script {
           if (env.BRANCH_NAME == "master" || env.BRANCH_NAME == "main") {
-            notify_slack('Production build success')
+            slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Build for ${GIT_REPO_NAME}/${BRANCH_NAME} is successfull"
           }
         }
       }
@@ -90,7 +90,7 @@ pipeline {
                       docker-compose -f docker-compose.prod.yml --env-file ${ENV_FILE} up -d
                   fi
                 '''
-                notify_slack("Production deployment success")
+                slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Build for ${GIT_REPO_NAME}/${BRANCH_NAME} is successfull"
               }
             }
           }
@@ -135,7 +135,7 @@ pipeline {
                 fi
               """
             }
-            notify_slack("Traefik startup success")
+            slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Build for ${GIT_REPO_NAME}/${BRANCH_NAME} is successfull"
           }
         }
       }
@@ -157,4 +157,3 @@ pipeline {
     }
   }
 }
-
