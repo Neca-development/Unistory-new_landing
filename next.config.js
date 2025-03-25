@@ -7,6 +7,19 @@ module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ['.'],
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/html; charset=UTF-8',
+          },
+        ],
+      },
+    ]
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
