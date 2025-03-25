@@ -16,7 +16,11 @@ pipeline {
             changeRequest()
           }
           anyOf {
+            branch 'master'
+            branch 'main'
+            branch 'stage'
             branch 'development'
+            branch 'dev'
           }
         }
       }
@@ -25,7 +29,7 @@ pipeline {
         script {
             sh """
               case \$BRANCH_NAME in
-                development)
+                development | dev)
                   BUILD_ENV=development
                   ;;
                 stage)
