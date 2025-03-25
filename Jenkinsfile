@@ -151,7 +151,7 @@ pipeline {
           env.BRANCH_NAME == "master" ||
           env.BRANCH_NAME == "main"
          ) {
-          notify_slack('Build failure')
+          slackSend channel: env.SLACK_CHANNEL, color: "good", message: "Build for ${GIT_REPO_NAME}/${BRANCH_NAME} is successfull"
         }
       }
     }
