@@ -2,11 +2,17 @@ import { Layout } from "@widgets/layout";
 import { Meta } from "@shared/meta";
 import { Connect } from "@widgets/connect";
 import React from "react";
+import { useRouter } from "next/router";
 
 import { GenerateBookHero } from "@widgets/landing/generate-book/hero.component";
 import { SelectionComponent } from "@widgets/landing/generate-book/selection.component";
 
 const GenerateBook = () => {
+  const router = useRouter();
+  const canonicalUrl = router.locale
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`
+    : `${process.env.NEXT_PUBLIC_SITE_URL}/ru${router.pathname}`;
+
   return (
     <Layout
       Meta={
@@ -19,6 +25,7 @@ const GenerateBook = () => {
             en: "Fairy tale generation service: generate a book in a few minutes",
             ru: "Сервис генерации сказок: генерация книги за несколько минут",
           }}
+          canonical={canonicalUrl}
         />
       }
     >

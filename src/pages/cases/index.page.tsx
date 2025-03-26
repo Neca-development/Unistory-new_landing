@@ -11,6 +11,11 @@ import { useMemo } from "react";
 const LARGE_ITEM_STEP = 6;
 
 export function Cases() {
+  const router = useRouter();
+  const canonicalUrl = router.locale
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`
+    : `${process.env.NEXT_PUBLIC_SITE_URL}/ru${router.pathname}`;
+
   const { locale } = useRouter();
 
   const filteredCases = useMemo(() => {
@@ -41,6 +46,7 @@ export function Cases() {
             en: "Projects | Unistory",
             ru: "Кейсы | Unistory",
           }}
+          canonical={canonicalUrl}
         />
       }
     >

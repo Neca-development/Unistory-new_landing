@@ -16,6 +16,10 @@ export function Home() {
   const { setShouldAnimate, shouldAnimate } = useAnimationStore();
   const router = useRouter();
 
+  const canonicalUrl = router.locale
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`
+    : `${process.env.NEXT_PUBLIC_SITE_URL}/ru/`;
+
   useEffect(() => {
     if (!shouldAnimate) return;
     document.body.style.overflow = "hidden";
@@ -43,7 +47,7 @@ export function Home() {
             en: "Unistory | Integrating The Future",
             ru: "Unistory | Интегрируем будущее",
           }}
-          canonical={`${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`}
+          canonical={canonicalUrl}
         />
       }
     >

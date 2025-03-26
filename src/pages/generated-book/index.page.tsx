@@ -4,10 +4,16 @@ import { Connect } from "@widgets/connect";
 import { GeneratedComponent } from "@widgets/landing/generate-book/generated.component";
 import { GenerateBookHero } from "@widgets/landing/generate-book/hero.component";
 import { Layout } from "@widgets/layout";
+import { useRouter } from "next/router";
 import React from "react";
 
 const GeneratedBook = () => {
   const { paragraphs } = useBookStore();
+  const router = useRouter();
+  const canonicalUrl = router.locale
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`
+    : `${process.env.NEXT_PUBLIC_SITE_URL}/ru${router.pathname}`;
+
   console.log("🚀 ~ GeneratedBook ~ paragraphs:", paragraphs);
 
   return (
@@ -22,6 +28,7 @@ const GeneratedBook = () => {
             en: "Fairy tale generator: AI integration and prompt engineering",
             ru: "Сервис генерации сказок: интеграция AI и промпт-инжиниринг",
           }}
+          canonical={canonicalUrl}
         />
       }
     >

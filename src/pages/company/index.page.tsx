@@ -9,8 +9,14 @@ import {
   CompanyVideo,
 } from "@widgets/landing/company";
 import { Layout } from "@widgets/layout";
+import { useRouter } from "next/router";
 
 export function Contacts() {
+  const router = useRouter();
+  const canonicalUrl = router.locale
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`
+    : `${process.env.NEXT_PUBLIC_SITE_URL}/ru${router.pathname}`;
+
   return (
     <Layout
       Meta={
@@ -23,6 +29,7 @@ export function Contacts() {
             en: "About Us | Unistory",
             ru: "О компании | Unistory",
           }}
+          canonical={canonicalUrl}
         />
       }
     >
