@@ -8,6 +8,9 @@ class MyDocument extends Document {
     return (
       <Html lang={APP_META.locale}>
         <Head>
+          <link rel="alternate" hrefLang="ru" href={`${process.env.NEXT_PUBLIC_SITE_URL}/ru/`} />
+          <link rel="alternate" hrefLang="en" href={`${process.env.NEXT_PUBLIC_SITE_URL}/en/`} />
+          <link rel="alternate" hrefLang="x-default" href={process.env.NEXT_PUBLIC_SITE_URL} />
           {/* <!-- Google tag (gtag.js) --> */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3N3QQXJV3"></script>
           <script
