@@ -8,6 +8,28 @@ class MyDocument extends Document {
     return (
       <Html lang={APP_META.locale}>
         <Head>
+          {process.env.NODE_ENV === "production" && (
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  if (window.location.hostname === '135.181.216.90') {
+                    window.location.href = 'https://unistory.app' + window.location.pathname;
+                  }
+                `,
+              }}
+            />
+          )}
+
+          <meta
+            name="robots"
+            content={
+              process.env.NEXT_PUBLIC_SITE_URL &&
+              typeof window !== "undefined" &&
+              window.location.hostname === "135.181.216.90"
+                ? "noindex, nofollow"
+                : "index, follow"
+            }
+          />
           <link rel="alternate" hrefLang="ru" href={`${process.env.NEXT_PUBLIC_SITE_URL}/ru/`} />
           <link rel="alternate" hrefLang="en" href={`${process.env.NEXT_PUBLIC_SITE_URL}/en/`} />
           <link rel="alternate" hrefLang="x-default" href={process.env.NEXT_PUBLIC_SITE_URL} />
