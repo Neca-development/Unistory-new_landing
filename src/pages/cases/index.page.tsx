@@ -12,9 +12,12 @@ const LARGE_ITEM_STEP = 6;
 
 export function Cases() {
   const router = useRouter();
-  const canonicalUrl = router.locale
-    ? `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`
-    : `${process.env.NEXT_PUBLIC_SITE_URL}/ru${router.pathname}`;
+  const canonicalUrl =
+    router.locale === "en"
+      ? `${process.env.NEXT_PUBLIC_SITE_URL}/en${router.pathname}`
+      : router.locale === "ru"
+      ? `${process.env.NEXT_PUBLIC_SITE_URL}/ru${router.pathname}`
+      : `${process.env.NEXT_PUBLIC_SITE_URL}${router.pathname}`;
 
   const { locale } = useRouter();
 
