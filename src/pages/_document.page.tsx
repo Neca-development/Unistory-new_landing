@@ -25,7 +25,7 @@ class MyDocument extends Document {
             content={
               process.env.NEXT_PUBLIC_SITE_URL &&
               typeof window !== "undefined" &&
-              window.location.hostname === "135.181.216.90"
+              window.location.hostname === "135.181.216.90:49490"
                 ? "noindex, nofollow"
                 : "index, follow"
             }
