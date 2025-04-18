@@ -1,10 +1,3 @@
-# *
+# Block all robots
 User-agent: *
-Allow: /
-Disallow: /en/cases/lis
-
-# Host
-Host: https://unistory.app
-
-# Sitemaps
-Sitemap: https://unistory.app/sitemap.xml
+Disallow: /
